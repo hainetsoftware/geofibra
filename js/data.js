@@ -1,4 +1,4 @@
-// Generato automaticamente da FTTH Collesalvetti.kml con dati Ordinanze Albo Pretorio
+// Generato automaticamente da data/kml/rilievo_snapshot2.kml con dati Ordinanze Albo Pretorio
 window.FTTH_NETWORK_DATA = {
   "type": "FeatureCollection",
   "metadata": {

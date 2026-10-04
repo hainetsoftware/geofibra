@@ -310,7 +310,7 @@ def parse_kml(kml_path):
 def main():
     os.makedirs("data", exist_ok=True)
     os.makedirs("js", exist_ok=True)
-    kml_path = "FTTH Collesalvetti.kml"
+    kml_path = "data/kml/rilievo_snapshot2.kml"
     data = parse_kml(kml_path)
     
     with open("data/network_data.json", "w", encoding="utf-8") as f:
