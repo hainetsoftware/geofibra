@@ -255,7 +255,6 @@ window.flyToCantiere = (cantiereId) => {
     }
 
     window.map.flyTo(c.centerCoords, 16, { duration: 1.8 });
-    if (window.cyberAudio) window.cyberAudio.playFly();
 };
 
 window.ORDINANZE_DATA = ORDINANZE_DATA;

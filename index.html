@@ -55,11 +55,6 @@
             <div id="frazioni-nav" class="hidden md:flex gap-2">
                 <!-- Frazioni buttons will be injected here -->
             </div>
-            <button id="btn-open-osint" class="flex items-center gap-2 bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/50 px-3 py-1.5 rounded text-sm font-semibold transition-all" title="Dossier e Intelligence OSINT Rete">
-                <i data-lucide="shield-check" class="w-4 h-4 text-cyan-400"></i>
-                <span class="hidden sm:inline">OSINT Intel</span>
-                <span id="osint-badge-count" class="bg-cyan-400/20 text-cyan-300 border border-cyan-400/40 text-[10px] px-1.5 py-0.5 rounded-full font-mono">1</span>
-            </button>
             <button id="btn-open-cantieri" class="flex items-center gap-2 bg-amber-500/20 hover:bg-amber-500/30 text-amber-400 border border-amber-500/50 px-3 py-1.5 rounded text-sm font-semibold transition-all">
                 <i data-lucide="cone" class="w-4 h-4"></i>
                 <span class="hidden sm:inline">Cantieri & Ordinanze</span>
@@ -69,24 +64,8 @@
                 <i data-lucide="file-spreadsheet" class="w-4 h-4"></i>
                 <span class="hidden lg:inline">Scarica Excel</span>
             </a>
-            <button id="btn-toggle-sound" class="p-2 rounded hover:bg-white/10 transition-colors" title="Toggle Sound">
-                <i data-lucide="volume-2" class="w-5 h-5 text-slate-300"></i>
-            </button>
-            <button id="btn-open-3d" class="flex items-center gap-2 bg-cyber-neon/20 hover:bg-cyber-neon/40 text-cyber-neon border border-cyber-neon/50 px-4 py-2 rounded font-semibold transition-all">
-                <i data-lucide="box" class="w-5 h-5"></i>
-                <span class="hidden sm:inline">Studio 3D & Foto IRL</span>
-            </button>
         </div>
     </nav>
-
-    <!-- Mobile Top Advisory Ribbon -->
-    <div id="mobile-top-ribbon" class="md:hidden absolute top-16 left-0 right-0 z-40 bg-amber-500/20 backdrop-blur-md border-b border-amber-500/30 px-3 py-1.5 flex items-center justify-between text-[11px] text-amber-200">
-        <div class="flex items-center gap-1.5 truncate">
-            <i data-lucide="monitor" class="w-3.5 h-3.5 text-amber-400 flex-shrink-0"></i>
-            <span class="truncate">Tool FiberCop Collesalvetti: progettato per Desktop PC</span>
-        </div>
-        <button id="btn-dismiss-ribbon" class="text-amber-300 hover:text-white ml-2 flex-shrink-0 text-xs px-1" title="Chiudi avviso">✕</button>
-    </div>
 
     <!-- Map Container -->
     <div id="map" class="absolute inset-0 z-0"></div>
@@ -153,169 +132,6 @@
         </div>
     </div>
 
-    <!-- 3D Studio & IRL Gallery Modal -->
-    <div id="modal-3d" class="fixed inset-0 z-[100] bg-cyber-dark/95 backdrop-blur-xl hidden flex-col">
-        <!-- Modal Top Bar -->
-        <div class="flex justify-between items-center p-4 border-b border-cyber-border/50">
-            <div class="flex items-center gap-4">
-                <h2 class="text-2xl font-['Rajdhani'] font-bold text-white flex items-center gap-3">
-                    <i data-lucide="box" class="text-cyber-neon"></i> Studio Apparati & Documentazione
-                </h2>
-
-                <!-- View Mode Switcher: 3D vs Foto IRL -->
-                <div class="flex items-center gap-1 bg-black/50 p-1 rounded-lg border border-cyber-border/40">
-                    <button id="view-mode-3d" class="view-mode-btn active px-3 py-1 rounded text-xs font-bold flex items-center gap-1.5 transition-all text-cyber-neon bg-cyber-neon/20 border border-cyber-neon/40">
-                        <i data-lucide="box" class="w-3.5 h-3.5"></i> Modello 3D
-                    </button>
-                    <button id="view-mode-irl" class="view-mode-btn px-3 py-1 rounded text-xs font-bold flex items-center gap-1.5 transition-all text-slate-400 hover:text-white border border-transparent">
-                        <i data-lucide="camera" class="w-3.5 h-3.5"></i> Foto Reale (IRL)
-                    </button>
-                </div>
-            </div>
-
-            <button id="btn-close-3d" class="p-2 hover:bg-white/10 rounded-full transition-colors text-white">
-                <i data-lucide="x" class="w-6 h-6"></i>
-            </button>
-        </div>
-        
-        <div class="flex flex-1 overflow-hidden">
-            <!-- Sidebar Model Switcher -->
-            <div class="w-64 border-r border-cyber-border/30 bg-black/20 p-4 flex flex-col gap-2 overflow-y-auto flex-shrink-0">
-                <button class="model-btn active" data-model="arl">
-                    <div class="font-bold text-cyber-accent flex items-center justify-between">
-                        <span>ARL (Rame)</span>
-                        <span class="text-[10px] bg-red-500/20 text-red-400 px-1.5 py-0.5 rounded border border-red-500/30">TIM</span>
-                    </div>
-                    <div class="text-xs text-slate-400">Armadio Ripartilinea TIM</div>
-                </button>
-                <button class="model-btn" data-model="arlo">
-                    <div class="font-bold text-cyber-neon flex items-center justify-between">
-                        <span>ARLO (Fibra)</span>
-                        <span class="text-[10px] bg-cyan-500/20 text-cyan-400 px-1.5 py-0.5 rounded border border-cyan-500/30">FiberCop</span>
-                    </div>
-                    <div class="text-xs text-slate-400">Armadio Ottico FTTH</div>
-                </button>
-                <button class="model-btn" data-model="centrale">
-                    <div class="font-bold text-emerald-400 flex items-center justify-between">
-                        <span>Centrale OLT</span>
-                        <span class="text-[10px] bg-emerald-500/20 text-emerald-400 px-1.5 py-0.5 rounded border border-emerald-500/30">10G XGS</span>
-                    </div>
-                    <div class="text-xs text-slate-400">Sede OLT & Rack Ottico</div>
-                </button>
-                <button class="model-btn" data-model="pozzetto">
-                    <div class="font-bold text-amber-400 flex items-center justify-between">
-                        <span>Scavo & Pozzetto</span>
-                        <span class="text-[10px] bg-amber-500/20 text-amber-400 px-1.5 py-0.5 rounded border border-amber-500/30">Posa</span>
-                    </div>
-                    <div class="text-xs text-slate-400">Mini-trincea e Muffola</div>
-                </button>
-
-                <!-- 3D Specific Controls (Hidden in IRL mode) -->
-                <div id="controls-3d-panel" class="mt-auto pt-4 border-t border-cyber-border/30">
-                    <h3 class="text-xs uppercase text-slate-400 font-bold mb-3">Controlli 3D</h3>
-                    <button id="btn-3d-explode" class="w-full flex items-center gap-2 justify-center bg-white/10 hover:bg-white/20 py-2 rounded text-sm mb-2 transition-colors">
-                        <i data-lucide="door-open" class="w-4 h-4"></i> Apri / Vista Interna
-                    </button>
-                    <button id="btn-3d-wireframe" class="w-full flex items-center gap-2 justify-center bg-white/10 hover:bg-white/20 py-2 rounded text-sm transition-colors">
-                        <i data-lucide="grid" class="w-4 h-4"></i> Modalità Wireframe
-                    </button>
-                    <div class="mt-4 text-xs text-slate-500 text-center">
-                        🖱️ Ruota (Click sin.) | Zoom (Rotella) | Pan (Click dx)
-                    </div>
-                </div>
-
-                <!-- IRL Specific Controls -->
-                <div id="controls-irl-panel" class="mt-auto pt-4 border-t border-cyber-border/30 hidden">
-                    <div class="p-3 bg-white/5 rounded-lg border border-white/10 text-xs text-slate-300">
-                        <div class="font-bold text-white mb-1 flex items-center gap-1.5">
-                            <i data-lucide="info" class="w-3.5 h-3.5 text-cyber-neon"></i> Scheda Territoriale
-                        </div>
-                        Fotografie reali in alta definizione acquisite sul territorio e schede tecniche di riscontro sul campo.
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 3D Canvas View Container -->
-            <div class="flex-1 relative" id="canvas-container">
-                <!-- Info Overlay in 3D -->
-                <div id="model-info" class="absolute top-6 left-6 p-4 glass-panel border border-cyber-border/50 rounded-lg max-w-sm pointer-events-none z-10 opacity-0 transition-opacity duration-300">
-                    <h3 id="info-title" class="text-lg font-bold text-white mb-1">...</h3>
-                    <p id="info-desc" class="text-sm text-slate-300">...</p>
-                </div>
-            </div>
-
-            <!-- IRL Photo Gallery View Container (Toggleable) -->
-            <div class="flex-1 relative hidden overflow-y-auto custom-scrollbar p-6 bg-cyber-dark/90" id="irl-container">
-                <div class="max-w-5xl mx-auto flex flex-col lg:flex-row gap-6 items-start">
-                    
-                    <!-- Left: Large High-Res Photo Display -->
-                    <div class="lg:w-3/5 w-full flex flex-col gap-3">
-                        <div class="relative rounded-xl overflow-hidden border border-cyber-border/60 shadow-2xl bg-black/60 group">
-                            <img id="irl-main-img" src="images/arl_irl.jpg" alt="Foto Reale Apparato" class="w-full h-auto max-h-[520px] object-cover transition-transform duration-500 group-hover:scale-[1.02]">
-                            <div class="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full border border-cyber-neon/50 text-xs font-bold text-cyber-neon flex items-center gap-1.5">
-                                <i data-lucide="camera" class="w-3.5 h-3.5"></i> Scatto Reale ad Alta Definizione
-                            </div>
-                            <div id="irl-img-badge" class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-md text-xs text-slate-300 border border-white/20">
-                                Territorio: Toscana
-                            </div>
-                        </div>
-
-                        <!-- Secondary Thumbnails -->
-                        <div id="irl-thumbnails" class="grid grid-cols-3 gap-3">
-                            <!-- Injected dynamically based on selected model -->
-                        </div>
-                    </div>
-
-                    <!-- Right: Technical Field Identification Card -->
-                    <div class="lg:w-2/5 w-full flex flex-col gap-4">
-                        <div class="glass-panel border border-cyber-border/60 rounded-xl p-5">
-                            <div class="flex items-center gap-2 mb-2">
-                                <span id="irl-badge" class="text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-red-500/20 text-red-400 border border-red-500/40">ARL Rame</span>
-                                <span class="text-xs text-slate-400">Rete di Distribuzione</span>
-                            </div>
-                            <h3 id="irl-title" class="text-2xl font-['Rajdhani'] font-bold text-white mb-2">Armadio Ripartilinea TIM (ARL)</h3>
-                            <p id="irl-summary" class="text-sm text-slate-300 mb-4 leading-relaxed">
-                                L'inconfondibile armadio con tettuccio rosso scanalato che smista i doppini in rame verso le chiostrine e le abitazioni.
-                            </p>
-
-                            <div class="space-y-3 border-t border-cyber-border/30 pt-4 text-xs">
-                                <div>
-                                    <span class="text-slate-400 uppercase font-bold block mb-0.5">Come Riconoscerlo sul Campo</span>
-                                    <p id="irl-field-guide" class="text-slate-200">
-                                        Carrozzeria metallica grigia con serratura centrale a chiave triangolare, tettuccio rosso impermeabile curvo e quasi sempre affiancato da colonnina e-distribuzione grigia.
-                                    </p>
-                                </div>
-                                <div>
-                                    <span class="text-slate-400 uppercase font-bold block mb-0.5">Ruolo nella Rete FTTH FiberCop</span>
-                                    <p id="irl-network-role" class="text-slate-200">
-                                        Durante la transizione alla fibra, l'ARLO ottico viene posato a pochi centimetri dall'ARL rame o collegato tramite un cunicolo di scambio per sfruttare le stesse canaline storiche.
-                                    </p>
-                                </div>
-                                <div class="grid grid-cols-2 gap-2 pt-2 border-t border-white/5">
-                                    <div class="p-2 bg-black/30 rounded border border-white/5">
-                                        <span class="text-slate-400 block text-[10px] uppercase">Capacità Tipica</span>
-                                        <span id="irl-capacity" class="text-white font-bold">200 - 800 coppie</span>
-                                    </div>
-                                    <div class="p-2 bg-black/30 rounded border border-white/5">
-                                        <span class="text-slate-400 block text-[10px] uppercase">Alloggiamento</span>
-                                        <span id="irl-placement" class="text-white font-bold">Zoccolo marciapiede</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Button to Switch Back to 3D Inspection -->
-                        <button id="irl-switch-to-3d" class="w-full bg-cyber-neon/20 hover:bg-cyber-neon/30 border border-cyber-neon/50 text-cyber-neon py-2.5 rounded-lg text-sm font-bold flex items-center justify-center gap-2 transition-all">
-                            <i data-lucide="rotate-3d" class="w-4 h-4"></i> Apri nello Studio 3D Interattivo
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-
     <!-- Cantieri & Ordinanze Albo Pretorio Modal -->
     <div id="modal-cantieri" class="fixed inset-0 z-[100] bg-cyber-dark/95 backdrop-blur-xl hidden flex-col">
         <!-- Modal Top Bar -->
@@ -353,95 +169,11 @@
         </div>
     </div>
 
-    <!-- OSINT Intelligence & AI Surveillance Modal -->
-    <div id="modal-osint" class="fixed inset-0 z-[100] bg-cyber-dark/95 backdrop-blur-xl hidden flex-col">
-        <!-- Modal Top Bar -->
-        <div class="flex justify-between items-center p-4 border-b border-cyber-border/50">
-            <div class="flex items-center gap-4">
-                <h2 class="text-2xl font-['Rajdhani'] font-bold text-white flex items-center gap-3">
-                    <i data-lucide="shield-check" class="text-cyan-400"></i> Centro Intelligence OSINT & AI Surveillance
-                </h2>
-                <div class="hidden sm:flex items-center gap-2 bg-black/50 px-3 py-1 rounded-lg border border-cyan-500/30 text-xs">
-                    <span class="text-slate-400">Watchdog Rete:</span>
-                    <span class="text-cyan-400 font-mono font-bold">FiberCop / TIM / Fastweb Wholesale</span>
-                </div>
-            </div>
-
-            <button id="btn-close-osint" class="p-2 hover:bg-white/10 rounded-full transition-colors text-white">
-                <i data-lucide="x" class="w-6 h-6"></i>
-            </button>
-        </div>
-
-        <div class="flex-1 overflow-y-auto custom-scrollbar p-6 bg-cyber-dark/90">
-            <div class="max-w-5xl mx-auto space-y-4">
-                <!-- OSINT Mission Statement Banner -->
-                <div class="p-4 glass-panel border border-cyan-500/30 rounded-xl flex items-start gap-3 bg-gradient-to-r from-cyan-950/20 to-transparent">
-                    <i data-lucide="radar" class="w-6 h-6 text-cyan-400 flex-shrink-0 mt-0.5 animate-pulse"></i>
-                    <div class="text-xs text-slate-300 leading-relaxed">
-                        <b class="text-white">Metodologia OSINT (Open Source Intelligence):</b> Questo modulo aggrega in un unico flusso analitico le evidenze fisiche del terreno (posa armadi, coordinate GPS, foto ad alta definizione), i decreti dell'Albo Pretorio municipale, i bandi PNRR (Scuole & Sanità) e i registri wholesale nazionali. I briefing di intelligence sono generati e aggiornati periodicamente dall'AI per monitorare la trasparenza dello spiegamento della fibra ottica.
-                    </div>
-                </div>
-
-                <!-- OSINT Reports Feed Container -->
-                <div id="osint-reports-list">
-                    <!-- Injected dynamically by js/osint_tracker.js -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Mobile Advisory Modal -->
-    <div id="modal-mobile-warning" class="fixed inset-0 z-[200] bg-cyber-dark/95 backdrop-blur-xl hidden items-center justify-center p-4">
-        <div class="glass-panel border border-amber-500/50 rounded-2xl max-w-md w-full p-6 shadow-2xl relative text-center max-h-[92vh] overflow-y-auto custom-scrollbar">
-            <!-- Icon -->
-            <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400">
-                <i data-lucide="monitor" class="w-8 h-8 animate-pulse"></i>
-            </div>
-            
-            <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 text-[11px] font-bold uppercase tracking-wider mb-2.5">
-                <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i> Accesso da Dispositivo Mobile
-            </div>
-            
-            <h3 class="text-xl font-['Rajdhani'] font-bold text-white mb-2 tracking-wide">
-                TOOL AVANZATO CONCEPITO PER DESKTOP
-            </h3>
-            
-            <p class="text-xs text-slate-300 leading-relaxed mb-4 text-justify">
-                Questo è uno strumento cartografico e di telemetria avanzato sviluppato per tracciare e monitorare in alta precisione i <b>cantieri stradali</b>, la <b>backbone ottica</b> e le <b>infrastrutture di rete dell'operatore wholesale FiberCop</b> nel territorio del <b>Comune di Collesalvetti</b>.
-            </p>
-
-            <div class="p-3.5 bg-black/50 border border-amber-500/30 rounded-xl text-left text-xs text-slate-300 mb-5 space-y-2.5">
-                <div class="flex items-start gap-2.5">
-                    <i data-lucide="monitor-check" class="w-4 h-4 text-cyber-neon flex-shrink-0 mt-0.5"></i>
-                    <div>
-                        <b class="text-white">Progettato per PC Desktop:</b> L'interfaccia complessa, la mappa GIS multilivello, l'HUD di telemetria e il visualizzatore 3D WebGL (Three.js) con controlli orbitali sono pensati <b>solo ed esclusivamente per l'uso da computer desktop</b> con display ad alta risoluzione e mouse.
-                    </div>
-                </div>
-                <div class="flex items-start gap-2.5">
-                    <i data-lucide="smartphone" class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5"></i>
-                    <div>
-                        <b class="text-white">Limitazioni su Smartphone:</b> La navigazione da telefono potrebbe risultare fortemente limitata o non ottimale nell'interazione con i tracciati e i modelli.
-                    </div>
-                </div>
-            </div>
-
-            <button id="btn-dismiss-mobile" class="w-full bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/50 py-2.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2">
-                <span>Ho capito, procedi comunque da smartphone</span>
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </button>
-        </div>
-    </div>
-
     <!-- Scripts -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
     <script src="js/data.js"></script>
-    <script src="js/audio.js"></script>
     <script src="js/cantieri_tracker.js"></script>
-    <script src="js/osint_tracker.js"></script>
     <script src="js/map.js"></script>
-    <script src="js/three_apparati.js"></script>
     <script src="js/telemetry.js"></script>
     <script src="js/main.js"></script>
     

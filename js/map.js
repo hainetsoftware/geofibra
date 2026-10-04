@@ -80,7 +80,6 @@ function initMap() {
             
             Object.values(layers).forEach(layer => map.removeLayer(layer));
             layers[l].addTo(map);
-            window.cyberAudio.playClick();
         });
     });
 
@@ -123,7 +122,6 @@ function loadData() {
         },
         onEachFeature: function (feature, layer) {
             const props = feature.properties;
-            layer.on('click', () => window.cyberAudio.playClick());
             
             let popupContent = `
                 <div>
@@ -178,9 +176,7 @@ function loadData() {
             
             popupContent += `
                     <div class="mt-3 flex gap-2">
-                        <button onclick="window.open3DModel('${props.category}')" class="flex-1 bg-cyber-neon/20 hover:bg-cyber-neon/40 text-cyber-neon py-1 px-2 rounded text-xs font-bold border border-cyber-neon/50 flex items-center justify-center gap-1 transition-colors">
-                            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 21 16z"></path></svg> 3D Model
-                        </button>`;
+                        `;
             if (mapsTarget) {
                 popupContent += `<a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${mapsTarget}" target="_blank" class="flex-1 bg-white/10 hover:bg-white/20 text-white py-1 px-2 rounded text-xs text-center border border-white/20 transition-colors flex items-center justify-center">Street View</a>`;
             }
@@ -195,5 +191,4 @@ function loadData() {
 
 window.flyToFrazione = (lat, lng) => {
     map.flyTo([lat, lng], 16, { duration: 1.8 });
-    window.cyberAudio.playFly();
 };

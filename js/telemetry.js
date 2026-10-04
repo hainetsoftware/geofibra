@@ -109,7 +109,6 @@ function renderList(features) {
             <div class="text-xs text-slate-400 font-medium ml-2 flex-shrink-0">${p.frazione || ''}</div>
         `;
         item.onclick = () => {
-            window.cyberAudio.playClick();
             if (f.geometry.type === 'Point') {
                 window.flyToFrazione(f.geometry.coordinates[1], f.geometry.coordinates[0]);
                 if (geojsonLayer) {
