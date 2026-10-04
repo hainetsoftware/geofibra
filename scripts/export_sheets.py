@@ -13,10 +13,14 @@ def get_type_label(category):
         'arlo': 'ARLO (Ottico FiberCop)',
         'centrale_comunale': 'Centrale Telecom (Sede OLT)',
         'centrale_frazione': 'Centrale di Frazione',
+        'centrale_feeder': 'Centrale Feeder (Interconnessione Esterna)',
         'cantiere': 'Cantiere Fibra Ottica',
         'cantiere_imminente': 'Cantiere FTTH (Attivazione Imminente)',
+        'cantiere_eseguito': 'Cantiere FTTH (Tratta Eseguita)',
+        'cantiere_non_eseguito': 'Cantiere FTTH (Tratta Non Eseguita)',
         'cantiere_programmato': 'Cantiere FTTH (Nuova Ordinanza Programmata)',
         'tratta_stagno': 'Tratta Fibra Posa',
+        'tratta_backbone': 'Dorsale / Backbone Fibra',
         'rete_scuole': 'Tratta Scuole Connesse',
         'rete_sanita': 'Tratta Sanità Connesse',
         'infratel': 'Infrastruttura Infratel BUL',
@@ -24,7 +28,7 @@ def get_type_label(category):
         'copertura_ok': 'Area Coperta FTTH',
         'copertura_no': 'Area NON Coperta'
     }
-    return mapping.get(category, category.capitalize())
+    return mapping.get(category, category.replace('_', ' ').capitalize())
 
 def load_data():
     with open("data/network_data.json", "r", encoding="utf-8") as f:
@@ -94,6 +98,8 @@ def build_rows(data):
             c_streets = ", ".join(c.get("vie_interessate", []))
             c_ordinanza = c.get("codice_ordinanza", "")
             c_pdf = c.get("file_pdf", "")
+        elif "cantiere" in p["category"]:
+            c_status = "DA COLLEGARE A ORDINANZA"
             
         row = [
             p["id"],

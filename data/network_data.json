@@ -3,8 +3,10 @@
   "metadata": {
     "title": "Rete FTTH & Tracker Cantieri - Comune di Collesalvetti",
     "author": "Mappatura Originale Cittadina integrata con Albo Pretorio",
-    "total_features": 49,
-    "generated_at": "2026-09-10",
+    "total_features": 63,
+    "generated_at": "2026-10-04",
+    "source_snapshot": "Snapshot 3",
+    "source_kml": "data/snapshots/rilievo_snapshot3.kml",
     "timezone": "Europe/Rome"
   },
   "features": [
@@ -20,84 +22,84 @@
             0.0
           ],
           [
-            10.47396151389629,
-            43.59389043523493,
+            10.47396672242949,
+            43.59391043625455,
             0.0
           ],
           [
-            10.47509469419023,
-            43.59386580591926,
+            10.47405916509685,
+            43.5939090267393,
             0.0
           ],
           [
-            10.47527352212309,
-            43.5937312595434,
+            10.47419587747869,
+            43.59389706444905,
             0.0
           ],
           [
-            10.47535579786541,
-            43.5938957256711,
+            10.47429831992076,
+            43.59388581411785,
             0.0
           ],
           [
-            10.47519754276149,
-            43.59393579005066,
+            10.47440273049027,
+            43.59387163152189,
             0.0
           ],
           [
-            10.47490008397105,
-            43.59546447402612,
+            10.47451660530289,
+            43.59386499016896,
             0.0
           ],
           [
-            10.47533278120847,
-            43.59565006199509,
+            10.47464002100471,
+            43.5938566504427,
             0.0
           ],
           [
-            10.47611241804744,
-            43.59569004663479,
+            10.47476289634037,
+            43.5938499848874,
             0.0
           ],
           [
-            10.47736271978634,
-            43.59557091475974,
+            10.47488503155727,
+            43.59384511598847,
             0.0
           ],
           [
-            10.47681394517894,
-            43.59637582531879,
+            10.47500362703351,
+            43.59383946747543,
             0.0
           ],
           [
-            10.47686195680252,
-            43.59647002521567,
+            10.4750334717608,
+            43.59383583055242,
             0.0
           ],
           [
-            10.47839315903629,
-            43.59662493819227,
+            10.47507092379242,
+            43.59383342521085,
             0.0
           ],
           [
-            10.47831858536105,
-            43.59709818318338,
+            10.47509740007403,
+            43.59389135562733,
             0.0
           ]
         ]
       },
       "properties": {
         "id": "0C11108026419D776229",
-        "name": "Cantiere 1 (14/09-02/10)",
-        "category": "cantiere_imminente",
+        "name": "Cantiere 1 NON ESEGUITO",
+        "category": "cantiere_non_eseguito",
         "frazione": "Collesalvetti",
         "geom_type": "LineString",
-        "description": "Cantiere FTTH FiberCop Collesalvetti (Ord. 95/2026 del 02/09/2026). Vie: Via Nenni, Via Roma, Via del Valico a Pisa, Via di Cerretello.",
-        "raw_description": "",
+        "description": "Si notano solamente dei segni blu (oltre ai soliti colori), che indicano Fibercop , sull'asfalto",
+        "raw_description": "<div>Si notano solamente dei segni blu (oltre ai soliti colori), che indicano Fibercop , sull'asfalto<br></div>",
         "icon": "traffic-cone",
-        "color": "#ff8c00",
-        "length_m": 1096.2,
-        "length_km": 1.096,
+        "color": "#e67e22",
+        "length_m": 384.6,
+        "length_km": 0.385,
         "area_m2": 0,
         "area_km2": 0.0,
         "lookAt": {
@@ -122,7 +124,7 @@
             "Via di Cerretello"
           ],
           "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
-          "stato_base": "imminente"
+          "stato_base": "non_eseguito"
         }
       }
     },
@@ -133,8 +135,23 @@
         "type": "LineString",
         "coordinates": [
           [
-            10.47737778236328,
-            43.59555939930492,
+            10.47826768034783,
+            43.59735914187763,
+            0.0
+          ],
+          [
+            10.47838422777883,
+            43.59660531960983,
+            0.0
+          ],
+          [
+            10.47683729164232,
+            43.59641962683922,
+            0.0
+          ],
+          [
+            10.47739244839719,
+            43.59555996500745,
             0.0
           ],
           [
@@ -153,29 +170,34 @@
             0.0
           ],
           [
-            10.47935100393634,
-            43.59310920518084,
+            10.47881746379597,
+            43.59359704683754,
             0.0
           ],
           [
-            10.47935093571877,
-            43.59306864562762,
+            10.47886405396831,
+            43.59355711008966,
+            0.0
+          ],
+          [
+            10.47889939473711,
+            43.59351881351484,
             0.0
           ]
         ]
       },
       "properties": {
         "id": "0D01C4A3D9419D77F4F8",
-        "name": "Cantiere 1 (14/09-02/10)",
-        "category": "cantiere_imminente",
+        "name": "Cantiere 1 ESEGUITO",
+        "category": "cantiere_eseguito",
         "frazione": "Collesalvetti",
         "geom_type": "LineString",
-        "description": "Cantiere FTTH FiberCop Collesalvetti (Ord. 95/2026 del 02/09/2026). Vie: Via Nenni, Via Roma, Via del Valico a Pisa, Via di Cerretello.",
-        "raw_description": "",
+        "description": "Tratta stabilita con un walk-in in data 29/09/2026 e 03/10/2026. Si notano minitrincee, matasse di corrugati e birilli. Oltre a una serie di pozzetti Fibercop.",
+        "raw_description": "<div>Tratta stabilita con un walk-in in data 29/09/2026 e 03/10/2026. Si notano minitrincee, matasse di corrugati e birilli. Oltre a una serie di pozzetti Fibercop.<br></div>",
         "icon": "traffic-cone",
-        "color": "#ff8c00",
-        "length_m": 325.2,
-        "length_km": 0.325,
+        "color": "#27ae60",
+        "length_m": 580.3,
+        "length_km": 0.58,
         "area_m2": 0,
         "area_km2": 0.0,
         "lookAt": {
@@ -200,7 +222,7 @@
             "Via di Cerretello"
           ],
           "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
-          "stato_base": "imminente"
+          "stato_base": "eseguito"
         }
       }
     },
@@ -757,7 +779,7 @@
       },
       "properties": {
         "id": "073CCE441A419DEDF933",
-        "name": "S [0?] ARLO",
+        "name": "S [28] ARLO",
         "category": "arlo",
         "frazione": "Stagno",
         "geom_type": "Point",
@@ -1229,8 +1251,8 @@
         "category": "centrale_frazione",
         "frazione": "Parrana San Martino",
         "geom_type": "Point",
-        "description": "",
-        "raw_description": "",
+        "description": "Frazione di Parrana San Martino",
+        "raw_description": "<div>Frazione di Parrana San Martino<br></div>",
         "icon": "building-small",
         "color": "#ff6600",
         "length_m": 0,
@@ -1265,8 +1287,8 @@
         "category": "centrale_frazione",
         "frazione": "Parrana San Giusto",
         "geom_type": "Point",
-        "description": "",
-        "raw_description": "",
+        "description": "Frazione di Parrana San Giusto",
+        "raw_description": "<div>Frazione di Parrana San Giusto</div>",
         "icon": "building-small",
         "color": "#ff6600",
         "length_m": 0,
@@ -1954,14 +1976,14 @@
       },
       "properties": {
         "id": "02442DD76E41BFC6C1C1",
-        "name": "Cantiere 1 (14/09-02/10)",
-        "category": "cantiere_imminente",
+        "name": "Cantiere 1 NON ESEGUITO",
+        "category": "cantiere_non_eseguito",
         "frazione": "Collesalvetti",
         "geom_type": "LineString",
-        "description": "Cantiere FTTH FiberCop Collesalvetti (Ord. 95/2026 del 02/09/2026). Vie: Via Nenni, Via Roma, Via del Valico a Pisa, Via di Cerretello.",
-        "raw_description": "",
+        "description": "Si notano solamente dei segni blu (oltre ai soliti colori), che indicano Fibercop , sull'asfalto",
+        "raw_description": "<div>Si notano solamente dei segni blu (oltre ai soliti colori), che indicano Fibercop , sull'asfalto<br></div>",
         "icon": "traffic-cone",
-        "color": "#ff8c00",
+        "color": "#e67e22",
         "length_m": 96.5,
         "length_km": 0.097,
         "area_m2": 0,
@@ -1988,7 +2010,7 @@
             "Via di Cerretello"
           ],
           "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
-          "stato_base": "imminente"
+          "stato_base": "non_eseguito"
         }
       }
     },
@@ -2052,14 +2074,14 @@
       },
       "properties": {
         "id": "099D51459541BFC79191",
-        "name": "Cantiere 1 (14/09-02/10)",
-        "category": "cantiere_imminente",
+        "name": "Cantiere 1 NON ESEGUITO",
+        "category": "cantiere_non_eseguito",
         "frazione": "Collesalvetti",
         "geom_type": "LineString",
-        "description": "Cantiere FTTH FiberCop Collesalvetti (Ord. 95/2026 del 02/09/2026). Vie: Via Nenni, Via Roma, Via del Valico a Pisa, Via di Cerretello.",
-        "raw_description": "",
+        "description": "Si notano solamente dei segni blu (oltre ai soliti colori), che indicano Fibercop , sull'asfalto",
+        "raw_description": "<div>Si notano solamente dei segni blu (oltre ai soliti colori), che indicano Fibercop , sull'asfalto<br></div>",
         "icon": "traffic-cone",
-        "color": "#ff8c00",
+        "color": "#e67e22",
         "length_m": 513.7,
         "length_km": 0.514,
         "area_m2": 0,
@@ -2086,7 +2108,7 @@
             "Via di Cerretello"
           ],
           "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
-          "stato_base": "imminente"
+          "stato_base": "non_eseguito"
         }
       }
     },
@@ -2097,8 +2119,18 @@
         "type": "LineString",
         "coordinates": [
           [
-            10.47540279487347,
-            43.59382100949325,
+            10.47490460283305,
+            43.59558292267596,
+            0.0
+          ],
+          [
+            10.47522930045093,
+            43.59396182671915,
+            0.0
+          ],
+          [
+            10.47534101873045,
+            43.59385707891838,
             0.0
           ],
           [
@@ -2130,16 +2162,16 @@
       },
       "properties": {
         "id": "08DB97EDC341BFC840B3",
-        "name": "Cantiere 1 (14/09-02/10)",
-        "category": "cantiere_imminente",
+        "name": "Cantiere 1 ESEGUITO",
+        "category": "cantiere_eseguito",
         "frazione": "Collesalvetti",
         "geom_type": "LineString",
-        "description": "Cantiere FTTH FiberCop Collesalvetti (Ord. 95/2026 del 02/09/2026). Vie: Via Nenni, Via Roma, Via del Valico a Pisa, Via di Cerretello.",
-        "raw_description": "",
+        "description": "Tratta stabilita con un walk-in in data 29/09/2026 e 03/10/2026. Si notano minitrincee, matasse di corrugati e birilli. Oltre a una serie di pozzetti Fibercop.",
+        "raw_description": "<div>Tratta stabilita con un walk-in in data 29/09/2026 e 03/10/2026. Si notano minitrincee, matasse di corrugati e birilli. Oltre a una serie di pozzetti Fibercop.<br></div>",
         "icon": "traffic-cone",
-        "color": "#ff8c00",
-        "length_m": 293.4,
-        "length_km": 0.293,
+        "color": "#27ae60",
+        "length_m": 496.3,
+        "length_km": 0.496,
         "area_m2": 0,
         "area_km2": 0.0,
         "lookAt": {
@@ -2164,7 +2196,7 @@
             "Via di Cerretello"
           ],
           "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
-          "stato_base": "imminente"
+          "stato_base": "eseguito"
         }
       }
     },
@@ -2233,14 +2265,14 @@
       },
       "properties": {
         "id": "0B6DD449B041BFC99520",
-        "name": "Cantiere 1 (14/09-02/10)",
-        "category": "cantiere_imminente",
+        "name": "Cantiere 1 NON ESEGUITO",
+        "category": "cantiere_non_eseguito",
         "frazione": "Collesalvetti",
         "geom_type": "LineString",
-        "description": "Cantiere FTTH FiberCop Collesalvetti (Ord. 95/2026 del 02/09/2026). Vie: Via Nenni, Via Roma, Via del Valico a Pisa, Via di Cerretello.",
-        "raw_description": "",
+        "description": "Si notano solamente dei segni blu (oltre ai soliti colori), che indicano Fibercop , sull'asfalto",
+        "raw_description": "<div>Si notano solamente dei segni blu (oltre ai soliti colori), che indicano Fibercop , sull'asfalto<br></div>",
         "icon": "traffic-cone",
-        "color": "#ff8c00",
+        "color": "#e67e22",
         "length_m": 340.9,
         "length_km": 0.341,
         "area_m2": 0,
@@ -2267,7 +2299,7 @@
             "Via di Cerretello"
           ],
           "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
-          "stato_base": "imminente"
+          "stato_base": "non_eseguito"
         }
       }
     },
@@ -2408,9 +2440,9 @@
       },
       "properties": {
         "id": "08927D586B41BFCD66AB",
-        "name": "Area Coperta",
+        "name": "Area Coperta Collesalvetti",
         "category": "copertura_ok",
-        "frazione": "Altro",
+        "frazione": "Collesalvetti",
         "geom_type": "Polygon",
         "description": "",
         "raw_description": "",
@@ -2573,9 +2605,9 @@
       },
       "properties": {
         "id": "08A788CB5441BFCE4768",
-        "name": "Area NON Coperta",
+        "name": "Area NON Coperta Collesalvetti",
         "category": "copertura_no",
-        "frazione": "Altro",
+        "frazione": "Collesalvetti",
         "geom_type": "Polygon",
         "description": "",
         "raw_description": "",
@@ -3207,12 +3239,12 @@
       },
       "properties": {
         "id": "0AD5AAF68741C10071CC",
-        "name": "Cantiere 2 (21/09-16/10)",
+        "name": "Cantiere 2 (05/10-17/10)",
         "category": "cantiere_programmato",
         "frazione": "Stagno",
         "geom_type": "LineString",
-        "description": "Nuovo cantiere FTTH FiberCop Stagno (Ord. 102/2026 del 10/09/2026). Vie: Via Otto Marzo, Via Romita, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio.",
-        "raw_description": "",
+        "description": "Slittato... vecchia data 21/09-16/10",
+        "raw_description": "<div>Slittato... vecchia data&nbsp;21/09-16/10<br></div>",
         "icon": "traffic-cone",
         "color": "#ffd700",
         "length_m": 792.4,
@@ -3232,6 +3264,8 @@
           "data_ordinanza": "10/09/2026",
           "inizio_lavori": "2026-09-21T08:00:00+02:00",
           "fine_lavori": "2026-10-16T18:00:00+02:00",
+          "inizio_lavori_effettivo": "2026-10-05T08:00:00+02:00",
+          "fine_lavori_effettivo": "2026-10-17T18:00:00+02:00",
           "orario_giornaliero": "08:00 - 18:00 feriali",
           "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
           "vie_interessate": [
@@ -3243,7 +3277,8 @@
             "Piazza Di Vittorio"
           ],
           "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
-          "stato_base": "programmato"
+          "stato_base": "programmato",
+          "note_slittamento": "Slittato al 05/10 - 17/10 da rilievo sul campo"
         }
       }
     },
@@ -3277,12 +3312,12 @@
       },
       "properties": {
         "id": "04D8D17C9141C10125EB",
-        "name": "Cantiere 2 (21/09-16/10)",
+        "name": "Cantiere 2 (05/10-17/10)",
         "category": "cantiere_programmato",
         "frazione": "Stagno",
         "geom_type": "LineString",
-        "description": "Nuovo cantiere FTTH FiberCop Stagno (Ord. 102/2026 del 10/09/2026). Vie: Via Otto Marzo, Via Romita, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio.",
-        "raw_description": "",
+        "description": "Slittato... vecchia data 21/09-16/10",
+        "raw_description": "<div>Slittato... vecchia data&nbsp;21/09-16/10<br></div>",
         "icon": "traffic-cone",
         "color": "#ffd700",
         "length_m": 360.5,
@@ -3302,6 +3337,8 @@
           "data_ordinanza": "10/09/2026",
           "inizio_lavori": "2026-09-21T08:00:00+02:00",
           "fine_lavori": "2026-10-16T18:00:00+02:00",
+          "inizio_lavori_effettivo": "2026-10-05T08:00:00+02:00",
+          "fine_lavori_effettivo": "2026-10-17T18:00:00+02:00",
           "orario_giornaliero": "08:00 - 18:00 feriali",
           "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
           "vie_interessate": [
@@ -3313,7 +3350,8 @@
             "Piazza Di Vittorio"
           ],
           "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
-          "stato_base": "programmato"
+          "stato_base": "programmato",
+          "note_slittamento": "Slittato al 05/10 - 17/10 da rilievo sul campo"
         }
       }
     },
@@ -3367,12 +3405,12 @@
       },
       "properties": {
         "id": "01393CA83D41C1030753",
-        "name": "Cantiere 2 (21/09-16/10)",
+        "name": "Cantiere 2 (05/10-17/10)",
         "category": "cantiere_programmato",
         "frazione": "Stagno",
         "geom_type": "LineString",
-        "description": "Nuovo cantiere FTTH FiberCop Stagno (Ord. 102/2026 del 10/09/2026). Vie: Via Otto Marzo, Via Romita, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio.",
-        "raw_description": "",
+        "description": "Slittato... vecchia data 21/09-16/10",
+        "raw_description": "<div>Slittato... vecchia data&nbsp;21/09-16/10<br></div>",
         "icon": "traffic-cone",
         "color": "#ffd700",
         "length_m": 277.9,
@@ -3392,6 +3430,8 @@
           "data_ordinanza": "10/09/2026",
           "inizio_lavori": "2026-09-21T08:00:00+02:00",
           "fine_lavori": "2026-10-16T18:00:00+02:00",
+          "inizio_lavori_effettivo": "2026-10-05T08:00:00+02:00",
+          "fine_lavori_effettivo": "2026-10-17T18:00:00+02:00",
           "orario_giornaliero": "08:00 - 18:00 feriali",
           "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
           "vie_interessate": [
@@ -3403,8 +3443,820 @@
             "Piazza Di Vittorio"
           ],
           "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
-          "stato_base": "programmato"
+          "stato_base": "programmato",
+          "note_slittamento": "Slittato al 05/10 - 17/10 da rilievo sul campo"
         }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "05C7B1F97841C1CA147C",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.3691520477683,
+            43.57178239347348,
+            0.0
+          ],
+          [
+            10.36538475487784,
+            43.56992931040453,
+            0.0
+          ],
+          [
+            10.36439265483711,
+            43.56943240228635,
+            0.0
+          ],
+          [
+            10.36383985728154,
+            43.56913998377325,
+            0.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "05C7B1F97841C1CA147C",
+        "name": "Opera sulla Backbone di 07/2026",
+        "category": "tratta_backbone",
+        "frazione": "Stagno",
+        "geom_type": "LineString",
+        "description": "Opera di Fibercop su una tratta di backbone in fibra che va verso est quindi presumibilmente verso Collesalvetti. Ordinanza allegata...",
+        "raw_description": "<div>Opera di Fibercop su una tratta di backbone in fibra che va verso est quindi presumibilmente verso Collesalvetti. Ordinanza allegata...<br></div>",
+        "icon": "fiber-cable",
+        "color": "#9b59b6",
+        "length_m": 519.2,
+        "length_km": 0.519,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.36463564156927,
+          "latitude": 43.56960206400989,
+          "altitude": 19.59200999676209,
+          "heading": 0.0001643109508308872,
+          "tilt": 0.0,
+          "range": 973.1577716082395
+        },
+        "cantiere": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "05B932036B41C1D8F728",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.4423159469846,
+            43.5381941989962,
+            0.0
+          ],
+          [
+            10.44303087799681,
+            43.53842874721525,
+            0.0
+          ],
+          [
+            10.44284231753534,
+            43.53864911810427,
+            0.0
+          ],
+          [
+            10.44859185978309,
+            43.54287560035919,
+            0.0
+          ],
+          [
+            10.45310513564203,
+            43.54173611616255,
+            0.0
+          ],
+          [
+            10.45654726920862,
+            43.5397726628635,
+            0.0
+          ],
+          [
+            10.45722997034183,
+            43.53943950842924,
+            0.0
+          ],
+          [
+            10.45837455776207,
+            43.53895519066759,
+            0.0
+          ],
+          [
+            10.45892969293714,
+            43.53888208706309,
+            0.0
+          ],
+          [
+            10.45988480247932,
+            43.53918366216217,
+            0.0
+          ],
+          [
+            10.46379741756082,
+            43.5392746017067,
+            0.0
+          ],
+          [
+            10.46253535508466,
+            43.53562528188366,
+            0.0
+          ],
+          [
+            10.46223135026296,
+            43.53468869121162,
+            0.0
+          ],
+          [
+            10.46079273511633,
+            43.53332844866515,
+            0.0
+          ],
+          [
+            10.46031008305797,
+            43.53260656571654,
+            0.0
+          ],
+          [
+            10.45858469217634,
+            43.52934725003851,
+            0.0
+          ],
+          [
+            10.45831749109224,
+            43.52873986728931,
+            0.0
+          ],
+          [
+            10.45750320337223,
+            43.52873226459565,
+            0.0
+          ],
+          [
+            10.45729699254214,
+            43.52857787272791,
+            0.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "05B932036B41C1D8F728",
+        "name": "INFRATEL",
+        "category": "infratel",
+        "frazione": "Altro",
+        "geom_type": "LineString",
+        "description": "Seconda ed ultima tratta di INFRATEL per rilegare le centrali di Parrana San Martino e Parrana San Giusto in fibra ottica. Prevalentemente in palifica (specialmente a nord-ovest)",
+        "raw_description": "<div>Seconda ed ultima tratta di INFRATEL per rilegare le centrali di Parrana San Martino e Parrana San Giusto in fibra ottica. Prevalentemente in palifica (specialmente a nord-ovest)</div>",
+        "icon": "infratel",
+        "color": "#ffaa00",
+        "length_m": 3462.3,
+        "length_km": 3.462,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.46090725367461,
+          "latitude": 43.53170973981534,
+          "altitude": 59.95451500315448,
+          "heading": 0.0001599726687456743,
+          "tilt": 0.0,
+          "range": 2903.175475927711
+        },
+        "cantiere": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0A2895209441C56CED8C",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.35045364633308,
+          43.59268825418914,
+          2.480084902416697
+        ]
+      },
+      "properties": {
+        "id": "0A2895209441C56CED8C",
+        "name": "S [27] ARLO",
+        "category": "arlo",
+        "frazione": "Stagno",
+        "geom_type": "Point",
+        "description": "",
+        "raw_description": "",
+        "icon": "optical-cabinet",
+        "color": "#00f0ff",
+        "length_m": 0,
+        "length_km": 0.0,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.35048466135247,
+          "latitude": 43.59251258250174,
+          "altitude": 2.422973022839601,
+          "heading": 5.318547260249746,
+          "tilt": 0.0,
+          "range": 234.1587203446761
+        },
+        "cantiere": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "06D2B51C4A41C5796F90",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.35530408907809,
+          43.58928395114626,
+          8.95624684623681
+        ]
+      },
+      "properties": {
+        "id": "06D2B51C4A41C5796F90",
+        "name": "S [03] ARL",
+        "category": "arl",
+        "frazione": "Stagno",
+        "geom_type": "Point",
+        "description": "Con apparato aggiuntivo",
+        "raw_description": "<div>Con apparato aggiuntivo<br></div>",
+        "icon": "copper-cabinet",
+        "color": "#ff3366",
+        "length_m": 0,
+        "length_km": 0.0,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.35567006888551,
+          "latitude": 43.58886511499404,
+          "altitude": 12.441348060764,
+          "heading": 270.0053580845657,
+          "tilt": 0.0,
+          "range": 117.1289254685689
+        },
+        "cantiere": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "087416D75C41C59E4800",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.34949202033501,
+            43.59306034027898,
+            0.0
+          ],
+          [
+            10.34992218441386,
+            43.59286085250136,
+            0.0
+          ],
+          [
+            10.35056057707086,
+            43.59261599001231,
+            0.0
+          ],
+          [
+            10.35209530955318,
+            43.59218795721411,
+            0.0
+          ],
+          [
+            10.35232192334022,
+            43.59220705167525,
+            0.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "087416D75C41C59E4800",
+        "name": "Tratta Stagno (Maggio 2026-Giugno 2026)",
+        "category": "tratta_stagno",
+        "frazione": "Stagno",
+        "geom_type": "LineString",
+        "description": "",
+        "raw_description": "",
+        "icon": "fiber-cable",
+        "color": "#00c3ff",
+        "length_m": 250.1,
+        "length_km": 0.25,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.35036185447418,
+          "latitude": 43.59275452875105,
+          "altitude": 10.77331255765273,
+          "heading": 20.63062086495122,
+          "tilt": 0.0,
+          "range": 510.9855005475401
+        },
+        "cantiere": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "023213B9C541C59EFAE8",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.35005123495885,
+            43.59285814329918,
+            0.0
+          ],
+          [
+            10.35057550778762,
+            43.59347919586065,
+            0.0
+          ],
+          [
+            10.35104968349742,
+            43.59344049533794,
+            0.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "023213B9C541C59EFAE8",
+        "name": "Tratta Stagno (Maggio 2026-Giugno 2026)",
+        "category": "tratta_stagno",
+        "frazione": "Stagno",
+        "geom_type": "LineString",
+        "description": "",
+        "raw_description": "",
+        "icon": "fiber-cable",
+        "color": "#00c3ff",
+        "length_m": 119.4,
+        "length_km": 0.119,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.35036185447418,
+          "latitude": 43.59275452875105,
+          "altitude": 10.77331255765273,
+          "heading": 20.63062086495122,
+          "tilt": 0.0,
+          "range": 510.9855005475401
+        },
+        "cantiere": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "03B96D8A3141C59F56F7",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.34945161346941,
+            43.59147673187805,
+            0.0
+          ],
+          [
+            10.35009245021216,
+            43.59274254300028,
+            0.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "03B96D8A3141C59F56F7",
+        "name": "Tratta Stagno (Maggio 2026-Giugno 2026)",
+        "category": "tratta_stagno",
+        "frazione": "Stagno",
+        "geom_type": "LineString",
+        "description": "",
+        "raw_description": "",
+        "icon": "fiber-cable",
+        "color": "#00c3ff",
+        "length_m": 149.9,
+        "length_km": 0.15,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.35026186803859,
+          "latitude": 43.59233239757177,
+          "altitude": 25.44544036005021,
+          "heading": 20.63055192049983,
+          "tilt": 0.0,
+          "range": 496.3133848248253
+        },
+        "cantiere": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0AB38499FF41C59FB9EC",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.35088520640504,
+            43.59114031083847,
+            0.0
+          ],
+          [
+            10.35147768502424,
+            43.59227104709431,
+            0.0
+          ],
+          [
+            10.35215175900571,
+            43.59358454035262,
+            0.0
+          ],
+          [
+            10.3520527847984,
+            43.59372875699104,
+            0.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "0AB38499FF41C59FB9EC",
+        "name": "Tratta Stagno (Maggio 2026-Giugno 2026)",
+        "category": "tratta_stagno",
+        "frazione": "Stagno",
+        "geom_type": "LineString",
+        "description": "",
+        "raw_description": "",
+        "icon": "fiber-cable",
+        "color": "#00c3ff",
+        "length_m": 308.2,
+        "length_km": 0.308,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.35142336967794,
+          "latitude": 43.59278564383091,
+          "altitude": 16.79136591297143,
+          "heading": 20.63135899891394,
+          "tilt": 0.0,
+          "range": 719.2662226086395
+        },
+        "cantiere": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "04A0FAC1A941E16312D8",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.3106667,
+          43.5495556,
+          0.0
+        ]
+      },
+      "properties": {
+        "id": "04A0FAC1A941E16312D8",
+        "name": "Centrale Feeder (Livorno Nord)",
+        "category": "centrale_feeder",
+        "frazione": "Altro",
+        "geom_type": "Point",
+        "description": "Grande centrale Fibercop che funge da \"feeder\" alla centrale comunale di Collesalvetti",
+        "raw_description": "<div>Grande centrale Fibercop che funge da \"feeder\" alla centrale comunale di Collesalvetti</div>",
+        "icon": "building-tower",
+        "color": "#b22222",
+        "length_m": 0,
+        "length_km": 0.0,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.3106667,
+          "latitude": 43.5495556,
+          "altitude": 0.0,
+          "heading": 0.0,
+          "tilt": 0.0,
+          "range": 740.493615114443
+        },
+        "cantiere": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0DE7916F26423746716E",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.47497504665437,
+            43.59560764680238,
+            0.0
+          ],
+          [
+            10.47529632373823,
+            43.59566577690929,
+            0.0
+          ],
+          [
+            10.47572485768855,
+            43.5957046706155,
+            0.0
+          ],
+          [
+            10.47619523659769,
+            43.5956866732164,
+            0.0
+          ],
+          [
+            10.47680214167413,
+            43.59559061694995,
+            0.0
+          ],
+          [
+            10.47721702818512,
+            43.59559522296307,
+            0.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "0DE7916F26423746716E",
+        "name": "Cantiere 1 NON ESEGUITO",
+        "category": "cantiere_non_eseguito",
+        "frazione": "Collesalvetti",
+        "geom_type": "LineString",
+        "description": "Si notano solamente dei segni blu (oltre ai soliti colori), che indicano Fibercop , sull'asfalto",
+        "raw_description": "<div>Si notano solamente dei segni blu (oltre ai soliti colori), che indicano Fibercop , sull'asfalto</div>",
+        "icon": "traffic-cone",
+        "color": "#e67e22",
+        "length_m": 182.8,
+        "length_km": 0.183,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.47663576453814,
+          "latitude": 43.59561122364551,
+          "altitude": 17.3274038545835,
+          "heading": 0.0,
+          "tilt": 0.0,
+          "range": 489.2503822615254
+        },
+        "cantiere": {
+          "codice_ordinanza": "Ordinanza P.M. n. 88 del 02/09/2026 (Reg. Gen. 95)",
+          "data_ordinanza": "02/09/2026",
+          "inizio_lavori": "2026-09-14T08:00:00+02:00",
+          "fine_lavori": "2026-10-02T18:00:00+02:00",
+          "orario_giornaliero": "08:00 - 18:00 feriali",
+          "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
+          "vie_interessate": [
+            "Via Nenni",
+            "Via Roma (rotatoria Via Nenni)",
+            "Via del Valico a Pisa",
+            "Via di Cerretello"
+          ],
+          "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
+          "stato_base": "non_eseguito"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0A173E317742376CD0E8",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.35073530108562,
+            43.58153719918806,
+            0.0
+          ],
+          [
+            10.35231734368686,
+            43.58258526574704,
+            0.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "0A173E317742376CD0E8",
+        "name": "Cantiere 3 (19/10-23/10)",
+        "category": "cantiere",
+        "frazione": "Stagno",
+        "geom_type": "LineString",
+        "description": "",
+        "raw_description": "",
+        "icon": "traffic-cone",
+        "color": "#f39c12",
+        "length_m": 172.7,
+        "length_km": 0.173,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.35116063657071,
+          "latitude": 43.58213347751708,
+          "altitude": 18.32433369551834,
+          "heading": 0.0,
+          "tilt": 0.0,
+          "range": 589.429853804686
+        },
+        "cantiere": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0EB8D0BA5142376E2D37",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.3437315442651,
+            43.5817096236189,
+            0.0
+          ],
+          [
+            10.34399360992819,
+            43.58163965138274,
+            0.0
+          ],
+          [
+            10.3461580554537,
+            43.58160950568683,
+            0.0
+          ],
+          [
+            10.34726854956758,
+            43.58161005436194,
+            0.0
+          ],
+          [
+            10.34851279768862,
+            43.58145223170972,
+            0.0
+          ],
+          [
+            10.34860834820278,
+            43.5816239040057,
+            0.0
+          ],
+          [
+            10.34870562981522,
+            43.58259683441211,
+            0.0
+          ],
+          [
+            10.34875208610028,
+            43.58266185967189,
+            0.0
+          ],
+          [
+            10.34895300368152,
+            43.58264590383556,
+            0.0
+          ],
+          [
+            10.34913307119999,
+            43.58340780350431,
+            0.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "0EB8D0BA5142376E2D37",
+        "name": "Cantiere 3 (19/10-23/10)",
+        "category": "cantiere",
+        "frazione": "Stagno",
+        "geom_type": "LineString",
+        "description": "",
+        "raw_description": "",
+        "icon": "traffic-cone",
+        "color": "#f39c12",
+        "length_m": 627.5,
+        "length_km": 0.627,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.34740200925167,
+          "latitude": 43.58258262497849,
+          "altitude": 10.30079980130272,
+          "heading": 0.0,
+          "tilt": 0.0,
+          "range": 426.9839933574985
+        },
+        "cantiere": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "07624940EF4237721F0B",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.3485973830608,
+            43.58146465660271,
+            0.0
+          ],
+          [
+            10.35382150259877,
+            43.58149799444063,
+            0.0
+          ],
+          [
+            10.36930873166871,
+            43.5794143774147,
+            0.0
+          ],
+          [
+            10.36995957267338,
+            43.57738536376833,
+            0.0
+          ],
+          [
+            10.37021577169426,
+            43.57548384948264,
+            0.0
+          ],
+          [
+            10.36984215034682,
+            43.57213397757782,
+            0.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "07624940EF4237721F0B",
+        "name": "Cantiere 3 (19/10-23/10)",
+        "category": "cantiere",
+        "frazione": "Stagno",
+        "geom_type": "LineString",
+        "description": "Improbabile che il cantiere arrivi fino a queste zone, ma fino al 24 ottobre circa terrò sulla mappa tutta Via Aiaccia. Curioso che però questa tratta arriva davanti alla tratta color viola \"Opera sulla Backbone di 07/26\"... analisi di questa informazione è necessaria.",
+        "raw_description": "<div>Improbabile che il cantiere arrivi fino a queste zone, ma fino al 24 ottobre circa terrò sulla mappa tutta Via Aiaccia. Curioso che però questa tratta arriva davanti alla tratta color viola \"Opera sulla Backbone di 07/26\"... analisi di questa informazione è necessaria.<br></div>",
+        "icon": "traffic-cone",
+        "color": "#f39c12",
+        "length_m": 2507.4,
+        "length_km": 2.507,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.35860589252548,
+          "latitude": 43.58053759702513,
+          "altitude": 13.41080176303281,
+          "heading": 0.0,
+          "tilt": 0.0,
+          "range": 988.5851525836915
+        },
+        "cantiere": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0C884334EF423778B430",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.35383080908811,
+            43.58521990533276,
+            0.0
+          ],
+          [
+            10.35438407462093,
+            43.58510152295065,
+            0.0
+          ],
+          [
+            10.35447661007515,
+            43.58503388040863,
+            0.0
+          ],
+          [
+            10.35424896737212,
+            43.58405258749391,
+            0.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "0C884334EF423778B430",
+        "name": "Cantiere 3 (19/10-23/10)",
+        "category": "cantiere",
+        "frazione": "Stagno",
+        "geom_type": "LineString",
+        "description": "",
+        "raw_description": "",
+        "icon": "traffic-cone",
+        "color": "#f39c12",
+        "length_m": 167.7,
+        "length_km": 0.168,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.35258139119026,
+          "latitude": 43.58463700098142,
+          "altitude": 9.715037588102067,
+          "heading": 0.0,
+          "tilt": 0.0,
+          "range": 642.4696112451784
+        },
+        "cantiere": null
       }
     }
   ]

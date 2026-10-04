@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+"""
+kml_to_geojson.py - Parser KML e generatore GeoJSON / data.js per la rete FTTH di Collesalvetti.
+Supporta Snapshot 3, calcolo distanze Haversine, aree poligonali e metadati ordinanze.
+"""
+
 import xml.etree.ElementTree as ET
 import json
 import re
@@ -45,6 +50,7 @@ def clean_html(text):
 def categorize(name, geom_type, desc):
     n = name.strip()
     nl = n.lower()
+    dl = desc.lower() if desc else ""
     
     frazione = "Altro"
     if n.startswith("C ") or "collesalvetti" in nl:
@@ -55,6 +61,8 @@ def categorize(name, geom_type, desc):
         frazione = "Stagno"
     elif n.startswith("G ") or "guasticce" in nl:
         frazione = "Guasticce"
+    elif "aiaccia" in nl or "aiaccia" in dl:
+        frazione = "Stagno"
 
     category = "altro"
     icon = "box"
@@ -65,6 +73,11 @@ def categorize(name, geom_type, desc):
         icon = "building-tower"
         color = "#e60000"
         frazione = "Collesalvetti"
+    elif "centrale feeder" in nl:
+        category = "centrale_feeder"
+        icon = "building-tower"
+        color = "#b22222"
+        frazione = "Altro"
     elif "centrale di frazione" in nl:
         category = "centrale_frazione"
         icon = "building-small"
@@ -95,16 +108,36 @@ def categorize(name, geom_type, desc):
         category = "infratel"
         icon = "infratel"
         color = "#ffaa00"
+    elif "backbone" in nl:
+        category = "tratta_backbone"
+        icon = "fiber-cable"
+        color = "#9b59b6"
+        frazione = "Stagno"
     elif "cantiere 2" in nl:
         category = "cantiere_programmato"
         icon = "traffic-cone"
         color = "#ffd700"  # Gold per cantiere 2 Stagno
         frazione = "Stagno"
+    elif "cantiere 1 non eseguito" in nl:
+        category = "cantiere_non_eseguito"
+        icon = "traffic-cone"
+        color = "#e67e22"
+        frazione = "Collesalvetti"
+    elif "cantiere 1 eseguito" in nl:
+        category = "cantiere_eseguito"
+        icon = "traffic-cone"
+        color = "#27ae60"
+        frazione = "Collesalvetti"
     elif "cantiere 1" in nl:
         category = "cantiere_imminente"
         icon = "traffic-cone"
-        color = "#ff8c00"  # Arancio per cantiere 1 Collesalvetti
+        color = "#ff8c00"
         frazione = "Collesalvetti"
+    elif "cantiere 3" in nl:
+        category = "cantiere"
+        icon = "traffic-cone"
+        color = "#f39c12"
+        frazione = "Stagno"
     elif "cantiere" in nl:
         category = "cantiere"
         icon = "traffic-cone"
@@ -206,6 +239,9 @@ def parse_kml(kml_path):
         if category == "centrale_comunale":
             name = "Centrale Comunale (Collesalvetti)"
             frazione = "Collesalvetti"
+        elif category == "centrale_feeder":
+            name = "Centrale Feeder (Livorno Nord)"
+            frazione = "Altro"
         elif category == "centrale_frazione" and geom_type == "Point":
             lon, lat = geom["coordinates"][0], geom["coordinates"][1]
             if 43.605 < lat < 43.615 and 10.465 < lon < 10.475:
@@ -235,6 +271,8 @@ def parse_kml(kml_path):
                 "data_ordinanza": "10/09/2026",
                 "inizio_lavori": "2026-09-21T08:00:00+02:00",
                 "fine_lavori": "2026-10-16T18:00:00+02:00",
+                "inizio_lavori_effettivo": "2026-10-05T08:00:00+02:00",
+                "fine_lavori_effettivo": "2026-10-17T18:00:00+02:00",
                 "orario_giornaliero": "08:00 - 18:00 feriali",
                 "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
                 "vie_interessate": [
@@ -246,11 +284,13 @@ def parse_kml(kml_path):
                     "Piazza Di Vittorio"
                 ],
                 "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
-                "stato_base": "programmato"
+                "stato_base": "programmato",
+                "note_slittamento": "Slittato al 05/10 - 17/10 da rilievo sul campo"
             }
             if not clean_desc:
-                clean_desc = "Nuovo cantiere FTTH FiberCop Stagno (Ord. 102/2026 del 10/09/2026). Vie: Via Otto Marzo, Via Romita, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio."
+                clean_desc = "Nuovo cantiere FTTH FiberCop Stagno (Ord. 102/2026 del 10/09/2026, slittato al 05/10 - 17/10). Vie: Via Otto Marzo, Via Romita, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio."
         elif "cantiere 1" in name.lower():
+            stato_cantiere = "eseguito" if ("eseguito" in name.lower() and "non eseguito" not in name.lower()) else ("non_eseguito" if "non eseguito" in name.lower() else "imminente")
             cantiere_info = {
                 "codice_ordinanza": "Ordinanza P.M. n. 88 del 02/09/2026 (Reg. Gen. 95)",
                 "data_ordinanza": "02/09/2026",
@@ -265,10 +305,10 @@ def parse_kml(kml_path):
                     "Via di Cerretello"
                 ],
                 "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
-                "stato_base": "imminente"
+                "stato_base": stato_cantiere
             }
             if not clean_desc:
-                clean_desc = "Cantiere FTTH FiberCop Collesalvetti (Ord. 95/2026 del 02/09/2026). Vie: Via Nenni, Via Roma, Via del Valico a Pisa, Via di Cerretello."
+                clean_desc = f"Cantiere FTTH FiberCop Collesalvetti (Ord. 95/2026 del 02/09/2026 - stato: {stato_cantiere}). Vie: Via Nenni, Via Roma, Via del Valico a Pisa, Via di Cerretello."
 
         feature = {
             "type": "Feature",
@@ -300,7 +340,9 @@ def parse_kml(kml_path):
             "title": "Rete FTTH & Tracker Cantieri - Comune di Collesalvetti",
             "author": "Mappatura Originale Cittadina integrata con Albo Pretorio",
             "total_features": len(features),
-            "generated_at": "2026-09-10",
+            "generated_at": "2026-10-04",
+            "source_snapshot": "Snapshot 3",
+            "source_kml": "data/snapshots/rilievo_snapshot3.kml",
             "timezone": "Europe/Rome"
         },
         "features": features
@@ -310,17 +352,17 @@ def parse_kml(kml_path):
 def main():
     os.makedirs("data", exist_ok=True)
     os.makedirs("js", exist_ok=True)
-    kml_path = "data/kml/rilievo_snapshot2.kml"
+    kml_path = "data/snapshots/rilievo_snapshot3.kml"
     data = parse_kml(kml_path)
     
     with open("data/network_data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
         
-    js_content = f"// Generato automaticamente da {kml_path} con dati Ordinanze Albo Pretorio\nwindow.FTTH_NETWORK_DATA = {json.dumps(data, ensure_ascii=False, indent=2)};\n"
+    js_content = f"// Generato automaticamente da {kml_path} con dati Ordinanze Albo Pretorio (Snapshot 3)\nwindow.FTTH_NETWORK_DATA = {json.dumps(data, ensure_ascii=False, indent=2)};\n"
     with open("js/data.js", "w", encoding="utf-8") as f:
         f.write(js_content)
         
-    print(f"Successfully processed {len(data['features'])} features into data/network_data.json and js/data.js")
+    print(f"Successfully processed {len(data['features'])} features from {kml_path} into data/network_data.json and js/data.js")
 
 if __name__ == "__main__":
     main()
