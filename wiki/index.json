@@ -1,0 +1,90 @@
+[
+  {
+    "slug": "ftth-come-funziona",
+    "title": "Come Funziona la Fibra FTTH",
+    "summary": "Principi fisici della propagazione della luce, topologia di rete punto-multipunto PON e architettura trasmissiva dall'OLT di centrale fino al modem domestico.",
+    "category": "Architettura & Fisica",
+    "order": 1,
+    "file": "wiki/ftth-come-funziona.md"
+  },
+  {
+    "slug": "tecnologie-a-confronto",
+    "title": "Tecnologie a Confronto: FTTH, FTTC, FWA e ADSL",
+    "summary": "Analisi comparativa dettagliata dei parametri fisici, prestazionali e normativi delle tecnologie di accesso broadband e ultrabroadband, con tabella sinottica e bollini AGCOM.",
+    "category": "Tecnologie",
+    "order": 2,
+    "file": "wiki/tecnologie-a-confronto.md"
+  },
+  {
+    "slug": "standard-pon",
+    "title": "Standard PON: GPON, XGS-PON e NG-PON2",
+    "summary": "L'evoluzione degli standard di rete ottica passiva definiti dall'ITU-T: multiplazione spettrale, lunghezze d'onda, bit rate simmetrici, fattori di splitting e coesistenza WDM sulla stessa fibra.",
+    "category": "Standard & Protocolli",
+    "order": 3,
+    "file": "wiki/standard-pon.md"
+  },
+  {
+    "slug": "apparati-sul-territorio",
+    "title": "Gli Apparati Fisici della Rete sul Territorio",
+    "summary": "Guida illustrativa al riconoscimento e alla funzione degli elementi visibili e sotterranei della rete FTTH: centrali OLT, cavi Feeder, armadi ARLO, pozzetti, muffole stagne e distributori ottici PTE/ROE.",
+    "category": "Infrastruttura",
+    "order": 4,
+    "file": "wiki/apparati-sul-territorio.md"
+  },
+  {
+    "slug": "fibre-e-connettori",
+    "title": "Fibre Ottiche, Cavi e Connettori",
+    "summary": "Caratteristiche dei conduttori in silice: standard monomodali ITU-T G.652.D e G.657, tipologie di connettori SC/APC vs SC/UPC, tecniche di fusione ad arco voltaico e codici colore normati.",
+    "category": "Componentistica",
+    "order": 5,
+    "file": "wiki/fibre-e-connettori.md"
+  },
+  {
+    "slug": "operatori-e-piani-pubblici",
+    "title": "Operatori Wholesale, Piani Pubblici e Aree di Mercato",
+    "summary": "Il mercato delle telecomunicazioni in Italia: separazione wholesale/retail, classificazione delle aree (Bianche, Grigie, Nere), i piani pubblici del PNRR e il ruolo di Open Fiber e FiberCop.",
+    "category": "Mercato & Piani Pubblici",
+    "order": 6,
+    "file": "wiki/operatori-e-piani-pubblici.md"
+  },
+  {
+    "slug": "anatomia-di-un-cantiere",
+    "title": "Anatomia di un Cantiere: Tecniche di Scavo, Posa e Ripristini",
+    "summary": "Dall'iter autorizzativo municipale al manto d'usura definitivo: tecnologie di scavo (minitrincea, no-dig, palificata), prescrizioni del Codice della Strada e fasi di ripristino dell'asfalto.",
+    "category": "Cantieri & Normativa",
+    "order": 7,
+    "file": "wiki/anatomia-di-un-cantiere.md"
+  },
+  {
+    "slug": "dalla-fine-dei-lavori-allattivazione",
+    "title": "Dalla Fine dei Lavori all'Attivazione della Linea",
+    "summary": "Il cronoprogramma tecnico e informatico post-scavo: soffiaggio delle fibre, collaudo riflettometrico OTDR, apertura della vendibilità sui database wholesale e delivery finale in casa dell'utente.",
+    "category": "Attivazione & Delivery",
+    "order": 8,
+    "file": "wiki/dalla-fine-dei-lavori-allattivazione.md"
+  },
+  {
+    "slug": "glossario",
+    "title": "Glossario Tecnico e Normativo della Fibra Ottica",
+    "summary": "Oltre 40 definizioni ragionate e rigorose di sigle, apparati, protocolli trasmissivi e concetti normativi impiegati nelle reti di telecomunicazione fisse italiane.",
+    "category": "Riferimento",
+    "order": 9,
+    "file": "wiki/glossario.md"
+  },
+  {
+    "slug": "faq",
+    "title": "Domande Frequenti (FAQ) per Cittadini e Condomini",
+    "summary": "Risposte autorevoli e chiare alle domande più frequenti su autorizzazioni condominiali, costi di posa, tracciati sull'asfalto, portabilità del numero e obblighi di passaggio dal vecchio doppino.",
+    "category": "Cittadini & Condomini",
+    "order": 10,
+    "file": "wiki/faq.md"
+  },
+  {
+    "slug": "collesalvetti",
+    "title": "La Rete FTTH nel Comune di Collesalvetti",
+    "summary": "Analisi tecnica e geospaziale della rete in fibra ottica nel Comune di Collesalvetti (LI): dati quantitativi certificati da Snapshot 3 (63 feature, 21,72 km), distribuzione per frazione, censimento apparati e registro delle ordinanze comunali.",
+    "category": "Osservatorio Locale",
+    "order": 11,
+    "file": "wiki/collesalvetti.md"
+  }
+]

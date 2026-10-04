@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki Tecnica Fibra Ottica | Collesalvetti</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            dark: '#0a0d14',
+                            panel: 'rgba(15, 23, 42, 0.85)',
+                            border: 'rgba(56, 189, 248, 0.25)',
+                            neon: '#00f0ff',
+                            accent: '#ff3366',
+                            fiber: '#ff8c00'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/wiki.css" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Vendor Marked Markdown Parser -->
+    <script src="vendor/marked.min.js"></script>
+</head>
+<body class="bg-cyber-dark text-slate-200 font-sans min-h-screen flex flex-col">
+
+    <!-- Top Navigation -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-cyber-border/40 backdrop-blur-md px-4 sm:px-6 h-16 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <button id="btn-toggle-sidebar" class="md:hidden p-2 text-slate-300 hover:text-white hover:bg-white/10 rounded-lg">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+            <a href="index.html" class="flex items-center gap-2.5">
+                <i data-lucide="network" class="text-cyber-neon w-7 h-7"></i>
+                <div>
+                    <span class="text-lg font-bold font-['Rajdhani'] tracking-wider text-white">FIBERPULSE <span class="text-cyber-neon">WIKI</span></span>
+                    <span class="hidden sm:inline-block text-[11px] text-slate-400 font-mono ml-2 uppercase tracking-widest border-l border-white/20 pl-2">Enciclopedia TLC & Territorio</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="flex items-center gap-2 sm:gap-3">
+            <a href="index.html" class="flex items-center gap-1.5 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyber-neon border border-cyber-border px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all">
+                <i data-lucide="map" class="w-4 h-4"></i>
+                <span class="hidden sm:inline">Mappa & Cantieri (Desktop/Tablet)</span>
+                <span class="sm:hidden">Mappa</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="flex-1 flex max-w-7xl w-full mx-auto relative">
+
+        <!-- Mobile Sidebar Backdrop -->
+        <div id="sidebar-backdrop" class="fixed inset-0 bg-black/70 z-40 hidden md:hidden"></div>
+
+        <!-- Sidebar Navigation (TOC & Search) -->
+        <aside id="wiki-sidebar" class="fixed md:sticky top-16 left-0 z-40 md:z-10 w-72 sm:w-80 h-[calc(100vh-4rem)] bg-cyber-dark/95 md:bg-transparent border-r border-cyber-border/30 p-4 flex flex-col transition-transform duration-300 -translate-x-full md:translate-x-0 overflow-y-auto">
+            <!-- Search Bar -->
+            <div class="mb-4">
+                <div class="relative">
+                    <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-3"></i>
+                    <input type="text" id="wiki-search-input" placeholder="Cerca tra le 11 voci..." class="w-full bg-black/50 border border-cyber-border/40 rounded-lg pl-9 pr-3 py-2 text-xs sm:text-sm text-white placeholder-slate-500 outline-none focus:border-cyber-neon transition-colors">
+                </div>
+            </div>
+
+            <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2 px-1 flex justify-between items-center">
+                <span>Voci Documentate (11)</span>
+                <span class="text-cyber-neon font-mono text-[10px]">100% LIBERA</span>
+            </div>
+
+            <!-- Articles List -->
+            <nav id="wiki-nav-list" class="space-y-1 flex-1 overflow-y-auto pr-1">
+                <!-- Injected via JavaScript -->
+            </nav>
+
+            <div class="pt-4 border-t border-white/10 text-[11px] text-slate-400 mt-2">
+                <div class="flex items-center gap-1.5 text-slate-300 mb-1">
+                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i>
+                    <span>Tabelle con fonti ufficiali</span>
+                </div>
+                <span>Snapshot 3 &bull; 04/10/2026</span>
+            </div>
+        </aside>
+
+        <!-- Main Article Content Area -->
+        <main class="flex-1 min-w-0 p-4 sm:p-8 lg:p-10 max-w-4xl">
+            <!-- Loading State -->
+            <div id="wiki-loading" class="flex flex-col items-center justify-center py-20 text-slate-400 space-y-3">
+                <div class="w-8 h-8 border-2 border-cyber-neon border-t-transparent rounded-full animate-spin"></div>
+                <span class="text-xs font-mono uppercase tracking-widest text-cyber-neon">Caricamento voce...</span>
+            </div>
+
+            <!-- Article Header -->
+            <article id="wiki-article-container" class="hidden">
+                <div class="mb-6 pb-6 border-b border-cyber-border/30">
+                    <div class="flex flex-wrap items-center gap-2 mb-3">
+                        <span id="article-category-badge" class="px-2.5 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-cyber-neon/15 text-cyber-neon border border-cyber-neon/30"></span>
+                        <span class="text-xs text-slate-400 flex items-center gap-1">
+                            <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+                            <span id="article-updated-date"></span>
+                        </span>
+                    </div>
+                    <div id="article-summary-banner" class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-700/50 text-xs sm:text-sm text-slate-300 leading-relaxed italic"></div>
+                </div>
+
+                <!-- Markdown Content Rendered -->
+                <div id="wiki-markdown-body" class="wiki-prose"></div>
+
+                <!-- Sources Card Box -->
+                <div id="article-sources-box" class="sources-card">
+                    <h4 class="text-sm font-['Rajdhani'] font-bold uppercase tracking-wider text-cyber-neon flex items-center gap-2 mb-3">
+                        <i data-lucide="book-marked" class="w-4 h-4"></i> Fonti Ufficiali e Riferimenti Normativi
+                    </h4>
+                    <div id="sources-list" class="space-y-2 text-xs"></div>
+                </div>
+
+                <!-- Footer Navigation -->
+                <div class="mt-12 pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs">
+                    <button id="btn-prev-article" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 transition-colors">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                        <span id="prev-article-title">Precedente</span>
+                    </button>
+                    <button id="btn-next-article" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-cyber-neon/10 hover:bg-cyber-neon/20 border border-cyber-neon/30 text-cyber-neon transition-colors ml-auto">
+                        <span id="next-article-title">Successiva</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <!-- Footer Disclaimer -->
+    <footer class="border-t border-cyber-border/20 py-6 px-6 text-center text-xs text-slate-400 bg-cyber-dark mt-auto">
+        <p class="max-w-2xl mx-auto mb-1">
+            <b>Osservatorio Civico Indipendente:</b> Questa documentazione tecnica e divulgativa è redatta a scopo civico e informativo, senza scopo di lucro. Non è affiliata, sponsorizzata né associata a FiberCop, Telecom Italia, Open Fiber, Fastweb o al Comune di Collesalvetti.
+        </p>
+        <p class="text-slate-400 font-mono text-[11px]">Dati aggiornati a Snapshot 3 (04/10/2026) &bull; Rete FTTH Collesalvetti</p>
+    </footer>
+
+    <!-- Embedded Articles Fallback Data -->
+    <script src="wiki/articles_data.js"></script>
+
+    <!-- Wiki Engine Logic -->
+    <script>
+        (function() {
+            let catalog = [];
+            let currentSlug = '';
+
+            const sidebar = document.getElementById('wiki-sidebar');
+            const backdrop = document.getElementById('sidebar-backdrop');
+            const btnToggle = document.getElementById('btn-toggle-sidebar');
+            const navList = document.getElementById('wiki-nav-list');
+            const searchInput = document.getElementById('wiki-search-input');
+            const loadingEl = document.getElementById('wiki-loading');
+            const articleCont = document.getElementById('wiki-article-container');
+            const markdownBody = document.getElementById('wiki-markdown-body');
+            const categoryBadge = document.getElementById('article-category-badge');
+            const updatedDate = document.getElementById('article-updated-date');
+            const summaryBanner = document.getElementById('article-summary-banner');
+            const sourcesList = document.getElementById('sources-list');
+            const btnPrev = document.getElementById('btn-prev-article');
+            const btnNext = document.getElementById('btn-next-article');
+            const prevTitle = document.getElementById('prev-article-title');
+            const nextTitle = document.getElementById('next-article-title');
+
+            // Responsive Sidebar Toggle
+            function toggleSidebar(open) {
+                if (open) {
+                    sidebar.classList.remove('-translate-x-full');
+                    backdrop.classList.remove('hidden');
+                } else {
+                    sidebar.classList.add('-translate-x-full');
+                    backdrop.classList.add('hidden');
+                }
+            }
+
+            if (btnToggle) btnToggle.addEventListener('click', () => toggleSidebar(true));
+            if (backdrop) backdrop.addEventListener('click', () => toggleSidebar(false));
+
+            // Carica catalogo
+            function initCatalog() {
+                if (window.WIKI_CATALOG && Array.isArray(window.WIKI_CATALOG)) {
+                    catalog = window.WIKI_CATALOG;
+                    renderNav(catalog);
+                    loadCurrentRoute();
+                } else {
+                    fetch('wiki/index.json')
+                        .then(r => r.json())
+                        .then(data => {
+                            catalog = data;
+                            renderNav(catalog);
+                            loadCurrentRoute();
+                        })
+                        .catch(err => {
+                            console.error('Errore caricamento index.json:', err);
+                        });
+                }
+            }
+
+            // Renderizza elenco navigazione
+            function renderNav(items) {
+                navList.innerHTML = '';
+                items.forEach((item, index) => {
+                    const btn = document.createElement('a');
+                    btn.href = '#' + item.slug;
+                    btn.className = `wiki-nav-item flex items-center justify-between p-2.5 rounded-lg text-xs transition-colors border ${item.slug === currentSlug ? 'bg-cyber-neon/15 text-white border-cyber-neon/40 font-semibold' : 'hover:bg-white/5 text-slate-300 border-transparent'}`;
+                    btn.dataset.slug = item.slug;
+                    btn.innerHTML = `
+                        <div class="flex items-center gap-2 truncate">
+                            <span class="w-5 h-5 rounded flex items-center justify-center font-mono text-[10px] ${item.slug === currentSlug ? 'bg-cyber-neon text-black font-bold' : 'bg-white/10 text-slate-400'}">${index + 1}</span>
+                            <span class="truncate">${item.title}</span>
+                        </div>
+                    `;
+                    btn.addEventListener('click', () => {
+                        toggleSidebar(false);
+                    });
+                    navList.appendChild(btn);
+                });
+            }
+
+            // Filtro ricerca
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    const term = e.target.value.toLowerCase().trim();
+                    const filtered = catalog.filter(c => 
+                        c.title.toLowerCase().includes(term) || 
+                        c.summary.toLowerCase().includes(term) ||
+                        c.category.toLowerCase().includes(term)
+                    );
+                    renderNav(filtered);
+                });
+            }
+
+            // Parsing semplice front matter YAML
+            function parseFrontMatter(rawMarkdown) {
+                if (!rawMarkdown.startsWith('---')) {
+                    return { meta: {}, content: rawMarkdown };
+                }
+                const endIndex = rawMarkdown.indexOf('\n---', 3);
+                if (endIndex === -1) {
+                    return { meta: {}, content: rawMarkdown };
+                }
+                const yamlBlock = rawMarkdown.substring(3, endIndex).trim();
+                const content = rawMarkdown.substring(endIndex + 4).trim();
+
+                const meta = {};
+                const lines = yamlBlock.split('\n');
+                let currentKey = '';
+                let inSourcesList = false;
+                let currentSource = null;
+                meta.sources = [];
+
+                lines.forEach(line => {
+                    const trimmed = line.trim();
+                    if (trimmed.startsWith('title:')) {
+                        meta.title = trimmed.replace('title:', '').trim().replace(/^["']|["']$/g, '');
+                    } else if (trimmed.startsWith('summary:')) {
+                        meta.summary = trimmed.replace('summary:', '').trim().replace(/^["']|["']$/g, '');
+                    } else if (trimmed.startsWith('updated:')) {
+                        meta.updated = trimmed.replace('updated:', '').trim().replace(/^["']|["']$/g, '');
+                    } else if (trimmed.startsWith('sources:')) {
+                        inSourcesList = true;
+                    } else if (inSourcesList) {
+                        if (trimmed.startsWith('- id:')) {
+                            if (currentSource) meta.sources.push(currentSource);
+                            currentSource = { id: trimmed.replace('- id:', '').trim().replace(/^["']|["']$/g, '') };
+                        } else if (currentSource) {
+                            if (trimmed.startsWith('title:')) {
+                                currentSource.title = trimmed.replace('title:', '').trim().replace(/^["']|["']$/g, '');
+                            } else if (trimmed.startsWith('url:')) {
+                                currentSource.url = trimmed.replace('url:', '').trim().replace(/^["']|["']$/g, '');
+                            } else if (trimmed.startsWith('type:')) {
+                                currentSource.type = trimmed.replace('type:', '').trim().replace(/^["']|["']$/g, '');
+                            } else if (trimmed.startsWith('note:')) {
+                                currentSource.note = trimmed.replace('note:', '').trim().replace(/^["']|["']$/g, '');
+                            }
+                        }
+                    }
+                });
+                if (currentSource) meta.sources.push(currentSource);
+
+                return { meta, content };
+            }
+
+            // Carica articolo
+            function loadArticle(slug) {
+                currentSlug = slug;
+                loadingEl.classList.remove('hidden');
+                articleCont.classList.add('hidden');
+
+                // Aggiorna stato nav
+                document.querySelectorAll('.wiki-nav-item').forEach(el => {
+                    if (el.dataset.slug === slug) {
+                        el.className = 'wiki-nav-item flex items-center justify-between p-2.5 rounded-lg text-xs transition-colors border bg-cyber-neon/15 text-white border-cyber-neon/40 font-semibold';
+                    } else {
+                        el.className = 'wiki-nav-item flex items-center justify-between p-2.5 rounded-lg text-xs transition-colors border hover:bg-white/5 text-slate-300 border-transparent';
+                    }
+                });
+
+                // Funzione ausiliaria di rendering
+                function displayContent(rawMarkdown) {
+                    const parsed = parseFrontMatter(rawMarkdown);
+                    const meta = parsed.meta;
+                    const catItem = catalog.find(c => c.slug === slug) || {};
+
+                    categoryBadge.innerText = catItem.category || 'GUIDA TECNICA';
+                    updatedDate.innerText = 'Aggiornato al ' + (meta.updated || '04/10/2026');
+                    summaryBanner.innerText = meta.summary || catItem.summary || '';
+
+                    // Markdown rendering tramite marked
+                    if (window.marked) {
+                        // Rimuovi primo h1 dal content perché lo gestiamo noi o lo lasciamo a marked
+                        let html = marked.parse(parsed.content);
+                        markdownBody.innerHTML = html;
+
+                        // Avvolgi automaticamente tutte le tabelle in un div .table-wrapper per lo scroll su mobile
+                        markdownBody.querySelectorAll('table').forEach(table => {
+                            if (!table.parentElement.classList.contains('table-wrapper')) {
+                                const wrapper = document.createElement('div');
+                                wrapper.className = 'table-wrapper';
+                                table.parentNode.insertBefore(wrapper, table);
+                                wrapper.appendChild(table);
+                            }
+                        });
+                    } else {
+                        markdownBody.innerText = parsed.content;
+                    }
+
+                    // Render Fonti
+                    sourcesList.innerHTML = '';
+                    if (meta.sources && meta.sources.length > 0) {
+                        meta.sources.forEach(s => {
+                            const row = document.createElement('div');
+                            row.className = "p-2 rounded bg-black/40 border border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-2";
+                            row.innerHTML = `
+                                <div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="px-1.5 py-0.5 rounded text-[10px] uppercase font-bold bg-white/10 text-slate-300">${s.type || 'FONTE'}</span>
+                                        <b class="text-slate-200">${s.title}</b>
+                                    </div>
+                                    ${s.note ? `<p class="text-[11px] text-slate-400 mt-0.5">${s.note}</p>` : ''}
+                                </div>
+                                <a href="${s.url}" target="_blank" rel="noopener noreferrer" class="text-cyber-neon hover:underline font-mono text-[11px] shrink-0 flex items-center gap-1">
+                                    <span>Consulta Fonte</span>
+                                    <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                </a>
+                            `;
+                            sourcesList.appendChild(row);
+                        });
+                    } else {
+                        sourcesList.innerHTML = '<span class="text-slate-400 italic">Riferimenti normativi e documentazione generale.</span>';
+                    }
+
+                    // Aggiorna navigazione Prec/Succ
+                    const currentIndex = catalog.findIndex(c => c.slug === slug);
+                    if (currentIndex > 0) {
+                        const prev = catalog[currentIndex - 1];
+                        btnPrev.style.display = 'flex';
+                        prevTitle.innerText = prev.title;
+                        btnPrev.onclick = () => window.location.hash = '#' + prev.slug;
+                    } else {
+                        btnPrev.style.display = 'none';
+                    }
+
+                    if (currentIndex < catalog.length - 1) {
+                        const next = catalog[currentIndex + 1];
+                        btnNext.style.display = 'flex';
+                        nextTitle.innerText = next.title;
+                        btnNext.onclick = () => window.location.hash = '#' + next.slug;
+                    } else {
+                        btnNext.style.display = 'none';
+                    }
+
+                    loadingEl.classList.add('hidden');
+                    articleCont.classList.remove('hidden');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                    if (window.lucide) lucide.createIcons();
+                }
+
+                // Verifica prima nei dati precaricati (fallback file://), altrimenti fetch
+                if (window.WIKI_ARTICLES_DATA && window.WIKI_ARTICLES_DATA[slug]) {
+                    displayContent(window.WIKI_ARTICLES_DATA[slug]);
+                } else {
+                    fetch(`wiki/${slug}.md`)
+                        .then(r => {
+                            if (!r.ok) throw new Error('HTTP ' + r.status);
+                            return r.text();
+                        })
+                        .then(text => displayContent(text))
+                        .catch(err => {
+                            console.error('Errore fetch markdown:', err);
+                            loadingEl.innerHTML = `
+                                <div class="text-amber-400 text-sm">Impossibile caricare la voce richiesta (${slug}).</div>
+                                <a href="#ftth-come-funziona" class="text-xs text-cyber-neon underline">Torna alla prima voce</a>
+                            `;
+                        });
+                }
+            }
+
+            function loadCurrentRoute() {
+                const hash = window.location.hash.replace('#', '').trim();
+                const target = catalog.find(c => c.slug === hash);
+                if (target) {
+                    loadArticle(target.slug);
+                } else if (catalog.length > 0) {
+                    window.location.hash = '#' + catalog[0].slug;
+                    loadArticle(catalog[0].slug);
+                }
+            }
+
+            window.addEventListener('hashchange', loadCurrentRoute);
+
+            // Inizializzazione
+            initCatalog();
+        })();
+    </script>
+</body>
+</html>
