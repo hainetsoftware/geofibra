@@ -1,208 +1,214 @@
-# 🌐 Collesalvetti FTTH & Telecom Explorer 3D
-### *Osservatorio Infrastrutturale e Mappatura Geospaziale della Rete FTTH nel Comune di Collesalvetti (Toscana, Italia)*
+# 🌐 GeoFibra Collesalvetti
+### *Osservatorio Civico della Rete FTTH e Registro Cantieri nel Comune di Collesalvetti (LI)*
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Leaflet](https://img.shields.io/badge/GIS-Leaflet%201.9.4-brightgreen.svg)](https://leafletjs.com/)
-[![Three.js](https://img.shields.io/badge/3D%20WebGL-Three.js%20r128-black.svg)](https://threejs.org/)
-[![Status](https://img.shields.io/badge/Coverage%20Audit-Complete-success.svg)](#)
-[![Deploy with GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Ready-orange.svg)](#pubblicazione-su-github-pages--deploy-to-github-pages)
-
----
-
-> 🇮🇹 **Italiano:** Piattaforma web interattiva, studio 3D e banca dati geospaziale open-source per visualizzare e documentare l'infrastruttura di telecomunicazioni in fibra ottica (**FiberCop / TIM**, **Open Fiber / Infratel**, bandi **PNRR Scuole & Sanità**) nel comune di **Collesalvetti** (LI).  
-> 🇬🇧 **English:** Interactive web platform, 3D apparatus studio, and open-source geospatial telecom observatory mapping the FTTH (Fiber To The Home) rollout and infrastructure across the municipality of **Collesalvetti** (Tuscany, Italy).
+[![Licenza: MIT](https://img.shields.io/badge/Licenza-MIT-blue.svg)](LICENSE)
+[![GIS: Leaflet 1.9.4](https://img.shields.io/badge/GIS-Leaflet%201.9.4-brightgreen.svg)](https://leafletjs.com/)
+[![Dati: Snapshot 3](https://img.shields.io/badge/Dati-Snapshot%203%20(04%2F10%2F2026)-orange.svg)](#-dati-e-statistiche-ufficiali-snapshot-3)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Attivo-success.svg)](#-pubblicazione-su-github-pages)
 
 ---
 
-## 📑 Indice / Table of Contents
-- [Caratteristiche Principali / Key Features](#-caratteristiche-principali--key-features)
-- [Architettura del Progetto / Architecture](#-architettura-del-progetto--architecture)
-- [Avvio Rapido Locale / Local Quick Start](#-avvio-rapido-locale--local-quick-start)
-- [Pubblicazione su GitHub Pages / Deploy to GitHub Pages](#-pubblicazione-su-github-pages--deploy-to-github-pages)
-- [Dataset e Download Dati / Datasets](#-dataset-e-download-dati--datasets)
-- [Incrocio Dati Nazionali / National Data Cross-Reference](#-incrocio-dati-nazionali--national-data-cross-reference)
-- [English Documentation](#-english-documentation)
-- [Licenza & Riconoscimenti / Credits](#-licenza--riconoscimenti--credits)
+**GeoFibra Collesalvetti** è una piattaforma civica e documentale open source che mappa l'infrastruttura di telecomunicazioni in fibra ottica (**FTTH FiberCop / Wholesale**), monitora in tempo reale le **ordinanze municipali di scavo** e offre un'**enciclopedia tecnica e divulgativa** sulla banda ultralarga in Italia.
+
+Il progetto nasce per garantire trasparenza sull'avanzamento dei lavori stradali, sui tempi di ripristino dell'asfalto e sullo stato reale della connettività a Collesalvetti e nelle sue frazioni.
+
+> [!IMPORTANT]
+> **Dispositivi supportati:**
+> - **Mappa GIS e Tracker Cantieri:** Sviluppati per **computer desktop e tablet** ($\ge$ 768 px). Su smartphone un blocco a tutto schermo motiva l'esigenza di una risoluzione grafica adeguata per la lettura dei tracciati ad alta densità e non carica le librerie cartografiche né i dati geografici.
+> - **Wiki Tecnica:** Pienamente accessibile e ottimizzata per la lettura su **qualsiasi dispositivo**, compresi smartphone (con tabelle a scorrimento orizzontale dedicate).
 
 ---
 
-## 🌟 Caratteristiche Principali / Key Features
+## 📑 Indice
 
-### 1. 🗺️ Mappa GIS Interattiva ad Alto Contrasto
-- **Layering dinamico:** Mappa ad alta risoluzione satellitare (*Esri World Imagery*), modalità *Cyber Dark* ad alto contrasto (*Esri Dark Canvas*) e topografica *OpenStreetMap*.
-- **Confinamento territoriale:** Navigazione vincolata rigorosamente ai confini regionali della Toscana (`maxBoundsViscosity: 1.0`, `minZoom: 9`).
-- **Percorsi fibra al neon:** Tracciati vettoriali luminescenti differenziati per operatore e tipologia di appalto (FiberCop, Fastweb Sanità, Scuole Connesse, cantieri temporanei).
-- **Popup sul campo:** Note fisiche originali censite sul territorio (colonnine Enel adiacenti, modelli di tombini in ghisa, presidi XGS-PON).
-
-### 2. 🎮 Studio 3D Interattivo (Three.js WebGL)
-- Rendering a 60 fps con illuminazione PBR, materiali realistici e controlli orbitali (rotazione a 360°, zoom e pan).
-- Modelli procedurali dettagliati:
-  - **ARL (Rame TIM):** Carrozzeria metallica con tettuccio rosso impermeabile scanalato, serratura, colonnina e-distribuzione affiancata e apertura reale su cerniera delle morsettiere IDC a 10 coppie.
-  - **ARLO (Ottico FiberCop):** Scocca grigio chiaro con zoccolo rinforzato, logo FiberCop, cartello di pericolo laser classe 1M, doppi sportelli incernierati, splitter 1:4 / 1:16 e bretelle ottiche monomodali gialle (G.657.A2) curve in 3D.
-  - **Centrale OLT (XGS-PON 10G):** Rack standard 19" 42U con telaio forato, chassis OLT Nokia/Huawei, permutatore ODF e LED di attività verde/ciano pulsanti in tempo reale.
-  - **Posa, Mini-trincea & Pozzetto:** Spaccato stradale dell'asfalto e sottofondo, taglio di mini-trincea (10 cm) con fascio di microtubi colorati (*fender* a 7 vie), chiusino in ghisa carrabile D400 e cameretta sotterranea con muffola stagna a campana (OFSC).
-
-### 3. 📸 Documentazione Fotografica Reale (IRL)
-- Galleria fotografica ad altissima definizione accessibile direttamente dal visualizzatore (`[ 🎮 Modello 3D ]` vs `[ 📸 Foto Reale IRL ]`).
-- Fotografie ad alta definizione scattate sul territorio toscano per ciascun apparato.
-- Schede guida per il riconoscimento visivo sul campo, specifiche di capacità e ruolo nell'architettura di rete.
-
-### 4. 🚧 Monitoraggio Cantieri & Ordinanze Albo Pretorio (Live Europe/Rome)
-- **Aggiornamento Continuo Albo Pretorio:** Modulo dedicato per tracciare le ordinanze della Polizia Municipale di regolamentazione della circolazione e scavo per la posa della fibra FTTH (**Fastweb / FiberCop**).
-- **Stato Dinamico in Tempo Reale:** Calcolo automatico al secondo basato sull'orario locale (`Europe/Rome`):
-  - 🟡 **Attivazione Programmata / Imminente:** Conto alla rovescia dinamico (giorni, ore) prima dell'inizio dello scavo.
-  - 🟢 **Cantiere Attivo Ora:** Notifica di lavori in corso durante le fasce orarie feriali (08:00 - 18:00).
-  - ⚪ **Lavori Conclusi:** Archiviazione storica dei ripristini del manto stradale.
-- **Vie Coinvolte & Prescrizioni:** Dettaglio per ogni singola via interessata da divieti di sosta con rimozione forzata o sensi unici alternati regolati da semaforo/movieri.
-- **Archivio Atti Ufficiali:** Download diretto dei file PDF originali dell'Albo Pretorio.
-
-### 5. 📊 Cruscotto di Telemetria e Statistiche in Tempo Reale
-- Calcolo automatico della metratura lineare tracciata (**13,50 km** di cavi e trincee, con l'inclusione del nuovo cantiere di Stagno).
-- **Snapshot 2 Espansione Stagno:** Incremento dell'area coperta a Stagno da 28,65 a **37,17 ettari** (la percentuale coperta sale al **80,3%**).
-- Ripartizione apparati e navigazione aerea istantanea per frazione: *Collesalvetti, Vicarello, Stagno, Guasticce, Nugola, Parrana San Martino, Parrana San Giusto*.
-- Barra di ricerca e filtro in tempo reale per apparato, categoria e frazione.
+1. [Caratteristiche del Portale](#-caratteristiche-del-portale)
+2. [Dati e Statistiche Ufficiali (Snapshot 3)](#-dati-e-statistiche-ufficiali-snapshot-3)
+3. [Registro Cantieri e Ordinanze di Polizia Municipale](#-registro-cantieri-e-ordinanze-di-polizia-municipale)
+4. [La Wiki Tecnica e Divulgativa](#-la-wiki-tecnica-e-divulgativa)
+5. [Architettura del Repository](#-architettura-del-repository)
+6. [Pipeline Dati e Riproducibilità](#-pipeline-dati-e-riproducibilit%C3%A0)
+7. [Avvio Rapido Locale](#-avvio-rapido-locale)
+8. [Pubblicazione su GitHub Pages e Ridenominazione](#-pubblicazione-su-github-pages-e-ridenominazione)
+9. [Dichiarazione d'Indipendenza e Licenza](#-dichiarazione-dindipendenza-e-licenza)
 
 ---
 
-## 🏛️ Architettura del Progetto / Architecture
+## 🌟 Caratteristiche del Portale
+
+### 1. 🗺️ Mappa Cartografica GIS ad Alta Precisione (Desktop/Tablet)
+- **Visualizzazione multilivello:** commutazione istantanea tra *OpenStreetMap*, ortofoto *Satellite HD (Esri)* e visuale ad alto contrasto *Cyber Dark*.
+- **Vincolo geografico:** navigazione limitata al perimetro toscano (`TOSCANA_BOUNDS`) per impedire disorientamenti fuori zona.
+- **Tracciati e apparati vettoriali:** minitrincee, dorsali primarie, armadi ARLO, ARL rame, centrali e pozzetti con popup completi di quote metriche, note di rilievo e link a Google Street View.
+
+### 2. 🚧 Tracker Ordinanze e Cantieri Stradali (Tempo Reale Europe/Rome)
+- **Incrocio con l'Albo Pretorio:** collegamento diretto agli atti di disciplina della circolazione emessi dal Comune di Collesalvetti.
+- **Calcolo dinamico dello stato lavorativo:**
+  - `PROGRAMMATO`: prima dell'inizio formale dell'atto.
+  - `CANTIERE ATTIVO ORA`: solo ed esclusivamente nei **giorni feriali** e nella fascia autorizzata (**08:00 – 18:00**).
+  - `NON LAVORATIVO`: di domenica o nei giorni festivi con ordinanza vigente, con avviso esplicito di sospensione dei lavori.
+  - `FUORI ORARIO`: nelle ore serali e notturne feriali.
+  - `LAVORI CONCLUSI`: alla scadenza dei termini autorizzati.
+- **Distinzione tra atto formale e rilievo di campo:** evidenziazione separata di eventuali posticipi osservati sul terreno (`slittamento_osservato`).
+
+### 3. 📖 Enciclopedia Tecnica della Fibra Ottica (`wiki.html`)
+- 11 voci di approfondimento scritte in italiano chiaro e rigoroso.
+- Tabelle comparative con parametri fisici e normativi conformi a standard ITU-T, AGCOM e MIMIT.
+- Motore di rendering autonomo leggero (`marked.min.js`), ricerca istantanea e box fonti strutturato.
+
+---
+
+## 📊 Dati e Statistiche Ufficiali (Snapshot 3)
+
+Tutti i conteggi sono calcolati deterministicamente sul rilievo geospaziale **Snapshot 3 del 04/10/2026**:
+
+| Categoria Elemento | Quantità | Dettaglio / Note |
+|---|:---:|---|
+| **Feature Geospaziali Totali** | **63** | 34 punti, 25 linee, 4 poligoni di perimetro |
+| **Estensione Tracciati Rete** | **21,716 km** | Somma metrica di tutte le tratte stradali e dorsali |
+| **Armadi Ottici ARLO (FiberCop)** | **21** | Armadi passivi stradali su basamento in cemento |
+| **Armadi Rame ARL (TIM)** | **8** | Armadi tradizionali della rete secondaria |
+| **Centrali di Commutazione TLC** | **3** | Collesalvetti (Centro), Vicarello e Feeder (Livorno) |
+| **Pozzetti di Derivazione Principali** | **2** | Camerette di snodo delle dorsali |
+
+### Ripartizione Chilometrica e Apparati per Frazione
+
+| Frazione | Tratte (km) | Quota % | ARLO Fibra | ARL Rame | Centrali TLC |
+|---|:---:|:---:|:---:|:---:|:---:|
+| **Stagno** | **11,232 km** | 51,7% | 13 | 4 | 0 |
+| **Collesalvetti (Capoluogo)** | **6,444 km** | 29,7% | 6 | 3 | 1 |
+| **Vicarello** | **3,122 km** | 14,4% | 2 | 1 | 1 |
+| **Guasticce** | **0,399 km** | 1,8% | 0 | 0 | 0 |
+| **Altro / Intercomunale** | **0,519 km** | 2,4% | 0 | 0 | 1 |
+| **Totale Territoriale** | **21,716 km** | **100,0%** | **21** | **8** | **3** |
+
+---
+
+## 📋 Registro Cantieri e Ordinanze di Polizia Municipale
+
+Questo osservatorio adotta come unica fonte di verità documentale `data/ordinanze.json`, citando sia il numero interno di settore della Polizia Municipale (P.M.) sia il Registro Generale (Reg. Gen.):
+
+1. **Cantiere 2 - Stagno (Nuova Espansione FTTH):**
+   - **Atto:** Ordinanza P.M. n. 95 del 10/09/2026 (**Reg. Gen. 102**)
+   - **Periodo ufficiale:** 21/09/2026 – 16/10/2026 (feriali 08:00 – 18:00)
+   - **Rilievo di campo:** Slittamento effettivo osservato dal 05/10/2026 al 17/10/2026.
+   - **Vie:** Via Otto Marzo, Via Romita, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio.
+2. **Cantiere 1 - Collesalvetti Centro:**
+   - **Atto:** Ordinanza P.M. n. 88 del 02/09/2026 (**Reg. Gen. 95**)
+   - **Periodo ufficiale:** 14/09/2026 – 02/10/2026. *Termini scaduti.*
+   - **Rilievo di campo (03/10/2026):** 2 tratte eseguite (Via Nenni e rotatoria), 5 tratte non eseguite (soli segni spray blu su asfalto).
+3. **Ripristino Manto Stradale - Stagno:**
+   - **Atto:** Ordinanza P.M. n. 70 del 16/07/2026 (**Reg. Gen. 75**)
+   - **Periodo ufficiale:** 03/08/2026 – 13/08/2026. *Lavori conclusi.*
+   - **Vie:** Via Marx, Via Guerrazzi, Via La Malfa.
+4. **Tratte senza ordinanza reperita (segnalate come "da collegare a ordinanza"):**
+   - **Cantiere 3 Via Aiaccia (Stagno):** 4 tratte per 3,475 km (annotazione di cantiere 19/10 - 23/10).
+   - **Opera sulla Backbone:** Tratta interurbana di 519 metri verso Livorno.
+
+---
+
+## 📚 La Wiki Tecnica e Divulgativa
+
+Accessibile da desktop e da smartphone all'indirizzo [`wiki.html`](wiki.html):
+
+| Voce | File | Argomento Trattato |
+|---|---|---|
+| **1. Come Funziona la Fibra FTTH** | `wiki/ftth-come-funziona.md` | Riflessione totale interna, attenuazione in dB/km, architettura albero PON. |
+| **2. Tecnologie a Confronto** | `wiki/tecnologie-a-confronto.md` | Tabella comparativa FTTH, FTTC, FWA, ADSL e bollini AGCOM (Verde, Giallo, Rosso). |
+| **3. Standard PON** | `wiki/standard-pon.md` | GPON (G.984), XGS-PON (G.9807.1), lunghezze d'onda e filtro di coesistenza WDM1r. |
+| **4. Apparati sul Territorio** | `wiki/apparati-sul-territorio.md` | Come riconoscere OLT, Feeder, ARLO, pozzetti rompitratta, muffole IP68 e PTE/ROE. |
+| **5. Fibre e Connettori** | `wiki/fibre-e-connettori.md` | Fibre G.652.D vs G.657, connettori verdi SC/APC vs blu SC/UPC, codice colori CEI 86-46. |
+| **6. Operatori e Piani Pubblici** | `wiki/operatori-e-piani-pubblici.md` | Wholesale FiberCop e Open Fiber, Aree Bianche/Grigie/Nere, PNRR Piano Italia a 1 Giga. |
+| **7. Anatomia di un Cantiere** | `wiki/anatomia-di-un-cantiere.md` | Iter SUAP/PM, minitrincea, No-Dig e le tre fasi obbligatorie del ripristino asfalto. |
+| **8. Fine Lavori e Attivazione** | `wiki/dalla-fine-dei-lavori-allattivazione.md` | Soffiaggio cavi, collaudo riflettometrico OTDR, vendibilità wholesale e delivery utente. |
+| **9. Glossario Tecnico** | `wiki/glossario.md` | Oltre 40 lemmi e definizioni rigorose di acronimi, protocolli e apparati. |
+| **10. Domande Frequenti (FAQ)** | `wiki/faq.md` | Diritti condominiali (art. 91 CCE), segni spray su asfalto, portabilità e costi. |
+| **11. La Rete a Collesalvetti** | `wiki/collesalvetti.md` | Dati territoriali ufficiali di Collesalvetti derivati da Snapshot 3 (63 feature, 21,72 km). |
+
+---
+
+## 🏛️ Architettura del Repository
 
 ```
-adventurous-turing/
-├── index.html                                  # Portale Web Single-Page (GIS + 3D + HUD)
-├── start_server.py                             # Launcher server HTTP Python con percorsi assoluti
-├── FTTH Collesalvetti.kml                      # Rilievo originale geospaziale KML (Google Earth)
+geofibra/
+├── index.html                   # Applicazione cartografica GIS (Desktop/Tablet) + Blocco Mobile
+├── wiki.html                    # Portale documentale autonomo Wiki (Desktop & Mobile)
+├── start_server.py              # Launcher server locale Python multi-piattaforma
 ├── css/
-│   └── app.css                                 # Stili Cyber Dark, glassmorphism e animazioni neon
+│   ├── app.css                  # Stili principali per la mappa e i pannelli
+│   └── wiki.css                 # Stili per la lettura prose e tabelle a scorrimento
+├── data/
+│   ├── network_data.json        # GeoJSON FeatureCollection consolidato (Snapshot 3, 63 feature)
+│   ├── ordinanze.json           # Fonte di verita' ordinanze e prescrizioni viabilita'
+│   ├── rete_ftth_collesalvetti.xlsx # Export Microsoft Excel nativo completo
+│   ├── rete_ftth_collesalvetti_*.csv # Export CSV standard e per Excel italiano
+│   └── snapshots/               # Archivio KML storici e CHANGELOG_DATI.md
 ├── js/
-│   ├── data.js                                 # Database GeoJSON precompilato (49 feature censite)
-│   ├── cantieri_tracker.js                     # Monitoraggio live ordinanze Albo Pretorio (Europe/Rome)
-│   ├── map.js                                  # Controller Leaflet, layer Esri e confini Toscana
-│   ├── three_apparati.js                       # Motore Three.js e modelli 3D procedurali
-│   ├── telemetry.js                            # Calcolo statistiche, filtri e navigazione frazioni
-│   ├── audio.js                                # Sintetizzatore sonoro cibernetico (Web Audio API)
-│   └── main.js                                 # Coordinamento UI, modali e galleria foto IRL
-├── ordinanze/                                  # Atti ufficiali e ordinanze Albo Pretorio Comune
-│   ├── ordinanza_102_2026_stagno_cantiere2.pdf  # Posa FTTH FiberCop Stagno (del 10/09/2026)
-│   ├── ordinanza_95_2026_collesalvetti_cantiere1.pdf # Posa FTTH FiberCop Collesalvetti Centro
-│   └── ordinanza_75_2026_stagno_ripristino.pdf # Ripristini definitivi manto stradale Stagno
-├── images/                                     # Fotografie ad alta definizione degli apparati reali
-│   ├── arl_irl.jpg                             # ARL con tettuccio rosso e colonnina Enel
-│   ├── arlo_irl.jpg                            # Armadio ottico FiberCop sul marciapiede
-│   ├── centrale_irl.jpg                        # Rack 19" OLT e cablaggio ODF
-│   ├── minitrincea_irl.jpg                     # Taglio mini-trincea con fascio microtubi
-│   └── tombino_telecom.jpg                     # Chiusino in ghisa Telecom Italia Firenze
-├── data/                                       # Banche dati esportate in molteplici formati
-│   ├── network_data.json                       # GeoJSON completo con metadati e coordinate
-│   ├── rete_ftth_collesalvetti.xlsx            # Foglio di calcolo nativo Microsoft Excel
-│   ├── rete_ftth_collesalvetti_excel_it.csv    # CSV formattato per Excel italiano (; e UTF-8 BOM)
-│   └── rete_ftth_collesalvetti_standard.csv    # CSV standard (virgola) per GIS / Data Science
-├── scripts/
-│   ├── kml_to_geojson.py                       # Parser KML, calcolo distanze Haversine e superfici
-│   └── export_sheets.py                        # Esportatore automatico CSV e OpenXML XLSX nativo
-├── dossier_audit_e_sopralluoghi_collesalvetti.md # Checklist da campo e analisi dei gaps numerici
-└── report_incrocio_dati_internet_collesalvetti.md # Analisi comparata con Infratel, BUL e PNRR
+│   ├── data.js                  # Assegnazione window.FTTH_NETWORK_DATA
+│   ├── cantieri_tracker.js      # Motore calcolo orari Europe/Rome e modale ordinanze
+│   ├── map.js                   # Istanza Leaflet, livelli Esri/OSM e popup informativi
+│   ├── telemetry.js             # Telemetria, contatori e barra ricerca apparati
+│   └── main.js                  # Coordinamento eventi e avvio applicazione
+├── docs/
+│   └── HANDOFF_REDESIGN.md      # Manuale di architettura per il futuro redesign grafico
+├── vendor/
+│   └── marked.min.js            # Parser Markdown leggero client-side (v11.1.1 pinned)
+├── wiki/
+│   ├── index.json               # Catalogo strutturato delle 11 voci
+│   ├── articles_data.js         # Fallback dati per esecuzione offline su file://
+│   └── *.md                     # I file Markdown delle singole voci
+├── ordinanze/                   # File PDF originali delle ordinanze di Polizia Municipale
+└── scripts/
+    ├── kml_to_geojson.py        # Pipeline di conversione KML -> GeoJSON (Haversine & aree)
+    └── export_sheets.py         # Pipeline di generazione fogli CSV e XLSX
 ```
 
 ---
 
-## 🚀 Avvio Rapido Locale / Local Quick Start
+## ⚙️ Pipeline Dati e Riproducibilità
 
-Il progetto è autonomo e non richiede `npm`, `node` né build complesse. Include uno script dedicato che avvia un server HTTP locale utilizzando **percorsi assoluti**:
+I dati del progetto sono rigenerabili deterministicamente dal rilievo KML sorgente mediante due comandi Python privi di dipendenze pesanti:
 
 ```bash
-# 1. Clona il repository
-git clone https://github.com/<tuo-username>/collesalvetti-ftth-explorer.git
-cd collesalvetti-ftth-explorer
+# 1. Rigenera data/network_data.json e js/data.js dal KML corrente
+python scripts/kml_to_geojson.py
 
-# 2. Avvia il server con lo script Python (funziona da qualsiasi directory)
-python3 start_server.py
+# 2. Rigenera i file CSV e il foglio Excel (data/rete_ftth_collesalvetti.*)
+python scripts/export_sheets.py
 ```
 
-Lo script troverà automaticamente la prima porta disponibile (partendo da `8080`) e aprirà il browser all'indirizzo:
-👉 **`http://localhost:8080`**
-
-*(In alternativa puoi avviare manualmente con: `python3 -m http.server 8080`)*
-
 ---
 
-## 🌍 Pubblicazione su GitHub Pages / Deploy to GitHub Pages
+## 🚀 Avvio Rapido Locale
 
-Il portale è ottimizzato al 100% per **GitHub Pages** a costo zero:
+Il sito non richiede Node.js né procedure di build. È possibile avviarlo con Python standard:
 
-1. Vai sul tuo repository GitHub: `Settings` ➔ `Pages`.
-2. Nella sezione **Build and deployment**:
-   - **Source:** seleziona `Deploy from a branch`
-   - **Branch:** seleziona `main` (o `master`) e cartella `/ (root)`
-3. Clicca su **Save**.
-4. In meno di un minuto, il tuo sito sarà pubblico e visualizzabile in tutto il mondo all'indirizzo:  
-   `https://<tuo-username>.github.io/<nome-repo>/`
-
----
-
-## 📊 Dataset e Download Dati / Datasets
-
-Tutti i dati rilevati sono esportati e scaricabili liberamente per finalità di studio, urbanistica e documentazione territoriale:
-
-| File | Formato | Destinazione d'Uso |
-| :--- | :--- | :--- |
-| **[rete_ftth_collesalvetti.xlsx](data/rete_ftth_collesalvetti.xlsx)** | Microsoft Excel (.xlsx) | Tabelle, filtri e grafici avanzati |
-| **[rete_ftth_collesalvetti_excel_it.csv](data/rete_ftth_collesalvetti_excel_it.csv)** | CSV (; UTF-8 BOM) | Apertura diretta con doppio clic in Excel (IT) |
-| **[rete_ftth_collesalvetti_standard.csv](data/rete_ftth_collesalvetti_standard.csv)** | CSV (, UTF-8) | QGIS, ArcGIS, Pandas, Python, R |
-| **[network_data.json](data/network_data.json)** | GeoJSON (RFC 7946) | Software GIS, Leaflet, Mapbox, OpenStreetMap |
-| **[FTTH Collesalvetti.kml](FTTH%20Collesalvetti.kml)** | KML (Google Earth) | Visualizzazione 3D satellitare in Google Earth |
-
----
-
-## 🔎 Incrocio Dati Nazionali / National Data Cross-Reference
-
-L'analisi incrociata con le banche dati ufficiali (**Infratel Italia**, **Piano BUL**, **FiberCop/TIM**, **Open Fiber** e **Bandi PNRR**) conferma con precisione i rilievi effettuati:
-- **Sanità Connessa:** Confermata l'aggiudicazione del Lotto Toscana a **Fastweb**, corrispondente allo scavo di 348 m verso RSA S. Caterina e USL.
-- **Scuole Connesse:** Confermata la vittoria del bando da parte di **TIM**, che ha posato i chiusini a marchio **FiberCop** davanti all'asilo e alle scuole medie.
-- **Dorsale Infratel:** La tratta tracciata di 6,53 km costituisce la direttrice pubblica strategica di collegamento verso le frazioni assegnata a **Open Fiber (Lotto 6 Toscana Piano Italia a 1 Giga)**.
-- Per il report completo, consulta il documento **[`report_incrocio_dati_internet_collesalvetti.md`](report_incrocio_dati_internet_collesalvetti.md)**.
-
----
-
-# 🇬🇧 English Documentation
-
-## Project Overview
-**Collesalvetti FTTH & Telecom Explorer 3D** is an open-source civic crowdsourced mapping and visualization project created to document and audit the fiber-optic telecommunications infrastructure across the municipality of **Collesalvetti** (Livorno, Tuscany, Italy).
-
-The platform tracks the real-world deployment of:
-- **FiberCop (TIM Group):** Commercial FTTH rollout on urban copper cabinets (ARL / ARLO).
-- **Open Fiber (Infratel BUL / Piano Italia 1 Giga):** Publicly funded broadband network for rural areas, outlying fractions, and industrial clusters.
-- **National Recovery and Resilience Plan (PNRR):** Specialized fiber links for healthcare facilities (*Fastweb*) and public schools (*TIM / FiberCop*).
-
-## Key Components
-1. **Interactive GIS Web Map:**
-   - Powered by Leaflet with Esri World Dark Gray Canvas and High-Resolution Satellite imagery.
-   - Spatial lock and bounce boundaries strictly restricted to the Tuscany geographical bounds (`maxBoundsViscosity: 1.0`).
-   - Neon glowing line paths for fiber routes with custom interactive SVG markers.
-2. **3D Apparatus Studio:**
-   - Procedural PBR models created with Three.js showing external enclosures, internal copper terminal blocks, optical splitters, 19" OLT server racks with live blinking LEDs, and road cross-sections with microduct bundles.
-3. **High-Definition Real-Life (IRL) Photo Gallery:**
-   - Authentic photographic documentation captured across Tuscany with field identification guidelines and technical data.
-4. **Live Municipal Ordinance & Works Tracker (`Europe/Rome`):**
-   - Real-time tracker parsing municipal traffic and excavation decrees published on the Collesalvetti Albo Pretorio for FiberCop / Fastweb FTTH deployments.
-   - Dynamic time-zone based countdowns (*Scheduled / Imminent*, *Active Now during working hours*, *Completed*).
-   - Exact affected street breakdown and one-click access to official municipal PDF decrees.
-5. **Data Exports & Snapshot 2 Stagno Expansion:**
-   - Expanded coverage polygon in Stagno (from 28.65 ha to 37.17 ha, 80.3% coverage).
-   - Clean GeoJSON, native XLSX spreadsheet, and CSV tables ready for GIS software (QGIS, ArcGIS).
-
-## Running Locally
 ```bash
-git clone https://github.com/<your-username>/collesalvetti-ftth-explorer.git
-cd collesalvetti-ftth-explorer
-python3 start_server.py
+python start_server.py
 ```
-Visit `http://localhost:8080` in your web browser.
+
+Lo script individuerà una porta TCP libera (default `8080`), aprirà automaticamente il browser predefinito all'indirizzo `http://localhost:8080` e servirà i file con i corretti MIME types.
 
 ---
 
-## 📜 Licenza & Riconoscimenti / Credits
+## 🌐 Pubblicazione su GitHub Pages e Ridenominazione
 
-- **Autore Mappatura:** Progetto originale di censimento e rilievo territoriale geospaziale su Google Earth a cura di un cittadino residente nel Comune di Collesalvetti.
-- **Dati Istituzionali di Confronto:** Ministero delle Imprese e del Made in Italy (MIMIT), Infratel Italia S.p.A., Piano Strategico Banda Ultra Larga, FiberCop S.p.A., Open Fiber S.p.A.
-- **Librerie Utilizzate:** Leaflet.js, Three.js, Tailwind CSS, Lucide Icons.
-- **Licenza:** Questo progetto è distribuito sotto licenza Open Source MIT. Libero per consultazione, divulgazione civica e ricerca.
+Il portale è ospitato come sito statico su **GitHub Pages**.
+
+### Checklist per la ridenominazione del repository:
+1. Accedi a GitHub: `Settings` $\rightarrow$ `General` $\rightarrow$ `Repository name` $\rightarrow$ rinomina in **`geofibra`**.
+2. Aggiorna la descrizione del repository:
+   > *"Osservatorio civico della rete FTTH e registro cantieri nel Comune di Collesalvetti (LI) con wiki tecnica sulla banda ultralarga"*
+3. Topic consigliati: `ftth`, `fibercop`, `open-fiber`, `leaflet`, `gis`, `collesalvetti`, `open-data`, `civic-tech`.
+4. Verifica che GitHub Pages rimanga impostato su **Deploy from a branch** $\rightarrow$ `main` / root.
+5. Aggiorna il puntamento remoto nel tuo terminale locale:
+   ```bash
+   git remote set-url origin https://github.com/hainetsoftware/geofibra.git
+   ```
+
+---
+
+## ⚖️ Dichiarazione d'Indipendenza e Licenza
+
+Questo progetto è un'iniziativa informativa e civica indipendente, senza fini di lucro. Non è sponsorizzato né affiliato ad alcuno degli operatori di rete citati (FiberCop, Telecom Italia, Fastweb, Open Fiber) né al Comune di Collesalvetti.
+
+Il codice sorgente è distribuito con licenza **MIT**. I dati geospaziali e i testi della Wiki sono rilasciati per finalità civiche con licenza aperta.

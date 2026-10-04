@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Collesalvetti FTTH Explorer 3D - Local Web Server Launcher
-Avvia un server HTTP locale utilizzando percorsi assoluti garantiti.
-Può essere eseguito da qualsiasi cartella del sistema senza problemi di path.
+GeoFibra Collesalvetti - Server Web Locale
+Avvia un server HTTP locale per la visualizzazione della mappa GIS e della Wiki.
+Compatibile con percorsi relativi e assoluti su qualsiasi sistema operativo.
 """
 
 import os
@@ -12,7 +12,6 @@ import http.server
 import socketserver
 import webbrowser
 
-# Risoluzione percorsi assoluti (Requisito: posizioni assolute e non relative)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 INDEX_FILE = os.path.join(BASE_DIR, "index.html")
 
@@ -29,11 +28,9 @@ def find_available_port(start_port=8080, max_attempts=20):
 
 class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
-        # Forza l'uso della cartella assoluta BASE_DIR
         super().__init__(*args, directory=BASE_DIR, **kwargs)
 
     def log_message(self, format, *args):
-        # Log sintetico e robusto per il terminale
         try:
             message = format % args
         except Exception:
@@ -43,18 +40,18 @@ class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
 
 def run_server():
     if not os.path.exists(INDEX_FILE):
-        print(f"ERRORE CRITICO: File index.html non trovato nel percorso assoluto:\n  {INDEX_FILE}")
+        print(f"ERRORE CRITICO: File index.html non trovato nel percorso:\n  {INDEX_FILE}")
         sys.exit(1)
 
     port = find_available_port(8080)
     url = f"http://localhost:{port}"
 
     print("=" * 68)
-    print("  FIBERPULSE COLLESALVETTI // FTTH & TELECOM EXPLORER 3D")
+    print("  GEOFIBRA COLLESALVETTI // OSSERVATORIO CIVICO BANDA ULTRALARGA")
     print("=" * 68)
-    print(f"  Cartella root (Assoluta): {BASE_DIR}")
-    print(f"  File di avvio (Assoluto): {INDEX_FILE}")
-    print(f"  Indirizzo Web Locale:     {url}")
+    print(f"  Cartella root:         {BASE_DIR}")
+    print(f"  File di avvio:         {INDEX_FILE}")
+    print(f"  Indirizzo Web Locale:  {url}")
     print("=" * 68)
     print("  Premi Ctrl + C per arrestare il server.\n")
 
