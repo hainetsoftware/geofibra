@@ -11,6 +11,11 @@
   --color-muted: #94a3b8;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 body {
   background-color: var(--bg-dark);
   color: var(--color-text);
@@ -137,13 +142,22 @@ body {
   border: 1px solid rgba(0, 240, 255, 0.2);
 }
 
+.wiki-prose {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
 .wiki-prose pre {
   background: #05070a;
   border: 1px solid var(--border-color);
   padding: 1rem;
   border-radius: 0.5rem;
   overflow-x: auto;
+  max-width: 100%;
   margin: 1.5rem 0;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 
 .wiki-prose pre code {
@@ -155,7 +169,10 @@ body {
 
 /* Responsive Table Wrapper with Horizontal Scroll */
 .table-wrapper {
+  display: block;
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   overflow-x: auto;
   margin: 1.5rem 0;
   border-radius: 0.5rem;
