@@ -1,8 +1,7 @@
 // js/main.js - Coordinamento UI: mappa e modale cantieri
 
-document.addEventListener("DOMContentLoaded", () => {
-
-    // Inizializza Mappa Leaflet
+function initApp() {
+    // Inizializza Mappa Leaflet se presente
     if (typeof initMap === 'function') {
         initMap();
     }
@@ -30,4 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.initCantieriTracker) {
         window.initCantieriTracker();
     }
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener("DOMContentLoaded", initApp);
+} else {
+    initApp();
+}

@@ -1,0 +1,104 @@
+[
+  {
+    "id": "cantiere-2-stagno",
+    "titolo": "Cantiere 2 - Stagno (Nuova Espansione FTTH)",
+    "frazione": "Stagno",
+    "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
+    "oggetto": "Lavori di scavo stradale per posa infrastruttura rete FTTH FiberCop – Stagno, vie varie",
+    "atto_tipo": "Polizia Municipale",
+    "atto_numero": "95",
+    "atto_registro_generale": "102",
+    "codice_atto_completo": "Ordinanza P.M. n. 95 del 10/09/2026 (Reg. Gen. 102)",
+    "data_emissione": "2026-09-10",
+    "autorizzazione_settore_tecnico": "Autorizzazione n. 17/2026 del 16/07/2026",
+    "periodo_ordinanza": {
+      "inizio": "2026-09-21T08:00:00+02:00",
+      "fine": "2026-10-16T18:00:00+02:00",
+      "fascia_oraria": "08:00 - 18:00",
+      "giorni": "feriali"
+    },
+    "slittamento_osservato": {
+      "fonte_kml": "Snapshot 3 (04/10/2026) - campo name 'Cantiere 2 (05/10-17/10)' e description",
+      "inizio_stimato": "2026-10-05T08:00:00+02:00",
+      "fine_stimata": "2026-10-17T18:00:00+02:00",
+      "nota_campo": "Slittamento rilevato sul campo: avvio posticipato al 05/10/2026"
+    },
+    "lunghezza_stimata_km": 1.43,
+    "vie_interessate": [
+      { "via": "Via Otto Marzo", "prescrizione": "Divieto di sosta con rimozione e senso unico alternato con movieri o a vista" },
+      { "via": "Via Romita", "prescrizione": "Divieto di sosta e senso unico alternato con movieri (o mantenimento senso unico)" },
+      { "via": "Via De Gasperi", "prescrizione": "Divieto di sosta e senso unico alternato regolato da movieri o semaforo" },
+      { "via": "Via Machiavelli", "prescrizione": "Mantenimento senso unico con divieto di sosta ambo i lati" },
+      { "via": "Via XXV Aprile", "prescrizione": "Mantenimento senso unico con divieto di sosta ambo i lati" },
+      { "via": "Piazza Di Vittorio", "prescrizione": "Divieto di sosta e senso unico alternato regolato a vista o movieri" }
+    ],
+    "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+    "coordinate_centro": [43.5930, 10.3540],
+    "descrizione_ufficiale": "Provvedimento di disciplina temporanea della viabilità per esecuzione di scavi stradali per posa della rete in fibra ottica FiberCop a Stagno."
+  },
+  {
+    "id": "cantiere-1-collesalvetti",
+    "titolo": "Cantiere 1 - Collesalvetti Centro",
+    "frazione": "Collesalvetti",
+    "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
+    "oggetto": "Lavori di scavo stradale per posa infrastruttura rete FTTH FiberCop – Collesalvetti, vie varie",
+    "atto_tipo": "Polizia Municipale",
+    "atto_numero": "88",
+    "atto_registro_generale": "95",
+    "codice_atto_completo": "Ordinanza P.M. n. 88 del 02/09/2026 (Reg. Gen. 95)",
+    "data_emissione": "2026-09-02",
+    "autorizzazione_settore_tecnico": "Autorizzazione n. 10/2026 del 14/05/2026",
+    "periodo_ordinanza": {
+      "inizio": "2026-09-14T08:00:00+02:00",
+      "fine": "2026-10-02T18:00:00+02:00",
+      "fascia_oraria": "08:00 - 18:00",
+      "giorni": "feriali"
+    },
+    "slittamento_osservato": {
+      "fonte_kml": "Snapshot 3 (04/10/2026) - suddivisione tratte ESEGUITO / NON ESEGUITO",
+      "inizio_stimato": "2026-09-14T08:00:00+02:00",
+      "fine_stimata": "2026-10-02T18:00:00+02:00",
+      "nota_campo": "Rilievo del 29/09/2026 e 03/10/2026: 2 tratte eseguite (Via Nenni/rotatoria con minitrincee e pozzetti), 5 tratte non eseguite (solo segni blu sull'asfalto)"
+    },
+    "lunghezza_stimata_km": 2.60,
+    "vie_interessate": [
+      { "via": "Via Nenni", "prescrizione": "Divieto di sosta ambo i lati con rimozione e restringimento carreggiata con mantenimento senso unico" },
+      { "via": "Via Roma (altezza rotatoria Via Nenni)", "prescrizione": "Divieto di sosta e senso unico alternato a vista o con movieri" },
+      { "via": "Via del Valico a Pisa", "prescrizione": "Divieto di sosta e senso unico alternato a vista o con movieri" },
+      { "via": "Via di Cerretello", "prescrizione": "Divieto di sosta e senso unico alternato a vista o con movieri" }
+    ],
+    "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
+    "coordinate_centro": [43.5945, 10.4760],
+    "descrizione_ufficiale": "Provvedimento di disciplina della viabilità per scavo e posa infrastruttura in fibra ottica FiberCop nel centro abitato di Collesalvetti."
+  },
+  {
+    "id": "ripristino-stagno",
+    "titolo": "Lavori di Ripristino Manto Stradale Scavi Fibra - Stagno",
+    "frazione": "Stagno",
+    "richiedente": "Fastweb S.p.A.",
+    "oggetto": "Lavori stradali per ripristino scavi fibra ottica – Stagno, vie varie",
+    "atto_tipo": "Polizia Municipale",
+    "atto_numero": "70",
+    "atto_registro_generale": "75",
+    "codice_atto_completo": "Ordinanza P.M. n. 70 del 16/07/2026 (Reg. Gen. 75)",
+    "data_emissione": "2026-07-16",
+    "autorizzazione_settore_tecnico": "Autorizzazione n. 10/2025 del 16/07/2025",
+    "periodo_ordinanza": {
+      "inizio": "2026-08-03T08:00:00+02:00",
+      "fine": "2026-08-13T18:00:00+02:00",
+      "fascia_oraria": "08:00 - 18:00",
+      "giorni": "feriali"
+    },
+    "slittamento_osservato": null,
+    "lunghezza_stimata_km": 0.85,
+    "vie_interessate": [
+      { "via": "Via Marx (lato opposto accesso Chiesa San Luca)", "prescrizione": "Restringimento carreggiata e senso unico alternato a vista o con semaforo" },
+      { "via": "Via Marx (ponte sul Fosso Cateratto, lato nord)", "prescrizione": "Restringimento carreggiata e senso unico alternato" },
+      { "via": "Via Guerrazzi (intersezione Via Curiel, lato sud)", "prescrizione": "Restringimento carreggiata e senso unico alternato" },
+      { "via": "Via La Malfa", "prescrizione": "Restringimento carreggiata e senso unico alternato" }
+    ],
+    "file_pdf": "ordinanze/ordinanza_75_2026_stagno_ripristino.pdf",
+    "coordinate_centro": [43.5910, 10.3520],
+    "descrizione_ufficiale": "Provvedimento straordinario di circolazione per esecuzione di ripristini del manto stradale a seguito degli scavi per la fibra ottica a Stagno. Lavori formalmente conclusi."
+  }
+]

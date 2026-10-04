@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collesalvetti FTTH Explorer 3D</title>
+    <title>Collesalvetti FTTH Explorer</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     
     <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -41,144 +38,249 @@
 </head>
 <body class="bg-cyber-dark text-slate-200 font-sans overflow-hidden">
 
-    <!-- Top Navigation -->
-    <nav class="absolute top-0 left-0 w-full h-16 z-50 glass-panel border-b border-cyber-border flex items-center justify-between px-6">
-        <div class="flex items-center gap-3">
-            <i data-lucide="network" class="text-cyber-neon w-8 h-8 pulse-slow"></i>
-            <div>
-                <h1 class="text-xl font-bold font-['Rajdhani'] tracking-wider text-white">FIBERPULSE <span class="text-cyber-neon">COLLESALVETTI</span></h1>
-                <p class="text-xs text-slate-400 font-['Rajdhani'] uppercase tracking-widest">Osservatorio TLC & FTTH</p>
+    <!-- Mobile Blocker (Visibile unicamente su smartphone, viewport < 768px) -->
+    <div id="mobile-blocker" class="fixed inset-0 z-[9999] bg-cyber-dark/95 backdrop-blur-xl hidden flex-col items-center justify-center p-4 sm:p-6 text-center overflow-y-auto">
+        <div class="glass-panel border border-amber-500/40 rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl my-auto text-center">
+            <!-- Icon -->
+            <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                <i data-lucide="monitor" class="w-8 h-8"></i>
             </div>
-        </div>
-        
-        <div class="flex items-center gap-4">
-            <div id="frazioni-nav" class="hidden md:flex gap-2">
-                <!-- Frazioni buttons will be injected here -->
+            
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-bold uppercase tracking-wider mb-3">
+                <i data-lucide="alert-triangle" class="w-3.5 h-3.5"></i> Accesso Riservato a Desktop & Tablet
             </div>
-            <button id="btn-open-cantieri" class="flex items-center gap-2 bg-amber-500/20 hover:bg-amber-500/30 text-amber-400 border border-amber-500/50 px-3 py-1.5 rounded text-sm font-semibold transition-all">
-                <i data-lucide="cone" class="w-4 h-4"></i>
-                <span class="hidden sm:inline">Cantieri & Ordinanze</span>
-                <span id="cantieri-count-badge" class="bg-amber-400/20 text-amber-300 border border-amber-400/40 text-[10px] px-1.5 py-0.5 rounded-full font-mono">--</span>
-            </button>
-            <a href="data/rete_ftth_collesalvetti.xlsx" download class="flex items-center gap-1.5 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 border border-emerald-500/40 px-3 py-1.5 rounded text-sm font-semibold transition-all" title="Scarica Foglio Excel Completo">
-                <i data-lucide="file-spreadsheet" class="w-4 h-4"></i>
-                <span class="hidden lg:inline">Scarica Excel</span>
-            </a>
-        </div>
-    </nav>
-
-    <!-- Map Container -->
-    <div id="map" class="absolute inset-0 z-0"></div>
-
-    <!-- Map Layer Controls (Custom) -->
-    <div class="absolute bottom-6 left-6 z-40 flex bg-cyber-panel border border-cyber-border rounded-lg overflow-hidden backdrop-blur-md">
-        <button class="layer-btn px-4 py-2 text-sm font-semibold hover:bg-white/10 active-layer" data-layer="topo">OpenStreetMap</button>
-        <button class="layer-btn px-4 py-2 text-sm font-semibold hover:bg-white/10 border-l border-cyber-border" data-layer="satellite">Satellite HD</button>
-        <button class="layer-btn px-4 py-2 text-sm font-semibold hover:bg-white/10 border-l border-cyber-border" data-layer="dark">Cyber Dark</button>
-    </div>
-
-    <!-- Telemetry HUD (Right) -->
-    <div class="absolute top-20 right-6 z-40 w-80 glass-panel border border-cyber-border rounded-xl flex flex-col max-h-[calc(100vh-120px)]">
-        <div class="p-4 border-b border-cyber-border bg-gradient-to-r from-transparent to-cyber-neon/10">
-            <h2 class="text-lg font-['Rajdhani'] font-bold text-white flex items-center gap-2">
-                <i data-lucide="activity" class="text-cyber-neon w-5 h-5"></i> Telemetria Rete
+            
+            <h2 class="text-xl sm:text-2xl font-['Rajdhani'] font-bold text-white mb-3 tracking-wide">
+                OSSERVATORIO CARTOGRAFICO AD ALTA DENSITÀ
             </h2>
-        </div>
-        
-        <div class="p-4 space-y-4 overflow-y-auto custom-scrollbar">
-            <!-- Stats Grid -->
-            <div class="grid grid-cols-2 gap-3">
-                <div class="stat-card">
-                    <span class="stat-label">TOT. APPARATI</span>
-                    <span class="stat-value" id="stat-tot">--</span>
+            
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4 text-justify sm:text-left">
+                Questo osservatorio civico monitora con precisione millimetrica i <b>cantieri stradali</b>, le ordinanze di Polizia Municipale e i <b>tracciati della rete FTTH</b> (minitrincee, dorsali, armadi ARLO e centrali) nel territorio del <b>Comune di Collesalvetti</b>.
+            </p>
+
+            <div class="p-4 bg-black/50 border border-amber-500/25 rounded-xl text-left text-xs text-slate-300 mb-5 space-y-3">
+                <div class="flex items-start gap-2.5">
+                    <i data-lucide="layers" class="w-4 h-4 text-cyber-neon flex-shrink-0 mt-0.5"></i>
+                    <div>
+                        <b class="text-white">Densità dei dati geospaziali:</b> L'ispezione accurata delle minitrincee, la verifica delle prescrizioni di viabilità e il confronto con i poligoni di copertura richiedono una superficie visiva estesa e l'uso di un puntatore di precisione.
+                    </div>
                 </div>
-                <div class="stat-card">
-                    <span class="stat-label">TRATTE (KM)</span>
-                    <span class="stat-value text-cyber-fiber" id="stat-km">--</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-label">ARL RAME</span>
-                    <span class="stat-value text-cyber-accent" id="stat-arl">--</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-label">ARLO FIBRA</span>
-                    <span class="stat-value text-cyber-neon" id="stat-arlo">--</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-label">CENTRALI XGS-PON</span>
-                    <span class="stat-value text-emerald-400" id="stat-centrali">--</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-label">CANTIERI ATTIVI</span>
-                    <span class="stat-value text-amber-400" id="stat-cantieri">--</span>
+                <div class="flex items-start gap-2.5">
+                    <i data-lucide="layout-grid" class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5"></i>
+                    <div>
+                        <b class="text-white">Tabelle e pannelli affiancati:</b> L'interfaccia con mappa GIS multilivello, HUD di telemetria e cronoprogramma è progettata per schermi a partire da <b>768 pixel</b> (computer desktop o tablet).
+                    </div>
                 </div>
             </div>
 
-            <!-- Frazioni Distribution -->
-            <div>
-                <h3 class="text-xs uppercase text-slate-400 font-bold mb-2">Distribuzione per Frazione</h3>
-                <div id="frazioni-stats" class="space-y-2">
-                    <!-- Injected via JS -->
-                </div>
-            </div>
+            <p class="text-xs text-slate-400 mb-5 italic">
+                Per consultare la mappa interattiva e il tracker dei cantieri, ti invitiamo a riaprire questo sito da un computer desktop o tablet.
+            </p>
 
-            <!-- List Filter -->
-            <div class="mt-4">
-                <input type="text" id="search-elements" placeholder="Cerca apparato... (es. ARL 04)" class="w-full bg-black/40 border border-cyber-border rounded px-3 py-2 text-sm text-white outline-none focus:border-cyber-neon transition-colors">
-                <div id="elements-list" class="mt-2 space-y-1 max-h-40 overflow-y-auto custom-scrollbar pr-1">
-                    <!-- List items injected via JS -->
-                </div>
-            </div>
+            <!-- L'UNICA azione consentita da smartphone -->
+            <a href="wiki.html" class="w-full bg-cyber-neon/20 hover:bg-cyber-neon/30 text-cyber-neon border border-cyber-neon/50 py-3 px-5 rounded-xl text-sm font-bold transition-all flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/10">
+                <i data-lucide="book-open" class="w-4 h-4"></i>
+                <span>Consulta la WIKI Tecnica sulla Fibra Ottica</span>
+            </a>
+            <span class="block text-[11px] text-slate-400 mt-2">La guida divulgativa e il glossario sono ottimizzati per la lettura da smartphone.</span>
         </div>
     </div>
 
-    <!-- Cantieri & Ordinanze Albo Pretorio Modal -->
-    <div id="modal-cantieri" class="fixed inset-0 z-[100] bg-cyber-dark/95 backdrop-blur-xl hidden flex-col">
-        <!-- Modal Top Bar -->
-        <div class="flex justify-between items-center p-4 border-b border-cyber-border/50">
-            <div class="flex items-center gap-4">
-                <h2 class="text-2xl font-['Rajdhani'] font-bold text-white flex items-center gap-3">
-                    <i data-lucide="cone" class="text-amber-400"></i> Monitoraggio Cantieri & Ordinanze Fibra
-                </h2>
-                <div class="hidden sm:flex items-center gap-2 bg-black/50 px-3 py-1 rounded-lg border border-cyber-border/40 text-xs">
-                    <span class="text-slate-400">Orario Ufficiale:</span>
-                    <span id="cantieri-live-clock" class="text-cyber-neon font-mono font-bold">--:--:-- (Europe/Rome)</span>
+    <!-- Desktop / Tablet Container (visibile solo se viewport >= 768px) -->
+    <div id="desktop-app-container">
+        <!-- Top Navigation -->
+        <nav class="absolute top-0 left-0 w-full h-16 z-50 glass-panel border-b border-cyber-border flex items-center justify-between px-6">
+            <div class="flex items-center gap-3">
+                <i data-lucide="network" class="text-cyber-neon w-8 h-8 pulse-slow"></i>
+                <div>
+                    <h1 class="text-xl font-bold font-['Rajdhani'] tracking-wider text-white">FIBERPULSE <span class="text-cyber-neon">COLLESALVETTI</span></h1>
+                    <p class="text-xs text-slate-400 font-['Rajdhani'] uppercase tracking-widest">Osservatorio TLC & FTTH</p>
                 </div>
             </div>
+            
+            <div class="flex items-center gap-3">
+                <div id="frazioni-nav" class="hidden md:flex gap-2">
+                    <!-- Frazioni buttons will be injected here -->
+                </div>
+                <a href="wiki.html" class="flex items-center gap-1.5 bg-cyber-neon/20 hover:bg-cyber-neon/30 text-cyber-neon border border-cyber-neon/50 px-3 py-1.5 rounded text-sm font-semibold transition-all" title="Wiki Tecnica & Divulgativa">
+                    <i data-lucide="book-open" class="w-4 h-4"></i>
+                    <span class="hidden sm:inline">Wiki Fibra</span>
+                </a>
+                <button id="btn-open-cantieri" class="flex items-center gap-2 bg-amber-500/20 hover:bg-amber-500/30 text-amber-400 border border-amber-500/50 px-3 py-1.5 rounded text-sm font-semibold transition-all">
+                    <i data-lucide="cone" class="w-4 h-4"></i>
+                    <span class="hidden sm:inline">Cantieri & Ordinanze</span>
+                    <span id="cantieri-count-badge" class="bg-amber-400/20 text-amber-300 border border-amber-400/40 text-[10px] px-1.5 py-0.5 rounded-full font-mono">--</span>
+                </button>
+                <a href="data/rete_ftth_collesalvetti.xlsx" download class="flex items-center gap-1.5 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 border border-emerald-500/40 px-3 py-1.5 rounded text-sm font-semibold transition-all" title="Scarica Foglio Excel Completo">
+                    <i data-lucide="file-spreadsheet" class="w-4 h-4"></i>
+                    <span class="hidden lg:inline">Scarica Excel</span>
+                </a>
+            </div>
+        </nav>
 
-            <button id="btn-close-cantieri" class="p-2 hover:bg-white/10 rounded-full transition-colors text-white">
-                <i data-lucide="x" class="w-6 h-6"></i>
-            </button>
+        <!-- Map Container -->
+        <div id="map" class="absolute inset-0 z-0"></div>
+
+        <!-- Map Layer Controls (Custom) -->
+        <div class="absolute bottom-6 left-6 z-40 flex bg-cyber-panel border border-cyber-border rounded-lg overflow-hidden backdrop-blur-md">
+            <button class="layer-btn px-4 py-2 text-sm font-semibold hover:bg-white/10 active-layer" data-layer="topo">OpenStreetMap</button>
+            <button class="layer-btn px-4 py-2 text-sm font-semibold hover:bg-white/10 border-l border-cyber-border" data-layer="satellite">Satellite HD</button>
+            <button class="layer-btn px-4 py-2 text-sm font-semibold hover:bg-white/10 border-l border-cyber-border" data-layer="dark">Cyber Dark</button>
         </div>
 
-        <div class="flex-1 overflow-y-auto custom-scrollbar p-6 bg-cyber-dark/90">
-            <div class="max-w-5xl mx-auto space-y-4">
-                <!-- Info Banner -->
-                <div class="p-4 glass-panel border border-cyber-border/40 rounded-xl flex items-start gap-3">
-                    <i data-lucide="shield-alert" class="w-6 h-6 text-amber-400 flex-shrink-0 mt-0.5"></i>
-                    <div class="text-xs text-slate-300 leading-relaxed">
-                        <b class="text-white">Albo Pretorio del Comune di Collesalvetti:</b> Questo modulo incrocia in tempo reale le ordinanze di regolamentazione stradale e scavo pubblicate all'Albo Pretorio per la posa e manutenzione della rete FTTH FiberCop / Fastweb. Lo stato dei cantieri (programmato, attivo, concluso) è calcolato al secondo sul fuso orario di <b>Europe/Rome</b> con dettaglio su vie e divieti.
+        <!-- Telemetry HUD (Right) -->
+        <div class="absolute top-20 right-6 z-40 w-80 glass-panel border border-cyber-border rounded-xl flex flex-col max-h-[calc(100vh-120px)]">
+            <div class="p-4 border-b border-cyber-border bg-gradient-to-r from-transparent to-cyber-neon/10">
+                <h2 class="text-lg font-['Rajdhani'] font-bold text-white flex items-center gap-2">
+                    <i data-lucide="activity" class="text-cyber-neon w-5 h-5"></i> Telemetria Rete
+                </h2>
+            </div>
+            
+            <div class="p-4 space-y-4 overflow-y-auto custom-scrollbar">
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="stat-card">
+                        <span class="stat-label">TOT. APPARATI</span>
+                        <span class="stat-value" id="stat-tot">--</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">TRATTE (KM)</span>
+                        <span class="stat-value text-cyber-fiber" id="stat-km">--</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">ARL RAME</span>
+                        <span class="stat-value text-cyber-accent" id="stat-arl">--</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">ARLO FIBRA</span>
+                        <span class="stat-value text-cyber-neon" id="stat-arlo">--</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">CENTRALI XGS-PON</span>
+                        <span class="stat-value text-emerald-400" id="stat-centrali">--</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">CANTIERI ATTIVI</span>
+                        <span class="stat-value text-amber-400" id="stat-cantieri">--</span>
                     </div>
                 </div>
 
-                <!-- Cards Container -->
-                <div id="cantieri-list-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <!-- Injected dynamically by js/cantieri_tracker.js -->
+                <!-- Frazioni Distribution -->
+                <div>
+                    <h3 class="text-xs uppercase text-slate-400 font-bold mb-2">Distribuzione per Frazione</h3>
+                    <div id="frazioni-stats" class="space-y-2">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+
+                <!-- List Filter -->
+                <div class="mt-4">
+                    <input type="text" id="search-elements" placeholder="Cerca apparato... (es. ARL 04)" class="w-full bg-black/40 border border-cyber-border rounded px-3 py-2 text-sm text-white outline-none focus:border-cyber-neon transition-colors">
+                    <div id="elements-list" class="mt-2 space-y-1 max-h-40 overflow-y-auto custom-scrollbar pr-1">
+                        <!-- List items injected via JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cantieri & Ordinanze Albo Pretorio Modal -->
+        <div id="modal-cantieri" class="fixed inset-0 z-[100] bg-cyber-dark/95 backdrop-blur-xl hidden flex-col">
+            <!-- Modal Top Bar -->
+            <div class="flex justify-between items-center p-4 border-b border-cyber-border/50">
+                <div class="flex items-center gap-4">
+                    <h2 class="text-2xl font-['Rajdhani'] font-bold text-white flex items-center gap-3">
+                        <i data-lucide="cone" class="text-amber-400"></i> Monitoraggio Cantieri & Ordinanze Fibra
+                    </h2>
+                    <div class="hidden sm:flex items-center gap-2 bg-black/50 px-3 py-1 rounded-lg border border-cyber-border/40 text-xs">
+                        <span class="text-slate-400">Orario Ufficiale:</span>
+                        <span id="cantieri-live-clock" class="text-cyber-neon font-mono font-bold">--:--:-- (Europe/Rome)</span>
+                    </div>
+                </div>
+
+                <button id="btn-close-cantieri" class="p-2 hover:bg-white/10 rounded-full transition-colors text-white">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <div class="flex-1 overflow-y-auto custom-scrollbar p-6 bg-cyber-dark/90">
+                <div class="max-w-5xl mx-auto space-y-4">
+                    <!-- Info Banner -->
+                    <div class="p-4 glass-panel border border-cyber-border/40 rounded-xl flex items-start gap-3">
+                        <i data-lucide="shield-alert" class="w-6 h-6 text-amber-400 flex-shrink-0 mt-0.5"></i>
+                        <div class="text-xs text-slate-300 leading-relaxed">
+                            <b class="text-white">Albo Pretorio del Comune di Collesalvetti:</b> Questo modulo incrocia le ordinanze di regolamentazione stradale e scavo pubblicate all'Albo Pretorio per la posa dell'infrastruttura FTTH FiberCop / Fastweb. Lo stato dei cantieri (programmato, attivo, concluso) è calcolato al secondo sul fuso orario di <b>Europe/Rome</b> e rispetta le fasce feriali autorizzate (08:00 - 18:00), evidenziando separatamente i rilievi civici di campo.
+                        </div>
+                    </div>
+
+                    <!-- Cards Container -->
+                    <div id="cantieri-list-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Injected dynamically by js/cantieri_tracker.js -->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/cantieri_tracker.js"></script>
-    <script src="js/map.js"></script>
-    <script src="js/telemetry.js"></script>
-    <script src="js/main.js"></script>
-    
+    <!-- Script di rilevamento schermo e caricamento dinamico Leaflet/Dati -->
     <script>
-        lucide.createIcons();
+        (function() {
+            const isSmallScreen = window.innerWidth < 768;
+            const blocker = document.getElementById('mobile-blocker');
+            const appCont = document.getElementById('desktop-app-container');
+
+            if (isSmallScreen) {
+                // Smartphone: Mostra solo il blocco. Non scaricare Leaflet né dati geografici!
+                if (blocker) {
+                    blocker.classList.remove('hidden');
+                    blocker.classList.add('flex');
+                }
+                if (appCont) {
+                    appCont.style.display = 'none';
+                }
+                if (window.lucide) {
+                    lucide.createIcons();
+                }
+            } else {
+                // Desktop o Tablet (>= 768px): Avvia regolarmente l'applicazione
+                if (blocker) {
+                    blocker.classList.add('hidden');
+                    blocker.classList.remove('flex');
+                }
+                if (appCont) {
+                    appCont.style.display = 'block';
+                }
+
+                // Iniezione dinamica foglio di stile Leaflet
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+                document.head.appendChild(link);
+
+                // Caricamento sequenziale degli script dell'osservatorio
+                function loadScript(src) {
+                    return new Promise((resolve, reject) => {
+                        const s = document.createElement('script');
+                        s.src = src;
+                        s.onload = resolve;
+                        s.onerror = () => reject(new Error('Impossibile caricare ' + src));
+                        document.body.appendChild(s);
+                    });
+                }
+
+                loadScript('https://unpkg.com/leaflet@1.9.4/dist/leaflet.js')
+                    .then(() => loadScript('js/data.js'))
+                    .then(() => loadScript('js/cantieri_tracker.js'))
+                    .then(() => loadScript('js/map.js'))
+                    .then(() => loadScript('js/telemetry.js'))
+                    .then(() => loadScript('js/main.js'))
+                    .then(() => {
+                        if (window.lucide) lucide.createIcons();
+                    })
+                    .catch(err => {
+                        console.error('Errore nel caricamento dei moduli GIS:', err);
+                    });
+            }
+        })();
     </script>
 </body>
 </html>
