@@ -364,5 +364,9 @@ def main():
         
     print(f"Successfully processed {len(data['features'])} features from {kml_path} into data/network_data.json and js/data.js")
 
+    # Conteggi derivati (apparati, km, frazioni): unica fonte data/stats.json
+    import compute_stats
+    compute_stats.main()
+
 if __name__ == "__main__":
     main()
