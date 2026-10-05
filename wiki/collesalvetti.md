@@ -7,7 +7,7 @@ sources:
     title: "Rilievo Geospaziale Indipendente: Snapshot 3 (04/10/2026)"
     url: "data/snapshots/rilievo_snapshot3.kml"
     type: "dati"
-    note: "Rilievo GIS di campo: 63 feature, 21,716 km di tracciato, 34 apparati, 4 poligoni"
+    note: "Rilievo GIS di campo: 63 feature, 21,716 km di tracciato, 32 apparati nel territorio comunale (+1 esterno), 4 poligoni"
   - id: "ordinanze-collesalvetti"
     title: "Albo Pretorio del Comune di Collesalvetti: Ordinanze di Polizia Municipale n. 75, 95 e 102/2026"
     url: "data/ordinanze.json"
@@ -34,40 +34,61 @@ Rispetto ai precedenti rilievi (Snapshot 1 di 12,07 km e Snapshot 2 di 13,50 km)
 
 | Parametro Rilevato | Snapshot 1 (Storico) | Snapshot 2 (Settembre 2026) | **Snapshot 3 Corrente (04/10/2026)** | Variazione S2 $\rightarrow$ S3 |
 |---|:---:|:---:|:---:|:---:|
-| **Totale Feature Geospaziali** | 47 | 49 | **63** | +14 feature (+28,6%) |
-| **Elementi Puntuali (Apparati)** | 31 | 31 | **34** | +3 apparati (+9,7%) |
-| **Elementi Lineari (Tratte e Scavi)** | 12 | 14 | **25** | +11 tratte (+78,6%) |
+| **Totale Feature Geospaziali** | 46 | 49 | **63** | +14 feature (+28,6%) |
+| **Elementi Puntuali (punti censiti)** | 31 | 31 | **34** | +3 punti (+9,7%) |
+| **di cui Apparati (armadi e centrali, comune)** | 30 | 30 | **32** | +2 apparati (+6,7%) |
+| **Elementi Lineari (Tratte e Scavi)** | 11 | 14 | **25** | +11 tratte (+78,6%) |
 | **Elementi Areali (Poligoni)** | 4 | 4 | **4** | Invariati (perimetri rilievo) |
-| **Chilometri Totali Tracciati** | 12,070 km | 13,503 km | **21,716 km** | **+8,213 km (+60,8%)** |
+| **Chilometri Totali Tracciati** | 12,073 km | 13,503 km | **21,716 km** | **+8,213 km (+60,8%)** |
 
 ---
 
 ## 2. Censimento Apparati sul Territorio
 
-I 34 elementi puntuali censiti sul suolo comunale e di confine comprendono:
+<!-- AUTO-STATS:BEGIN equipment -->
+Apparato = punto di rete censito (armadio ARL/ARLO o centrale). Linee, poligoni e punti di infrastruttura non sono apparati. Dei 34 punti dello Snapshot, 33 sono apparati (32 nel territorio comunale + 1 esterno al Comune) e 1 è un punto di infrastruttura non conteggiato.
 
-| Tipologia Apparato | Categoria GIS | Quantità Rilevata | Operatore / Rete | Note di Rilievo |
-|---|---|:---:|---|---|
-| **Armadio Ripartilinea Ottico** | `arlo` | **21** | FiberCop / Wholesale | Armadi passivi stradali installati su basamento in cemento accanto ai vecchi ARL |
-| **Armadio Ripartilinea Rame** | `arl` | **8** | TIM (Rete Storica) | Armadi rame tradizionali della rete secondaria, molti dotati di modulo ONU FTTC |
-| **Centrale di Commutazione** | `centrale` / `centrale_esterna` | **3** | Rete Fissa Primaria | 2 centrali comunali (Collesalvetti, Vicarello) + 1 Centrale Feeder a Livorno (a 4,1 km dal confine) |
-| **Pozzetto di Derivazione** | `infrastruttura` | **2** | Rete Sotterranea | Camerette rompitratta con derivazione dorsale |
-| **Totale Apparati** | | **34** | | |
+| Tipologia | Categoria GIS | Quantità | Note |
+|---|---|:---:|---|
+| **Armadio Ripartilinea (ARL, rame)** | `arl` | **23** | |
+| **Armadio Ripartilinea Ottico (ARLO)** | `arlo` | **2** | |
+| *Totale armadi (ARL + ARLO)* | | *25* | |
+| **Centrale Comunale** | `centrale_comunale` | **1** | |
+| **Centrali di Frazione** | `centrale_frazione` | **6** | |
+| **Totale apparati sul territorio comunale** | | **32** | |
+| Apparati esterni al Comune (non inclusi nel totale): Centrale Feeder (Livorno Nord) | `centrale_feeder` | 1 | fuori dal territorio comunale |
+| Punti non-apparato (esclusi dal conteggio): Coppie di corrugati scoperti | `infrastruttura` | 1 | punto di infrastruttura, non apparato |
+<!-- AUTO-STATS:END equipment -->
+
 
 ---
 
 ## 3. Ripartizione Geografica per Frazione
 
-La suddivisione chilometrica e infrastrutturale evidenzia come la frazione di **Stagno** concentri oltre la metà dell'infrastruttura complessiva, seguita da **Collesalvetti capoluogo** e **Vicarello**:
+La tabella ripartisce per frazione gli apparati e i chilometri di tratte. Le frazioni sono quelle assegnate dal convertitore `scripts/kml_to_geojson.py`; i chilometri della dorsale INFRATEL BUL non hanno una frazione e compaiono come *Altro / non attribuito*:
 
-| Frazione | Lunghezza Tratte (km) | Quota % Chilometrica | ARLO Fibra | ARL Rame | Centrali TLC | Tratte e Cantieri Principali |
-|---|:---:|:---:|:---:|:---:|:---:|---|
-| **Stagno** | **11,232 km** | 51,7% | 13 | 4 | 0 | Cantiere 2 (Ord. 102/2026), Cantiere 3 Via Aiaccia (da collegare a ordinanza), Ripristino Via Marx |
-| **Collesalvetti (Centro)** | **6,444 km** | 29,7% | 6 | 3 | 1 | Cantiere 1 (Ord. 95/2026), rotatoria Via Nenni/Via Roma, dorsale Via del Valico a Pisa |
-| **Vicarello** | **3,122 km** | 14,4% | 2 | 1 | 1 | Dorsale urbana e centrale di commutazione locale |
-| **Guasticce** | **0,399 km** | 1,8% | 0 | 0 | 0 | Tratta dorsale primaria di collegamento |
-| **Altro / Intercomunale** | **0,519 km** | 2,4% | 0 | 0 | 1 | Opera sulla Backbone e Centrale Feeder esterna (Comune di Livorno) |
-| **Totale Territoriale** | **21,716 km** | **100,0%** | **21** | **8** | **3** | |
+<!-- AUTO-STATS:BEGIN frazioni -->
+| Frazione | Apparati | ARLO | ARL | Centrali | Tratte (km) | Quota % km |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Stagno** | 8 | 2 | 5 | 1 | 8,431 km | 38,8% |
+| **Collesalvetti** | 8 | 0 | 7 | 1 | 3,290 km | 15,2% |
+| **Vicarello** | 9 | 0 | 8 | 1 | 0,000 km | 0,0% |
+| **Guasticce** | 4 | 0 | 3 | 1 | 0,000 km | 0,0% |
+| **Nugola** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
+| **Parrana San Martino** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
+| **Parrana San Giusto** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
+| **Altro / non attribuito** | 0 | 0 | 0 | 0 | 9,995 km | 46,0% |
+| **Totale** | 32 | 2 | 23 | 7 | 21,716 km | 100,0% |
+
+*Gli apparati sono contati per frazione dal solo territorio comunale; i km delle tratte comprendono anche la dorsale INFRATEL BUL e le tratte senza frazione (`Altro`).*
+<!-- AUTO-STATS:END frazioni -->
+
+Tratte e cantieri principali per frazione:
+
+- **Stagno:** Cantiere 2 (Ord. 102/2026), Cantiere 3 Via Aiaccia (da collegare a ordinanza), Ripristino Via Marx.
+- **Collesalvetti (Centro):** Cantiere 1 (Ord. 95/2026), rotatoria Via Nenni/Via Roma, dorsale Via del Valico a Pisa.
+- **Altro / non attribuito:** dorsale INFRATEL BUL, opera sulla Backbone; la Centrale Feeder esterna (Comune di Livorno) è riportata a parte e non è inclusa negli apparati comunali.
+
 
 ---
 

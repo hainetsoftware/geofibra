@@ -9,27 +9,26 @@ const FRAZIONI_COORDS = {
 };
 
 function updateTelemetry(features) {
-    let tot = features.length;
-    let km = 0;
-    let arl = 0;
-    let arlo = 0;
-    let centrali = 0;
+    // I conteggi degli apparati provengono da data/stats.json (js/stats.js), generato da
+    // scripts/compute_stats.py: nessun valore e' calcolato o scritto a mano qui.
+    const stats = window.FTTH_STATS;
+    if (!stats) {
+        console.error('FTTH_STATS non disponibile: esegui scripts/compute_stats.py');
+    }
+    const eq = stats ? stats.equipment : null;
+    const km = stats ? stats.length_km.total : 0;
     let cantieri = 0;
     let frazCounts = {};
 
     features.forEach(f => {
-        let p = f.properties;
-        km += (p.length_km || 0);
-        
-        if (p.category === 'arl') arl++;
-        if (p.category === 'arlo') arlo++;
-        if (p.category.includes('centrale')) centrali++;
-        if (p.category.includes('cantiere')) cantieri++;
-        
-        if (p.frazione && p.frazione !== 'Altro') {
-            frazCounts[p.frazione] = (frazCounts[p.frazione] || 0) + 1;
-        }
+        if (f.properties.category.includes('cantiere')) cantieri++;
     });
+
+    if (eq) {
+        Object.keys(eq.by_frazione_municipal).forEach(fr => {
+            frazCounts[fr] = eq.by_frazione_municipal[fr].totale;
+        });
+    }
 
     const elTot = document.getElementById('stat-tot');
     const elKm = document.getElementById('stat-km');
@@ -38,11 +37,13 @@ function updateTelemetry(features) {
     const elCentrali = document.getElementById('stat-centrali');
     const elCantieri = document.getElementById('stat-cantieri');
 
-    if (elTot) elTot.innerText = tot;
-    if (elKm) elKm.innerText = km.toFixed(2);
-    if (elArl) elArl.innerText = arl;
-    if (elArlo) elArlo.innerText = arlo;
-    if (elCentrali) elCentrali.innerText = centrali;
+    if (eq) {
+        if (elTot) elTot.innerText = eq.total_municipal;
+        if (elKm) elKm.innerText = km.toFixed(2);
+        if (elArl) elArl.innerText = eq.by_category_municipal.arl || 0;
+        if (elArlo) elArlo.innerText = eq.by_category_municipal.arlo || 0;
+        if (elCentrali) elCentrali.innerText = eq.centrali_municipal;
+    }
     if (elCantieri) elCantieri.innerText = cantieri;
 
     const navCont = document.getElementById('frazioni-nav');
@@ -70,7 +71,7 @@ function updateTelemetry(features) {
                 <div class="mb-2">
                     <div class="flex justify-between text-xs mb-1">
                         <span class="text-white">${fr}</span>
-                        <span class="text-cyber-neon font-bold">${frazCounts[fr]} elem.</span>
+                        <span class="text-cyber-neon font-bold">${frazCounts[fr]} app.</span>
                     </div>
                     <div class="w-full bg-black/40 rounded-full h-1.5">
                         <div class="bg-cyber-neon h-1.5 rounded-full" style="width: ${pct}%"></div>

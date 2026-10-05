@@ -65,21 +65,40 @@ Tutti i conteggi sono calcolati deterministicamente sul rilievo geospaziale **Sn
 |---|:---:|---|
 | **Feature Geospaziali Totali** | **63** | 34 punti, 25 linee, 4 poligoni di perimetro |
 | **Estensione Tracciati Rete** | **21,716 km** | Somma metrica di tutte le tratte stradali e dorsali |
-| **Armadi Ottici ARLO (FiberCop)** | **21** | Armadi passivi stradali su basamento in cemento |
-| **Armadi Rame ARL (TIM)** | **8** | Armadi tradizionali della rete secondaria |
-| **Centrali di Commutazione TLC** | **3** | Collesalvetti (Centro), Vicarello e Feeder (Livorno) |
-| **Pozzetti di Derivazione Principali** | **2** | Camerette di snodo delle dorsali |
+
+<!-- AUTO-STATS:BEGIN equipment -->
+Apparato = punto di rete censito (armadio ARL/ARLO o centrale). Linee, poligoni e punti di infrastruttura non sono apparati. Dei 34 punti dello Snapshot, 33 sono apparati (32 nel territorio comunale + 1 esterno al Comune) e 1 è un punto di infrastruttura non conteggiato.
+
+| Tipologia | Categoria GIS | Quantità | Note |
+|---|---|:---:|---|
+| **Armadio Ripartilinea (ARL, rame)** | `arl` | **23** | |
+| **Armadio Ripartilinea Ottico (ARLO)** | `arlo` | **2** | |
+| *Totale armadi (ARL + ARLO)* | | *25* | |
+| **Centrale Comunale** | `centrale_comunale` | **1** | |
+| **Centrali di Frazione** | `centrale_frazione` | **6** | |
+| **Totale apparati sul territorio comunale** | | **32** | |
+| Apparati esterni al Comune (non inclusi nel totale): Centrale Feeder (Livorno Nord) | `centrale_feeder` | 1 | fuori dal territorio comunale |
+| Punti non-apparato (esclusi dal conteggio): Coppie di corrugati scoperti | `infrastruttura` | 1 | punto di infrastruttura, non apparato |
+<!-- AUTO-STATS:END equipment -->
 
 ### Ripartizione Chilometrica e Apparati per Frazione
 
-| Frazione | Tratte (km) | Quota % | ARLO Fibra | ARL Rame | Centrali TLC |
-|---|:---:|:---:|:---:|:---:|:---:|
-| **Stagno** | **11,232 km** | 51,7% | 13 | 4 | 0 |
-| **Collesalvetti (Capoluogo)** | **6,444 km** | 29,7% | 6 | 3 | 1 |
-| **Vicarello** | **3,122 km** | 14,4% | 2 | 1 | 1 |
-| **Guasticce** | **0,399 km** | 1,8% | 0 | 0 | 0 |
-| **Altro / Intercomunale** | **0,519 km** | 2,4% | 0 | 0 | 1 |
-| **Totale Territoriale** | **21,716 km** | **100,0%** | **21** | **8** | **3** |
+<!-- AUTO-STATS:BEGIN frazioni -->
+| Frazione | Apparati | ARLO | ARL | Centrali | Tratte (km) | Quota % km |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Stagno** | 8 | 2 | 5 | 1 | 8,431 km | 38,8% |
+| **Collesalvetti** | 8 | 0 | 7 | 1 | 3,290 km | 15,2% |
+| **Vicarello** | 9 | 0 | 8 | 1 | 0,000 km | 0,0% |
+| **Guasticce** | 4 | 0 | 3 | 1 | 0,000 km | 0,0% |
+| **Nugola** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
+| **Parrana San Martino** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
+| **Parrana San Giusto** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
+| **Altro / non attribuito** | 0 | 0 | 0 | 0 | 9,995 km | 46,0% |
+| **Totale** | 32 | 2 | 23 | 7 | 21,716 km | 100,0% |
+
+*Gli apparati sono contati per frazione dal solo territorio comunale; i km delle tratte comprendono anche la dorsale INFRATEL BUL e le tratte senza frazione (`Altro`).*
+<!-- AUTO-STATS:END frazioni -->
+
 
 ---
 
@@ -175,6 +194,18 @@ python scripts/kml_to_geojson.py
 # 2. Rigenera i file CSV e il foglio Excel (data/rete_ftth_collesalvetti.*)
 python scripts/export_sheets.py
 ```
+
+Il passo 1 esegue anche `scripts/compute_stats.py`, che scrive `data/stats.json` e `js/stats.js`: **unica fonte dei conteggi** (apparati, feature, km) letta dal pannello statistiche del sito. Per riallineare i blocchi auto-generati dei Markdown (contrassegnati da `<!-- AUTO-STATS:BEGIN ... -->`) e `wiki/articles_data.js`:
+
+```bash
+# 3. Rigenera i blocchi statistici di README, README_EN e wiki/collesalvetti.md e il bundle della wiki
+python3 scripts/sync_docs.py
+
+# 4. Verifica la coerenza (ricalcolo indipendente dal KML, somme, Markdown, CSV/XLSX)
+python3 -m unittest tests.test_stats -v
+```
+
+Definizione di *apparato* e metodologia: `docs/APPARATI_RECOUNT.md`. Ordine completo: `kml_to_geojson.py` → `export_sheets.py` → `sync_docs.py` → test.
 
 ---
 

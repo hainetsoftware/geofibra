@@ -156,7 +156,7 @@
                         <span class="stat-value text-cyber-neon" id="stat-arlo">--</span>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-label">CENTRALI XGS-PON</span>
+                        <span class="stat-label">CENTRALI TLC</span>
                         <span class="stat-value text-emerald-400" id="stat-centrali">--</span>
                     </div>
                     <div class="stat-card">
@@ -167,7 +167,7 @@
 
                 <!-- Frazioni Distribution -->
                 <div>
-                    <h3 class="text-xs uppercase text-slate-400 font-bold mb-2">Distribuzione per Frazione</h3>
+                    <h3 class="text-xs uppercase text-slate-400 font-bold mb-2">Apparati per Frazione</h3>
                     <div id="frazioni-stats" class="space-y-2">
                         <!-- Injected via JS -->
                     </div>
@@ -269,6 +269,7 @@
 
                 loadScript('https://unpkg.com/leaflet@1.9.4/dist/leaflet.js')
                     .then(() => loadScript('js/data.js'))
+                    .then(() => loadScript('js/stats.js'))
                     .then(() => loadScript('js/cantieri_tracker.js'))
                     .then(() => loadScript('js/map.js'))
                     .then(() => loadScript('js/telemetry.js'))
