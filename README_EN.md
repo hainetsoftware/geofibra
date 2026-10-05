@@ -200,8 +200,9 @@ Step 1 also runs `scripts/compute_stats.py`, which writes `data/stats.json` and 
 # 3. Regenerate the statistics blocks of README, README_EN and wiki/collesalvetti.md and the wiki bundle
 python3 scripts/sync_docs.py
 
-# 4. Check consistency (independent recount from the KML, sums, Markdown, CSV/XLSX)
+# 4. Check consistency (statistics and Excel export integrity tests)
 python3 -m unittest tests.test_stats -v
+python3 -m unittest tests.test_xlsx_export -v
 ```
 
 Definition of *equipment* and methodology: `docs/APPARATI_RECOUNT.md`. Full order: `kml_to_geojson.py` → `export_sheets.py` → `sync_docs.py` → tests.
