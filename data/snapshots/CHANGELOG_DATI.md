@@ -8,6 +8,7 @@ Registro delle versioni dei dati cartografici della rete FTTH e cantieri nel Com
 - **File sorgente:** `data/snapshots/rilievo_snapshot3.kml`
 - **Feature totali censite:** **63** (34 punti, 25 linee, 4 poligoni)
 - **Sviluppo lineare tracciato:** **21,716 km**
+- **Apparati censiti (Snapshot 3):** **32** nel territorio comunale (23 ARL, 2 ARLO, 1 centrale comunale, 6 centrali di frazione) + 1 esterno (Centrale Feeder, Livorno). Il 34° punto (`Coppie di corrugati scoperti`) è un punto di infrastruttura, non un apparato. Conteggi in `data/stats.json`, metodologia in `docs/APPARATI_RECOUNT.md`.
 - **Novità principali:**
   - **Aggiornamento Cantiere 1 (Collesalvetti Centro):** suddivisione in 2 tratte verificate come eseguite (`Cantiere 1 ESEGUITO`, sopralluoghi 29/09 e 03/10 con riscontro di minitrincee, corrugati e pozzetti FiberCop) e 5 tratte (`Cantiere 1 NON ESEGUITO`, solo segni spray blu su asfalto).
   - **Aggiornamento Cantiere 2 (Stagno Centro):** slittamento finestra lavori al 05/10 - 17/10 (rispetto all'originario 21/09 - 16/10 previsto dall'Ord. 102/2026).

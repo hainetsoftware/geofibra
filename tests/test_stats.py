@@ -220,12 +220,11 @@ class TestDocuments(unittest.TestCase):
     def test_no_stale_equipment_counts_in_markdown(self):
         """Qualsiasi 'N apparati' nei documenti correnti deve valere il totale comunale (o con esterni)."""
         allowed = {str(self.e["total_municipal"]), str(self.e["total_all"])}
-        for rel in ("README.md", "README_EN.md", "wiki/collesalvetti.md", "docs/HANDOFF_REDESIGN.md",
-                    "docs/APPARATI_RECOUNT.md"):
+        for rel in ("README.md", "README_EN.md", "wiki/collesalvetti.md", "docs/HANDOFF_REDESIGN.md"):  # APPARATI_RECOUNT.md cita di proposito i vecchi valori
             for n, line in enumerate(read(rel).splitlines(), 1):
                 if re.search(r"snapshot [12]\b|prima|before|storic|historical", line, re.I):
                     continue
-                for v in re.findall(r"\b(\d+) (?:apparati|equipment items)", line):
+                for v in re.findall(r"(?<![+\d])\b(\d+) (?:apparati|equipment items)", line):
                     self.assertIn(v, allowed, f"{rel}:{n}: '{v} apparati' non coincide con i dati")
 
     def test_historic_snapshot_figures_match_kml(self):
@@ -243,6 +242,10 @@ class TestDocuments(unittest.TestCase):
                                ("Elementi Lineari", "lines"), ("Elementi Areali", "polygons")):
                 row = re.search(rf"\| \*\*{label}[^|]*\| ([^|]+) \| ([^|]+) \|", w)
                 self.assertEqual(int(row.group(col + 1).strip()), k[key], f"wiki Snapshot {n} {label}")
+            row = re.search(r"\| \*\*di cui Apparati[^|]*\| ([^|]+) \| ([^|]+) \| \*\*(\d+)\*\*", w)
+            self.assertEqual(int(row.group(col + 1).strip()),
+                             sum(k["arl"].values()) + sum(k["arlo"].values()) + sum(k["centrali"].values()),
+                             f"wiki Snapshot {n} apparati")
 
 
 class TestExports(unittest.TestCase):

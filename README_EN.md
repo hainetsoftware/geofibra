@@ -65,21 +65,40 @@ All metrics are deterministically computed from the official geospatial survey *
 |---|:---:|---|
 | **Total Geospatial Features** | **63** | 34 point elements, 25 line traces, 4 area polygons |
 | **Total Mapped Route Length** | **21.716 km** | Cumulative length of microtrenches and backbone lines |
-| **Fiber Optical Cabinets (ARLO)** | **21** | FiberCop passive optical cross-connects on concrete bases |
-| **Copper Cabinets (ARL)** | **8** | Traditional copper street cabinets (many with FTTC ONU) |
-| **Telecom Central Offices** | **3** | Collesalvetti (Center), Vicarello, and Feeder (Livorno border) |
-| **Main Vaults & Manholes** | **2** | Major underground branch junctions |
+
+<!-- AUTO-STATS:BEGIN equipment -->
+Equipment = a surveyed network point (ARL/ARLO cabinet or central office). Lines, polygons and infrastructure points are not equipment. Of the 34 points in the snapshot, 33 are equipment (32 inside the municipality + 1 outside it) and 1 is an infrastructure point that is not counted.
+
+| Equipment type | GIS category | Quantity | Notes |
+|---|---|:---:|---|
+| **Copper cabinet (ARL)** | `arl` | **23** | |
+| **Optical cabinet (ARLO)** | `arlo` | **2** | |
+| *Total cabinets (ARL + ARLO)* | | *25* | |
+| **Municipal central office** | `centrale_comunale` | **1** | |
+| **Fraction central offices** | `centrale_frazione` | **6** | |
+| **Total equipment within the municipality** | | **32** | |
+| Equipment outside the municipality (not included in the total): Centrale Feeder (Livorno Nord) | `centrale_feeder` | 1 | outside the municipal territory |
+| Non-equipment points (excluded from the count): Coppie di corrugati scoperti | `infrastruttura` | 1 | infrastructure point, not equipment |
+<!-- AUTO-STATS:END equipment -->
 
 ### Route Length and Apparatus by Fraction
 
-| Fraction | Routes (km) | Share (%) | Fiber ARLO | Copper ARL | Central Offices |
-|---|:---:|:---:|:---:|:---:|:---:|
-| **Stagno** | **11.232 km** | 51.7% | 13 | 4 | 0 |
-| **Collesalvetti (Center)** | **6.444 km** | 29.7% | 6 | 3 | 1 |
-| **Vicarello** | **3.122 km** | 14.4% | 2 | 1 | 1 |
-| **Guasticce** | **0.399 km** | 1.8% | 0 | 0 | 0 |
-| **Other / Inter-municipal** | **0.519 km** | 2.4% | 0 | 0 | 1 |
-| **Total Territory** | **21.716 km** | **100.0%** | **21** | **8** | **3** |
+<!-- AUTO-STATS:BEGIN frazioni -->
+| Fraction | Equipment | ARLO | ARL | Central offices | Routes (km) | Share % km |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Stagno** | 8 | 2 | 5 | 1 | 8.431 km | 38.8% |
+| **Collesalvetti** | 8 | 0 | 7 | 1 | 3.290 km | 15.2% |
+| **Vicarello** | 9 | 0 | 8 | 1 | 0.000 km | 0.0% |
+| **Guasticce** | 4 | 0 | 3 | 1 | 0.000 km | 0.0% |
+| **Nugola** | 1 | 0 | 0 | 1 | 0.000 km | 0.0% |
+| **Parrana San Martino** | 1 | 0 | 0 | 1 | 0.000 km | 0.0% |
+| **Parrana San Giusto** | 1 | 0 | 0 | 1 | 0.000 km | 0.0% |
+| **Other / unassigned** | 0 | 0 | 0 | 0 | 9.995 km | 46.0% |
+| **Total** | 32 | 2 | 23 | 7 | 21.716 km | 100.0% |
+
+*Equipment is counted per fraction inside the municipality only; route km also include the INFRATEL BUL backbone and routes with no fraction (`Altro`).*
+<!-- AUTO-STATS:END frazioni -->
+
 
 ---
 
@@ -174,6 +193,18 @@ python scripts/kml_to_geojson.py
 # 2. Regenerate CSV files and Excel workbook (data/rete_ftth_collesalvetti.*)
 python scripts/export_sheets.py
 ```
+
+Step 1 also runs `scripts/compute_stats.py`, which writes `data/stats.json` and `js/stats.js`: the **single source of counts** (equipment, features, km) read by the site statistics panel. To realign the auto-generated Markdown blocks (marked with `<!-- AUTO-STATS:BEGIN ... -->`) and `wiki/articles_data.js`:
+
+```bash
+# 3. Regenerate the statistics blocks of README, README_EN and wiki/collesalvetti.md and the wiki bundle
+python3 scripts/sync_docs.py
+
+# 4. Check consistency (independent recount from the KML, sums, Markdown, CSV/XLSX)
+python3 -m unittest tests.test_stats -v
+```
+
+Definition of *equipment* and methodology: `docs/APPARATI_RECOUNT.md`. Full order: `kml_to_geojson.py` → `export_sheets.py` → `sync_docs.py` → tests.
 
 ---
 

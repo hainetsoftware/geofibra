@@ -38,6 +38,7 @@ Attualmente il progetto impiega JavaScript vanilla modulare senza router ad hash
 │   └── snapshots/               # Storico versionato dei rilievi KML e CHANGELOG_DATI.md
 ├── js/
 │   ├── data.js                  # Assegna window.FTTH_NETWORK_DATA (sincrono con network_data.json)
+│   ├── stats.js                 # Assegna window.FTTH_STATS (specchio di data/stats.json, generato)
 │   ├── cantieri_tracker.js      # Calcolo orari feriali Europe/Rome e modale cantieri
 │   ├── map.js                   # Inizializzazione Leaflet, layer tiles, confini toscani, popup
 │   ├── telemetry.js             # Calcolo statistiche rete, filtri e ricerca apparati
@@ -49,7 +50,9 @@ Attualmente il progetto impiega JavaScript vanilla modulare senza router ad hash
 │   ├── articles_data.js         # Fallback offline dei markdown per esecuzione diretta
 │   └── *.md                     # I file Markdown delle 11 voci tecniche e divulgative
 └── scripts/
-    ├── kml_to_geojson.py        # Pipeline rigenerazione GeoJSON da KML
+    ├── kml_to_geojson.py        # Pipeline rigenerazione GeoJSON da KML (poi lancia compute_stats.py)
+    ├── compute_stats.py         # Conteggi apparati/feature/km -> data/stats.json, js/stats.js
+    ├── sync_docs.py             # Blocchi statistici dei Markdown e bundle wiki da stats.json
     └── export_sheets.py         # Pipeline rigenerazione CSV e XLSX da GeoJSON
 ```
 
@@ -65,7 +68,7 @@ Il codice JavaScript esistente effettua query dirette su specifici ID del docume
 - `.active-layer`: Classe applicata dal JS al pulsante del layer correntemente selezionato.
 
 ### B. Telemetria e Statistiche di Rete (`js/telemetry.js`)
-- `#stat-tot`: Contatore numerico totale apparati/elementi.
+- `#stat-tot`: Contatore numerico totale apparati comunali (da `window.FTTH_STATS`, non il numero di feature).
 - `#stat-km`: Lunghezza complessiva delle tratte (in chilometri).
 - `#stat-arl`: Conteggio armadi rame ARL.
 - `#stat-arlo`: Conteggio armadi ottici ARLO.
@@ -168,5 +171,5 @@ Durante il redesign estetico (passaggio a una grafica sobria e civica), chi inte
 ## 7. Cosa NON va Modificato o Rotto
 
 - **Non inventare ordinanze o date:** Cantiere 3 (Via Aiaccia) e Opera sulla Backbone non hanno atti reperiti; devono rimanere etichettati come *"da collegare a un'ordinanza"*.
-- **Non alterare i numeri di Snapshot 3:** I dati ufficiali della rete sono 63 feature, 21,716 km, 34 apparati. Qualsiasi modifica deve passare dalla rigenerazione deterministica tramite `scripts/kml_to_geojson.py`.
+- **Non alterare i numeri di Snapshot 3:** I dati ufficiali della rete sono 63 feature, 21,716 km, 32 apparati comunali (+1 esterno; 34 è il numero dei *punti*, non degli apparati). I conteggi sono in `data/stats.json` (generato da `scripts/compute_stats.py`). Qualsiasi modifica deve passare dalla rigenerazione deterministica tramite `scripts/kml_to_geojson.py`.
 - **Non rimuovere la doppia numerazione delle ordinanze:** Polizia Municipale e Registro Generale del Comune sono due numerazioni distinte e necessarie per la trasparenza civica.

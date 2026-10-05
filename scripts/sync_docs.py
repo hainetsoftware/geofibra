@@ -46,7 +46,7 @@ T = {
         "ext_note": "fuori dal territorio comunale",
         "excl": "Punti non-apparato (esclusi dal conteggio)",
         "excl_note": "punto di infrastruttura, non apparato",
-        "intro": "Apparati = punti di rete censiti (armadi ARL/ARLO e centrali) sul suolo comunale. Linee, poligoni e punti di infrastruttura non sono apparati.",
+        "intro": "Apparato = punto di rete censito (armadio ARL/ARLO o centrale). Linee, poligoni e punti di infrastruttura non sono apparati. Dei {points} punti dello Snapshot, {total_all} sono apparati ({total_municipal} nel territorio comunale + {total_external} esterno al Comune) e {n_excl} è un punto di infrastruttura non conteggiato.",
         "fr_head": "| Frazione | Apparati | ARLO | ARL | Centrali | Tratte (km) | Quota % km |",
         "fr_other": "Altro / non attribuito",
         "fr_tot": "Totale",
@@ -65,7 +65,7 @@ T = {
         "ext_note": "outside the municipal territory",
         "excl": "Non-equipment points (excluded from the count)",
         "excl_note": "infrastructure point, not equipment",
-        "intro": "Equipment = surveyed network points (ARL/ARLO cabinets and central offices) inside the municipality. Lines, polygons and infrastructure points are not equipment.",
+        "intro": "Equipment = a surveyed network point (ARL/ARLO cabinet or central office). Lines, polygons and infrastructure points are not equipment. Of the {points} points in the snapshot, {total_all} are equipment ({total_municipal} inside the municipality + {total_external} outside it) and {n_excl} is an infrastructure point that is not counted.",
         "fr_head": "| Fraction | Equipment | ARLO | ARL | Central offices | Routes (km) | Share % km |",
         "fr_other": "Other / unassigned",
         "fr_tot": "Total",
@@ -83,7 +83,10 @@ def render_equipment(stats, lang):
     eq = stats["equipment"]
     c = eq["by_category_municipal"]
     rows = [
-        t["intro"], "", t["eq_head"], "|---|---|:---:|---|",
+        t["intro"].format(points=stats["features"]["points"], total_all=eq["total_all"],
+                          total_municipal=eq["total_municipal"], total_external=eq["total_external"],
+                          n_excl=len(eq["excluded_points"])),
+        "", t["eq_head"], "|---|---|:---:|---|",
         f"| **{t['arl']}** | `arl` | **{c.get('arl', 0)}** | |",
         f"| **{t['arlo']}** | `arlo` | **{c.get('arlo', 0)}** | |",
         f"| *{t['cabs']}* | | *{eq['cabinets_municipal']}* | |",
