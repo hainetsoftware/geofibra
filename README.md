@@ -201,8 +201,9 @@ Il passo 1 esegue anche `scripts/compute_stats.py`, che scrive `data/stats.json`
 # 3. Rigenera i blocchi statistici di README, README_EN e wiki/collesalvetti.md e il bundle della wiki
 python3 scripts/sync_docs.py
 
-# 4. Verifica la coerenza (ricalcolo indipendente dal KML, somme, Markdown, CSV/XLSX)
+# 4. Verifica la coerenza (statistiche e test integrità export Excel)
 python3 -m unittest tests.test_stats -v
+python3 -m unittest tests.test_xlsx_export -v
 ```
 
 Definizione di *apparato* e metodologia: `docs/APPARATI_RECOUNT.md`. Ordine completo: `kml_to_geojson.py` → `export_sheets.py` → `sync_docs.py` → test.

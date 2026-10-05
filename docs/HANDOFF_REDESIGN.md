@@ -172,4 +172,5 @@ Durante il redesign estetico (passaggio a una grafica sobria e civica), chi inte
 
 - **Non inventare ordinanze o date:** Cantiere 3 (Via Aiaccia) e Opera sulla Backbone non hanno atti reperiti; devono rimanere etichettati come *"da collegare a un'ordinanza"*.
 - **Non alterare i numeri di Snapshot 3:** I dati ufficiali della rete sono 63 feature, 21,716 km, 32 apparati comunali (+1 esterno; 34 è il numero dei *punti*, non degli apparati). I conteggi sono in `data/stats.json` (generato da `scripts/compute_stats.py`). Qualsiasi modifica deve passare dalla rigenerazione deterministica tramite `scripts/kml_to_geojson.py`.
+- **Non rompere il pulsante di download Excel:** In `index.html` il pulsante di download ha selettore `a[href="data/rete_ftth_collesalvetti.xlsx"][download]` (classe Tailwind verde smeraldo nella navbar in alto a destra) e punta al percorso relativo `data/rete_ftth_collesalvetti.xlsx`.
 - **Non rimuovere la doppia numerazione delle ordinanze:** Polizia Municipale e Registro Generale del Comune sono due numerazioni distinte e necessarie per la trasparenza civica.
