@@ -65,9 +65,9 @@ Tutti i conteggi sono calcolati deterministicamente sul rilievo geospaziale **Sn
 
 | Categoria Elemento | Quantità | Dettaglio / Note |
 |---|:---:|---|
-| **Feature Geospaziali Totali** | **71** | 40 punti, 27 linee, 4 poligoni di perimetro |
+| **Feature Geospaziali Totali** | **68** | 37 punti, 27 linee, 4 poligoni di perimetro |
 | **Estensione Tracciati Rete** | **21,780 km** | Somma metrica di tutte le tratte stradali e dorsali (+64 m da rotatoria e nuove tratte) |
-| **Armadi Ottici ARLO (FiberCop)** | **7** | 1 nel capoluogo (`C [] ARLO`, futuro ARLO 01) + 6 a Stagno (parco nodi secondari) |
+| **Armadi Ottici ARLO (FiberCop)** | **4** | 1 nel capoluogo (`C [] ARLO`, futuro ARLO 01) + 3 a Stagno (`S [27]`, `S [28]`, `S []` su Via Romita) |
 | **Armadi Rame ARL (TIM)** | **24** | 7 a Collesalvetti, 8 a Vicarello, 6 a Stagno, 3 a Guasticce |
 | **Centrali di Commutazione TLC** | **8** | 1 comunale (Collesalvetti), 6 di frazione + 1 Feeder (Livorno) |
 | **Tasso Avanzamento Comunale** | **62,8%** | Stagno all'86,4%, Collesalvetti al 41,5% |
@@ -76,12 +76,12 @@ Tutti i conteggi sono calcolati deterministicamente sul rilievo geospaziale **Sn
 
 | Frazione | Tratte (km) | Quota % | ARLO Fibra | ARL Rame | Centrali TLC | Avanzamento |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Stagno** | **11,525 km** | 52,9% | 6 | 6 | 1 | **86,4%** |
+| **Stagno** | **11,525 km** | 52,9% | 3 | 6 | 1 | **86,4%** |
 | **Collesalvetti (Capoluogo)** | **6,516 km** | 29,9% | 1 | 7 | 1 | **41,5%** |
 | **Vicarello** | **3,122 km** | 14,3% | 0 | 8 | 1 | **35,0%** |
 | **Guasticce** | **0,399 km** | 1,8% | 0 | 3 | 1 | **20,0%** |
 | **Altro / Intercomunale** | **0,519 km** | 2,4% | 0 | 0 | 1 | - |
-| **Totale Territoriale** | **21,780 km** | **100,0%** | **7** | **24** | **8** | **62,8%** |
+| **Totale Territoriale** | **21,780 km** | **100,0%** | **4** | **24** | **8** | **62,8%** |
 
 ---
 
@@ -92,7 +92,7 @@ Questo osservatorio adotta come unica fonte di verità documentale `data/ordinan
 1. **Cantiere 2 - Stagno (Nuova Espansione FTTH):**
    - **Atto:** Ordinanza P.M. n. 95/2026 (**Reg. Gen. 102/104/2026**)
    - **Periodo ufficiale:** 21/09/2026 – 17/10/2026 (feriali 08:00 – 18:00)
-   - **Rilievo di campo:** Finestra effettiva 05/10 - 17/10. Stato *In completamento* (posa condotte completata, 6 pozzetti in chiusura, tratta via Romita/XXV Aprile verificata come completata per 292,9 m). Nuovo ARLO posato adiacente a S [04] ARL.
+   - **Rilievo di campo:** Finestra effettiva 05/10 - 17/10. Stato *In completamento* (posa condotte completata, 6 pozzetti in chiusura, tratta via Romita/XXV Aprile verificata come completata per 292,9 m). Nuovo ARLO posato adiacente a S [04] ARL (privo di etichetta numerica, 3° ARLO censito a Stagno).
    - **Vie:** Via Romita sud, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio, Via Don Verità, Via 8 Marzo.
 2. **Cantiere 3 - Stagno (Via Aiaccia / Via Umbria):**
    - **Atto:** Ordinanza P.M. n. 105/2026 (**Reg. Gen. 105**) + Concessione Suolo n. 77/2026 (60 mq)

@@ -6,7 +6,7 @@ Registro delle versioni dei dati cartografici della rete FTTH e cantieri nel Com
 
 ## Snapshot 4 — 11 Ottobre 2026 (Stato Corrente)
 - **File sorgente:** `data/snapshots/rilievo_snapshot4.kml` (e `FTTH Collesalvetti_snapshot4.kml`)
-- **Feature totali censite:** **71** (40 punti, 27 linee, 4 poligoni)
+- **Feature totali censite:** **68** (37 punti, 27 linee, 4 poligoni)
 - **Sviluppo lineare tracciato:** **21,780 km** (+64 m netti da anello raccordo rotatoria e nuove tratte)
 - **Novità principali:**
   - **Collesalvetti Capoluogo - Primo ARLO e Hub Rotatoria:**
@@ -16,8 +16,9 @@ Registro delle versioni dei dati cartografici della rete FTTH e cantieri nel Com
     - **Tratta Eseguita Sud-Est (Cantiere 1):** Convalidate come completate le tratte su Via del Valico a Pisa, Via Peppino Impastato, Via di Cerretello e l'anello di raccordo rotatoria (`Cantiere 1 AGGIUNTO`, 71,8 m). Tipologia di posa: minitrincea sigillata (microtubi *Fender 4x10/14*) + riuso cavidotti storici TIM.
     - **Tratta Non Eseguita Nord-Ovest (Via Nenni):** Mantenuto il layer non eseguito (marcature spray blu a terra). Nota aggiornata: *Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni*.
   - **Stagno - Parco ARLO e Chiusura Cantiere 2:**
-    - Censimento complessivo degli armadi ottici di Stagno portato a **6 nodi ARLO mappati** a copertura dell'intero reticolo secondario della frazione (in affiancamento alla totalità dei 6 armadi rame S [02], S [03], S [04], S [05], S [06], S [07]).
-    - Confermato e validato l'ARLO posato in affiancamento al rame `S [04] ARL` (`[10.353902, 43.589311]`) su Via Romita / angolo Via XXV Aprile (6° ARLO individuato nell'ultimo walk-in).
+    - Censimento complessivo degli armadi ottici di Stagno attestato a **3 nodi ARLO mappati** (`S [27]`, `S [28]` e il nuovo `S [] ARLO` privo di etichetta numerica posato in affiancamento al rame `S [04] ARL` all'angolo Via Romita / Via XXV Aprile).
+    - Distinzione chiarita tra i **6 armadi rame storici ARL** (S [02]...S [07]) e i **3 armadi ottici FTTH ARLO** posati finora nella frazione.
+    - Confermato e validato l'ARLO privo di etichetta posato in affiancamento al rame `S [04] ARL` (`[10.353902, 43.589311]`) su Via Romita / angolo Via XXV Aprile.
     - Stato armadi Stagno: `Infrastrutturati / In fase di cablaggio e predisposizione secondaria`.
     - **Cantiere 2 (Ord. 104/2026, 05/10 - 17/10):** Stato `In completamento (Posa condotte completata, 6 pozzetti in fase di getto/chiusura finale)`. Rilevata e convalidata tratta completata su Via Romita sud e Via XXV Aprile (`Cantiere 2 ESEGUITO`, 292,9 m).
   - **Stagno - Cantiere 3 Autorizzato (Ord. 105/2026 + Concessione Suolo 77/2026):**
@@ -27,7 +28,7 @@ Registro delle versioni dei dati cartografici della rete FTTH e cantieri nel Com
     - Nota cartografica: Innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale SP555 autorizzata a luglio 2026.
 - **Avanzamento Complessivo:**
   - **Collesalvetti Centro:** incremento al **41,5%** di avanzamento infrastrutturale (grazie a primo ARLO, hub rotatoria e tratte Sud-Est).
-  - **Stagno:** incremento all'**86,4%** di avanzamento (6 nodi ARLO censiti, chiusura imminente Cantiere 2 e Cantiere 3 programmato).
+  - **Stagno:** consolidamento all'**86,4%** di avanzamento (3 nodi ARLO censiti su 6 ARL rame, chiusura imminente Cantiere 2 e Cantiere 3 programmato).
   - **Comune di Collesalvetti (Globale):** avanzamento complessivo attestato al **62,8%** (in netta crescita rispetto al 52,4% di inizio mese).
 
 ---

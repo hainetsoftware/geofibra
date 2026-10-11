@@ -4,7 +4,7 @@ window.FTTH_NETWORK_DATA = {
   "metadata": {
     "title": "Rete FTTH & Tracker Cantieri - Comune di Collesalvetti",
     "author": "Mappatura Originale Cittadina integrata con Albo Pretorio",
-    "total_features": 71,
+    "total_features": 68,
     "generated_at": "2026-10-11",
     "source_snapshot": "Snapshot 4",
     "source_kml": "data/snapshots/rilievo_snapshot4.kml",
@@ -996,12 +996,12 @@ window.FTTH_NETWORK_DATA = {
       },
       "properties": {
         "id": "01D91831AC4261623108",
-        "name": "S [] ARLO (Futuro ARLO 04 - 6° nodo Stagno)",
+        "name": "S [] ARLO (Senza etichetta - Affiancato ad ARL 04)",
         "category": "arlo",
         "frazione": "Stagno",
         "geom_type": "Point",
-        "description": "Armadio ottico FiberCop posato in affiancamento al rame S [04] ARL ([10.353902, 43.589311]) su Via Romita / angolo Via XXV Aprile. 6° ARLO individuato nell'ultimo walk-in dell'11/10/2026. In zona 6 pozzetti in fase di getto/chiusura finale nell'area del Cantiere 2. Stato: Infrastrutturati / In fase di cablaggio e predisposizione secondaria.",
-        "raw_description": "<div>Armadio ottico FiberCop posato in affiancamento al rame S [04] ARL su Via Romita / angolo Via XXV Aprile (futuro ARLO 04 - 6° nodo Stagno).<br>Stato: <b>Infrastrutturati / In fase di cablaggio e predisposizione secondaria</b>.<br>Rilievo walk-in 11/10/2026: cabinet posizionato, in zona presenti 6 pozzetti in fase di getto/chiusura finale lungo l'asse di Cantiere 2.</div>",
+        "description": "Armadio ottico FiberCop posato in affiancamento al rame S [04] ARL ([10.353902, 43.589311]) su Via Romita / angolo Via XXV Aprile (privo di etichetta numerica, futuro ARLO 04 - 3° ARLO censito a Stagno). Rilevato nel walk-in dell'11/10/2026. In zona 6 pozzetti in fase di getto/chiusura finale nell'area del Cantiere 2. Stato: Infrastrutturati / In fase di cablaggio e predisposizione secondaria.",
+        "raw_description": "<div>Armadio ottico FiberCop posato in affiancamento al rame S [04] ARL su Via Romita / angolo Via XXV Aprile (senza etichetta numerica, futuro ARLO 04 - 3° nodo ARLO di Stagno).<br>Stato: <b>Infrastrutturati / In fase di cablaggio e predisposizione secondaria</b>.<br>Rilievo walk-in 11/10/2026: cabinet posizionato, in zona presenti 6 pozzetti in fase di getto/chiusura finale lungo l'asse di Cantiere 2.</div>",
         "icon": "optical-cabinet",
         "color": "#00f0ff",
         "length_m": 0,
@@ -5000,108 +5000,6 @@ window.FTTH_NETWORK_DATA = {
         },
         "status": "completato",
         "status_label": "Completato (Posa condotte ultimata)",
-        "ordinanza": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)",
-        "operatore": "FiberCop",
-        "data_rilevamento": "2026-10-11"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "pm_68",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          10.35336,
-          43.590365,
-          12.5
-        ]
-      },
-      "properties": {
-        "id": "pm_68",
-        "name": "S [05] ARLO",
-        "category": "arlo",
-        "frazione": "Stagno",
-        "geom_type": "Point",
-        "description": "Armadio ottico FiberCop S [05] ARLO (Via De Gasperi / Via Romita nord, affiancato a S [05] ARL).\nStato: Infrastrutturati / In fase di cablaggio e predisposizione secondaria.",
-        "raw_description": "<div>Armadio ottico FiberCop S [05] ARLO (Via De Gasperi / Via Romita nord, affiancato a S [05] ARL).<br>Stato: <b>Infrastrutturati / In fase di cablaggio e predisposizione secondaria</b>.</div>",
-        "icon": "optical-cabinet",
-        "color": "#00f0ff",
-        "length_m": 0,
-        "length_km": 0.0,
-        "area_m2": 0,
-        "area_km2": 0.0,
-        "lookAt": null,
-        "cantiere": null,
-        "status": "infrastrutturato",
-        "status_label": "Infrastrutturati / In fase di cablaggio e predisposizione secondaria",
-        "ordinanza": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)",
-        "operatore": "FiberCop",
-        "data_rilevamento": "2026-10-11"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "pm_69",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          10.349825,
-          43.591025,
-          2.7
-        ]
-      },
-      "properties": {
-        "id": "pm_69",
-        "name": "S [06] ARLO",
-        "category": "arlo",
-        "frazione": "Stagno",
-        "geom_type": "Point",
-        "description": "Armadio ottico FiberCop S [06] ARLO (Via Machiavelli / Via 8 Marzo, affiancato a S [06] ARL).\nStato: Infrastrutturati / In fase di cablaggio e predisposizione secondaria.",
-        "raw_description": "<div>Armadio ottico FiberCop S [06] ARLO (Via Machiavelli / Via 8 Marzo, affiancato a S [06] ARL).<br>Stato: <b>Infrastrutturati / In fase di cablaggio e predisposizione secondaria</b>.</div>",
-        "icon": "optical-cabinet",
-        "color": "#00f0ff",
-        "length_m": 0,
-        "length_km": 0.0,
-        "area_m2": 0,
-        "area_km2": 0.0,
-        "lookAt": null,
-        "cantiere": null,
-        "status": "infrastrutturato",
-        "status_label": "Infrastrutturati / In fase di cablaggio e predisposizione secondaria",
-        "ordinanza": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)",
-        "operatore": "FiberCop",
-        "data_rilevamento": "2026-10-11"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "pm_70",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          10.349105,
-          43.58947,
-          2.7
-        ]
-      },
-      "properties": {
-        "id": "pm_70",
-        "name": "S [07] ARLO",
-        "category": "arlo",
-        "frazione": "Stagno",
-        "geom_type": "Point",
-        "description": "Armadio ottico FiberCop S [07] ARLO (Via Guerrazzi sud, affiancato a S [07] ARL).\nStato: Infrastrutturati / In fase di cablaggio e predisposizione secondaria.",
-        "raw_description": "<div>Armadio ottico FiberCop S [07] ARLO (Via Guerrazzi sud, affiancato a S [07] ARL).<br>Stato: <b>Infrastrutturati / In fase di cablaggio e predisposizione secondaria</b>.</div>",
-        "icon": "optical-cabinet",
-        "color": "#00f0ff",
-        "length_m": 0,
-        "length_km": 0.0,
-        "area_m2": 0,
-        "area_km2": 0.0,
-        "lookAt": null,
-        "cantiere": null,
-        "status": "infrastrutturato",
-        "status_label": "Infrastrutturati / In fase di cablaggio e predisposizione secondaria",
         "ordinanza": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)",
         "operatore": "FiberCop",
         "data_rilevamento": "2026-10-11"

@@ -1,13 +1,13 @@
 ---
 title: "La Rete FTTH nel Comune di Collesalvetti"
-summary: "Analisi tecnica e geospaziale della rete in fibra ottica nel Comune di Collesalvetti (LI): dati quantitativi certificati da Snapshot 4 (71 feature, 21,78 km), distribuzione per frazione, censimento apparati e registro delle ordinanze comunali aggiornato all'11 ottobre 2026."
+summary: "Analisi tecnica e geospaziale della rete in fibra ottica nel Comune di Collesalvetti (LI): dati quantitativi certificati da Snapshot 4 (68 feature, 21,78 km), distribuzione per frazione, censimento apparati e registro delle ordinanze comunali aggiornato all'11 ottobre 2026."
 updated: "2026-10-11"
 sources:
   - id: "snapshot4-kml"
     title: "Rilievo Geospaziale Indipendente: Snapshot 4 (11/10/2026)"
     url: "data/snapshots/rilievo_snapshot4.kml"
     type: "dati"
-    note: "Rilievo GIS di campo: 71 feature, 21,780 km di tracciato, 40 apparati, 4 poligoni"
+    note: "Rilievo GIS di campo: 68 feature, 21,780 km di tracciato, 37 apparati, 4 poligoni"
   - id: "ordinanze-collesalvetti"
     title: "Albo Pretorio del Comune di Collesalvetti: Ordinanze di Polizia Municipale n. 75, 95, 102/104 e 105/2026"
     url: "data/ordinanze.json"
@@ -30,12 +30,12 @@ Questa pagina offre un quadro oggettivo, verificabile e documentato dello stato 
 
 ## 1. Quadro Quantitativo Generale (Snapshot 4 - 11/10/2026)
 
-Rispetto ai precedenti rilievi, lo **Snapshot 4** registra l'installazione del primo cabinet ottico nel capoluogo, il consolidamento del parco ARLO di Stagno e la formalizzazione del Cantiere 3:
+Rispetto ai precedenti rilievi, lo **Snapshot 4** registra l'installazione del primo cabinet ottico nel capoluogo, il censimento del terzo ARLO di Stagno e la formalizzazione del Cantiere 3:
 
 | Parametro Rilevato | Snapshot 2 (Settembre 2026) | Snapshot 3 (04/10/2026) | **Snapshot 4 Corrente (11/10/2026)** | Variazione S3 $\rightarrow$ S4 |
 |---|:---:|:---:|:---:|:---:|
-| **Totale Feature Geospaziali** | 49 | 63 | **71** | +8 feature (+12,7%) |
-| **Elementi Puntuali (Apparati)** | 31 | 34 | **40** | +6 apparati (+17,6%) |
+| **Totale Feature Geospaziali** | 49 | 63 | **68** | +5 feature (+7,9%) |
+| **Elementi Puntuali (Apparati)** | 31 | 34 | **37** | +3 apparati (+8,8%) |
 | **Elementi Lineari (Tratte e Scavi)** | 14 | 25 | **27** | +2 tratte (+8,0%) |
 | **Elementi Areali (Poligoni)** | 4 | 4 | **4** | Invariati (perimetri rilievo) |
 | **Chilometri Totali Tracciati** | 13,503 km | 21,716 km | **21,780 km** | **+0,064 km netti** |
@@ -45,15 +45,15 @@ Rispetto ai precedenti rilievi, lo **Snapshot 4** registra l'installazione del p
 
 ## 2. Censimento Apparati sul Territorio
 
-I 40 elementi puntuali censiti sul suolo comunale e di confine comprendono:
+I 37 elementi puntuali censiti sul suolo comunale e di confine comprendono:
 
 | Tipologia Apparato | Categoria GIS | Quantità Rilevata | Operatore / Rete | Note di Rilievo |
 |---|---|:---:|---|---|
-| **Armadio Ripartilinea Ottico** | `arlo` | **7** | FiberCop / Wholesale | 1 nel capoluogo (`C [] ARLO`, rotatoria Via Roma/Via Nenni) + 6 a Stagno (parco nodi secondari) |
+| **Armadio Ripartilinea Ottico** | `arlo` | **4** | FiberCop / Wholesale | 1 nel capoluogo (`C [] ARLO`, rotatoria Via Roma/Via Nenni) + 3 a Stagno (`S [27]`, `S [28]`, `S []` su Via Romita) |
 | **Armadio Ripartilinea Rame** | `arl` | **24** | TIM (Rete Storica) | 7 a Collesalvetti, 8 a Vicarello, 6 a Stagno, 3 a Guasticce |
 | **Centrale di Commutazione** | `centrale` | **8** | Rete Fissa Primaria | 1 comunale (Collesalvetti), 6 di frazione (Vicarello, Stagno, Guasticce, Nugola, Parrana S.M., Parrana S.G.) + 1 Feeder (Livorno) |
 | **Pozzetto di Derivazione** | `infrastruttura` | **1** | Rete Sotterranea | Corrugati scoperti e camerette di derivazione dorsale |
-| **Totale Apparati** | | **40** | | |
+| **Totale Apparati** | | **37** | | |
 
 ---
 
@@ -63,12 +63,12 @@ La suddivisione chilometrica e infrastrutturale evidenzia l'avanzamento su **Sta
 
 | Frazione | Lunghezza Tratte (km) | Quota % Chilometrica | ARLO Fibra | ARL Rame | Centrali TLC | Avanzamento Stimato | Tratte e Cantieri Principali |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|---|
-| **Stagno** | **11,525 km** | 52,9% | 6 | 6 | 1 | **86,4%** | Cantiere 2 in completamento, Cantiere 3 autorizzato (Ord. 105), Ripristini conclusi |
+| **Stagno** | **11,525 km** | 52,9% | 3 | 6 | 1 | **86,4%** | Cantiere 2 in completamento, Cantiere 3 autorizzato (Ord. 105), Ripristini conclusi |
 | **Collesalvetti (Centro)** | **6,516 km** | 29,9% | 1 | 7 | 1 | **41,5%** | Cantiere 1 (Ord. 95), 1° ARLO posato, hub rotatoria completato, Via Nenni in attesa proroga |
 | **Vicarello** | **3,122 km** | 14,3% | 0 | 8 | 1 | **35,0%** | Dorsale urbana e centrale di commutazione locale |
 | **Guasticce** | **0,399 km** | 1,8% | 0 | 3 | 1 | **20,0%** | Tratta dorsale primaria di collegamento |
 | **Altro / Intercomunale** | **0,519 km** | 2,4% | 0 | 0 | 1 | - | Opera sulla Backbone e Centrale Feeder esterna (Comune di Livorno) |
-| **Totale Territoriale** | **21,780 km** | **100,0%** | **7** | **24** | **8** | **62,8%** | |
+| **Totale Territoriale** | **21,780 km** | **100,0%** | **4** | **24** | **8** | **62,8%** | |
 
 ---
 
@@ -94,7 +94,7 @@ Per garantire la massima trasparenza, questo osservatorio cita sempre entrambi i
 - **Vie Coinvolte:** Via Romita sud, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio, Via Don Verità, Via 8 Marzo
 - **Lunghezza Tratta:** 1,48 km stimati
 - **Stato Lavori (Rilievo 11/10/2026):** **In completamento.** Posa delle condotte completata; 6 pozzetti di smistamento in fase di getto/chiusura finale lungo l'asse Via Romita / Via XXV Aprile. Tratta completata convalidata (`Cantiere 2 ESEGUITO`, 292,9 m).
-- **Nuovo ARLO:** Confermato l'ARLO posato in affiancamento a `S [04] ARL` (`[10.353902, 43.589311]`).
+- **Nuovo ARLO:** Confermato l'ARLO posato in affiancamento a `S [04] ARL` (`[10.353902, 43.589311]`, senza etichetta numerica, 3° ARLO censito a Stagno oltre a `S [27]` e `S [28]`).
 - **File Documentale:** [`ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf`](file:///c:/Users/blankdisk/Documents/GitHub/fiberpulse/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf)
 
 #### 2. Cantiere 3 - Stagno (Via Aiaccia / Via Umbria)

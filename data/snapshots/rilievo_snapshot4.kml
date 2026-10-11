@@ -1508,7 +1508,7 @@
 	<description>&lt;div&gt;Armadio ottico FiberCop S [28] ARLO.&lt;br&gt;Stato: &lt;b&gt;Infrastrutturati / In fase di cablaggio e predisposizione secondaria&lt;/b&gt;.&lt;/div&gt;</description></Placemark>
 	<Placemark id="01D91831AC4261623108">
 		<name>S [] ARLO</name>
-		<description>&lt;div&gt;Armadio ottico FiberCop posato in affiancamento al rame S [04] ARL su Via Romita / angolo Via XXV Aprile (futuro ARLO 04 - 6° nodo Stagno).&lt;br&gt;Stato: &lt;b&gt;Infrastrutturati / In fase di cablaggio e predisposizione secondaria&lt;/b&gt;.&lt;br&gt;Rilievo walk-in 11/10/2026: cabinet posizionato, in zona presenti 6 pozzetti in fase di getto/chiusura finale lungo l'asse di Cantiere 2.&lt;/div&gt;</description>
+		<description>&lt;div&gt;Armadio ottico FiberCop posato in affiancamento al rame S [04] ARL su Via Romita / angolo Via XXV Aprile (senza etichetta numerica, futuro ARLO 04 - 3° nodo ARLO di Stagno).&lt;br&gt;Stato: &lt;b&gt;Infrastrutturati / In fase di cablaggio e predisposizione secondaria&lt;/b&gt;.&lt;br&gt;Rilievo walk-in 11/10/2026: cabinet posizionato, in zona presenti 6 pozzetti in fase di getto/chiusura finale lungo l'asse di Cantiere 2.&lt;/div&gt;</description>
 		<LookAt>
 			<longitude>10.35407095856903</longitude>
 			<latitude>43.58930636412416</latitude>
@@ -2442,5 +2442,5 @@
 			</coordinates>
 		</LineString>
 	</Placemark>
-<Placemark><name>S [05] ARLO</name><description>&lt;div&gt;Armadio ottico FiberCop S [05] ARLO (Via De Gasperi / Via Romita nord, affiancato a S [05] ARL).&lt;br&gt;Stato: &lt;b&gt;Infrastrutturati / In fase di cablaggio e predisposizione secondaria&lt;/b&gt;.&lt;/div&gt;</description><Point><coordinates>10.353360,43.590365,12.5</coordinates></Point></Placemark><Placemark><name>S [06] ARLO</name><description>&lt;div&gt;Armadio ottico FiberCop S [06] ARLO (Via Machiavelli / Via 8 Marzo, affiancato a S [06] ARL).&lt;br&gt;Stato: &lt;b&gt;Infrastrutturati / In fase di cablaggio e predisposizione secondaria&lt;/b&gt;.&lt;/div&gt;</description><Point><coordinates>10.349825,43.591025,2.7</coordinates></Point></Placemark><Placemark><name>S [07] ARLO</name><description>&lt;div&gt;Armadio ottico FiberCop S [07] ARLO (Via Guerrazzi sud, affiancato a S [07] ARL).&lt;br&gt;Stato: &lt;b&gt;Infrastrutturati / In fase di cablaggio e predisposizione secondaria&lt;/b&gt;.&lt;/div&gt;</description><Point><coordinates>10.349105,43.589470,2.7</coordinates></Point></Placemark></Document>
+</Document>
 </kml>

@@ -273,7 +273,7 @@ def parse_kml(kml_path):
         if name == "C [] ARLO":
             name = "C [] ARLO (Futuro ARLO 01)"
         elif name == "S [] ARLO":
-            name = "S [] ARLO (Futuro ARLO 04 - 6° nodo Stagno)"
+            name = "S [] ARLO (Senza etichetta - Affiancato ad ARL 04)"
 
         # Metadata di tracciamento standardizzati (status, ordinanza, operatore, data)
         status_code = "attivo"
@@ -295,7 +295,7 @@ def parse_kml(kml_path):
                 status_label = "Infrastrutturati / In fase di cablaggio e predisposizione secondaria"
                 ordinanza_str = "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)"
                 if "S []" in name:
-                    clean_desc = "Armadio ottico FiberCop posato in affiancamento al rame S [04] ARL ([10.353902, 43.589311]) su Via Romita / angolo Via XXV Aprile. 6° ARLO individuato nell'ultimo walk-in dell'11/10/2026. In zona 6 pozzetti in fase di getto/chiusura finale nell'area del Cantiere 2. Stato: Infrastrutturati / In fase di cablaggio e predisposizione secondaria."
+                    clean_desc = "Armadio ottico FiberCop posato in affiancamento al rame S [04] ARL ([10.353902, 43.589311]) su Via Romita / angolo Via XXV Aprile (privo di etichetta numerica, futuro ARLO 04 - 3° ARLO censito a Stagno). Rilevato nel walk-in dell'11/10/2026. In zona 6 pozzetti in fase di getto/chiusura finale nell'area del Cantiere 2. Stato: Infrastrutturati / In fase di cablaggio e predisposizione secondaria."
                 elif not clean_desc:
                     clean_desc = f"Armadio ottico FiberCop {name} a Stagno. Stato: Infrastrutturati / In fase di cablaggio e predisposizione secondaria."
         elif category == "arl":

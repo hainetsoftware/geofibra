@@ -65,9 +65,9 @@ All metrics are deterministically computed from the official geospatial survey *
 
 | Category | Quantity | Details / Notes |
 |---|:---:|---|
-| **Total Geospatial Features** | **71** | 40 point elements, 27 line traces, 4 area polygons |
+| **Total Geospatial Features** | **68** | 37 point elements, 27 line traces, 4 area polygons |
 | **Total Mapped Route Length** | **21.780 km** | Cumulative length of microtrenches and backbone lines (+64 m net) |
-| **Fiber Optical Cabinets (ARLO)** | **7** | 1 in center (`C [] ARLO`, future ARLO 01) + 6 in Stagno |
+| **Fiber Optical Cabinets (ARLO)** | **4** | 1 in center (`C [] ARLO`, future ARLO 01) + 3 in Stagno (`S [27]`, `S [28]`, `S []` on Via Romita) |
 | **Copper Cabinets (ARL)** | **24** | 7 Collesalvetti, 8 Vicarello, 6 Stagno, 3 Guasticce |
 | **Telecom Central Offices** | **8** | 1 municipal (Collesalvetti), 6 fraction offices, 1 Feeder (Livorno) |
 | **Municipal FTTH Progress** | **62.8%** | Stagno at 86.4%, Collesalvetti Center at 41.5% |
@@ -76,12 +76,12 @@ All metrics are deterministically computed from the official geospatial survey *
 
 | Fraction | Routes (km) | Share (%) | Fiber ARLO | Copper ARL | Central Offices | Progress |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Stagno** | **11.525 km** | 52.9% | 6 | 6 | 1 | **86.4%** |
+| **Stagno** | **11.525 km** | 52.9% | 3 | 6 | 1 | **86.4%** |
 | **Collesalvetti (Center)** | **6.516 km** | 29.9% | 1 | 7 | 1 | **41.5%** |
 | **Vicarello** | **3.122 km** | 14.3% | 0 | 8 | 1 | **35.0%** |
 | **Guasticce** | **0.399 km** | 1.8% | 0 | 3 | 1 | **20.0%** |
 | **Other / Inter-municipal** | **0.519 km** | 2.4% | 0 | 0 | 1 | - |
-| **Total Territory** | **21.780 km** | **100.0%** | **7** | **24** | **8** | **62.8%** |
+| **Total Territory** | **21.780 km** | **100.0%** | **4** | **24** | **8** | **62.8%** |
 
 ---
 
@@ -92,7 +92,7 @@ Documented with `data/ordinanze.json` as the single source of truth, distinguish
 1. **Cantiere 2 - Stagno (FTTH Rollout):**
    - **Decree:** Ordinanza P.M. n. 95/2026 (**Reg. Gen. 102/104/2026**)
    - **Official Period:** 21/09/2026 – 17/10/2026 (weekdays 08:00 – 18:00)
-   - **Field Status:** 05/10 - 17/10 timeframe. Status: *Nearing completion* (pipe installation completed, 6 junction boxes in final casting, completed section on Via Romita / XXV Aprile validated for 292.9 m). New ARLO positioned next to S [04] ARL.
+   - **Field Status:** 05/10 - 17/10 timeframe. Status: *Nearing completion* (pipe installation completed, 6 junction boxes in final casting, completed section on Via Romita / XXV Aprile validated for 292.9 m). New ARLO positioned next to S [04] ARL (unlabeled, 3rd mapped ARLO in Stagno).
    - **Streets:** Via Romita sud, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio, Via Don Verità, Via 8 Marzo.
 2. **Cantiere 3 - Stagno (Via Aiaccia / Via Umbria):**
    - **Decree:** Ordinanza P.M. n. 105/2026 (**Reg. Gen. 105**) + Public Land Concession n. 77/2026 (60 sqm)
