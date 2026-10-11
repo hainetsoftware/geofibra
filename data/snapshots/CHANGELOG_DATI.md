@@ -4,7 +4,35 @@ Registro delle versioni dei dati cartografici della rete FTTH e cantieri nel Com
 
 ---
 
-## Snapshot 3 — 04 Ottobre 2026 (Stato Corrente)
+## Snapshot 4 — 11 Ottobre 2026 (Stato Corrente)
+- **File sorgente:** `data/snapshots/rilievo_snapshot4.kml` (e `FTTH Collesalvetti_snapshot4.kml`)
+- **Feature totali censite:** **71** (40 punti, 27 linee, 4 poligoni)
+- **Sviluppo lineare tracciato:** **21,780 km** (+64 m netti da anello raccordo rotatoria e nuove tratte)
+- **Novità principali:**
+  - **Collesalvetti Capoluogo - Primo ARLO e Hub Rotatoria:**
+    - Posato il **primo armadio ottico FiberCop del capoluogo** (`C [] ARLO`, futuro ARLO 01) alle coordinate `[10.475255, 43.593980]`, situato nell'aiuola/marciapiede della rotatoria tra Via Roma, Via Nenni e Via Piero Ciampi.
+    - Stato: `Installato (Opere civili completate - In attesa di soffiaggio fibra/PTE)`.
+    - Dettagli tecnici: Plinto gettato, cabinet montato, **4 pozzetti di smistamento FiberCop** posati a corona della rotatoria e raccordati ai cavidotti storici TIM.
+    - **Tratta Eseguita Sud-Est (Cantiere 1):** Convalidate come completate le tratte su Via del Valico a Pisa, Via Peppino Impastato, Via di Cerretello e l'anello di raccordo rotatoria (`Cantiere 1 AGGIUNTO`, 71,8 m). Tipologia di posa: minitrincea sigillata (microtubi *Fender 4x10/14*) + riuso cavidotti storici TIM.
+    - **Tratta Non Eseguita Nord-Ovest (Via Nenni):** Mantenuto il layer non eseguito (marcature spray blu a terra). Nota aggiornata: *Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni*.
+  - **Stagno - Parco ARLO e Chiusura Cantiere 2:**
+    - Censimento complessivo degli armadi ottici di Stagno portato a **6 nodi ARLO mappati** a copertura dell'intero reticolo secondario della frazione (in affiancamento alla totalità dei 6 armadi rame S [02], S [03], S [04], S [05], S [06], S [07]).
+    - Confermato e validato l'ARLO posato in affiancamento al rame `S [04] ARL` (`[10.353902, 43.589311]`) su Via Romita / angolo Via XXV Aprile (6° ARLO individuato nell'ultimo walk-in).
+    - Stato armadi Stagno: `Infrastrutturati / In fase di cablaggio e predisposizione secondaria`.
+    - **Cantiere 2 (Ord. 104/2026, 05/10 - 17/10):** Stato `In completamento (Posa condotte completata, 6 pozzetti in fase di getto/chiusura finale)`. Rilevata e convalidata tratta completata su Via Romita sud e Via XXV Aprile (`Cantiere 2 ESEGUITO`, 292,9 m).
+  - **Stagno - Cantiere 3 Autorizzato (Ord. 105/2026 + Concessione Suolo 77/2026):**
+    - Tratte lungo Via Aiaccia e Via Umbria (4 tratte lineari per 3,475 km).
+    - Finestra temporale autorizzata: `19/10/2026 - 23/10/2026` (5 giorni feriali, occupazione 60 mq).
+    - Stato: `Autorizzato / Avvio programmato`.
+    - Nota cartografica: Innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale SP555 autorizzata a luglio 2026.
+- **Avanzamento Complessivo:**
+  - **Collesalvetti Centro:** incremento al **41,5%** di avanzamento infrastrutturale (grazie a primo ARLO, hub rotatoria e tratte Sud-Est).
+  - **Stagno:** incremento all'**86,4%** di avanzamento (6 nodi ARLO censiti, chiusura imminente Cantiere 2 e Cantiere 3 programmato).
+  - **Comune di Collesalvetti (Globale):** avanzamento complessivo attestato al **62,8%** (in netta crescita rispetto al 52,4% di inizio mese).
+
+---
+
+## Snapshot 3 — 04 Ottobre 2026
 - **File sorgente:** `data/snapshots/rilievo_snapshot3.kml`
 - **Feature totali censite:** **63** (34 punti, 25 linee, 4 poligoni)
 - **Sviluppo lineare tracciato:** **21,716 km**

@@ -16,13 +16,17 @@ function updateTelemetry(features) {
     let centrali = 0;
     let cantieri = 0;
     let frazCounts = {};
+    let frazArlo = {};
 
     features.forEach(f => {
         let p = f.properties;
         km += (p.length_km || 0);
         
         if (p.category === 'arl') arl++;
-        if (p.category === 'arlo') arlo++;
+        if (p.category === 'arlo') {
+            arlo++;
+            if (p.frazione) frazArlo[p.frazione] = (frazArlo[p.frazione] || 0) + 1;
+        }
         if (p.category.includes('centrale')) centrali++;
         if (p.category.includes('cantiere')) cantieri++;
         
@@ -37,6 +41,8 @@ function updateTelemetry(features) {
     const elArlo = document.getElementById('stat-arlo');
     const elCentrali = document.getElementById('stat-centrali');
     const elCantieri = document.getElementById('stat-cantieri');
+    const elAvanzamento = document.getElementById('stat-avanzamento');
+    const elAvanzamentoBar = document.getElementById('stat-avanzamento-bar');
 
     if (elTot) elTot.innerText = tot;
     if (elKm) elKm.innerText = km.toFixed(2);
@@ -44,6 +50,11 @@ function updateTelemetry(features) {
     if (elArlo) elArlo.innerText = arlo;
     if (elCentrali) elCentrali.innerText = centrali;
     if (elCantieri) elCantieri.innerText = cantieri;
+
+    // Calcolo avanzamento complessivo del Comune di Collesalvetti (Snapshot 4 al 11/10/2026: 62.8%)
+    const pctComplessivo = 62.8;
+    if (elAvanzamento) elAvanzamento.innerText = `${pctComplessivo}%`;
+    if (elAvanzamentoBar) elAvanzamentoBar.style.width = `${pctComplessivo}%`;
 
     const navCont = document.getElementById('frazioni-nav');
     const statsCont = document.getElementById('frazioni-stats');
@@ -65,11 +76,13 @@ function updateTelemetry(features) {
         if (statsCont) {
             const maxF = Math.max(...Object.values(frazCounts));
             const pct = (frazCounts[fr] / maxF) * 100;
+            const arloCount = frazArlo[fr] || 0;
+            const arloBadge = arloCount > 0 ? `<span class="text-[10px] bg-cyan-500/20 text-cyan-300 px-1.5 py-0.2 rounded border border-cyan-500/40 ml-1.5">${arloCount} ARLO</span>` : '';
             
             statsCont.innerHTML += `
                 <div class="mb-2">
-                    <div class="flex justify-between text-xs mb-1">
-                        <span class="text-white">${fr}</span>
+                    <div class="flex justify-between items-center text-xs mb-1">
+                        <span class="text-white flex items-center">${fr} ${arloBadge}</span>
                         <span class="text-cyber-neon font-bold">${frazCounts[fr]} elem.</span>
                     </div>
                     <div class="w-full bg-black/40 rounded-full h-1.5">
@@ -84,11 +97,11 @@ function updateTelemetry(features) {
     
     const searchInput = document.getElementById('search-elements');
     if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
+        searchInput.oninput = (e) => {
             const term = e.target.value.toLowerCase();
             const filtered = features.filter(f => f.properties.name.toLowerCase().includes(term) || f.properties.category.includes(term) || (f.properties.frazione && f.properties.frazione.toLowerCase().includes(term)));
             renderList(filtered);
-        });
+        };
     }
 }
 
@@ -101,12 +114,24 @@ function renderList(features) {
         const p = f.properties;
         const item = document.createElement('div');
         item.className = "flex items-center justify-between p-2 hover:bg-white/10 rounded cursor-pointer transition-colors border-b border-white/5 last:border-0";
+        
+        let subBadge = '';
+        if (p.status === 'completato') subBadge = '<span class="text-[9px] bg-emerald-500/20 text-emerald-300 px-1 rounded">COMPLETATO</span>';
+        else if (p.status === 'in_completamento') subBadge = '<span class="text-[9px] bg-amber-500/20 text-amber-300 px-1 rounded">IN CHIUSURA</span>';
+        else if (p.status === 'autorizzato') subBadge = '<span class="text-[9px] bg-amber-500/20 text-amber-400 px-1 rounded">AUTORIZZATO</span>';
+        else if (p.status === 'in_attesa_proroga') subBadge = '<span class="text-[9px] bg-orange-500/20 text-orange-300 px-1 rounded">ATTESA PROROGA</span>';
+        else if (p.status === 'installato') subBadge = '<span class="text-[9px] bg-cyan-500/20 text-cyan-300 px-1 rounded">ARLO POSATO</span>';
+        else if (p.category === 'arlo') subBadge = '<span class="text-[9px] bg-cyan-500/20 text-cyan-300 px-1 rounded">ARLO</span>';
+
         item.innerHTML = `
             <div class="flex items-center gap-2 overflow-hidden">
                 <div class="w-2 h-2 rounded-full flex-shrink-0" style="background: ${p.color}; box-shadow: 0 0 5px ${p.color}"></div>
                 <div class="text-sm text-slate-200 truncate" title="${p.name}">${p.name}</div>
             </div>
-            <div class="text-xs text-slate-400 font-medium ml-2 flex-shrink-0">${p.frazione || ''}</div>
+            <div class="flex items-center gap-1.5 ml-2 flex-shrink-0">
+                ${subBadge}
+                <span class="text-xs text-slate-400 font-medium">${p.frazione || ''}</span>
+            </div>
         `;
         item.onclick = () => {
             if (f.geometry.type === 'Point') {
@@ -122,6 +147,13 @@ function renderList(features) {
                 let pts = f.geometry.type === 'LineString' ? f.geometry.coordinates : f.geometry.coordinates[0];
                 if(pts && pts.length > 0) {
                     window.flyToFrazione(pts[0][1], pts[0][0]);
+                    if (geojsonLayer) {
+                        geojsonLayer.eachLayer(layer => {
+                            if (layer.feature && layer.feature.id === f.id) {
+                                layer.openPopup();
+                            }
+                        });
+                    }
                 }
             }
         };

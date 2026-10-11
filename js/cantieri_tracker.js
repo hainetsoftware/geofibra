@@ -1,44 +1,80 @@
 // js/cantieri_tracker.js - Monitoraggio Cantieri e Ordinanze Albo Pretorio Comune di Collesalvetti
 // Fuso Orario di Riferimento: Europe/Rome
 
-// Dati ufficiali estratti da data/ordinanze.json (fonte unica di verita')
+// Dati ufficiali estratti da data/ordinanze.json (fonte unica di verita', aggiornati all'11/10/2026 Snapshot 4)
 const ORDINANZE_DATA_DEFAULT = [
   {
     "id": "cantiere-2-stagno",
-    "titolo": "Cantiere 2 - Stagno (Nuova Espansione FTTH)",
+    "titolo": "Cantiere 2 - Stagno (Nuova Espansione FTTH - Ord. 104/2026)",
     "frazione": "Stagno",
     "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
-    "oggetto": "Lavori di scavo stradale per posa infrastruttura rete FTTH FiberCop – Stagno, vie varie",
+    "oggetto": "Lavori di scavo stradale per posa infrastruttura rete FTTH FiberCop – Stagno, vie varie (comparto sud)",
     "atto_tipo": "Polizia Municipale",
     "atto_numero": "95",
-    "atto_registro_generale": "102",
-    "codice_atto_completo": "Ordinanza P.M. n. 95 del 10/09/2026 (Reg. Gen. 102)",
+    "atto_registro_generale": "104",
+    "codice_atto_completo": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)",
     "data_emissione": "2026-09-10",
     "autorizzazione_settore_tecnico": "Autorizzazione n. 17/2026 del 16/07/2026",
     "periodo_ordinanza": {
       "inizio": "2026-09-21T08:00:00+02:00",
-      "fine": "2026-10-16T18:00:00+02:00",
+      "fine": "2026-10-17T18:00:00+02:00",
       "fascia_oraria": "08:00 - 18:00",
       "giorni": "feriali"
     },
     "slittamento_osservato": {
-      "fonte_kml": "Snapshot 3 (04/10/2026) - campo name 'Cantiere 2 (05/10-17/10)' e description",
+      "fonte_kml": "Snapshot 4 (11/10/2026) - rilievo walk-in e layer Cantiere 2 ESEGUITO",
       "inizio_stimato": "2026-10-05T08:00:00+02:00",
       "fine_stimata": "2026-10-17T18:00:00+02:00",
-      "nota_campo": "Slittamento rilevato sul campo: avvio posticipato al 05/10/2026"
+      "nota_campo": "Finestra effettiva 05/10/2026 - 17/10/2026. Stato: In completamento (Posa condotte completata, 6 pozzetti in fase di getto/chiusura finale lungo l'asse Via Romita / Via XXV Aprile)."
     },
-    "lunghezza_stimata_km": 1.43,
+    "lunghezza_stimata_km": 1.48,
     "vie_interessate": [
-      { "via": "Via Otto Marzo", "prescrizione": "Divieto di sosta con rimozione e senso unico alternato con movieri o a vista" },
-      { "via": "Via Romita", "prescrizione": "Divieto di sosta e senso unico alternato con movieri (o mantenimento senso unico)" },
+      { "via": "Via Romita sud", "prescrizione": "Divieto di sosta e senso unico alternato con movieri; posa condotte completata" },
       { "via": "Via De Gasperi", "prescrizione": "Divieto di sosta e senso unico alternato regolato da movieri o semaforo" },
       { "via": "Via Machiavelli", "prescrizione": "Mantenimento senso unico con divieto di sosta ambo i lati" },
-      { "via": "Via XXV Aprile", "prescrizione": "Mantenimento senso unico con divieto di sosta ambo i lati" },
-      { "via": "Piazza Di Vittorio", "prescrizione": "Divieto di sosta e senso unico alternato regolato a vista o movieri" }
+      { "via": "Via XXV Aprile", "prescrizione": "Mantenimento senso unico con divieto di sosta ambo i lati; nuovo ARLO posato" },
+      { "via": "Piazza Di Vittorio", "prescrizione": "Divieto di sosta e senso unico alternato regolato a vista o movieri" },
+      { "via": "Via Don Verità", "prescrizione": "Restringimento di carreggiata e divieto di sosta per allaccio utenze" },
+      { "via": "Via 8 Marzo", "prescrizione": "Divieto di sosta con rimozione forzata e senso unico alternato" }
     ],
     "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
     "coordinate_centro": [43.5930, 10.3540],
-    "descrizione_ufficiale": "Provvedimento di disciplina temporanea della viabilita per esecuzione di scavi stradali per posa della rete in fibra ottica FiberCop a Stagno."
+    "descrizione_ufficiale": "Provvedimento di disciplina temporanea della viabilità per esecuzione di scavi stradali per posa della rete in fibra ottica FiberCop a Stagno. Finestra 05/10 - 17/10/2026.",
+    "stato_base": "in_completamento"
+  },
+  {
+    "id": "cantiere-3-stagno",
+    "titolo": "Cantiere 3 - Stagno (Via Aiaccia / Via Umbria)",
+    "frazione": "Stagno",
+    "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
+    "oggetto": "Lavori di scavo stradale e occupazione suolo pubblico per posa rete FTTH FiberCop lungo Via Aiaccia e Via Umbria",
+    "atto_tipo": "Polizia Municipale + Concessione Suolo",
+    "atto_numero": "105",
+    "atto_registro_generale": "105",
+    "codice_atto_completo": "Ordinanza P.M. n. 105/2026 + Concessione Suolo n. 77/2026",
+    "data_emissione": "2026-10-09",
+    "autorizzazione_settore_tecnico": "Concessione Occupazione Suolo Pubblico n. 77/2026 (occupazione 60 mq)",
+    "periodo_ordinanza": {
+      "inizio": "2026-10-19T08:00:00+02:00",
+      "fine": "2026-10-23T18:00:00+02:00",
+      "fascia_oraria": "08:00 - 18:00",
+      "giorni": "feriali"
+    },
+    "slittamento_osservato": {
+      "fonte_kml": "Snapshot 4 (11/10/2026) - 4 tratte lineari (3,475 km)",
+      "inizio_stimato": "2026-10-19T08:00:00+02:00",
+      "fine_stimata": "2026-10-23T18:00:00+02:00",
+      "nota_campo": "Finestra temporale: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Stato: Autorizzato / Avvio programmato. Nota cartografica: innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale autorizzata a luglio 2026."
+    },
+    "lunghezza_stimata_km": 3.48,
+    "vie_interessate": [
+      { "via": "Via Aiaccia", "prescrizione": "Divieto di sosta e senso unico alternato con movieri o semaforo per scavo minitrincea" },
+      { "via": "Via Umbria", "prescrizione": "Restringimento temporaneo carreggiata e divieto di sosta per posa infrastruttura secondaria" }
+    ],
+    "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+    "coordinate_centro": [43.5875, 10.3580],
+    "descrizione_ufficiale": "Provvedimento di disciplina viaria e concessione suolo pubblico (60 mq) per la posa della dorsale e della rete secondaria FTTH FiberCop lungo Via Aiaccia e Via Umbria.",
+    "stato_base": "programmato"
   },
   {
     "id": "cantiere-1-collesalvetti",
@@ -59,21 +95,23 @@ const ORDINANZE_DATA_DEFAULT = [
       "giorni": "feriali"
     },
     "slittamento_osservato": {
-      "fonte_kml": "Snapshot 3 (04/10/2026) - suddivisione tratte ESEGUITO / NON ESEGUITO",
+      "fonte_kml": "Snapshot 4 (11/10/2026) - integrazione walk-in 11/10 rotatoria e ARLO 01",
       "inizio_stimato": "2026-09-14T08:00:00+02:00",
       "fine_stimata": "2026-10-02T18:00:00+02:00",
-      "nota_campo": "Rilievo del 29/09/2026 e 03/10/2026: 2 tratte eseguite (Via Nenni/rotatoria con minitrincee e pozzetti), 5 tratte non eseguite (solo segni blu sull'asfalto)"
+      "nota_campo": "Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni (marcature blu a terra). Tratte Sud-Est (Via del Valico a Pisa, Via Peppino Impastato, Via di Cerretello e anello raccordo rotatoria Cantiere 1 AGGIUNTO) completate con minitrincea sigillata (microtubi Fender 4x10/14) e riuso cavidotti storici TIM. Posato il primo ARLO del capoluogo (C [] ARLO) con 4 pozzetti alla rotatoria."
     },
-    "lunghezza_stimata_km": 2.60,
+    "lunghezza_stimata_km": 2.67,
     "vie_interessate": [
-      { "via": "Via Nenni", "prescrizione": "Divieto di sosta ambo i lati con rimozione e restringimento carreggiata con mantenimento senso unico" },
-      { "via": "Via Roma (altezza rotatoria Via Nenni)", "prescrizione": "Divieto di sosta e senso unico alternato a vista o con movieri" },
-      { "via": "Via del Valico a Pisa", "prescrizione": "Divieto di sosta e senso unico alternato a vista o con movieri" },
-      { "via": "Via di Cerretello", "prescrizione": "Divieto di sosta e senso unico alternato a vista o con movieri" }
+      { "via": "Via del Valico a Pisa", "prescrizione": "Tratta Sud-Est ESEGUITA: minitrincea sigillata (microtubi Fender 4x10/14) e riuso cavidotti TIM" },
+      { "via": "Via Peppino Impastato", "prescrizione": "Tratta Sud-Est ESEGUITA: minitrincea sigillata e riuso cavidotti TIM" },
+      { "via": "Via di Cerretello", "prescrizione": "Tratta Sud-Est ESEGUITA: minitrincea sigillata e pozzetti posati" },
+      { "via": "Via Roma (rotatoria Via Nenni / Via Ciampi)", "prescrizione": "Tratta ESEGUITA (Cantiere 1 AGGIUNTO): anello di raccordo rotatoria, posati 4 pozzetti FiberCop e primo ARLO cittadino" },
+      { "via": "Via Nenni", "prescrizione": "Tratta Nord-Ovest NON ESEGUITA: marcature blu a terra. Termini Ord. 88/2026 scaduti il 02/10, in attesa di proroga/nuova ordinanza" }
     ],
     "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
     "coordinate_centro": [43.5945, 10.4760],
-    "descrizione_ufficiale": "Provvedimento di disciplina della viabilita per scavo e posa infrastruttura in fibra ottica FiberCop nel centro abitato di Collesalvetti."
+    "descrizione_ufficiale": "Provvedimento di disciplina della viabilità per scavo e posa infrastruttura in fibra ottica FiberCop nel centro abitato di Collesalvetti.",
+    "stato_base": "parziale_scaduto"
   },
   {
     "id": "ripristino-stagno",
@@ -103,7 +141,8 @@ const ORDINANZE_DATA_DEFAULT = [
     ],
     "file_pdf": "ordinanze/ordinanza_75_2026_stagno_ripristino.pdf",
     "coordinate_centro": [43.5910, 10.3520],
-    "descrizione_ufficiale": "Provvedimento straordinario di circolazione per esecuzione di ripristini del manto stradale a seguito degli scavi per la fibra ottica a Stagno. Lavori formalmente conclusi."
+    "descrizione_ufficiale": "Provvedimento straordinario di circolazione per esecuzione di ripristini del manto stradale a seguito degli scavi per la fibra ottica a Stagno. Lavori formalmente conclusi.",
+    "stato_base": "concluso"
   }
 ];
 
@@ -196,7 +235,6 @@ function getRomeCurrentDate() {
 
 /**
  * Calcola lo stato del cantiere in base all'ordinanza e all'orario effettivo Europe/Rome.
- * Risolve specificamente il bug che segnava "CANTIERE ATTIVO ORA" di domenica o fuori orario.
  */
 function calculateCantiereStatus(cantiere, currentDate) {
   const now = currentDate || getRomeCurrentDate();
@@ -216,11 +254,23 @@ function calculateCantiereStatus(cantiere, currentDate) {
     day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'Europe/Rome'
   });
 
+  // Gestione stato "in_completamento" (es. Cantiere 2 Stagno)
+  if (cantiere.stato_base === 'in_completamento' && now <= end) {
+    return {
+      statusCode: 'in_completamento',
+      statusLabel: 'IN COMPLETAMENTO (POSA CONDOTTE OK - 6 POZZETTI IN CHIUSURA)',
+      badgeClass: 'bg-amber-500/20 text-amber-300 border border-amber-500/50',
+      dotClass: 'bg-amber-400 animate-pulse',
+      timingSummary: `Operativo in fase di rifinitura finale fino al ${endFormatted} (feriali 08:00 - 18:00)`,
+      isActiveNow: true
+    };
+  }
+
   // 1. Prima dell'inizio autorizzato dall'ordinanza
   if (now < start) {
     return {
       statusCode: 'programmato',
-      statusLabel: 'ATTIVAZIONE PROGRAMMATA',
+      statusLabel: 'ATTIVAZIONE PROGRAMMATA (AUTORIZZATO)',
       badgeClass: 'bg-amber-500/20 text-amber-400 border border-amber-500/40',
       dotClass: 'bg-amber-400 animate-pulse',
       timingSummary: `Avvio autorizzato da ordinanza: ${startFormatted} (feriali 08:00 - 18:00)`,
@@ -230,6 +280,16 @@ function calculateCantiereStatus(cantiere, currentDate) {
 
   // 2. Oltre il termine stabilito dall'ordinanza
   if (now > end) {
+    if (cantiere.stato_base === 'parziale_scaduto') {
+      return {
+        statusCode: 'parziale_scaduto',
+        statusLabel: 'TERMINI SCADUTI (PARZIALMENTE ESEGUITO - ATTESA PROROGA)',
+        badgeClass: 'bg-rose-500/20 text-rose-300 border border-rose-500/40',
+        dotClass: 'bg-rose-400',
+        timingSummary: `Efficacia scaduta il ${endFormatted}. Tratte Sud-Est eseguite, Via Nenni in attesa proroga`,
+        isActiveNow: false
+      };
+    }
     return {
       statusCode: 'concluso',
       statusLabel: 'LAVORI COMPLETATI (DA ORDINANZA)',
@@ -349,9 +409,9 @@ function renderCantieriModal() {
         <div class="bg-amber-500/10 border border-amber-500/30 rounded-lg p-2.5 mb-3 text-xs">
           <div class="flex items-center gap-1.5 font-bold text-amber-300 mb-1">
             <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-            Rilievo sul Campo (Osservazione Civica):
+            Rilievo sul Campo (Snapshot 4 - 11/10/2026):
           </div>
-          <p class="text-amber-200/90">${cantiere.slittamento_osservato.nota_campo}</p>
+          <p class="text-amber-200/90 leading-relaxed">${cantiere.slittamento_osservato.nota_campo}</p>
         </div>
       `;
     }

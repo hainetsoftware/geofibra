@@ -3,7 +3,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![GIS: Leaflet 1.9.4](https://img.shields.io/badge/GIS-Leaflet%201.9.4-brightgreen.svg)](https://leafletjs.com/)
-[![Data: Snapshot 3](https://img.shields.io/badge/Data-Snapshot%203%20(04%2F10%2F2026)-orange.svg)](#-official-data--metrics-snapshot-3)
+[![Data: Snapshot 4](https://img.shields.io/badge/Data-Snapshot%204%20(11%2F10%2F2026)-orange.svg)](#-official-data--metrics-snapshot-4)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Active-success.svg)](#-deployment-on-github-pages)
 
 ---
@@ -22,7 +22,7 @@ The initiative provides transparency for local citizens regarding street excavat
 ## 📑 Table of Contents
 
 1. [Key Features](#-key-features)
-2. [Official Data & Metrics (Snapshot 3)](#-official-data--metrics-snapshot-3)
+2. [Official Data & Metrics (Snapshot 4)](#-official-data--metrics-snapshot-4)
 3. [Municipal Decrees & Works Tracker](#-municipal-decrees--works-tracker)
 4. [The Technical & Educational Wiki](#-the-technical--educational-wiki)
 5. [Repository Architecture](#-repository-architecture)
@@ -39,11 +39,13 @@ The initiative provides transparency for local citizens regarding street excavat
 - **Multi-layer raster engine:** Instant switching between *OpenStreetMap*, *Esri World Imagery (HD Satellite)*, and *Esri Dark Canvas*.
 - **Strict geographic bounding:** View restricted to the Tuscany regional perimeter (`TOSCANA_BOUNDS`) to prevent unintended navigation drift.
 - **Audited geospatial assets:** Trench traces, primary feeder lines, optical cabinets (ARLO), copper cross-connects (ARL), telecom central offices, and underground junction boxes with metric dimensions and Street View links.
+- **Interactive Works Filter:** Rapid filtering by works status: completed sections, closing works (C2 Stagno), authorized (C3 Stagno), or awaiting extension (C1 Via Nenni).
 
 ### 2. 🚧 Live Works & Police Decrees Tracker (`Europe/Rome`)
 - **Direct Municipal Gazette Integration:** Tracks official police decrees issued by the Municipality of Collesalvetti for FTTH FiberCop roadworks.
 - **Accurate working-hours status computation:**
   - `PROGRAMMATO`: prior to formal decree start date.
+  - `IN COMPLETAMENTO`: trenching finished, junction boxes in final casting (e.g. Cantiere 2 Stagno).
   - `CANTIERE ATTIVO ORA`: strictly active during authorized working hours (**08:00 – 18:00 on weekdays**).
   - `NON LAVORATIVO`: on Sundays and national public holidays during decree validity, with clear non-working day notifications.
   - `FUORI ORARIO`: outside 08:00–18:00 on weekdays.
@@ -57,29 +59,29 @@ The initiative provides transparency for local citizens regarding street excavat
 
 ---
 
-## 📊 Official Data & Metrics (Snapshot 3)
+## 📊 Official Data & Metrics (Snapshot 4)
 
-All metrics are deterministically computed from the official geospatial survey **Snapshot 3 (04/10/2026)**:
+All metrics are deterministically computed from the official geospatial survey **Snapshot 4 (11/10/2026)**:
 
 | Category | Quantity | Details / Notes |
 |---|:---:|---|
-| **Total Geospatial Features** | **63** | 34 point elements, 25 line traces, 4 area polygons |
-| **Total Mapped Route Length** | **21.716 km** | Cumulative length of microtrenches and backbone lines |
-| **Fiber Optical Cabinets (ARLO)** | **21** | FiberCop passive optical cross-connects on concrete bases |
-| **Copper Cabinets (ARL)** | **8** | Traditional copper street cabinets (many with FTTC ONU) |
-| **Telecom Central Offices** | **3** | Collesalvetti (Center), Vicarello, and Feeder (Livorno border) |
-| **Main Vaults & Manholes** | **2** | Major underground branch junctions |
+| **Total Geospatial Features** | **71** | 40 point elements, 27 line traces, 4 area polygons |
+| **Total Mapped Route Length** | **21.780 km** | Cumulative length of microtrenches and backbone lines (+64 m net) |
+| **Fiber Optical Cabinets (ARLO)** | **7** | 1 in center (`C [] ARLO`, future ARLO 01) + 6 in Stagno |
+| **Copper Cabinets (ARL)** | **24** | 7 Collesalvetti, 8 Vicarello, 6 Stagno, 3 Guasticce |
+| **Telecom Central Offices** | **8** | 1 municipal (Collesalvetti), 6 fraction offices, 1 Feeder (Livorno) |
+| **Municipal FTTH Progress** | **62.8%** | Stagno at 86.4%, Collesalvetti Center at 41.5% |
 
 ### Route Length and Apparatus by Fraction
 
-| Fraction | Routes (km) | Share (%) | Fiber ARLO | Copper ARL | Central Offices |
-|---|:---:|:---:|:---:|:---:|:---:|
-| **Stagno** | **11.232 km** | 51.7% | 13 | 4 | 0 |
-| **Collesalvetti (Center)** | **6.444 km** | 29.7% | 6 | 3 | 1 |
-| **Vicarello** | **3.122 km** | 14.4% | 2 | 1 | 1 |
-| **Guasticce** | **0.399 km** | 1.8% | 0 | 0 | 0 |
-| **Other / Inter-municipal** | **0.519 km** | 2.4% | 0 | 0 | 1 |
-| **Total Territory** | **21.716 km** | **100.0%** | **21** | **8** | **3** |
+| Fraction | Routes (km) | Share (%) | Fiber ARLO | Copper ARL | Central Offices | Progress |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Stagno** | **11.525 km** | 52.9% | 6 | 6 | 1 | **86.4%** |
+| **Collesalvetti (Center)** | **6.516 km** | 29.9% | 1 | 7 | 1 | **41.5%** |
+| **Vicarello** | **3.122 km** | 14.3% | 0 | 8 | 1 | **35.0%** |
+| **Guasticce** | **0.399 km** | 1.8% | 0 | 3 | 1 | **20.0%** |
+| **Other / Inter-municipal** | **0.519 km** | 2.4% | 0 | 0 | 1 | - |
+| **Total Territory** | **21.780 km** | **100.0%** | **7** | **24** | **8** | **62.8%** |
 
 ---
 
@@ -88,20 +90,24 @@ All metrics are deterministically computed from the official geospatial survey *
 Documented with `data/ordinanze.json` as the single source of truth, distinguishing both Police Sector numbers (P.M.) and General Register numbers (Reg. Gen.):
 
 1. **Cantiere 2 - Stagno (FTTH Rollout):**
-   - **Decree:** Ordinanza P.M. n. 95 del 10/09/2026 (**Reg. Gen. 102**)
-   - **Authorized period:** 21/09/2026 – 16/10/2026 (weekdays 08:00 – 18:00)
-   - **Field survey finding:** Observed postponement starting 05/10/2026 through 17/10/2026.
-   - **Streets:** Via Otto Marzo, Via Romita, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio.
-2. **Cantiere 1 - Collesalvetti Center:**
-   - **Decree:** Ordinanza P.M. n. 88 del 02/09/2026 (**Reg. Gen. 95**)
-   - **Authorized period:** 14/09/2026 – 02/10/2026. *Expired.*
-   - **Field survey finding (03/10/2026):** 2 routes completed, 5 routes unexecuted (blue spray marks only).
-3. **Road Resurfacing - Stagno:**
-   - **Decree:** Ordinanza P.M. n. 70 del 16/07/2026 (**Reg. Gen. 75**)
-   - **Authorized period:** 03/08/2026 – 13/08/2026. *Formally and physically completed.*
-4. **Routes with pending ordinance linkage:**
-   - **Cantiere 3 Via Aiaccia (Stagno):** 4 line traces totaling 3.475 km (field note 19/10 - 23/10).
-   - **Opera Backbone:** 519 m interurban route towards Livorno.
+   - **Decree:** Ordinanza P.M. n. 95/2026 (**Reg. Gen. 102/104/2026**)
+   - **Official Period:** 21/09/2026 – 17/10/2026 (weekdays 08:00 – 18:00)
+   - **Field Status:** 05/10 - 17/10 timeframe. Status: *Nearing completion* (pipe installation completed, 6 junction boxes in final casting, completed section on Via Romita / XXV Aprile validated for 292.9 m). New ARLO positioned next to S [04] ARL.
+   - **Streets:** Via Romita sud, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio, Via Don Verità, Via 8 Marzo.
+2. **Cantiere 3 - Stagno (Via Aiaccia / Via Umbria):**
+   - **Decree:** Ordinanza P.M. n. 105/2026 (**Reg. Gen. 105**) + Public Land Concession n. 77/2026 (60 sqm)
+   - **Official Period:** 19/10/2026 – 23/10/2026 (5 weekdays, 08:00 – 18:00)
+   - **Status:** *Authorized / Scheduled Start*. Junction at southern Via Aiaccia connects to SP555 backbone.
+3. **Cantiere 1 - Collesalvetti Center:**
+   - **Decree:** Ordinanza P.M. n. 88 dated 02/09/2026 (**Reg. Gen. 95**)
+   - **Official Period:** 14/09/2026 – 02/10/2026. *Expired.*
+   - **Field Status (11/10/2026):** South-East traces and roundabout ring (71.8 m) completed with sealed microtrenching (*Fender 4x10/14* microducts), 4 FiberCop junction boxes and first town ARLO (`C [] ARLO`, future ARLO 01). North-West traces (Via Nenni) not excavated (blue ground markings, awaiting extension).
+4. **Asphalt Restoration Works - Stagno:**
+   - **Decree:** Ordinanza P.M. n. 70 dated 16/07/2026 (**Reg. Gen. 75**)
+   - **Official Period:** 03/08/2026 – 13/08/2026. *Formally concluded.*
+   - **Streets:** Via Marx, Via Guerrazzi, Via La Malfa.
+5. **Traces without municipal decree:**
+   - **Backbone Works:** 519-meter inter-municipal section along SP555 towards Livorno.
 
 ---
 

@@ -16,9 +16,9 @@ def get_type_label(category):
         'centrale_feeder': 'Centrale Feeder (Interconnessione Esterna)',
         'cantiere': 'Cantiere Fibra Ottica',
         'cantiere_imminente': 'Cantiere FTTH (Attivazione Imminente)',
-        'cantiere_eseguito': 'Cantiere FTTH (Tratta Eseguita)',
-        'cantiere_non_eseguito': 'Cantiere FTTH (Tratta Non Eseguita)',
-        'cantiere_programmato': 'Cantiere FTTH (Nuova Ordinanza Programmata)',
+        'cantiere_eseguito': 'Cantiere FTTH (Tratta Eseguita / Completata)',
+        'cantiere_non_eseguito': 'Cantiere FTTH (Tratta Non Eseguita / In Attesa Proroga)',
+        'cantiere_programmato': 'Cantiere FTTH (In Completamento / Programmato)',
         'tratta_stagno': 'Tratta Fibra Posa',
         'tratta_backbone': 'Dorsale / Backbone Fibra',
         'rete_scuole': 'Tratta Scuole Connesse',
@@ -37,14 +37,16 @@ def load_data():
 def build_rows(data):
     headers = [
         "ID",
-        "Nome Apparato",
+        "Nome Apparato / Tratta",
         "Tipologia",
         "Frazione",
+        "Operatore",
         "Tipo Geometria",
-        "Stato / Attivazione Cantiere",
+        "Stato / Avanzamento",
         "Periodo Lavori (Inizio - Fine)",
         "Vie Coinvolte",
         "Riferimento Ordinanza Comunale",
+        "Data Rilevamento",
         "Latitudine",
         "Longitudine",
         "Quota (m s.l.m.)",
@@ -86,19 +88,19 @@ def build_rows(data):
             maps_link = f"https://www.google.com/maps?q={lat},{lon}"
             
         c = p.get("cantiere")
-        c_status = ""
+        c_status = p.get("status_label", "")
         c_period = ""
         c_streets = ""
-        c_ordinanza = ""
+        c_ordinanza = p.get("ordinanza", "") or ""
         c_pdf = ""
         
         if c:
-            c_status = c.get("stato_base", "").upper()
             c_period = f"{c.get('inizio_lavori', '')[:10]} -> {c.get('fine_lavori', '')[:10]}"
             c_streets = ", ".join(c.get("vie_interessate", []))
-            c_ordinanza = c.get("codice_ordinanza", "")
+            if not c_ordinanza:
+                c_ordinanza = c.get("codice_ordinanza", "")
             c_pdf = c.get("file_pdf", "")
-        elif "cantiere" in p["category"]:
+        elif "cantiere" in p["category"] and not c_status:
             c_status = "DA COLLEGARE A ORDINANZA"
             
         row = [
@@ -106,11 +108,13 @@ def build_rows(data):
             p["name"],
             get_type_label(p["category"]),
             p["frazione"],
+            p.get("operatore", "FiberCop"),
             g_type,
             c_status,
             c_period,
             c_streets,
             c_ordinanza,
+            p.get("data_rilevamento", "2026-10-11"),
             lat,
             lon,
             ele,

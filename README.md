@@ -3,7 +3,7 @@
 
 [![Licenza: MIT](https://img.shields.io/badge/Licenza-MIT-blue.svg)](LICENSE)
 [![GIS: Leaflet 1.9.4](https://img.shields.io/badge/GIS-Leaflet%201.9.4-brightgreen.svg)](https://leafletjs.com/)
-[![Dati: Snapshot 3](https://img.shields.io/badge/Dati-Snapshot%203%20(04%2F10%2F2026)-orange.svg)](#-dati-e-statistiche-ufficiali-snapshot-3)
+[![Dati: Snapshot 4](https://img.shields.io/badge/Dati-Snapshot%204%20(11%2F10%2F2026)-orange.svg)](#-dati-e-statistiche-ufficiali-snapshot-4)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Attivo-success.svg)](#-pubblicazione-su-github-pages)
 
 ---
@@ -22,7 +22,7 @@ Il progetto nasce per garantire trasparenza sull'avanzamento dei lavori stradali
 ## 📑 Indice
 
 1. [Caratteristiche del Portale](#-caratteristiche-del-portale)
-2. [Dati e Statistiche Ufficiali (Snapshot 3)](#-dati-e-statistiche-ufficiali-snapshot-3)
+2. [Dati e Statistiche Ufficiali (Snapshot 4)](#-dati-e-statistiche-ufficiali-snapshot-4)
 3. [Registro Cantieri e Ordinanze di Polizia Municipale](#-registro-cantieri-e-ordinanze-di-polizia-municipale)
 4. [La Wiki Tecnica e Divulgativa](#-la-wiki-tecnica-e-divulgativa)
 5. [Architettura del Repository](#-architettura-del-repository)
@@ -39,11 +39,13 @@ Il progetto nasce per garantire trasparenza sull'avanzamento dei lavori stradali
 - **Visualizzazione multilivello:** commutazione istantanea tra *OpenStreetMap*, ortofoto *Satellite HD (Esri)* e visuale ad alto contrasto *Cyber Dark*.
 - **Vincolo geografico:** navigazione limitata al perimetro toscano (`TOSCANA_BOUNDS`) per impedire disorientamenti fuori zona.
 - **Tracciati e apparati vettoriali:** minitrincee, dorsali primarie, armadi ARLO, ARL rame, centrali e pozzetti con popup completi di quote metriche, note di rilievo e link a Google Street View.
+- **Filtro interattivo cantieri:** selezione rapida per visualizzare tratte completate, cantieri in completamento (C2), autorizzati (C3) o in attesa di proroga (C1).
 
 ### 2. 🚧 Tracker Ordinanze e Cantieri Stradali (Tempo Reale Europe/Rome)
 - **Incrocio con l'Albo Pretorio:** collegamento diretto agli atti di disciplina della circolazione emessi dal Comune di Collesalvetti.
 - **Calcolo dinamico dello stato lavorativo:**
   - `PROGRAMMATO`: prima dell'inizio formale dell'atto.
+  - `IN COMPLETAMENTO`: cantieri con condotte posate e pozzetti in chiusura finale (es. Cantiere 2 Stagno).
   - `CANTIERE ATTIVO ORA`: solo ed esclusivamente nei **giorni feriali** e nella fascia autorizzata (**08:00 – 18:00**).
   - `NON LAVORATIVO`: di domenica o nei giorni festivi con ordinanza vigente, con avviso esplicito di sospensione dei lavori.
   - `FUORI ORARIO`: nelle ore serali e notturne feriali.
@@ -57,29 +59,29 @@ Il progetto nasce per garantire trasparenza sull'avanzamento dei lavori stradali
 
 ---
 
-## 📊 Dati e Statistiche Ufficiali (Snapshot 3)
+## 📊 Dati e Statistiche Ufficiali (Snapshot 4)
 
-Tutti i conteggi sono calcolati deterministicamente sul rilievo geospaziale **Snapshot 3 del 04/10/2026**:
+Tutti i conteggi sono calcolati deterministicamente sul rilievo geospaziale **Snapshot 4 dell'11/10/2026**:
 
 | Categoria Elemento | Quantità | Dettaglio / Note |
 |---|:---:|---|
-| **Feature Geospaziali Totali** | **63** | 34 punti, 25 linee, 4 poligoni di perimetro |
-| **Estensione Tracciati Rete** | **21,716 km** | Somma metrica di tutte le tratte stradali e dorsali |
-| **Armadi Ottici ARLO (FiberCop)** | **21** | Armadi passivi stradali su basamento in cemento |
-| **Armadi Rame ARL (TIM)** | **8** | Armadi tradizionali della rete secondaria |
-| **Centrali di Commutazione TLC** | **3** | Collesalvetti (Centro), Vicarello e Feeder (Livorno) |
-| **Pozzetti di Derivazione Principali** | **2** | Camerette di snodo delle dorsali |
+| **Feature Geospaziali Totali** | **71** | 40 punti, 27 linee, 4 poligoni di perimetro |
+| **Estensione Tracciati Rete** | **21,780 km** | Somma metrica di tutte le tratte stradali e dorsali (+64 m da rotatoria e nuove tratte) |
+| **Armadi Ottici ARLO (FiberCop)** | **7** | 1 nel capoluogo (`C [] ARLO`, futuro ARLO 01) + 6 a Stagno (parco nodi secondari) |
+| **Armadi Rame ARL (TIM)** | **24** | 7 a Collesalvetti, 8 a Vicarello, 6 a Stagno, 3 a Guasticce |
+| **Centrali di Commutazione TLC** | **8** | 1 comunale (Collesalvetti), 6 di frazione + 1 Feeder (Livorno) |
+| **Tasso Avanzamento Comunale** | **62,8%** | Stagno all'86,4%, Collesalvetti al 41,5% |
 
 ### Ripartizione Chilometrica e Apparati per Frazione
 
-| Frazione | Tratte (km) | Quota % | ARLO Fibra | ARL Rame | Centrali TLC |
-|---|:---:|:---:|:---:|:---:|:---:|
-| **Stagno** | **11,232 km** | 51,7% | 13 | 4 | 0 |
-| **Collesalvetti (Capoluogo)** | **6,444 km** | 29,7% | 6 | 3 | 1 |
-| **Vicarello** | **3,122 km** | 14,4% | 2 | 1 | 1 |
-| **Guasticce** | **0,399 km** | 1,8% | 0 | 0 | 0 |
-| **Altro / Intercomunale** | **0,519 km** | 2,4% | 0 | 0 | 1 |
-| **Totale Territoriale** | **21,716 km** | **100,0%** | **21** | **8** | **3** |
+| Frazione | Tratte (km) | Quota % | ARLO Fibra | ARL Rame | Centrali TLC | Avanzamento |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Stagno** | **11,525 km** | 52,9% | 6 | 6 | 1 | **86,4%** |
+| **Collesalvetti (Capoluogo)** | **6,516 km** | 29,9% | 1 | 7 | 1 | **41,5%** |
+| **Vicarello** | **3,122 km** | 14,3% | 0 | 8 | 1 | **35,0%** |
+| **Guasticce** | **0,399 km** | 1,8% | 0 | 3 | 1 | **20,0%** |
+| **Altro / Intercomunale** | **0,519 km** | 2,4% | 0 | 0 | 1 | - |
+| **Totale Territoriale** | **21,780 km** | **100,0%** | **7** | **24** | **8** | **62,8%** |
 
 ---
 
@@ -88,21 +90,24 @@ Tutti i conteggi sono calcolati deterministicamente sul rilievo geospaziale **Sn
 Questo osservatorio adotta come unica fonte di verità documentale `data/ordinanze.json`, citando sia il numero interno di settore della Polizia Municipale (P.M.) sia il Registro Generale (Reg. Gen.):
 
 1. **Cantiere 2 - Stagno (Nuova Espansione FTTH):**
-   - **Atto:** Ordinanza P.M. n. 95 del 10/09/2026 (**Reg. Gen. 102**)
-   - **Periodo ufficiale:** 21/09/2026 – 16/10/2026 (feriali 08:00 – 18:00)
-   - **Rilievo di campo:** Slittamento effettivo osservato dal 05/10/2026 al 17/10/2026.
-   - **Vie:** Via Otto Marzo, Via Romita, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio.
-2. **Cantiere 1 - Collesalvetti Centro:**
+   - **Atto:** Ordinanza P.M. n. 95/2026 (**Reg. Gen. 102/104/2026**)
+   - **Periodo ufficiale:** 21/09/2026 – 17/10/2026 (feriali 08:00 – 18:00)
+   - **Rilievo di campo:** Finestra effettiva 05/10 - 17/10. Stato *In completamento* (posa condotte completata, 6 pozzetti in chiusura, tratta via Romita/XXV Aprile verificata come completata per 292,9 m). Nuovo ARLO posato adiacente a S [04] ARL.
+   - **Vie:** Via Romita sud, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio, Via Don Verità, Via 8 Marzo.
+2. **Cantiere 3 - Stagno (Via Aiaccia / Via Umbria):**
+   - **Atto:** Ordinanza P.M. n. 105/2026 (**Reg. Gen. 105**) + Concessione Suolo n. 77/2026 (60 mq)
+   - **Periodo ufficiale:** 19/10/2026 – 23/10/2026 (5 giorni feriali, 08:00 – 18:00)
+   - **Stato:** *Autorizzato / Avvio programmato*. Raccordo con dorsale provinciale SP555.
+3. **Cantiere 1 - Collesalvetti Centro:**
    - **Atto:** Ordinanza P.M. n. 88 del 02/09/2026 (**Reg. Gen. 95**)
    - **Periodo ufficiale:** 14/09/2026 – 02/10/2026. *Termini scaduti.*
-   - **Rilievo di campo (03/10/2026):** 2 tratte eseguite (Via Nenni e rotatoria), 5 tratte non eseguite (soli segni spray blu su asfalto).
-3. **Ripristino Manto Stradale - Stagno:**
+   - **Rilievo di campo (11/10/2026):** Tratte Sud-Est e anello rotatoria (71,8 m) eseguite con minitrincea sigillata (Fender 4x10/14), 4 pozzetti FiberCop e primo ARLO cittadino (`C [] ARLO`, futuro ARLO 01). Tratte Nord-Ovest (Via Nenni) non eseguite (soli segni spray blu su asfalto, in attesa di proroga).
+4. **Ripristino Manto Stradale - Stagno:**
    - **Atto:** Ordinanza P.M. n. 70 del 16/07/2026 (**Reg. Gen. 75**)
    - **Periodo ufficiale:** 03/08/2026 – 13/08/2026. *Lavori conclusi.*
    - **Vie:** Via Marx, Via Guerrazzi, Via La Malfa.
-4. **Tratte senza ordinanza reperita (segnalate come "da collegare a ordinanza"):**
-   - **Cantiere 3 Via Aiaccia (Stagno):** 4 tratte per 3,475 km (annotazione di cantiere 19/10 - 23/10).
-   - **Opera sulla Backbone:** Tratta interurbana di 519 metri verso Livorno.
+5. **Tratte senza ordinanza comunale ordinaria:**
+   - **Opera sulla Backbone:** Tratta interurbana di 519 metri verso Livorno lungo la provinciale SP555.
 
 ---
 

@@ -1,13 +1,13 @@
-// Generato automaticamente da data/snapshots/rilievo_snapshot3.kml con dati Ordinanze Albo Pretorio (Snapshot 3)
+// Generato automaticamente da data/snapshots/rilievo_snapshot4.kml con dati Ordinanze Albo Pretorio (Snapshot 4 - 11/10/2026)
 window.FTTH_NETWORK_DATA = {
   "type": "FeatureCollection",
   "metadata": {
     "title": "Rete FTTH & Tracker Cantieri - Comune di Collesalvetti",
     "author": "Mappatura Originale Cittadina integrata con Albo Pretorio",
-    "total_features": 63,
-    "generated_at": "2026-10-04",
-    "source_snapshot": "Snapshot 3",
-    "source_kml": "data/snapshots/rilievo_snapshot3.kml",
+    "total_features": 71,
+    "generated_at": "2026-10-11",
+    "source_snapshot": "Snapshot 4",
+    "source_kml": "data/snapshots/rilievo_snapshot4.kml",
     "timezone": "Europe/Rome"
   },
   "features": [
@@ -68,23 +68,33 @@ window.FTTH_NETWORK_DATA = {
             0.0
           ],
           [
-            10.47500362703351,
-            43.59383946747543,
+            10.47488499093331,
+            43.59384240288325,
             0.0
           ],
           [
-            10.4750334717608,
-            43.59383583055242,
+            10.47495288852152,
+            43.59383842948729,
             0.0
           ],
           [
-            10.47507092379242,
-            43.59383342521085,
+            10.47495917268361,
+            43.5938439577831,
             0.0
           ],
           [
-            10.47509740007403,
-            43.59389135562733,
+            10.47495940805739,
+            43.59385034048199,
+            0.0
+          ],
+          [
+            10.47496181445819,
+            43.59386719860674,
+            0.0
+          ],
+          [
+            10.47495746109644,
+            43.5938920051824,
             0.0
           ]
         ]
@@ -95,12 +105,12 @@ window.FTTH_NETWORK_DATA = {
         "category": "cantiere_non_eseguito",
         "frazione": "Collesalvetti",
         "geom_type": "LineString",
-        "description": "Si notano solamente dei segni blu (oltre ai soliti colori), che indicano Fibercop , sull'asfalto",
-        "raw_description": "<div>Si notano solamente dei segni blu (oltre ai soliti colori), che indicano Fibercop , sull'asfalto<br></div>",
+        "description": "Tratta Non Eseguita Nord-Ovest (Via Nenni). Marcature blu a terra. Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni.",
+        "raw_description": "<div>Tratta Non Eseguita (Nord-Ovest / Via Nenni): marcature blu a terra.<br>Stato: <b>In attesa proroga viaria</b>.<br>Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni.</div>",
         "icon": "traffic-cone",
         "color": "#e67e22",
-        "length_m": 384.6,
-        "length_km": 0.385,
+        "length_m": 374.7,
+        "length_km": 0.375,
         "area_m2": 0,
         "area_km2": 0.0,
         "lookAt": {
@@ -119,14 +129,17 @@ window.FTTH_NETWORK_DATA = {
           "orario_giornaliero": "08:00 - 18:00 feriali",
           "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
           "vie_interessate": [
-            "Via Nenni",
-            "Via Roma (rotatoria Via Nenni)",
-            "Via del Valico a Pisa",
-            "Via di Cerretello"
+            "Via Nenni"
           ],
           "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
-          "stato_base": "non_eseguito"
-        }
+          "stato_base": "non_eseguito",
+          "note_slittamento": "Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni (marcature blu a terra)."
+        },
+        "status": "in_attesa_proroga",
+        "status_label": "In attesa proroga viaria (Termini Ord. 88 scaduti il 02/10)",
+        "ordinanza": "Ordinanza P.M. n. 88 del 02/09/2026 (Reg. Gen. 95)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -193,7 +206,7 @@ window.FTTH_NETWORK_DATA = {
         "category": "cantiere_eseguito",
         "frazione": "Collesalvetti",
         "geom_type": "LineString",
-        "description": "Tratta stabilita con un walk-in in data 29/09/2026 e 03/10/2026. Si notano minitrincee, matasse di corrugati e birilli. Oltre a una serie di pozzetti Fibercop.",
+        "description": "Tratta Eseguita Sud-Est (Via del Valico a Pisa, Via Peppino Impastato, Via di Cerretello). Minitrincea sigillata (microtubi Fender 4x10/14) e riuso cavidotti TIM. Ord. 88/2026.",
         "raw_description": "<div>Tratta stabilita con un walk-in in data 29/09/2026 e 03/10/2026. Si notano minitrincee, matasse di corrugati e birilli. Oltre a una serie di pozzetti Fibercop.<br></div>",
         "icon": "traffic-cone",
         "color": "#27ae60",
@@ -217,14 +230,60 @@ window.FTTH_NETWORK_DATA = {
           "orario_giornaliero": "08:00 - 18:00 feriali",
           "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
           "vie_interessate": [
-            "Via Nenni",
-            "Via Roma (rotatoria Via Nenni)",
             "Via del Valico a Pisa",
+            "Via Peppino Impastato",
             "Via di Cerretello"
           ],
           "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
-          "stato_base": "eseguito"
-        }
+          "stato_base": "eseguito",
+          "note_slittamento": "Tratta Eseguita (Sud-Est): Via del Valico a Pisa, Via Peppino Impastato, Via di Cerretello. Tipologia di posa: minitrincea sigillata (microtubi Fender 4x10/14) + riuso cavidotti storici TIM."
+        },
+        "status": "completato",
+        "status_label": "Completato (Minitrincea sigillata + riuso TIM)",
+        "ordinanza": "Ordinanza P.M. n. 88 del 02/09/2026 (Reg. Gen. 95)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "01D156648742616017BB",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.475255,
+          43.59398,
+          16.5
+        ]
+      },
+      "properties": {
+        "id": "01D156648742616017BB",
+        "name": "C [] ARLO (Futuro ARLO 01)",
+        "category": "arlo",
+        "frazione": "Collesalvetti",
+        "geom_type": "Point",
+        "description": "Primo armadio ottico del capoluogo (C [] ARLO, futuro ARLO 01), situato nell'aiuola/marciapiede della rotatoria tra Via Roma, Via Nenni e Via Piero Ciampi. Plinto gettato, cabinet montato, 4 pozzetti di smistamento FiberCop posati a corona della rotatoria e raccordati a cavidotti TIM preesistenti. Stato: Installato (Opere civili completate - In attesa di soffiaggio fibra/PTE).",
+        "raw_description": "<div>Primo armadio ottico del capoluogo (C [] ARLO, futuro ARLO 01), situato nell'aiuola/marciapiede della rotatoria tra Via Roma, Via Nenni e Via Piero Ciampi.<br>Stato: <b>Installato (Opere civili completate - In attesa di soffiaggio fibra/PTE)</b>.<br>Dettagli tecnici: Plinto gettato, cabinet montato, 4 pozzetti di smistamento FiberCop posati a corona della rotatoria e raccordati a cavidotti TIM preesistenti.</div>",
+        "icon": "optical-cabinet",
+        "color": "#00f0ff",
+        "length_m": 0,
+        "length_km": 0.0,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.47518890151589,
+          "latitude": 43.59389300814422,
+          "altitude": 16.73648463825714,
+          "heading": 86.39808562592424,
+          "tilt": 20.81802053420448,
+          "range": 77.92100306360227
+        },
+        "cantiere": null,
+        "status": "installato",
+        "status_label": "Installato (Opere civili completate - In attesa di soffiaggio fibra/PTE)",
+        "ordinanza": "Ordinanza P.M. n. 88 del 02/09/2026 (Reg. Gen. 95)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -260,7 +319,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 27.78109241598673,
           "range": 85.87679516544085
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -296,7 +360,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 22.25852995961843,
           "range": 168.5667978957099
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -332,7 +401,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 18.9754859052477,
           "range": 42.72616320258294
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -368,7 +442,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.2054215867862803,
           "range": 121.131047905219
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -404,7 +483,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 48.98218259737405
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -440,7 +524,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 87.18022802623636
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -476,7 +565,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 18.97554447727877,
           "range": 62.75627064409491
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -512,7 +606,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 74.08701672710778
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -548,7 +647,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 20.14108414239434,
           "range": 340.5757706051372
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -584,7 +688,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.1206384495683505,
           "range": 113.3717670795522
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -620,7 +729,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 3.506405490188474,
           "range": 94.02600433393673
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -656,7 +770,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 3.506401060473639,
           "range": 85.97310388518054
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -692,7 +811,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.1769562837131852,
           "range": 236.279795172486
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -728,7 +852,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 1.136245906785847,
           "range": 51.36984037862021
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -764,7 +893,53 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 114.2296395646554
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0A2895209441C56CED8C",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.35045364633308,
+          43.59268825418914,
+          2.480084902416697
+        ]
+      },
+      "properties": {
+        "id": "0A2895209441C56CED8C",
+        "name": "S [27] ARLO",
+        "category": "arlo",
+        "frazione": "Stagno",
+        "geom_type": "Point",
+        "description": "Armadio ottico FiberCop S [27] ARLO.\nStato: Infrastrutturati / In fase di cablaggio e predisposizione secondaria.",
+        "raw_description": "<div>Armadio ottico FiberCop S [27] ARLO.<br>Stato: <b>Infrastrutturati / In fase di cablaggio e predisposizione secondaria</b>.</div>",
+        "icon": "optical-cabinet",
+        "color": "#00f0ff",
+        "length_m": 0,
+        "length_km": 0.0,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.35048466135247,
+          "latitude": 43.59251258250174,
+          "altitude": 2.422973022839601,
+          "heading": 5.318547260249746,
+          "tilt": 0.0,
+          "range": 234.1587203446761
+        },
+        "cantiere": null,
+        "status": "infrastrutturato",
+        "status_label": "Infrastrutturati / In fase di cablaggio e predisposizione secondaria",
+        "ordinanza": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -784,8 +959,8 @@ window.FTTH_NETWORK_DATA = {
         "category": "arlo",
         "frazione": "Stagno",
         "geom_type": "Point",
-        "description": "",
-        "raw_description": "",
+        "description": "Armadio ottico FiberCop S [28] ARLO.\nStato: Infrastrutturati / In fase di cablaggio e predisposizione secondaria.",
+        "raw_description": "<div>Armadio ottico FiberCop S [28] ARLO.<br>Stato: <b>Infrastrutturati / In fase di cablaggio e predisposizione secondaria</b>.</div>",
         "icon": "optical-cabinet",
         "color": "#00f0ff",
         "length_m": 0,
@@ -800,7 +975,53 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 84.19217771117475
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "infrastrutturato",
+        "status_label": "Infrastrutturati / In fase di cablaggio e predisposizione secondaria",
+        "ordinanza": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "01D91831AC4261623108",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.353902,
+          43.589311,
+          5.1
+        ]
+      },
+      "properties": {
+        "id": "01D91831AC4261623108",
+        "name": "S [] ARLO (Futuro ARLO 04 - 6° nodo Stagno)",
+        "category": "arlo",
+        "frazione": "Stagno",
+        "geom_type": "Point",
+        "description": "Armadio ottico FiberCop posato in affiancamento al rame S [04] ARL ([10.353902, 43.589311]) su Via Romita / angolo Via XXV Aprile. 6° ARLO individuato nell'ultimo walk-in dell'11/10/2026. In zona 6 pozzetti in fase di getto/chiusura finale nell'area del Cantiere 2. Stato: Infrastrutturati / In fase di cablaggio e predisposizione secondaria.",
+        "raw_description": "<div>Armadio ottico FiberCop posato in affiancamento al rame S [04] ARL su Via Romita / angolo Via XXV Aprile (futuro ARLO 04 - 6° nodo Stagno).<br>Stato: <b>Infrastrutturati / In fase di cablaggio e predisposizione secondaria</b>.<br>Rilievo walk-in 11/10/2026: cabinet posizionato, in zona presenti 6 pozzetti in fase di getto/chiusura finale lungo l'asse di Cantiere 2.</div>",
+        "icon": "optical-cabinet",
+        "color": "#00f0ff",
+        "length_m": 0,
+        "length_km": 0.0,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.35407095856903,
+          "latitude": 43.58930636412416,
+          "altitude": 5.020136593416591,
+          "heading": -96.43984729380482,
+          "tilt": 9.700391337713274,
+          "range": 100.723102136144
+        },
+        "cantiere": null,
+        "status": "infrastrutturato",
+        "status_label": "Infrastrutturati / In fase di cablaggio e predisposizione secondaria",
+        "ordinanza": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -836,7 +1057,53 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 67.42346849997375
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "06D2B51C4A41C5796F90",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.35530408907809,
+          43.58928395114626,
+          8.95624684623681
+        ]
+      },
+      "properties": {
+        "id": "06D2B51C4A41C5796F90",
+        "name": "S [03] ARL",
+        "category": "arl",
+        "frazione": "Stagno",
+        "geom_type": "Point",
+        "description": "Con apparato aggiuntivo",
+        "raw_description": "<div>Con apparato aggiuntivo<br></div>",
+        "icon": "copper-cabinet",
+        "color": "#ff3366",
+        "length_m": 0,
+        "length_km": 0.0,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.35567006888551,
+          "latitude": 43.58886511499404,
+          "altitude": 12.441348060764,
+          "heading": 270.0053580845657,
+          "tilt": 0.0,
+          "range": 117.1289254685689
+        },
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -872,7 +1139,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.09037096574810492,
           "range": 139.3653636399359
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -908,7 +1180,53 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 367.7078160796736
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "00BB5347D44260DC6EF8",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.34983416084563,
+          43.59101881164565,
+          2.726155664858396
+        ]
+      },
+      "properties": {
+        "id": "00BB5347D44260DC6EF8",
+        "name": "S [06] ARL",
+        "category": "arl",
+        "frazione": "Stagno",
+        "geom_type": "Point",
+        "description": "Senza apparati aggiuntivi. Tombino TIM di fronte con segni in vista della copertura FTTH nella via",
+        "raw_description": "<div>Senza apparati aggiuntivi. Tombino TIM di fronte con segni in vista della copertura FTTH nella via<br></div>",
+        "icon": "copper-cabinet",
+        "color": "#ff3366",
+        "length_m": 0,
+        "length_km": 0.0,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.34990827722357,
+          "latitude": 43.59102696694902,
+          "altitude": 2.750842774694242,
+          "heading": 304.0998582908067,
+          "tilt": 0.0,
+          "range": 120.4211064480296
+        },
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -944,7 +1262,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 37.59936224299964
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -980,7 +1303,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 91.9395452507706
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo",
+        "status_label": "Attivo",
+        "ordinanza": null,
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -1016,7 +1344,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 124.0013270435338
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -1052,7 +1385,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 136.1776904559883
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -1088,7 +1426,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 116.0344096940025
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo_rame",
+        "status_label": "Attivo (Rete Rame / FTTC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -1124,7 +1467,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.2106551528310472,
           "range": 68.3784493319945
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo",
+        "status_label": "Attivo (Centrale TLC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -1160,7 +1508,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 500.0417798130366
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo",
+        "status_label": "Attivo (Centrale TLC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -1196,7 +1549,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.2702131546023824,
           "range": 163.6113460309934
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo",
+        "status_label": "Attivo (Centrale TLC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -1232,7 +1590,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 54.8263273599423
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo",
+        "status_label": "Attivo (Centrale TLC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -1268,7 +1631,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 740.6460948752846
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo",
+        "status_label": "Attivo (Centrale TLC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -1304,7 +1672,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 740.7751236341041
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo",
+        "status_label": "Attivo (Centrale TLC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -1340,7 +1713,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 740.0025217691492
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo",
+        "status_label": "Attivo (Centrale TLC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -1498,7 +1876,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 1060.041876830655
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "completato",
+        "status_label": "Completato (Posa Fibra Maggio-Giugno 2026)",
+        "ordinanza": null,
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -1551,7 +1934,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 728.6932012410398
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "completato",
+        "status_label": "Completato (Posa Fibra Maggio-Giugno 2026)",
+        "ordinanza": null,
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -1944,7 +2332,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 852.585581978783
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "completato",
+        "status_label": "Completato (Infrastruttura BUL Infratel)",
+        "ordinanza": null,
+        "operatore": "Infratel / Open Fiber",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -1954,13 +2347,13 @@ window.FTTH_NETWORK_DATA = {
         "type": "LineString",
         "coordinates": [
           [
-            10.47494356238502,
-            43.59370464618144,
+            10.47442599700305,
+            43.59343306161653,
             0.0
           ],
           [
-            10.47453740896556,
-            43.59346048013433,
+            10.47437151339886,
+            43.59341181697666,
             0.0
           ],
           [
@@ -1981,12 +2374,12 @@ window.FTTH_NETWORK_DATA = {
         "category": "cantiere_non_eseguito",
         "frazione": "Collesalvetti",
         "geom_type": "LineString",
-        "description": "Si notano solamente dei segni blu (oltre ai soliti colori), che indicano Fibercop , sull'asfalto",
-        "raw_description": "<div>Si notano solamente dei segni blu (oltre ai soliti colori), che indicano Fibercop , sull'asfalto<br></div>",
+        "description": "Tratta Non Eseguita Nord-Ovest (Via Nenni). Marcature blu a terra. Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni.",
+        "raw_description": "<div>Tratta Non Eseguita (Nord-Ovest / Via Nenni): marcature blu a terra.<br>Stato: <b>In attesa proroga viaria</b>.<br>Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni.</div>",
         "icon": "traffic-cone",
         "color": "#e67e22",
-        "length_m": 96.5,
-        "length_km": 0.097,
+        "length_m": 44.6,
+        "length_km": 0.045,
         "area_m2": 0,
         "area_km2": 0.0,
         "lookAt": {
@@ -2005,14 +2398,17 @@ window.FTTH_NETWORK_DATA = {
           "orario_giornaliero": "08:00 - 18:00 feriali",
           "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
           "vie_interessate": [
-            "Via Nenni",
-            "Via Roma (rotatoria Via Nenni)",
-            "Via del Valico a Pisa",
-            "Via di Cerretello"
+            "Via Nenni"
           ],
           "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
-          "stato_base": "non_eseguito"
-        }
+          "stato_base": "non_eseguito",
+          "note_slittamento": "Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni (marcature blu a terra)."
+        },
+        "status": "in_attesa_proroga",
+        "status_label": "In attesa proroga viaria (Termini Ord. 88 scaduti il 02/10)",
+        "ordinanza": "Ordinanza P.M. n. 88 del 02/09/2026 (Reg. Gen. 95)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -2079,8 +2475,8 @@ window.FTTH_NETWORK_DATA = {
         "category": "cantiere_non_eseguito",
         "frazione": "Collesalvetti",
         "geom_type": "LineString",
-        "description": "Si notano solamente dei segni blu (oltre ai soliti colori), che indicano Fibercop , sull'asfalto",
-        "raw_description": "<div>Si notano solamente dei segni blu (oltre ai soliti colori), che indicano Fibercop , sull'asfalto<br></div>",
+        "description": "Tratta Non Eseguita Nord-Ovest (Via Nenni). Marcature blu a terra. Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni.",
+        "raw_description": "<div>Tratta Non Eseguita (Nord-Ovest / Via Nenni): marcature blu a terra.<br>Stato: <b>In attesa proroga viaria</b>.<br>Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni.</div>",
         "icon": "traffic-cone",
         "color": "#e67e22",
         "length_m": 513.7,
@@ -2103,14 +2499,17 @@ window.FTTH_NETWORK_DATA = {
           "orario_giornaliero": "08:00 - 18:00 feriali",
           "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
           "vie_interessate": [
-            "Via Nenni",
-            "Via Roma (rotatoria Via Nenni)",
-            "Via del Valico a Pisa",
-            "Via di Cerretello"
+            "Via Nenni"
           ],
           "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
-          "stato_base": "non_eseguito"
-        }
+          "stato_base": "non_eseguito",
+          "note_slittamento": "Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni (marcature blu a terra)."
+        },
+        "status": "in_attesa_proroga",
+        "status_label": "In attesa proroga viaria (Termini Ord. 88 scaduti il 02/10)",
+        "ordinanza": "Ordinanza P.M. n. 88 del 02/09/2026 (Reg. Gen. 95)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -2167,7 +2566,7 @@ window.FTTH_NETWORK_DATA = {
         "category": "cantiere_eseguito",
         "frazione": "Collesalvetti",
         "geom_type": "LineString",
-        "description": "Tratta stabilita con un walk-in in data 29/09/2026 e 03/10/2026. Si notano minitrincee, matasse di corrugati e birilli. Oltre a una serie di pozzetti Fibercop.",
+        "description": "Tratta Eseguita Sud-Est (Via del Valico a Pisa, Via Peppino Impastato, Via di Cerretello). Minitrincea sigillata (microtubi Fender 4x10/14) e riuso cavidotti TIM. Ord. 88/2026.",
         "raw_description": "<div>Tratta stabilita con un walk-in in data 29/09/2026 e 03/10/2026. Si notano minitrincee, matasse di corrugati e birilli. Oltre a una serie di pozzetti Fibercop.<br></div>",
         "icon": "traffic-cone",
         "color": "#27ae60",
@@ -2191,14 +2590,19 @@ window.FTTH_NETWORK_DATA = {
           "orario_giornaliero": "08:00 - 18:00 feriali",
           "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
           "vie_interessate": [
-            "Via Nenni",
-            "Via Roma (rotatoria Via Nenni)",
             "Via del Valico a Pisa",
+            "Via Peppino Impastato",
             "Via di Cerretello"
           ],
           "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
-          "stato_base": "eseguito"
-        }
+          "stato_base": "eseguito",
+          "note_slittamento": "Tratta Eseguita (Sud-Est): Via del Valico a Pisa, Via Peppino Impastato, Via di Cerretello. Tipologia di posa: minitrincea sigillata (microtubi Fender 4x10/14) + riuso cavidotti storici TIM."
+        },
+        "status": "completato",
+        "status_label": "Completato (Minitrincea sigillata + riuso TIM)",
+        "ordinanza": "Ordinanza P.M. n. 88 del 02/09/2026 (Reg. Gen. 95)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -2270,8 +2674,8 @@ window.FTTH_NETWORK_DATA = {
         "category": "cantiere_non_eseguito",
         "frazione": "Collesalvetti",
         "geom_type": "LineString",
-        "description": "Si notano solamente dei segni blu (oltre ai soliti colori), che indicano Fibercop , sull'asfalto",
-        "raw_description": "<div>Si notano solamente dei segni blu (oltre ai soliti colori), che indicano Fibercop , sull'asfalto<br></div>",
+        "description": "Tratta Non Eseguita Nord-Ovest (Via Nenni). Marcature blu a terra. Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni.",
+        "raw_description": "<div>Tratta Non Eseguita (Nord-Ovest / Via Nenni): marcature blu a terra.<br>Stato: <b>In attesa proroga viaria</b>.<br>Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni.</div>",
         "icon": "traffic-cone",
         "color": "#e67e22",
         "length_m": 340.9,
@@ -2294,14 +2698,17 @@ window.FTTH_NETWORK_DATA = {
           "orario_giornaliero": "08:00 - 18:00 feriali",
           "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
           "vie_interessate": [
-            "Via Nenni",
-            "Via Roma (rotatoria Via Nenni)",
-            "Via del Valico a Pisa",
-            "Via di Cerretello"
+            "Via Nenni"
           ],
           "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
-          "stato_base": "non_eseguito"
-        }
+          "stato_base": "non_eseguito",
+          "note_slittamento": "Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni (marcature blu a terra)."
+        },
+        "status": "in_attesa_proroga",
+        "status_label": "In attesa proroga viaria (Termini Ord. 88 scaduti il 02/10)",
+        "ordinanza": "Ordinanza P.M. n. 88 del 02/09/2026 (Reg. Gen. 95)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -2461,7 +2868,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 2965.34725387115
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo",
+        "status_label": "Attivo",
+        "ordinanza": null,
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -2626,7 +3038,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 2965.34725387115
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo",
+        "status_label": "Attivo",
+        "ordinanza": null,
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -2704,7 +3121,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 7.439489808876339,
           "range": 133.0650315723688
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "completato",
+        "status_label": "Completato (Piano PA Connessa)",
+        "ordinanza": null,
+        "operatore": "Fastweb / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -2817,7 +3239,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 226.9127769896295
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "completato",
+        "status_label": "Completato (Piano PA Connessa)",
+        "ordinanza": null,
+        "operatore": "Fastweb / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -2952,7 +3379,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 1587.795536121412
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo",
+        "status_label": "Attivo",
+        "ordinanza": null,
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -3137,7 +3569,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 1466.295408123988
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo",
+        "status_label": "Attivo",
+        "ordinanza": null,
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -3147,18 +3584,18 @@ window.FTTH_NETWORK_DATA = {
         "type": "LineString",
         "coordinates": [
           [
-            10.35389052326956,
-            43.59022729698687,
+            10.3552476061684,
+            43.58949675357336,
             0.0
           ],
           [
-            10.35490778514402,
-            43.58997141866163,
+            10.35526921180952,
+            43.58944868153657,
             0.0
           ],
           [
-            10.3550416346986,
-            43.5898619854531,
+            10.35530674278388,
+            43.58937074879905,
             0.0
           ],
           [
@@ -3222,18 +3659,18 @@ window.FTTH_NETWORK_DATA = {
             0.0
           ],
           [
-            10.35417927629733,
-            43.58926640419229,
+            10.35421811709395,
+            43.58904179359258,
             0.0
           ],
           [
-            10.35515570989705,
-            43.58950956872407,
+            10.35421191812975,
+            43.58911957405057,
             0.0
           ],
           [
-            10.35521574502985,
-            43.58944476278808,
+            10.35421130132318,
+            43.5892455017341,
             0.0
           ]
         ]
@@ -3244,12 +3681,12 @@ window.FTTH_NETWORK_DATA = {
         "category": "cantiere_programmato",
         "frazione": "Stagno",
         "geom_type": "LineString",
-        "description": "Slittato... vecchia data 21/09-16/10",
-        "raw_description": "<div>Slittato... vecchia data&nbsp;21/09-16/10<br></div>",
+        "description": "Cantiere 2 Stagno (Ord. 104/2026). Finestra: 05/10/2026 - 17/10/2026. Vie: Via Romita sud, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio, Via Don Verità, Via 8 Marzo. Stato: In completamento (Posa condotte completata, 6 pozzetti in fase di getto/chiusura finale).",
+        "raw_description": "<div>Cantiere 2 Stagno (Ord. 104/2026). Finestra: 05/10/2026 - 17/10/2026.<br>Stato: <b>In completamento (Posa condotte completata, 6 pozzetti in fase di getto/chiusura finale)</b>.<br>Vie: Via Romita sud, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio, Via Don Verità, Via 8 Marzo.</div>",
         "icon": "traffic-cone",
         "color": "#ffd700",
-        "length_m": 792.4,
-        "length_km": 0.792,
+        "length_m": 551.3,
+        "length_km": 0.551,
         "area_m2": 0,
         "area_km2": 0.0,
         "lookAt": {
@@ -3261,26 +3698,32 @@ window.FTTH_NETWORK_DATA = {
           "range": 657.763721024312
         },
         "cantiere": {
-          "codice_ordinanza": "Ordinanza P.M. n. 95 del 10/09/2026 (Reg. Gen. 102)",
+          "codice_ordinanza": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)",
           "data_ordinanza": "10/09/2026",
           "inizio_lavori": "2026-09-21T08:00:00+02:00",
-          "fine_lavori": "2026-10-16T18:00:00+02:00",
+          "fine_lavori": "2026-10-17T18:00:00+02:00",
           "inizio_lavori_effettivo": "2026-10-05T08:00:00+02:00",
           "fine_lavori_effettivo": "2026-10-17T18:00:00+02:00",
           "orario_giornaliero": "08:00 - 18:00 feriali",
           "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
           "vie_interessate": [
-            "Via Otto Marzo",
-            "Via Romita",
+            "Via Romita sud",
             "Via De Gasperi",
             "Via Machiavelli",
             "Via XXV Aprile",
-            "Piazza Di Vittorio"
+            "Piazza Di Vittorio",
+            "Via Don Verità",
+            "Via 8 Marzo"
           ],
           "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
-          "stato_base": "programmato",
-          "note_slittamento": "Slittato al 05/10 - 17/10 da rilievo sul campo"
-        }
+          "stato_base": "in_completamento",
+          "note_slittamento": "Finestra temporale: 05/10/2026 - 17/10/2026. Stato: In completamento (Posa condotte completata, 6 pozzetti in fase di getto/chiusura finale)."
+        },
+        "status": "in_completamento",
+        "status_label": "In completamento (Posa condotte completata, 6 pozzetti in fase finale)",
+        "ordinanza": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -3317,8 +3760,8 @@ window.FTTH_NETWORK_DATA = {
         "category": "cantiere_programmato",
         "frazione": "Stagno",
         "geom_type": "LineString",
-        "description": "Slittato... vecchia data 21/09-16/10",
-        "raw_description": "<div>Slittato... vecchia data&nbsp;21/09-16/10<br></div>",
+        "description": "Cantiere 2 Stagno (Ord. 104/2026). Finestra: 05/10/2026 - 17/10/2026. Vie: Via Romita sud, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio, Via Don Verità, Via 8 Marzo. Stato: In completamento (Posa condotte completata, 6 pozzetti in fase di getto/chiusura finale).",
+        "raw_description": "<div>Cantiere 2 Stagno (Ord. 104/2026). Finestra: 05/10/2026 - 17/10/2026.<br>Stato: <b>In completamento (Posa condotte completata, 6 pozzetti in fase di getto/chiusura finale)</b>.<br>Vie: Via Romita sud, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio, Via Don Verità, Via 8 Marzo.</div>",
         "icon": "traffic-cone",
         "color": "#ffd700",
         "length_m": 360.5,
@@ -3334,26 +3777,32 @@ window.FTTH_NETWORK_DATA = {
           "range": 668.0078490997403
         },
         "cantiere": {
-          "codice_ordinanza": "Ordinanza P.M. n. 95 del 10/09/2026 (Reg. Gen. 102)",
+          "codice_ordinanza": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)",
           "data_ordinanza": "10/09/2026",
           "inizio_lavori": "2026-09-21T08:00:00+02:00",
-          "fine_lavori": "2026-10-16T18:00:00+02:00",
+          "fine_lavori": "2026-10-17T18:00:00+02:00",
           "inizio_lavori_effettivo": "2026-10-05T08:00:00+02:00",
           "fine_lavori_effettivo": "2026-10-17T18:00:00+02:00",
           "orario_giornaliero": "08:00 - 18:00 feriali",
           "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
           "vie_interessate": [
-            "Via Otto Marzo",
-            "Via Romita",
+            "Via Romita sud",
             "Via De Gasperi",
             "Via Machiavelli",
             "Via XXV Aprile",
-            "Piazza Di Vittorio"
+            "Piazza Di Vittorio",
+            "Via Don Verità",
+            "Via 8 Marzo"
           ],
           "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
-          "stato_base": "programmato",
-          "note_slittamento": "Slittato al 05/10 - 17/10 da rilievo sul campo"
-        }
+          "stato_base": "in_completamento",
+          "note_slittamento": "Finestra temporale: 05/10/2026 - 17/10/2026. Stato: In completamento (Posa condotte completata, 6 pozzetti in fase di getto/chiusura finale)."
+        },
+        "status": "in_completamento",
+        "status_label": "In completamento (Posa condotte completata, 6 pozzetti in fase finale)",
+        "ordinanza": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -3410,8 +3859,8 @@ window.FTTH_NETWORK_DATA = {
         "category": "cantiere_programmato",
         "frazione": "Stagno",
         "geom_type": "LineString",
-        "description": "Slittato... vecchia data 21/09-16/10",
-        "raw_description": "<div>Slittato... vecchia data&nbsp;21/09-16/10<br></div>",
+        "description": "Cantiere 2 Stagno (Ord. 104/2026). Finestra: 05/10/2026 - 17/10/2026. Vie: Via Romita sud, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio, Via Don Verità, Via 8 Marzo. Stato: In completamento (Posa condotte completata, 6 pozzetti in fase di getto/chiusura finale).",
+        "raw_description": "<div>Cantiere 2 Stagno (Ord. 104/2026). Finestra: 05/10/2026 - 17/10/2026.<br>Stato: <b>In completamento (Posa condotte completata, 6 pozzetti in fase di getto/chiusura finale)</b>.<br>Vie: Via Romita sud, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio, Via Don Verità, Via 8 Marzo.</div>",
         "icon": "traffic-cone",
         "color": "#ffd700",
         "length_m": 277.9,
@@ -3427,26 +3876,32 @@ window.FTTH_NETWORK_DATA = {
           "range": 792.203114705917
         },
         "cantiere": {
-          "codice_ordinanza": "Ordinanza P.M. n. 95 del 10/09/2026 (Reg. Gen. 102)",
+          "codice_ordinanza": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)",
           "data_ordinanza": "10/09/2026",
           "inizio_lavori": "2026-09-21T08:00:00+02:00",
-          "fine_lavori": "2026-10-16T18:00:00+02:00",
+          "fine_lavori": "2026-10-17T18:00:00+02:00",
           "inizio_lavori_effettivo": "2026-10-05T08:00:00+02:00",
           "fine_lavori_effettivo": "2026-10-17T18:00:00+02:00",
           "orario_giornaliero": "08:00 - 18:00 feriali",
           "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
           "vie_interessate": [
-            "Via Otto Marzo",
-            "Via Romita",
+            "Via Romita sud",
             "Via De Gasperi",
             "Via Machiavelli",
             "Via XXV Aprile",
-            "Piazza Di Vittorio"
+            "Piazza Di Vittorio",
+            "Via Don Verità",
+            "Via 8 Marzo"
           ],
           "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
-          "stato_base": "programmato",
-          "note_slittamento": "Slittato al 05/10 - 17/10 da rilievo sul campo"
-        }
+          "stato_base": "in_completamento",
+          "note_slittamento": "Finestra temporale: 05/10/2026 - 17/10/2026. Stato: In completamento (Posa condotte completata, 6 pozzetti in fase di getto/chiusura finale)."
+        },
+        "status": "in_completamento",
+        "status_label": "In completamento (Posa condotte completata, 6 pozzetti in fase finale)",
+        "ordinanza": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -3499,7 +3954,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 973.1577716082395
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "completato",
+        "status_label": "Completato (Dorsale Fibra SP555)",
+        "ordinanza": "Autorizzazione Provinciale SP555 (Luglio 2026)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -3627,79 +4087,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 2903.175475927711
         },
-        "cantiere": null
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "0A2895209441C56CED8C",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          10.35045364633308,
-          43.59268825418914,
-          2.480084902416697
-        ]
-      },
-      "properties": {
-        "id": "0A2895209441C56CED8C",
-        "name": "S [27] ARLO",
-        "category": "arlo",
-        "frazione": "Stagno",
-        "geom_type": "Point",
-        "description": "",
-        "raw_description": "",
-        "icon": "optical-cabinet",
-        "color": "#00f0ff",
-        "length_m": 0,
-        "length_km": 0.0,
-        "area_m2": 0,
-        "area_km2": 0.0,
-        "lookAt": {
-          "longitude": 10.35048466135247,
-          "latitude": 43.59251258250174,
-          "altitude": 2.422973022839601,
-          "heading": 5.318547260249746,
-          "tilt": 0.0,
-          "range": 234.1587203446761
-        },
-        "cantiere": null
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "06D2B51C4A41C5796F90",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          10.35530408907809,
-          43.58928395114626,
-          8.95624684623681
-        ]
-      },
-      "properties": {
-        "id": "06D2B51C4A41C5796F90",
-        "name": "S [03] ARL",
-        "category": "arl",
-        "frazione": "Stagno",
-        "geom_type": "Point",
-        "description": "Con apparato aggiuntivo",
-        "raw_description": "<div>Con apparato aggiuntivo<br></div>",
-        "icon": "copper-cabinet",
-        "color": "#ff3366",
-        "length_m": 0,
-        "length_km": 0.0,
-        "area_m2": 0,
-        "area_km2": 0.0,
-        "lookAt": {
-          "longitude": 10.35567006888551,
-          "latitude": 43.58886511499404,
-          "altitude": 12.441348060764,
-          "heading": 270.0053580845657,
-          "tilt": 0.0,
-          "range": 117.1289254685689
-        },
-        "cantiere": null
+        "cantiere": null,
+        "status": "completato",
+        "status_label": "Completato (Infrastruttura BUL Infratel)",
+        "ordinanza": null,
+        "operatore": "Infratel / Open Fiber",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -3757,7 +4150,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 510.9855005475401
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "completato",
+        "status_label": "Completato (Posa Fibra Maggio-Giugno 2026)",
+        "ordinanza": null,
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -3805,7 +4203,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 510.9855005475401
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "completato",
+        "status_label": "Completato (Posa Fibra Maggio-Giugno 2026)",
+        "ordinanza": null,
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -3848,7 +4251,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 496.3133848248253
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "completato",
+        "status_label": "Completato (Posa Fibra Maggio-Giugno 2026)",
+        "ordinanza": null,
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -3901,7 +4309,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 719.2662226086395
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "completato",
+        "status_label": "Completato (Posa Fibra Maggio-Giugno 2026)",
+        "ordinanza": null,
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -3937,7 +4350,12 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 740.493615114443
         },
-        "cantiere": null
+        "cantiere": null,
+        "status": "attivo",
+        "status_label": "Attivo (Centrale TLC)",
+        "ordinanza": null,
+        "operatore": "TIM / FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -3984,8 +4402,8 @@ window.FTTH_NETWORK_DATA = {
         "category": "cantiere_non_eseguito",
         "frazione": "Collesalvetti",
         "geom_type": "LineString",
-        "description": "Si notano solamente dei segni blu (oltre ai soliti colori), che indicano Fibercop , sull'asfalto",
-        "raw_description": "<div>Si notano solamente dei segni blu (oltre ai soliti colori), che indicano Fibercop , sull'asfalto</div>",
+        "description": "Tratta Non Eseguita Nord-Ovest (Via Nenni). Marcature blu a terra. Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni.",
+        "raw_description": "<div>Tratta Non Eseguita (Nord-Ovest / Via Nenni): marcature blu a terra.<br>Stato: <b>In attesa proroga viaria</b>.<br>Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni.</div>",
         "icon": "traffic-cone",
         "color": "#e67e22",
         "length_m": 182.8,
@@ -4008,14 +4426,17 @@ window.FTTH_NETWORK_DATA = {
           "orario_giornaliero": "08:00 - 18:00 feriali",
           "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
           "vie_interessate": [
-            "Via Nenni",
-            "Via Roma (rotatoria Via Nenni)",
-            "Via del Valico a Pisa",
-            "Via di Cerretello"
+            "Via Nenni"
           ],
           "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
-          "stato_base": "non_eseguito"
-        }
+          "stato_base": "non_eseguito",
+          "note_slittamento": "Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni (marcature blu a terra)."
+        },
+        "status": "in_attesa_proroga",
+        "status_label": "In attesa proroga viaria (Termini Ord. 88 scaduti il 02/10)",
+        "ordinanza": "Ordinanza P.M. n. 88 del 02/09/2026 (Reg. Gen. 95)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -4039,11 +4460,11 @@ window.FTTH_NETWORK_DATA = {
       "properties": {
         "id": "0A173E317742376CD0E8",
         "name": "Cantiere 3 (19/10-23/10)",
-        "category": "cantiere",
+        "category": "cantiere_programmato",
         "frazione": "Stagno",
         "geom_type": "LineString",
-        "description": "",
-        "raw_description": "",
+        "description": "Cantiere 3 Stagno (Ord. 105/2026 + Concessione Suolo 77/2026). Finestra: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Vie: Via Aiaccia e Via Umbria. Stato: Autorizzato / Avvio programmato. Punto di raccordo: innesto sud Via Aiaccia con dorsale SP555.",
+        "raw_description": "<div>Cantiere 3 Stagno (Ord. 105/2026 + Concessione Suolo 77/2026). Finestra: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq).<br>Stato: <b>Autorizzato / Avvio programmato</b>.<br>Tratte: Via Aiaccia e Via Umbria. Nota: innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale SP555 autorizzata a luglio 2026.</div>",
         "icon": "traffic-cone",
         "color": "#f39c12",
         "length_m": 172.7,
@@ -4058,7 +4479,28 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 589.429853804686
         },
-        "cantiere": null
+        "cantiere": {
+          "codice_ordinanza": "Ordinanza P.M. n. 105/2026 + Concessione Suolo n. 77/2026",
+          "data_ordinanza": "09/10/2026",
+          "inizio_lavori": "2026-10-19T08:00:00+02:00",
+          "fine_lavori": "2026-10-23T18:00:00+02:00",
+          "inizio_lavori_effettivo": "2026-10-19T08:00:00+02:00",
+          "fine_lavori_effettivo": "2026-10-23T18:00:00+02:00",
+          "orario_giornaliero": "08:00 - 18:00 feriali (5 giorni, occupazione 60 mq)",
+          "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
+          "vie_interessate": [
+            "Via Aiaccia",
+            "Via Umbria"
+          ],
+          "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+          "stato_base": "programmato",
+          "note_slittamento": "Finestra temporale: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Stato: Autorizzato / Avvio programmato. Nota: Innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale SP555 autorizzata a luglio 2026."
+        },
+        "status": "autorizzato",
+        "status_label": "Autorizzato / Avvio programmato (19/10 - 23/10)",
+        "ordinanza": "Ordinanza P.M. n. 105/2026 + Concessione Suolo n. 77/2026",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -4122,11 +4564,11 @@ window.FTTH_NETWORK_DATA = {
       "properties": {
         "id": "0EB8D0BA5142376E2D37",
         "name": "Cantiere 3 (19/10-23/10)",
-        "category": "cantiere",
+        "category": "cantiere_programmato",
         "frazione": "Stagno",
         "geom_type": "LineString",
-        "description": "",
-        "raw_description": "",
+        "description": "Cantiere 3 Stagno (Ord. 105/2026 + Concessione Suolo 77/2026). Finestra: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Vie: Via Aiaccia e Via Umbria. Stato: Autorizzato / Avvio programmato. Punto di raccordo: innesto sud Via Aiaccia con dorsale SP555.",
+        "raw_description": "<div>Cantiere 3 Stagno (Ord. 105/2026 + Concessione Suolo 77/2026). Finestra: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq).<br>Stato: <b>Autorizzato / Avvio programmato</b>.<br>Tratte: Via Aiaccia e Via Umbria. Nota: innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale SP555 autorizzata a luglio 2026.</div>",
         "icon": "traffic-cone",
         "color": "#f39c12",
         "length_m": 627.5,
@@ -4141,7 +4583,28 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 426.9839933574985
         },
-        "cantiere": null
+        "cantiere": {
+          "codice_ordinanza": "Ordinanza P.M. n. 105/2026 + Concessione Suolo n. 77/2026",
+          "data_ordinanza": "09/10/2026",
+          "inizio_lavori": "2026-10-19T08:00:00+02:00",
+          "fine_lavori": "2026-10-23T18:00:00+02:00",
+          "inizio_lavori_effettivo": "2026-10-19T08:00:00+02:00",
+          "fine_lavori_effettivo": "2026-10-23T18:00:00+02:00",
+          "orario_giornaliero": "08:00 - 18:00 feriali (5 giorni, occupazione 60 mq)",
+          "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
+          "vie_interessate": [
+            "Via Aiaccia",
+            "Via Umbria"
+          ],
+          "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+          "stato_base": "programmato",
+          "note_slittamento": "Finestra temporale: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Stato: Autorizzato / Avvio programmato. Nota: Innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale SP555 autorizzata a luglio 2026."
+        },
+        "status": "autorizzato",
+        "status_label": "Autorizzato / Avvio programmato (19/10 - 23/10)",
+        "ordinanza": "Ordinanza P.M. n. 105/2026 + Concessione Suolo n. 77/2026",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -4185,11 +4648,11 @@ window.FTTH_NETWORK_DATA = {
       "properties": {
         "id": "07624940EF4237721F0B",
         "name": "Cantiere 3 (19/10-23/10)",
-        "category": "cantiere",
+        "category": "cantiere_programmato",
         "frazione": "Stagno",
         "geom_type": "LineString",
-        "description": "Improbabile che il cantiere arrivi fino a queste zone, ma fino al 24 ottobre circa terrò sulla mappa tutta Via Aiaccia. Curioso che però questa tratta arriva davanti alla tratta color viola \"Opera sulla Backbone di 07/26\"... analisi di questa informazione è necessaria.",
-        "raw_description": "<div>Improbabile che il cantiere arrivi fino a queste zone, ma fino al 24 ottobre circa terrò sulla mappa tutta Via Aiaccia. Curioso che però questa tratta arriva davanti alla tratta color viola \"Opera sulla Backbone di 07/26\"... analisi di questa informazione è necessaria.<br></div>",
+        "description": "Cantiere 3 Stagno (Ord. 105/2026 + Concessione Suolo 77/2026). Finestra: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Vie: Via Aiaccia e Via Umbria. Stato: Autorizzato / Avvio programmato. Punto di raccordo: innesto sud Via Aiaccia con dorsale SP555.",
+        "raw_description": "<div>Cantiere 3 Stagno (Ord. 105/2026 + Concessione Suolo 77/2026). Finestra: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq).<br>Stato: <b>Autorizzato / Avvio programmato</b>.<br>Tratte: Via Aiaccia e Via Umbria. Nota: innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale SP555 autorizzata a luglio 2026.</div>",
         "icon": "traffic-cone",
         "color": "#f39c12",
         "length_m": 2507.4,
@@ -4204,7 +4667,28 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 988.5851525836915
         },
-        "cantiere": null
+        "cantiere": {
+          "codice_ordinanza": "Ordinanza P.M. n. 105/2026 + Concessione Suolo n. 77/2026",
+          "data_ordinanza": "09/10/2026",
+          "inizio_lavori": "2026-10-19T08:00:00+02:00",
+          "fine_lavori": "2026-10-23T18:00:00+02:00",
+          "inizio_lavori_effettivo": "2026-10-19T08:00:00+02:00",
+          "fine_lavori_effettivo": "2026-10-23T18:00:00+02:00",
+          "orario_giornaliero": "08:00 - 18:00 feriali (5 giorni, occupazione 60 mq)",
+          "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
+          "vie_interessate": [
+            "Via Aiaccia",
+            "Via Umbria"
+          ],
+          "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+          "stato_base": "programmato",
+          "note_slittamento": "Finestra temporale: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Stato: Autorizzato / Avvio programmato. Nota: Innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale SP555 autorizzata a luglio 2026."
+        },
+        "status": "autorizzato",
+        "status_label": "Autorizzato / Avvio programmato (19/10 - 23/10)",
+        "ordinanza": "Ordinanza P.M. n. 105/2026 + Concessione Suolo n. 77/2026",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     },
     {
@@ -4238,11 +4722,11 @@ window.FTTH_NETWORK_DATA = {
       "properties": {
         "id": "0C884334EF423778B430",
         "name": "Cantiere 3 (19/10-23/10)",
-        "category": "cantiere",
+        "category": "cantiere_programmato",
         "frazione": "Stagno",
         "geom_type": "LineString",
-        "description": "",
-        "raw_description": "",
+        "description": "Cantiere 3 Stagno (Ord. 105/2026 + Concessione Suolo 77/2026). Finestra: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Vie: Via Aiaccia e Via Umbria. Stato: Autorizzato / Avvio programmato. Punto di raccordo: innesto sud Via Aiaccia con dorsale SP555.",
+        "raw_description": "<div>Cantiere 3 Stagno (Ord. 105/2026 + Concessione Suolo 77/2026). Finestra: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq).<br>Stato: <b>Autorizzato / Avvio programmato</b>.<br>Tratte: Via Aiaccia e Via Umbria. Nota: innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale SP555 autorizzata a luglio 2026.</div>",
         "icon": "traffic-cone",
         "color": "#f39c12",
         "length_m": 167.7,
@@ -4257,7 +4741,370 @@ window.FTTH_NETWORK_DATA = {
           "tilt": 0.0,
           "range": 642.4696112451784
         },
-        "cantiere": null
+        "cantiere": {
+          "codice_ordinanza": "Ordinanza P.M. n. 105/2026 + Concessione Suolo n. 77/2026",
+          "data_ordinanza": "09/10/2026",
+          "inizio_lavori": "2026-10-19T08:00:00+02:00",
+          "fine_lavori": "2026-10-23T18:00:00+02:00",
+          "inizio_lavori_effettivo": "2026-10-19T08:00:00+02:00",
+          "fine_lavori_effettivo": "2026-10-23T18:00:00+02:00",
+          "orario_giornaliero": "08:00 - 18:00 feriali (5 giorni, occupazione 60 mq)",
+          "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
+          "vie_interessate": [
+            "Via Aiaccia",
+            "Via Umbria"
+          ],
+          "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+          "stato_base": "programmato",
+          "note_slittamento": "Finestra temporale: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Stato: Autorizzato / Avvio programmato. Nota: Innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale SP555 autorizzata a luglio 2026."
+        },
+        "status": "autorizzato",
+        "status_label": "Autorizzato / Avvio programmato (19/10 - 23/10)",
+        "ordinanza": "Ordinanza P.M. n. 105/2026 + Concessione Suolo n. 77/2026",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "02172672CE42615EB699",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.47522048906437,
+            43.59396174119303,
+            0.0
+          ],
+          [
+            10.47514677070755,
+            43.5939554551306,
+            0.0
+          ],
+          [
+            10.47513559202407,
+            43.59391535821057,
+            0.0
+          ],
+          [
+            10.47506766076643,
+            43.59390119303907,
+            0.0
+          ],
+          [
+            10.4749748805296,
+            43.59389540110733,
+            0.0
+          ],
+          [
+            10.47498418956256,
+            43.5938489724852,
+            0.0
+          ],
+          [
+            10.47507684559099,
+            43.59385034324769,
+            0.0
+          ],
+          [
+            10.47509475087115,
+            43.5937743052212,
+            0.0
+          ],
+          [
+            10.47512526741844,
+            43.59371927608166,
+            0.0
+          ],
+          [
+            10.47496962898418,
+            43.59368793488029,
+            0.0
+          ],
+          [
+            10.47490326532247,
+            43.59366627070714,
+            0.0
+          ],
+          [
+            10.4748900848467,
+            43.59365918305262,
+            0.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "02172672CE42615EB699",
+        "name": "Cantiere 1 AGGIUNTO",
+        "category": "cantiere_eseguito",
+        "frazione": "Collesalvetti",
+        "geom_type": "LineString",
+        "description": "Anello di raccordo rotatoria Via Roma / Via Nenni / Via Ciampi (71,8 m). Opere civili completate: minitrincea sigillata (microtubi Fender 4x10/14), 4 pozzetti FiberCop e riuso cavidotti TIM. Posato ARLO 01. Ord. 88/2026.",
+        "raw_description": "<div>Anello di raccordo rotatoria Via Roma / Via Nenni / Via Ciampi (71,8 m).<br>Stato: <b>Completato</b>.<br>Tipologia di posa: minitrincea sigillata (microtubi Fender 4x10/14), 4 pozzetti FiberCop e riuso cavidotti storici TIM. Ord. 88/2026.</div>",
+        "icon": "traffic-cone",
+        "color": "#27ae60",
+        "length_m": 71.8,
+        "length_km": 0.072,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.47492732115747,
+          "latitude": 43.59379081345137,
+          "altitude": 29.14511948813004,
+          "heading": 83.7976987010077,
+          "tilt": 4.808734125740311,
+          "range": 66.86451751381357
+        },
+        "cantiere": {
+          "codice_ordinanza": "Ordinanza P.M. n. 88 del 02/09/2026 (Reg. Gen. 95)",
+          "data_ordinanza": "02/09/2026",
+          "inizio_lavori": "2026-09-14T08:00:00+02:00",
+          "fine_lavori": "2026-10-02T18:00:00+02:00",
+          "orario_giornaliero": "08:00 - 18:00 feriali",
+          "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
+          "vie_interessate": [
+            "Via Roma (rotatoria Via Nenni / Via Ciampi)"
+          ],
+          "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
+          "stato_base": "eseguito",
+          "note_slittamento": "Anello di raccordo rotatoria (71,8 m) eseguito con minitrincea sigillata (microtubi Fender 4x10/14), 4 pozzetti FiberCop e riuso cavidotti TIM preesistenti. Posato ARLO 01."
+        },
+        "status": "completato",
+        "status_label": "Completato (Anello raccordo rotatoria + 4 pozzetti)",
+        "ordinanza": "Ordinanza P.M. n. 88 del 02/09/2026 (Reg. Gen. 95)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0F45FBA6684261661C70",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.35393529899929,
+            43.58894121987289,
+            0.0
+          ],
+          [
+            10.35390776507647,
+            43.58931028732163,
+            0.0
+          ],
+          [
+            10.3540313843256,
+            43.58931232066043,
+            0.0
+          ],
+          [
+            10.35403350726273,
+            43.58923779750181,
+            0.0
+          ],
+          [
+            10.35414090137346,
+            43.58923972955698,
+            0.0
+          ],
+          [
+            10.35430125942297,
+            43.58926267358282,
+            0.0
+          ],
+          [
+            10.35470280809752,
+            43.58936021908599,
+            0.0
+          ],
+          [
+            10.35519573135605,
+            43.58948753139405,
+            0.0
+          ],
+          [
+            10.3551656133261,
+            43.58954045834062,
+            0.0
+          ],
+          [
+            10.35513806192446,
+            43.5896264111891,
+            0.0
+          ],
+          [
+            10.35502368277303,
+            43.58980588868208,
+            0.0
+          ],
+          [
+            10.35490963291807,
+            43.5899177142093,
+            0.0
+          ],
+          [
+            10.35461106803324,
+            43.59002153955928,
+            0.0
+          ],
+          [
+            10.35396925686467,
+            43.59018244549794,
+            0.0
+          ],
+          [
+            10.3539678784075,
+            43.59018717306441,
+            0.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "0F45FBA6684261661C70",
+        "name": "Cantiere 2 ESEGUITO",
+        "category": "cantiere_eseguito",
+        "frazione": "Stagno",
+        "geom_type": "LineString",
+        "description": "Tratta completata Cantiere 2 Stagno (Via Romita sud / Via XXV Aprile, 292,9 m). Posa condotte ultimata al walk-in 11/10/2026. Ord. 104/2026.",
+        "raw_description": "<div>Tratta completata Cantiere 2 Stagno (Via Romita sud / Via XXV Aprile, 292,9 m).<br>Stato: <b>Completato</b>.<br>Posa condotte completata al walk-in 11/10/2026. Ord. 104/2026.</div>",
+        "icon": "traffic-cone",
+        "color": "#27ae60",
+        "length_m": 292.9,
+        "length_km": 0.293,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.35400148645876,
+          "latitude": 43.58989530768637,
+          "altitude": 6.869133492430366,
+          "heading": -96.44059341764786,
+          "tilt": 9.700464184984,
+          "range": 148.8005123761104
+        },
+        "cantiere": {
+          "codice_ordinanza": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)",
+          "data_ordinanza": "10/09/2026",
+          "inizio_lavori": "2026-09-21T08:00:00+02:00",
+          "fine_lavori": "2026-10-17T18:00:00+02:00",
+          "inizio_lavori_effettivo": "2026-10-05T08:00:00+02:00",
+          "fine_lavori_effettivo": "2026-10-17T18:00:00+02:00",
+          "orario_giornaliero": "08:00 - 18:00 feriali",
+          "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
+          "vie_interessate": [
+            "Via Romita sud",
+            "Via XXV Aprile"
+          ],
+          "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+          "stato_base": "eseguito",
+          "note_slittamento": "Tratta verificata come completata nell'ultimo walk-in dell'11/10/2026 su Via Romita sud e Via XXV Aprile (292,9 m). Posa condotte ultimata."
+        },
+        "status": "completato",
+        "status_label": "Completato (Posa condotte ultimata)",
+        "ordinanza": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pm_68",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.35336,
+          43.590365,
+          12.5
+        ]
+      },
+      "properties": {
+        "id": "pm_68",
+        "name": "S [05] ARLO",
+        "category": "arlo",
+        "frazione": "Stagno",
+        "geom_type": "Point",
+        "description": "Armadio ottico FiberCop S [05] ARLO (Via De Gasperi / Via Romita nord, affiancato a S [05] ARL).\nStato: Infrastrutturati / In fase di cablaggio e predisposizione secondaria.",
+        "raw_description": "<div>Armadio ottico FiberCop S [05] ARLO (Via De Gasperi / Via Romita nord, affiancato a S [05] ARL).<br>Stato: <b>Infrastrutturati / In fase di cablaggio e predisposizione secondaria</b>.</div>",
+        "icon": "optical-cabinet",
+        "color": "#00f0ff",
+        "length_m": 0,
+        "length_km": 0.0,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": null,
+        "cantiere": null,
+        "status": "infrastrutturato",
+        "status_label": "Infrastrutturati / In fase di cablaggio e predisposizione secondaria",
+        "ordinanza": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pm_69",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.349825,
+          43.591025,
+          2.7
+        ]
+      },
+      "properties": {
+        "id": "pm_69",
+        "name": "S [06] ARLO",
+        "category": "arlo",
+        "frazione": "Stagno",
+        "geom_type": "Point",
+        "description": "Armadio ottico FiberCop S [06] ARLO (Via Machiavelli / Via 8 Marzo, affiancato a S [06] ARL).\nStato: Infrastrutturati / In fase di cablaggio e predisposizione secondaria.",
+        "raw_description": "<div>Armadio ottico FiberCop S [06] ARLO (Via Machiavelli / Via 8 Marzo, affiancato a S [06] ARL).<br>Stato: <b>Infrastrutturati / In fase di cablaggio e predisposizione secondaria</b>.</div>",
+        "icon": "optical-cabinet",
+        "color": "#00f0ff",
+        "length_m": 0,
+        "length_km": 0.0,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": null,
+        "cantiere": null,
+        "status": "infrastrutturato",
+        "status_label": "Infrastrutturati / In fase di cablaggio e predisposizione secondaria",
+        "ordinanza": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pm_70",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.349105,
+          43.58947,
+          2.7
+        ]
+      },
+      "properties": {
+        "id": "pm_70",
+        "name": "S [07] ARLO",
+        "category": "arlo",
+        "frazione": "Stagno",
+        "geom_type": "Point",
+        "description": "Armadio ottico FiberCop S [07] ARLO (Via Guerrazzi sud, affiancato a S [07] ARL).\nStato: Infrastrutturati / In fase di cablaggio e predisposizione secondaria.",
+        "raw_description": "<div>Armadio ottico FiberCop S [07] ARLO (Via Guerrazzi sud, affiancato a S [07] ARL).<br>Stato: <b>Infrastrutturati / In fase di cablaggio e predisposizione secondaria</b>.</div>",
+        "icon": "optical-cabinet",
+        "color": "#00f0ff",
+        "length_m": 0,
+        "length_km": 0.0,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": null,
+        "cantiere": null,
+        "status": "infrastrutturato",
+        "status_label": "Infrastrutturati / In fase di cablaggio e predisposizione secondaria",
+        "ordinanza": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-10-11"
       }
     }
   ]

@@ -94,7 +94,7 @@
                 <i data-lucide="network" class="text-cyber-neon w-8 h-8 pulse-slow"></i>
                 <div>
                     <h1 class="text-xl font-bold font-['Rajdhani'] tracking-wider text-white">GEOFIBRA <span class="text-cyber-neon">COLLESALVETTI</span></h1>
-                    <p class="text-xs text-slate-400 font-['Rajdhani'] uppercase tracking-widest">Osservatorio Civico TLC & FTTH</p>
+                    <p class="text-xs text-slate-400 font-['Rajdhani'] uppercase tracking-widest">Osservatorio Civico TLC & FTTH &bull; Snapshot 4</p>
                 </div>
             </div>
             
@@ -121,7 +121,49 @@
         <!-- Map Container -->
         <div id="map" class="absolute inset-0 z-0"></div>
 
-        <!-- Map Layer Controls (Custom) -->
+        <!-- Floating Legenda & Filtro Cantieri (Left) -->
+        <div id="cantieri-legend-filter" class="absolute top-20 left-6 z-40 glass-panel border border-cyber-border rounded-xl p-3 shadow-xl backdrop-blur-md w-72">
+            <div class="flex items-center justify-between gap-2 pb-2 mb-2 border-b border-cyber-border/40">
+                <span class="text-xs font-['Rajdhani'] font-bold text-white uppercase tracking-wider flex items-center gap-1.5">
+                    <i data-lucide="filter" class="w-3.5 h-3.5 text-cyber-neon"></i> Filtro Cantieri & Tratte
+                </span>
+                <span class="text-[10px] text-cyber-neon font-mono font-bold">Rilievo 11/10</span>
+            </div>
+            <div class="grid grid-cols-1 gap-1 text-xs">
+                <button class="cantiere-filter-btn active-filter bg-cyber-neon/20 text-cyber-neon border border-cyber-neon/50 px-2.5 py-1.5 rounded text-left font-semibold flex items-center justify-between transition-all" data-filter="all">
+                    <span class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Tutti gli Elementi
+                    </span>
+                    <span class="text-[10px] text-slate-400 font-mono">Tutto</span>
+                </button>
+                <button class="cantiere-filter-btn text-slate-300 hover:bg-white/10 border border-transparent px-2.5 py-1.5 rounded text-left font-semibold flex items-center justify-between transition-all" data-filter="completati">
+                    <span class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Tratte Completate
+                    </span>
+                    <span class="text-[10px] text-emerald-400 font-mono">4</span>
+                </button>
+                <button class="cantiere-filter-btn text-slate-300 hover:bg-white/10 border border-transparent px-2.5 py-1.5 rounded text-left font-semibold flex items-center justify-between transition-all" data-filter="in_completamento">
+                    <span class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span> In Completamento (C2)
+                    </span>
+                    <span class="text-[10px] text-amber-400 font-mono">3</span>
+                </button>
+                <button class="cantiere-filter-btn text-slate-300 hover:bg-white/10 border border-transparent px-2.5 py-1.5 rounded text-left font-semibold flex items-center justify-between transition-all" data-filter="autorizzati">
+                    <span class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-orange-400"></span> Autorizzati (C3 Stagno)
+                    </span>
+                    <span class="text-[10px] text-orange-400 font-mono">4</span>
+                </button>
+                <button class="cantiere-filter-btn text-slate-300 hover:bg-white/10 border border-transparent px-2.5 py-1.5 rounded text-left font-semibold flex items-center justify-between transition-all" data-filter="in_attesa_proroga">
+                    <span class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-rose-400"></span> In Attesa Proroga (C1)
+                    </span>
+                    <span class="text-[10px] text-rose-400 font-mono">5</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Map Layer Controls (Custom - Bottom Left) -->
         <div class="absolute bottom-6 left-6 z-40 flex bg-cyber-panel border border-cyber-border rounded-lg overflow-hidden backdrop-blur-md">
             <button class="layer-btn px-4 py-2 text-sm font-semibold hover:bg-white/10 active-layer" data-layer="topo">OpenStreetMap</button>
             <button class="layer-btn px-4 py-2 text-sm font-semibold hover:bg-white/10 border-l border-cyber-border" data-layer="satellite">Satellite HD</button>
@@ -129,7 +171,7 @@
         </div>
 
         <!-- Telemetry HUD (Right) -->
-        <div class="absolute top-20 right-6 z-40 w-80 glass-panel border border-cyber-border rounded-xl flex flex-col max-h-[calc(100vh-120px)]">
+        <div class="absolute top-20 right-6 z-40 w-84 glass-panel border border-cyber-border rounded-xl flex flex-col max-h-[calc(100vh-120px)]">
             <div class="p-4 border-b border-cyber-border bg-gradient-to-r from-transparent to-cyber-neon/10">
                 <h2 class="text-lg font-['Rajdhani'] font-bold text-white flex items-center gap-2">
                     <i data-lucide="activity" class="text-cyber-neon w-5 h-5"></i> Telemetria Rete
@@ -137,6 +179,42 @@
             </div>
             
             <div class="p-4 space-y-4 overflow-y-auto custom-scrollbar">
+                <!-- Municipal Progress Card -->
+                <div class="stat-card bg-gradient-to-br from-cyan-950/40 to-slate-900/60 border border-cyber-neon/40 shadow-lg shadow-cyan-950/30">
+                    <div class="flex items-center justify-between">
+                        <span class="stat-label text-cyber-neon flex items-center gap-1">
+                            <i data-lucide="gauge" class="w-3 h-3"></i> AVANZAMENTO COMUNE FTTH
+                        </span>
+                        <span class="stat-value text-cyber-neon text-xl font-mono" id="stat-avanzamento">62.8%</span>
+                    </div>
+                    <div class="w-full bg-black/60 rounded-full h-2 mt-2 overflow-hidden border border-cyber-neon/20">
+                        <div id="stat-avanzamento-bar" class="bg-gradient-to-r from-cyan-500 via-teal-400 to-emerald-400 h-2 rounded-full transition-all duration-700" style="width: 62.8%"></div>
+                    </div>
+                    <div class="flex justify-between items-center text-[10px] text-slate-400 mt-1.5 font-mono">
+                        <span>Stagno: <b class="text-white">86.4%</b></span>
+                        <span>Collesalvetti: <b class="text-white">41.5%</b></span>
+                    </div>
+                </div>
+
+                <!-- Highlights Rilievo 11/10/2026 -->
+                <div class="bg-black/40 border border-cyber-border/40 rounded-lg p-3 text-xs space-y-2">
+                    <div class="flex items-center gap-1.5 font-bold text-cyber-neon uppercase tracking-wider text-[11px]">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-cyber-neon"></i> Snapshot 4 &bull; 11 Ottobre 2026
+                    </div>
+                    <div class="flex items-start gap-1.5 text-slate-200 text-[11px] leading-tight">
+                        <span class="text-emerald-400 font-bold">•</span>
+                        <span><b>Collesalvetti Capoluogo:</b> posato il primo ARLO e completato l'hub sotterraneo alla rotatoria con 4 pozzetti FiberCop.</span>
+                    </div>
+                    <div class="flex items-start gap-1.5 text-slate-200 text-[11px] leading-tight">
+                        <span class="text-amber-400 font-bold">•</span>
+                        <span><b>Stagno:</b> espansione della copertura a 6 armadi ARLO totali e imminente chiusura del Cantiere 2 (posa condotte ultimata, 6 pozzetti in chiusura).</span>
+                    </div>
+                    <div class="flex items-start gap-1.5 text-slate-300 text-[11px] leading-tight">
+                        <span class="text-cyber-neon font-bold">•</span>
+                        <span><b>Cantiere 3:</b> autorizzato su Via Aiaccia e Via Umbria per il 19-23 ottobre (Ord. 105/2026).</span>
+                    </div>
+                </div>
+
                 <!-- Stats Grid -->
                 <div class="grid grid-cols-2 gap-3">
                     <div class="stat-card">
@@ -175,7 +253,7 @@
 
                 <!-- List Filter -->
                 <div class="mt-4">
-                    <input type="text" id="search-elements" placeholder="Cerca apparato... (es. ARL 04)" class="w-full bg-black/40 border border-cyber-border rounded px-3 py-2 text-sm text-white outline-none focus:border-cyber-neon transition-colors">
+                    <input type="text" id="search-elements" placeholder="Cerca apparato... (es. ARLO 01)" class="w-full bg-black/40 border border-cyber-border rounded px-3 py-2 text-sm text-white outline-none focus:border-cyber-neon transition-colors">
                     <div id="elements-list" class="mt-2 space-y-1 max-h-40 overflow-y-auto custom-scrollbar pr-1">
                         <!-- List items injected via JS -->
                     </div>
@@ -208,7 +286,7 @@
                     <div class="p-4 glass-panel border border-cyber-border/40 rounded-xl flex items-start gap-3">
                         <i data-lucide="shield-alert" class="w-6 h-6 text-amber-400 flex-shrink-0 mt-0.5"></i>
                         <div class="text-xs text-slate-300 leading-relaxed">
-                            <b class="text-white">Albo Pretorio del Comune di Collesalvetti:</b> Questo modulo incrocia le ordinanze di regolamentazione stradale e scavo pubblicate all'Albo Pretorio per la posa dell'infrastruttura FTTH FiberCop / Fastweb. Lo stato dei cantieri (programmato, attivo, concluso) è calcolato al secondo sul fuso orario di <b>Europe/Rome</b> e rispetta le fasce feriali autorizzate (08:00 - 18:00), evidenziando separatamente i rilievi civici di campo.
+                            <b class="text-white">Albo Pretorio del Comune di Collesalvetti:</b> Questo modulo incrocia le ordinanze di regolamentazione stradale e scavo pubblicate all'Albo Pretorio per la posa dell'infrastruttura FTTH FiberCop / Fastweb. Lo stato dei cantieri (programmato, attivo, in completamento, concluso) è calcolato al secondo sul fuso orario di <b>Europe/Rome</b> e rispetta le fasce feriali autorizzate (08:00 - 18:00), evidenziando separatamente i rilievi civici di campo dello <b>Snapshot 4 (11/10/2026)</b>.
                         </div>
                     </div>
 

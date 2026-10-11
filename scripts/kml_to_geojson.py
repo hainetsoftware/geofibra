@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 kml_to_geojson.py - Parser KML e generatore GeoJSON / data.js per la rete FTTH di Collesalvetti.
-Supporta Snapshot 3, calcolo distanze Haversine, aree poligonali e metadati ordinanze.
+Supporta Snapshot 4 (11/10/2026), calcolo distanze Haversine, aree poligonali,
+metadati ordinanze comunali e tag di stato/tracciamento standardizzati.
 """
 
 import xml.etree.ElementTree as ET
@@ -61,7 +62,7 @@ def categorize(name, geom_type, desc):
         frazione = "Stagno"
     elif n.startswith("G ") or "guasticce" in nl:
         frazione = "Guasticce"
-    elif "aiaccia" in nl or "aiaccia" in dl:
+    elif "aiaccia" in nl or "aiaccia" in dl or "umbria" in nl or "umbria" in dl:
         frazione = "Stagno"
 
     category = "altro"
@@ -113,20 +114,25 @@ def categorize(name, geom_type, desc):
         icon = "fiber-cable"
         color = "#9b59b6"
         frazione = "Stagno"
+    elif "cantiere 2 eseguito" in nl:
+        category = "cantiere_eseguito"
+        icon = "traffic-cone"
+        color = "#27ae60"
+        frazione = "Stagno"
     elif "cantiere 2" in nl:
         category = "cantiere_programmato"
         icon = "traffic-cone"
-        color = "#ffd700"  # Gold per cantiere 2 Stagno
+        color = "#ffd700"  # Oro per Cantiere 2 Stagno in completamento
         frazione = "Stagno"
     elif "cantiere 1 non eseguito" in nl:
         category = "cantiere_non_eseguito"
         icon = "traffic-cone"
         color = "#e67e22"
         frazione = "Collesalvetti"
-    elif "cantiere 1 eseguito" in nl:
+    elif "cantiere 1 eseguito" in nl or "cantiere 1 aggiunto" in nl:
         category = "cantiere_eseguito"
         icon = "traffic-cone"
-        color = "#27ae60"
+        color = "#27ae60"  # Verde per tratte completate
         frazione = "Collesalvetti"
     elif "cantiere 1" in nl:
         category = "cantiere_imminente"
@@ -134,9 +140,9 @@ def categorize(name, geom_type, desc):
         color = "#ff8c00"
         frazione = "Collesalvetti"
     elif "cantiere 3" in nl:
-        category = "cantiere"
+        category = "cantiere_programmato"
         icon = "traffic-cone"
-        color = "#f39c12"
+        color = "#f39c12"  # Arancio per Cantiere 3 Stagno autorizzato
         frazione = "Stagno"
     elif "cantiere" in nl:
         category = "cantiere"
@@ -263,52 +269,199 @@ def parse_kml(kml_path):
                 frazione = "Parrana San Giusto"
                 name = "Centrale di Frazione (Parrana San Giusto)"
 
+        # Nomi standardizzati e arricchiti per ARLO
+        if name == "C [] ARLO":
+            name = "C [] ARLO (Futuro ARLO 01)"
+        elif name == "S [] ARLO":
+            name = "S [] ARLO (Futuro ARLO 04 - 6° nodo Stagno)"
+
+        # Metadata di tracciamento standardizzati (status, ordinanza, operatore, data)
+        status_code = "attivo"
+        status_label = "Attivo"
+        ordinanza_str = None
+        operatore_str = "FiberCop"
+        data_rilevamento = "2026-10-11"
+
+        if category == "arlo":
+            operatore_str = "FiberCop"
+            if frazione == "Collesalvetti":
+                status_code = "installato"
+                status_label = "Installato (Opere civili completate - In attesa di soffiaggio fibra/PTE)"
+                ordinanza_str = "Ordinanza P.M. n. 88 del 02/09/2026 (Reg. Gen. 95)"
+                if not clean_desc or "Primo ARLO" not in clean_desc:
+                    clean_desc = "Primo armadio ottico del capoluogo (C [] ARLO, futuro ARLO 01), situato nell'aiuola/marciapiede della rotatoria tra Via Roma, Via Nenni e Via Piero Ciampi. Plinto gettato, cabinet montato, 4 pozzetti di smistamento FiberCop posati a corona della rotatoria e raccordati a cavidotti TIM preesistenti. Stato: Installato (Opere civili completate - In attesa di soffiaggio fibra/PTE)."
+            elif frazione == "Stagno":
+                status_code = "infrastrutturato"
+                status_label = "Infrastrutturati / In fase di cablaggio e predisposizione secondaria"
+                ordinanza_str = "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)"
+                if "S []" in name:
+                    clean_desc = "Armadio ottico FiberCop posato in affiancamento al rame S [04] ARL ([10.353902, 43.589311]) su Via Romita / angolo Via XXV Aprile. 6° ARLO individuato nell'ultimo walk-in dell'11/10/2026. In zona 6 pozzetti in fase di getto/chiusura finale nell'area del Cantiere 2. Stato: Infrastrutturati / In fase di cablaggio e predisposizione secondaria."
+                elif not clean_desc:
+                    clean_desc = f"Armadio ottico FiberCop {name} a Stagno. Stato: Infrastrutturati / In fase di cablaggio e predisposizione secondaria."
+        elif category == "arl":
+            operatore_str = "TIM / FiberCop"
+            status_code = "attivo_rame"
+            status_label = "Attivo (Rete Rame / FTTC)"
+        elif category.startswith("centrale"):
+            operatore_str = "TIM / FiberCop"
+            status_code = "attivo"
+            status_label = "Attivo (Centrale TLC)"
+        elif category == "infratel":
+            operatore_str = "Infratel / Open Fiber"
+            status_code = "completato"
+            status_label = "Completato (Infrastruttura BUL Infratel)"
+        elif category in ["rete_scuole", "rete_sanita"]:
+            operatore_str = "Fastweb / FiberCop"
+            status_code = "completato"
+            status_label = "Completato (Piano PA Connessa)"
+        elif category == "tratta_backbone":
+            operatore_str = "FiberCop"
+            status_code = "completato"
+            status_label = "Completato (Dorsale Fibra SP555)"
+            ordinanza_str = "Autorizzazione Provinciale SP555 (Luglio 2026)"
+        elif category == "tratta_stagno":
+            operatore_str = "FiberCop"
+            status_code = "completato"
+            status_label = "Completato (Posa Fibra Maggio-Giugno 2026)"
+
         # Arricchimento Cantieri da Ordinanze Ufficiali Albo Pretorio
         cantiere_info = None
-        if "cantiere 2" in name.lower():
+        if "cantiere 2 eseguito" in name.lower():
+            status_code = "completato"
+            status_label = "Completato (Posa condotte ultimata)"
+            ordinanza_str = "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)"
+            operatore_str = "FiberCop"
             cantiere_info = {
-                "codice_ordinanza": "Ordinanza P.M. n. 95 del 10/09/2026 (Reg. Gen. 102)",
+                "codice_ordinanza": ordinanza_str,
                 "data_ordinanza": "10/09/2026",
                 "inizio_lavori": "2026-09-21T08:00:00+02:00",
-                "fine_lavori": "2026-10-16T18:00:00+02:00",
+                "fine_lavori": "2026-10-17T18:00:00+02:00",
                 "inizio_lavori_effettivo": "2026-10-05T08:00:00+02:00",
                 "fine_lavori_effettivo": "2026-10-17T18:00:00+02:00",
                 "orario_giornaliero": "08:00 - 18:00 feriali",
                 "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
                 "vie_interessate": [
-                    "Via Otto Marzo",
-                    "Via Romita",
+                    "Via Romita sud",
+                    "Via XXV Aprile"
+                ],
+                "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+                "stato_base": "eseguito",
+                "note_slittamento": "Tratta verificata come completata nell'ultimo walk-in dell'11/10/2026 su Via Romita sud e Via XXV Aprile (292,9 m). Posa condotte ultimata."
+            }
+            clean_desc = "Tratta completata Cantiere 2 Stagno (Via Romita sud / Via XXV Aprile, 292,9 m). Posa condotte ultimata al walk-in 11/10/2026. Ord. 104/2026."
+        elif "cantiere 2" in name.lower():
+            status_code = "in_completamento"
+            status_label = "In completamento (Posa condotte completata, 6 pozzetti in fase finale)"
+            ordinanza_str = "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)"
+            operatore_str = "FiberCop"
+            cantiere_info = {
+                "codice_ordinanza": ordinanza_str,
+                "data_ordinanza": "10/09/2026",
+                "inizio_lavori": "2026-09-21T08:00:00+02:00",
+                "fine_lavori": "2026-10-17T18:00:00+02:00",
+                "inizio_lavori_effettivo": "2026-10-05T08:00:00+02:00",
+                "fine_lavori_effettivo": "2026-10-17T18:00:00+02:00",
+                "orario_giornaliero": "08:00 - 18:00 feriali",
+                "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
+                "vie_interessate": [
+                    "Via Romita sud",
                     "Via De Gasperi",
                     "Via Machiavelli",
                     "Via XXV Aprile",
-                    "Piazza Di Vittorio"
+                    "Piazza Di Vittorio",
+                    "Via Don Verità",
+                    "Via 8 Marzo"
+                ],
+                "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+                "stato_base": "in_completamento",
+                "note_slittamento": "Finestra temporale: 05/10/2026 - 17/10/2026. Stato: In completamento (Posa condotte completata, 6 pozzetti in fase di getto/chiusura finale)."
+            }
+            clean_desc = "Cantiere 2 Stagno (Ord. 104/2026). Finestra: 05/10/2026 - 17/10/2026. Vie: Via Romita sud, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio, Via Don Verità, Via 8 Marzo. Stato: In completamento (Posa condotte completata, 6 pozzetti in fase di getto/chiusura finale)."
+        elif "cantiere 3" in name.lower():
+            status_code = "autorizzato"
+            status_label = "Autorizzato / Avvio programmato (19/10 - 23/10)"
+            ordinanza_str = "Ordinanza P.M. n. 105/2026 + Concessione Suolo n. 77/2026"
+            operatore_str = "FiberCop"
+            cantiere_info = {
+                "codice_ordinanza": ordinanza_str,
+                "data_ordinanza": "09/10/2026",
+                "inizio_lavori": "2026-10-19T08:00:00+02:00",
+                "fine_lavori": "2026-10-23T18:00:00+02:00",
+                "inizio_lavori_effettivo": "2026-10-19T08:00:00+02:00",
+                "fine_lavori_effettivo": "2026-10-23T18:00:00+02:00",
+                "orario_giornaliero": "08:00 - 18:00 feriali (5 giorni, occupazione 60 mq)",
+                "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
+                "vie_interessate": [
+                    "Via Aiaccia",
+                    "Via Umbria"
                 ],
                 "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
                 "stato_base": "programmato",
-                "note_slittamento": "Slittato al 05/10 - 17/10 da rilievo sul campo"
+                "note_slittamento": "Finestra temporale: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Stato: Autorizzato / Avvio programmato. Nota: Innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale SP555 autorizzata a luglio 2026."
             }
-            if not clean_desc:
-                clean_desc = "Nuovo cantiere FTTH FiberCop Stagno (Ord. 102/2026 del 10/09/2026, slittato al 05/10 - 17/10). Vie: Via Otto Marzo, Via Romita, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio."
-        elif "cantiere 1" in name.lower():
-            stato_cantiere = "eseguito" if ("eseguito" in name.lower() and "non eseguito" not in name.lower()) else ("non_eseguito" if "non eseguito" in name.lower() else "imminente")
+            clean_desc = "Cantiere 3 Stagno (Ord. 105/2026 + Concessione Suolo 77/2026). Finestra: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Vie: Via Aiaccia e Via Umbria. Stato: Autorizzato / Avvio programmato. Punto di raccordo: innesto sud Via Aiaccia con dorsale SP555."
+        elif "cantiere 1 aggiunto" in name.lower():
+            status_code = "completato"
+            status_label = "Completato (Anello raccordo rotatoria + 4 pozzetti)"
+            ordinanza_str = "Ordinanza P.M. n. 88 del 02/09/2026 (Reg. Gen. 95)"
+            operatore_str = "FiberCop"
             cantiere_info = {
-                "codice_ordinanza": "Ordinanza P.M. n. 88 del 02/09/2026 (Reg. Gen. 95)",
+                "codice_ordinanza": ordinanza_str,
                 "data_ordinanza": "02/09/2026",
                 "inizio_lavori": "2026-09-14T08:00:00+02:00",
                 "fine_lavori": "2026-10-02T18:00:00+02:00",
                 "orario_giornaliero": "08:00 - 18:00 feriali",
                 "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
                 "vie_interessate": [
-                    "Via Nenni",
-                    "Via Roma (rotatoria Via Nenni)",
+                    "Via Roma (rotatoria Via Nenni / Via Ciampi)"
+                ],
+                "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
+                "stato_base": "eseguito",
+                "note_slittamento": "Anello di raccordo rotatoria (71,8 m) eseguito con minitrincea sigillata (microtubi Fender 4x10/14), 4 pozzetti FiberCop e riuso cavidotti TIM preesistenti. Posato ARLO 01."
+            }
+            clean_desc = "Anello di raccordo rotatoria Via Roma / Via Nenni / Via Ciampi (71,8 m). Opere civili completate: minitrincea sigillata (microtubi Fender 4x10/14), 4 pozzetti FiberCop e riuso cavidotti TIM. Posato ARLO 01. Ord. 88/2026."
+        elif "cantiere 1 eseguito" in name.lower():
+            status_code = "completato"
+            status_label = "Completato (Minitrincea sigillata + riuso TIM)"
+            ordinanza_str = "Ordinanza P.M. n. 88 del 02/09/2026 (Reg. Gen. 95)"
+            operatore_str = "FiberCop"
+            cantiere_info = {
+                "codice_ordinanza": ordinanza_str,
+                "data_ordinanza": "02/09/2026",
+                "inizio_lavori": "2026-09-14T08:00:00+02:00",
+                "fine_lavori": "2026-10-02T18:00:00+02:00",
+                "orario_giornaliero": "08:00 - 18:00 feriali",
+                "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
+                "vie_interessate": [
                     "Via del Valico a Pisa",
+                    "Via Peppino Impastato",
                     "Via di Cerretello"
                 ],
                 "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
-                "stato_base": stato_cantiere
+                "stato_base": "eseguito",
+                "note_slittamento": "Tratta Eseguita (Sud-Est): Via del Valico a Pisa, Via Peppino Impastato, Via di Cerretello. Tipologia di posa: minitrincea sigillata (microtubi Fender 4x10/14) + riuso cavidotti storici TIM."
             }
-            if not clean_desc:
-                clean_desc = f"Cantiere FTTH FiberCop Collesalvetti (Ord. 95/2026 del 02/09/2026 - stato: {stato_cantiere}). Vie: Via Nenni, Via Roma, Via del Valico a Pisa, Via di Cerretello."
+            clean_desc = "Tratta Eseguita Sud-Est (Via del Valico a Pisa, Via Peppino Impastato, Via di Cerretello). Minitrincea sigillata (microtubi Fender 4x10/14) e riuso cavidotti TIM. Ord. 88/2026."
+        elif "cantiere 1 non eseguito" in name.lower():
+            status_code = "in_attesa_proroga"
+            status_label = "In attesa proroga viaria (Termini Ord. 88 scaduti il 02/10)"
+            ordinanza_str = "Ordinanza P.M. n. 88 del 02/09/2026 (Reg. Gen. 95)"
+            operatore_str = "FiberCop"
+            cantiere_info = {
+                "codice_ordinanza": ordinanza_str,
+                "data_ordinanza": "02/09/2026",
+                "inizio_lavori": "2026-09-14T08:00:00+02:00",
+                "fine_lavori": "2026-10-02T18:00:00+02:00",
+                "orario_giornaliero": "08:00 - 18:00 feriali",
+                "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
+                "vie_interessate": [
+                    "Via Nenni"
+                ],
+                "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
+                "stato_base": "non_eseguito",
+                "note_slittamento": "Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni (marcature blu a terra)."
+            }
+            clean_desc = "Tratta Non Eseguita Nord-Ovest (Via Nenni). Marcature blu a terra. Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni."
 
         feature = {
             "type": "Feature",
@@ -329,7 +482,12 @@ def parse_kml(kml_path):
                 "area_m2": round(area_m2, 1),
                 "area_km2": round(area_m2 / 1000000.0, 4),
                 "lookAt": look_at,
-                "cantiere": cantiere_info
+                "cantiere": cantiere_info,
+                "status": status_code,
+                "status_label": status_label,
+                "ordinanza": ordinanza_str,
+                "operatore": operatore_str,
+                "data_rilevamento": data_rilevamento
             }
         }
         features.append(feature)
@@ -340,9 +498,9 @@ def parse_kml(kml_path):
             "title": "Rete FTTH & Tracker Cantieri - Comune di Collesalvetti",
             "author": "Mappatura Originale Cittadina integrata con Albo Pretorio",
             "total_features": len(features),
-            "generated_at": "2026-10-04",
-            "source_snapshot": "Snapshot 3",
-            "source_kml": "data/snapshots/rilievo_snapshot3.kml",
+            "generated_at": "2026-10-11",
+            "source_snapshot": "Snapshot 4",
+            "source_kml": "data/snapshots/rilievo_snapshot4.kml",
             "timezone": "Europe/Rome"
         },
         "features": features
@@ -352,13 +510,13 @@ def parse_kml(kml_path):
 def main():
     os.makedirs("data", exist_ok=True)
     os.makedirs("js", exist_ok=True)
-    kml_path = "data/snapshots/rilievo_snapshot3.kml"
+    kml_path = "data/snapshots/rilievo_snapshot4.kml"
     data = parse_kml(kml_path)
     
     with open("data/network_data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
         
-    js_content = f"// Generato automaticamente da {kml_path} con dati Ordinanze Albo Pretorio (Snapshot 3)\nwindow.FTTH_NETWORK_DATA = {json.dumps(data, ensure_ascii=False, indent=2)};\n"
+    js_content = f"// Generato automaticamente da {kml_path} con dati Ordinanze Albo Pretorio (Snapshot 4 - 11/10/2026)\nwindow.FTTH_NETWORK_DATA = {json.dumps(data, ensure_ascii=False, indent=2)};\n"
     with open("js/data.js", "w", encoding="utf-8") as f:
         f.write(js_content)
         
