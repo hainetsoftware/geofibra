@@ -7,7 +7,7 @@ sources:
     title: "Rilievo Geospaziale Indipendente: Snapshot 4 (11/10/2026)"
     url: "data/snapshots/rilievo_snapshot4.kml"
     type: "dati"
-    note: "Rilievo GIS di campo: 68 feature, 21,780 km di tracciato, 37 apparati, 4 poligoni"
+    note: "Rilievo GIS di campo: 68 feature, 21,778 km di tracciato, 35 apparati nel territorio comunale (+1 esterno), 4 poligoni"
   - id: "ordinanze-collesalvetti"
     title: "Albo Pretorio del Comune di Collesalvetti: Ordinanze di Polizia Municipale n. 75, 95, 102/104 e 105/2026"
     url: "data/ordinanze.json"
@@ -35,25 +35,31 @@ Rispetto ai precedenti rilievi, lo **Snapshot 4** registra l'installazione del p
 | Parametro Rilevato | Snapshot 2 (Settembre 2026) | Snapshot 3 (04/10/2026) | **Snapshot 4 Corrente (11/10/2026)** | Variazione S3 $\rightarrow$ S4 |
 |---|:---:|:---:|:---:|:---:|
 | **Totale Feature Geospaziali** | 49 | 63 | **68** | +5 feature (+7,9%) |
-| **Elementi Puntuali (Apparati)** | 31 | 34 | **37** | +3 apparati (+8,8%) |
+| **Elementi Puntuali (punti censiti)** | 31 | 34 | **37** | +3 punti (+8,8%) |
+| **di cui Apparati (armadi e centrali, comune)** | 30 | 32 | **35** | +3 apparati (+9,4%) |
 | **Elementi Lineari (Tratte e Scavi)** | 14 | 25 | **27** | +2 tratte (+8,0%) |
 | **Elementi Areali (Poligoni)** | 4 | 4 | **4** | Invariati (perimetri rilievo) |
-| **Chilometri Totali Tracciati** | 13,503 km | 21,716 km | **21,780 km** | **+0,064 km netti** |
+| **Chilometri Totali Tracciati** | 13,503 km | 21,716 km | **21,778 km** | **+0,064 km netti** |
 | **Tasso Avanzamento Comunale** | 48,2% | 52,4% | **62,8%** | **+10,4%** |
 
 ---
 
 ## 2. Censimento Apparati sul Territorio
 
-I 37 elementi puntuali censiti sul suolo comunale e di confine comprendono:
+<!-- AUTO-STATS:BEGIN equipment -->
+Apparato = punto di rete censito (armadio ARL/ARLO o centrale). Linee, poligoni e punti di infrastruttura non sono apparati. Dei 37 punti dello Snapshot, 36 sono apparati (35 nel territorio comunale + 1 esterno al Comune) e 1 è un punto di infrastruttura non conteggiato.
 
-| Tipologia Apparato | Categoria GIS | Quantità Rilevata | Operatore / Rete | Note di Rilievo |
-|---|---|:---:|---|---|
-| **Armadio Ripartilinea Ottico** | `arlo` | **4** | FiberCop / Wholesale | 1 nel capoluogo (`C [] ARLO`, rotatoria Via Roma/Via Nenni) + 3 a Stagno (`S [27]`, `S [28]`, `S []` su Via Romita) |
-| **Armadio Ripartilinea Rame** | `arl` | **24** | TIM (Rete Storica) | 7 a Collesalvetti, 8 a Vicarello, 6 a Stagno, 3 a Guasticce |
-| **Centrale di Commutazione** | `centrale` | **8** | Rete Fissa Primaria | 1 comunale (Collesalvetti), 6 di frazione (Vicarello, Stagno, Guasticce, Nugola, Parrana S.M., Parrana S.G.) + 1 Feeder (Livorno) |
-| **Pozzetto di Derivazione** | `infrastruttura` | **1** | Rete Sotterranea | Corrugati scoperti e camerette di derivazione dorsale |
-| **Totale Apparati** | | **37** | | |
+| Tipologia | Categoria GIS | Quantità | Note |
+|---|---|:---:|---|
+| **Armadio Ripartilinea (ARL, rame)** | `arl` | **24** | |
+| **Armadio Ripartilinea Ottico (ARLO)** | `arlo` | **4** | |
+| *Totale armadi (ARL + ARLO)* | | *28* | |
+| **Centrale Comunale** | `centrale_comunale` | **1** | |
+| **Centrali di Frazione** | `centrale_frazione` | **6** | |
+| **Totale apparati sul territorio comunale** | | **35** | |
+| Apparati esterni al Comune (non inclusi nel totale): Centrale Feeder (Livorno Nord) | `centrale_feeder` | 1 | fuori dal territorio comunale |
+| Punti non-apparato (esclusi dal conteggio): Coppie di corrugati scoperti | `infrastruttura` | 1 | punto di infrastruttura, non apparato |
+<!-- AUTO-STATS:END equipment -->
 
 ---
 
@@ -61,14 +67,29 @@ I 37 elementi puntuali censiti sul suolo comunale e di confine comprendono:
 
 La suddivisione chilometrica e infrastrutturale evidenzia l'avanzamento su **Stagno** e **Collesalvetti capoluogo**:
 
-| Frazione | Lunghezza Tratte (km) | Quota % Chilometrica | ARLO Fibra | ARL Rame | Centrali TLC | Avanzamento Stimato | Tratte e Cantieri Principali |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|---|
-| **Stagno** | **11,525 km** | 52,9% | 3 | 6 | 1 | **86,4%** | Cantiere 2 in completamento, Cantiere 3 autorizzato (Ord. 105), Ripristini conclusi |
-| **Collesalvetti (Centro)** | **6,516 km** | 29,9% | 1 | 7 | 1 | **41,5%** | Cantiere 1 (Ord. 95), 1° ARLO posato, hub rotatoria completato, Via Nenni in attesa proroga |
-| **Vicarello** | **3,122 km** | 14,3% | 0 | 8 | 1 | **35,0%** | Dorsale urbana e centrale di commutazione locale |
-| **Guasticce** | **0,399 km** | 1,8% | 0 | 3 | 1 | **20,0%** | Tratta dorsale primaria di collegamento |
-| **Altro / Intercomunale** | **0,519 km** | 2,4% | 0 | 0 | 1 | - | Opera sulla Backbone e Centrale Feeder esterna (Comune di Livorno) |
-| **Totale Territoriale** | **21,780 km** | **100,0%** | **4** | **24** | **8** | **62,8%** | |
+<!-- AUTO-STATS:BEGIN frazioni -->
+| Frazione | Apparati | ARLO | ARL | Centrali | Tratte (km) | Quota % km |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Stagno** | 10 | 3 | 6 | 1 | 8,483 km | 39,0% |
+| **Collesalvetti** | 9 | 1 | 7 | 1 | 3,300 km | 15,2% |
+| **Vicarello** | 9 | 0 | 8 | 1 | 0,000 km | 0,0% |
+| **Guasticce** | 4 | 0 | 3 | 1 | 0,000 km | 0,0% |
+| **Nugola** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
+| **Parrana San Martino** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
+| **Parrana San Giusto** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
+| **Altro / non attribuito** | 0 | 0 | 0 | 0 | 9,995 km | 45,9% |
+| **Totale** | 35 | 4 | 24 | 7 | 21,778 km | 100,0% |
+
+*Gli apparati sono contati per frazione dal solo territorio comunale; i km delle tratte comprendono anche la dorsale INFRATEL BUL e le tratte senza frazione (`Altro`).*
+<!-- AUTO-STATS:END frazioni -->
+
+Tratte e cantieri principali per frazione:
+
+- **Stagno:** Cantiere 2 in completamento (Ord. 95/104), Cantiere 3 Via Aiaccia autorizzato (Ord. 105), Ripristini Via Marx conclusi.
+- **Collesalvetti (Centro):** Cantiere 1 (Ord. 88/95), 1° ARLO posato (`C [] ARLO`), hub rotatoria completato, Via Nenni in attesa proroga.
+- **Vicarello:** Dorsale urbana e centrale di commutazione locale.
+- **Guasticce:** Tratta dorsale primaria di collegamento.
+- **Altro / non attribuito:** Dorsale INFRATEL BUL, opera sulla Backbone; la Centrale Feeder esterna (Comune di Livorno) è riportata a parte e non è inclusa negli apparati comunali.
 
 ---
 

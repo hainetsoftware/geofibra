@@ -8,6 +8,7 @@ Registro delle versioni dei dati cartografici della rete FTTH e cantieri nel Com
 - **File sorgente:** `data/snapshots/rilievo_snapshot4.kml` (e `FTTH Collesalvetti_snapshot4.kml`)
 - **Feature totali censite:** **68** (37 punti, 27 linee, 4 poligoni)
 - **Sviluppo lineare tracciato:** **21,780 km** (+64 m netti da anello raccordo rotatoria e nuove tratte)
+- **Apparati censiti (Snapshot 4):** **35** nel territorio comunale (24 ARL, 4 ARLO, 1 centrale comunale, 6 centrali di frazione) + 1 esterno (Centrale Feeder, Livorno). Conteggi in `data/stats.json`, metodologia in `docs/APPARATI_RECOUNT.md`.
 - **Novità principali:**
   - **Collesalvetti Capoluogo - Primo ARLO e Hub Rotatoria:**
     - Posato il **primo armadio ottico FiberCop del capoluogo** (`C [] ARLO`, futuro ARLO 01) alle coordinate `[10.475255, 43.593980]`, situato nell'aiuola/marciapiede della rotatoria tra Via Roma, Via Nenni e Via Piero Ciampi.
@@ -37,6 +38,7 @@ Registro delle versioni dei dati cartografici della rete FTTH e cantieri nel Com
 - **File sorgente:** `data/snapshots/rilievo_snapshot3.kml`
 - **Feature totali censite:** **63** (34 punti, 25 linee, 4 poligoni)
 - **Sviluppo lineare tracciato:** **21,716 km**
+- **Apparati censiti (Snapshot 3):** **32** nel territorio comunale (23 ARL, 2 ARLO, 1 centrale comunale, 6 centrali di frazione) + 1 esterno (Centrale Feeder, Livorno). Il 34° punto (`Coppie di corrugati scoperti`) è un punto di infrastruttura, non un apparato. Conteggi in `data/stats.json`, metodologia in `docs/APPARATI_RECOUNT.md`.
 - **Novità principali:**
   - **Aggiornamento Cantiere 1 (Collesalvetti Centro):** suddivisione in 2 tratte verificate come eseguite (`Cantiere 1 ESEGUITO`, sopralluoghi 29/09 e 03/10 con riscontro di minitrincee, corrugati e pozzetti FiberCop) e 5 tratte (`Cantiere 1 NON ESEGUITO`, solo segni spray blu su asfalto).
   - **Aggiornamento Cantiere 2 (Stagno Centro):** slittamento finestra lavori al 05/10 - 17/10 (rispetto all'originario 21/09 - 16/10 previsto dall'Ord. 102/2026).

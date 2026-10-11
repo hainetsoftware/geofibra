@@ -6,6 +6,8 @@
 
 ## 1. Analisi Comparativa delle Numerazioni e Gaps (Buchi di Rete)
 
+> **Nota:** la tabella seguente riflette lo stato di **Snapshot 1** (in Snapshot 3 Stagno ha 5 ARL + 2 ARLO e `S [0?] ARLO` è stato rinumerato `S [28] ARLO`). Conteggi correnti: `docs/APPARATI_RECOUNT.md` e `data/stats.json`.
+
 Dall'incrocio di tutti gli apparati censiti per frazione, emergono anomalie, armadi con numerazione dubbia e buchi sequenziali molto interessanti:
 
 | Frazione | Armadi Censiti (ARL / ARLO) | Sequenza Rilevata | Armadi Mancanti / Gaps da Cercare | Note Speciali di Rete |

@@ -66,22 +66,40 @@ All metrics are deterministically computed from the official geospatial survey *
 | Category | Quantity | Details / Notes |
 |---|:---:|---|
 | **Total Geospatial Features** | **68** | 37 point elements, 27 line traces, 4 area polygons |
-| **Total Mapped Route Length** | **21.780 km** | Cumulative length of microtrenches and backbone lines (+64 m net) |
-| **Fiber Optical Cabinets (ARLO)** | **4** | 1 in center (`C [] ARLO`, future ARLO 01) + 3 in Stagno (`S [27]`, `S [28]`, `S []` on Via Romita) |
-| **Copper Cabinets (ARL)** | **24** | 7 Collesalvetti, 8 Vicarello, 6 Stagno, 3 Guasticce |
-| **Telecom Central Offices** | **8** | 1 municipal (Collesalvetti), 6 fraction offices, 1 Feeder (Livorno) |
-| **Municipal FTTH Progress** | **62.8%** | Stagno at 86.4%, Collesalvetti Center at 41.5% |
+| **Total Mapped Route Length** | **21.778 km** | Cumulative length of microtrenches and backbone lines (+64 m net) |
+
+<!-- AUTO-STATS:BEGIN equipment -->
+Equipment = a surveyed network point (ARL/ARLO cabinet or central office). Lines, polygons and infrastructure points are not equipment. Of the 37 points in the snapshot, 36 are equipment (35 inside the municipality + 1 outside it) and 1 is an infrastructure point that is not counted.
+
+| Equipment type | GIS category | Quantity | Notes |
+|---|---|:---:|---|
+| **Copper cabinet (ARL)** | `arl` | **24** | |
+| **Optical cabinet (ARLO)** | `arlo` | **4** | |
+| *Total cabinets (ARL + ARLO)* | | *28* | |
+| **Municipal central office** | `centrale_comunale` | **1** | |
+| **Fraction central offices** | `centrale_frazione` | **6** | |
+| **Total equipment within the municipality** | | **35** | |
+| Equipment outside the municipality (not included in the total): Centrale Feeder (Livorno Nord) | `centrale_feeder` | 1 | outside the municipal territory |
+| Non-equipment points (excluded from the count): Coppie di corrugati scoperti | `infrastruttura` | 1 | infrastructure point, not equipment |
+<!-- AUTO-STATS:END equipment -->
 
 ### Route Length and Apparatus by Fraction
 
-| Fraction | Routes (km) | Share (%) | Fiber ARLO | Copper ARL | Central Offices | Progress |
+<!-- AUTO-STATS:BEGIN frazioni -->
+| Fraction | Equipment | ARLO | ARL | Central offices | Routes (km) | Share % km |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Stagno** | **11.525 km** | 52.9% | 3 | 6 | 1 | **86.4%** |
-| **Collesalvetti (Center)** | **6.516 km** | 29.9% | 1 | 7 | 1 | **41.5%** |
-| **Vicarello** | **3.122 km** | 14.3% | 0 | 8 | 1 | **35.0%** |
-| **Guasticce** | **0.399 km** | 1.8% | 0 | 3 | 1 | **20.0%** |
-| **Other / Inter-municipal** | **0.519 km** | 2.4% | 0 | 0 | 1 | - |
-| **Total Territory** | **21.780 km** | **100.0%** | **4** | **24** | **8** | **62.8%** |
+| **Stagno** | 10 | 3 | 6 | 1 | 8.483 km | 39.0% |
+| **Collesalvetti** | 9 | 1 | 7 | 1 | 3.300 km | 15.2% |
+| **Vicarello** | 9 | 0 | 8 | 1 | 0.000 km | 0.0% |
+| **Guasticce** | 4 | 0 | 3 | 1 | 0.000 km | 0.0% |
+| **Nugola** | 1 | 0 | 0 | 1 | 0.000 km | 0.0% |
+| **Parrana San Martino** | 1 | 0 | 0 | 1 | 0.000 km | 0.0% |
+| **Parrana San Giusto** | 1 | 0 | 0 | 1 | 0.000 km | 0.0% |
+| **Other / unassigned** | 0 | 0 | 0 | 0 | 9.995 km | 45.9% |
+| **Total** | 35 | 4 | 24 | 7 | 21.778 km | 100.0% |
+
+*Equipment is counted per fraction inside the municipality only; route km also include the INFRATEL BUL backbone and routes with no fraction (`Altro`).*
+<!-- AUTO-STATS:END frazioni -->
 
 ---
 
@@ -180,6 +198,19 @@ python scripts/kml_to_geojson.py
 # 2. Regenerate CSV files and Excel workbook (data/rete_ftth_collesalvetti.*)
 python scripts/export_sheets.py
 ```
+
+Step 1 also runs `scripts/compute_stats.py`, which writes `data/stats.json` and `js/stats.js`: the **single source of counts** (equipment, features, km) read by the site statistics panel. To realign the auto-generated Markdown blocks (marked with `<!-- AUTO-STATS:BEGIN ... -->`) and `wiki/articles_data.js`:
+
+```bash
+# 3. Regenerate the statistics blocks of README, README_EN and wiki/collesalvetti.md and the wiki bundle
+python3 scripts/sync_docs.py
+
+# 4. Check consistency (statistics and Excel export integrity tests)
+python3 -m unittest tests.test_stats -v
+python3 -m unittest tests.test_xlsx_export -v
+```
+
+Definition of *equipment* and methodology: `docs/APPARATI_RECOUNT.md`. Full order: `kml_to_geojson.py` → `export_sheets.py` → `sync_docs.py` → tests.
 
 ---
 

@@ -66,22 +66,40 @@ Tutti i conteggi sono calcolati deterministicamente sul rilievo geospaziale **Sn
 | Categoria Elemento | Quantità | Dettaglio / Note |
 |---|:---:|---|
 | **Feature Geospaziali Totali** | **68** | 37 punti, 27 linee, 4 poligoni di perimetro |
-| **Estensione Tracciati Rete** | **21,780 km** | Somma metrica di tutte le tratte stradali e dorsali (+64 m da rotatoria e nuove tratte) |
-| **Armadi Ottici ARLO (FiberCop)** | **4** | 1 nel capoluogo (`C [] ARLO`, futuro ARLO 01) + 3 a Stagno (`S [27]`, `S [28]`, `S []` su Via Romita) |
-| **Armadi Rame ARL (TIM)** | **24** | 7 a Collesalvetti, 8 a Vicarello, 6 a Stagno, 3 a Guasticce |
-| **Centrali di Commutazione TLC** | **8** | 1 comunale (Collesalvetti), 6 di frazione + 1 Feeder (Livorno) |
-| **Tasso Avanzamento Comunale** | **62,8%** | Stagno all'86,4%, Collesalvetti al 41,5% |
+| **Estensione Tracciati Rete** | **21,778 km** | Somma metrica di tutte le tratte stradali e dorsali (+64 m netti) |
+
+<!-- AUTO-STATS:BEGIN equipment -->
+Apparato = punto di rete censito (armadio ARL/ARLO o centrale). Linee, poligoni e punti di infrastruttura non sono apparati. Dei 37 punti dello Snapshot, 36 sono apparati (35 nel territorio comunale + 1 esterno al Comune) e 1 è un punto di infrastruttura non conteggiato.
+
+| Tipologia | Categoria GIS | Quantità | Note |
+|---|---|:---:|---|
+| **Armadio Ripartilinea (ARL, rame)** | `arl` | **24** | |
+| **Armadio Ripartilinea Ottico (ARLO)** | `arlo` | **4** | |
+| *Totale armadi (ARL + ARLO)* | | *28* | |
+| **Centrale Comunale** | `centrale_comunale` | **1** | |
+| **Centrali di Frazione** | `centrale_frazione` | **6** | |
+| **Totale apparati sul territorio comunale** | | **35** | |
+| Apparati esterni al Comune (non inclusi nel totale): Centrale Feeder (Livorno Nord) | `centrale_feeder` | 1 | fuori dal territorio comunale |
+| Punti non-apparato (esclusi dal conteggio): Coppie di corrugati scoperti | `infrastruttura` | 1 | punto di infrastruttura, non apparato |
+<!-- AUTO-STATS:END equipment -->
 
 ### Ripartizione Chilometrica e Apparati per Frazione
 
-| Frazione | Tratte (km) | Quota % | ARLO Fibra | ARL Rame | Centrali TLC | Avanzamento |
+<!-- AUTO-STATS:BEGIN frazioni -->
+| Frazione | Apparati | ARLO | ARL | Centrali | Tratte (km) | Quota % km |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Stagno** | **11,525 km** | 52,9% | 3 | 6 | 1 | **86,4%** |
-| **Collesalvetti (Capoluogo)** | **6,516 km** | 29,9% | 1 | 7 | 1 | **41,5%** |
-| **Vicarello** | **3,122 km** | 14,3% | 0 | 8 | 1 | **35,0%** |
-| **Guasticce** | **0,399 km** | 1,8% | 0 | 3 | 1 | **20,0%** |
-| **Altro / Intercomunale** | **0,519 km** | 2,4% | 0 | 0 | 1 | - |
-| **Totale Territoriale** | **21,780 km** | **100,0%** | **4** | **24** | **8** | **62,8%** |
+| **Stagno** | 10 | 3 | 6 | 1 | 8,483 km | 39,0% |
+| **Collesalvetti** | 9 | 1 | 7 | 1 | 3,300 km | 15,2% |
+| **Vicarello** | 9 | 0 | 8 | 1 | 0,000 km | 0,0% |
+| **Guasticce** | 4 | 0 | 3 | 1 | 0,000 km | 0,0% |
+| **Nugola** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
+| **Parrana San Martino** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
+| **Parrana San Giusto** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
+| **Altro / non attribuito** | 0 | 0 | 0 | 0 | 9,995 km | 45,9% |
+| **Totale** | 35 | 4 | 24 | 7 | 21,778 km | 100,0% |
+
+*Gli apparati sono contati per frazione dal solo territorio comunale; i km delle tratte comprendono anche la dorsale INFRATEL BUL e le tratte senza frazione (`Altro`).*
+<!-- AUTO-STATS:END frazioni -->
 
 ---
 
@@ -180,6 +198,19 @@ python scripts/kml_to_geojson.py
 # 2. Rigenera i file CSV e il foglio Excel (data/rete_ftth_collesalvetti.*)
 python scripts/export_sheets.py
 ```
+
+Il passo 1 esegue anche `scripts/compute_stats.py`, che scrive `data/stats.json` e `js/stats.js`: **unica fonte dei conteggi** (apparati, feature, km) letta dal pannello statistiche del sito. Per riallineare i blocchi auto-generati dei Markdown (contrassegnati da `<!-- AUTO-STATS:BEGIN ... -->`) e `wiki/articles_data.js`:
+
+```bash
+# 3. Rigenera i blocchi statistici di README, README_EN e wiki/collesalvetti.md e il bundle della wiki
+python3 scripts/sync_docs.py
+
+# 4. Verifica la coerenza (statistiche e test integrità export Excel)
+python3 -m unittest tests.test_stats -v
+python3 -m unittest tests.test_xlsx_export -v
+```
+
+Definizione di *apparato* e metodologia: `docs/APPARATI_RECOUNT.md`. Ordine completo: `kml_to_geojson.py` → `export_sheets.py` → `sync_docs.py` → test.
 
 ---
 
