@@ -4,7 +4,32 @@ Registro delle versioni dei dati cartografici della rete FTTH e cantieri nel Com
 
 ---
 
-## Snapshot 4 — 11 Ottobre 2026 (Stato Corrente)
+## Snapshot 5 — 17 Ottobre 2026 (Stato Corrente)
+- **File sorgente:** `data/snapshots/rilievo_snapshot5.kml` (e `FTTH Collesalvetti_snapshot5.kml`)
+- **Feature totali censite:** **71** (37 punti, 30 linee, 4 poligoni)
+- **Sviluppo lineare tracciato:** **23,840 km** (+2,063 km netti da Cantiere 4 Stagno)
+- **Apparati censiti (Snapshot 5):** **35** nel territorio comunale (24 ARL, 4 ARLO, 1 centrale comunale, 6 centrali di frazione) + 1 esterno (Centrale Feeder, Livorno). Conteggi in `data/stats.json`, metodologia in `docs/APPARATI_RECOUNT.md`.
+- **Novità principali:**
+  - **Stagno - Inserimento Cantiere 4 (Ordinanza PM n. 110/2026, Aut. Tecnica n. 26/2026):**
+    - Censite 3 nuove tratte lineari (`0766EAF8C74270D6924F`, `012D8BFFFE4270DC0BCC`, `0B718B800C4270DCE3E0`) per complessivi **2,063 km** di infrastruttura secondaria.
+    - Comparto interessato: Via Marx, Via Curiel (lato sud), Via Gobetti, Via Don Verità, Via F.lli Cervi, Via La Malfa, Via Verga, Via Berlinguer.
+    - Finestra lavori programmata: dal **26/10/2026** al **20/11/2026**.
+  - **Stagno - Espansione Poligoni di Copertura:**
+    - `Area Coperta Stagno` (`0F2DA583D541C062FA84`) espansa da 37,17 ha a **71,64 ha** (0,7164 km²) per inglobare a sud e a ovest i comparti Cantiere 3 e Cantiere 4.
+    - `Area NON Coperta Stagno` (nuovo ID `095490C3EE4270E4B838` che sostituisce il vecchio `07BBF594BC41C065D329`) ridotta a una stretta striscia orientale lungo la ferrovia (4,46 ha, coordinate lon 10.3547 - 10.3576).
+    - Tasso di copertura territoriale di Stagno salito al **94,1%**.
+  - **Stagno - Proroga Cantiere 2 (Ordinanza PM n. 111 del 16/10/2026):**
+    - Estensione di 5 giorni lavorativi del termine di validità dell'Ordinanza 95/104/2026 dal **17/10/2026** al **23/10/2026** per consentire il completamento delle minitrincee secondarie e il getto/chiusura dei 6 pozzetti in calcestruzzo attorno al nuovo ARLO di Via Romita / Via XXV Aprile.
+  - **Stagno - Ripristino Manto Stradale Fase 1 (Ordinanza PM n. 112 del 16/10/2026):**
+    - Disciplina viaria per fresatura e asfaltatura a caldo definitiva sulle trincee FTTH realizzate a maggio-giugno 2026 in **Via Fratelli Rosselli** (finestra operativa: **19/10/2026 - 24/11/2026**, Aut. 10/2026).
+  - **Allerta Viabilità - 3 Cantieri Concomitanti a Stagno (19–23 Ottobre 2026):**
+    - Da lunedì 19 ottobre sovrapposizione temporale di 3 interventi stradali: Cantiere 2 prorogato, Cantiere 3 (Via Aiaccia / Via Umbria) e Ripristini Via Rosselli.
+  - **Sincronizzazione Stili e Colori KML:**
+    - Rilevato e sincronizzato il nuovo stile linea `ff9f3f30` (codice colore CSS `#303f9f`) applicato a `Tratto Scuole Connesse` e `Tratto Sanità Connesse`.
+
+---
+
+## Snapshot 4 — 11 Ottobre 2026
 - **File sorgente:** `data/snapshots/rilievo_snapshot4.kml` (e `FTTH Collesalvetti_snapshot4.kml`)
 - **Feature totali censite:** **68** (37 punti, 27 linee, 4 poligoni)
 - **Sviluppo lineare tracciato:** **21,780 km** (+64 m netti da anello raccordo rotatoria e nuove tratte)

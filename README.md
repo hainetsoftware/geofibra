@@ -3,12 +3,12 @@
 
 [![Licenza: MIT](https://img.shields.io/badge/Licenza-MIT-blue.svg)](LICENSE)
 [![GIS: Leaflet 1.9.4](https://img.shields.io/badge/GIS-Leaflet%201.9.4-brightgreen.svg)](https://leafletjs.com/)
-[![Dati: Snapshot 4](https://img.shields.io/badge/Dati-Snapshot%204%20(11%2F10%2F2026)-orange.svg)](#-dati-e-statistiche-ufficiali-snapshot-4)
+[![Dati: Snapshot 5](https://img.shields.io/badge/Dati-Snapshot%205%20(17%2F10%2F2026)-orange.svg)](#-dati-e-statistiche-ufficiali-snapshot-5)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Attivo-success.svg)](#-pubblicazione-su-github-pages)
 
 ---
 
-**GeoFibra Collesalvetti** è una piattaforma civica e documentale open source che mappa l'infrastruttura di telecomunicazioni in fibra ottica (**FTTH FiberCop / Wholesale**), monitora in tempo reale le **ordinanze municipali di scavo** e offre un'**enciclopedia tecnica e divulgativa** sulla banda ultralarga in Italia.
+**Geo Fibra Collesalvetti** è una piattaforma civica e documentale open source che mappa l'infrastruttura di telecomunicazioni in fibra ottica (**FTTH FiberCop / Wholesale**), monitora in tempo reale le **ordinanze municipali di scavo** e offre un'**enciclopedia tecnica e divulgativa** sulla banda ultralarga in Italia.
 
 Il progetto nasce per garantire trasparenza sull'avanzamento dei lavori stradali, sui tempi di ripristino dell'asfalto e sullo stato reale della connettività a Collesalvetti e nelle sue frazioni.
 
@@ -22,7 +22,7 @@ Il progetto nasce per garantire trasparenza sull'avanzamento dei lavori stradali
 ## 📑 Indice
 
 1. [Caratteristiche del Portale](#-caratteristiche-del-portale)
-2. [Dati e Statistiche Ufficiali (Snapshot 4)](#-dati-e-statistiche-ufficiali-snapshot-4)
+2. [Dati e Statistiche Ufficiali (Snapshot 5)](#-dati-e-statistiche-ufficiali-snapshot-5)
 3. [Registro Cantieri e Ordinanze di Polizia Municipale](#-registro-cantieri-e-ordinanze-di-polizia-municipale)
 4. [La Wiki Tecnica e Divulgativa](#-la-wiki-tecnica-e-divulgativa)
 5. [Architettura del Repository](#-architettura-del-repository)
@@ -59,14 +59,14 @@ Il progetto nasce per garantire trasparenza sull'avanzamento dei lavori stradali
 
 ---
 
-## 📊 Dati e Statistiche Ufficiali (Snapshot 4)
+## 📊 Dati e Statistiche Ufficiali (Snapshot 5)
 
-Tutti i conteggi sono calcolati deterministicamente sul rilievo geospaziale **Snapshot 4 dell'11/10/2026**:
+Tutti i conteggi sono calcolati deterministicamente sul rilievo geospaziale **Snapshot 5 del 17/10/2026**:
 
 | Categoria Elemento | Quantità | Dettaglio / Note |
 |---|:---:|---|
-| **Feature Geospaziali Totali** | **68** | 37 punti, 27 linee, 4 poligoni di perimetro |
-| **Estensione Tracciati Rete** | **21,778 km** | Somma metrica di tutte le tratte stradali e dorsali (+64 m netti) |
+| **Feature Geospaziali Totali** | **71** | 37 punti, 30 linee, 4 poligoni di perimetro |
+| **Estensione Tracciati Rete** | **23,840 km** | Somma metrica di tutte le tratte stradali e dorsali (+2,062 km netti) |
 
 <!-- AUTO-STATS:BEGIN equipment -->
 Apparato = punto di rete censito (armadio ARL/ARLO o centrale). Linee, poligoni e punti di infrastruttura non sono apparati. Dei 37 punti dello Snapshot, 36 sono apparati (35 nel territorio comunale + 1 esterno al Comune) e 1 è un punto di infrastruttura non conteggiato.
@@ -88,15 +88,15 @@ Apparato = punto di rete censito (armadio ARL/ARLO o centrale). Linee, poligoni 
 <!-- AUTO-STATS:BEGIN frazioni -->
 | Frazione | Apparati | ARLO | ARL | Centrali | Tratte (km) | Quota % km |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Stagno** | 10 | 3 | 6 | 1 | 8,483 km | 39,0% |
-| **Collesalvetti** | 9 | 1 | 7 | 1 | 3,300 km | 15,2% |
+| **Stagno** | 10 | 3 | 6 | 1 | 10,545 km | 44,2% |
+| **Collesalvetti** | 9 | 1 | 7 | 1 | 3,300 km | 13,8% |
 | **Vicarello** | 9 | 0 | 8 | 1 | 0,000 km | 0,0% |
 | **Guasticce** | 4 | 0 | 3 | 1 | 0,000 km | 0,0% |
 | **Nugola** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
 | **Parrana San Martino** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
 | **Parrana San Giusto** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
-| **Altro / non attribuito** | 0 | 0 | 0 | 0 | 9,995 km | 45,9% |
-| **Totale** | 35 | 4 | 24 | 7 | 21,778 km | 100,0% |
+| **Altro / non attribuito** | 0 | 0 | 0 | 0 | 9,995 km | 41,9% |
+| **Totale** | 35 | 4 | 24 | 7 | 23,840 km | 100,0% |
 
 *Gli apparati sono contati per frazione dal solo territorio comunale; i km delle tratte comprendono anche la dorsale INFRATEL BUL e le tratte senza frazione (`Altro`).*
 <!-- AUTO-STATS:END frazioni -->

@@ -104,7 +104,7 @@ function featureMatchesFilter(feature, filter) {
         return s === 'in_completamento' || (cat.includes('cantiere') && (nameLower.includes('cantiere 2') && !nameLower.includes('eseguito')));
     }
     if (filter === 'autorizzati') {
-        return s === 'autorizzato' || (cat.includes('cantiere') && nameLower.includes('cantiere 3'));
+        return s === 'autorizzato' || s === 'planned' || (cat.includes('cantiere') && (nameLower.includes('cantiere 3') || nameLower.includes('cantiere 4')));
     }
     if (filter === 'in_attesa_proroga') {
         return s === 'in_attesa_proroga' || cat === 'cantiere_non_eseguito' || nameLower.includes('non eseguito');
@@ -163,6 +163,7 @@ function loadData() {
                 if (props.status === 'completato') badgeBg = 'bg-emerald-500/20 text-emerald-300 border-emerald-500/50';
                 else if (props.status === 'in_completamento') badgeBg = 'bg-amber-500/20 text-amber-300 border-amber-500/50';
                 else if (props.status === 'autorizzato') badgeBg = 'bg-amber-500/20 text-amber-400 border-amber-500/50';
+                else if (props.status === 'planned') badgeBg = 'bg-orange-500/20 text-orange-400 border-orange-500/50';
                 else if (props.status === 'in_attesa_proroga') badgeBg = 'bg-orange-500/20 text-orange-300 border-orange-500/50';
                 else if (props.status === 'installato') badgeBg = 'bg-cyan-500/20 text-cyan-300 border-cyan-500/50';
                 else if (props.status === 'infrastrutturato') badgeBg = 'bg-cyan-500/20 text-cyan-300 border-cyan-500/50';
@@ -178,7 +179,7 @@ function loadData() {
             let tagsHtml = `
                 <div class="flex flex-wrap items-center gap-1.5 my-2 text-[10px]">
                     <span class="px-2 py-0.5 rounded bg-white/10 text-slate-300 border border-white/10">🏢 ${props.operatore || 'FiberCop'}</span>
-                    <span class="px-2 py-0.5 rounded bg-white/10 text-slate-300 border border-white/10">📅 Rilievo: ${props.data_rilevamento || '2026-10-11'}</span>
+                    <span class="px-2 py-0.5 rounded bg-white/10 text-slate-300 border border-white/10">📅 Rilievo: ${props.data_rilevamento || '2026-10-17'}</span>
                     ${props.ordinanza ? `<span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20">📋 ${props.ordinanza}</span>` : ''}
                 </div>
             `;

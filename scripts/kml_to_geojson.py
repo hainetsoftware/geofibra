@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 kml_to_geojson.py - Parser KML e generatore GeoJSON / data.js per la rete FTTH di Collesalvetti.
-Supporta Snapshot 4 (11/10/2026), calcolo distanze Haversine, aree poligonali,
+Supporta Snapshot 5 (17/10/2026), calcolo distanze Haversine, aree poligonali,
 metadati ordinanze comunali e tag di stato/tracciamento standardizzati.
 """
 
@@ -47,6 +47,23 @@ def clean_html(text):
     text = re.sub(r'<[^>]+>', '', text)
     lines = [line.strip() for line in text.split('\n') if line.strip()]
     return "\n".join(lines)
+
+def extract_kml_styles(root, ns):
+    styles = {}
+    for cs in root.findall(".//gx:CascadingStyle", ns):
+        cid = cs.get("{http://www.opengis.net/kml/2.2}id") or cs.get("id") or cs.get("kml:id")
+        ls = cs.find(".//kml:LineStyle", ns)
+        l_color = ls.find("kml:color", ns).text.strip() if ls is not None and ls.find("kml:color", ns) is not None else None
+        styles[cid] = {"line_color": l_color}
+    for sm in root.findall(".//kml:StyleMap", ns):
+        smid = sm.get("{http://www.opengis.net/kml/2.2}id") or sm.get("id") or sm.get("kml:id")
+        pairs = {}
+        for p in sm.findall("kml:Pair", ns):
+            key = p.find("kml:key", ns).text if p.find("kml:key", ns) is not None else ""
+            url = p.find("kml:styleUrl", ns).text if p.find("kml:styleUrl", ns) is not None else ""
+            pairs[key] = url
+        styles[smid] = {"pairs": pairs}
+    return styles
 
 def categorize(name, geom_type, desc):
     n = name.strip()
@@ -98,12 +115,12 @@ def categorize(name, geom_type, desc):
     elif "scuole" in nl:
         category = "rete_scuole"
         icon = "school"
-        color = "#00ff9d"
+        color = "#303f9f"  # Sincronizzato con stile KML #ff9f3f30 -> #303f9f
         frazione = "Collesalvetti"
     elif "sanità" in nl or "sanita" in nl:
         category = "rete_sanita"
         icon = "hospital"
-        color = "#bf55ec"
+        color = "#303f9f"  # Sincronizzato con stile KML #ff9f3f30 -> #303f9f
         frazione = "Collesalvetti"
     elif "infratel" in nl:
         category = "infratel"
@@ -139,6 +156,11 @@ def categorize(name, geom_type, desc):
         icon = "traffic-cone"
         color = "#ff8c00"
         frazione = "Collesalvetti"
+    elif "cantiere 4" in nl:
+        category = "cantiere_programmato"
+        icon = "traffic-cone"
+        color = "#f39c12"  # Arancio per Cantiere 4 Stagno pianificato
+        frazione = "Stagno"
     elif "cantiere 3" in nl:
         category = "cantiere_programmato"
         icon = "traffic-cone"
@@ -159,10 +181,14 @@ def categorize(name, geom_type, desc):
         category = "copertura_no"
         icon = "polygon-no"
         color = "#ef4444"
+        if frazione == "Altro" and ("stagno" in nl or "095490c3ee4270e4b838" in nl):
+            frazione = "Stagno"
     elif "coperta" in nl:
         category = "copertura_ok"
         icon = "polygon-ok"
         color = "#10b981"
+        if frazione == "Altro" and ("stagno" in nl or "0f2da583d541c062fa84" in nl):
+            frazione = "Stagno"
 
     return category, frazione, icon, color
 
@@ -171,6 +197,7 @@ def parse_kml(kml_path):
     root = tree.getroot()
     ns = {"kml": "http://www.opengis.net/kml/2.2", "gx": "http://www.google.com/kml/ext/2.2"}
     
+    kml_styles = extract_kml_styles(root, ns)
     placemarks = root.findall(".//kml:Placemark", ns)
     features = []
     
@@ -240,6 +267,19 @@ def parse_kml(kml_path):
             area_m2 = polygon_area_m2(pts)
             
         category, frazione, icon, color = categorize(name, geom_type, clean_desc)
+
+        # Sincronizzazione dinamica dello stile da KML (es. colore LineStyle)
+        style_el = p.find("kml:styleUrl", ns)
+        if style_el is not None and style_el.text:
+            surl = style_el.text.strip().replace("#", "")
+            if surl in kml_styles:
+                info = kml_styles[surl]
+                target_norm = info.get("pairs", {}).get("normal", "").replace("#", "")
+                if target_norm in kml_styles and kml_styles[target_norm].get("line_color"):
+                    lc = kml_styles[target_norm]["line_color"]
+                    if len(lc) == 8:
+                        r, g, b = lc[6:8], lc[4:6], lc[2:4]
+                        color = f"#{r}{g}{b}"
         
         # Gestione specifica delle Centrali
         if category == "centrale_comunale":
@@ -275,12 +315,20 @@ def parse_kml(kml_path):
         elif name == "S [] ARLO":
             name = "S [] ARLO (Senza etichetta - Affiancato ad ARL 04)"
 
+        # Poligoni Copertura Stagno (Snapshot 5)
+        if "stagno" in name.lower() and geom_type == "Polygon":
+            frazione = "Stagno"
+            if category == "copertura_ok":
+                clean_desc = "Area Coperta Stagno: estesa verso sud e ovest per includere il comparto di Cantiere 3 e Cantiere 4 (Snapshot 5 - 17/10/2026)."
+            elif category == "copertura_no":
+                clean_desc = "Area NON Coperta Stagno: ridotta a stretta fascia orientale (10.3547 - 10.3576, Snapshot 5 - 17/10/2026)."
+
         # Metadata di tracciamento standardizzati (status, ordinanza, operatore, data)
         status_code = "attivo"
         status_label = "Attivo"
         ordinanza_str = None
         operatore_str = "FiberCop"
-        data_rilevamento = "2026-10-11"
+        data_rilevamento = "2026-10-17"
 
         if category == "arlo":
             operatore_str = "FiberCop"
@@ -322,22 +370,51 @@ def parse_kml(kml_path):
         elif category == "tratta_stagno":
             operatore_str = "FiberCop"
             status_code = "completato"
-            status_label = "Completato (Posa Fibra Maggio-Giugno 2026)"
+            status_label = "Completato (Posa Fibra Maggio-Giugno 2026 - Ripristino definitivo manto stradale Ord. 112/2026)"
 
         # Arricchimento Cantieri da Ordinanze Ufficiali Albo Pretorio
         cantiere_info = None
-        if "cantiere 2 eseguito" in name.lower():
+        if "cantiere 4" in name.lower():
+            status_code = "planned"
+            status_label = "Pianificato / Avvio programmato (26/10 - 20/11)"
+            ordinanza_str = "110/2026"
+            operatore_str = "FiberCop"
+            cantiere_info = {
+                "codice_ordinanza": "Ordinanza P.M. n. 110/2026 (Autorizzazione Tecnica n. 26/2026)",
+                "data_ordinanza": "14/10/2026",
+                "inizio_lavori": "2026-10-26T08:00:00+02:00",
+                "fine_lavori": "2026-11-20T18:00:00+02:00",
+                "inizio_lavori_effettivo": "2026-10-26T08:00:00+02:00",
+                "fine_lavori_effettivo": "2026-11-20T18:00:00+02:00",
+                "orario_giornaliero": "08:00 - 18:00 feriali",
+                "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
+                "vie_interessate": [
+                    "Via Marx",
+                    "Via Curiel (lato sud)",
+                    "Via Gobetti",
+                    "Via Don Verità",
+                    "Via F.lli Cervi",
+                    "Via La Malfa",
+                    "Via Verga",
+                    "Via Berlinguer"
+                ],
+                "file_pdf": "ordinanze/ordinanza_110_2026_stagno_cantiere4.pdf",
+                "stato_base": "planned",
+                "note_slittamento": "Nuova espansione comparto ovest Stagno (26/10 - 20/11/2026). Ordinanza PM n. 110/2026, Aut. Tecnica n. 26/2026."
+            }
+            clean_desc = "Cantiere 4 Stagno (Ordinanza PM n. 110/2026, Autorizzazione Tecnica n. 26/2026). Finestra: 26/10/2026 - 20/11/2026. Vie: Via Marx, Via Curiel (lato sud), Via Gobetti, Via Don Verità, Via F.lli Cervi, Via La Malfa, Via Verga, Via Berlinguer. Stato: Pianificato."
+        elif "cantiere 2 eseguito" in name.lower():
             status_code = "completato"
             status_label = "Completato (Posa condotte ultimata)"
-            ordinanza_str = "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)"
+            ordinanza_str = "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026) + Proroga Ord. n. 111 del 16/10/2026"
             operatore_str = "FiberCop"
             cantiere_info = {
                 "codice_ordinanza": ordinanza_str,
                 "data_ordinanza": "10/09/2026",
                 "inizio_lavori": "2026-09-21T08:00:00+02:00",
-                "fine_lavori": "2026-10-17T18:00:00+02:00",
+                "fine_lavori": "2026-10-23T18:00:00+02:00",
                 "inizio_lavori_effettivo": "2026-10-05T08:00:00+02:00",
-                "fine_lavori_effettivo": "2026-10-17T18:00:00+02:00",
+                "fine_lavori_effettivo": "2026-10-23T18:00:00+02:00",
                 "orario_giornaliero": "08:00 - 18:00 feriali",
                 "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
                 "vie_interessate": [
@@ -346,21 +423,21 @@ def parse_kml(kml_path):
                 ],
                 "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
                 "stato_base": "eseguito",
-                "note_slittamento": "Tratta verificata come completata nell'ultimo walk-in dell'11/10/2026 su Via Romita sud e Via XXV Aprile (292,9 m). Posa condotte ultimata."
+                "note_slittamento": "Tratta verificata come completata nell'ultimo walk-in su Via Romita sud e Via XXV Aprile (292,9 m). Posa condotte ultimata."
             }
-            clean_desc = "Tratta completata Cantiere 2 Stagno (Via Romita sud / Via XXV Aprile, 292,9 m). Posa condotte ultimata al walk-in 11/10/2026. Ord. 104/2026."
+            clean_desc = "Tratta completata Cantiere 2 Stagno (Via Romita sud / Via XXV Aprile, 292,9 m). Posa condotte ultimata al walk-in 11/10/2026. Ord. 104/2026 prorogata con Ord. 111/2026."
         elif "cantiere 2" in name.lower():
             status_code = "in_completamento"
-            status_label = "In completamento (Posa condotte completata, 6 pozzetti in fase finale)"
-            ordinanza_str = "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)"
+            status_label = "In completamento (Proroga al 23/10 Ord. 111/2026 - Posa condotte ultimata, 6 pozzetti in chiusura)"
+            ordinanza_str = "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026) + Proroga Ord. n. 111 del 16/10/2026"
             operatore_str = "FiberCop"
             cantiere_info = {
                 "codice_ordinanza": ordinanza_str,
-                "data_ordinanza": "10/09/2026",
+                "data_ordinanza": "16/10/2026",
                 "inizio_lavori": "2026-09-21T08:00:00+02:00",
-                "fine_lavori": "2026-10-17T18:00:00+02:00",
+                "fine_lavori": "2026-10-23T18:00:00+02:00",
                 "inizio_lavori_effettivo": "2026-10-05T08:00:00+02:00",
-                "fine_lavori_effettivo": "2026-10-17T18:00:00+02:00",
+                "fine_lavori_effettivo": "2026-10-23T18:00:00+02:00",
                 "orario_giornaliero": "08:00 - 18:00 feriali",
                 "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
                 "vie_interessate": [
@@ -374,9 +451,9 @@ def parse_kml(kml_path):
                 ],
                 "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
                 "stato_base": "in_completamento",
-                "note_slittamento": "Finestra temporale: 05/10/2026 - 17/10/2026. Stato: In completamento (Posa condotte completata, 6 pozzetti in fase di getto/chiusura finale)."
+                "note_slittamento": "Finestra originaria: 05/10/2026 - 17/10/2026. Prorogata con Ordinanza n. 111 del 16/10/2026 al 23/10/2026 (estensione di 5 giorni lavorativi per completamento minitrincee secondarie e pozzetti in calcestruzzo attorno al nuovo ARLO)."
             }
-            clean_desc = "Cantiere 2 Stagno (Ord. 104/2026). Finestra: 05/10/2026 - 17/10/2026. Vie: Via Romita sud, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio, Via Don Verità, Via 8 Marzo. Stato: In completamento (Posa condotte completata, 6 pozzetti in fase di getto/chiusura finale)."
+            clean_desc = "Cantiere 2 Stagno (Ord. 104/2026 + Proroga Ord. 111 del 16/10/2026). Nuova scadenza: 23/10/2026. Vie: Via Romita sud, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio, Via Don Verità, Via 8 Marzo. Stato: In completamento (Posa condotte completata, 6 pozzetti in fase di getto/chiusura finale attorno ad ARLO)."
         elif "cantiere 3" in name.lower():
             status_code = "autorizzato"
             status_label = "Autorizzato / Avvio programmato (19/10 - 23/10)"
@@ -463,6 +540,27 @@ def parse_kml(kml_path):
             }
             clean_desc = "Tratta Non Eseguita Nord-Ovest (Via Nenni). Marcature blu a terra. Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni."
 
+        start_date = None
+        end_date = None
+        streets = None
+        if "cantiere 4" in name.lower():
+            start_date = "2026-10-26"
+            end_date = "2026-11-20"
+            streets = [
+                "Via Marx",
+                "Via Curiel (lato sud)",
+                "Via Gobetti",
+                "Via Don Verità",
+                "Via F.lli Cervi",
+                "Via La Malfa",
+                "Via Verga",
+                "Via Berlinguer"
+            ]
+        elif cantiere_info:
+            start_date = cantiere_info["inizio_lavori"][:10]
+            end_date = cantiere_info["fine_lavori"][:10]
+            streets = cantiere_info["vie_interessate"]
+
         feature = {
             "type": "Feature",
             "id": pid,
@@ -487,7 +585,10 @@ def parse_kml(kml_path):
                 "status_label": status_label,
                 "ordinanza": ordinanza_str,
                 "operatore": operatore_str,
-                "data_rilevamento": data_rilevamento
+                "data_rilevamento": data_rilevamento,
+                "start_date": start_date,
+                "end_date": end_date,
+                "streets": streets
             }
         }
         features.append(feature)
@@ -495,12 +596,12 @@ def parse_kml(kml_path):
     geojson = {
         "type": "FeatureCollection",
         "metadata": {
-            "title": "Rete FTTH & Tracker Cantieri - Comune di Collesalvetti",
+            "title": "Geo Fibra - Rete FTTH & Tracker Cantieri - Comune di Collesalvetti",
             "author": "Mappatura Originale Cittadina integrata con Albo Pretorio",
             "total_features": len(features),
-            "generated_at": "2026-10-11",
-            "source_snapshot": "Snapshot 4",
-            "source_kml": "data/snapshots/rilievo_snapshot4.kml",
+            "generated_at": "2026-10-17",
+            "source_snapshot": "Snapshot 5",
+            "source_kml": "data/snapshots/rilievo_snapshot5.kml",
             "timezone": "Europe/Rome"
         },
         "features": features
@@ -510,13 +611,15 @@ def parse_kml(kml_path):
 def main():
     os.makedirs("data", exist_ok=True)
     os.makedirs("js", exist_ok=True)
-    kml_path = "data/snapshots/rilievo_snapshot4.kml"
+    kml_path = "data/snapshots/rilievo_snapshot5.kml"
+    if not os.path.exists(kml_path):
+        kml_path = "FTTH Collesalvetti_snapshot5.kml"
     data = parse_kml(kml_path)
     
     with open("data/network_data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
         
-    js_content = f"// Generato automaticamente da {kml_path} con dati Ordinanze Albo Pretorio (Snapshot 4 - 11/10/2026)\nwindow.FTTH_NETWORK_DATA = {json.dumps(data, ensure_ascii=False, indent=2)};\n"
+    js_content = f"// Generato automaticamente da {kml_path} con dati Ordinanze Albo Pretorio (Snapshot 5 - 17/10/2026)\nwindow.FTTH_NETWORK_DATA = {json.dumps(data, ensure_ascii=False, indent=2)};\n"
     with open("js/data.js", "w", encoding="utf-8") as f:
         f.write(js_content)
         

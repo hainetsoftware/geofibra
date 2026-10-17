@@ -1,31 +1,31 @@
 // js/cantieri_tracker.js - Monitoraggio Cantieri e Ordinanze Albo Pretorio Comune di Collesalvetti
 // Fuso Orario di Riferimento: Europe/Rome
 
-// Dati ufficiali estratti da data/ordinanze.json (fonte unica di verita', aggiornati all'11/10/2026 Snapshot 4)
+// Dati ufficiali estratti da data/ordinanze.json (fonte unica di verita', aggiornati al 17/10/2026 Snapshot 5)
 const ORDINANZE_DATA_DEFAULT = [
   {
     "id": "cantiere-2-stagno",
-    "titolo": "Cantiere 2 - Stagno (Nuova Espansione FTTH - Ord. 104/2026)",
+    "titolo": "Cantiere 2 - Stagno (Nuova Espansione FTTH - Ord. 104/2026 + Proroga Ord. 111/2026)",
     "frazione": "Stagno",
     "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
     "oggetto": "Lavori di scavo stradale per posa infrastruttura rete FTTH FiberCop – Stagno, vie varie (comparto sud)",
     "atto_tipo": "Polizia Municipale",
     "atto_numero": "95",
     "atto_registro_generale": "104",
-    "codice_atto_completo": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)",
+    "codice_atto_completo": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026) + Proroga Ord. n. 111 del 16/10/2026",
     "data_emissione": "2026-09-10",
     "autorizzazione_settore_tecnico": "Autorizzazione n. 17/2026 del 16/07/2026",
     "periodo_ordinanza": {
       "inizio": "2026-09-21T08:00:00+02:00",
-      "fine": "2026-10-17T18:00:00+02:00",
+      "fine": "2026-10-23T18:00:00+02:00",
       "fascia_oraria": "08:00 - 18:00",
       "giorni": "feriali"
     },
     "slittamento_osservato": {
-      "fonte_kml": "Snapshot 4 (11/10/2026) - rilievo walk-in e layer Cantiere 2 ESEGUITO",
+      "fonte_kml": "Snapshot 5 (17/10/2026) - proroga con Ordinanza n. 111 del 16/10/2026",
       "inizio_stimato": "2026-10-05T08:00:00+02:00",
-      "fine_stimata": "2026-10-17T18:00:00+02:00",
-      "nota_campo": "Finestra effettiva 05/10/2026 - 17/10/2026. Stato: In completamento (Posa condotte completata, 6 pozzetti in fase di getto/chiusura finale lungo l'asse Via Romita / Via XXV Aprile)."
+      "fine_stimata": "2026-10-23T18:00:00+02:00",
+      "nota_campo": "Finestra originaria 05/10/2026 - 17/10/2026, prorogata al 23/10/2026 con Ordinanza n. 111 del 16/10/2026 (estensione di 5 giorni lavorativi per completamento minitrincee secondarie e pozzetti in calcestruzzo attorno al nuovo ARLO lungo l'asse Via Romita / Via XXV Aprile)."
     },
     "lunghezza_stimata_km": 1.48,
     "vie_interessate": [
@@ -39,7 +39,7 @@ const ORDINANZE_DATA_DEFAULT = [
     ],
     "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
     "coordinate_centro": [43.5930, 10.3540],
-    "descrizione_ufficiale": "Provvedimento di disciplina temporanea della viabilità per esecuzione di scavi stradali per posa della rete in fibra ottica FiberCop a Stagno. Finestra 05/10 - 17/10/2026.",
+    "descrizione_ufficiale": "Provvedimento di disciplina temporanea della viabilità per esecuzione di scavi stradali per posa della rete in fibra ottica FiberCop a Stagno. Prorogato fino al 23/10/2026 con Ordinanza n. 111/2026.",
     "stato_base": "in_completamento"
   },
   {
@@ -61,10 +61,10 @@ const ORDINANZE_DATA_DEFAULT = [
       "giorni": "feriali"
     },
     "slittamento_osservato": {
-      "fonte_kml": "Snapshot 4 (11/10/2026) - 4 tratte lineari (3,475 km)",
+      "fonte_kml": "Snapshot 5 (17/10/2026) - 4 tratte lineari (3,475 km)",
       "inizio_stimato": "2026-10-19T08:00:00+02:00",
       "fine_stimata": "2026-10-23T18:00:00+02:00",
-      "nota_campo": "Finestra temporale: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Stato: Autorizzato / Avvio programmato. Nota cartografica: innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale autorizzata a luglio 2026."
+      "nota_campo": "Finestra temporale: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Stato: Autorizzato / Avvio programmato. Punto di raccordo: innesto sud di Via Aiaccia verso la direttrice provinciale con la tratta dorsale autorizzata a luglio 2026."
     },
     "lunghezza_stimata_km": 3.48,
     "vie_interessate": [
@@ -75,6 +75,79 @@ const ORDINANZE_DATA_DEFAULT = [
     "coordinate_centro": [43.5875, 10.3580],
     "descrizione_ufficiale": "Provvedimento di disciplina viaria e concessione suolo pubblico (60 mq) per la posa della dorsale e della rete secondaria FTTH FiberCop lungo Via Aiaccia e Via Umbria.",
     "stato_base": "programmato"
+  },
+  {
+    "id": "ripristino-rosselli-stagno",
+    "titolo": "Ripristino Manto Stradale - Fase 1 Stagno (Via Fratelli Rosselli)",
+    "frazione": "Stagno",
+    "richiedente": "Fastweb S.p.A. per conto FiberCop",
+    "oggetto": "Lavori di fresatura e ripristino definitivo del manto stradale sulle tratte FTTH posate a maggio-giugno 2026 in Via Fratelli Rosselli",
+    "atto_tipo": "Polizia Municipale",
+    "atto_numero": "112",
+    "atto_registro_generale": "112",
+    "codice_atto_completo": "Ordinanza P.M. n. 112 del 16/10/2026",
+    "data_emissione": "2026-10-16",
+    "autorizzazione_settore_tecnico": "Autorizzazione n. 10/2026",
+    "periodo_ordinanza": {
+      "inizio": "2026-10-19T08:00:00+02:00",
+      "fine": "2026-11-24T18:00:00+02:00",
+      "fascia_oraria": "08:00 - 18:00",
+      "giorni": "feriali"
+    },
+    "slittamento_osservato": {
+      "fonte_kml": "Snapshot 5 (17/10/2026) - Tratte Stagno maggio-giugno 2026",
+      "inizio_stimato": "2026-10-19T08:00:00+02:00",
+      "fine_stimata": "2026-11-24T18:00:00+02:00",
+      "nota_campo": "Ripristino definitivo del manto stradale (fresatura e asfaltatura a caldo) sulle trincee FTTH eseguite a maggio-giugno 2026. Operativo da lunedì 19/10/2026 al 24/11/2026."
+    },
+    "lunghezza_stimata_km": 0.65,
+    "vie_interessate": [
+      { "via": "Via Fratelli Rosselli", "prescrizione": "Senso unico alternato e divieto di sosta con rimozione forzata per fresatura e asfaltatura definitiva" }
+    ],
+    "file_pdf": "ordinanze/ordinanza_112_2026_stagno_ripristino_rosselli.pdf",
+    "coordinate_centro": [43.5898, 10.3535],
+    "descrizione_ufficiale": "Provvedimento viario per esecuzione dei ripristini definitivi del manto stradale a seguito degli scavi per la fibra ottica eseguiti a maggio-giugno 2026 lungo Via F.lli Rosselli. Finestra: 19/10/2026 - 24/11/2026.",
+    "stato_base": "programmato"
+  },
+  {
+    "id": "cantiere-4-stagno",
+    "titolo": "Cantiere 4 - Stagno (Nuova Espansione Ovest - Ord. 110/2026)",
+    "frazione": "Stagno",
+    "richiedente": "Fastweb S.p.A. per rete FTTH FiberCop",
+    "oggetto": "Lavori di scavo stradale e posa infrastruttura rete FTTH FiberCop – Stagno, comparto ovest/sud-ovest (Via Marx, Via Curiel, ecc.)",
+    "atto_tipo": "Polizia Municipale",
+    "atto_numero": "110",
+    "atto_registro_generale": "110",
+    "codice_atto_completo": "Ordinanza P.M. n. 110/2026",
+    "data_emissione": "2026-10-14",
+    "autorizzazione_settore_tecnico": "Autorizzazione Tecnica n. 26/2026",
+    "periodo_ordinanza": {
+      "inizio": "2026-10-26T08:00:00+02:00",
+      "fine": "2026-11-20T18:00:00+02:00",
+      "fascia_oraria": "08:00 - 18:00",
+      "giorni": "feriali"
+    },
+    "slittamento_osservato": {
+      "fonte_kml": "Snapshot 5 (17/10/2026) - 3 tratte lineari (2,063 km)",
+      "inizio_stimato": "2026-10-26T08:00:00+02:00",
+      "fine_stimata": "2026-11-20T18:00:00+02:00",
+      "nota_campo": "Nuovo cantiere di espansione FTTH rilevato in Snapshot 5. Finestra autorizzata: 26/10/2026 - 20/11/2026. 3 tratte per complessivi 2,063 km su Via Marx, Via Curiel, Via Gobetti, Via Don Verità, Via F.lli Cervi, Via La Malfa, Via Verga, Via Berlinguer."
+    },
+    "lunghezza_stimata_km": 2.06,
+    "vie_interessate": [
+      { "via": "Via Marx", "prescrizione": "Divieto di sosta e senso unico alternato per posa condotte" },
+      { "via": "Via Curiel (lato sud)", "prescrizione": "Divieto di sosta e restringimento carreggiata" },
+      { "via": "Via Gobetti", "prescrizione": "Divieto di sosta ambo i lati per scavo minitrincea" },
+      { "via": "Via Don Verità", "prescrizione": "Restringimento carreggiata per allacci secondari" },
+      { "via": "Via F.lli Cervi", "prescrizione": "Divieto di sosta e senso unico alternato" },
+      { "via": "Via La Malfa", "prescrizione": "Restringimento temporaneo carreggiata" },
+      { "via": "Via Verga", "prescrizione": "Divieto di sosta con rimozione forzata" },
+      { "via": "Via Berlinguer", "prescrizione": "Divieto di sosta e senso unico alternato" }
+    ],
+    "file_pdf": "ordinanze/ordinanza_110_2026_stagno_cantiere4.pdf",
+    "coordinate_centro": [43.5885, 10.3480],
+    "descrizione_ufficiale": "Provvedimento temporaneo di viabilità per scavo e posa infrastruttura fibra ottica FiberCop a Stagno nel comparto Via Marx / Curiel / Cervi. Finestra: 26/10/2026 - 20/11/2026.",
+    "stato_base": "planned"
   },
   {
     "id": "cantiere-1-collesalvetti",
@@ -95,7 +168,7 @@ const ORDINANZE_DATA_DEFAULT = [
       "giorni": "feriali"
     },
     "slittamento_osservato": {
-      "fonte_kml": "Snapshot 4 (11/10/2026) - integrazione walk-in 11/10 rotatoria e ARLO 01",
+      "fonte_kml": "Snapshot 5 (17/10/2026) - integrazione rotatoria e ARLO 01",
       "inizio_stimato": "2026-09-14T08:00:00+02:00",
       "fine_stimata": "2026-10-02T18:00:00+02:00",
       "nota_campo": "Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni (marcature blu a terra). Tratte Sud-Est (Via del Valico a Pisa, Via Peppino Impastato, Via di Cerretello e anello raccordo rotatoria Cantiere 1 AGGIUNTO) completate con minitrincea sigillata (microtubi Fender 4x10/14) e riuso cavidotti storici TIM. Posato il primo ARLO del capoluogo (C [] ARLO) con 4 pozzetti alla rotatoria."
@@ -115,7 +188,7 @@ const ORDINANZE_DATA_DEFAULT = [
   },
   {
     "id": "ripristino-stagno",
-    "titolo": "Lavori di Ripristino Manto Stradale Scavi Fibra - Stagno",
+    "titolo": "Lavori di Ripristino Manto Stradale Scavi Fibra - Stagno (Via Marx)",
     "frazione": "Stagno",
     "richiedente": "Fastweb S.p.A.",
     "oggetto": "Lavori stradali per ripristino scavi fibra ottica – Stagno, vie varie",
@@ -241,8 +314,8 @@ function calculateCantiereStatus(cantiere, currentDate) {
   const rome = getRomeTimeParts(now);
 
   // Normalizza date di inizio e fine dell'ordinanza
-  const inizioStr = cantiere.periodo_ordinanza ? cantiere.periodo_ordinanza.inizio : (cantiere.inizio || cantiere.inizio_lavori);
-  const fineStr = cantiere.periodo_ordinanza ? cantiere.periodo_ordinanza.fine : (cantiere.fine || cantiere.fine_lavori);
+  const inizioStr = cantiere.periodo_ordinanza ? cantiere.periodo_ordinanza.inizio : (cantiere.inizio || cantiere.inizio_lavori || cantiere.start_date);
+  const fineStr = cantiere.periodo_ordinanza ? cantiere.periodo_ordinanza.fine : (cantiere.fine || cantiere.fine_lavori || cantiere.end_date);
 
   const start = new Date(inizioStr);
   const end = new Date(fineStr);
@@ -254,24 +327,25 @@ function calculateCantiereStatus(cantiere, currentDate) {
     day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'Europe/Rome'
   });
 
-  // Gestione stato "in_completamento" (es. Cantiere 2 Stagno)
+  // Gestione stato "in_completamento" (es. Cantiere 2 Stagno prorogato al 23/10)
   if (cantiere.stato_base === 'in_completamento' && now <= end) {
     return {
       statusCode: 'in_completamento',
-      statusLabel: 'IN COMPLETAMENTO (POSA CONDOTTE OK - 6 POZZETTI IN CHIUSURA)',
+      statusLabel: 'IN COMPLETAMENTO (PROROGA AL 23/10 - 6 POZZETTI ATTORNO AD ARLO)',
       badgeClass: 'bg-amber-500/20 text-amber-300 border border-amber-500/50',
       dotClass: 'bg-amber-400 animate-pulse',
-      timingSummary: `Operativo in fase di rifinitura finale fino al ${endFormatted} (feriali 08:00 - 18:00)`,
+      timingSummary: `Operativo in fase di rifinitura e collaudo pozzetti fino al ${endFormatted} (Ord. 111/2026, feriali 08:00 - 18:00)`,
       isActiveNow: true
     };
   }
 
-  // 1. Prima dell'inizio autorizzato dall'ordinanza
+  // 1. Prima dell'inizio autorizzato dall'ordinanza (es. Cantiere 3, Cantiere 4, Ripristino Rosselli)
   if (now < start) {
+    const isPlanned = cantiere.stato_base === 'planned';
     return {
-      statusCode: 'programmato',
-      statusLabel: 'ATTIVAZIONE PROGRAMMATA (AUTORIZZATO)',
-      badgeClass: 'bg-amber-500/20 text-amber-400 border border-amber-500/40',
+      statusCode: isPlanned ? 'planned' : 'programmato',
+      statusLabel: isPlanned ? 'PIANIFICATO (ORDINANZA N. 110/2026)' : 'ATTIVAZIONE PROGRAMMATA (AUTORIZZATO)',
+      badgeClass: isPlanned ? 'bg-orange-500/20 text-orange-400 border border-orange-500/40' : 'bg-amber-500/20 text-amber-400 border border-amber-500/40',
       dotClass: 'bg-amber-400 animate-pulse',
       timingSummary: `Avvio autorizzato da ordinanza: ${startFormatted} (feriali 08:00 - 18:00)`,
       isActiveNow: false
@@ -355,7 +429,7 @@ function updateCantieriNavbarBadge() {
 
   const now = getRomeCurrentDate();
   const activeOrUpcoming = ORDINANZE_DATA.filter(c => {
-    const endStr = c.periodo_ordinanza ? c.periodo_ordinanza.fine : c.fine;
+    const endStr = c.periodo_ordinanza ? c.periodo_ordinanza.fine : (c.fine || c.end_date);
     return new Date(endStr) >= now;
   }).length;
 
@@ -383,6 +457,40 @@ function renderCantieriModal() {
 
   listCont.innerHTML = '';
 
+  // Banner evidenziato: 3 Cantieri Concomitanti a Stagno (19 – 23 Ottobre 2026)
+  const concurrentAlert = document.createElement('div');
+  concurrentAlert.className = "col-span-full border-2 border-amber-500/70 bg-amber-500/15 rounded-xl p-4 mb-3 text-amber-200 shadow-xl shadow-amber-500/10";
+  concurrentAlert.innerHTML = `
+    <div class="flex items-center gap-2 font-['Rajdhani'] text-base font-bold text-amber-300 uppercase tracking-wider mb-1">
+      <svg class="w-5 h-5 text-amber-400 animate-pulse flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+      <span>Allerta Viabilità &bull; 3 Cantieri Concomitanti a Stagno (19 – 23 Ottobre 2026)</span>
+    </div>
+    <p class="text-xs text-slate-200 leading-relaxed mb-2.5">
+      A partire da lunedì <b>19 ottobre 2026</b>, la frazione di <b>Stagno</b> vedrà l'attivazione simultanea di tre distinti interventi su sede stradale:
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5 text-xs text-slate-300">
+      <div class="bg-black/40 border border-amber-500/30 rounded-lg p-3">
+        <div class="font-bold text-amber-300 mb-0.5">1. Cantiere 2 (Proroga al 23/10)</div>
+        <div class="text-[11px] text-slate-400 font-mono mb-1">Ord. 111/2026 &bull; Aut. 17/2026</div>
+        <p class="text-[11px] text-slate-300">Via Romita sud, Via De Gasperi, Via XXV Aprile: 5 giorni di proroga per completamento trincee e getto pozzetti attorno al nuovo ARLO.</p>
+      </div>
+      <div class="bg-black/40 border border-cyber-neon/30 rounded-lg p-3">
+        <div class="font-bold text-cyber-neon mb-0.5">2. Cantiere 3 (19/10 – 23/10)</div>
+        <div class="text-[11px] text-slate-400 font-mono mb-1">Ord. 105/2026 &bull; Conc. 77/2026</div>
+        <p class="text-[11px] text-slate-300">Via Aiaccia e Via Umbria: posa condotte e minitrincea per rilegamento alla dorsale SP555 (occupazione 60 mq).</p>
+      </div>
+      <div class="bg-black/40 border border-emerald-500/30 rounded-lg p-3">
+        <div class="font-bold text-emerald-300 mb-0.5">3. Ripristino Asfalto (19/10 – 24/11)</div>
+        <div class="text-[11px] text-slate-400 font-mono mb-1">Ord. 112/2026 &bull; Aut. 10/2026</div>
+        <p class="text-[11px] text-slate-300">Via Fratelli Rosselli: fresatura e ripristino definitivo del manto stradale (asfalto a caldo) sulle trincee FTTH eseguite a maggio-giugno 2026.</p>
+      </div>
+    </div>
+    <div class="mt-2 text-[11px] text-amber-300/80 italic">
+      Prestare massima attenzione: possibili rallentamenti, sensi unici alternati regolati da movieri o semafori e divieti di sosta con rimozione forzata.
+    </div>
+  `;
+  listCont.appendChild(concurrentAlert);
+
   ORDINANZE_DATA.forEach(cantiere => {
     const status = calculateCantiereStatus(cantiere, now);
 
@@ -409,7 +517,7 @@ function renderCantieriModal() {
         <div class="bg-amber-500/10 border border-amber-500/30 rounded-lg p-2.5 mb-3 text-xs">
           <div class="flex items-center gap-1.5 font-bold text-amber-300 mb-1">
             <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-            Rilievo sul Campo (Snapshot 4 - 11/10/2026):
+            ${cantiere.slittamento_osservato.fonte_kml || 'Rilievo sul Campo (Snapshot 5 - 17/10/2026)'}:
           </div>
           <p class="text-amber-200/90 leading-relaxed">${cantiere.slittamento_osservato.nota_campo}</p>
         </div>

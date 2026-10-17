@@ -213,31 +213,31 @@ class TestDocuments(unittest.TestCase):
         self.assertQuotes("docs/HANDOFF_REDESIGN.md", r"sono (\d+) feature, [\d,]+ km, \d+ apparati", f["total"])
         self.assertQuotes("docs/HANDOFF_REDESIGN.md", r"sono \d+ feature, ([\d,]+) km, \d+ apparati", self.km_it)
         self.assertQuotes("docs/HANDOFF_REDESIGN.md", r"sono \d+ feature, [\d,]+ km, (\d+) apparati", e["total_municipal"])
-        chg = read("data/snapshots/CHANGELOG_DATI.md").split("## Snapshot 3", 1)[0]
+        chg = read("data/snapshots/CHANGELOG_DATI.md").split("## Snapshot 4", 1)[0]
         self.assertEqual(re.findall(r"Feature totali censite:\*\* \*\*(\d+)\*\* \((\d+) punti, (\d+) linee, (\d+) poligoni\)", chg),
                          [tuple(str(x) for x in (f["total"], f["points"], f["lines"], f["polygons"]))])
-        self.assertQuotes("data/snapshots/CHANGELOG_DATI.md", r"Apparati censiti \(Snapshot 4\):\*\* \*\*(\d+)\*\* nel territorio comunale", e["total_municipal"])
+        self.assertQuotes("data/snapshots/CHANGELOG_DATI.md", r"Apparati censiti \(Snapshot 5\):\*\* \*\*(\d+)\*\* nel territorio comunale", e["total_municipal"])
 
     def test_no_stale_equipment_counts_in_markdown(self):
         """Qualsiasi 'N apparati' nei documenti correnti deve valere il totale comunale (o con esterni)."""
         allowed = {str(self.e["total_municipal"]), str(self.e["total_all"])}
         for rel in ("README.md", "README_EN.md", "wiki/collesalvetti.md", "docs/HANDOFF_REDESIGN.md"):  # APPARATI_RECOUNT.md cita di proposito i vecchi valori
             for n, line in enumerate(read(rel).splitlines(), 1):
-                if re.search(r"snapshot [123]\b|prima|before|storic|historical", line, re.I):
+                if re.search(r"snapshot [1234]\b|prima|before|storic|historical", line, re.I):
                     continue
                 for v in re.findall(r"(?<![+\d])\b(\d+) (?:apparati|equipment items)", line):
                     self.assertIn(v, allowed, f"{rel}:{n}: '{v} apparati' non coincide con i dati")
 
     def test_historic_snapshot_figures_match_kml(self):
         log = read("data/snapshots/CHANGELOG_DATI.md")
-        for n in (1, 2, 3):
+        for n in (1, 2, 3, 4):
             k = kml_summary(f"data/snapshots/rilievo_snapshot{n}.kml")
             sect = log.split(f"## Snapshot {n}", 1)[1].split("\n## ", 1)[0]
             m = re.search(r"Feature totali censite:\*\* \*\*(\d+)\*\* \((\d+) punti, (\d+) linee, (\d+) poligoni\)", sect)
             self.assertEqual(tuple(int(x) for x in m.groups()),
                              (k["placemarks"], k["points"], k["lines"], k["polygons"]), f"Snapshot {n}")
         w = read("wiki/collesalvetti.md")
-        for n, col in ((2, 0), (3, 1)):
+        for n, col in ((3, 0), (4, 1)):
             k = kml_summary(f"data/snapshots/rilievo_snapshot{n}.kml")
             for label, key in (("Totale Feature Geospaziali", "placemarks"), ("Elementi Puntuali", "points"),
                                ("Elementi Lineari", "lines"), ("Elementi Areali", "polygons")):

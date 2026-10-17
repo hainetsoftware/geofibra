@@ -1,14 +1,14 @@
-# 🌐 GeoFibra Collesalvetti
+# 🌐 Geo Fibra Collesalvetti
 ### *Civic FTTH Network Observatory & Municipal Works Tracker in Collesalvetti (Tuscany, Italy)*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![GIS: Leaflet 1.9.4](https://img.shields.io/badge/GIS-Leaflet%201.9.4-brightgreen.svg)](https://leafletjs.com/)
-[![Data: Snapshot 4](https://img.shields.io/badge/Data-Snapshot%204%20(11%2F10%2F2026)-orange.svg)](#-official-data--metrics-snapshot-4)
+[![Data: Snapshot 5](https://img.shields.io/badge/Data-Snapshot%205%20(17%2F10%2F2026)-orange.svg)](#-official-data--metrics-snapshot-5)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Active-success.svg)](#-deployment-on-github-pages)
 
 ---
 
-**GeoFibra Collesalvetti** is an open-source civic platform and technical observatory mapping the optical fiber telecommunications rollout (**FTTH FiberCop / Wholesale**), tracking municipal street excavation decrees in real-time, and hosting a comprehensive technical and popular encyclopedia on ultrabroadband networking in Italy.
+**Geo Fibra Collesalvetti** is an open-source civic platform and technical observatory mapping the optical fiber telecommunications rollout (**FTTH FiberCop / Wholesale**), tracking municipal street excavation decrees in real-time, and hosting a comprehensive technical and popular encyclopedia on ultrabroadband networking in Italy.
 
 The initiative provides transparency for local citizens regarding street excavations, traffic restrictions, asphalt restoration timelines, and true connectivity availability across the municipality of Collesalvetti and its outlying fractions.
 
@@ -22,7 +22,7 @@ The initiative provides transparency for local citizens regarding street excavat
 ## 📑 Table of Contents
 
 1. [Key Features](#-key-features)
-2. [Official Data & Metrics (Snapshot 4)](#-official-data--metrics-snapshot-4)
+2. [Official Data & Metrics (Snapshot 5)](#-official-data--metrics-snapshot-5)
 3. [Municipal Decrees & Works Tracker](#-municipal-decrees--works-tracker)
 4. [The Technical & Educational Wiki](#-the-technical--educational-wiki)
 5. [Repository Architecture](#-repository-architecture)
@@ -59,14 +59,14 @@ The initiative provides transparency for local citizens regarding street excavat
 
 ---
 
-## 📊 Official Data & Metrics (Snapshot 4)
+## 📊 Official Data & Metrics (Snapshot 5)
 
-All metrics are deterministically computed from the official geospatial survey **Snapshot 4 (11/10/2026)**:
+All metrics are deterministically computed from the official geospatial survey **Snapshot 5 (17/10/2026)**:
 
 | Category | Quantity | Details / Notes |
 |---|:---:|---|
-| **Total Geospatial Features** | **68** | 37 point elements, 27 line traces, 4 area polygons |
-| **Total Mapped Route Length** | **21.778 km** | Cumulative length of microtrenches and backbone lines (+64 m net) |
+| **Total Geospatial Features** | **71** | 37 point elements, 30 line traces, 4 area polygons |
+| **Total Mapped Route Length** | **23.840 km** | Cumulative length of microtrenches and backbone lines (+2.062 km net) |
 
 <!-- AUTO-STATS:BEGIN equipment -->
 Equipment = a surveyed network point (ARL/ARLO cabinet or central office). Lines, polygons and infrastructure points are not equipment. Of the 37 points in the snapshot, 36 are equipment (35 inside the municipality + 1 outside it) and 1 is an infrastructure point that is not counted.
@@ -88,15 +88,15 @@ Equipment = a surveyed network point (ARL/ARLO cabinet or central office). Lines
 <!-- AUTO-STATS:BEGIN frazioni -->
 | Fraction | Equipment | ARLO | ARL | Central offices | Routes (km) | Share % km |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Stagno** | 10 | 3 | 6 | 1 | 8.483 km | 39.0% |
-| **Collesalvetti** | 9 | 1 | 7 | 1 | 3.300 km | 15.2% |
+| **Stagno** | 10 | 3 | 6 | 1 | 10.545 km | 44.2% |
+| **Collesalvetti** | 9 | 1 | 7 | 1 | 3.300 km | 13.8% |
 | **Vicarello** | 9 | 0 | 8 | 1 | 0.000 km | 0.0% |
 | **Guasticce** | 4 | 0 | 3 | 1 | 0.000 km | 0.0% |
 | **Nugola** | 1 | 0 | 0 | 1 | 0.000 km | 0.0% |
 | **Parrana San Martino** | 1 | 0 | 0 | 1 | 0.000 km | 0.0% |
 | **Parrana San Giusto** | 1 | 0 | 0 | 1 | 0.000 km | 0.0% |
-| **Other / unassigned** | 0 | 0 | 0 | 0 | 9.995 km | 45.9% |
-| **Total** | 35 | 4 | 24 | 7 | 21.778 km | 100.0% |
+| **Other / unassigned** | 0 | 0 | 0 | 0 | 9.995 km | 41.9% |
+| **Total** | 35 | 4 | 24 | 7 | 23.840 km | 100.0% |
 
 *Equipment is counted per fraction inside the municipality only; route km also include the INFRATEL BUL backbone and routes with no fraction (`Altro`).*
 <!-- AUTO-STATS:END frazioni -->
