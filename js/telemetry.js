@@ -19,13 +19,9 @@ function updateTelemetry(features) {
     const km = stats ? stats.length_km.total : 0;
     let cantieri = 0;
     let frazCounts = {};
-    let frazArlo = {};
 
     features.forEach(f => {
         let p = f.properties;
-        if (p.category === 'arlo') {
-            if (p.frazione) frazArlo[p.frazione] = (frazArlo[p.frazione] || 0) + 1;
-        }
         if (p.category && p.category.includes('cantiere')) cantieri++;
     });
 
@@ -41,22 +37,17 @@ function updateTelemetry(features) {
     const elArlo = document.getElementById('stat-arlo');
     const elCentrali = document.getElementById('stat-centrali');
     const elCantieri = document.getElementById('stat-cantieri');
-    const elAvanzamento = document.getElementById('stat-avanzamento');
-    const elAvanzamentoBar = document.getElementById('stat-avanzamento-bar');
+    const elArloStagno = document.getElementById('stat-arlo-stagno');
 
     if (eq) {
         if (elTot) elTot.innerText = eq.total_municipal;
         if (elKm) elKm.innerText = km.toFixed(2);
         if (elArl) elArl.innerText = eq.by_category_municipal.arl || 0;
         if (elArlo) elArlo.innerText = eq.by_category_municipal.arlo || 0;
+        if (elArloStagno) elArloStagno.innerText = eq.by_frazione_municipal.Stagno?.arlo ?? 0;
         if (elCentrali) elCentrali.innerText = eq.centrali_municipal;
     }
     if (elCantieri) elCantieri.innerText = cantieri;
-
-    // Calcolo avanzamento complessivo del Comune di Collesalvetti (Snapshot 4 al 11/10/2026: 62.8%)
-    const pctComplessivo = 62.8;
-    if (elAvanzamento) elAvanzamento.innerText = `${pctComplessivo}%`;
-    if (elAvanzamentoBar) elAvanzamentoBar.style.width = `${pctComplessivo}%`;
 
     const navCont = document.getElementById('frazioni-nav');
     const statsCont = document.getElementById('frazioni-stats');
@@ -78,7 +69,7 @@ function updateTelemetry(features) {
         if (statsCont) {
             const maxF = Math.max(...Object.values(frazCounts));
             const pct = (frazCounts[fr] / maxF) * 100;
-            const arloCount = frazArlo[fr] || 0;
+            const arloCount = eq.by_frazione_municipal[fr].arlo;
             const arloBadge = arloCount > 0 ? `<span class="text-[10px] bg-cyan-500/20 text-cyan-300 px-1.5 py-0.2 rounded border border-cyan-500/40 ml-1.5">${arloCount} ARLO</span>` : '';
             
             statsCont.innerHTML += `
@@ -122,6 +113,9 @@ function renderList(features) {
         else if (p.status === 'in_completamento') subBadge = '<span class="text-[9px] bg-amber-500/20 text-amber-300 px-1 rounded">IN CHIUSURA</span>';
         else if (p.status === 'autorizzato') subBadge = '<span class="text-[9px] bg-amber-500/20 text-amber-400 px-1 rounded">AUTORIZZATO</span>';
         else if (p.status === 'in_attesa_proroga') subBadge = '<span class="text-[9px] bg-orange-500/20 text-orange-300 px-1 rounded">ATTESA PROROGA</span>';
+        else if (p.status === 'infilage_in_progress') subBadge = '<span class="text-[9px] bg-blue-500/20 text-blue-300 px-1 rounded">SOFFIAGGIO</span>';
+        else if (p.status === 'executive_design') subBadge = '<span class="text-[9px] bg-blue-500/20 text-blue-300 px-1 rounded">PROG. ESECUTIVA</span>';
+        else if (p.status === 'riuso_previsto') subBadge = '<span class="text-[9px] bg-violet-500/20 text-violet-300 px-1 rounded">RIUSO PROBABILE</span>';
         else if (p.status === 'installato') subBadge = '<span class="text-[9px] bg-cyan-500/20 text-cyan-300 px-1 rounded">ARLO POSATO</span>';
         else if (p.category === 'arlo') subBadge = '<span class="text-[9px] bg-cyan-500/20 text-cyan-300 px-1 rounded">ARLO</span>';
 

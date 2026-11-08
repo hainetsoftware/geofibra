@@ -1,7 +1,7 @@
 // js/cantieri_tracker.js - Monitoraggio Cantieri e Ordinanze Albo Pretorio Comune di Collesalvetti
 // Fuso Orario di Riferimento: Europe/Rome
 
-// Dati ufficiali estratti da data/ordinanze.json (fonte unica di verita', aggiornati al 17/10/2026 Snapshot 5)
+// Copia di data/ordinanze.json per l'uso da file://.
 const ORDINANZE_DATA_DEFAULT = [
   {
     "id": "cantiere-2-stagno",
@@ -22,10 +22,10 @@ const ORDINANZE_DATA_DEFAULT = [
       "giorni": "feriali"
     },
     "slittamento_osservato": {
-      "fonte_kml": "Snapshot 5 (17/10/2026) - proroga con Ordinanza n. 111 del 16/10/2026",
+      "fonte_kml": "Snapshot 6 (05/11/2026)",
       "inizio_stimato": "2026-10-05T08:00:00+02:00",
       "fine_stimata": "2026-10-23T18:00:00+02:00",
-      "nota_campo": "Finestra originaria 05/10/2026 - 17/10/2026, prorogata al 23/10/2026 con Ordinanza n. 111 del 16/10/2026 (estensione di 5 giorni lavorativi per completamento minitrincee secondarie e pozzetti in calcestruzzo attorno al nuovo ARLO lungo l'asse Via Romita / Via XXV Aprile)."
+      "nota_campo": "Opere civili completate sulle quattro tratte censite, incluse Via Romita sud, Via De Gasperi, Via Machiavelli e Via XXV Aprile."
     },
     "lunghezza_stimata_km": 1.48,
     "vie_interessate": [
@@ -40,7 +40,7 @@ const ORDINANZE_DATA_DEFAULT = [
     "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
     "coordinate_centro": [43.5930, 10.3540],
     "descrizione_ufficiale": "Provvedimento di disciplina temporanea della viabilità per esecuzione di scavi stradali per posa della rete in fibra ottica FiberCop a Stagno. Prorogato fino al 23/10/2026 con Ordinanza n. 111/2026.",
-    "stato_base": "in_completamento"
+    "stato_base": "eseguito"
   },
   {
     "id": "cantiere-3-stagno",
@@ -122,18 +122,16 @@ const ORDINANZE_DATA_DEFAULT = [
     "data_emissione": "2026-10-14",
     "autorizzazione_settore_tecnico": "Autorizzazione Tecnica n. 26/2026",
     "periodo_ordinanza": {
-      "inizio": "2026-10-26T08:00:00+02:00",
-      "fine": "2026-11-20T18:00:00+02:00",
+      "inizio": "2026-10-26T08:00:00+01:00",
+      "fine": "2026-11-20T18:00:00+01:00",
       "fascia_oraria": "08:00 - 18:00",
       "giorni": "feriali"
     },
     "slittamento_osservato": {
-      "fonte_kml": "Snapshot 5 (17/10/2026) - 3 tratte lineari (2,063 km)",
-      "inizio_stimato": "2026-10-26T08:00:00+02:00",
-      "fine_stimata": "2026-11-20T18:00:00+02:00",
-      "nota_campo": "Nuovo cantiere di espansione FTTH rilevato in Snapshot 5. Finestra autorizzata: 26/10/2026 - 20/11/2026. 3 tratte per complessivi 2,063 km su Via Marx, Via Curiel, Via Gobetti, Via Don Verità, Via F.lli Cervi, Via La Malfa, Via Verga, Via Berlinguer."
+      "fonte_kml": "Snapshot 6 (05/11/2026)",
+      "nota_campo": "Anello nord completato (Via Karl Marx, Via Gobetti e Via Curiel, 734 m). Restano pianificate tre tratte, tra cui il ramo di Via Don Giovanni Verità (446 m)."
     },
-    "lunghezza_stimata_km": 2.06,
+    "lunghezza_stimata_km": 2.052,
     "vie_interessate": [
       { "via": "Via Marx", "prescrizione": "Divieto di sosta e senso unico alternato per posa condotte" },
       { "via": "Via Curiel (lato sud)", "prescrizione": "Divieto di sosta e restringimento carreggiata" },
@@ -144,10 +142,10 @@ const ORDINANZE_DATA_DEFAULT = [
       { "via": "Via Verga", "prescrizione": "Divieto di sosta con rimozione forzata" },
       { "via": "Via Berlinguer", "prescrizione": "Divieto di sosta e senso unico alternato" }
     ],
-    "file_pdf": "ordinanze/ordinanza_110_2026_stagno_cantiere4.pdf",
+    "file_pdf": null,
     "coordinate_centro": [43.5885, 10.3480],
     "descrizione_ufficiale": "Provvedimento temporaneo di viabilità per scavo e posa infrastruttura fibra ottica FiberCop a Stagno nel comparto Via Marx / Curiel / Cervi. Finestra: 26/10/2026 - 20/11/2026.",
-    "stato_base": "planned"
+    "stato_base": "parzialmente_eseguito"
   },
   {
     "id": "cantiere-1-collesalvetti",
@@ -168,10 +166,10 @@ const ORDINANZE_DATA_DEFAULT = [
       "giorni": "feriali"
     },
     "slittamento_osservato": {
-      "fonte_kml": "Snapshot 5 (17/10/2026) - integrazione rotatoria e ARLO 01",
+      "fonte_kml": "Snapshot 6 (05/11/2026)",
       "inizio_stimato": "2026-09-14T08:00:00+02:00",
       "fine_stimata": "2026-10-02T18:00:00+02:00",
-      "nota_campo": "Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni (marcature blu a terra). Tratte Sud-Est (Via del Valico a Pisa, Via Peppino Impastato, Via di Cerretello e anello raccordo rotatoria Cantiere 1 AGGIUNTO) completate con minitrincea sigillata (microtubi Fender 4x10/14) e riuso cavidotti storici TIM. Posato il primo ARLO del capoluogo (C [] ARLO) con 4 pozzetti alla rotatoria."
+      "nota_campo": "Due tratte in progettazione esecutiva. Marcature e tecnici osservati su una tratta, soffiaggio della fibra nei pozzetti sull’altra. Su due ulteriori tratte è probabile il riuso dei pozzetti e cavidotti SIP/Telecom."
     },
     "lunghezza_stimata_km": 2.67,
     "vie_interessate": [
@@ -327,6 +325,28 @@ function calculateCantiereStatus(cantiere, currentDate) {
     day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'Europe/Rome'
   });
 
+  if (cantiere.stato_base === 'eseguito') {
+    return {
+      statusCode: 'eseguito',
+      statusLabel: 'OPERE CIVILI COMPLETATE',
+      badgeClass: 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/50',
+      dotClass: 'bg-emerald-400',
+      timingSummary: 'Completamento verificato sul campo',
+      isActiveNow: false
+    };
+  }
+
+  if (cantiere.stato_base === 'parzialmente_eseguito') {
+    return {
+      statusCode: 'parzialmente_eseguito',
+      statusLabel: 'OPERE CIVILI PARZIALMENTE COMPLETATE',
+      badgeClass: 'bg-amber-500/20 text-amber-300 border border-amber-500/50',
+      dotClass: 'bg-amber-400',
+      timingSummary: `Finestra autorizzata ${startFormatted}–${endFormatted}`,
+      isActiveNow: now >= start && now <= end && rome.isWorkingDay && rome.isWorkingHours
+    };
+  }
+
   // Gestione stato "in_completamento" (es. Cantiere 2 Stagno prorogato al 23/10)
   if (cantiere.stato_base === 'in_completamento' && now <= end) {
     return {
@@ -354,13 +374,13 @@ function calculateCantiereStatus(cantiere, currentDate) {
 
   // 2. Oltre il termine stabilito dall'ordinanza
   if (now > end) {
-    if (cantiere.stato_base === 'parziale_scaduto') {
+    if (['parziale_scaduto', 'riuso_previsto', 'non_eseguito'].includes(cantiere.stato_base)) {
       return {
-        statusCode: 'parziale_scaduto',
-        statusLabel: 'TERMINI SCADUTI (PARZIALMENTE ESEGUITO - ATTESA PROROGA)',
+        statusCode: cantiere.stato_base,
+        statusLabel: 'ORDINANZA SCADUTA',
         badgeClass: 'bg-rose-500/20 text-rose-300 border border-rose-500/40',
         dotClass: 'bg-rose-400',
-        timingSummary: `Efficacia scaduta il ${endFormatted}. Tratte Sud-Est eseguite, Via Nenni in attesa proroga`,
+        timingSummary: `Efficacia scaduta il ${endFormatted}`,
         isActiveNow: false
       };
     }
@@ -457,40 +477,6 @@ function renderCantieriModal() {
 
   listCont.innerHTML = '';
 
-  // Banner evidenziato: 3 Cantieri Concomitanti a Stagno (19 – 23 Ottobre 2026)
-  const concurrentAlert = document.createElement('div');
-  concurrentAlert.className = "col-span-full border-2 border-amber-500/70 bg-amber-500/15 rounded-xl p-4 mb-3 text-amber-200 shadow-xl shadow-amber-500/10";
-  concurrentAlert.innerHTML = `
-    <div class="flex items-center gap-2 font-['Rajdhani'] text-base font-bold text-amber-300 uppercase tracking-wider mb-1">
-      <svg class="w-5 h-5 text-amber-400 animate-pulse flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-      <span>Allerta Viabilità &bull; 3 Cantieri Concomitanti a Stagno (19 – 23 Ottobre 2026)</span>
-    </div>
-    <p class="text-xs text-slate-200 leading-relaxed mb-2.5">
-      A partire da lunedì <b>19 ottobre 2026</b>, la frazione di <b>Stagno</b> vedrà l'attivazione simultanea di tre distinti interventi su sede stradale:
-    </p>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5 text-xs text-slate-300">
-      <div class="bg-black/40 border border-amber-500/30 rounded-lg p-3">
-        <div class="font-bold text-amber-300 mb-0.5">1. Cantiere 2 (Proroga al 23/10)</div>
-        <div class="text-[11px] text-slate-400 font-mono mb-1">Ord. 111/2026 &bull; Aut. 17/2026</div>
-        <p class="text-[11px] text-slate-300">Via Romita sud, Via De Gasperi, Via XXV Aprile: 5 giorni di proroga per completamento trincee e getto pozzetti attorno al nuovo ARLO.</p>
-      </div>
-      <div class="bg-black/40 border border-cyber-neon/30 rounded-lg p-3">
-        <div class="font-bold text-cyber-neon mb-0.5">2. Cantiere 3 (19/10 – 23/10)</div>
-        <div class="text-[11px] text-slate-400 font-mono mb-1">Ord. 105/2026 &bull; Conc. 77/2026</div>
-        <p class="text-[11px] text-slate-300">Via Aiaccia e Via Umbria: posa condotte e minitrincea per rilegamento alla dorsale SP555 (occupazione 60 mq).</p>
-      </div>
-      <div class="bg-black/40 border border-emerald-500/30 rounded-lg p-3">
-        <div class="font-bold text-emerald-300 mb-0.5">3. Ripristino Asfalto (19/10 – 24/11)</div>
-        <div class="text-[11px] text-slate-400 font-mono mb-1">Ord. 112/2026 &bull; Aut. 10/2026</div>
-        <p class="text-[11px] text-slate-300">Via Fratelli Rosselli: fresatura e ripristino definitivo del manto stradale (asfalto a caldo) sulle trincee FTTH eseguite a maggio-giugno 2026.</p>
-      </div>
-    </div>
-    <div class="mt-2 text-[11px] text-amber-300/80 italic">
-      Prestare massima attenzione: possibili rallentamenti, sensi unici alternati regolati da movieri o semafori e divieti di sosta con rimozione forzata.
-    </div>
-  `;
-  listCont.appendChild(concurrentAlert);
-
   ORDINANZE_DATA.forEach(cantiere => {
     const status = calculateCantiereStatus(cantiere, now);
 
@@ -517,7 +503,7 @@ function renderCantieriModal() {
         <div class="bg-amber-500/10 border border-amber-500/30 rounded-lg p-2.5 mb-3 text-xs">
           <div class="flex items-center gap-1.5 font-bold text-amber-300 mb-1">
             <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-            ${cantiere.slittamento_osservato.fonte_kml || 'Rilievo sul Campo (Snapshot 5 - 17/10/2026)'}:
+            ${cantiere.slittamento_osservato.fonte_kml || 'Rilievo sul campo'}:
           </div>
           <p class="text-amber-200/90 leading-relaxed">${cantiere.slittamento_osservato.nota_campo}</p>
         </div>
@@ -529,7 +515,7 @@ function renderCantieriModal() {
     const lunghezza = cantiere.lunghezza_stimata_km ? `${cantiere.lunghezza_stimata_km} km` : (cantiere.lunghezzaKm || 'N.D.');
     const attoCodice = cantiere.codice_atto_completo || cantiere.ordinanza || 'Atto PM';
     const richiedente = cantiere.richiedente || 'N.D.';
-    const pdfPath = cantiere.file_pdf || cantiere.pdfFile || '#';
+    const pdfPath = cantiere.file_pdf || cantiere.pdfFile;
     const centerCoords = cantiere.coordinate_centro || cantiere.centerCoords || [43.59, 10.45];
     const descr = cantiere.descrizione_ufficiale || cantiere.descrizione || '';
 
@@ -571,9 +557,9 @@ function renderCantieriModal() {
           <button onclick="window.flyToCantiereCoords([${centerCoords[0]}, ${centerCoords[1]}])" class="px-3 py-1.5 bg-cyber-neon/20 hover:bg-cyber-neon/30 text-cyber-neon border border-cyber-neon/50 rounded text-xs font-bold flex items-center gap-1.5 transition-colors">
             <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg> Mostra su Mappa
           </button>
-          <a href="${pdfPath}" target="_blank" download class="px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded text-xs font-semibold flex items-center gap-1.5 transition-colors">
+          ${pdfPath ? `<a href="${pdfPath}" target="_blank" download class="px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded text-xs font-semibold flex items-center gap-1.5 transition-colors">
             <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> PDF Ordinanza
-          </a>
+          </a>` : ''}
         </div>
       </div>
     `;

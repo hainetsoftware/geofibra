@@ -18,10 +18,10 @@
       "giorni": "feriali"
     },
     "slittamento_osservato": {
-      "fonte_kml": "Snapshot 5 (17/10/2026) - proroga con Ordinanza n. 111 del 16/10/2026",
+      "fonte_kml": "Snapshot 6 (05/11/2026)",
       "inizio_stimato": "2026-10-05T08:00:00+02:00",
       "fine_stimata": "2026-10-23T18:00:00+02:00",
-      "nota_campo": "Finestra originaria 05/10/2026 - 17/10/2026, prorogata al 23/10/2026 con Ordinanza n. 111 del 16/10/2026 (estensione di 5 giorni lavorativi per completamento minitrincee secondarie e pozzetti in calcestruzzo attorno al nuovo ARLO lungo l'asse Via Romita / Via XXV Aprile)."
+      "nota_campo": "Opere civili completate sulle quattro tratte censite, incluse Via Romita sud, Via De Gasperi, Via Machiavelli e Via XXV Aprile."
     },
     "lunghezza_stimata_km": 1.48,
     "vie_interessate": [
@@ -36,7 +36,7 @@
     "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
     "coordinate_centro": [43.5930, 10.3540],
     "descrizione_ufficiale": "Provvedimento di disciplina temporanea della viabilità per esecuzione di scavi stradali per posa della rete in fibra ottica FiberCop a Stagno. Prorogato fino al 23/10/2026 con Ordinanza n. 111/2026.",
-    "stato_base": "in_completamento"
+    "stato_base": "eseguito"
   },
   {
     "id": "cantiere-3-stagno",
@@ -118,18 +118,16 @@
     "data_emissione": "2026-10-14",
     "autorizzazione_settore_tecnico": "Autorizzazione Tecnica n. 26/2026",
     "periodo_ordinanza": {
-      "inizio": "2026-10-26T08:00:00+02:00",
-      "fine": "2026-11-20T18:00:00+02:00",
+      "inizio": "2026-10-26T08:00:00+01:00",
+      "fine": "2026-11-20T18:00:00+01:00",
       "fascia_oraria": "08:00 - 18:00",
       "giorni": "feriali"
     },
     "slittamento_osservato": {
-      "fonte_kml": "Snapshot 5 (17/10/2026) - 3 tratte lineari (2,063 km)",
-      "inizio_stimato": "2026-10-26T08:00:00+02:00",
-      "fine_stimata": "2026-11-20T18:00:00+02:00",
-      "nota_campo": "Nuovo cantiere di espansione FTTH rilevato in Snapshot 5. Finestra autorizzata: 26/10/2026 - 20/11/2026. 3 tratte per complessivi 2,063 km su Via Marx, Via Curiel, Via Gobetti, Via Don Verità, Via F.lli Cervi, Via La Malfa, Via Verga, Via Berlinguer."
+      "fonte_kml": "Snapshot 6 (05/11/2026)",
+      "nota_campo": "Anello nord completato (Via Karl Marx, Via Gobetti e Via Curiel, 734 m). Restano pianificate tre tratte, tra cui il ramo di Via Don Giovanni Verità (446 m)."
     },
-    "lunghezza_stimata_km": 2.06,
+    "lunghezza_stimata_km": 2.052,
     "vie_interessate": [
       { "via": "Via Marx", "prescrizione": "Divieto di sosta e senso unico alternato per posa condotte" },
       { "via": "Via Curiel (lato sud)", "prescrizione": "Divieto di sosta e restringimento carreggiata" },
@@ -140,10 +138,10 @@
       { "via": "Via Verga", "prescrizione": "Divieto di sosta con rimozione forzata" },
       { "via": "Via Berlinguer", "prescrizione": "Divieto di sosta e senso unico alternato" }
     ],
-    "file_pdf": "ordinanze/ordinanza_110_2026_stagno_cantiere4.pdf",
+    "file_pdf": null,
     "coordinate_centro": [43.5885, 10.3480],
     "descrizione_ufficiale": "Provvedimento temporaneo di viabilità per scavo e posa infrastruttura fibra ottica FiberCop a Stagno nel comparto Via Marx / Curiel / Cervi. Finestra: 26/10/2026 - 20/11/2026.",
-    "stato_base": "planned"
+    "stato_base": "parzialmente_eseguito"
   },
   {
     "id": "cantiere-1-collesalvetti",
@@ -164,10 +162,10 @@
       "giorni": "feriali"
     },
     "slittamento_osservato": {
-      "fonte_kml": "Snapshot 5 (17/10/2026) - integrazione rotatoria e ARLO 01",
+      "fonte_kml": "Snapshot 6 (05/11/2026)",
       "inizio_stimato": "2026-09-14T08:00:00+02:00",
       "fine_stimata": "2026-10-02T18:00:00+02:00",
-      "nota_campo": "Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni (marcature blu a terra). Tratte Sud-Est (Via del Valico a Pisa, Via Peppino Impastato, Via di Cerretello e anello raccordo rotatoria Cantiere 1 AGGIUNTO) completate con minitrincea sigillata (microtubi Fender 4x10/14) e riuso cavidotti storici TIM. Posato il primo ARLO del capoluogo (C [] ARLO) con 4 pozzetti alla rotatoria."
+      "nota_campo": "Due tratte in progettazione esecutiva. Marcature e tecnici osservati su una tratta, soffiaggio della fibra nei pozzetti sull’altra. Su due ulteriori tratte è probabile il riuso dei pozzetti e cavidotti SIP/Telecom."
     },
     "lunghezza_stimata_km": 2.67,
     "vie_interessate": [

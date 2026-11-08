@@ -18,6 +18,8 @@ function getIconHtml(iconName, color) {
         svg = `<svg xmlns="http://www.w3.org/2005/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="14" rx="2" ry="2"></rect><path d="M12 10V2"></path><path d="M8 6h8"></path></svg>`;
     } else if (iconName === 'building-small') {
         svg = `<svg xmlns="http://www.w3.org/2005/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="16" rx="2" ry="2"></rect><path d="M4 8l8-6 8 6"></path></svg>`;
+    } else if (iconName === 'cable-reel') {
+        svg = `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="10" r="7"></circle><circle cx="12" cy="10" r="3"></circle><path d="M12 17v3h8"></path></svg>`;
     } else {
         svg = `<svg xmlns="http://www.w3.org/2005/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>`;
     }
@@ -91,25 +93,18 @@ function initMap() {
 
 function featureMatchesFilter(feature, filter) {
     if (!filter || filter === 'all') return true;
-    const p = feature.properties;
-    const s = p.status || '';
-    const cat = p.category || '';
-    const nameLower = (p.name || '').toLowerCase();
+    const { status, category } = feature.properties;
 
-    // Se stiamo filtrando i cantieri, gli elementi non-cantiere (es. coperture, scuole, sanità) restano visibili solo se 'all'
     if (filter === 'completati') {
-        return s === 'completato' || cat === 'cantiere_eseguito' || nameLower.includes('eseguito') || nameLower.includes('aggiunto');
-    }
-    if (filter === 'in_completamento') {
-        return s === 'in_completamento' || (cat.includes('cantiere') && (nameLower.includes('cantiere 2') && !nameLower.includes('eseguito')));
+        return feature.geometry.type === 'LineString' && status === 'completato';
     }
     if (filter === 'autorizzati') {
-        return s === 'autorizzato' || s === 'planned' || (cat.includes('cantiere') && (nameLower.includes('cantiere 3') || nameLower.includes('cantiere 4')));
+        return status === 'autorizzato' || status === 'planned';
     }
-    if (filter === 'in_attesa_proroga') {
-        return s === 'in_attesa_proroga' || cat === 'cantiere_non_eseguito' || nameLower.includes('non eseguito');
+    if (filter === 'progettazione_esecutiva') {
+        return category === 'cantiere_progettazione_esecutiva';
     }
-    return true;
+    return status === filter;
 }
 
 function loadData() {
@@ -179,7 +174,7 @@ function loadData() {
             let tagsHtml = `
                 <div class="flex flex-wrap items-center gap-1.5 my-2 text-[10px]">
                     <span class="px-2 py-0.5 rounded bg-white/10 text-slate-300 border border-white/10">🏢 ${props.operatore || 'FiberCop'}</span>
-                    <span class="px-2 py-0.5 rounded bg-white/10 text-slate-300 border border-white/10">📅 Rilievo: ${props.data_rilevamento || '2026-10-17'}</span>
+                    <span class="px-2 py-0.5 rounded bg-white/10 text-slate-300 border border-white/10">📅 Rilievo: ${props.data_rilevamento || 'N.D.'}</span>
                     ${props.ordinanza ? `<span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20">📋 ${props.ordinanza}</span>` : ''}
                 </div>
             `;
@@ -255,10 +250,8 @@ function loadData() {
     }).addTo(map);
     
     // Filtra la lista elementi nella telemetria se applicato
-    if (window.FTTH_NETWORK_DATA && window.FTTH_NETWORK_DATA.features) {
-        const filteredFeatures = window.FTTH_NETWORK_DATA.features.filter(f => featureMatchesFilter(f, currentCantiereFilter));
-        if (window.updateTelemetry) window.updateTelemetry(filteredFeatures);
-    }
+    const filteredFeatures = window.FTTH_NETWORK_DATA.features.filter(f => featureMatchesFilter(f, currentCantiereFilter));
+    if (window.updateTelemetry) window.updateTelemetry(filteredFeatures);
 }
 
 function initLegendFilters() {
@@ -266,6 +259,10 @@ function initLegendFilters() {
     if (!filterBtns || filterBtns.length === 0) return;
 
     filterBtns.forEach(btn => {
+        const count = btn.querySelector('[data-filter-count]');
+        if (count && window.FTTH_NETWORK_DATA) {
+            count.textContent = window.FTTH_NETWORK_DATA.features.filter(f => featureMatchesFilter(f, btn.dataset.filter)).length;
+        }
         btn.addEventListener('click', (e) => {
             const target = e.currentTarget;
             filterBtns.forEach(b => {
