@@ -39,6 +39,10 @@ function initMap() {
         maxZoom: 19
     }).setView(center, 15);
 
+    map.createPane('polygonsPane').style.zIndex = 350;
+    map.createPane('linesPane').style.zIndex = 450;
+    map.createPane('markersPane').style.zIndex = 600;
+
     L.control.zoom({ position: 'bottomright' }).addTo(map);
 
     // Layer 1: Cyber Dark (Esri Dark Canvas)
@@ -126,12 +130,14 @@ function loadData() {
                 iconSize: [26, 26],
                 iconAnchor: [13, 13]
             });
-            return L.marker(latlng, { icon: icon });
+            return L.marker(latlng, { icon, pane: 'markersPane' });
         },
         style: function (feature) {
             const props = feature.properties;
             if (feature.geometry.type === 'LineString') {
                 return {
+                    pane: 'linesPane',
+                    bubblingMouseEvents: false,
                     color: props.color,
                     weight: 4,
                     opacity: 0.95,
@@ -140,6 +146,7 @@ function loadData() {
             }
             if (feature.geometry.type === 'Polygon') {
                 return {
+                    pane: 'polygonsPane',
                     color: props.color,
                     weight: 2,
                     opacity: 1,
