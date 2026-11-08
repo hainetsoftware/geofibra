@@ -8,7 +8,8 @@ window.FTTH_NETWORK_DATA = {
     "generated_at": "2026-11-05",
     "source_snapshot": "Snapshot 6",
     "source_kml": "data/snapshots/rilievo_snapshot6.kml",
-    "timezone": "Europe/Rome"
+    "timezone": "Europe/Rome",
+    "wholesale_source": "data/wholesale/ELENCO_CRO_CNO_SOLO_COLLSALVETTI_20261102.csv"
   },
   "features": [
     {
@@ -239,7 +240,23 @@ window.FTTH_NETWORK_DATA = {
           "Via del Valico a Pisa",
           "Via Peppino Impastato",
           "Via di Cerretello"
-        ]
+        ],
+        "wholesale": {
+          "element_id": "LIVOITA0061",
+          "acl": "58601M",
+          "central_office": "Collesalvetti",
+          "status": "ATTIVO",
+          "availability_date": "2026-10-26"
+        },
+        "commercial_rollout": {
+          "status": "in_vendibilita_imminente",
+          "streets": [
+            "Via del Valico a Pisa",
+            "Via Peppino Impastato",
+            "Via di Cerretello"
+          ],
+          "operators_reported": 24
+        }
       }
     },
     {
@@ -277,13 +294,29 @@ window.FTTH_NETWORK_DATA = {
         },
         "cantiere": null,
         "status": "installato",
-        "status_label": "Installato (Opere civili completate - In attesa di soffiaggio fibra/PTE)",
+        "status_label": "Installato (Opere civili completate)",
         "ordinanza": "Ordinanza P.M. n. 88 del 02/09/2026 (Reg. Gen. 95)",
         "operatore": "FiberCop",
         "data_rilevamento": "2026-11-05",
         "start_date": null,
         "end_date": null,
-        "streets": null
+        "streets": null,
+        "wholesale": {
+          "element_id": "LIVOITA0061",
+          "acl": "58601M",
+          "central_office": "Collesalvetti",
+          "status": "ATTIVO",
+          "availability_date": "2026-10-26"
+        },
+        "commercial_rollout": {
+          "status": "in_vendibilita_imminente",
+          "streets": [
+            "Via del Valico a Pisa",
+            "Via Peppino Impastato",
+            "Via di Cerretello"
+          ],
+          "operators_reported": 24
+        }
       }
     },
     {
@@ -981,13 +1014,29 @@ window.FTTH_NETWORK_DATA = {
         },
         "cantiere": null,
         "status": "infrastrutturato",
-        "status_label": "Infrastrutturati / In fase di cablaggio e predisposizione secondaria",
+        "status_label": "Armadio ottico infrastrutturato",
         "ordinanza": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)",
         "operatore": "FiberCop",
         "data_rilevamento": "2026-11-05",
         "start_date": null,
         "end_date": null,
-        "streets": null
+        "streets": null,
+        "wholesale": {
+          "element_id": "LIVOITA0060",
+          "acl": "58602A",
+          "central_office": "Stagno",
+          "status": "ATTIVO",
+          "availability_date": "2026-09-16"
+        },
+        "commercial_rollout": {
+          "status": "in_vendibilita_imminente",
+          "streets": [
+            "Via Curiel",
+            "Via Gobetti",
+            "Via Dante Alighieri"
+          ],
+          "reported_active_address": "Via Curiel 19"
+        }
       }
     },
     {
@@ -1025,13 +1074,20 @@ window.FTTH_NETWORK_DATA = {
         },
         "cantiere": null,
         "status": "infrastrutturato",
-        "status_label": "Infrastrutturati / In fase di cablaggio e predisposizione secondaria",
+        "status_label": "Armadio ottico infrastrutturato",
         "ordinanza": "Ordinanza P.M. n. 95/2026 (Reg. Gen. 102/104/2026)",
         "operatore": "FiberCop",
         "data_rilevamento": "2026-11-05",
         "start_date": null,
         "end_date": null,
-        "streets": null
+        "streets": null,
+        "wholesale": {
+          "element_id": "LIVOITA005Y",
+          "acl": "58602A",
+          "central_office": "Stagno",
+          "status": "ATTIVO",
+          "availability_date": "2026-09-28"
+        }
       }
     },
     {
@@ -1075,7 +1131,14 @@ window.FTTH_NETWORK_DATA = {
         "data_rilevamento": "2026-11-05",
         "start_date": null,
         "end_date": null,
-        "streets": null
+        "streets": null,
+        "wholesale": {
+          "element_id": "LIVOITA005X",
+          "acl": "58602A",
+          "central_office": "Stagno",
+          "status": "PIANIFICATO",
+          "availability_date": null
+        }
       }
     },
     {
@@ -2703,7 +2766,23 @@ window.FTTH_NETWORK_DATA = {
           "Via del Valico a Pisa",
           "Via Peppino Impastato",
           "Via di Cerretello"
-        ]
+        ],
+        "wholesale": {
+          "element_id": "LIVOITA0061",
+          "acl": "58601M",
+          "central_office": "Collesalvetti",
+          "status": "ATTIVO",
+          "availability_date": "2026-10-26"
+        },
+        "commercial_rollout": {
+          "status": "in_vendibilita_imminente",
+          "streets": [
+            "Via del Valico a Pisa",
+            "Via Peppino Impastato",
+            "Via di Cerretello"
+          ],
+          "operators_reported": 24
+        }
       }
     },
     {
@@ -3244,7 +3323,14 @@ window.FTTH_NETWORK_DATA = {
         "data_rilevamento": "2026-11-05",
         "start_date": null,
         "end_date": null,
-        "streets": null
+        "streets": null,
+        "wholesale": {
+          "element_id": "LIVOITA005Z",
+          "acl": "58601M",
+          "central_office": "Collesalvetti",
+          "status": "ATTIVO",
+          "availability_date": "2026-08-24"
+        }
       }
     },
     {
@@ -3365,7 +3451,14 @@ window.FTTH_NETWORK_DATA = {
         "data_rilevamento": "2026-11-05",
         "start_date": null,
         "end_date": null,
-        "streets": null
+        "streets": null,
+        "wholesale": {
+          "element_id": "LIVOITA005Z",
+          "acl": "58601M",
+          "central_office": "Collesalvetti",
+          "status": "ATTIVO",
+          "availability_date": "2026-08-24"
+        }
       }
     },
     {

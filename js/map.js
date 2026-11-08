@@ -200,6 +200,26 @@ function loadData() {
             if (props.description) {
                 popupContent += `<div class="notes border-l-2 pl-2 text-xs leading-relaxed" style="border-color: ${props.color}">${props.description}</div>`;
             }
+
+            if (props.wholesale) {
+                const { element_id, acl, central_office, status, availability_date } = props.wholesale;
+                const available = availability_date ? availability_date.split('-').reverse().join('/') : 'Da definire';
+                const rollout = props.commercial_rollout;
+                popupContent += `
+                    <div class="mt-3 border-t border-white/10 pt-2 text-xs">
+                        <div class="font-bold text-cyber-neon">FiberCop Wholesale</div>
+                        <div>CRO <b>${element_id}</b> · ${status}</div>
+                        <div>Centrale ${central_office} · ACL <b>${acl}</b></div>
+                        <div>Disponibilità wholesale <b>${available}</b></div>
+                        ${rollout?.status === 'in_vendibilita_imminente' ? `
+                            <div class="mt-1 font-semibold text-cyan-300">In arrivo la rete ultraveloce</div>
+                            <div>${rollout.streets.join(', ')}</div>
+                            ${rollout.operators_reported ? `<div>${rollout.operators_reported} operatori wholesale segnalati</div>` : ''}
+                            ${rollout.reported_active_address ? `<div>Attivazione segnalata al civico ${rollout.reported_active_address}</div>` : ''}
+                        ` : ''}
+                    </div>
+                `;
+            }
             
             if (props.length_m > 0) popupContent += `<div class="text-xs text-slate-300 mt-2">📏 Tratta: <b class="text-white">${props.length_m} m</b> (${props.length_km} km)</div>`;
             if (props.area_m2 > 0) popupContent += `<div class="text-xs text-slate-300 mt-2">📐 Superficie: <b class="text-white">${props.area_km2} km²</b> (${props.area_m2} m²)</div>`;

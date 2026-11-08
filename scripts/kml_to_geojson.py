@@ -6,6 +6,9 @@ metadati ordinanze comunali e tag di stato/tracciamento standardizzati.
 """
 
 import argparse
+import csv
+from datetime import datetime
+from pathlib import Path
 import xml.etree.ElementTree as ET
 import json
 import re
@@ -14,6 +17,54 @@ import os
 
 SNAPSHOT_DATES = {4: "2026-10-11", 5: "2026-10-17", 6: "2026-11-05"}
 LATEST_KML = "data/snapshots/rilievo_snapshot6.kml"
+WHOLESALE_CSV = Path(__file__).resolve().parents[1] / "data/wholesale/ELENCO_CRO_CNO_SOLO_COLLSALVETTI_20261102.csv"
+
+# Le associazioni ai placemark derivano dal rilievo locale. Il CSV censisce i CRO.
+WHOLESALE_ELEMENTS = {
+    "01D156648742616017BB": "LIVOITA0061",  # ARLO rotatoria Via Roma / Via Nenni
+    "0D01C4A3D9419D77F4F8": "LIVOITA0061",  # Tratta secondaria Cantiere 1
+    "08DB97EDC341BFC840B3": "LIVOITA0061",  # Tratta secondaria Cantiere 1
+    "0A2895209441C56CED8C": "LIVOITA0060",  # S [27] ARLO
+    "073CCE441A419DEDF933": "LIVOITA005Y",  # S [28] ARLO
+    "01D91831AC4261623108": "LIVOITA005X",  # ARLO presso S [04] ARL
+    "0F1AE3268141C0558FB7": "LIVOITA005Z",  # Scuole
+    "03A16F4CC141C0599BFE": "LIVOITA005Z",  # Sanità
+}
+WHOLESALE_CENTRALS = {"58601M": "Collesalvetti", "58602A": "Stagno"}
+ROLLOUT = {
+    "LIVOITA0061": {
+        "status": "in_vendibilita_imminente",
+        "streets": ["Via del Valico a Pisa", "Via Peppino Impastato", "Via di Cerretello"],
+        "operators_reported": 24,
+    },
+    "LIVOITA0060": {
+        "status": "in_vendibilita_imminente",
+        "streets": ["Via Curiel", "Via Gobetti", "Via Dante Alighieri"],
+        "reported_active_address": "Via Curiel 19",
+    },
+}
+
+
+def load_wholesale():
+    records = {}
+    with WHOLESALE_CSV.open(encoding="utf-8-sig", newline="") as source:
+        for row in csv.DictReader(source, delimiter=";"):
+            element_id = row["ID_ELEMENTO"]
+            if row["COMUNE"] != "COLLESALVETTI" or row["TIPO"] != "CRO":
+                continue
+            status = row["STATO"]
+            available = row["DATA_DISPONIBILITA"]
+            if element_id in records or status not in {"ATTIVO", "PIANIFICATO"}:
+                raise ValueError(f"Record CRO duplicato o stato sconosciuto: {element_id}")
+            acl = row["CODICE_ACL"]
+            records[element_id] = {
+                "element_id": element_id,
+                "acl": acl,
+                "central_office": WHOLESALE_CENTRALS[acl],
+                "status": status,
+                "availability_date": datetime.strptime(available, "%Y%m%d").date().isoformat() if available else None,
+            }
+    return records
 
 def haversine(coord1, coord2):
     lon1, lat1 = coord1[0], coord1[1]
@@ -215,6 +266,7 @@ def parse_kml(kml_path):
     match = re.search(r"snapshot(\d+)\.kml$", os.fspath(kml_path), re.I)
     snapshot_number = int(match[1]) if match else None
     snapshot_date = SNAPSHOT_DATES.get(snapshot_number)
+    wholesale_records = load_wholesale() if snapshot_date and snapshot_date >= "2026-11-02" else None
     tree = ET.parse(kml_path)
     root = tree.getroot()
     ns = {"kml": "http://www.opengis.net/kml/2.2", "gx": "http://www.google.com/kml/ext/2.2"}
@@ -636,6 +688,16 @@ def parse_kml(kml_path):
         visibility = p.findtext("kml:visibility", namespaces=ns)
         if visibility is not None:
             feature["properties"]["kml_visibility"] = visibility.strip() == "1"
+        if wholesale_records is not None and pid in WHOLESALE_ELEMENTS:
+            element_id = WHOLESALE_ELEMENTS[pid]
+            feature["properties"]["wholesale"] = wholesale_records[element_id]
+            if element_id in ROLLOUT:
+                feature["properties"]["commercial_rollout"] = ROLLOUT[element_id]
+            if category == "arlo" and wholesale_records[element_id]["status"] == "ATTIVO":
+                feature["properties"]["status_label"] = (
+                    "Installato (Opere civili completate)" if status_code == "installato"
+                    else "Armadio ottico infrastrutturato"
+                )
         features.append(feature)
 
     geojson = {
@@ -651,6 +713,8 @@ def parse_kml(kml_path):
         },
         "features": features
     }
+    if wholesale_records is not None:
+        geojson["metadata"]["wholesale_source"] = f"data/wholesale/{WHOLESALE_CSV.name}"
     return geojson
 
 def main():
