@@ -213,10 +213,11 @@ class TestDocuments(unittest.TestCase):
         self.assertQuotes("docs/HANDOFF_REDESIGN.md", r"sono (\d+) feature, [\d,]+ km, \d+ apparati", f["total"])
         self.assertQuotes("docs/HANDOFF_REDESIGN.md", r"sono \d+ feature, ([\d,]+) km, \d+ apparati", self.km_it)
         self.assertQuotes("docs/HANDOFF_REDESIGN.md", r"sono \d+ feature, [\d,]+ km, (\d+) apparati", e["total_municipal"])
-        chg = read("data/snapshots/CHANGELOG_DATI.md").split("## Snapshot 4", 1)[0]
+        snapshot_id = self.s["snapshot"]["id"]
+        chg = read("data/snapshots/CHANGELOG_DATI.md").split(f"## {snapshot_id} ", 1)[1].split("\n## ", 1)[0]
         self.assertEqual(re.findall(r"Feature totali censite:\*\* \*\*(\d+)\*\* \((\d+) punti, (\d+) linee, (\d+) poligoni\)", chg),
                          [tuple(str(x) for x in (f["total"], f["points"], f["lines"], f["polygons"]))])
-        self.assertQuotes("data/snapshots/CHANGELOG_DATI.md", r"Apparati censiti \(Snapshot 5\):\*\* \*\*(\d+)\*\* nel territorio comunale", e["total_municipal"])
+        self.assertRegex(chg, rf"Apparati censiti \({snapshot_id}\):\*\* \*\*{e['total_municipal']}\*\* nel territorio comunale")
 
     def test_no_stale_equipment_counts_in_markdown(self):
         """Qualsiasi 'N apparati' nei documenti correnti deve valere il totale comunale (o con esterni)."""
@@ -230,7 +231,7 @@ class TestDocuments(unittest.TestCase):
 
     def test_historic_snapshot_figures_match_kml(self):
         log = read("data/snapshots/CHANGELOG_DATI.md")
-        for n in (1, 2, 3, 4):
+        for n in (1, 2, 3, 4, 5):
             k = kml_summary(f"data/snapshots/rilievo_snapshot{n}.kml")
             sect = log.split(f"## Snapshot {n}", 1)[1].split("\n## ", 1)[0]
             m = re.search(r"Feature totali censite:\*\* \*\*(\d+)\*\* \((\d+) punti, (\d+) linee, (\d+) poligoni\)", sect)

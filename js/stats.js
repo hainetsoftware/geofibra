@@ -3,7 +3,7 @@ window.FTTH_STATS = {
   "equipment": {
     "by_category_municipal": {
       "arl": 24,
-      "arlo": 4,
+      "arlo": 5,
       "centrale_comunale": 1,
       "centrale_frazione": 6
     },
@@ -40,9 +40,9 @@ window.FTTH_STATS = {
       },
       "Stagno": {
         "arl": 6,
-        "arlo": 3,
+        "arlo": 4,
         "centrali": 1,
-        "totale": 10
+        "totale": 11
       },
       "Vicarello": {
         "arl": 8,
@@ -53,13 +53,17 @@ window.FTTH_STATS = {
     },
     "by_operator": null,
     "by_operator_note": "Il dato operatore non e' presente nel KML/GeoJSON: nessuna ripartizione prodotta.",
-    "cabinets_municipal": 28,
+    "cabinets_municipal": 29,
     "centrali_municipal": 7,
     "definition": "Point con category in arl, arlo, centrale_comunale, centrale_frazione, centrale_feeder",
     "excluded_points": [
       {
         "category": "infrastruttura",
         "name": "Coppie di corrugati scoperti"
+      },
+      {
+        "category": "materials_depot",
+        "name": "Coppie di fibre"
       }
     ],
     "external": [
@@ -68,17 +72,18 @@ window.FTTH_STATS = {
         "name": "Centrale Feeder (Livorno Nord)"
       }
     ],
-    "total_all": 36,
+    "total_all": 37,
     "total_external": 1,
-    "total_municipal": 35
+    "total_municipal": 36
   },
   "features": {
     "by_category": {
       "arl": 24,
-      "arlo": 4,
-      "cantiere_eseguito": 4,
-      "cantiere_non_eseguito": 5,
-      "cantiere_programmato": 10,
+      "arlo": 5,
+      "cantiere_eseguito": 8,
+      "cantiere_non_eseguito": 2,
+      "cantiere_progettazione_esecutiva": 2,
+      "cantiere_programmato": 7,
       "centrale_comunale": 1,
       "centrale_feeder": 1,
       "centrale_frazione": 6,
@@ -86,28 +91,29 @@ window.FTTH_STATS = {
       "copertura_ok": 2,
       "infrastruttura": 1,
       "infratel": 2,
+      "materials_depot": 1,
       "rete_sanita": 1,
       "rete_scuole": 1,
       "tratta_backbone": 1,
       "tratta_stagno": 6
     },
     "lines": 30,
-    "points": 37,
+    "points": 39,
     "polygons": 4,
-    "total": 71
+    "total": 73
   },
   "length_km": {
     "by_frazione": {
       "Altro": 9.995,
-      "Collesalvetti": 3.3,
-      "Stagno": 10.545
+      "Collesalvetti": 3.255,
+      "Stagno": 10.535
     },
-    "total": 23.84
+    "total": 23.785
   },
   "methodology_version": "1.0",
   "snapshot": {
-    "date": "2026-10-17",
-    "id": "Snapshot 5",
-    "source_kml": "data/snapshots/rilievo_snapshot5.kml"
+    "date": "2026-11-05",
+    "id": "Snapshot 6",
+    "source_kml": "data/snapshots/rilievo_snapshot6.kml"
   }
 };

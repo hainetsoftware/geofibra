@@ -3,7 +3,7 @@
 
 [![Licenza: MIT](https://img.shields.io/badge/Licenza-MIT-blue.svg)](LICENSE)
 [![GIS: Leaflet 1.9.4](https://img.shields.io/badge/GIS-Leaflet%201.9.4-brightgreen.svg)](https://leafletjs.com/)
-[![Dati: Snapshot 5](https://img.shields.io/badge/Dati-Snapshot%205%20(17%2F10%2F2026)-orange.svg)](#-dati-e-statistiche-ufficiali-snapshot-5)
+[![Dati: Snapshot 6](https://img.shields.io/badge/Dati-Snapshot%206%20(05%2F11%2F2026)-orange.svg)](#-dati-e-statistiche-ufficiali-snapshot-6)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Attivo-success.svg)](#-pubblicazione-su-github-pages)
 
 ---
@@ -22,7 +22,7 @@ Il progetto nasce per garantire trasparenza sull'avanzamento dei lavori stradali
 ## 📑 Indice
 
 1. [Caratteristiche del Portale](#-caratteristiche-del-portale)
-2. [Dati e Statistiche Ufficiali (Snapshot 5)](#-dati-e-statistiche-ufficiali-snapshot-5)
+2. [Dati e Statistiche Ufficiali (Snapshot 6)](#-dati-e-statistiche-ufficiali-snapshot-6)
 3. [Registro Cantieri e Ordinanze di Polizia Municipale](#-registro-cantieri-e-ordinanze-di-polizia-municipale)
 4. [La Wiki Tecnica e Divulgativa](#-la-wiki-tecnica-e-divulgativa)
 5. [Architettura del Repository](#-architettura-del-repository)
@@ -39,13 +39,13 @@ Il progetto nasce per garantire trasparenza sull'avanzamento dei lavori stradali
 - **Visualizzazione multilivello:** commutazione istantanea tra *OpenStreetMap*, ortofoto *Satellite HD (Esri)* e visuale ad alto contrasto *Cyber Dark*.
 - **Vincolo geografico:** navigazione limitata al perimetro toscano (`TOSCANA_BOUNDS`) per impedire disorientamenti fuori zona.
 - **Tracciati e apparati vettoriali:** minitrincee, dorsali primarie, armadi ARLO, ARL rame, centrali e pozzetti con popup completi di quote metriche, note di rilievo e link a Google Street View.
-- **Filtro interattivo cantieri:** selezione rapida per visualizzare tratte completate, cantieri in completamento (C2), autorizzati (C3) o in attesa di proroga (C1).
+- **Filtro interattivo cantieri:** selezione per tratte completate, autorizzate o pianificate, in progettazione esecutiva o con probabile riuso di cavidotti.
 
 ### 2. 🚧 Tracker Ordinanze e Cantieri Stradali (Tempo Reale Europe/Rome)
 - **Incrocio con l'Albo Pretorio:** collegamento diretto agli atti di disciplina della circolazione emessi dal Comune di Collesalvetti.
 - **Calcolo dinamico dello stato lavorativo:**
   - `PROGRAMMATO`: prima dell'inizio formale dell'atto.
-  - `IN COMPLETAMENTO`: cantieri con condotte posate e pozzetti in chiusura finale (es. Cantiere 2 Stagno).
+  - `OPERE CIVILI COMPLETATE` e `OPERE CIVILI PARZIALMENTE COMPLETATE` riportano i riscontri di campo (Cantiere 2 e Cantiere 4 a Stagno).
   - `CANTIERE ATTIVO ORA`: solo ed esclusivamente nei **giorni feriali** e nella fascia autorizzata (**08:00 – 18:00**).
   - `NON LAVORATIVO`: di domenica o nei giorni festivi con ordinanza vigente, con avviso esplicito di sospensione dei lavori.
   - `FUORI ORARIO`: nelle ore serali e notturne feriali.
@@ -59,28 +59,29 @@ Il progetto nasce per garantire trasparenza sull'avanzamento dei lavori stradali
 
 ---
 
-## 📊 Dati e Statistiche Ufficiali (Snapshot 5)
+## 📊 Dati e Statistiche Ufficiali (Snapshot 6)
 
-Tutti i conteggi sono calcolati deterministicamente sul rilievo geospaziale **Snapshot 5 del 17/10/2026**:
+Tutti i conteggi sono calcolati deterministicamente sul rilievo geospaziale **Snapshot 6 del 05/11/2026**:
 
 | Categoria Elemento | Quantità | Dettaglio / Note |
 |---|:---:|---|
-| **Feature Geospaziali Totali** | **71** | 37 punti, 30 linee, 4 poligoni di perimetro |
-| **Estensione Tracciati Rete** | **23,840 km** | Somma metrica di tutte le tratte stradali e dorsali (+2,062 km netti) |
+| **Feature Geospaziali Totali** | **73** | 39 punti, 30 linee, 4 poligoni di perimetro |
+| **Estensione Tracciati Rete** | **23,785 km** | Somma metrica di tutte le tratte stradali e dorsali |
 
 <!-- AUTO-STATS:BEGIN equipment -->
-Apparato = punto di rete censito (armadio ARL/ARLO o centrale). Linee, poligoni e punti di infrastruttura non sono apparati. Dei 37 punti dello Snapshot, 36 sono apparati (35 nel territorio comunale + 1 esterno al Comune) e 1 è un punto di infrastruttura non conteggiato.
+Apparato = punto di rete censito (armadio ARL/ARLO o centrale). Linee, poligoni e punti di infrastruttura non sono apparati. Dei 39 punti dello Snapshot, 37 sono apparati (36 nel territorio comunale + 1 esterno al Comune) e i restanti (2) sono esclusi dal conteggio.
 
 | Tipologia | Categoria GIS | Quantità | Note |
 |---|---|:---:|---|
 | **Armadio Ripartilinea (ARL, rame)** | `arl` | **24** | |
-| **Armadio Ripartilinea Ottico (ARLO)** | `arlo` | **4** | |
-| *Totale armadi (ARL + ARLO)* | | *28* | |
+| **Armadio Ripartilinea Ottico (ARLO)** | `arlo` | **5** | |
+| *Totale armadi (ARL + ARLO)* | | *29* | |
 | **Centrale Comunale** | `centrale_comunale` | **1** | |
 | **Centrali di Frazione** | `centrale_frazione` | **6** | |
-| **Totale apparati sul territorio comunale** | | **35** | |
+| **Totale apparati sul territorio comunale** | | **36** | |
 | Apparati esterni al Comune (non inclusi nel totale): Centrale Feeder (Livorno Nord) | `centrale_feeder` | 1 | fuori dal territorio comunale |
 | Punti non-apparato (esclusi dal conteggio): Coppie di corrugati scoperti | `infrastruttura` | 1 | punto di infrastruttura, non apparato |
+| Punti non-apparato (esclusi dal conteggio): Coppie di fibre | `materials_depot` | 1 | punto di infrastruttura, non apparato |
 <!-- AUTO-STATS:END equipment -->
 
 ### Ripartizione Chilometrica e Apparati per Frazione
@@ -88,15 +89,15 @@ Apparato = punto di rete censito (armadio ARL/ARLO o centrale). Linee, poligoni 
 <!-- AUTO-STATS:BEGIN frazioni -->
 | Frazione | Apparati | ARLO | ARL | Centrali | Tratte (km) | Quota % km |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Stagno** | 10 | 3 | 6 | 1 | 10,545 km | 44,2% |
-| **Collesalvetti** | 9 | 1 | 7 | 1 | 3,300 km | 13,8% |
+| **Stagno** | 11 | 4 | 6 | 1 | 10,535 km | 44,3% |
+| **Collesalvetti** | 9 | 1 | 7 | 1 | 3,255 km | 13,7% |
 | **Vicarello** | 9 | 0 | 8 | 1 | 0,000 km | 0,0% |
 | **Guasticce** | 4 | 0 | 3 | 1 | 0,000 km | 0,0% |
 | **Nugola** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
 | **Parrana San Martino** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
 | **Parrana San Giusto** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
-| **Altro / non attribuito** | 0 | 0 | 0 | 0 | 9,995 km | 41,9% |
-| **Totale** | 35 | 4 | 24 | 7 | 23,840 km | 100,0% |
+| **Altro / non attribuito** | 0 | 0 | 0 | 0 | 9,995 km | 42,0% |
+| **Totale** | 36 | 5 | 24 | 7 | 23,785 km | 100,0% |
 
 *Gli apparati sono contati per frazione dal solo territorio comunale; i km delle tratte comprendono anche la dorsale INFRATEL BUL e le tratte senza frazione (`Altro`).*
 <!-- AUTO-STATS:END frazioni -->
@@ -109,8 +110,8 @@ Questo osservatorio adotta come unica fonte di verità documentale `data/ordinan
 
 1. **Cantiere 2 - Stagno (Nuova Espansione FTTH):**
    - **Atto:** Ordinanza P.M. n. 95/2026 (**Reg. Gen. 102/104/2026**)
-   - **Periodo ufficiale:** 21/09/2026 – 17/10/2026 (feriali 08:00 – 18:00)
-   - **Rilievo di campo:** Finestra effettiva 05/10 - 17/10. Stato *In completamento* (posa condotte completata, 6 pozzetti in chiusura, tratta via Romita/XXV Aprile verificata come completata per 292,9 m). Nuovo ARLO posato adiacente a S [04] ARL (privo di etichetta numerica, 3° ARLO censito a Stagno).
+   - **Periodo ufficiale:** 21/09/2026 – 23/10/2026 (feriali 08:00 – 18:00)
+   - **Rilievo del 05/11/2026**. Opere civili completate sulle quattro tratte censite. Il quarto ARLO di Stagno è stato installato accanto a S [07] ARL.
    - **Vie:** Via Romita sud, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio, Via Don Verità, Via 8 Marzo.
 2. **Cantiere 3 - Stagno (Via Aiaccia / Via Umbria):**
    - **Atto:** Ordinanza P.M. n. 105/2026 (**Reg. Gen. 105**) + Concessione Suolo n. 77/2026 (60 mq)
@@ -119,7 +120,7 @@ Questo osservatorio adotta come unica fonte di verità documentale `data/ordinan
 3. **Cantiere 1 - Collesalvetti Centro:**
    - **Atto:** Ordinanza P.M. n. 88 del 02/09/2026 (**Reg. Gen. 95**)
    - **Periodo ufficiale:** 14/09/2026 – 02/10/2026. *Termini scaduti.*
-   - **Rilievo di campo (11/10/2026):** Tratte Sud-Est e anello rotatoria (71,8 m) eseguite con minitrincea sigillata (Fender 4x10/14), 4 pozzetti FiberCop e primo ARLO cittadino (`C [] ARLO`, futuro ARLO 01). Tratte Nord-Ovest (Via Nenni) non eseguite (soli segni spray blu su asfalto, in attesa di proroga).
+   - **Rilievo del 05/11/2026**. Due tratte in progettazione esecutiva, con soffiaggio osservato su una di esse. Riuso probabile di pozzetti e cavidotti SIP/Telecom su altre due tratte.
 4. **Ripristino Manto Stradale - Stagno:**
    - **Atto:** Ordinanza P.M. n. 70 del 16/07/2026 (**Reg. Gen. 75**)
    - **Periodo ufficiale:** 03/08/2026 – 13/08/2026. *Lavori conclusi.*
@@ -160,7 +161,7 @@ geofibra/
 │   ├── app.css                  # Stili principali per la mappa e i pannelli
 │   └── wiki.css                 # Stili per la lettura prose e tabelle a scorrimento
 ├── data/
-│   ├── network_data.json        # GeoJSON FeatureCollection consolidato (Snapshot 3, 63 feature)
+│   ├── network_data.json        # GeoJSON FeatureCollection consolidato (Snapshot 6, 73 feature)
 │   ├── ordinanze.json           # Fonte di verita' ordinanze e prescrizioni viabilita'
 │   ├── rete_ftth_collesalvetti.xlsx # Export Microsoft Excel nativo completo
 │   ├── rete_ftth_collesalvetti_*.csv # Export CSV standard e per Excel italiano

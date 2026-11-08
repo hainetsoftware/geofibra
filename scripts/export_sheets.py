@@ -40,6 +40,8 @@ def get_type_label(category):
         'cantiere': 'Cantiere Fibra Ottica',
         'cantiere_imminente': 'Cantiere FTTH (Attivazione Imminente)',
         'cantiere_eseguito': 'Cantiere FTTH (Tratta Eseguita)',
+        'cantiere_progettazione_esecutiva': 'Cantiere FTTH (Progettazione Esecutiva)',
+        'materials_depot': 'Deposito Materiali',
         'cantiere_non_eseguito': 'Cantiere FTTH (Tratta Non Eseguita)',
         'cantiere_programmato': 'Cantiere FTTH (Nuova Ordinanza Programmata)',
         'tratta_stagno': 'Tratta Fibra Posa',
@@ -126,9 +128,10 @@ def build_rows(data):
             c_period = f"{c.get('inizio_lavori', '')[:10]} -> {c.get('fine_lavori', '')[:10]}"
             c_streets = ", ".join(c.get("vie_interessate", []))
             c_ordinanza = c.get("codice_ordinanza", "")
-            c_pdf = c.get("file_pdf", "")
+            c_pdf = c.get("file_pdf") or ""
         elif "cantiere" in p["category"]:
-            c_status = "DA COLLEGARE A ORDINANZA"
+            c_ordinanza = p.get("ordinanza") or ""
+            c_status = p["status"].upper() if c_ordinanza else "DA COLLEGARE A ORDINANZA"
             
         row = [
             p["id"],
@@ -240,8 +243,11 @@ def build_info_sheet_xml(net_data, stats_data):
     
     total_km = round(sum(f["properties"].get("length_km", 0) for f in features), 3)
     
-    snap_id = stats_data.get("snapshot", {}).get("id", "Snapshot 3") if stats_data else "Snapshot 3"
-    snap_date = stats_data.get("snapshot", {}).get("date", "2026-10-04") if stats_data else "2026-10-04"
+    snapshot = (stats_data or {}).get("snapshot", {})
+    metadata = net_data.get("metadata", {})
+    snap_id = snapshot.get("id") or metadata.get("source_snapshot") or "N/D"
+    snap_date = snapshot.get("date") or metadata.get("generated_at") or "N/D"
+    source_kml = snapshot.get("source_kml") or metadata.get("source_kml") or "N/D"
     eq_municipal = stats_data.get("equipment", {}).get("total_municipal", "N/D") if stats_data else "32"
     eq_external = stats_data.get("equipment", {}).get("total_external", "N/D") if stats_data else "1"
     cab_municipal = stats_data.get("equipment", {}).get("cabinets_municipal", "N/D") if stats_data else "25"
@@ -252,8 +258,8 @@ def build_info_sheet_xml(net_data, stats_data):
         ("Progetto", "GeoFibra Collesalvetti - Osservatorio Civico FTTH"),
         ("Comune", "Collesalvetti (LI), Toscana, Italia"),
         ("Rilievo sorgente", f"{snap_id} ({snap_date})"),
-        ("Sorgente dati KML", "data/snapshots/rilievo_snapshot3.kml"),
-        ("Data generazione dataset", "2026-10-04"),
+        ("Sorgente dati KML", source_kml),
+        ("Data generazione dataset", snap_date),
         ("", ""),
         ("CONTEGGI GEOSPAZIALI", ""),
         ("Totale feature rilevate", total_features),

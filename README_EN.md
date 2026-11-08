@@ -3,7 +3,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![GIS: Leaflet 1.9.4](https://img.shields.io/badge/GIS-Leaflet%201.9.4-brightgreen.svg)](https://leafletjs.com/)
-[![Data: Snapshot 5](https://img.shields.io/badge/Data-Snapshot%205%20(17%2F10%2F2026)-orange.svg)](#-official-data--metrics-snapshot-5)
+[![Data: Snapshot 6](https://img.shields.io/badge/Data-Snapshot%206%20(05%2F11%2F2026)-orange.svg)](#-official-data--metrics-snapshot-6)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Active-success.svg)](#-deployment-on-github-pages)
 
 ---
@@ -22,7 +22,7 @@ The initiative provides transparency for local citizens regarding street excavat
 ## 📑 Table of Contents
 
 1. [Key Features](#-key-features)
-2. [Official Data & Metrics (Snapshot 5)](#-official-data--metrics-snapshot-5)
+2. [Official Data & Metrics (Snapshot 6)](#-official-data--metrics-snapshot-6)
 3. [Municipal Decrees & Works Tracker](#-municipal-decrees--works-tracker)
 4. [The Technical & Educational Wiki](#-the-technical--educational-wiki)
 5. [Repository Architecture](#-repository-architecture)
@@ -39,13 +39,13 @@ The initiative provides transparency for local citizens regarding street excavat
 - **Multi-layer raster engine:** Instant switching between *OpenStreetMap*, *Esri World Imagery (HD Satellite)*, and *Esri Dark Canvas*.
 - **Strict geographic bounding:** View restricted to the Tuscany regional perimeter (`TOSCANA_BOUNDS`) to prevent unintended navigation drift.
 - **Audited geospatial assets:** Trench traces, primary feeder lines, optical cabinets (ARLO), copper cross-connects (ARL), telecom central offices, and underground junction boxes with metric dimensions and Street View links.
-- **Interactive Works Filter:** Rapid filtering by works status: completed sections, closing works (C2 Stagno), authorized (C3 Stagno), or awaiting extension (C1 Via Nenni).
+- **Interactive Works Filter:** Filter by completed, authorized or planned, executive design, or likely duct reuse.
 
 ### 2. 🚧 Live Works & Police Decrees Tracker (`Europe/Rome`)
 - **Direct Municipal Gazette Integration:** Tracks official police decrees issued by the Municipality of Collesalvetti for FTTH FiberCop roadworks.
 - **Accurate working-hours status computation:**
   - `PROGRAMMATO`: prior to formal decree start date.
-  - `IN COMPLETAMENTO`: trenching finished, junction boxes in final casting (e.g. Cantiere 2 Stagno).
+  - `OPERE CIVILI COMPLETATE` and `OPERE CIVILI PARZIALMENTE COMPLETATE` reflect field observations (Cantiere 2 and Cantiere 4 in Stagno).
   - `CANTIERE ATTIVO ORA`: strictly active during authorized working hours (**08:00 – 18:00 on weekdays**).
   - `NON LAVORATIVO`: on Sundays and national public holidays during decree validity, with clear non-working day notifications.
   - `FUORI ORARIO`: outside 08:00–18:00 on weekdays.
@@ -59,28 +59,29 @@ The initiative provides transparency for local citizens regarding street excavat
 
 ---
 
-## 📊 Official Data & Metrics (Snapshot 5)
+## 📊 Official Data & Metrics (Snapshot 6)
 
-All metrics are deterministically computed from the official geospatial survey **Snapshot 5 (17/10/2026)**:
+All metrics are deterministically computed from the official geospatial survey **Snapshot 6 (05/11/2026)**:
 
 | Category | Quantity | Details / Notes |
 |---|:---:|---|
-| **Total Geospatial Features** | **71** | 37 point elements, 30 line traces, 4 area polygons |
-| **Total Mapped Route Length** | **23.840 km** | Cumulative length of microtrenches and backbone lines (+2.062 km net) |
+| **Total Geospatial Features** | **73** | 39 point elements, 30 line traces, 4 area polygons |
+| **Total Mapped Route Length** | **23.785 km** | Cumulative length of microtrenches and backbone lines |
 
 <!-- AUTO-STATS:BEGIN equipment -->
-Equipment = a surveyed network point (ARL/ARLO cabinet or central office). Lines, polygons and infrastructure points are not equipment. Of the 37 points in the snapshot, 36 are equipment (35 inside the municipality + 1 outside it) and 1 is an infrastructure point that is not counted.
+Equipment = a surveyed network point (ARL/ARLO cabinet or central office). Lines, polygons and infrastructure points are not equipment. Of the 39 points in the snapshot, 37 are equipment (36 inside the municipality + 1 outside it) and the remaining points (2) are excluded.
 
 | Equipment type | GIS category | Quantity | Notes |
 |---|---|:---:|---|
 | **Copper cabinet (ARL)** | `arl` | **24** | |
-| **Optical cabinet (ARLO)** | `arlo` | **4** | |
-| *Total cabinets (ARL + ARLO)* | | *28* | |
+| **Optical cabinet (ARLO)** | `arlo` | **5** | |
+| *Total cabinets (ARL + ARLO)* | | *29* | |
 | **Municipal central office** | `centrale_comunale` | **1** | |
 | **Fraction central offices** | `centrale_frazione` | **6** | |
-| **Total equipment within the municipality** | | **35** | |
+| **Total equipment within the municipality** | | **36** | |
 | Equipment outside the municipality (not included in the total): Centrale Feeder (Livorno Nord) | `centrale_feeder` | 1 | outside the municipal territory |
 | Non-equipment points (excluded from the count): Coppie di corrugati scoperti | `infrastruttura` | 1 | infrastructure point, not equipment |
+| Non-equipment points (excluded from the count): Coppie di fibre | `materials_depot` | 1 | infrastructure point, not equipment |
 <!-- AUTO-STATS:END equipment -->
 
 ### Route Length and Apparatus by Fraction
@@ -88,15 +89,15 @@ Equipment = a surveyed network point (ARL/ARLO cabinet or central office). Lines
 <!-- AUTO-STATS:BEGIN frazioni -->
 | Fraction | Equipment | ARLO | ARL | Central offices | Routes (km) | Share % km |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Stagno** | 10 | 3 | 6 | 1 | 10.545 km | 44.2% |
-| **Collesalvetti** | 9 | 1 | 7 | 1 | 3.300 km | 13.8% |
+| **Stagno** | 11 | 4 | 6 | 1 | 10.535 km | 44.3% |
+| **Collesalvetti** | 9 | 1 | 7 | 1 | 3.255 km | 13.7% |
 | **Vicarello** | 9 | 0 | 8 | 1 | 0.000 km | 0.0% |
 | **Guasticce** | 4 | 0 | 3 | 1 | 0.000 km | 0.0% |
 | **Nugola** | 1 | 0 | 0 | 1 | 0.000 km | 0.0% |
 | **Parrana San Martino** | 1 | 0 | 0 | 1 | 0.000 km | 0.0% |
 | **Parrana San Giusto** | 1 | 0 | 0 | 1 | 0.000 km | 0.0% |
-| **Other / unassigned** | 0 | 0 | 0 | 0 | 9.995 km | 41.9% |
-| **Total** | 35 | 4 | 24 | 7 | 23.840 km | 100.0% |
+| **Other / unassigned** | 0 | 0 | 0 | 0 | 9.995 km | 42.0% |
+| **Total** | 36 | 5 | 24 | 7 | 23.785 km | 100.0% |
 
 *Equipment is counted per fraction inside the municipality only; route km also include the INFRATEL BUL backbone and routes with no fraction (`Altro`).*
 <!-- AUTO-STATS:END frazioni -->
@@ -109,8 +110,8 @@ Documented with `data/ordinanze.json` as the single source of truth, distinguish
 
 1. **Cantiere 2 - Stagno (FTTH Rollout):**
    - **Decree:** Ordinanza P.M. n. 95/2026 (**Reg. Gen. 102/104/2026**)
-   - **Official Period:** 21/09/2026 – 17/10/2026 (weekdays 08:00 – 18:00)
-   - **Field Status:** 05/10 - 17/10 timeframe. Status: *Nearing completion* (pipe installation completed, 6 junction boxes in final casting, completed section on Via Romita / XXV Aprile validated for 292.9 m). New ARLO positioned next to S [04] ARL (unlabeled, 3rd mapped ARLO in Stagno).
+   - **Official Period:** 21/09/2026 – 23/10/2026 (weekdays 08:00 – 18:00)
+   - **5 November 2026 survey**. Civil works complete on all four mapped sections. Stagno’s fourth optical cabinet was installed next to S [07] ARL.
    - **Streets:** Via Romita sud, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio, Via Don Verità, Via 8 Marzo.
 2. **Cantiere 3 - Stagno (Via Aiaccia / Via Umbria):**
    - **Decree:** Ordinanza P.M. n. 105/2026 (**Reg. Gen. 105**) + Public Land Concession n. 77/2026 (60 sqm)
@@ -119,7 +120,7 @@ Documented with `data/ordinanze.json` as the single source of truth, distinguish
 3. **Cantiere 1 - Collesalvetti Center:**
    - **Decree:** Ordinanza P.M. n. 88 dated 02/09/2026 (**Reg. Gen. 95**)
    - **Official Period:** 14/09/2026 – 02/10/2026. *Expired.*
-   - **Field Status (11/10/2026):** South-East traces and roundabout ring (71.8 m) completed with sealed microtrenching (*Fender 4x10/14* microducts), 4 FiberCop junction boxes and first town ARLO (`C [] ARLO`, future ARLO 01). North-West traces (Via Nenni) not excavated (blue ground markings, awaiting extension).
+   - **5 November 2026 survey**. Two sections in executive design, with fiber blowing observed on one. Likely reuse of SIP/Telecom ducts and manholes on two further sections.
 4. **Asphalt Restoration Works - Stagno:**
    - **Decree:** Ordinanza P.M. n. 70 dated 16/07/2026 (**Reg. Gen. 75**)
    - **Official Period:** 03/08/2026 – 13/08/2026. *Formally concluded.*

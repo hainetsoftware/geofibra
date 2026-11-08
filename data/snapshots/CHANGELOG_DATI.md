@@ -4,7 +4,19 @@ Registro delle versioni dei dati cartografici della rete FTTH e cantieri nel Com
 
 ---
 
-## Snapshot 5 — 17 Ottobre 2026 (Stato Corrente)
+## Snapshot 6 — 5 Novembre 2026
+- **File sorgente** `data/snapshots/rilievo_snapshot6.kml` (copia identica di `FTTH Collesalvetti_snapshot6.kml`).
+- **Feature totali censite:** **73** (39 punti, 30 linee, 4 poligoni)
+- **Sviluppo lineare tracciato** **23,785 km** (−55 m rispetto a Snapshot 5).
+- **Apparati censiti (Snapshot 6):** **36** nel territorio comunale (24 ARL, 5 ARLO, 7 centrali) e un feeder esterno.
+- **Struttura**. Aggiunti tre placemark (ARLO `0CE71FCC7C42E8337724`, deposito `0AA9E55F2D42E8971D5F`, anello nord `0C7715154E42E8361D89`). Rimosso il segmento Collesalvetti `02442DD76E41BFC6C1C1` (44,6 m). Il poligono `08927D586B41BFCD66AB` acquisisce il flag KML `visibility=0`; la geometria è invariata.
+- **Geometria**. L’anello nord completato del Cantiere 4 misura 733,9 m; il ramo di Via Don Giovanni Verità `0766EAF8C74270D6924F` è accorciato a 445,8 m. I due tracciati hanno un intervallo di circa 7,3 m tra gli estremi. L’anello conserva un incrocio puntuale già presente nel percorso originario.
+- **Stati**. Tre ulteriori tratte del Cantiere 2 risultano completate. Due tratte del Cantiere 1 passano alla progettazione esecutiva, con soffiaggio osservato su una di esse. Su due ulteriori tratte è probabile il riuso dei cavidotti SIP/Telecom. Gli ARL `C [9605]` e `C [9606]` diventano `C [05]` e `C [06]`.
+- **Stili**. I riferimenti agli stili gestiti sono rigenerati nel KML. La mappa applica il blu `#007cf5` alle due tratte in progettazione esecutiva (colore KML `#f57c00` dopo conversione ABGR). Le tratte dedicate mantengono il colore KML `ff9f3f30`, reso in CSS come `#303f9f`.
+
+---
+
+## Snapshot 5 — 17 Ottobre 2026
 - **File sorgente:** `data/snapshots/rilievo_snapshot5.kml` (e `FTTH Collesalvetti_snapshot5.kml`)
 - **Feature totali censite:** **71** (37 punti, 30 linee, 4 poligoni)
 - **Sviluppo lineare tracciato:** **23,840 km** (+2,063 km netti da Cantiere 4 Stagno)
