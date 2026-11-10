@@ -82,7 +82,7 @@ window.FTTH_STATS = {
       "arlo": 5,
       "cantiere_eseguito": 8,
       "cantiere_non_eseguito": 2,
-      "cantiere_progettazione_esecutiva": 2,
+      "cantiere_progettazione_esecutiva": 5,
       "cantiere_programmato": 7,
       "centrale_comunale": 1,
       "centrale_feeder": 1,
@@ -97,23 +97,23 @@ window.FTTH_STATS = {
       "tratta_backbone": 1,
       "tratta_stagno": 6
     },
-    "lines": 30,
+    "lines": 33,
     "points": 39,
     "polygons": 4,
-    "total": 73
+    "total": 76
   },
   "length_km": {
     "by_frazione": {
       "Altro": 9.995,
-      "Collesalvetti": 3.255,
+      "Collesalvetti": 4.143,
       "Stagno": 10.535
     },
-    "total": 23.785
+    "total": 24.673
   },
   "methodology_version": "1.0",
   "snapshot": {
     "date": "2026-11-05",
-    "id": "Snapshot 6",
-    "source_kml": "data/kml_snapshots/FTTH Collesalvetti_snapshot6.kml"
+    "id": "Snapshot 7",
+    "source_kml": "data/kml_snapshots/FTTH Collesalvetti_snapshot7.kml"
   }
 };

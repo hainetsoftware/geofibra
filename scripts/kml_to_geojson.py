@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 kml_to_geojson.py - Parser KML e generatore GeoJSON / data.js per la rete FTTH di Collesalvetti.
-Supporta Snapshot 6 (rilievi del 05/11/2026), calcolo distanze Haversine, aree poligonali,
+Supporta Snapshot 7 (rilievi del 05/11/2026), calcolo distanze Haversine, aree poligonali,
 metadati ordinanze comunali e tag di stato/tracciamento standardizzati.
 """
 
@@ -15,9 +15,16 @@ import re
 import math
 import os
 
-SNAPSHOT_DATES = {4: "2026-10-11", 5: "2026-10-17", 6: "2026-11-05"}
-LATEST_KML = "data/kml_snapshots/FTTH Collesalvetti_snapshot6.kml"
+SNAPSHOT_DATES = {4: "2026-10-11", 5: "2026-10-17", 6: "2026-11-05", 7: "2026-11-05"}
+LATEST_KML = "data/kml_snapshots/FTTH Collesalvetti_snapshot7.kml"
 WHOLESALE_CSV = Path(__file__).resolve().parents[1] / "data/wholesale/ELENCO_CRO_CNO_SOLO_COLLSALVETTI_20261102.csv"
+ORDINANCE_ARCHIVE = Path(__file__).resolve().parents[1] / "data/ordinanze/ordinanze.json"
+COLLESALVETTI_CANTIERE_2 = "cantiere 2 prog. esecutiva"
+CANTIERE_2_SURVEY = (
+    "Survey 05/11/2026: Road spray paint markings and staged industrial Fender microduct reels "
+    "already observed on-site. Tied to Municipal Ordinance PM n. 118/2026 (Aut. 28/2026), "
+    "operative 16/11/2026 - 04/12/2026."
+)
 
 # Le associazioni ai placemark derivano dal rilievo locale. Il CSV censisce i CRO.
 WHOLESALE_ELEMENTS = {
@@ -191,6 +198,13 @@ def categorize(name, geom_type, desc):
         icon = "fiber-cable"
         color = "#9b59b6"
         frazione = "Stagno"
+    elif geom_type == "LineString" and (
+        nl == COLLESALVETTI_CANTIERE_2 or "cantiere 1 progettazione esecutiva" in nl
+    ):
+        category = "cantiere_progettazione_esecutiva"
+        icon = "traffic-cone"
+        color = "#007cf5"
+        frazione = "Collesalvetti"
     elif "cantiere 2 eseguito" in nl:
         category = "cantiere_eseguito"
         icon = "traffic-cone"
@@ -201,11 +215,6 @@ def categorize(name, geom_type, desc):
         icon = "traffic-cone"
         color = "#ffd700"  # Oro per Cantiere 2 Stagno in completamento
         frazione = "Stagno"
-    elif "cantiere 1 progettazione esecutiva" in nl:
-        category = "cantiere_progettazione_esecutiva"
-        icon = "traffic-cone"
-        color = "#007cf5"
-        frazione = "Collesalvetti"
     elif "cantiere 1 non eseguito" in nl:
         category = "cantiere_non_eseguito"
         icon = "traffic-cone"
@@ -274,6 +283,7 @@ def parse_kml(kml_path):
     kml_styles = extract_kml_styles(root, ns)
     placemarks = root.findall(".//kml:Placemark", ns)
     features = []
+    cantiere_2_ordinance = None
     
     for idx, p in enumerate(placemarks):
         pid = p.get("id", f"pm_{idx}")
@@ -456,7 +466,31 @@ def parse_kml(kml_path):
 
         # Arricchimento Cantieri da Ordinanze Ufficiali Albo Pretorio
         cantiere_info = None
-        if "cantiere 4" in name.lower():
+        if category == "cantiere_progettazione_esecutiva" and name.lower() == COLLESALVETTI_CANTIERE_2:
+            if cantiere_2_ordinance is None:
+                with ORDINANCE_ARCHIVE.open(encoding="utf-8") as archive:
+                    cantiere_2_ordinance = next(
+                        record for record in json.load(archive) if record["id"] == "PM-COLLE-ORD-118-2026"
+                    )
+            ordinance = cantiere_2_ordinance
+            status_code = "executive_design"
+            status_label = "Progettazione esecutiva (Marcature e corrugati sul posto)"
+            ordinanza_str = f"Ordinanza P.M. n. {ordinance['numero']} (Reg. Gen. 125/2026, Aut. 28/2026)"
+            clean_desc = "\n".join(filter(None, (clean_desc, CANTIERE_2_SURVEY)))
+            cantiere_info = {
+                "id_ordinanza": ordinance["id"],
+                "codice_ordinanza": ordinanza_str,
+                "data_ordinanza": datetime.fromisoformat(ordinance["data_emissione"]).strftime("%d/%m/%Y"),
+                "inizio_lavori": f"{ordinance['validita_dal']}T08:00:00+01:00",
+                "fine_lavori": f"{ordinance['validita_al']}T18:00:00+01:00",
+                "orario_giornaliero": "08:00 - 18:00 feriali",
+                "richiedente": ordinance["richiedente"],
+                "vie_interessate": ordinance["vie"],
+                "file_pdf": f"data/ordinanze/{ordinance['file_pdf']}",
+                "stato_base": "staged_for_digging",
+                "note_slittamento": CANTIERE_2_SURVEY,
+            }
+        elif "cantiere 4" in name.lower():
             completed = category == "cantiere_eseguito"
             status_code = "completato" if completed else "planned"
             status_label = "Completato (Opere civili)" if completed else "Pianificato (26/10 - 20/11)"
@@ -487,10 +521,10 @@ def parse_kml(kml_path):
             if completed:
                 cantiere_info["vie_interessate"] = ["Via Karl Marx", "Via Gobetti", "Via Curiel"]
                 clean_desc = "Opere civili completate nell’anello nord tra Via Karl Marx, Via Gobetti e Via Curiel (Ord. 110/2026)."
-            elif pid == "0766EAF8C74270D6924F" and snapshot_number == 6:
+            elif pid == "0766EAF8C74270D6924F" and snapshot_number in (6, 7):
                 cantiere_info["vie_interessate"] = ["Via Don Giovanni Verità"]
                 clean_desc = "Ramo sud di Via Don Giovanni Verità ancora da scavare (Ord. 110/2026, finestra 26/10–20/11/2026)."
-            if completed or snapshot_number == 6:
+            if completed or snapshot_number in (6, 7):
                 cantiere_info["note_slittamento"] = clean_desc
         elif "cantiere 2 eseguito" in name.lower():
             status_code = "completato"

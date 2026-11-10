@@ -4,6 +4,55 @@
 // Copia di data/ordinanze.json per l'uso da file://.
 const ORDINANZE_DATA_DEFAULT = [
   {
+    "id": "PM-COLLE-ORD-118-2026",
+    "titolo": "Cantiere 2 - Collesalvetti (Progettazione esecutiva)",
+    "frazione": "Collesalvetti",
+    "richiedente": "Fastweb Spa",
+    "oggetto": "Lavori di scavo stradale per posa infrastruttura FTTH FiberCop",
+    "atto_tipo": "Polizia Municipale",
+    "atto_numero": "118",
+    "atto_registro_generale": "125",
+    "codice_atto_completo": "Ordinanza P.M. n. 118/2026 (Reg. Gen. 125/2026, Aut. 28/2026)",
+    "data_emissione": "2026-11-09",
+    "autorizzazione_settore_tecnico": "Autorizzazione n. 28/2026 del 28/10/2026",
+    "periodo_ordinanza": {
+      "inizio": "2026-11-16T08:00:00+01:00",
+      "fine": "2026-12-04T18:00:00+01:00",
+      "fascia_oraria": "08:00 - 18:00",
+      "giorni": "feriali"
+    },
+    "slittamento_osservato": {
+      "fonte_kml": "Snapshot 7 (rilievo del 05/11/2026)",
+      "nota_campo": "Survey 05/11/2026: Road spray paint markings and staged industrial Fender microduct reels already observed on-site. Tied to Municipal Ordinance PM n. 118/2026 (Aut. 28/2026), operative 16/11/2026 - 04/12/2026."
+    },
+    "lunghezza_stimata_km": 1.071,
+    "vie_interessate": [
+      {
+        "via": "Via Roma (da rotatoria Via Nenni a rotatoria di collegamento con Via Europa)",
+        "prescrizione": "Divieto di sosta con rimozione su ambo i lati e senso unico alternato a vista o con movieri"
+      },
+      {
+        "via": "Via del Valico a Pisa",
+        "prescrizione": "Divieto di sosta con rimozione su ambo i lati e senso unico alternato a vista o con movieri"
+      },
+      {
+        "via": "Via del Vione",
+        "prescrizione": "Divieto di sosta con rimozione su ambo i lati e senso unico alternato a vista o con movieri"
+      },
+      {
+        "via": "Via Guido Rossa",
+        "prescrizione": "Divieto di sosta con rimozione su ambo i lati e senso unico alternato a vista o con movieri"
+      }
+    ],
+    "file_pdf": "data/ordinanze/17991_AltreOrdinanze_Copia_125_2026.pdf",
+    "coordinate_centro": [
+      43.59547,
+      10.474
+    ],
+    "descrizione_ufficiale": "Disciplina temporanea della viabilità nei tratti interessati dal cantiere itinerante.",
+    "stato_base": "staged_for_digging"
+  },
+  {
     "id": "cantiere-2-stagno",
     "titolo": "Cantiere 2 - Stagno (Nuova Espansione FTTH - Ord. 104/2026 + Proroga Ord. 111/2026)",
     "frazione": "Stagno",
@@ -374,6 +423,16 @@ function calculateCantiereStatus(cantiere, currentDate) {
 
   // 2. Oltre il termine stabilito dall'ordinanza
   if (now > end) {
+    if (cantiere.stato_base === 'staged_for_digging') {
+      return {
+        statusCode: 'ordinanza_scaduta',
+        statusLabel: 'ORDINANZA SCADUTA',
+        badgeClass: 'bg-rose-500/20 text-rose-300 border border-rose-500/40',
+        dotClass: 'bg-rose-400',
+        timingSummary: `Termine efficacia ordinanza: ${endFormatted}`,
+        isActiveNow: false
+      };
+    }
     if (['parziale_scaduto', 'riuso_previsto', 'non_eseguito'].includes(cantiere.stato_base)) {
       return {
         statusCode: cantiere.stato_base,

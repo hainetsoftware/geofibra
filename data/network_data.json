@@ -3,10 +3,10 @@
   "metadata": {
     "title": "Geo Fibra - Rete FTTH & Tracker Cantieri - Comune di Collesalvetti",
     "author": "Mappatura Originale Cittadina integrata con Albo Pretorio",
-    "total_features": 73,
+    "total_features": 76,
     "generated_at": "2026-11-05",
-    "source_snapshot": "Snapshot 6",
-    "source_kml": "data/kml_snapshots/FTTH Collesalvetti_snapshot6.kml",
+    "source_snapshot": "Snapshot 7",
+    "source_kml": "data/kml_snapshots/FTTH Collesalvetti_snapshot7.kml",
     "timezone": "Europe/Rome",
     "wholesale_source": "data/wholesale/ELENCO_CRO_CNO_SOLO_COLLSALVETTI_20261102.csv"
   },
@@ -2905,23 +2905,28 @@
         "coordinates": [
           [
             [
-              10.47831432414463,
-              43.59735208163775,
+              10.47464952505176,
+              43.5991132093363,
               0.0
             ],
             [
-              10.47490750357298,
-              43.59675147312176,
+              10.47395489963935,
+              43.59906195338625,
               0.0
             ],
             [
-              10.47466668541113,
-              43.59556130428247,
+              10.47405558510495,
+              43.59808081246075,
               0.0
             ],
             [
-              10.47468023310989,
-              43.59439838594344,
+              10.4734374966854,
+              43.59789281328877,
+              0.0
+            ],
+            [
+              10.47289211240405,
+              43.59481618079077,
               0.0
             ],
             [
@@ -3025,8 +3030,33 @@
               0.0
             ],
             [
-              10.47831432414463,
-              43.59735208163775,
+              10.47859265734094,
+              43.59661259853382,
+              0.0
+            ],
+            [
+              10.47849028502528,
+              43.59664841359287,
+              0.0
+            ],
+            [
+              10.47832279302751,
+              43.59722872509835,
+              0.0
+            ],
+            [
+              10.47739634633956,
+              43.59779269508846,
+              0.0
+            ],
+            [
+              10.47498396814799,
+              43.59764426337743,
+              0.0
+            ],
+            [
+              10.47464952505176,
+              43.5991132093363,
               0.0
             ]
           ]
@@ -3044,8 +3074,8 @@
         "color": "#42a5f5",
         "length_m": 0,
         "length_km": 0.0,
-        "area_m2": 205512.9,
-        "area_km2": 0.2055,
+        "area_m2": 284556.8,
+        "area_km2": 0.2846,
         "lookAt": {
           "longitude": 10.47594178900568,
           "latitude": 43.59175486335587,
@@ -3062,8 +3092,7 @@
         "data_rilevamento": "2026-11-05",
         "start_date": null,
         "end_date": null,
-        "streets": null,
-        "kml_visibility": false
+        "streets": null
       }
     },
     {
@@ -4645,77 +4674,6 @@
     },
     {
       "type": "Feature",
-      "id": "0DE7916F26423746716E",
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
-            10.47497504665437,
-            43.59560764680238,
-            0.0
-          ],
-          [
-            10.47529632373823,
-            43.59566577690929,
-            0.0
-          ],
-          [
-            10.47572485768855,
-            43.5957046706155,
-            0.0
-          ],
-          [
-            10.47619523659769,
-            43.5956866732164,
-            0.0
-          ],
-          [
-            10.47680214167413,
-            43.59559061694995,
-            0.0
-          ],
-          [
-            10.47721702818512,
-            43.59559522296307,
-            0.0
-          ]
-        ]
-      },
-      "properties": {
-        "id": "0DE7916F26423746716E",
-        "name": "Cantiere 1 PROGETTAZIONE ESECUTIVA",
-        "category": "cantiere_progettazione_esecutiva",
-        "frazione": "Collesalvetti",
-        "geom_type": "LineString",
-        "description": "NEW (05/11): Si notano operai lavorare per il soffiaggio della fibra nei tanti pozzetti.\nOLD: Si notano solamente dei segni blu (oltre ai soliti colori), che indicano Fibercop , sull'asfalto",
-        "raw_description": "<div>NEW (05/11): Si notano operai lavorare per il soffiaggio della fibra nei tanti pozzetti.<br>OLD: Si notano solamente dei segni blu (oltre ai soliti colori), che indicano Fibercop , sull'asfalto<br></div>",
-        "icon": "traffic-cone",
-        "color": "#007cf5",
-        "length_m": 182.8,
-        "length_km": 0.183,
-        "area_m2": 0,
-        "area_km2": 0.0,
-        "lookAt": {
-          "longitude": 10.47663576453814,
-          "latitude": 43.59561122364551,
-          "altitude": 17.3274038545835,
-          "heading": 0.0,
-          "tilt": 0.0,
-          "range": 489.2503822615254
-        },
-        "cantiere": null,
-        "status": "infilage_in_progress",
-        "status_label": "Progettazione esecutiva (Soffiaggio fibra in corso)",
-        "ordinanza": "Ordinanza P.M. n. 88 del 02/09/2026 (Reg. Gen. 95)",
-        "operatore": "FiberCop",
-        "data_rilevamento": "2026-11-05",
-        "start_date": null,
-        "end_date": null,
-        "streets": null
-      }
-    },
-    {
-      "type": "Feature",
       "id": "0A173E317742376CD0E8",
       "geometry": {
         "type": "LineString",
@@ -5743,6 +5701,383 @@
         "start_date": null,
         "end_date": null,
         "streets": null
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "031048DE5942FB3FB694",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.4729721627793,
+            43.59569290476983,
+            0.0
+          ],
+          [
+            10.47400073078139,
+            43.59547362206052,
+            0.0
+          ],
+          [
+            10.4740263193881,
+            43.59559798255248,
+            0.0
+          ],
+          [
+            10.4739248835698,
+            43.59599652411528,
+            0.0
+          ],
+          [
+            10.47396726255522,
+            43.59615839640151,
+            0.0
+          ],
+          [
+            10.47392319921966,
+            43.59630748073607,
+            0.0
+          ],
+          [
+            10.47404093191837,
+            43.59650560567023,
+            0.0
+          ],
+          [
+            10.47378913555958,
+            43.59723333222006,
+            0.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "031048DE5942FB3FB694",
+        "name": "Cantiere 2 PROG. ESECUTIVA",
+        "category": "cantiere_progettazione_esecutiva",
+        "frazione": "Collesalvetti",
+        "geom_type": "LineString",
+        "description": "Survey 05/11/2026: Road spray paint markings and staged industrial Fender microduct reels already observed on-site. Tied to Municipal Ordinance PM n. 118/2026 (Aut. 28/2026), operative 16/11/2026 - 04/12/2026.",
+        "raw_description": "",
+        "icon": "traffic-cone",
+        "color": "#007cf5",
+        "length_m": 288.1,
+        "length_km": 0.288,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.47347116483184,
+          "latitude": 43.59660977003065,
+          "altitude": 26.64644616941723,
+          "heading": 0.0,
+          "tilt": 0.0,
+          "range": 332.3709236093782
+        },
+        "cantiere": {
+          "id_ordinanza": "PM-COLLE-ORD-118-2026",
+          "codice_ordinanza": "Ordinanza P.M. n. 118/2026 (Reg. Gen. 125/2026, Aut. 28/2026)",
+          "data_ordinanza": "09/11/2026",
+          "inizio_lavori": "2026-11-16T08:00:00+01:00",
+          "fine_lavori": "2026-12-04T18:00:00+01:00",
+          "orario_giornaliero": "08:00 - 18:00 feriali",
+          "richiedente": "Fastweb Spa",
+          "vie_interessate": [
+            "Via Roma",
+            "Via del Valico a Pisa",
+            "Via del Vione",
+            "Via Guido Rossa"
+          ],
+          "file_pdf": "data/ordinanze/17991_AltreOrdinanze_Copia_125_2026.pdf",
+          "stato_base": "staged_for_digging",
+          "note_slittamento": "Survey 05/11/2026: Road spray paint markings and staged industrial Fender microduct reels already observed on-site. Tied to Municipal Ordinance PM n. 118/2026 (Aut. 28/2026), operative 16/11/2026 - 04/12/2026."
+        },
+        "status": "executive_design",
+        "status_label": "Progettazione esecutiva (Marcature e corrugati sul posto)",
+        "ordinanza": "Ordinanza P.M. n. 118/2026 (Reg. Gen. 125/2026, Aut. 28/2026)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-11-05",
+        "start_date": "2026-11-16",
+        "end_date": "2026-12-04",
+        "streets": [
+          "Via Roma",
+          "Via del Valico a Pisa",
+          "Via del Vione",
+          "Via Guido Rossa"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "044555C2D642FB404208",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.47392788117778,
+            43.59549128837613,
+            0.0
+          ],
+          [
+            10.47380443498765,
+            43.59480490432026,
+            0.0
+          ],
+          [
+            10.47407248382607,
+            43.59476673936567,
+            0.0
+          ],
+          [
+            10.47406938740641,
+            43.59470480887651,
+            0.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "044555C2D642FB404208",
+        "name": "Cantiere 2 PROG. ESECUTIVA",
+        "category": "cantiere_progettazione_esecutiva",
+        "frazione": "Collesalvetti",
+        "geom_type": "LineString",
+        "description": "Survey 05/11/2026: Road spray paint markings and staged industrial Fender microduct reels already observed on-site. Tied to Municipal Ordinance PM n. 118/2026 (Aut. 28/2026), operative 16/11/2026 - 04/12/2026.",
+        "raw_description": "",
+        "icon": "traffic-cone",
+        "color": "#007cf5",
+        "length_m": 105.9,
+        "length_km": 0.106,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.47404147856368,
+          "latitude": 43.59500897205428,
+          "altitude": 15.82166505606629,
+          "heading": 0.0,
+          "tilt": 0.0,
+          "range": 243.3429136237828
+        },
+        "cantiere": {
+          "id_ordinanza": "PM-COLLE-ORD-118-2026",
+          "codice_ordinanza": "Ordinanza P.M. n. 118/2026 (Reg. Gen. 125/2026, Aut. 28/2026)",
+          "data_ordinanza": "09/11/2026",
+          "inizio_lavori": "2026-11-16T08:00:00+01:00",
+          "fine_lavori": "2026-12-04T18:00:00+01:00",
+          "orario_giornaliero": "08:00 - 18:00 feriali",
+          "richiedente": "Fastweb Spa",
+          "vie_interessate": [
+            "Via Roma",
+            "Via del Valico a Pisa",
+            "Via del Vione",
+            "Via Guido Rossa"
+          ],
+          "file_pdf": "data/ordinanze/17991_AltreOrdinanze_Copia_125_2026.pdf",
+          "stato_base": "staged_for_digging",
+          "note_slittamento": "Survey 05/11/2026: Road spray paint markings and staged industrial Fender microduct reels already observed on-site. Tied to Municipal Ordinance PM n. 118/2026 (Aut. 28/2026), operative 16/11/2026 - 04/12/2026."
+        },
+        "status": "executive_design",
+        "status_label": "Progettazione esecutiva (Marcature e corrugati sul posto)",
+        "ordinanza": "Ordinanza P.M. n. 118/2026 (Reg. Gen. 125/2026, Aut. 28/2026)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-11-05",
+        "start_date": "2026-11-16",
+        "end_date": "2026-12-04",
+        "streets": [
+          "Via Roma",
+          "Via del Valico a Pisa",
+          "Via del Vione",
+          "Via Guido Rossa"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0AFA98819242FB416540",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.47400153158203,
+            43.59547372657929,
+            0.0
+          ],
+          [
+            10.47463787364811,
+            43.59532359134106,
+            0.0
+          ],
+          [
+            10.47479839983258,
+            43.59542394875644,
+            0.0
+          ],
+          [
+            10.4746946043827,
+            43.59658016243746,
+            0.0
+          ],
+          [
+            10.47442071617993,
+            43.59748448191634,
+            0.0
+          ],
+          [
+            10.47445124612422,
+            43.59760058161315,
+            0.0
+          ],
+          [
+            10.47372929479364,
+            43.59911126952728,
+            0.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "0AFA98819242FB416540",
+        "name": "Cantiere 2 PROG. ESECUTIVA",
+        "category": "cantiere_progettazione_esecutiva",
+        "frazione": "Collesalvetti",
+        "geom_type": "LineString",
+        "description": "Survey 05/11/2026: Road spray paint markings and staged industrial Fender microduct reels already observed on-site. Tied to Municipal Ordinance PM n. 118/2026 (Aut. 28/2026), operative 16/11/2026 - 04/12/2026.",
+        "raw_description": "",
+        "icon": "traffic-cone",
+        "color": "#007cf5",
+        "length_m": 493.7,
+        "length_km": 0.494,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.47145014328582,
+          "latitude": 43.60123124794409,
+          "altitude": 18.97367588472816,
+          "heading": 0.0,
+          "tilt": 0.0,
+          "range": 2546.428091631678
+        },
+        "cantiere": {
+          "id_ordinanza": "PM-COLLE-ORD-118-2026",
+          "codice_ordinanza": "Ordinanza P.M. n. 118/2026 (Reg. Gen. 125/2026, Aut. 28/2026)",
+          "data_ordinanza": "09/11/2026",
+          "inizio_lavori": "2026-11-16T08:00:00+01:00",
+          "fine_lavori": "2026-12-04T18:00:00+01:00",
+          "orario_giornaliero": "08:00 - 18:00 feriali",
+          "richiedente": "Fastweb Spa",
+          "vie_interessate": [
+            "Via Roma",
+            "Via del Valico a Pisa",
+            "Via del Vione",
+            "Via Guido Rossa"
+          ],
+          "file_pdf": "data/ordinanze/17991_AltreOrdinanze_Copia_125_2026.pdf",
+          "stato_base": "staged_for_digging",
+          "note_slittamento": "Survey 05/11/2026: Road spray paint markings and staged industrial Fender microduct reels already observed on-site. Tied to Municipal Ordinance PM n. 118/2026 (Aut. 28/2026), operative 16/11/2026 - 04/12/2026."
+        },
+        "status": "executive_design",
+        "status_label": "Progettazione esecutiva (Marcature e corrugati sul posto)",
+        "ordinanza": "Ordinanza P.M. n. 118/2026 (Reg. Gen. 125/2026, Aut. 28/2026)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-11-05",
+        "start_date": "2026-11-16",
+        "end_date": "2026-12-04",
+        "streets": [
+          "Via Roma",
+          "Via del Valico a Pisa",
+          "Via del Vione",
+          "Via Guido Rossa"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "0DE7916F26423746716E",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.47497504665437,
+            43.59560764680238,
+            0.0
+          ],
+          [
+            10.47529632373823,
+            43.59566577690929,
+            0.0
+          ],
+          [
+            10.47572485768855,
+            43.5957046706155,
+            0.0
+          ],
+          [
+            10.47619523659769,
+            43.5956866732164,
+            0.0
+          ],
+          [
+            10.47680214167413,
+            43.59559061694995,
+            0.0
+          ],
+          [
+            10.47721702818512,
+            43.59559522296307,
+            0.0
+          ]
+        ]
+      },
+      "properties": {
+        "id": "0DE7916F26423746716E",
+        "name": "Cantiere 2 PROG. ESECUTIVA",
+        "category": "cantiere_progettazione_esecutiva",
+        "frazione": "Collesalvetti",
+        "geom_type": "LineString",
+        "description": "Survey 05/11/2026: Road spray paint markings and staged industrial Fender microduct reels already observed on-site. Tied to Municipal Ordinance PM n. 118/2026 (Aut. 28/2026), operative 16/11/2026 - 04/12/2026.",
+        "raw_description": "",
+        "icon": "traffic-cone",
+        "color": "#007cf5",
+        "length_m": 182.8,
+        "length_km": 0.183,
+        "area_m2": 0,
+        "area_km2": 0.0,
+        "lookAt": {
+          "longitude": 10.47663576453814,
+          "latitude": 43.59561122364551,
+          "altitude": 17.3274038545835,
+          "heading": 0.0,
+          "tilt": 0.0,
+          "range": 489.2503822615254
+        },
+        "cantiere": {
+          "id_ordinanza": "PM-COLLE-ORD-118-2026",
+          "codice_ordinanza": "Ordinanza P.M. n. 118/2026 (Reg. Gen. 125/2026, Aut. 28/2026)",
+          "data_ordinanza": "09/11/2026",
+          "inizio_lavori": "2026-11-16T08:00:00+01:00",
+          "fine_lavori": "2026-12-04T18:00:00+01:00",
+          "orario_giornaliero": "08:00 - 18:00 feriali",
+          "richiedente": "Fastweb Spa",
+          "vie_interessate": [
+            "Via Roma",
+            "Via del Valico a Pisa",
+            "Via del Vione",
+            "Via Guido Rossa"
+          ],
+          "file_pdf": "data/ordinanze/17991_AltreOrdinanze_Copia_125_2026.pdf",
+          "stato_base": "staged_for_digging",
+          "note_slittamento": "Survey 05/11/2026: Road spray paint markings and staged industrial Fender microduct reels already observed on-site. Tied to Municipal Ordinance PM n. 118/2026 (Aut. 28/2026), operative 16/11/2026 - 04/12/2026."
+        },
+        "status": "executive_design",
+        "status_label": "Progettazione esecutiva (Marcature e corrugati sul posto)",
+        "ordinanza": "Ordinanza P.M. n. 118/2026 (Reg. Gen. 125/2026, Aut. 28/2026)",
+        "operatore": "FiberCop",
+        "data_rilevamento": "2026-11-05",
+        "start_date": "2026-11-16",
+        "end_date": "2026-12-04",
+        "streets": [
+          "Via Roma",
+          "Via del Valico a Pisa",
+          "Via del Vione",
+          "Via Guido Rossa"
+        ]
       }
     }
   ]

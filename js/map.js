@@ -147,6 +147,7 @@ function loadData() {
             if (feature.geometry.type === 'Polygon') {
                 return {
                     pane: 'polygonsPane',
+                    bubblingMouseEvents: false,
                     color: props.color,
                     weight: 2,
                     opacity: 1,
@@ -273,6 +274,9 @@ function loadData() {
             popupContent += `</div></div>`;
             
             layer.bindPopup(popupContent, { minWidth: 280, maxWidth: 350 });
+            if (feature.geometry.type === 'LineString') {
+                layer.on('click', L.DomEvent.stopPropagation);
+            }
         }
     }).addTo(map);
     

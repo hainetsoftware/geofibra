@@ -3,7 +3,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![GIS: Leaflet 1.9.4](https://img.shields.io/badge/GIS-Leaflet%201.9.4-brightgreen.svg)](https://leafletjs.com/)
-[![Data: Snapshot 6](https://img.shields.io/badge/Data-Snapshot%206%20(05%2F11%2F2026)-orange.svg)](#-official-data--metrics-snapshot-6)
+[![Data: Snapshot 7](https://img.shields.io/badge/Data-Snapshot%207%20(05%2F11%2F2026)-orange.svg)](#-official-data--metrics-snapshot-7)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Active-success.svg)](#-deployment-on-github-pages)
 
 ---
@@ -22,7 +22,7 @@ The initiative provides transparency for local citizens regarding street excavat
 ## 📑 Table of Contents
 
 1. [Key Features](#-key-features)
-2. [Official Data & Metrics (Snapshot 6)](#-official-data--metrics-snapshot-6)
+2. [Official Data & Metrics (Snapshot 7)](#-official-data--metrics-snapshot-7)
 3. [Municipal Decrees & Works Tracker](#-municipal-decrees--works-tracker)
 4. [The Technical & Educational Wiki](#-the-technical--educational-wiki)
 5. [Repository Architecture](#-repository-architecture)
@@ -59,14 +59,14 @@ The initiative provides transparency for local citizens regarding street excavat
 
 ---
 
-## 📊 Official Data & Metrics (Snapshot 6)
+## 📊 Official Data & Metrics (Snapshot 7)
 
-All metrics are deterministically computed from the official geospatial survey **Snapshot 6 (05/11/2026)**:
+All metrics are deterministically computed from the official geospatial survey **Snapshot 7 (05/11/2026)**:
 
 | Category | Quantity | Details / Notes |
 |---|:---:|---|
-| **Total Geospatial Features** | **73** | 39 point elements, 30 line traces, 4 area polygons |
-| **Total Mapped Route Length** | **23.785 km** | Cumulative length of microtrenches and backbone lines |
+| **Total Geospatial Features** | **76** | 39 point elements, 33 line traces, 4 area polygons |
+| **Total Mapped Route Length** | **24.673 km** | Cumulative length of microtrenches and backbone lines |
 
 <!-- AUTO-STATS:BEGIN equipment -->
 Equipment = a surveyed network point (ARL/ARLO cabinet or central office). Lines, polygons and infrastructure points are not equipment. Of the 39 points in the snapshot, 37 are equipment (36 inside the municipality + 1 outside it) and the remaining points (2) are excluded.
@@ -89,15 +89,15 @@ Equipment = a surveyed network point (ARL/ARLO cabinet or central office). Lines
 <!-- AUTO-STATS:BEGIN frazioni -->
 | Fraction | Equipment | ARLO | ARL | Central offices | Routes (km) | Share % km |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Stagno** | 11 | 4 | 6 | 1 | 10.535 km | 44.3% |
-| **Collesalvetti** | 9 | 1 | 7 | 1 | 3.255 km | 13.7% |
+| **Stagno** | 11 | 4 | 6 | 1 | 10.535 km | 42.7% |
+| **Collesalvetti** | 9 | 1 | 7 | 1 | 4.143 km | 16.8% |
 | **Vicarello** | 9 | 0 | 8 | 1 | 0.000 km | 0.0% |
 | **Guasticce** | 4 | 0 | 3 | 1 | 0.000 km | 0.0% |
 | **Nugola** | 1 | 0 | 0 | 1 | 0.000 km | 0.0% |
 | **Parrana San Martino** | 1 | 0 | 0 | 1 | 0.000 km | 0.0% |
 | **Parrana San Giusto** | 1 | 0 | 0 | 1 | 0.000 km | 0.0% |
-| **Other / unassigned** | 0 | 0 | 0 | 0 | 9.995 km | 42.0% |
-| **Total** | 36 | 5 | 24 | 7 | 23.785 km | 100.0% |
+| **Other / unassigned** | 0 | 0 | 0 | 0 | 9.995 km | 40.5% |
+| **Total** | 36 | 5 | 24 | 7 | 24.673 km | 100.0% |
 
 *Equipment is counted per fraction inside the municipality only; route km also include the INFRATEL BUL backbone and routes with no fraction (`Altro`).*
 <!-- AUTO-STATS:END frazioni -->
@@ -106,7 +106,7 @@ Equipment = a surveyed network point (ARL/ARLO cabinet or central office). Lines
 
 ## 📋 Municipal Works & Decrees Registry
 
-Documented with `data/ordinanze.json` as the single source of truth, distinguishing both Police Sector numbers (P.M.) and General Register numbers (Reg. Gen.):
+The tracker reads `data/ordinanze.json`. The original PDFs and archive index live in `data/ordinanze/`. Decree references distinguish Municipal Police numbers (P.M.) from General Register numbers (Reg. Gen.).
 
 1. **Cantiere 2 - Stagno (FTTH Rollout):**
    - **Decree:** Ordinanza P.M. n. 95/2026 (**Reg. Gen. 102/104/2026**)
@@ -120,12 +120,16 @@ Documented with `data/ordinanze.json` as the single source of truth, distinguish
 3. **Cantiere 1 - Collesalvetti Center:**
    - **Decree:** Ordinanza P.M. n. 88 dated 02/09/2026 (**Reg. Gen. 95**)
    - **Official Period:** 14/09/2026 – 02/10/2026. *Expired.*
-   - **5 November 2026 survey**. Two sections in executive design, with fiber blowing observed on one. Likely reuse of SIP/Telecom ducts and manholes on two further sections.
-4. **Asphalt Restoration Works - Stagno:**
+   - **5 November 2026 survey**. One section remains in executive design under Cantiere 1. Snapshot 7 assigns the segment with observed fiber blowing to Cantiere 2.
+4. **Cantiere 2 - Collesalvetti Center:**
+   - **Decree:** Ordinanza P.M. n. 118/2026 (**Reg. Gen. 125/2026**, Aut. 28/2026).
+   - **Official period:** 16/11/2026 – 04/12/2026 (working days, 08:00 – 18:00).
+   - **5 November 2026 survey**. Road markings and staged Fender microduct reels were observed on site.
+5. **Asphalt Restoration Works - Stagno:**
    - **Decree:** Ordinanza P.M. n. 70 dated 16/07/2026 (**Reg. Gen. 75**)
    - **Official Period:** 03/08/2026 – 13/08/2026. *Formally concluded.*
    - **Streets:** Via Marx, Via Guerrazzi, Via La Malfa.
-5. **Traces without municipal decree:**
+6. **Traces without municipal decree:**
    - **Backbone Works:** 519-meter inter-municipal section along SP555 towards Livorno.
 
 ---
@@ -165,7 +169,7 @@ geofibra/
 │   ├── ordinanze.json           # Single source of truth for municipal decrees
 │   ├── rete_ftth_collesalvetti.xlsx # Native Microsoft Excel export
 │   ├── rete_ftth_collesalvetti_*.csv # Standard and Italian CSV exports
-│   ├── kml_snapshots/           # Historical KML archives and CHANGELOG_DATI.md
+│   ├── kml_snapshots/            # Historical KML archives and CHANGELOG_DATI.md
 │   ├── wholesale/               # FiberCop / TIM wholesale CSVs
 │   └── ordinanze/               # Original PDFs and archive index
 ├── js/

@@ -255,6 +255,47 @@ class TestDocuments(unittest.TestCase):
                              f"wiki Snapshot {n} apparati")
 
 
+class TestSnapshot7ExecutiveDesign(unittest.TestCase):
+    def test_collesalvetti_staging_is_scoped_to_four_routes(self):
+        from kml_to_geojson import CANTIERE_2_SURVEY, parse_kml
+
+        snapshot6 = {f["id"]: f for f in parse_kml(p(snapshot_kml_path(6)))["features"]}
+        snapshot7 = {f["id"]: f for f in parse_kml(p(snapshot_kml_path(7)))["features"]}
+        added = {"031048DE5942FB3FB694", "044555C2D642FB404208", "0AFA98819242FB416540"}
+        renamed = "0DE7916F26423746716E"
+        self.assertEqual(snapshot7.keys() - snapshot6.keys(), added)
+        self.assertEqual(snapshot7[renamed]["geometry"], snapshot6[renamed]["geometry"])
+        staged = {i for i, f in snapshot7.items() if (f["properties"]["cantiere"] or {}).get(
+            "stato_base"
+        ) == "staged_for_digging"}
+        self.assertEqual(staged, added | {renamed})
+
+        for feature_id in staged:
+            with self.subTest(feature_id=feature_id):
+                feature = snapshot7[feature_id]
+                props = feature["properties"]
+                self.assertEqual(feature["geometry"]["type"], "LineString")
+                self.assertEqual(props["name"], "Cantiere 2 PROG. ESECUTIVA")
+                self.assertEqual(props["frazione"], "Collesalvetti")
+                self.assertEqual(props["status"], "executive_design")
+                self.assertEqual(props["color"], "#007cf5")
+                self.assertIn(CANTIERE_2_SURVEY, props["description"])
+                self.assertEqual((props["start_date"], props["end_date"]), ("2026-11-16", "2026-12-04"))
+                self.assertTrue(os.path.isfile(p(props["cantiere"]["file_pdf"])))
+
+        # These unrelated placemarks share the managed style used by the new routes.
+        for feature_id in ("038A8E74E7419D783FA8", "0A173E317742376CD0E8"):
+            self.assertEqual(snapshot7[feature_id]["properties"]["color"],
+                             snapshot6[feature_id]["properties"]["color"])
+
+        coverage_id = "08927D586B41BFCD66AB"
+        old_ring = snapshot6[coverage_id]["geometry"]["coordinates"][0]
+        new_ring = snapshot7[coverage_id]["geometry"]["coordinates"][0]
+        self.assertEqual((len(old_ring), len(new_ring)), (25, 31))
+        self.assertEqual(new_ring[0], new_ring[-1])
+        self.assertAlmostEqual(max(point[1] for point in new_ring), 43.59911, places=5)
+
+
 class TestExports(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
