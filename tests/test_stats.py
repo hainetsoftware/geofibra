@@ -278,7 +278,7 @@ class TestSnapshot7ExecutiveDesign(unittest.TestCase):
                 self.assertEqual(props["name"], "Cantiere 2 PROG. ESECUTIVA")
                 self.assertEqual(props["frazione"], "Collesalvetti")
                 self.assertEqual(props["status"], "executive_design")
-                self.assertEqual(props["color"], "#007cf5")
+                self.assertEqual(props["color"], "#ffd700")
                 self.assertIn(CANTIERE_2_SURVEY, props["description"])
                 self.assertEqual((props["start_date"], props["end_date"]), ("2026-11-16", "2026-12-04"))
                 self.assertTrue(os.path.isfile(p(props["cantiere"]["file_pdf"])))

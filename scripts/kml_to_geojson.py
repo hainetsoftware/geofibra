@@ -354,7 +354,7 @@ def parse_kml(kml_path):
 
         # Sincronizzazione dinamica dello stile da KML (es. colore LineStyle)
         style_el = p.find("kml:styleUrl", ns)
-        # Il blu della progettazione esecutiva è una convenzione della mappa.
+        # La progettazione esecutiva usa la palette della mappa.
         if category != "cantiere_progettazione_esecutiva" and style_el is not None and style_el.text:
             surl = style_el.text.strip().replace("#", "")
             if surl in kml_styles:
@@ -475,6 +475,7 @@ def parse_kml(kml_path):
             ordinance = cantiere_2_ordinance
             status_code = "executive_design"
             status_label = "Progettazione esecutiva (Marcature e corrugati sul posto)"
+            color = "#ffd700"
             ordinanza_str = f"Ordinanza P.M. n. {ordinance['numero']} (Reg. Gen. 125/2026, Aut. 28/2026)"
             clean_desc = "\n".join(filter(None, (clean_desc, CANTIERE_2_SURVEY)))
             cantiere_info = {

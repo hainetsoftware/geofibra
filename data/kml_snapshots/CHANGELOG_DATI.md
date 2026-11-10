@@ -9,7 +9,7 @@ Registro delle versioni dei dati cartografici della rete FTTH e cantieri nel Com
 - **Feature totali censite:** **76** (39 punti, 33 linee, 4 poligoni)
 - **Sviluppo lineare tracciato** **24,673 km** (+888 m rispetto a Snapshot 6).
 - **Apparati censiti (Snapshot 7):** **36** nel territorio comunale (24 ARL, 5 ARLO, 7 centrali) e un feeder esterno.
-- **Cantiere 2 Collesalvetti**. Aggiunte tre tratte (`031048DE5942FB3FB694`, `044555C2D642FB404208`, `0AFA98819242FB416540`). La tratta `0DE7916F26423746716E` passa dal Cantiere 1 al Cantiere 2 conservando la geometria. Le quattro tratte sono blu (`#007cf5`) e collegate all'Ordinanza P.M. n. 118/2026.
+- **Cantiere 2 Collesalvetti**. Aggiunte tre tratte (`031048DE5942FB3FB694`, `044555C2D642FB404208`, `0AFA98819242FB416540`). La tratta `0DE7916F26423746716E` passa dal Cantiere 1 al Cantiere 2 conservando la geometria. Le quattro tratte sono gialle (`#ffd700`) perché gli scavi devono ancora iniziare e sono collegate all'Ordinanza P.M. n. 118/2026.
 - **Copertura Collesalvetti**. L'anello del poligono `08927D586B41BFCD66AB` passa da 25 a 31 coordinate, compresa la chiusura, e raggiunge latitudine 43,599113.
 
 ---

@@ -40,7 +40,7 @@ Keep field evidence, ordinance validity, and wholesale availability separate. Th
 - Trench routes use `linesPane` at z-index 450. Use non-bubbling click events and stop propagation with `L.DomEvent.stopPropagation(e)`.
 - Cabinet pins (ARLO, ARL, and centrali) use `markersPane` at z-index 600.
 - When a trench overlaps a coverage polygon, clicking the trench must open the trench's inspection popup. Clicking exposed coverage opens the polygon popup.
-- Executive-design routes use `#007cf5`. Google Earth can regenerate or share managed style IDs across categories. Classify the route before applying the category palette.
+- Executive-design routes use blue (`#007cf5`) by default. Use yellow (`#ffd700`) for routes with field evidence that they are staged for digging and excavation has yet to begin (`cantiere.stato_base = staged_for_digging`). In Snapshot 7 this applies to the four `Cantiere 2 PROG. ESECUTIVA` routes in Collesalvetti. Google Earth can regenerate or share managed style IDs across categories. Classify the route and apply its worksite status before assigning the map color.
 
 ## 5. Development Workflow
 
@@ -58,3 +58,11 @@ Keep field evidence, ordinance validity, and wholesale availability separate. Th
    ```
 
 5. Start the application with `python3 start_server.py`. Check the executive-design filter, ordinance PDF links, and trench inspection where routes overlap coverage polygons. The Python pipeline and tests are the current pre-commit checks. If a future frontend migration introduces a package build, run `npm run build` before committing.
+
+## 6. Local main and GitHub Pages
+
+- Finish every change on local `main`. Commit the source files and any updated data bundles, exports, and documentation needed to reproduce the tested site. If work began on another branch or in a worktree, integrate the commits into local `main` and verify the result there before handing it back.
+- For every commit intended for GitHub, write a short English subject and a brief English body explaining what changed and why. Include one short English summary per batch in the push handoff.
+- The repository owner runs the push to GitHub. At handoff, report the local `main` commit SHA and the commits awaiting push. Use `git status --short --branch` and `git log --oneline origin/main..main` to check the local state.
+- GitHub Pages serves the root of the remote `main` branch. For an online/local discrepancy, compare `git rev-parse main` with `git ls-remote origin refs/heads/main`. Local `origin/main` is a tracking reference and may be stale. If the SHA differs, identify which commits still need to be pushed. If the SHA matches, check that the Pages deployment for that SHA succeeded.
+- Verify a publication against the live URL after the owner's push. Compare the served `index.html`, `js/data.js`, and other affected assets with the committed files. Open the map and confirm the snapshot, filter results, and affected routes. A successful local server run verifies the local build. Report a deploy or cache delay only when the remote SHA and the served files support that diagnosis.
