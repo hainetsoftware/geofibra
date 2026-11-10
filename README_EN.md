@@ -165,7 +165,9 @@ geofibra/
 │   ├── ordinanze.json           # Single source of truth for municipal decrees
 │   ├── rete_ftth_collesalvetti.xlsx # Native Microsoft Excel export
 │   ├── rete_ftth_collesalvetti_*.csv # Standard and Italian CSV exports
-│   └── snapshots/               # Historical KML archives and CHANGELOG_DATI.md
+│   ├── kml_snapshots/           # Historical KML archives and CHANGELOG_DATI.md
+│   ├── wholesale/               # FiberCop / TIM wholesale CSVs
+│   └── ordinanze/               # Original PDFs and archive index
 ├── js/
 │   ├── data.js                  # Exposes window.FTTH_NETWORK_DATA
 │   ├── cantieri_tracker.js      # Working hours calculation engine (Europe/Rome)
@@ -180,7 +182,6 @@ geofibra/
 │   ├── index.json               # Structured catalog of 11 articles
 │   ├── articles_data.js         # Offline fallback bundle for file:// execution
 │   └── *.md                     # Markdown article files
-├── ordinanze/                   # Official municipal PDF decrees
 └── scripts/
     ├── kml_to_geojson.py        # KML to GeoJSON parser (Haversine & polygon metrics)
     └── export_sheets.py         # CSV & Excel spreadsheet export pipeline

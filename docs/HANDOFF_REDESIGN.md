@@ -135,7 +135,7 @@ Ogni record dell'array delle ordinanze contiene:
 - `periodo_ordinanza`: oggetto con `inizio` e `fine` (ISO 8601 con offset fuso orario), `fascia_oraria` ("08:00 - 18:00") e `giorni` ("feriali").
 - `slittamento_osservato`: eventuale oggetto con `nota_campo`, `inizio_stimato` e `fine_stimata` derivati da sopralluoghi sul terreno. Se assente, vale `null`.
 - `vie_interessate`: array di oggetti `{ "via": "...", "prescrizione": "..." }`.
-- `file_pdf`: percorso relativo al documento PDF originale presente nella cartella `ordinanze/`.
+- `file_pdf`: percorso relativo al documento PDF originale presente nella cartella `data/ordinanze/`.
 - `coordinate_centro`: array `[lat, lng]` per l'inquadramento con `flyTo`.
 
 ---

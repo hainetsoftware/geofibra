@@ -1,4 +1,4 @@
-// Generato automaticamente da data/snapshots/rilievo_snapshot6.kml con dati Ordinanze Albo Pretorio
+// Generato automaticamente da data/kml_snapshots/FTTH Collesalvetti_snapshot6.kml con dati Ordinanze Albo Pretorio
 window.FTTH_NETWORK_DATA = {
   "type": "FeatureCollection",
   "metadata": {
@@ -7,7 +7,7 @@ window.FTTH_NETWORK_DATA = {
     "total_features": 73,
     "generated_at": "2026-11-05",
     "source_snapshot": "Snapshot 6",
-    "source_kml": "data/snapshots/rilievo_snapshot6.kml",
+    "source_kml": "data/kml_snapshots/FTTH Collesalvetti_snapshot6.kml",
     "timezone": "Europe/Rome",
     "wholesale_source": "data/wholesale/ELENCO_CRO_CNO_SOLO_COLLSALVETTI_20261102.csv"
   },
@@ -225,7 +225,7 @@ window.FTTH_NETWORK_DATA = {
             "Via Peppino Impastato",
             "Via di Cerretello"
           ],
-          "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
+          "file_pdf": "data/ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
           "stato_base": "eseguito",
           "note_slittamento": "Tratta Eseguita (Sud-Est): Via del Valico a Pisa, Via Peppino Impastato, Via di Cerretello. Tipologia di posa: minitrincea sigillata (microtubi Fender 4x10/14) + riuso cavidotti storici TIM."
         },
@@ -2652,7 +2652,7 @@ window.FTTH_NETWORK_DATA = {
             "Via Roma",
             "Via Nenni"
           ],
-          "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
+          "file_pdf": "data/ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
           "stato_base": "riuso_previsto",
           "note_slittamento": "Probabile riuso di pozzetti e cavidotti interrati SIP/Telecom sui corridoi Via Roma / Via Nenni. Con il riuso non sarebbero necessari nuovi scavi stradali o nuove ordinanze di viabilità."
         },
@@ -2751,7 +2751,7 @@ window.FTTH_NETWORK_DATA = {
             "Via Peppino Impastato",
             "Via di Cerretello"
           ],
-          "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
+          "file_pdf": "data/ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
           "stato_base": "eseguito",
           "note_slittamento": "Tratta Eseguita (Sud-Est): Via del Valico a Pisa, Via Peppino Impastato, Via di Cerretello. Tipologia di posa: minitrincea sigillata (microtubi Fender 4x10/14) + riuso cavidotti storici TIM."
         },
@@ -2881,7 +2881,7 @@ window.FTTH_NETWORK_DATA = {
             "Via Roma",
             "Via Nenni"
           ],
-          "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
+          "file_pdf": "data/ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
           "stato_base": "riuso_previsto",
           "note_slittamento": "Probabile riuso di pozzetti e cavidotti interrati SIP/Telecom sui corridoi Via Roma / Via Nenni. Con il riuso non sarebbero necessari nuovi scavi stradali o nuove ordinanze di viabilità."
         },
@@ -3962,7 +3962,7 @@ window.FTTH_NETWORK_DATA = {
             "Via Machiavelli",
             "Via XXV Aprile"
           ],
-          "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+          "file_pdf": "data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
           "stato_base": "eseguito",
           "note_slittamento": "Tratta del Cantiere 2 Stagno con opere civili completate, verificata nello Snapshot 6 (Ord. 104/2026 e proroga 111/2026)."
         },
@@ -4046,7 +4046,7 @@ window.FTTH_NETWORK_DATA = {
             "Via Machiavelli",
             "Via XXV Aprile"
           ],
-          "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+          "file_pdf": "data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
           "stato_base": "eseguito",
           "note_slittamento": "Tratta del Cantiere 2 Stagno con opere civili completate, verificata nello Snapshot 6 (Ord. 104/2026 e proroga 111/2026)."
         },
@@ -4150,7 +4150,7 @@ window.FTTH_NETWORK_DATA = {
             "Via Machiavelli",
             "Via XXV Aprile"
           ],
-          "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+          "file_pdf": "data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
           "stato_base": "eseguito",
           "note_slittamento": "Tratta del Cantiere 2 Stagno con opere civili completate, verificata nello Snapshot 6 (Ord. 104/2026 e proroga 111/2026)."
         },
@@ -4768,7 +4768,7 @@ window.FTTH_NETWORK_DATA = {
             "Via Aiaccia",
             "Via Umbria"
           ],
-          "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+          "file_pdf": "data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
           "stato_base": "programmato",
           "note_slittamento": "Finestra temporale: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Stato: Autorizzato / Avvio programmato. Nota: Innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale SP555 autorizzata a luglio 2026."
         },
@@ -4878,7 +4878,7 @@ window.FTTH_NETWORK_DATA = {
             "Via Aiaccia",
             "Via Umbria"
           ],
-          "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+          "file_pdf": "data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
           "stato_base": "programmato",
           "note_slittamento": "Finestra temporale: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Stato: Autorizzato / Avvio programmato. Nota: Innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale SP555 autorizzata a luglio 2026."
         },
@@ -4968,7 +4968,7 @@ window.FTTH_NETWORK_DATA = {
             "Via Aiaccia",
             "Via Umbria"
           ],
-          "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+          "file_pdf": "data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
           "stato_base": "programmato",
           "note_slittamento": "Finestra temporale: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Stato: Autorizzato / Avvio programmato. Nota: Innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale SP555 autorizzata a luglio 2026."
         },
@@ -5048,7 +5048,7 @@ window.FTTH_NETWORK_DATA = {
             "Via Aiaccia",
             "Via Umbria"
           ],
-          "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+          "file_pdf": "data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
           "stato_base": "programmato",
           "note_slittamento": "Finestra temporale: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Stato: Autorizzato / Avvio programmato. Nota: Innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale SP555 autorizzata a luglio 2026."
         },
@@ -5165,7 +5165,7 @@ window.FTTH_NETWORK_DATA = {
           "vie_interessate": [
             "Via Roma (rotatoria Via Nenni / Via Ciampi)"
           ],
-          "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
+          "file_pdf": "data/ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
           "stato_base": "eseguito",
           "note_slittamento": "Anello di raccordo rotatoria (71,8 m) eseguito con minitrincea sigillata (microtubi Fender 4x10/14), 4 pozzetti FiberCop e riuso cavidotti TIM preesistenti. Posato ARLO 01."
         },
@@ -5299,7 +5299,7 @@ window.FTTH_NETWORK_DATA = {
             "Via Romita sud",
             "Via XXV Aprile"
           ],
-          "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+          "file_pdf": "data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
           "stato_base": "eseguito",
           "note_slittamento": "Tratta verificata come completata nell'ultimo walk-in su Via Romita sud e Via XXV Aprile (292,9 m). Posa condotte ultimata."
         },

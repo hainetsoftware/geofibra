@@ -16,7 +16,7 @@ import math
 import os
 
 SNAPSHOT_DATES = {4: "2026-10-11", 5: "2026-10-17", 6: "2026-11-05"}
-LATEST_KML = "data/snapshots/rilievo_snapshot6.kml"
+LATEST_KML = "data/kml_snapshots/FTTH Collesalvetti_snapshot6.kml"
 WHOLESALE_CSV = Path(__file__).resolve().parents[1] / "data/wholesale/ELENCO_CRO_CNO_SOLO_COLLSALVETTI_20261102.csv"
 
 # Le associazioni ai placemark derivano dal rilievo locale. Il CSV censisce i CRO.
@@ -510,7 +510,7 @@ def parse_kml(kml_path):
                     "Via Romita sud",
                     "Via XXV Aprile"
                 ],
-                "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+                "file_pdf": "data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
                 "stato_base": "eseguito",
                 "note_slittamento": "Tratta verificata come completata nell'ultimo walk-in su Via Romita sud e Via XXV Aprile (292,9 m). Posa condotte ultimata."
             }
@@ -542,7 +542,7 @@ def parse_kml(kml_path):
                     "Via Don Verità",
                     "Via 8 Marzo"
                 ],
-                "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+                "file_pdf": "data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
                 "stato_base": "in_completamento",
                 "note_slittamento": "Finestra originaria: 05/10/2026 - 17/10/2026. Prorogata con Ordinanza n. 111 del 16/10/2026 al 23/10/2026 (estensione di 5 giorni lavorativi per completamento minitrincee secondarie e pozzetti in calcestruzzo attorno al nuovo ARLO)."
             }
@@ -565,7 +565,7 @@ def parse_kml(kml_path):
                     "Via Aiaccia",
                     "Via Umbria"
                 ],
-                "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+                "file_pdf": "data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
                 "stato_base": "programmato",
                 "note_slittamento": "Finestra temporale: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Stato: Autorizzato / Avvio programmato. Nota: Innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale SP555 autorizzata a luglio 2026."
             }
@@ -585,7 +585,7 @@ def parse_kml(kml_path):
                 "vie_interessate": [
                     "Via Roma (rotatoria Via Nenni / Via Ciampi)"
                 ],
-                "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
+                "file_pdf": "data/ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
                 "stato_base": "eseguito",
                 "note_slittamento": "Anello di raccordo rotatoria (71,8 m) eseguito con minitrincea sigillata (microtubi Fender 4x10/14), 4 pozzetti FiberCop e riuso cavidotti TIM preesistenti. Posato ARLO 01."
             }
@@ -607,7 +607,7 @@ def parse_kml(kml_path):
                     "Via Peppino Impastato",
                     "Via di Cerretello"
                 ],
-                "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
+                "file_pdf": "data/ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
                 "stato_base": "eseguito",
                 "note_slittamento": "Tratta Eseguita (Sud-Est): Via del Valico a Pisa, Via Peppino Impastato, Via di Cerretello. Tipologia di posa: minitrincea sigillata (microtubi Fender 4x10/14) + riuso cavidotti storici TIM."
             }
@@ -632,7 +632,7 @@ def parse_kml(kml_path):
                 "vie_interessate": [
                     "Via Nenni"
                 ],
-                "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
+                "file_pdf": "data/ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
                 "stato_base": "non_eseguito",
                 "note_slittamento": "Termini Ordinanza 88/2026 scaduti il 02/10; in attesa di nuova ordinanza viaria / proroga per il comparto Via Nenni (marcature blu a terra)."
             }

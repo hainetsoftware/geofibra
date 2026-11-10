@@ -37,7 +37,7 @@ const ORDINANZE_DATA_DEFAULT = [
       { "via": "Via Don Verità", "prescrizione": "Restringimento di carreggiata e divieto di sosta per allaccio utenze" },
       { "via": "Via 8 Marzo", "prescrizione": "Divieto di sosta con rimozione forzata e senso unico alternato" }
     ],
-    "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+    "file_pdf": "data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
     "coordinate_centro": [43.5930, 10.3540],
     "descrizione_ufficiale": "Provvedimento di disciplina temporanea della viabilità per esecuzione di scavi stradali per posa della rete in fibra ottica FiberCop a Stagno. Prorogato fino al 23/10/2026 con Ordinanza n. 111/2026.",
     "stato_base": "eseguito"
@@ -71,7 +71,7 @@ const ORDINANZE_DATA_DEFAULT = [
       { "via": "Via Aiaccia", "prescrizione": "Divieto di sosta e senso unico alternato con movieri o semaforo per scavo minitrincea" },
       { "via": "Via Umbria", "prescrizione": "Restringimento temporaneo carreggiata e divieto di sosta per posa infrastruttura secondaria" }
     ],
-    "file_pdf": "ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+    "file_pdf": "data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
     "coordinate_centro": [43.5875, 10.3580],
     "descrizione_ufficiale": "Provvedimento di disciplina viaria e concessione suolo pubblico (60 mq) per la posa della dorsale e della rete secondaria FTTH FiberCop lungo Via Aiaccia e Via Umbria.",
     "stato_base": "programmato"
@@ -104,7 +104,7 @@ const ORDINANZE_DATA_DEFAULT = [
     "vie_interessate": [
       { "via": "Via Fratelli Rosselli", "prescrizione": "Senso unico alternato e divieto di sosta con rimozione forzata per fresatura e asfaltatura definitiva" }
     ],
-    "file_pdf": "ordinanze/ordinanza_112_2026_stagno_ripristino_rosselli.pdf",
+    "file_pdf": "data/ordinanze/ordinanza_112_2026_stagno_ripristino_rosselli.pdf",
     "coordinate_centro": [43.5898, 10.3535],
     "descrizione_ufficiale": "Provvedimento viario per esecuzione dei ripristini definitivi del manto stradale a seguito degli scavi per la fibra ottica eseguiti a maggio-giugno 2026 lungo Via F.lli Rosselli. Finestra: 19/10/2026 - 24/11/2026.",
     "stato_base": "programmato"
@@ -179,7 +179,7 @@ const ORDINANZE_DATA_DEFAULT = [
       { "via": "Via Roma (rotatoria Via Nenni / Via Ciampi)", "prescrizione": "Tratta ESEGUITA (Cantiere 1 AGGIUNTO): anello di raccordo rotatoria, posati 4 pozzetti FiberCop e primo ARLO cittadino" },
       { "via": "Via Nenni", "prescrizione": "Tratta Nord-Ovest NON ESEGUITA: marcature blu a terra. Termini Ord. 88/2026 scaduti il 02/10, in attesa di proroga/nuova ordinanza" }
     ],
-    "file_pdf": "ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
+    "file_pdf": "data/ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf",
     "coordinate_centro": [43.5945, 10.4760],
     "descrizione_ufficiale": "Provvedimento di disciplina della viabilità per scavo e posa infrastruttura in fibra ottica FiberCop nel centro abitato di Collesalvetti.",
     "stato_base": "parziale_scaduto"
@@ -210,7 +210,7 @@ const ORDINANZE_DATA_DEFAULT = [
       { "via": "Via Guerrazzi (intersezione Via Curiel, lato sud)", "prescrizione": "Restringimento carreggiata e senso unico alternato" },
       { "via": "Via La Malfa", "prescrizione": "Restringimento carreggiata e senso unico alternato" }
     ],
-    "file_pdf": "ordinanze/ordinanza_75_2026_stagno_ripristino.pdf",
+    "file_pdf": "data/ordinanze/ordinanza_75_2026_stagno_ripristino.pdf",
     "coordinate_centro": [43.5910, 10.3520],
     "descrizione_ufficiale": "Provvedimento straordinario di circolazione per esecuzione di ripristini del manto stradale a seguito degli scavi per la fibra ottica a Stagno. Lavori formalmente conclusi.",
     "stato_base": "concluso"

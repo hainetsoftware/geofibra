@@ -114,6 +114,6 @@ window.FTTH_STATS = {
   "snapshot": {
     "date": "2026-11-05",
     "id": "Snapshot 6",
-    "source_kml": "data/snapshots/rilievo_snapshot6.kml"
+    "source_kml": "data/kml_snapshots/FTTH Collesalvetti_snapshot6.kml"
   }
 };

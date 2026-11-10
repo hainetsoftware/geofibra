@@ -5,7 +5,7 @@ updated: "2026-11-05"
 sources:
   - id: "snapshot6-kml"
     title: "Rilievo Geospaziale Indipendente: Snapshot 6 (05/11/2026)"
-    url: "data/snapshots/rilievo_snapshot6.kml"
+    url: "data/kml_snapshots/FTTH%20Collesalvetti_snapshot6.kml"
     type: "dati"
     note: "Rilievo GIS di campo: 73 feature, 23,785 km di tracciato, 36 apparati nel territorio comunale (+1 esterno), 4 poligoni"
   - id: "ordinanze-collesalvetti"
@@ -116,7 +116,7 @@ Per garantire la massima trasparenza, questo osservatorio cita sempre entrambi i
 - **Lunghezza Tratta:** 1,48 km stimati
 - **Stato lavori (rilievo 05/11/2026)**. Opere civili completate su tutte le quattro tratte censite.
 - **Armadi ottici**. Il quarto ARLO è stato installato accanto a `S [07] ARL` e attende verifica del numero. Si aggiunge a `S [27]`, `S [28]` e all’armadio senza etichetta accanto a `S [04] ARL`.
-- **File Documentale:** [`ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf`](file:///c:/Users/blankdisk/Documents/GitHub/fiberpulse/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf)
+- **File Documentale:** [`data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf`](data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf)
 
 #### 2. Cantiere 3 - Stagno (Via Aiaccia / Via Umbria)
 - **Atto Ufficiale:** Ordinanza Polizia Municipale n. 105/2026 (**Registro Generale n. 105**) + **Concessione Suolo n. 77/2026**
@@ -154,14 +154,14 @@ Per garantire la massima trasparenza, questo osservatorio cita sempre entrambi i
 - **Rilievo di Campo (Snapshot 6 al 05/11/2026):**
   - **Tratte eseguite (Sud-Est):** Via del Valico a Pisa, Via Peppino Impastato, Via di Cerretello e anello di raccordo rotatoria (`Cantiere 1 AGGIUNTO`, 71,8 m) completate con minitrincea sigillata (microtubi *Fender 4x10/14*), posa di 4 pozzetti FiberCop e montaggio del **primo ARLO cittadino** (`C [] ARLO`, futuro ARLO 01) alla rotatoria Via Roma / Via Nenni / Via Ciampi.
   - **Progettazione esecutiva**. Marcature e tecnici osservati su una tratta, soffiaggio della fibra nei pozzetti sull’altra. Su due ulteriori tratte è probabile il riuso di pozzetti e cavidotti SIP/Telecom.
-- **File Documentale:** [`ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf`](file:///c:/Users/blankdisk/Documents/GitHub/fiberpulse/ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf)
+- **File Documentale:** [`data/ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf`](data/ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf)
 
 #### 6. Lavori di Ripristino Manto Stradale (Conclusi) - Stagno
 - **Atto Ufficiale:** Ordinanza Polizia Municipale n. 70 del 16/07/2026 (**Registro Generale n. 75**)
 - **Vie Coinvolte:** Via Marx, Via Guerrazzi, Via La Malfa
 - **Lunghezza Tratta:** 0,85 km
 - **Stato Lavori:** **Conclusi formalmente e sul campo.**
-- **File Documentale:** [`ordinanze/ordinanza_75_2026_stagno_ripristino.pdf`](file:///c:/Users/blankdisk/Documents/GitHub/fiberpulse/ordinanze/ordinanza_75_2026_stagno_ripristino.pdf)
+- **File Documentale:** [`data/ordinanze/ordinanza_75_2026_stagno_ripristino.pdf`](data/ordinanze/ordinanza_75_2026_stagno_ripristino.pdf)
 
 ---
 

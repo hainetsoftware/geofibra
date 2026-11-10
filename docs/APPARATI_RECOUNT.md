@@ -1,6 +1,6 @@
 # Ricalcolo degli apparati (Snapshot 3)
 
-Branch `fix/equipment-recount`. Fonte: `data/snapshots/rilievo_snapshot3.kml` → `scripts/kml_to_geojson.py` → `data/network_data.json` / `js/data.js` → `scripts/compute_stats.py` → `data/stats.json` / `js/stats.js`. Versione metodologia: **1.0**. Tutti i numeri qui sotto sono riproducibili con i comandi della sezione 7.
+Branch `fix/equipment-recount`. Fonte: `data/kml_snapshots/rilievo_snapshot3.kml` → `scripts/kml_to_geojson.py` → `data/network_data.json` / `js/data.js` → `scripts/compute_stats.py` → `data/stats.json` / `js/stats.js`. Versione metodologia: **1.0**. Tutti i numeri qui sotto sono riproducibili con i comandi della sezione 7.
 
 ## 1. Definizione di «apparato»
 
@@ -134,7 +134,7 @@ Il pannello quindi non era sbagliato per ARL/ARLO, ma il totale e le frazioni s�
 | `wiki/articles_data.js` | copia del vecchio markdown | rigenerata da `scripts/sync_docs.py` | bundle offline |
 | `docs/HANDOFF_REDESIGN.md:171` | «34 apparati» | «32 apparati comunali (+1 esterno)» | 34 = punti |
 | `docs/HANDOFF_REDESIGN.md:68` | `#stat-tot` = «totale apparati/elementi» | «totale apparati comunali» | descrizione ambigua |
-| `data/snapshots/CHANGELOG_DATI.md` (Snapshot 3) | nessuna cifra di apparati | riga «Apparati censiti (Snapshot 3): 32 + 1 esterno» | mancava |
+| `data/kml_snapshots/CHANGELOG_DATI.md` (Snapshot 3) | nessuna cifra di apparati | riga «Apparati censiti (Snapshot 3): 32 + 1 esterno» | mancava |
 | `dossier_audit_e_sopralluoghi_collesalvetti.md:8` | tabella senza riferimento allo snapshot | nota: la tabella è di Snapshot 1 | cifra storica, lasciata invariata ma etichettata |
 
 Lasciati invariati perché già corretti: 63 feature, 34 punti / 25 linee / 4 poligoni, 21,716 km, conteggi di Snapshot 1–3 del `CHANGELOG_DATI.md` (verificati dal test contro i KML).

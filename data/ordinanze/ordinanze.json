@@ -1,0 +1,15 @@
+[
+  {
+    "id": "PM-COLLE-ORD-118-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "tipo": "ORDINANZA_VIABILITA",
+    "numero": "118/2026",
+    "data_emissione": "2026-11-09",
+    "richiedente": "Fastweb Spa",
+    "lotto": "Collesalvetti Cantiere 2",
+    "validita_dal": "2026-11-16",
+    "validita_al": "2026-12-04",
+    "vie": ["Via Roma", "Via del Valico a Pisa", "Via del Vione", "Via Guido Rossa"],
+    "file_pdf": "17991_AltreOrdinanze_Copia_125_2026.pdf"
+  }
+]

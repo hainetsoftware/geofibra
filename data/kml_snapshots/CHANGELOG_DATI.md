@@ -5,7 +5,7 @@ Registro delle versioni dei dati cartografici della rete FTTH e cantieri nel Com
 ---
 
 ## Snapshot 6 — 5 Novembre 2026
-- **File sorgente** `data/snapshots/rilievo_snapshot6.kml` (copia identica di `FTTH Collesalvetti_snapshot6.kml`).
+- **File sorgente** `data/kml_snapshots/FTTH Collesalvetti_snapshot6.kml`.
 - **Feature totali censite:** **73** (39 punti, 30 linee, 4 poligoni)
 - **Sviluppo lineare tracciato** **23,785 km** (−55 m rispetto a Snapshot 5).
 - **Apparati censiti (Snapshot 6):** **36** nel territorio comunale (24 ARL, 5 ARLO, 7 centrali) e un feeder esterno.
@@ -17,7 +17,7 @@ Registro delle versioni dei dati cartografici della rete FTTH e cantieri nel Com
 ---
 
 ## Snapshot 5 — 17 Ottobre 2026
-- **File sorgente:** `data/snapshots/rilievo_snapshot5.kml` (e `FTTH Collesalvetti_snapshot5.kml`)
+- **File sorgente:** `data/kml_snapshots/FTTH Collesalvetti_snapshot5.kml`
 - **Feature totali censite:** **71** (37 punti, 30 linee, 4 poligoni)
 - **Sviluppo lineare tracciato:** **23,840 km** (+2,063 km netti da Cantiere 4 Stagno)
 - **Apparati censiti (Snapshot 5):** **35** nel territorio comunale (24 ARL, 4 ARLO, 1 centrale comunale, 6 centrali di frazione) + 1 esterno (Centrale Feeder, Livorno). Conteggi in `data/stats.json`, metodologia in `docs/APPARATI_RECOUNT.md`.
@@ -42,7 +42,7 @@ Registro delle versioni dei dati cartografici della rete FTTH e cantieri nel Com
 ---
 
 ## Snapshot 4 — 11 Ottobre 2026
-- **File sorgente:** `data/snapshots/rilievo_snapshot4.kml` (e `FTTH Collesalvetti_snapshot4.kml`)
+- **File sorgente:** `data/kml_snapshots/FTTH Collesalvetti_snapshot4.kml`
 - **Feature totali censite:** **68** (37 punti, 27 linee, 4 poligoni)
 - **Sviluppo lineare tracciato:** **21,780 km** (+64 m netti da anello raccordo rotatoria e nuove tratte)
 - **Apparati censiti (Snapshot 4):** **35** nel territorio comunale (24 ARL, 4 ARLO, 1 centrale comunale, 6 centrali di frazione) + 1 esterno (Centrale Feeder, Livorno). Conteggi in `data/stats.json`, metodologia in `docs/APPARATI_RECOUNT.md`.
@@ -72,7 +72,7 @@ Registro delle versioni dei dati cartografici della rete FTTH e cantieri nel Com
 ---
 
 ## Snapshot 3 — 04 Ottobre 2026
-- **File sorgente:** `data/snapshots/rilievo_snapshot3.kml`
+- **File sorgente:** `data/kml_snapshots/rilievo_snapshot3.kml`
 - **Feature totali censite:** **63** (34 punti, 25 linee, 4 poligoni)
 - **Sviluppo lineare tracciato:** **21,716 km**
 - **Apparati censiti (Snapshot 3):** **32** nel territorio comunale (23 ARL, 2 ARLO, 1 centrale comunale, 6 centrali di frazione) + 1 esterno (Centrale Feeder, Livorno). Il 34° punto (`Coppie di corrugati scoperti`) è un punto di infrastruttura, non un apparato. Conteggi in `data/stats.json`, metodologia in `docs/APPARATI_RECOUNT.md`.
@@ -95,7 +95,7 @@ Registro delle versioni dei dati cartografici della rete FTTH e cantieri nel Com
 ---
 
 ## Snapshot 2 — 10 Settembre 2026
-- **File sorgente:** `data/snapshots/rilievo_snapshot2.kml`
+- **File sorgente:** `data/kml_snapshots/rilievo_snapshot2.kml`
 - **Feature totali censite:** **49** (31 punti, 14 linee, 4 poligoni)
 - **Sviluppo lineare tracciato:** **13,503 km**
 - **Novità rispetto a Snapshot 1:**
@@ -105,7 +105,7 @@ Registro delle versioni dei dati cartografici della rete FTTH e cantieri nel Com
 ---
 
 ## Snapshot 1 — Rilievo Iniziale Storico
-- **File sorgente:** `data/snapshots/rilievo_snapshot1.kml`
+- **File sorgente:** `data/kml_snapshots/rilievo_snapshot1.kml`
 - **Feature totali censite:** **46** (31 punti, 11 linee, 4 poligoni)
 - **Sviluppo lineare tracciato:** **12,073 km**
   - Dorsale INFRATEL BUL: 6,533 km

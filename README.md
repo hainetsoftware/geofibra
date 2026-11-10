@@ -165,7 +165,9 @@ geofibra/
 │   ├── ordinanze.json           # Fonte di verita' ordinanze e prescrizioni viabilita'
 │   ├── rete_ftth_collesalvetti.xlsx # Export Microsoft Excel nativo completo
 │   ├── rete_ftth_collesalvetti_*.csv # Export CSV standard e per Excel italiano
-│   └── snapshots/               # Archivio KML storici e CHANGELOG_DATI.md
+│   ├── kml_snapshots/           # Archivio KML storici e CHANGELOG_DATI.md
+│   ├── wholesale/               # CSV wholesale FiberCop / TIM
+│   └── ordinanze/               # PDF originali e indice documentale
 ├── js/
 │   ├── data.js                  # Assegnazione window.FTTH_NETWORK_DATA
 │   ├── cantieri_tracker.js      # Motore calcolo orari Europe/Rome e modale ordinanze
@@ -180,7 +182,6 @@ geofibra/
 │   ├── index.json               # Catalogo strutturato delle 11 voci
 │   ├── articles_data.js         # Fallback dati per esecuzione offline su file://
 │   └── *.md                     # I file Markdown delle singole voci
-├── ordinanze/                   # File PDF originali delle ordinanze di Polizia Municipale
 └── scripts/
     ├── kml_to_geojson.py        # Pipeline di conversione KML -> GeoJSON (Haversine & aree)
     └── export_sheets.py         # Pipeline di generazione fogli CSV e XLSX

@@ -96,11 +96,16 @@ def kml_summary(rel):
     return out
 
 
+def snapshot_kml_path(number):
+    prefix = "rilievo_" if number <= 3 else "FTTH Collesalvetti_"
+    return f"data/kml_snapshots/{prefix}snapshot{number}.kml"
+
+
 class TestCountsFromKml(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.stats = load_json("data/stats.json")
-        source_kml = cls.stats.get("snapshot", {}).get("source_kml") or "data/snapshots/rilievo_snapshot4.kml"
+        source_kml = cls.stats.get("snapshot", {}).get("source_kml") or "data/kml_snapshots/FTTH Collesalvetti_snapshot4.kml"
         cls.kml = kml_summary(source_kml)
         cls.net = load_json("data/network_data.json")
 
@@ -214,7 +219,7 @@ class TestDocuments(unittest.TestCase):
         self.assertQuotes("docs/HANDOFF_REDESIGN.md", r"sono \d+ feature, ([\d,]+) km, \d+ apparati", self.km_it)
         self.assertQuotes("docs/HANDOFF_REDESIGN.md", r"sono \d+ feature, [\d,]+ km, (\d+) apparati", e["total_municipal"])
         snapshot_id = self.s["snapshot"]["id"]
-        chg = read("data/snapshots/CHANGELOG_DATI.md").split(f"## {snapshot_id} ", 1)[1].split("\n## ", 1)[0]
+        chg = read("data/kml_snapshots/CHANGELOG_DATI.md").split(f"## {snapshot_id} ", 1)[1].split("\n## ", 1)[0]
         self.assertEqual(re.findall(r"Feature totali censite:\*\* \*\*(\d+)\*\* \((\d+) punti, (\d+) linee, (\d+) poligoni\)", chg),
                          [tuple(str(x) for x in (f["total"], f["points"], f["lines"], f["polygons"]))])
         self.assertRegex(chg, rf"Apparati censiti \({snapshot_id}\):\*\* \*\*{e['total_municipal']}\*\* nel territorio comunale")
@@ -230,16 +235,16 @@ class TestDocuments(unittest.TestCase):
                     self.assertIn(v, allowed, f"{rel}:{n}: '{v} apparati' non coincide con i dati")
 
     def test_historic_snapshot_figures_match_kml(self):
-        log = read("data/snapshots/CHANGELOG_DATI.md")
+        log = read("data/kml_snapshots/CHANGELOG_DATI.md")
         for n in (1, 2, 3, 4, 5):
-            k = kml_summary(f"data/snapshots/rilievo_snapshot{n}.kml")
+            k = kml_summary(snapshot_kml_path(n))
             sect = log.split(f"## Snapshot {n}", 1)[1].split("\n## ", 1)[0]
             m = re.search(r"Feature totali censite:\*\* \*\*(\d+)\*\* \((\d+) punti, (\d+) linee, (\d+) poligoni\)", sect)
             self.assertEqual(tuple(int(x) for x in m.groups()),
                              (k["placemarks"], k["points"], k["lines"], k["polygons"]), f"Snapshot {n}")
         w = read("wiki/collesalvetti.md")
         for n, col in ((3, 0), (4, 1)):
-            k = kml_summary(f"data/snapshots/rilievo_snapshot{n}.kml")
+            k = kml_summary(snapshot_kml_path(n))
             for label, key in (("Totale Feature Geospaziali", "placemarks"), ("Elementi Puntuali", "points"),
                                ("Elementi Lineari", "lines"), ("Elementi Areali", "polygons")):
                 row = re.search(rf"\| \*\*{label}[^|]*\| ([^|]+) \| ([^|]+) \|", w)
