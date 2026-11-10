@@ -1,6 +1,12 @@
 // js/main.js - Coordinamento UI: mappa e modale cantieri
 
 function initApp() {
+    const snapshotLabel = document.getElementById('snapshot-nav-label');
+    const snapshot = window.FTTH_NETWORK_DATA?.metadata?.source_snapshot;
+    if (snapshotLabel && snapshot) {
+        snapshotLabel.textContent = ` • ${snapshot}`;
+    }
+
     // Inizializza Mappa Leaflet se presente
     if (typeof initMap === 'function') {
         initMap();
