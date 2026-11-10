@@ -1,0 +1,2336 @@
+window.ARCHIVIO_ATTI = [
+  {
+    "id": "PM-COLLE-ORD-118-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": "Paolo Cecconi",
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "118/2026",
+    "registro_generale": "125",
+    "data_emissione": "2026-11-09",
+    "data_registrazione": null,
+    "protocollo": "25107",
+    "data_protocollo": "2026-11-09",
+    "oggetto": "LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – COLLESALVETTI, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "Fastweb",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2026-11-16",
+      "al": "2026-12-04",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Roma",
+        "Via del Valico a Pisa",
+        "Via del Vione",
+        "Via Guido Rossa"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [
+        "031048DE5942FB3FB694",
+        "044555C2D642FB404208",
+        "0AFA98819242FB416540",
+        "0DE7916F26423746716E"
+      ],
+      "candidate_feature_ids": [
+        "02172672CE42615EB699",
+        "08DB97EDC341BFC840B3",
+        "099D51459541BFC79191",
+        "0B6DD449B041BFC99520",
+        "0D01C4A3D9419D77F4F8"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "28/2026",
+        "data": "2026-10-28",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "cluster_id": "FC-COLLE-LOTTO2-2026",
+    "file_pdf": {
+      "nome_file": "17991_AltreOrdinanze_Copia_125_2026.pdf",
+      "url_path": "data/ordinanze/17991_AltreOrdinanze_Copia_125_2026.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "PM-COLLE-ORD-112-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": "Paolo Cecconi",
+    "tipologia": "RIPRISTINO",
+    "numero_atto": "112/2026",
+    "registro_generale": "118",
+    "data_emissione": "2026-10-16",
+    "data_registrazione": null,
+    "protocollo": "22190",
+    "data_protocollo": "2026-10-16",
+    "oggetto": "LAVORI DI RIPRISTINO SCAVO STRADALE SUCCESSIVO A POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "Fastweb",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2026-10-19",
+      "al": "2026-11-24",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via F.lli Rosselli"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "10/2026",
+        "data": "2026-05-14",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-10-16_COLLE_RIP_112_Fastweb_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2026-10-16_COLLE_RIP_112_Fastweb_Stagno.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-10-2026"
+  },
+  {
+    "id": "PM-COLLE-ORD-111-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": "Paolo Cecconi",
+    "tipologia": "PROROGA",
+    "numero_atto": "111/2026",
+    "registro_generale": "117",
+    "data_emissione": "2026-10-16",
+    "data_registrazione": null,
+    "protocollo": "22069",
+    "data_protocollo": "2026-10-15",
+    "oggetto": "LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE - PROROGA",
+    "richiedente": "Fastweb",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2026-10-19",
+      "al": "2026-10-23",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Otto Marzo",
+        "Via Romita",
+        "Via De Gasperi",
+        "Piazza Di Vittorio",
+        "Via Machiavelli",
+        "Via XXV Aprile"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [
+        "01393CA83D41C1030753",
+        "04D8D17C9141C10125EB",
+        "0AD5AAF68741C10071CC",
+        "0F45FBA6684261661C70"
+      ],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "ORDINANZA",
+        "numero": "95/2026",
+        "data": null,
+        "ente": "COMUNE_COLLESALVETTI",
+        "atto_id": "PM-COLLE-ORD-95-2026"
+      },
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "17/2026",
+        "data": "2026-07-16",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": "COMPLETATA",
+    "note_tecniche": "Opere civili del Cantiere 2 Stagno rilevate come completate nello Snapshot 7.",
+    "file_pdf": {
+      "nome_file": "pdf/2026-10-16_COLLE_PROR_111_Fastweb_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2026-10-16_COLLE_PROR_111_Fastweb_Stagno.pdf"
+    },
+    "atti_collegati": [
+      "PM-COLLE-ORD-95-2026"
+    ],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-17-2026"
+  },
+  {
+    "id": "PM-COLLE-ORD-110-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": "Paolo Cecconi",
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "110/2026",
+    "registro_generale": "116",
+    "data_emissione": "2026-10-14",
+    "data_registrazione": null,
+    "protocollo": "21831",
+    "data_protocollo": "2026-10-13",
+    "oggetto": "LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "Fastweb",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2026-10-26",
+      "al": "2026-11-20",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Marx",
+        "Via Curiel",
+        "Via Gobetti",
+        "Via Don Verità",
+        "Via F.lli Cervi",
+        "Via La Malfa",
+        "Via Verga",
+        "Via Berlinguer"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [
+        "012D8BFFFE4270DC0BCC",
+        "0766EAF8C74270D6924F",
+        "0B718B800C4270DCE3E0",
+        "0C7715154E42E8361D89"
+      ],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "26/2026",
+        "data": "2026-09-21",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "cluster_id": "FC-STAGNO-LOTTO4-2026",
+    "file_pdf": {
+      "nome_file": "pdf/2026-10-14_COLLE_ORD_110_Fastweb_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2026-10-14_COLLE_ORD_110_Fastweb_Stagno.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "DOC-756e282e41cb6dfb",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "STRATEGICO",
+    "funzionario": null,
+    "tipologia": "ALTRO",
+    "numero_atto": null,
+    "registro_generale": "994",
+    "data_emissione": "2026-10-12",
+    "data_registrazione": "2026-10-12",
+    "protocollo": "20311",
+    "data_protocollo": "2026-09-23",
+    "oggetto": "Affidamento servizi dati linea videosorveglianza ditta WIND Tre S.p.A. – Impegno di spesa",
+    "richiedente": "WindTre",
+    "operator_target": "WindTre",
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null
+    },
+    "localizzazione": {
+      "area": null,
+      "strade": [],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-10-12_COLLE_ATTO_994_Windtre_Nd.pdf",
+      "url_path": "data/ordinanze/pdf/2026-10-12_COLLE_ATTO_994_Windtre_Nd.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "DOC-4b711b2fd3d58a1f",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "STRATEGICO",
+    "funzionario": "Norida Di",
+    "tipologia": "ALTRO",
+    "numero_atto": null,
+    "registro_generale": "995",
+    "data_emissione": "2026-10-12",
+    "data_registrazione": "2026-10-12",
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "Affidamento diretto ex art. 50, c. 1, lett. b) D.Lgs. 36/2023 per la fornitura di n. 2 linee dati destinate al sistema di videosorveglianza comunale - integrazione impegno di spesa. Beneficiario: Fastweb Spa",
+    "richiedente": "Fastweb",
+    "operator_target": "Fastweb",
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null
+    },
+    "localizzazione": {
+      "area": null,
+      "strade": [],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-10-12_COLLE_ATTO_995_Fastweb_Nd.pdf",
+      "url_path": "data/ordinanze/pdf/2026-10-12_COLLE_ATTO_995_Fastweb_Nd.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "PM-COLLE-ORD-105-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": "Paolo Cecconi",
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "105/2026",
+    "registro_generale": "110",
+    "data_emissione": "2026-10-01",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "Fastweb",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2026-10-19",
+      "al": "2026-10-23",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Aiaccia",
+        "Via Umbria"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [
+        "07624940EF4237721F0B",
+        "0A173E317742376CD0E8",
+        "0C884334EF423778B430",
+        "0EB8D0BA5142376E2D37"
+      ],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "20/2026",
+        "data": "2026-07-29",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-10-01_COLLE_ORD_105_Fastweb_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2026-10-01_COLLE_ORD_105_Fastweb_Stagno.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-20-2026"
+  },
+  {
+    "id": "PM-COLLE-ORD-104-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": "Paolo Cecconi",
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "104/2026",
+    "registro_generale": "109",
+    "data_emissione": "2026-09-28",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "Fastweb",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2026-10-05",
+      "al": "2026-10-17",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Otto Marzo",
+        "Via Romita",
+        "Via De Gasperi",
+        "Piazza Di Vittorio",
+        "Via Machiavelli",
+        "Via XXV Aprile"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "01393CA83D41C1030753",
+        "04D8D17C9141C10125EB",
+        "0AD5AAF68741C10071CC",
+        "0F45FBA6684261661C70"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "17/2026",
+        "data": "2026-07-16",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-09-28_COLLE_ORD_104_Fastweb_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2026-09-28_COLLE_ORD_104_Fastweb_Stagno.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-17-2026"
+  },
+  {
+    "id": "ALTRO-COLLE-201-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": null,
+    "funzionario": null,
+    "tipologia": "ALTRO",
+    "numero_atto": "201/2026",
+    "registro_generale": null,
+    "data_emissione": "2026-09-22",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "Convenzione per la realizzazione di infrastrutture di telecomunicazioni in fibra ottica nel comune di Collesalvetti. Approvazione schema di convenzione",
+    "richiedente": null,
+    "operator_target": null,
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null
+    },
+    "localizzazione": {
+      "area": null,
+      "strade": [],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-09-22_COLLE_ATTO_201_Nd_Nd.pdf",
+      "url_path": "data/ordinanze/pdf/2026-09-22_COLLE_ATTO_201_Nd_Nd.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "PM-COLLE-ORD-95-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": "Paolo Cecconi",
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "95/2026",
+    "registro_generale": "102",
+    "data_emissione": "2026-09-10",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "Fastweb",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2026-09-21",
+      "al": "2026-10-16",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Otto Marzo",
+        "Via Romita",
+        "Via De Gasperi",
+        "Via Machiavelli",
+        "Via XXV Aprile",
+        "Piazza Di Vittorio"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [
+        "01393CA83D41C1030753",
+        "01D91831AC4261623108",
+        "04D8D17C9141C10125EB",
+        "073CCE441A419DEDF933",
+        "0A2895209441C56CED8C",
+        "0AD5AAF68741C10071CC",
+        "0F45FBA6684261661C70"
+      ],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "17/2026",
+        "data": "2026-07-16",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": "COMPLETATA",
+    "note_tecniche": "Opere civili del Cantiere 2 Stagno rilevate come completate nello Snapshot 7.",
+    "file_pdf": {
+      "nome_file": "ordinanza_102_2026_stagno_cantiere2.pdf",
+      "url_path": "data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-17-2026"
+  },
+  {
+    "id": "PM-COLLE-ORD-88-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": "Paolo Cecconi",
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "88/2026",
+    "registro_generale": "95",
+    "data_emissione": "2026-09-02",
+    "data_registrazione": null,
+    "protocollo": "18362",
+    "data_protocollo": "2026-08-31",
+    "oggetto": "LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – COLLESALVETTI, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "Fastweb",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2026-09-14",
+      "al": "2026-10-02",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Nenni",
+        "Via Roma",
+        "Via del Valico a Pisa",
+        "Via di Cerretello"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [
+        "01D156648742616017BB",
+        "02172672CE42615EB699",
+        "08DB97EDC341BFC840B3",
+        "099D51459541BFC79191",
+        "0B6DD449B041BFC99520",
+        "0C11108026419D776229",
+        "0D01C4A3D9419D77F4F8"
+      ],
+      "candidate_feature_ids": [
+        "031048DE5942FB3FB694",
+        "044555C2D642FB404208",
+        "0AFA98819242FB416540",
+        "0DE7916F26423746716E"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "10/2026",
+        "data": "2026-05-14",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "ordinanza_95_2026_collesalvetti_cantiere1.pdf",
+      "url_path": "data/ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-COLLESALVETTI-10-2026"
+  },
+  {
+    "id": "DOC-3d3ad603d7506ab0",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "STRATEGICO",
+    "funzionario": "Maurizio Martellini",
+    "tipologia": "ALTRO",
+    "numero_atto": null,
+    "registro_generale": "738",
+    "data_emissione": "2026-08-11",
+    "data_registrazione": "2026-08-11",
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "Affidamento diretto ex art. 50, c. 1, lett. b) D.Lgs. 36/2023 per la fornitura di n. 2 linee dati destinate al sistema di videosorveglianza comunale - Impegno di spesa. Beneficiario: Fastweb Spa",
+    "richiedente": "Fastweb",
+    "operator_target": "Fastweb",
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null
+    },
+    "localizzazione": {
+      "area": null,
+      "strade": [],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-08-11_COLLE_ATTO_738_Fastweb_Nd.pdf",
+      "url_path": "data/ordinanze/pdf/2026-08-11_COLLE_ATTO_738_Fastweb_Nd.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "PM-COLLE-ORD-70-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": "Paolo Cecconi",
+    "tipologia": "RIPRISTINO",
+    "numero_atto": "70/2026",
+    "registro_generale": "75",
+    "data_emissione": "2026-07-16",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI STRADALI PER RIPRISTINO SCAVI FIBRA OTTICA – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "Fastweb",
+    "operator_target": "Fastweb",
+    "validita": {
+      "dal": "2026-08-03",
+      "al": "2026-08-13",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Marx",
+        "Via Guerrazzi",
+        "Via Curiel",
+        "Via La Malfa"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "012D8BFFFE4270DC0BCC",
+        "0B718B800C4270DCE3E0",
+        "0C7715154E42E8361D89"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "10/2025",
+        "data": "2025-07-16",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "ordinanza_75_2026_stagno_ripristino.pdf",
+      "url_path": "data/ordinanze/ordinanza_75_2026_stagno_ripristino.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-10-2025"
+  },
+  {
+    "id": "PM-COLLE-ORD-57-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": "Paolo Cecconi",
+    "tipologia": "RIPRISTINO",
+    "numero_atto": "57/2026",
+    "registro_generale": "61",
+    "data_emissione": "2026-06-01",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI STRADALI PER RIPRISTINO SCAVI FIBRA OTTICA – GUASTICCE, VIA FRANCIA - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "Fastweb",
+    "operator_target": "Fastweb",
+    "validita": {
+      "dal": "2026-06-22",
+      "al": "2026-06-26",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "GUASTICCE",
+      "strade": [
+        "Via Francia"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-06-01_COLLE_RIP_57_Fastweb_Guasticce.pdf",
+      "url_path": "data/ordinanze/pdf/2026-06-01_COLLE_RIP_57_Fastweb_Guasticce.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "PM-COLLE-ORD-49-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "49/2026",
+    "registro_generale": "53",
+    "data_emissione": "2026-05-18",
+    "data_registrazione": null,
+    "protocollo": "9563",
+    "data_protocollo": null,
+    "oggetto": "LAVORI STRADALI PER POSA FIBRA OTTICA – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "Fastweb",
+    "operator_target": "Fastweb",
+    "validita": {
+      "dal": "2026-05-25",
+      "al": "2026-05-29",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Verga",
+        "Via traversa omonima a Via Berlinguer"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "012D8BFFFE4270DC0BCC",
+        "0B718B800C4270DCE3E0"
+      ]
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-05-18_COLLE_ORD_49_Fastweb_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2026-05-18_COLLE_ORD_49_Fastweb_Stagno.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "PM-COLLE-ORD-40-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "40/2026",
+    "registro_generale": "43",
+    "data_emissione": "2026-04-28",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "FiberCop",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2026-05-04",
+      "al": "2026-05-15",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via di Suese",
+        "Via Buozzi",
+        "Corso Italia a Via F.lli Rosselli",
+        "Via Curiel",
+        "Via Buozzi a Via di Suese",
+        "Via F.lli Rorrelli",
+        "Via Buozzi a fine strada"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "012D8BFFFE4270DC0BCC",
+        "0B718B800C4270DCE3E0",
+        "0C7715154E42E8361D89"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "06/2026",
+        "data": "2026-03-20",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-04-28_COLLE_ORD_40_Fibercop_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2026-04-28_COLLE_ORD_40_Fibercop_Stagno.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-06-2026"
+  },
+  {
+    "id": "PM-COLLE-ORD-30-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "30/2026",
+    "registro_generale": "32",
+    "data_emissione": "2026-03-26",
+    "data_registrazione": null,
+    "protocollo": "6517",
+    "data_protocollo": "2026-03-24",
+    "oggetto": "LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "FiberCop",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2026-04-13",
+      "al": "2026-04-30",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via di Suese",
+        "Via Buozzi",
+        "Corso Italia a Via F.lli Rosselli",
+        "Via Curiel",
+        "Via Buozzi a Via di Suese",
+        "Via F.lli Rorrelli",
+        "Via Buozzi a fine strada"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "012D8BFFFE4270DC0BCC",
+        "0B718B800C4270DCE3E0",
+        "0C7715154E42E8361D89"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "06/2026",
+        "data": "2026-03-20",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-03-26_COLLE_ORD_30_Fibercop_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2026-03-26_COLLE_ORD_30_Fibercop_Stagno.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-06-2026"
+  },
+  {
+    "id": "PM-COLLE-ORD-25-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "25/2026",
+    "registro_generale": "27",
+    "data_emissione": "2026-03-06",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "OCCUPAZIONE SUOLO PUBBLICO PER LAVORI DI SCAVO STRADALE E POSA IN OPERA CAVO DI FIBRA OTTICA – COLLESALVETTI, VIA EDDA FAGNI - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": null,
+    "operator_target": null,
+    "validita": {
+      "dal": "2026-03-16",
+      "al": "2026-03-31",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Edda Fagni"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-03-06_COLLE_ORD_25_Nd_Collesalvetti.pdf",
+      "url_path": "data/ordinanze/pdf/2026-03-06_COLLE_ORD_25_Nd_Collesalvetti.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "PM-COLLE-ORD-16-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "16/2026",
+    "registro_generale": "16",
+    "data_emissione": "2026-02-19",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "OCCUPAZIONE SUOLO PUBBLICO PER LAVORI DI SCAVO STRADALE E POSA IN OPERA CAVO DI FIBRA OTTICA – COLLESALVETTI, VIA EDDA FAGNI - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": null,
+    "operator_target": null,
+    "validita": {
+      "dal": "2026-02-23",
+      "al": "2026-03-06",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Edda Fagni"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-02-19_COLLE_ORD_16_Nd_Collesalvetti.pdf",
+      "url_path": "data/ordinanze/pdf/2026-02-19_COLLE_ORD_16_Nd_Collesalvetti.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "PM-COLLE-ORD-60-2025",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "60/2025",
+    "registro_generale": "63",
+    "data_emissione": "2025-08-12",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI DI SCAVO STRADALE IN PERFORAZIONE PER CONTO FASTWEB SPA – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "Fastweb",
+    "operator_target": "Fastweb",
+    "validita": {
+      "dal": "2025-08-18",
+      "al": "2025-08-28",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Verga",
+        "Via Berlinguer",
+        "Via La Malfa",
+        "Via Guerrazzi",
+        "Via Curiel",
+        "Via Marx"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "012D8BFFFE4270DC0BCC",
+        "0B718B800C4270DCE3E0",
+        "0C7715154E42E8361D89"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "10/2025",
+        "data": "2025-07-16",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2025-08-12_COLLE_ORD_60_Fastweb_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2025-08-12_COLLE_ORD_60_Fastweb_Stagno.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-10-2025"
+  },
+  {
+    "id": "PM-COLLE-ORD-55-2025",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "55/2025",
+    "registro_generale": "58",
+    "data_emissione": "2025-07-22",
+    "data_registrazione": null,
+    "protocollo": "16810",
+    "data_protocollo": "2025-07-18",
+    "oggetto": "LAVORI STRADALI PER POSA CAVO IN FIBRA OTTICA – COLLESLVETTI, VIA GARIBALDI - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": "FiberCop",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2025-07-23",
+      "al": "2025-07-31",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Garibaldi"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "09/2025",
+        "data": "2025-07-08",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2025-07-22_COLLE_ORD_55_Fibercop_Nd.pdf",
+      "url_path": "data/ordinanze/pdf/2025-07-22_COLLE_ORD_55_Fibercop_Nd.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-COLLESALVETTI-09-2025"
+  },
+  {
+    "id": "CONCESSIONE_SUOLO-COLLE-75-2024",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "PATRIMONIO_TRIBUTI",
+    "funzionario": "Alessandra Zambelli",
+    "tipologia": "CONCESSIONE_SUOLO",
+    "numero_atto": "75/2024",
+    "registro_generale": "778",
+    "data_emissione": "2024-09-19",
+    "data_registrazione": "2024-09-19",
+    "protocollo": "16557",
+    "data_protocollo": "2024-09-04",
+    "oggetto": "Concessione occupazione TEMPORANEA Suolo Pubblico n. 75/2024 – FIBERCOP S.P.A. – P. IVA: 11459900962 – per via Roma: da Civ. 12 a incrocio via Picchi e per via Picchi: da incrocio via Roma a Scuola infanzia “Picchi” - Collesalvetti.",
+    "richiedente": "FiberCop",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2024-09-18",
+      "al": "2024-09-29",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Roma",
+        "Via Picchi"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "02172672CE42615EB699",
+        "031048DE5942FB3FB694",
+        "044555C2D642FB404208",
+        "099D51459541BFC79191",
+        "0AFA98819242FB416540",
+        "0B6DD449B041BFC99520",
+        "0DE7916F26423746716E"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "ORDINANZA",
+        "numero": "107/2024",
+        "data": "2024-09-04",
+        "ente": "COMUNE_COLLESALVETTI"
+      },
+      {
+        "tipo": "ORDINANZA",
+        "numero": "113/2024",
+        "data": "2024-09-14",
+        "ente": "COMUNE_COLLESALVETTI"
+      },
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "24/2024",
+        "data": "2024-08-12",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2024-09-19_COLLE_CONC_75_Fibercop_Collesalvetti.pdf",
+      "url_path": "data/ordinanze/pdf/2024-09-19_COLLE_CONC_75_Fibercop_Collesalvetti.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-COLLESALVETTI-24-2024"
+  },
+  {
+    "id": "PM-COLLE-ORD-68-2024",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "68/2024",
+    "registro_generale": "65",
+    "data_emissione": "2024-05-31",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI STRADALI PER POSA FIBRA OTTICA - STAGNO, VIA BERLINGUER E VIA VERGA - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": "Fastweb",
+    "operator_target": "Fastweb",
+    "validita": {
+      "dal": "2024-06-01",
+      "al": "2024-06-07",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Berlinguer",
+        "Via Verga"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "012D8BFFFE4270DC0BCC",
+        "0B718B800C4270DCE3E0"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "03/2024",
+        "data": "2024-01-12",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2024-05-31_COLLE_ORD_68_Fastweb_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2024-05-31_COLLE_ORD_68_Fastweb_Stagno.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-03-2024"
+  },
+  {
+    "id": "PM-COLLE-ORD-59-2024",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "59/2024",
+    "registro_generale": "56",
+    "data_emissione": "2024-05-13",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI STRADALI PER POSA FIBRA OTTICA - STAGNO, VIA BERLINGUER E VIA VERGA - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": "Fastweb",
+    "operator_target": "Fastweb",
+    "validita": {
+      "dal": "2024-05-27",
+      "al": "2024-05-31",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Berlinguer",
+        "Via Verga",
+        "Via Berlinguer fino alla seconda traversa in destra"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "012D8BFFFE4270DC0BCC",
+        "0B718B800C4270DCE3E0"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "03/2024",
+        "data": "2024-01-12",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2024-05-13_COLLE_ORD_59_Fastweb_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2024-05-13_COLLE_ORD_59_Fastweb_Stagno.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-03-2024"
+  },
+  {
+    "id": "CONCESSIONE_SUOLO-COLLE-44-2024",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "PATRIMONIO_TRIBUTI",
+    "funzionario": "Alessandra Zambelli",
+    "tipologia": "CONCESSIONE_SUOLO",
+    "numero_atto": "44/2024",
+    "registro_generale": "332",
+    "data_emissione": "2024-04-18",
+    "data_registrazione": "2024-04-18",
+    "protocollo": "7685",
+    "data_protocollo": "2024-04-12",
+    "oggetto": "Concessione occupazione temporanea di suolo pubblico n°44/2024 a TIM – TELECOM ITALIA S.p.A. - P.I. 00488410010 - per via Pietro Grocco – via Sabatini Lopez – Fraz. Guasticce - Collesalvetti.",
+    "richiedente": "TIM",
+    "operator_target": "TIM",
+    "validita": {
+      "dal": "2024-04-17",
+      "al": "2024-04-24",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "GUASTICCE",
+      "strade": [
+        "Via Pietro Grocco",
+        "Via Sabatini Lopez"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "ORDINANZA",
+        "numero": "45/2024",
+        "data": "2024-04-12",
+        "ente": "COMUNE_COLLESALVETTI",
+        "atto_id": "PM-COLLE-ORD-45-2024"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2024-04-18_COLLE_CONC_44_Tim_Guasticce.pdf",
+      "url_path": "data/ordinanze/pdf/2024-04-18_COLLE_CONC_44_Tim_Guasticce.pdf"
+    },
+    "atti_collegati": [
+      "PM-COLLE-ORD-45-2024"
+    ],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-GUASTICCE-14-2024"
+  },
+  {
+    "id": "PM-COLLE-ORD-45-2024",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "45/2024",
+    "registro_generale": "43",
+    "data_emissione": "2024-04-12",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI DI SCAVO STRADALE PER CONTO TIM SPA – GUASTICCE, PIAZZA DON VALERI, VIA LOPEZ E VIA GROCCO - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": "TIM",
+    "operator_target": "TIM",
+    "validita": {
+      "dal": "2024-04-17",
+      "al": "2024-04-24",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "GUASTICCE",
+      "strade": [
+        "Piazza Don Valeri",
+        "Via Lopez",
+        "Via Grocco"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "14/2024",
+        "data": "2024-03-27",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2024-04-12_COLLE_ORD_45_Tim_Guasticce.pdf",
+      "url_path": "data/ordinanze/pdf/2024-04-12_COLLE_ORD_45_Tim_Guasticce.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-GUASTICCE-14-2024"
+  },
+  {
+    "id": "CONCESSIONE_SUOLO-COLLE-43-2024",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "PATRIMONIO_TRIBUTI",
+    "funzionario": "Alessandra Zambelli",
+    "tipologia": "CONCESSIONE_SUOLO",
+    "numero_atto": "43/2024",
+    "registro_generale": "319",
+    "data_emissione": "2024-04-11",
+    "data_registrazione": "2024-04-11",
+    "protocollo": "4207",
+    "data_protocollo": "2024-02-28",
+    "oggetto": "Concessione in sanatoria occupazione temporanea di suolo pubblico n°43/2024 a TIM – TELECOM ITALIA S.p.A. - P.I. 00488410010 - per via Della Costituzione e via 8 Marzo – Fraz. Stagno - Collesalvetti.",
+    "richiedente": "TIM",
+    "operator_target": "TIM",
+    "validita": {
+      "dal": "2024-03-04",
+      "al": "2024-03-09",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Della Costituzione"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "ORDINANZA",
+        "numero": "28/2024",
+        "data": "2024-02-23",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2024-04-11_COLLE_CONC_43_Tim_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2024-04-11_COLLE_CONC_43_Tim_Stagno.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "PM-COLLE-ORD-27-2024",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "27/2024",
+    "registro_generale": "24",
+    "data_emissione": "2024-02-23",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI STRADALI PER NUOVO ALLACCIO IDRICO IN FRAZIONE NUGOLA, VIA DELLE BECCHERIE 52 - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": null,
+    "operator_target": null,
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "NUGOLA",
+      "strade": [
+        "Via Delle Beccherie"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "6/2024",
+        "data": "2024-02-21",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2024-02-23_COLLE_ORD_27_Nd_Nugola.pdf",
+      "url_path": "data/ordinanze/pdf/2024-02-23_COLLE_ORD_27_Nd_Nugola.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-NUGOLA-6-2024"
+  },
+  {
+    "id": "CONCESSIONE_SUOLO-COLLE-20-2024",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "PATRIMONIO_TRIBUTI",
+    "funzionario": "Alessandra Zambelli",
+    "tipologia": "CONCESSIONE_SUOLO",
+    "numero_atto": "20/2024",
+    "registro_generale": "126",
+    "data_emissione": "2024-02-09",
+    "data_registrazione": "2024-02-09",
+    "protocollo": "19895",
+    "data_protocollo": "2023-10-11",
+    "oggetto": "Concessione occupazione temporanea di suolo pubblico n°20/2024 a TIM S.p.A. - P.I. 00488410010 - per via Roma n. 47 – Collesalvetti.",
+    "richiedente": "TIM",
+    "operator_target": "TIM",
+    "validita": {
+      "dal": "2024-02-15",
+      "al": "2024-02-23",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Roma"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "02172672CE42615EB699",
+        "031048DE5942FB3FB694",
+        "044555C2D642FB404208",
+        "099D51459541BFC79191",
+        "0AFA98819242FB416540",
+        "0B6DD449B041BFC99520",
+        "0DE7916F26423746716E"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "ORDINANZA",
+        "numero": "17/2024",
+        "data": "2024-01-30",
+        "ente": "COMUNE_COLLESALVETTI",
+        "atto_id": "PM-COLLE-ORD-17-2024"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2024-02-09_COLLE_CONC_20_Tim_Collesalvetti.pdf",
+      "url_path": "data/ordinanze/pdf/2024-02-09_COLLE_CONC_20_Tim_Collesalvetti.pdf"
+    },
+    "atti_collegati": [
+      "PM-COLLE-ORD-17-2024"
+    ],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-COLLESALVETTI-26-2023"
+  },
+  {
+    "id": "CONCESSIONE_SUOLO-COLLE-14-2024",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "PATRIMONIO_TRIBUTI",
+    "funzionario": "Alessandra Zambelli",
+    "tipologia": "CONCESSIONE_SUOLO",
+    "numero_atto": "14/2024",
+    "registro_generale": "100",
+    "data_emissione": "2024-02-01",
+    "data_registrazione": "2024-02-01",
+    "protocollo": "1974",
+    "data_protocollo": "2024-01-30",
+    "oggetto": "Concessione occupazione temporanea di suolo pubblico n° 14/2024 a FASTWEB SPA P.I. 12878470157 per via Enrico Berlinguer – via Giovanni Verga - Collesalvetti.",
+    "richiedente": "Fastweb",
+    "operator_target": "Fastweb",
+    "validita": {
+      "dal": "2024-02-05",
+      "al": "2024-02-08",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Enrico Berlinguer",
+        "Via Giovanni Verga"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "ORDINANZA",
+        "numero": "10/2024",
+        "data": "2024-01-16",
+        "ente": "COMUNE_COLLESALVETTI",
+        "atto_id": "PM-COLLE-ORD-10-2024"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2024-02-01_COLLE_CONC_14_Fastweb_Collesalvetti.pdf",
+      "url_path": "data/ordinanze/pdf/2024-02-01_COLLE_CONC_14_Fastweb_Collesalvetti.pdf"
+    },
+    "atti_collegati": [
+      "PM-COLLE-ORD-10-2024"
+    ],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-03-2024"
+  },
+  {
+    "id": "PM-COLLE-ORD-17-2024",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "17/2024",
+    "registro_generale": "16",
+    "data_emissione": "2024-01-30",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI DI SCAVO STRADALE PER CONTO TIM SPA – COLLESALVETTI, VIA ROMA 47 - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": "TIM",
+    "operator_target": "TIM",
+    "validita": {
+      "dal": "2023-02-15",
+      "al": "2024-02-23",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Roma"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "02172672CE42615EB699",
+        "031048DE5942FB3FB694",
+        "044555C2D642FB404208",
+        "099D51459541BFC79191",
+        "0AFA98819242FB416540",
+        "0B6DD449B041BFC99520",
+        "0DE7916F26423746716E"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "26/2023",
+        "data": "2023-09-05",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2024-01-30_COLLE_ORD_17_Tim_Collesalvetti.pdf",
+      "url_path": "data/ordinanze/pdf/2024-01-30_COLLE_ORD_17_Tim_Collesalvetti.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-COLLESALVETTI-26-2023"
+  },
+  {
+    "id": "PM-COLLE-ORD-10-2024",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "10/2024",
+    "registro_generale": "9",
+    "data_emissione": "2024-01-16",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI STRADALI PER POSA FIBRA OTTICA - STAGNO, VIA BERLINGUER E VIA VERGA - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": "Fastweb",
+    "operator_target": "Fastweb",
+    "validita": {
+      "dal": "2024-02-05",
+      "al": "2024-02-09",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Berlinguer",
+        "Via Verga"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "012D8BFFFE4270DC0BCC",
+        "0B718B800C4270DCE3E0"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "03/2024",
+        "data": "2024-01-12",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2024-01-16_COLLE_ORD_10_Fastweb_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2024-01-16_COLLE_ORD_10_Fastweb_Stagno.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-03-2024"
+  },
+  {
+    "id": "CONCESSIONE_SUOLO-COLLE-81-2023",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "PATRIMONIO_TRIBUTI",
+    "funzionario": "Alessandra Zambelli",
+    "tipologia": "CONCESSIONE_SUOLO",
+    "numero_atto": "81/2023",
+    "registro_generale": "985",
+    "data_emissione": "2023-10-18",
+    "data_registrazione": "2023-10-18",
+    "protocollo": "19895",
+    "data_protocollo": "2023-10-11",
+    "oggetto": "Concessione in sanatoria occupazione temporanea di suolo pubblico n°81/2023 a TIM S.p.A. - P.I. 00488410010 - per via Della Colmata snc – Fraz. Guasticce - Collesalvetti.",
+    "richiedente": "TIM",
+    "operator_target": "TIM",
+    "validita": {
+      "dal": "2023-10-16",
+      "al": "2023-10-20",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "GUASTICCE",
+      "strade": [
+        "Via Della Colmata"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "ORDINANZA",
+        "numero": "93/2023",
+        "data": "2023-10-17",
+        "ente": "COMUNE_COLLESALVETTI",
+        "atto_id": "PM-COLLE-ORD-93-2023"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2023-10-18_COLLE_CONC_81_Tim_Guasticce.pdf",
+      "url_path": "data/ordinanze/pdf/2023-10-18_COLLE_CONC_81_Tim_Guasticce.pdf"
+    },
+    "atti_collegati": [
+      "PM-COLLE-ORD-93-2023"
+    ],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-GUASTICCE-17-2023"
+  },
+  {
+    "id": "PM-COLLE-ORD-93-2023",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "93/2023",
+    "registro_generale": "97",
+    "data_emissione": "2023-10-17",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI DI SCAVO STRADALE PER CONTO TIM SPA – GUASTICCE, VIA DELLA COLMATA - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": "TIM",
+    "operator_target": "TIM",
+    "validita": {
+      "dal": "2023-10-18",
+      "al": "2023-10-27",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "GUASTICCE",
+      "strade": [
+        "Via Della Colmata"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "17/2023",
+        "data": "2023-06-07",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2023-10-17_COLLE_ORD_93_Tim_Guasticce.pdf",
+      "url_path": "data/ordinanze/pdf/2023-10-17_COLLE_ORD_93_Tim_Guasticce.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-GUASTICCE-17-2023"
+  },
+  {
+    "id": "CONCESSIONE_SUOLO-COLLE-78-2023",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "PATRIMONIO_TRIBUTI",
+    "funzionario": "Alessandra Zambelli",
+    "tipologia": "CONCESSIONE_SUOLO",
+    "numero_atto": "78/2023",
+    "registro_generale": "919",
+    "data_emissione": "2023-10-02",
+    "data_registrazione": "2023-10-02",
+    "protocollo": "17727",
+    "data_protocollo": "2023-09-14",
+    "oggetto": "Concessione in sanatoria occupazione temporanea di suolo pubblico n°78/2023 a TIM S.P.A. - P.I. 00488410010 - per via Roma n. 47 - Collesalvetti.",
+    "richiedente": "TIM",
+    "operator_target": "TIM",
+    "validita": {
+      "dal": "2023-09-25",
+      "al": "2023-10-03",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Roma"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "02172672CE42615EB699",
+        "031048DE5942FB3FB694",
+        "044555C2D642FB404208",
+        "099D51459541BFC79191",
+        "0AFA98819242FB416540",
+        "0B6DD449B041BFC99520",
+        "0DE7916F26423746716E"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "ORDINANZA",
+        "numero": "86/2023",
+        "data": "2023-09-16",
+        "ente": "COMUNE_COLLESALVETTI",
+        "atto_id": "PM-COLLE-ORD-86-2023"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2023-10-02_COLLE_CONC_78_Tim_Collesalvetti.pdf",
+      "url_path": "data/ordinanze/pdf/2023-10-02_COLLE_CONC_78_Tim_Collesalvetti.pdf"
+    },
+    "atti_collegati": [
+      "PM-COLLE-ORD-86-2023"
+    ],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-COLLESALVETTI-26-2023"
+  },
+  {
+    "id": "PM-COLLE-ORD-86-2023",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "86/2023",
+    "registro_generale": "89",
+    "data_emissione": "2023-09-16",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI DI SCAVO STRADALE PER CONTO TIM SPA – COLLESALVETTI, VIA ROMA 47 - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": "TIM",
+    "operator_target": "TIM",
+    "validita": {
+      "dal": "2023-09-25",
+      "al": "2023-10-03",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Roma"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "02172672CE42615EB699",
+        "031048DE5942FB3FB694",
+        "044555C2D642FB404208",
+        "099D51459541BFC79191",
+        "0AFA98819242FB416540",
+        "0B6DD449B041BFC99520",
+        "0DE7916F26423746716E"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "26/2023",
+        "data": "2023-09-05",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2023-09-16_COLLE_ORD_86_Tim_Collesalvetti.pdf",
+      "url_path": "data/ordinanze/pdf/2023-09-16_COLLE_ORD_86_Tim_Collesalvetti.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-COLLESALVETTI-26-2023"
+  },
+  {
+    "id": "CONCESSIONE_SUOLO-COLLE-64-2023",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "PATRIMONIO_TRIBUTI",
+    "funzionario": "Maurizio Lischi",
+    "tipologia": "CONCESSIONE_SUOLO",
+    "numero_atto": "64/2023",
+    "registro_generale": "764",
+    "data_emissione": "2023-08-28",
+    "data_registrazione": "2023-08-28",
+    "protocollo": "13810",
+    "data_protocollo": "2023-07-14",
+    "oggetto": "Concessione occupazione temporanea di suolo pubblico n°64/2023 a TIM S.P.A. - P.I. 00488410010 - per via Nugola Nuova - via Delle Beccherie – Strada Provinciale n. 2 (della Cerreta) – fraz. Nugola - Collesalvetti.",
+    "richiedente": "TIM",
+    "operator_target": "TIM",
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null,
+      "periodi": [
+        {
+          "dal": "2023-08-28",
+          "al": "2023-08-29"
+        },
+        {
+          "dal": "2023-08-30",
+          "al": "2023-09-05"
+        }
+      ]
+    },
+    "localizzazione": {
+      "area": "NUGOLA",
+      "strade": [
+        "Via Nugola Nuova",
+        "Via Delle Beccherie",
+        "SP2"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "ORDINANZA",
+        "numero": "75/2023",
+        "data": "2023-08-09",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2023-08-28_COLLE_CONC_64_Tim_Nugola.pdf",
+      "url_path": "data/ordinanze/pdf/2023-08-28_COLLE_CONC_64_Tim_Nugola.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "PM-COLLE-ORD-57-2023",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "57/2023",
+    "registro_generale": "60",
+    "data_emissione": "2023-06-26",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI DI SCAVO STRADALE PER POSA FIBRA OTTICA – GUASTICCE, VIA DON STURZO E VIA DELLA COLMATA - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": null,
+    "operator_target": null,
+    "validita": {
+      "dal": "2023-07-03",
+      "al": "2023-07-10",
+      "orario": "07:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "GUASTICCE",
+      "strade": [
+        "Via Don Sturzo",
+        "Via Della Colmata"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "17/2023",
+        "data": "2023-06-07",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2023-06-26_COLLE_ORD_57_Nd_Guasticce.pdf",
+      "url_path": "data/ordinanze/pdf/2023-06-26_COLLE_ORD_57_Nd_Guasticce.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-GUASTICCE-17-2023"
+  },
+  {
+    "id": "ALTRO-COLLE-167-2023",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": null,
+    "funzionario": null,
+    "tipologia": "ALTRO",
+    "numero_atto": "167/2023",
+    "registro_generale": null,
+    "data_emissione": "2023-05-26",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "0,900 segnaletica stradale, cartellone dissuasore elettronico, velocità illuminazione. Decoro urbano pulizia fossi fognari. Fibra ottica. Presidio sanitario primo soccorso. RITIRATA",
+    "richiedente": null,
+    "operator_target": null,
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null
+    },
+    "localizzazione": {
+      "area": null,
+      "strade": [],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2023-05-26_COLLE_ATTO_167_Nd_Nd.pdf",
+      "url_path": "data/ordinanze/pdf/2023-05-26_COLLE_ATTO_167_Nd_Nd.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "CONCESSIONE_SUOLO-COLLE-11-2023",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "PATRIMONIO_TRIBUTI",
+    "funzionario": "Alessandra Zambelli",
+    "tipologia": "CONCESSIONE_SUOLO",
+    "numero_atto": "11/2023",
+    "registro_generale": "175",
+    "data_emissione": "2023-02-20",
+    "data_registrazione": "2023-02-20",
+    "protocollo": "1689",
+    "data_protocollo": "2023-01-24",
+    "oggetto": "Concessione occupazione temporanea di suolo pubblico n°11/2023 a TIM S.P.A. - P.I. 00488410010 - per via Roma – Collesalvetti.",
+    "richiedente": "TIM",
+    "operator_target": "TIM",
+    "validita": {
+      "dal": "2023-02-20",
+      "al": "2023-02-24",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Roma"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "02172672CE42615EB699",
+        "031048DE5942FB3FB694",
+        "044555C2D642FB404208",
+        "099D51459541BFC79191",
+        "0AFA98819242FB416540",
+        "0B6DD449B041BFC99520",
+        "0DE7916F26423746716E"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "ORDINANZA",
+        "numero": "17/2023",
+        "data": "2023-02-17",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2023-02-20_COLLE_CONC_11_Tim_Collesalvetti.pdf",
+      "url_path": "data/ordinanze/pdf/2023-02-20_COLLE_CONC_11_Tim_Collesalvetti.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "PM-COLLE-ORD-13-2022",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "13/2022",
+    "registro_generale": "13",
+    "data_emissione": "2022-02-25",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI DI SCAVO STRADALE PER CONTO FASTWEB – COLLESALVETTI, VIA SAN QUIRICO - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": "Fastweb",
+    "operator_target": "Fastweb",
+    "validita": {
+      "dal": "2022-03-24",
+      "al": "2022-03-26",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via San Quirico"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "04/2022",
+        "data": "2022-02-11",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2022-02-25_COLLE_ORD_13_Fastweb_Collesalvetti.pdf",
+      "url_path": "data/ordinanze/pdf/2022-02-25_COLLE_ORD_13_Fastweb_Collesalvetti.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-COLLESALVETTI-04-2022"
+  },
+  {
+    "id": "PM-COLLE-ORD-16-2021",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "16/2021",
+    "registro_generale": "23",
+    "data_emissione": "2021-05-20",
+    "data_registrazione": null,
+    "protocollo": "8795",
+    "data_protocollo": "2021-05-13",
+    "oggetto": "LAVORI DI SCAVO PER POSA CAVI IN FIBRA OTTICA - GUASTICCE, VIA DON STURZO - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": "Ultranet",
+    "operator_target": "Ultranet",
+    "validita": {
+      "dal": "2021-05-24",
+      "al": "2021-05-26",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "GUASTICCE",
+      "strade": [
+        "Via Don Sturzo"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "304/2021",
+        "data": "2021-03-02",
+        "ente": "PROVINCIA_LIVORNO"
+      },
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "09/2021",
+        "data": "2021-04-02",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2021-05-20_COLLE_ORD_16_Ultranet_Guasticce.pdf",
+      "url_path": "data/ordinanze/pdf/2021-05-20_COLLE_ORD_16_Ultranet_Guasticce.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "DOC-e63c60dce14754ee",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": null,
+    "funzionario": null,
+    "tipologia": "ALTRO",
+    "numero_atto": null,
+    "registro_generale": null,
+    "data_emissione": null,
+    "data_registrazione": "2023-04-24",
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "Mozione per la riqualificazione della SP6 a Parrana San Martino",
+    "richiedente": null,
+    "operator_target": null,
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "EXTRAURBANO",
+      "strade": [
+        "SP6"
+      ],
+      "prog_chilometrica": {
+        "dal_km": 0,
+        "al_km": 0.9
+      },
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": true,
+    "stato_opera": null,
+    "atti_collegati": [
+      "ALTRO-COLLE-167-2023"
+    ],
+    "file_pdf": {
+      "nome_file": "pdf/UNDATED_COLLE_ATTO_e63c60dce147_Nd_Nd.pdf",
+      "url_path": "data/ordinanze/pdf/UNDATED_COLLE_ATTO_e63c60dce147_Nd_Nd.pdf"
+    }
+  },
+  {
+    "id": "DOC-a5116a819cd5789a",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": null,
+    "funzionario": null,
+    "tipologia": "ALTRO",
+    "numero_atto": null,
+    "registro_generale": null,
+    "data_emissione": null,
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "Progetto FTTH Estracom – Particolari costruttivi dei pozzetti",
+    "richiedente": null,
+    "operator_target": null,
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null
+    },
+    "localizzazione": {
+      "area": null,
+      "strade": [],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "atti_collegati": [
+      "ALTRO-COLLE-201-2026"
+    ],
+    "file_pdf": {
+      "nome_file": "pdf/UNDATED_COLLE_ATTO_a5116a819cd5_Nd_Nd.pdf",
+      "url_path": "data/ordinanze/pdf/UNDATED_COLLE_ATTO_a5116a819cd5_Nd_Nd.pdf"
+    }
+  },
+  {
+    "id": "DOC-9039709ef14bb603",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": null,
+    "funzionario": null,
+    "tipologia": "ALTRO",
+    "numero_atto": null,
+    "registro_generale": null,
+    "data_emissione": null,
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "Progetto FTTH Estracom – Particolari costruttivi degli scavi",
+    "richiedente": null,
+    "operator_target": null,
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null
+    },
+    "localizzazione": {
+      "area": null,
+      "strade": [],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "atti_collegati": [
+      "ALTRO-COLLE-201-2026"
+    ],
+    "file_pdf": {
+      "nome_file": "pdf/UNDATED_COLLE_ATTO_9039709ef14b_Nd_Nd.pdf",
+      "url_path": "data/ordinanze/pdf/UNDATED_COLLE_ATTO_9039709ef14b_Nd_Nd.pdf"
+    }
+  },
+  {
+    "id": "DOC-78e40bfe71844453",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": null,
+    "funzionario": null,
+    "tipologia": "ALTRO",
+    "numero_atto": null,
+    "registro_generale": null,
+    "data_emissione": null,
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "Progetto FTTH Estracom – Relazione tecnica per Stagno e La Chiusa",
+    "richiedente": null,
+    "operator_target": null,
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null
+    },
+    "localizzazione": {
+      "area": null,
+      "strade": [],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "atti_collegati": [
+      "ALTRO-COLLE-201-2026"
+    ],
+    "file_pdf": {
+      "nome_file": "pdf/UNDATED_COLLE_ATTO_78e40bfe7184_Nd_Nd.pdf",
+      "url_path": "data/ordinanze/pdf/UNDATED_COLLE_ATTO_78e40bfe7184_Nd_Nd.pdf"
+    }
+  },
+  {
+    "id": "DOC-173cafb03bbb50b8",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": null,
+    "funzionario": null,
+    "tipologia": "ALTRO",
+    "numero_atto": null,
+    "registro_generale": null,
+    "data_emissione": null,
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "Schema di convenzione per la rete FTTH Estracom",
+    "richiedente": null,
+    "operator_target": null,
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null
+    },
+    "localizzazione": {
+      "area": null,
+      "strade": [],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "atti_collegati": [
+      "ALTRO-COLLE-201-2026"
+    ],
+    "file_pdf": {
+      "nome_file": "pdf/UNDATED_COLLE_ATTO_173cafb03bbb_Nd_Nd.pdf",
+      "url_path": "data/ordinanze/pdf/UNDATED_COLLE_ATTO_173cafb03bbb_Nd_Nd.pdf"
+    }
+  }
+];
+window.ARCHIVIO_TESTI = {
+  "ALTRO-COLLE-167-2023": "COPIA DELIBERAZIONE DEL CONSIGLIO COMUNALE N. 167 DEL 26/05/2023 Mozione gruppo Lega - riqualificazione della SP06 Parrana S. Martino dal tratto Km. 00 al Km. OGGETTO: 0,900 segnaletica stradale, cartellone dissuasore elettronico, velocità illuminazione. Decoro urbano pulizia fossi fognari. Fibra ottica. Presidio sanitario primo soccorso. RITIRATA L'anno duemilaventitré il giorno ventisei del mese di maggio alle ore 09:00, nella Sala Consiliare, convocata nei modi di legge, si è riunito il Consiglio Comunale, in sessione Ordinaria in prima convocazione in seduta Pubblica Dei Consiglieri e Sindaco, sono presenti in nr. 16 e assenti nr. 1, come segue: Ruolo Nominativo Presente Assente Sindaco ANTOLINI ADELIO Si Consigliere Comunale MUREDDU Si ANNAMARIA Consigliere Comunale SCATENA DAVIDE Si Consigliere Comunale CARLETTI FRANCESCA Si Consigliere Anziano BIASCI GIOVANNI Si Consigliere Comunale BUTTINO ISABELLA Si Consigliere Comunale CANTU' GABRIELE Si Consigliere Comunale GIGLIOLI MATTIA Si Consigliere Comunale MARIOTTINI FLORIDA Si Consigliere Comunale DEL CORSO ENRICO Si Vice Presidente del BERRETTA ANNA Si Consiglio Consigliere Comunale CIACCHINI MASSIMO Si Consigliere Comunale BISO ALESSIO Si Consigliere Comunale MARCIS EMANUELE Si Presidente del Consiglio ROSSI DANIELE Si Consigliere Comunale BONELLI ALESSANDRA Si Consigliere Comunale CAPOGNA VITO Si Sono altresì presenti i sigg. Assessori: Crespolini Andrea Giommetti Mila Paoli Sara Ciurli Adriana Assume la presidenza il Daniele ROSSI assistito dal Segretario Comunale, Dott.ssa Susanna Turturici. Il Presidente, accertato il numero legale, dichiara aperta la seduta. Sono designati Scrutatori i Signori: Comune di Collesalvetti - Delibera di Consiglio Comunale n. 167 del 26/05/2023 Pag. 1 Comune di Collesalvetti - Delibera di Consiglio Comunale n. 167 del 26/05/2023 Pag. 2 IL CONSIGLIO COMUNALE Uditi gli interventi del Presidente del Consiglio D. Rossi e del consigliere V. Capogna come da registrazione sbobinata per mezzo del link: https://www.diycaptions.com che estrapola file testo da youtube. Tenuto conto che il Consigliere Capogna dichiara di voler ritirare la presente Mozione allegata quale parte integrante IL CONSIGLIO COMUNALE Prende atto della volontà del Consigliere Capogna di ritirare la Mozione del gruppo Lega: \"Riqualificazione della SP06 Parrana San Martino dal Km. 00 al Km. 0.900 segnaletica stradale, cartellone dissuasore elettronico velocità illuminazione. Decoro urbano pulizia fossi fognari. Fibra ottica. Presidio sanitario primo soccorso. Comune di Collesalvetti - Delibera di Consiglio Comunale n. 167 del 26/05/2023 Pag. 3 Comune di Collesalvetti - Delibera di Consiglio Comunale n. 167 del 26/05/2023 Pag. 4 Letto, approvato e sottoscritto a norma di legge. Il Presidente del Consiglio Il Segretario Comunale f.to Daniele ROSSI f.to Dott.ssa Susanna Turturici Le firme, in formato digitale, sono apposte sull'originale del presente atto ai sensi dell'art. 24 del D.Lgs. 7/3/2005, n. 82 e s.m.i. (CAD) PUBBLICAZIONE La presente viene pubblicata in data odierna all'Albo Pretorio on line al nr.1286 del regigstro delle pubblicazioni così come disposto dal Segretario Comunale e rimmarà pubblicata per 15 giorni consecutivi ai sensi dell'art. 124, comma 1 del D.Lgs. n. 267/00. Collesalvetti, lì 03/10/2023 Il Segretario Comunale f.to Dott.ssa Susanna Turturici ESECUTIVITA' La presente deliverazione diverrà esecutiva decorsi 10 giorni dalla data di pubblicazione ai sensi dell'art. 134, del D.Lgs. n. 267/00. Collesalvetti, lì 03/10/2023 Segretario Comunale f.to Dott.ssa Susanna Turturici Comune di Collesalvetti - Delibera di Consiglio Comunale n. 167 del 26/05/2023 Pag. 5",
+  "ALTRO-COLLE-201-2026": "COPIA DELIBERAZIONE DELLA GIUNTA COMUNALE N. 201 DEL 22/09/2026 Oggetto: Convenzione per la realizzazione di infrastrutture di telecomunicazioni in fibra ottica nel comune di Collesalvetti. Approvazione schema di convenzione Dei Signori componenti della Giunta Comunale di questo Comune: Nominativo Ruolo Presente Assente Da remoto PAOLI SARA Sindaco Si GIOMMETTI MILA Vice Sindaco Si ROSSI DANIELE Assessore Si CARLI VANESSA Assessore Si SUSINI JACOPO AMEDEO Assessore Si BIASCI GIOVANNI Assessore Si Totale Presenti: 4 Totale Assenti: 2 Assume la presidenza Sara PAOLI in qualità di Sindaco assistito dal Segretario Comunale Dott.ssa Norida DI MAIO Il Presidente, accertato il numero legale, dichiara aperta la seduta ed invita la Giunta Comunale ad esaminare e ad assumere le proprie determinazioni sulla proposta di deliberazione indicata in oggetto. LA GIUNTA COMUNALE Visto il d.lgs. 18 agosto 2000, n. 267 e successive modificazioni ed integrazioni; Visto il d.lgs. 1° agosto 2003, n. 259 e successive modificazioni ed integrazioni, recante il “codice delle comunicazioni elettroniche”; Visto il d.lgs. 15 febbraio 2016, n. 33, recante norme per l'installazione di reti di comunicazione elettronica ad alta velocità; Visto il d.lgs. 31 marzo 2023, n. 36, per quanto applicabile; Visto lo statuto comunale; Visto il vigente regolamento di contabilità dell'ente; Premesso che: Comune di Collesalvetti - Delibera di GIUNTA n. 201 del 22/09/2026 Pag. 1  il Comune considera strategico lo sviluppo capillare di infrastrutture di accesso ad alta capacità sul proprio territorio, al fine di favorire la disponibilità di servizi di comunicazione elettronica a banda ultralarga a beneficio dei cittadini, delle imprese e delle istituzioni;  la realizzazione e lo sviluppo delle reti di comunicazione elettronica in fibra ottica sono oggetto di una specifica disciplina normativa finalizzata alla semplificazione dei procedimenti autorizzativi e alla promozione dell'utilizzo delle infrastrutture fisiche esistenti;  il Comune è proprietario di infrastrutture di pubblica illuminazione, cavidotti, pozzetti ed altre pertinenze che possono costituire infrastrutture idonee ad ospitare, nei limiti della disponibilità tecnica e nel rispetto delle condizioni previste dalla normativa vigente, reti di comunicazione elettronica;  ESTRACOM S.p.A., con sede legale in Prato, Via Panziera, 59, P. IVA 01875880971, ha manifestato interesse a realizzare, su una porzione del territorio comunale individuata negli elaborati progettuali, una rete di telecomunicazioni a banda ultralarga in fibra ottica, assicurandone la relativa gestione e manutenzione;  ESTRACOM S.p.A. ha inoltre concluso un Accordo Quadro con la società FIBRE CONNECT, in relazione al quale ESTRACOM concede per la durata di 20 anni a Fibre Connect i diritti sulle fibre ottiche delle reti che intende realizzare nel Comune di Collesalvetti;  le Parti hanno pertanto ritenuto di reciproco interesse disciplinare mediante apposita convenzione le modalità di utilizzo delle infrastrutture comunali esistenti e, ove necessario, le modalità di realizzazione di nuove infrastrutture, nonché le procedure amministrative, gli standard tecnici, le modalità di esecuzione degli interventi e i reciproci obblighi; Considerato che:  la convenzione ha la finalità di regolare le modalità di reciproca interazione tra il Comune ed ESTRACOM per la realizzazione di nuove infrastrutture destinate ad ospitare una rete di comunicazione a banda ultralarga in fibra ottica, nonché per l'utilizzo delle infrastrutture comunali esistenti ovvero di quelle nuove da realizzare a cura e spese della Società;  la convenzione disciplina, tra l'altro, le procedure amministrative per l'ottenimento delle autorizzazioni comunali, gli standard tecnici di progettazione ed esecuzione delle opere e i reciproci rapporti tra le Parti relativamente alla verifica della fattibilità e dell'utilizzo delle infrastrutture esistenti;  il Comune consente ad ESTRACOM, alle condizioni e nei termini stabiliti dalla convenzione e dalla normativa vigente, l'utilizzo non esclusivo e gratuito della quota di infrastruttura indicata nella relazione tecnica e negli elaborati progettuali, allo specifico fine di posare, installare e gestire cavi in fibra ottica per lo sviluppo della rete a banda ultralarga;  le infrastrutture comunali utilizzate rimarranno di esclusiva proprietà del Comune, mentre i minitubi, i cavi in fibra e i relativi apparati installati da ESTRACOM rimarranno di proprietà della Società;  la convenzione prevede una durata di 20 anni dalla data della sottoscrizione, con possibilità di rinnovo una sola volta secondo le modalità stabilite dalla convenzione stessa;  ESTRACOM si assume gli obblighi relativi alla corretta esecuzione degli interventi, alla sicurezza dei cantieri, ai ripristini delle aree interessate dai lavori e al risarcimento degli eventuali danni arrecati alle infrastrutture comunali nello svolgimento delle attività previste dalla convenzione;  la convenzione prevede altresì specifici obblighi in capo ad ESTRACOM in materia di copertura assicurativa e di prestazione di una garanzia fideiussoria a garanzia della corretta esecuzione dei ripristini, delle eventuali riparazioni dei danni all'infrastruttura comunale e dell'adempimento degli obblighi derivanti dalla convenzione; Ravvisata, pertanto, l'opportunità di procedere all'approvazione dello schema di convenzione tra il Comune di Collesalvetti ed ESTRACOM S.p.A., unitamente agli elaborati tecnici ad essa allegati, al fine di disciplinare la realizzazione e l'utilizzo delle infrastrutture necessarie allo sviluppo della rete di telecomunicazioni in fibra ottica sul territorio comunale; Dato Atto che la convenzione prevede che la realizzazione delle nuove infrastrutture avvenga a cura e spese di ESTRACOM, secondo quanto previsto dalla convenzione e dagli elaborati progettuali allegati; Acquisiti i pareri favorevoli del Responsabile del servizio competente e del Responsabile del servizio finanziario, in ordine rispettivamente alla regolarità tecnica e contabile, ai sensi dell'art. 49 del D.Lgs. 18 agosto 2000, n. 267; Comune di Collesalvetti - Delibera di GIUNTA n. 201 del 22/09/2026 Pag. 2 Con Voti unanimi, espressi nei modi di legge; DELIBERA 1. di approvare, per le motivazioni espresse in premessa, lo schema di “Convenzione per la realizzazione di infrastrutture di telecomunicazioni in fibra ottica nel Comune di Collesalvetti”, da stipularsi tra il Comune di Collesalvetti ed ESTRACOM S.p.A., allegato al presente atto quale parte integrante e sostanziale; 2. di approvare, altresì, gli elaborati tecnici allegati alla convenzione, costituiti dalla relazione tecnica descrittiva dell'intervento, dalle planimetrie del progetto esecutivo con indicazione delle infrastrutture esistenti e di nuova realizzazione interessate dagli interventi e dal Piano di Sicurezza, come individuati nello schema di convenzione; 3. di dare atto che l'utilizzo da parte di ESTRACOM delle infrastrutture comunali esistenti avverrà alle condizioni previste dalla convenzione, senza trasferimento della proprietà delle infrastrutture comunali e nel rispetto delle esigenze connesse alla gestione e allo sviluppo degli impianti di proprietà dell'Ente; 4. di dare atto che la realizzazione delle eventuali nuove infrastrutture e gli interventi previsti dalla convenzione saranno effettuati a cura e spese di ESTRACOM, nel rispetto delle autorizzazioni, delle prescrizioni tecniche e delle disposizioni normative vigenti; 5. di dare mandato al Dirigente del Settore tecnico di procedere alla sottoscrizione della convenzione in nome e per conto del Comune di Collesalvetti, nonché all'adozione degli atti conseguenti e necessari alla sua attuazione; 6. di individuare nel Dirigente del Settore tecnico il soggetto competente per gli adempimenti conseguenti all'approvazione della presente deliberazione; 7. di dichiarare, con separata ed unanime votazione, il presente atto immediatamente eseguibile ai sensi dell'art. 134, comma 4, del D.Lgs. 18 agosto 2000, n. 267, stante la necessità di procedere agli adempimenti conseguenti alla sottoscrizione della convenzione. Comune di Collesalvetti - Delibera di GIUNTA n. 201 del 22/09/2026 Pag. 3 PARERE AI SENSI DELL'ART. 49 DEL T.U. 18/08/2000, N. 267 SU PROPOSTA DI GIUNTA Oggetto: Convenzione per la realizzazione di infrastrutture di telecomunicazioni in fibra ottica nel comune di Collesalvetti. Approvazione schema di convenzione RESPONSABILE DEL SERVIZIO Si esprime parere Favorevole in ordine alla regolarità tecnica. Collesalvetti, lì: 21/09/2026 Il Responsabile del servizio F.to Maurizio Martellini Oggetto: Convenzione per la realizzazione di infrastrutture di telecomunicazioni in fibra ottica nel comune di Collesalvetti. Approvazione schema di convenzione RESPONSABILE DI RAGIONERIA Si esprime parere non rilevante in ordine alla regolarità contabile. Collesalvetti, lì 21/09/2026 IL RESPONSABILE DI RAGIONERIA f.to Maurizio Martellini Comune di Collesalvetti - Delibera di GIUNTA n. 201 del 22/09/2026 Pag. 4 Letto, approvato e sottoscritto a norma di legge. IL PRESIDENTE Segretario Comunale f.to Sara PAOLI f.to Dott.ssa Norida DI MAIO PUBBLICAZIONE La presente viene pubblicata in data odierna all'Albo Pretorio on line al nr.1601 del registro delle pubblicazioni così come disposto dal Segretario Comunale e rimmarà pubblicata per 15 giorni consecutivi ai sensi dell'art. 124, comma 1 del D.Lgs. n. 267/00. Collesalvetti, lì 08/10/2026 Il Segretario Comunale f.to Dott.ssa Norida DI MAIO ESECUTIVITA' La presente deliberazione è stata dichiarata immediatamente eseguibile, art. 134, comma 4, D.Lgs267/2000; Collesalvetti, lì 08/10/2026 Segretario Comunale f.to Dott.ssa Norida DI MAIO Viene comunicata con mail in data odierna ai capigruppo consiliari ai sensi dell'art. 125, comma 1 del D.Lgs n. 267/000. Collesalvetti, lì 08/10/2026 Segretario Comunale f.to Dott.ssa Norida DI MAIO Comune di Collesalvetti - Delibera di GIUNTA n. 201 del 22/09/2026 Pag. 5",
+  "CONCESSIONE_SUOLO-COLLE-11-2023": "Proposta N. 60 COPIA DETERMINAZIONE DEL RESPONSABILE Servizio n. 3 - Servizi Economico-Finanziari e Sistemi Informativi Registro Generale nr.175 del 20/02/2023 Oggetto: Concessione occupazione temporanea di suolo pubblico n°11/2023 a TIM S.P.A. - P.I. 00488410010 - per via Roma – Collesalvetti. La sottoscritta Dott.ssa Alessandra Zambelli – Responsabile del Servizio n. 3 “Servizi Economico-Finanziari e Sistemi Informativi”, in virtù del decreto del Sindaco n. 4 del 31/03/2022 – la quale dichiara di trovarsi in assenza di conflitto interessi ai sensi dell’art. 6 bis della legge 241/1990, come introdotto dalla legge n. 190/2012; VISTO: - lo Statuto del Comune; - il vigente Regolamento sull’ordinamento degli uffici e dei servizi; - la legge n.241/1990 \"Nuove norme in materia di procedimento amministrativo e di diritto di accesso ai documenti amministrativi\" e successive modifiche ed integrazioni; - il Regolamento comunale sul procedimento amministrativo e sul diritto di accesso; RICHIAMATI: - il D.Lgs. n. 285/1992 e successive modifiche “Codice della strada”; - la Legge 160/2019 – articolo 1, commi 816-836 e 846-847 che ha istituito il Canone Unico Patrimoniale - il Regolamento Canone Unico Patrimoniale, approvato con delibera di Consiglio Comunale n° 233 del 30/12/2020 e successive modifiche; - la delibera di Giunta comunale n. 192 del 27/12/2022 con la quale sono determinate le tariffe del Canone Unico Patrimoniale per l’anno 2023; - la delibera di Giunta comunale n. 169 del 23.12.2014 con la quale sono determinati i costi di istruttoria; VISTA l’istanza prot. 1689 del 24/01/2023 presentata dal sig. Monti Alessandro nato il 22/04/1962 a Firenze (Fi) C.F. MNTLSN62D22D612G in qualità di soggetto incaricato della TIM S.P.A. - P.I. 00488410010, con sede a Pisa via Del Brennero – loc. Figuretta km. 4, per l’occupazione temporanea di suolo pubblico di via Roma - Collesalvetti, per lavori stradali; VISTA L’Autorizzazione per interventi su aree pubbliche da parte di soggetti privati e ditte di gestione di servizi pubblici n. 02/2023 del 02.02.2023; CONSIDERATO: - il parere FAVOREVOLE espresso dal Servizio Polizia Municipale in data 17/02/2023 in calce alla richiesta prot. n. 1689 del 24/01/2023 con la seguente prescrizione: Ordinanza di Polizia Municipale n°17 del 17/02/2023 da trasmettere alla ditta insieme alla concessione; - il parere FAVOREVOLE espresso dal Servizio Lavori Pubblici in data 06/02/2023 in calce alla richiesta prot. n. 1689 del 24/01/2023 senza prescrizioni; Vista la ricevuta costi istruttoria di € 32,00, ai sensi dell’ art.9 comma 7 del Regolamento Canone Unico Patrimoniale e della Delibera di Giunta comunale n. 169/2014; Vista la ricevuta del pagamento canone unico di € 89,00, ai sensi dell’art. 69 del Regolamento Canone Unico Patrimoniale e della Delibera di Giunta n° 192 del 27/12/2022; Vista la dichiarazione di assolvimento di imposta di bollo della marca da €16,00 con identificativo 01210648267404 inviata con pec del 15/02/2023 prot. 3352 del 16.02.2023; PRESO ATTO dell’esito positivo dell’istruttoria così come sopra esposto; Vista la comunicazione prot. 2683 del 06/02/2023 con la quale il soggetto interessato è stato informato circa l’esito dell’istruttoria e sulle modalità di ritiro del provvedimento finale; CONCEDE al sig. Monti Alessandro nato il 22/04/1962 a Firenze (Fi) C.F. MNTLSN62D22D612G in qualità di soggetto incaricato della TIM S.P.A. - P.I. 00488410010 l’occupazione temporanea di suolo pubblico ad uso di seguito specificato: Prescrizio Tipologia Dimensioni Utilizzo Posizione ni temporanea Suolo pubblico Via Roma – Collesalvetti – 150,0 mt. x Ordinanza di Polizia 05 giorni Lavori nel tratto compreso tra la 0,2 mt. Municipale n°17 (Dal giorno stradali rotatoria di via Nenni e (30,00 mq) del 17/02/2023 20/02/2023 al giorno l’intersezione di via Il Vione 24/02/2023) Ai sensi dell’art 10 del regolamento Canone Unico Patrimoniale la concessione è soggetta alle seguenti limitazioni: Il provvedimento non può essere oggetto di cessione ad altri; Il titolare risponde in proprio di tutti i danni derivanti al Comune e ai terzi dall’utilizzo della concessione; Il titolare, oltre ad osservare tutte le disposizioni legislative e regolamentari vigenti in materia, nonché le condizioni contenute nell'atto di concessione, ha l'obbligo di: - custodire il permesso comprovante la legittimità dell’occupazione ed esibirlo a richiesta del personale addetto. In caso di smarrimento, distruzione o sottrazione il concessionario deve darne immediata comunicazione all’Amministrazione che provvederà a rilasciare un duplicato a spese dell’interessato; - sollevare il Comune da qualsiasi responsabilità per danni che dovessero derivare a terzi per effetto dell’occupazione; - versare il canone alle scadenze previste; - mantenere in condizioni di sicurezza, ordine e pulizia il suolo che occupa e restituirlo integro e pulito alla scadenza della concessione. Ai sensi dell’art, 13 comma 1 del Regolamento Canone Unico Patrimoniale sono cause di decadenza della concessione: a) il mancato rispetto delle prescrizioni indicate nell’atto di concessione, nel Regolamento Canone unico patrimoniale e nelle norme legislative vigenti in materia; b) l’uso improprio del suolo pubblico; c) l’occupazione eccedente lo spazio autorizzato dall'atto di concessione; d) il mancato pagamento del canone dovuto, previa comunicazione dell’ufficio competente; Il Responsabile del procedimento è la Dott.ssa Alessandra Zambelli – Responsabile del Servizio n. 3 “Servizi Economico- Finanziari”; La presente concessione potrà essere sospesa o revocata in qualsiasi momento per motivi di pubblico interesse; Quanto previsto nell’atto di concessione è oggetto di verifica da parte degli organi di controllo; Contro il presente provvedimento è ammesso ricorso al TAR entro 60 giorni o, in alternativa, ricorso straordinario al Presidente della Repubblica entro 120 giorni; Copia del presente atto sarà consegnata al richiedente o incaricato. Documento firmato digitalmente ai sensi del TU n°445/2000, dell’art. 20 del D.lgs. 82/2005 e norme collegate. Tale documento informatico è memorizzato digitalmente sulla banca dati dell’Ente. Il Responsabile del Servizio Alessandra Zambelli _____________________________________________________________________________________________ PUBBLICAZIONE Copia del presente atto è stato pubblicato all'Albo Pretorio on line dell'Ente, per 15 giorni consecutivi, dal 15/02/2024 al 01/03/2024. Collesalvetti, 15/02/2024 L'incaricato Alessandra Zambelli",
+  "CONCESSIONE_SUOLO-COLLE-14-2024": "Proposta N. 40 COPIA DETERMINAZIONE DEL RESPONSABILE Servizio n. 3 - Servizi Economico-Finanziari e Sistemi Informativi Registro Generale nr.100 del 01/02/2024 Oggetto: Concessione occupazione temporanea di suolo pubblico n° 14/2024 a FASTWEB SPA P.I. 12878470157 per via Enrico Berlinguer – via Giovanni Verga - Collesalvetti. La sottoscritta Dott.ssa Alessandra Zambelli – Responsabile del Servizio n. 3 “Servizi Economico-Finanziari e Sistemi Informativi”, in virtù del decreto del Sindaco n. 4 del 31/03/2022 – la quale dichiara di trovarsi in assenza di conflitto interessi ai sensi dell’art. 6 bis della legge 241/1990, come introdotto dalla legge n. 190/2012; VISTO: - lo Statuto del Comune; - il vigente Regolamento sull’ordinamento degli uffici e dei servizi; - la legge n.241/1990 \"Nuove norme in materia di procedimento amministrativo e di diritto di accesso ai documenti amministrativi\" e successive modifiche ed integrazioni; - il Regolamento comunale sul procedimento amministrativo e sul diritto di accesso; RICHIAMATI: - il D.Lgs. n. 285/1992 e successive modifiche “Codice della strada”; - la Legge 160/2019 – articolo 1, commi 816-836 e 846-847 che ha istituito il Canone Unico Patrimoniale - il Regolamento Canone Unico Patrimoniale, approvato con delibera di Consiglio Comunale n° 233 del 30/12/2020 e successive modifiche; - la delibera di Giunta comunale n. 192 del 27/12/2022 con la quale sono determinate le tariffe del Canone Unico Patrimoniale per l’anno 2024; - la delibera di Giunta comunale n. 169 del 23.12.2014 con la quale sono determinati i costi di istruttoria; VISTA l’istanza protocollata il 30.01.2024 al n. 1974, presentata dal sig. Pugliesi Daniele, nato il 23/08/1978 a Roma, C.F. PGLDNL68M23H501N, residente a Roma – via Acqua Acet. Agnanina n. 70, in qualità di procuratore speciale della FASTWEB SPA P.I. 12878470157, con sede in Milano piazza Olivetti n. 1, per l’occupazione temporanea di suolo pubblico di via Enrico Berlinguer - Collesalvetti, per lavori stradali occorrenti per fibra ottica; VISTA L’Autorizzazione per interventi su aree pubbliche da parte di soggetti privati e ditte di gestione di servizi pubblici n. 03/2024 del 11.01.2024; CONSIDERATO: - il parere FAVOREVOLE espresso dal Servizio Polizia Municipale in data 30/01/2024 in calce alla richiesta prot. n. 1974 del 30/01/2024, con emissione dell’Ordinanza Polizia Municipale n. 10 del 16.01.2024 allegata alla presente; - il parere FAVOREVOLE espresso dal Servizio Lavori Pubblici in data 30/01/2024 in calce alla richiesta prot. n. 1974 del 30/01/2024 senza prescrizioni; Vista la ricevuta costi istruttoria di € 64,00, ai sensi dell’ art.9 comma 7 del Regolamento Canone Unico Patrimoniale e della Delibera di Giunta comunale n. 169/2014; Vista la ricevuta del pagamento canone unico di € 47,00, ai sensi dell’art. 61 del Regolamento Canone Unico Patrimoniale e della Delibera di Giunta n° 214 del 30/12/2020; Vista la dichiarazione di assolvimento di imposta di bollo della marca da €16,00 con identificativo 01220974327669 inviata con mail del 01/02/2024; PRESO ATTO dell’esito positivo dell’istruttoria così come sopra esposto; Vista la comunicazione prot. 2027 del 30/01/2024 con la quale il soggetto interessato è stato informato circa l’esito dell’istruttoria e sulle modalità di ritiro del provvedimento finale; CONCEDE al sig. Pugliesi Daniele, nato il 23/08/1978 a Roma, C.F. PGLDNL68M23H501N, residente a Roma – via Acqua Acet. Agnanina n. 70, in qualità di procuratore speciale della FASTWEB SPA P.I. 12878470157, con sede in Milano piazza Olivetti n. 1, l’occupazione temporanea di suolo pubblico ad uso di seguito specificato: Tipologia Dimensioni Utilizzo Posizione Prescrizioni Temporanea 4 gg Lavori stradali Via Enrico Berlinguer Ordinanza n. 10 del (dal 05/02/2024 al (10 mt. X 2,0 mt.) per – via Giovanni Verga 16.01.2024 della 08/02/2024) 20 mq infrastruttura Collesalvetti Polizia Municipale telefonica Ai sensi dell’art 10 del regolamento Canone Unico Patrimoniale la concessione è soggetta alle seguenti limitazioni: Il provvedimento non può essere oggetto di cessione ad altri; Il titolare risponde in proprio di tutti i danni derivanti al Comune e ai terzi dall’utilizzo della concessione; Il titolare, oltre ad osservare tutte le disposizioni legislative e regolamentari vigenti in materia, nonché le condizioni contenute nell'atto di concessione, ha l'obbligo di: - custodire il permesso comprovante la legittimità dell’occupazione ed esibirlo a richiesta del personale addetto. In caso di smarrimento, distruzione o sottrazione il concessionario deve darne immediata comunicazione all’Amministrazione che provvederà a rilasciare un duplicato a spese dell’interessato; - sollevare il Comune da qualsiasi responsabilità per danni che dovessero derivare a terzi per effetto dell’occupazione; - versare il canone alle scadenze previste; - mantenere in condizioni di sicurezza, ordine e pulizia il suolo che occupa e restituirlo integro e pulito alla scadenza della concessione. Ai sensi dell’art, 13 comma 1 del Regolamento Canone Unico Patrimoniale sono cause di decadenza della concessione: a) il mancato rispetto delle prescrizioni indicate nell’atto di concessione, nel Regolamento Canone unico patrimoniale e nelle norme legislative vigenti in materia; b) l’uso improprio del suolo pubblico; c) l’occupazione eccedente lo spazio autorizzato dall'atto di concessione; d) il mancato pagamento del canone dovuto, previa comunicazione dell’ufficio competente; Il Responsabile del procedimento è la Dott.ssa Alessandra Zambelli – Responsabile del Servizio n. 3 “Servizi Economico- Finanziari”; La presente concessione potrà essere sospesa o revocata in qualsiasi momento per motivi di pubblico interesse; Quanto previsto nell’atto di concessione è oggetto di verifica da parte degli organi di controllo; Contro il presente provvedimento è ammesso ricorso al TAR entro 60 giorni o, in alternativa, ricorso straordinario al Presidente della Repubblica entro 120 giorni; Copia del presente atto sarà consegnata al richiedente o incaricato. Documento firmato digitalmente ai sensi del TU n°445/2000, dell’art. 20 del D.lgs. 82/2005 e norme collegate. Tale documento informatico è memorizzato digitalmente sulla banca dati dell’Ente. Il Responsabile del Servizio Alessandra Zambelli _____________________________________________________________________________________________ PUBBLICAZIONE Copia del presente atto è stato pubblicato all'Albo Pretorio on line dell'Ente, per 15 giorni consecutivi, dal 15/02/2024 al 01/03/2024. Collesalvetti, 15/02/2024 L'incaricato Alessandra Zambelli",
+  "CONCESSIONE_SUOLO-COLLE-20-2024": "Proposta N. 48 COPIA DETERMINAZIONE DEL RESPONSABILE Servizio n. 3 - Servizi Economico-Finanziari e Sistemi Informativi Registro Generale nr.126 del 09/02/2024 Oggetto: Concessione occupazione temporanea di suolo pubblico n°20/2024 a TIM S.p.A. - P.I. 00488410010 - per via Roma n. 47 – Collesalvetti. La sottoscritta Dott.ssa Alessandra Zambelli – Responsabile del Servizio n. 3 “Servizi Economico-Finanziari e Sistemi Informativi”, in virtù del decreto del Sindaco n. 4 del 31/03/2022 – la quale dichiara di trovarsi in assenza di conflitto interessi ai sensi dell’art. 6 bis della legge 241/1990, come introdotto dalla legge n. 190/2012; VISTO: - lo Statuto del Comune; - il vigente Regolamento sull’ordinamento degli uffici e dei servizi; - la legge n.241/1990 \"Nuove norme in materia di procedimento amministrativo e di diritto di accesso ai documenti amministrativi\" e successive modifiche ed integrazioni; - il Regolamento comunale sul procedimento amministrativo e sul diritto di accesso; RICHIAMATI: - il D.Lgs. n. 285/1992 e successive modifiche “Codice della strada”; - la Legge 160/2019 – articolo 1, commi 816-836 e 846-847 che ha istituito il Canone Unico Patrimoniale - il Regolamento Canone Unico Patrimoniale, approvato con delibera di Consiglio Comunale n° 233 del 30/12/2020 e successive modifiche; - la delibera di Giunta comunale n. 192 del 27/12/2022 con la quale sono determinate le tariffe del Canone Unico Patrimoniale per l’anno 2024; - la delibera di Giunta comunale n. 169 del 23.12.2014 con la quale sono determinati i costi di istruttoria; VISTA l’istanza prot. 19895 del 11/10/2023 presentata dal sig. Monti Alessandro nato il 22/04/1962 a Firenze (Fi) C.F. MNTLSN62D22D612G in qualità di legale rappresentante della TIM S.p.A. - P.I. 00488410010, con sede a Pisa - SS 12 via Del Brennero – loc. Figuretta km. 4, per l’occupazione temporanea di suolo pubblico di via Roma n. 47 - Collesalvetti, per lavori stradali; VISTA L’Autorizzazione per interventi su aree pubbliche da parte di soggetti privati e ditte di gestione di servizi pubblici n. 26/2023 del 05.09.2023; CONSIDERATO: - il parere FAVOREVOLE espresso dal Servizio Polizia Municipale in data 30/10/202 in calce alla richiesta prot. 1982 del 30/01/2024 con la seguente prescrizione: Ordinanza di Polizia Municipale n° 17 del 30/01/2024 da trasmettere alla ditta insieme alla concessione; - il parere FAVOREVOLE espresso dal Servizio Lavori Pubblici in data 30/01/2024 in calce alla richiesta prot. n. 1982 del 30/01/2024 senza prescrizioni; Vista la ricevuta costi istruttoria di € 64,00, ai sensi dell’art.9 comma 7 del Regolamento Canone Unico Patrimoniale e della Delibera di Giunta comunale n. 169/2014; Vista la dichiarazione di assolvimento di imposta di bollo della marca da €16,00 con identificativo 01220729053273 inviata con mail del 07.02.2024; Vista la ricevuta del pagamento canone unico di €212,00, ai sensi dell’art. 69 del Regolamento Canone Unico Patrimoniale e della Delibera di Giunta n° 192 del 27/12/2022; PRESO ATTO dell’esito positivo dell’istruttoria così come sopra esposto; Vista la comunicazione prot. 2129 del 31/10/2024 con la quale il soggetto interessato è stato informato circa l’esito dell’istruttoria e sulle modalità di ritiro del provvedimento finale; CONCEDE al sig. Monti Alessandro nato il 22/04/1962 a Firenze (Fi) C.F. MNTLSN62D22D612G in qualità di soggetto incaricato della TIM S.P.A. - P.I. 00488410010 l’occupazione temporanea di suolo pubblico ad uso di seguito specificato: Tipologia Dimensioni Utilizzo Posizione Prescrizioni temporanea suolo pubblico 20 mt. x Lavori Ordinanza di Polizia 9 giorni 2mt. stradali Via Roma n. 47 - Collesalvetti Municipale n°17 (dal 15/02/2024 – al (40,00 mq) del 30/01/2024 23/02/2024) Ai sensi dell’art 10 del regolamento Canone Unico Patrimoniale la concessione è soggetta alle seguenti limitazioni: Il provvedimento non può essere oggetto di cessione ad altri; Il titolare risponde in proprio di tutti i danni derivanti al Comune e ai terzi dall’utilizzo della concessione; Il titolare, oltre ad osservare tutte le disposizioni legislative e regolamentari vigenti in materia, nonché le condizioni contenute nell'atto di concessione, ha l'obbligo di: - custodire il permesso comprovante la legittimità dell’occupazione ed esibirlo a richiesta del personale addetto. In caso di smarrimento, distruzione o sottrazione il concessionario deve darne immediata comunicazione all’Amministrazione che provvederà a rilasciare un duplicato a spese dell’interessato; - sollevare il Comune da qualsiasi responsabilità per danni che dovessero derivare a terzi per effetto dell’occupazione; - versare il canone alle scadenze previste; - mantenere in condizioni di sicurezza, ordine e pulizia il suolo che occupa e restituirlo integro e pulito alla scadenza della concessione. Ai sensi dell’art, 13 comma 1 del Regolamento Canone Unico Patrimoniale sono cause di decadenza della concessione: a) il mancato rispetto delle prescrizioni indicate nell’atto di concessione, nel Regolamento Canone unico patrimoniale e nelle norme legislative vigenti in materia; b) l’uso improprio del suolo pubblico; c) l’occupazione eccedente lo spazio autorizzato dall'atto di concessione; d) il mancato pagamento del canone dovuto, previa comunicazione dell’ufficio competente; Il Responsabile del procedimento è la Dott.ssa Alessandra Zambelli – Responsabile del Servizio n. 3 “Servizi Economico- Finanziari e Sistemi Informativi”; La presente concessione potrà essere sospesa o revocata in qualsiasi momento per motivi di pubblico interesse; Quanto previsto nell’atto di concessione è oggetto di verifica da parte degli organi di controllo; Contro il presente provvedimento è ammesso ricorso al TAR entro 60 giorni o, in alternativa, ricorso straordinario al Presidente della Repubblica entro 120 giorni; Copia del presente atto sarà consegnata al richiedente o incaricato. Documento firmato digitalmente ai sensi del TU n°445/2000, dell’art. 20 del D.lgs. 82/2005 e norme collegate. Tale documento informatico è memorizzato digitalmente sulla banca dati dell’Ente. Il Responsabile del Servizio Alessandra Zambelli _____________________________________________________________________________________________ PUBBLICAZIONE Copia del presente atto è stato pubblicato all'Albo Pretorio on line dell'Ente, per 15 giorni consecutivi, dal 15/02/2024 al 01/03/2024. Collesalvetti, 15/02/2024 L'incaricato Alessandra Zambelli",
+  "CONCESSIONE_SUOLO-COLLE-43-2024": "Proposta N. 115 COPIA DETERMINAZIONE DEL RESPONSABILE Area 3 ECONOMICA FINANZIARIA, SISTEMI INFORMATIVI, PROGRAMMAZIONE E CONTROLLO Registro Generale nr.319 del 11/04/2024 Oggetto: Concessione in sanatoria occupazione temporanea di suolo pubblico n°43/2024 a TIM – TELECOM ITALIA S.p.A. - P.I. 00488410010 - per via Della Costituzione e via 8 Marzo – Fraz. Stagno - Collesalvetti. La sottoscritta Dott.ssa Alessandra Zambelli – Responsabile dell’Area n. 3 “Economica Finanziaria - Sistemi Informativi - Programmazione e controllo”, in virtù del decreto del Sindaco n. 6 del 12/02/2024 – la quale dichiara di trovarsi in assenza di conflitto interessi ai sensi dell’art. 6 bis della legge 241/1990, come introdotto dalla legge n. 190/2012; VISTO: - lo Statuto del Comune; - il vigente Regolamento sull’ordinamento degli uffici e dei servizi; - la legge n.241/1990 \"Nuove norme in materia di procedimento amministrativo e di diritto di accesso ai documenti amministrativi\" e successive modifiche ed integrazioni; - il Regolamento comunale sul procedimento amministrativo e sul diritto di accesso; RICHIAMATI: - il D.lgs. n. 285/1992 e successive modifiche “Codice della strada”; - la Legge 160/2019 – articolo 1, commi 816-836 e 846-847 che ha istituito il Canone Unico Patrimoniale - il Regolamento Canone Unico Patrimoniale, approvato con delibera di Consiglio Comunale n° 233 del 30/12/2020 e successive modifiche; - la delibera di Giunta comunale n. 192 del 27/12/2022 con la quale sono determinate le tariffe del Canone Unico Patrimoniale per l’anno 2023-2024; - la delibera di Giunta comunale n. 169 del 23.12.2014 con la quale sono determinati i costi di istruttoria; VISTA l’istanza prot. 4207 del 28/02/2024 presentata dal sig. Monti Alessandro nato il 22/04/1962 a Firenze (Fi) C.F. MNTLSN62D22D612G in qualità di legale rappresentante della TIM – Telecom Italia S.p.A. - P.I. 00488410010, con sede a Pisa - SS 12 via Del Brennero – loc. Figuretta km. 4, per l’occupazione temporanea di suolo pubblico di via Roma n. 47 - Collesalvetti, per lavori stradali; VISTA L’Autorizzazione per interventi su aree pubbliche da parte di soggetti privati e ditte di gestione di servizi pubblici n. 32/2023 del 30.11.2023; CONSIDERATO: - il parere FAVOREVOLE espresso dal Servizio Polizia Municipale in data 23/02/2024 in calce alla richiesta prot. 4207 del 28/02/2024 con la seguente prescrizione: Ordinanza di Polizia Municipale n° 28 del 23/02/2024 da trasmettere alla ditta insieme alla concessione; - il parere FAVOREVOLE espresso dal Servizio Lavori Pubblici in data 05/03/2024 in calce alla richiesta prot. n. 4207 del 28/02/2024 senza prescrizioni; Vista la ricevuta costi istruttoria di € 64,00, ai sensi dell’art.9 comma 7 del Regolamento Canone Unico Patrimoniale e della Delibera di Giunta comunale n. 169/2014; Vista la dichiarazione di assolvimento di imposta di bollo della marca da €16,00 con identificativo 01220729345229 inviata con prot. 22309 del 14.11.2023; Vista la ricevuta del pagamento canone unico di €85,00, ai sensi dell’art. 69 del Regolamento Canone Unico Patrimoniale e della Delibera di Giunta n° 192 del 27/12/2022; PRESO ATTO dell’esito positivo dell’istruttoria così come sopra esposto; Vista la comunicazione prot. 4644 del 05/03/2024 con la quale il soggetto interessato è stato informato circa l’esito dell’istruttoria e sulle modalità di ritiro del provvedimento finale; CONCEDE al sig. Monti Alessandro nato il 22/04/1962 a Firenze (Fi) C.F. MNTLSN62D22D612G in qualità di soggetto incaricato della TIM S.P.A. - P.I. 00488410010 l’occupazione temporanea di suolo pubblico ad uso di seguito specificato: Tipologia Dimensioni Utilizzo Posizione Prescrizioni temporanea suolo pubblico 12 mt. x Lavori Via Della Costituzione – via 8 Ordinanza di Polizia 6 giorni 2mt. stradali Marzo – Fraz. Stagno - Municipale n°28 (dal 04/03/2024 – al (24,00 mq) Collesalvetti del 23/02/2024 09/03/2024) Ai sensi dell’art 10 del regolamento Canone Unico Patrimoniale la concessione è soggetta alle seguenti limitazioni: Il provvedimento non può essere oggetto di cessione ad altri; Il titolare risponde in proprio di tutti i danni derivanti al Comune e ai terzi dall’utilizzo della concessione; Il titolare, oltre ad osservare tutte le disposizioni legislative e regolamentari vigenti in materia, nonché le condizioni contenute nell'atto di concessione, ha l'obbligo di: - custodire il permesso comprovante la legittimità dell’occupazione ed esibirlo a richiesta del personale addetto. In caso di smarrimento, distruzione o sottrazione il concessionario deve darne immediata comunicazione all’Amministrazione che provvederà a rilasciare un duplicato a spese dell’interessato; - sollevare il Comune da qualsiasi responsabilità per danni che dovessero derivare a terzi per effetto dell’occupazione; - versare il canone alle scadenze previste; - mantenere in condizioni di sicurezza, ordine e pulizia il suolo che occupa e restituirlo integro e pulito alla scadenza della concessione. Ai sensi dell’art, 13 comma 1 del Regolamento Canone Unico Patrimoniale sono cause di decadenza della concessione: a) il mancato rispetto delle prescrizioni indicate nell’atto di concessione, nel Regolamento Canone unico patrimoniale e nelle norme legislative vigenti in materia; b) l’uso improprio del suolo pubblico; c) l’occupazione eccedente lo spazio autorizzato dall'atto di concessione; d) il mancato pagamento del canone dovuto, previa comunicazione dell’ufficio competente; Il Responsabile del procedimento è la Dott.ssa Alessandra Zambelli – Responsabile dell’Area n. 3 “Economica Finanziaria - Sistemi Informativi - Programmazione e controllo”; La presente concessione potrà essere sospesa o revocata in qualsiasi momento per motivi di pubblico interesse; Quanto previsto nell’atto di concessione è oggetto di verifica da parte degli organi di controllo; Contro il presente provvedimento è ammesso ricorso al TAR entro 60 giorni o, in alternativa, ricorso straordinario al Presidente della Repubblica entro 120 giorni; Copia del presente atto sarà consegnata al richiedente o incaricato. Documento firmato digitalmente ai sensi del TU n°445/2000, dell’art. 20 del D.lgs. 82/2005 e norme collegate. Tale documento informatico è memorizzato digitalmente sulla banca dati dell’Ente. Il Responsabile dell'Area Alessandra Zambelli _____________________________________________________________________________________________ PUBBLICAZIONE Copia del presente atto è stato pubblicato all'Albo Pretorio on line dell'Ente, per 15 giorni consecutivi, dal 16/04/2024 al 01/05/2024. Collesalvetti, 16/04/2024 L'incaricato IANNATTONI ALBERTO",
+  "CONCESSIONE_SUOLO-COLLE-44-2024": "Proposta N. 118 COPIA DETERMINAZIONE DEL RESPONSABILE Area 3 ECONOMICA FINANZIARIA, SISTEMI INFORMATIVI, PROGRAMMAZIONE E CONTROLLO Registro Generale nr.332 del 18/04/2024 Oggetto: Concessione occupazione temporanea di suolo pubblico n°44/2024 a TIM – TELECOM ITALIA S.p.A. - P.I. 00488410010 - per via Pietro Grocco – via Sabatini Lopez – Fraz. Guasticce - Collesalvetti. La sottoscritta Dott.ssa Alessandra Zambelli – Responsabile dell’Area n. 3 “Economica Finanziaria - Sistemi Informativi - Programmazione e controllo”, in virtù del decreto del Sindaco n. 6 del 12/02/2024 – la quale dichiara di trovarsi in assenza di conflitto interessi ai sensi dell’art. 6 bis della legge 241/1990, come introdotto dalla legge n. 190/2012; VISTO: - lo Statuto del Comune; - il vigente Regolamento sull’ordinamento degli uffici e dei servizi; - la legge n.241/1990 \"Nuove norme in materia di procedimento amministrativo e di diritto di accesso ai documenti amministrativi\" e successive modifiche ed integrazioni; - il Regolamento comunale sul procedimento amministrativo e sul diritto di accesso; RICHIAMATI: - il D.lgs. n. 285/1992 e successive modifiche “Codice della strada”; - la Legge 160/2019 – articolo 1, commi 816-836 e 846-847 che ha istituito il Canone Unico Patrimoniale - il Regolamento Canone Unico Patrimoniale, approvato con delibera di Consiglio Comunale n° 233 del 30/12/2020 e successive modifiche; - la delibera di Giunta comunale n. 192 del 27/12/2022 con la quale sono determinate le tariffe del Canone Unico Patrimoniale per l’anno 2023-2024; - la delibera di Giunta comunale n. 169 del 23.12.2014 con la quale sono determinati i costi di istruttoria; VISTA l’istanza prot. 7685 del 12/04/2024 presentata dal sig. Monti Alessandro nato il 22/04/1962 a Firenze (Fi) C.F. MNTLSN62D22D612G in qualità di legale rappresentante della TIM – Telecom Italia S.p.A. - P.I. 00488410010, con sede a Pisa - SS 12 via Del Brennero – loc. Figuretta km. 4, per l’occupazione temporanea di suolo pubblico di via Pietro Grocco e via Sabatino Lopez - Fraz. Guasticce - Collesalvetti, per lavori stradali; VISTA L’Autorizzazione per interventi su aree pubbliche da parte di soggetti privati e ditte di gestione di servizi pubblici n. 14/2024 del 27.03.2024; CONSIDERATO: - il parere FAVOREVOLE espresso dal Servizio Polizia Municipale in data 12/04/2024 in calce alla richiesta prot. 7685 del 12/04/2024 con la seguente prescrizione: Ordinanza di Polizia Municipale n° 45 del 12/04/2024 da trasmettere alla ditta insieme alla concessione; - il parere FAVOREVOLE espresso dal Servizio Lavori Pubblici in data 15/04/2024 in calce alla richiesta prot. n. 7685 del 12/04/2024 senza prescrizioni; Vista la ricevuta costi istruttoria di € 64,00, ai sensi dell’art.9 comma 7 del Regolamento Canone Unico Patrimoniale e della Delibera di Giunta comunale n. 169/2014; Vista la dichiarazione di assolvimento di imposta di bollo della marca da €16,00 con identificativo 01220729312003 inviata con prot. 2231 del 14.11.2023; Vista la ricevuta del pagamento canone unico di €113,00, ai sensi dell’art. 69 del Regolamento Canone Unico Patrimoniale e della Delibera di Giunta n° 192 del 27/12/2022; PRESO ATTO dell’esito positivo dell’istruttoria così come sopra esposto; Vista la comunicazione prot. 7765 del 15/04/2024 con la quale il soggetto interessato è stato informato circa l’esito dell’istruttoria e sulle modalità di ritiro del provvedimento finale; CONCEDE al sig. Monti Alessandro nato il 22/04/1962 a Firenze (Fi) C.F. MNTLSN62D22D612G in qualità di soggetto incaricato della TIM – Telecom Italia S.p.A. - P.I. 00488410010, l’occupazione temporanea di suolo pubblico ad uso di seguito specificato: Tipologia Dimensioni Utilizzo Posizione Prescrizioni temporanea suolo pubblico 12 mt. x Lavori Via Pietro Grocco – via Ordinanza di Polizia 8 giorni 2mt. stradali Sabatino Lopez – Fraz. Municipale n°45 (dal 17/04/2024 – al (24,00 mq) Guasticce - Collesalvetti del 12/04/2024 24/04/2024) Ai sensi dell’art 10 del regolamento Canone Unico Patrimoniale la concessione è soggetta alle seguenti limitazioni: Il provvedimento non può essere oggetto di cessione ad altri; Il titolare risponde in proprio di tutti i danni derivanti al Comune e ai terzi dall’utilizzo della concessione; Il titolare, oltre ad osservare tutte le disposizioni legislative e regolamentari vigenti in materia, nonché le condizioni contenute nell'atto di concessione, ha l'obbligo di: - custodire il permesso comprovante la legittimità dell’occupazione ed esibirlo a richiesta del personale addetto. In caso di smarrimento, distruzione o sottrazione il concessionario deve darne immediata comunicazione all’Amministrazione che provvederà a rilasciare un duplicato a spese dell’interessato; - sollevare il Comune da qualsiasi responsabilità per danni che dovessero derivare a terzi per effetto dell’occupazione; - versare il canone alle scadenze previste; - mantenere in condizioni di sicurezza, ordine e pulizia il suolo che occupa e restituirlo integro e pulito alla scadenza della concessione. Ai sensi dell’art, 13 comma 1 del Regolamento Canone Unico Patrimoniale sono cause di decadenza della concessione: a) il mancato rispetto delle prescrizioni indicate nell’atto di concessione, nel Regolamento Canone unico patrimoniale e nelle norme legislative vigenti in materia; b) l’uso improprio del suolo pubblico; c) l’occupazione eccedente lo spazio autorizzato dall'atto di concessione; d) il mancato pagamento del canone dovuto, previa comunicazione dell’ufficio competente; Il Responsabile del procedimento è la Dott.ssa Alessandra Zambelli – Responsabile dell’Area n. 3 “Economica Finanziaria - Sistemi Informativi - Programmazione e controllo”; La presente concessione potrà essere sospesa o revocata in qualsiasi momento per motivi di pubblico interesse; Quanto previsto nell’atto di concessione è oggetto di verifica da parte degli organi di controllo; Contro il presente provvedimento è ammesso ricorso al TAR entro 60 giorni o, in alternativa, ricorso straordinario al Presidente della Repubblica entro 120 giorni; Copia del presente atto sarà consegnata al richiedente o incaricato. Documento firmato digitalmente ai sensi del TU n°445/2000, dell’art. 20 del D.lgs. 82/2005 e norme collegate. Tale documento informatico è memorizzato digitalmente sulla banca dati dell’Ente. Il Responsabile dell'Area Alessandra Zambelli _____________________________________________________________________________________________ PUBBLICAZIONE Copia del presente atto è stato pubblicato all'Albo Pretorio on line dell'Ente, per 15 giorni consecutivi, dal 18/04/2024 al 03/05/2024. Collesalvetti, 18/04/2024 L'incaricato IANNATTONI ALBERTO",
+  "CONCESSIONE_SUOLO-COLLE-64-2023": "Proposta N. 219 COPIA DETERMINAZIONE DEL RESPONSABILE Servizio n. 3 - Servizi Economico-Finanziari e Sistemi Informativi Registro Generale nr.764 del 28/08/2023 Oggetto: Concessione occupazione temporanea di suolo pubblico n°64/2023 a TIM S.P.A. - P.I. 00488410010 - per via Nugola Nuova - via Delle Beccherie – Strada Provinciale n. 2 (della Cerreta) – fraz. Nugola - Collesalvetti. Il sottoscritto Maurizio Lischi, nominato Responsabile dei Servizi Generali con Decreto del Sindaco n.12 del 03.08.2023 con il quale si attribuiscono le i funzioni dirigenziali ai sensi dell’art. 107 del D. Lgs. n. 267/2000 in sostituzione della dott.ssa Alessandra Zambelli, Responsabile dei Servizi Finanziari e S.I. (decreto del sindaco n. 4 del 31/03/2022 ) - il quale dichiara di trovarsi in assenza di conflitto di interessi ex art. 6- bis della L. n. 241/1990, come introdotto dalla L. n. 190/2012; VISTO: - lo Statuto del Comune; - il vigente Regolamento sull’ordinamento degli uffici e dei servizi; - la legge n.241/1990 \"Nuove norme in materia di procedimento amministrativo e di diritto di accesso ai documenti amministrativi\" e successive modifiche ed integrazioni; - il Regolamento comunale sul procedimento amministrativo e sul diritto di accesso; RICHIAMATI: - il D.Lgs. n. 285/1992 e successive modifiche “Codice della strada”; - la Legge 160/2019 – articolo 1, commi 816-836 e 846-847 che ha istituito il Canone Unico Patrimoniale - il Regolamento Canone Unico Patrimoniale, approvato con delibera di Consiglio Comunale n° 233 del 30/12/2020 e successive modifiche; - la delibera di Giunta comunale n. 192 del 27/12/2022 con la quale sono determinate le tariffe del Canone Unico Patrimoniale per l’anno 2023; - la delibera di Giunta comunale n. 169 del 23.12.2014 con la quale sono determinati i costi di istruttoria; VISTA l’istanza prot. 13810 del 14/07/2023 presentata dal sig. Monti Alessandro nato il 22/04/1962 a Firenze (Fi) C.F. MNTLSN62D22D612G in qualità di soggetto incaricato della TIM S.P.A. - P.I. 00488410010, con sede a Pisa - SS 12 via Del Brennero – loc. Figuretta km. 4, per l’occupazione temporanea di suolo pubblico di via Nugola Nuova – via Delle Beccherie – strada provinciale n. 2 (Della Cerreta) – Fraz. Nugola - Collesalvetti, per lavori stradali; VISTA L’Autorizzazione per interventi su aree pubbliche da parte di soggetti privati e ditte di gestione di servizi pubblici n. 21/2023 del 13.07.2023; VISTO il Nulla Osta rilasciato dalla Provincia di Livorno – Disposizione n. 1698-2023 del 29/06/2023 per occupazione di sottosuolo provinciale per installazione di rete per telecomunicazioni a fibra ottica ed opere accessorie lungo la S.P. n. 2 “Della Cerreta” fra i km. 0,560 e 1,070 urbani nel centro abitato di Nugola – comune di Collesalvetti; VISTA la ricevuta di pagamento di €1.200,00 eseguita da parte di Tim s.p.a. a favore della Provincia di Livorno per il canone di occupazione di suolo pubblico; VISTA la mail del 08.08.2023 e quella del 21.08.2023, integrativa dell’istanza inviata, con le quali la ditta ha precisato rispettivamente i giorni ed i metri quadrati dell’occupazione del suolo pubblico comunale e provinciale; CONSIDERATO: - il parere FAVOREVOLE espresso dal Servizio Polizia Municipale in data 09/08/2023 in calce alla richiesta prot. 13810 del 14/07/2023 con la seguente prescrizione: Ordinanza di Polizia Municipale n° 75 del 09/08/2023 da trasmettere alla ditta insieme alla concessione; - il parere FAVOREVOLE espresso dal Servizio Ambiente e Protezione Civile in sostituzione temporanea dell’Uffico Servizio Lavori Pubblici, in data 09/08/2023 in calce alla richiesta prot. n. 13810 del 14/07/2023, senza prescrizioni; Vista la ricevuta costi istruttoria di € 64,00, ai sensi dell’ art.9 comma 7 del Regolamento Canone Unico Patrimoniale e della Delibera di Giunta comunale n. 169/2014; Vista la ricevuta del pagamento canone unico di €59,00, ai sensi dell’art. 69 del Regolamento Canone Unico Patrimoniale e della Delibera di Giunta n° 192 del 27/12/2022; Vista la dichiarazione di assolvimento di imposta di bollo della marca da €16,00 con identificativo 01210648267404 inviata con pec del 25/08/2023 prot. 16242 del 28.08.2023; PRESO ATTO dell’esito positivo dell’istruttoria così come sopra esposto; Vista la comunicazione prot. 16070 del 23/08/2023 con la quale il soggetto interessato è stato informato circa l’esito dell’istruttoria e sulle modalità di ritiro del provvedimento finale; CONCEDE al sig. Monti Alessandro nato il 22/04/1962 a Firenze (Fi) C.F. MNTLSN62D22D612G in qualità di soggetto incaricato della TIM S.P.A. - P.I. 00488410010 l’occupazione temporanea di suolo pubblico ad uso di seguito specificato: Prescrizio Tipologia Dimensioni Utilizzo Posizione ni temporanea suolo pubblico 100,0 mt. x Via Nugola Nuova e Via Delle Ordinanza di Polizia Lavori 02 giorni 0,5 mt. Beccherie – Fraz. Nugola - Municipale n°75 stradali (dal 28/08/2023 – al (50,00 mq) Collesalvetti del 09/08/2023 29/08/2023) Temporanea suolo pubblico 80,00 mt. x Strada Provinciale n. 2 (Della Ordinanza di Polizia Lavori 07 giorni 0,5 mt. Cerreta) – Fraz. Nugola - Municipale n°75 stradali (dal 30/08/2023 al (40,00 mq) Collesalvetti del 09/08/2023 05/09/2023) Ai sensi dell’art 10 del regolamento Canone Unico Patrimoniale la concessione è soggetta alle seguenti limitazioni: Il provvedimento non può essere oggetto di cessione ad altri; Il titolare risponde in proprio di tutti i danni derivanti al Comune e ai terzi dall’utilizzo della concessione; Il titolare, oltre ad osservare tutte le disposizioni legislative e regolamentari vigenti in materia, nonché le condizioni contenute nell'atto di concessione, ha l'obbligo di: - custodire il permesso comprovante la legittimità dell’occupazione ed esibirlo a richiesta del personale addetto. In caso di smarrimento, distruzione o sottrazione il concessionario deve darne immediata comunicazione all’Amministrazione che provvederà a rilasciare un duplicato a spese dell’interessato; - sollevare il Comune da qualsiasi responsabilità per danni che dovessero derivare a terzi per effetto dell’occupazione; - versare il canone alle scadenze previste; - mantenere in condizioni di sicurezza, ordine e pulizia il suolo che occupa e restituirlo integro e pulito alla scadenza della concessione. Ai sensi dell’art, 13 comma 1 del Regolamento Canone Unico Patrimoniale sono cause di decadenza della concessione: a) il mancato rispetto delle prescrizioni indicate nell’atto di concessione, nel Regolamento Canone unico patrimoniale e nelle norme legislative vigenti in materia; b) l’uso improprio del suolo pubblico; c) l’occupazione eccedente lo spazio autorizzato dall'atto di concessione; d) il mancato pagamento del canone dovuto, previa comunicazione dell’ufficio competente; Il Responsabile del procedimento è la Dott.ssa Alessandra Zambelli – Responsabile del Servizio n. 3 “Servizi Economico- Finanziari e Sistemi Informativi”; La presente concessione potrà essere sospesa o revocata in qualsiasi momento per motivi di pubblico interesse; Quanto previsto nell’atto di concessione è oggetto di verifica da parte degli organi di controllo; Contro il presente provvedimento è ammesso ricorso al TAR entro 60 giorni o, in alternativa, ricorso straordinario al Presidente della Repubblica entro 120 giorni; Copia del presente atto sarà consegnata al richiedente o incaricato. Documento firmato digitalmente ai sensi del TU n°445/2000, dell’art. 20 del D.lgs. 82/2005 e norme collegate. Tale documento informatico è memorizzato digitalmente sulla banca dati dell’Ente. Il Responsabile del Servizio Maurizio Lischi _____________________________________________________________________________________________ PUBBLICAZIONE Copia del presente atto è stato pubblicato all'Albo Pretorio on line dell'Ente, per 15 giorni consecutivi, dal 15/02/2024 al 01/03/2024. Collesalvetti, 15/02/2024 L'incaricato Alessandra Zambelli",
+  "CONCESSIONE_SUOLO-COLLE-75-2024": "Proposta N. 216 COPIA DETERMINAZIONE DEL RESPONSABILE Area 3 ECONOMICA FINANZIARIA, SISTEMI INFORMATIVI, PROGRAMMAZIONE E CONTROLLO Registro Generale nr.778 del 19/09/2024 Oggetto: Concessione occupazione TEMPORANEA Suolo Pubblico n. 75/2024 – FIBERCOP S.P.A. – P. IVA: 11459900962 – per via Roma: da Civ. 12 a incrocio via Picchi e per via Picchi: da incrocio via Roma a Scuola infanzia “Picchi” - Collesalvetti. La sottoscritta Dott.ssa Alessandra Zambelli – Responsabile dell'Area n. 3 “Economica-Finanziaria, Sistemi Informativi, programmazione e controllo”, in virtù del decreto del Sindaco n.14 del 05/07/2024 la quale dichiara di trovarsi in assenza di conflitto interessi ai sensi dell’art. 6 bis della legge 241/1990, come introdotto dalla legge n. 190/2012; VISTO: - lo Statuto del Comune; - il vigente Regolamento sull’ordinamento degli uffici e dei servizi; - la legge n.241/1990 \"Nuove norme in materia di procedimento amministrativo e di diritto di accesso ai documenti amministrativi\" e successive modifiche ed integrazioni; - il Regolamento comunale sul procedimento amministrativo e sul diritto di accesso; RICHIAMATI: - il D. Lgs. n. 285/1992 e successive modifiche “Codice della strada”; - la Legge 160/2019 – articolo 1, commi 816-836 e 846-847 che ha istituito il Canone Unico Patrimoniale - il Regolamento Canone Unico Patrimoniale, approvato con delibera di Consiglio Comunale n° 233 del 30/12/2020; - la delibera di Giunta comunale n. 192 del 27/12/2022 con la quale sono determinate le tariffe del Canone Unico Patrimoniale per l’anno 2023 e successivi; - la delibera di Giunta comunale n. 169 del 23.12.2014 con la quale sono determinati i costi di istruttoria; VISTE l’istanza di concessione pervenuta con prot. 16557 del 04/09/2024 e le successive integrazioni prot. n. 16976 del 11/09/2024 e prot. n. 17089 del 12/09/2024 presentate dal sig. Monti Alessandro --- omissis... ---, in qualità di legale rappresentante della FIBERCOP S.P.A. - P. IVA: 11459900962, con sede in via Marco Aurelio, 24 – Milano (MI), per l’occupazione di suolo pubblico di via Roma: da Civ. 12 a incrocio via Picchi e per via Picchi: da incrocio via Roma a Scuola infanzia “Picchi” – Collesalvetti, per lavori stradali. CONSIDERATO: - il parere FAVOREVOLEespresso dal Servizio Polizia Municipale in data 16/09/2024 in calce alla richiesta prot. n. 16557 del 04/09/2024 ed alla richiesta di proroga dei termini, pervenuta “a mezzo mail” del 13/09/2024, con le seguenti prescrizioni: Ordinanza di Polizia Municipale n° 107 del 04/09/2024 e Ordinanza di Polizia Municipale n° 113 del 14/09/2024 da trasmettere alla ditta insieme alla concessione; - il parere FAVOREVOLE espresso dal Servizio Lavori Pubblici in data 13/09/2024 in calce alla richiesta prot. n. 16557 del 04/09/2024 ed alla richiesta di proroga dei termini, pervenuta “a mezzo mail” del 13/09/2024, con la seguente prescrizione: Autorizzazione alla Manomissione di Suolo Pubblico n. 24/2024 del 12/08/2024. Vista la ricevuta costi istruttoria di € 64,00, ai sensi dell’art. 9 comma 7 del Regolamento Canone Unico Patrimoniale e della Delibera di Giunta Comunale n. 169/2014; Vista la ricevuta del pagamento canone unico di € 774,00, ai sensi dell’art. 60 del Regolamento Canone Unico Patrimoniale e della delibera di Giunta n. 192 del 27/12/2022; PRESO ATTO dell’esito positivo dell’istruttoria così come sopra esposto; Vista la comunicazione prot. 17350 del giorno 17/09/2024 con la quale il soggetto interessato è stato informato circa l’esito dell’istruttoria e sulle modalità di ritiro del provvedimento finale; CONCEDE Alla FIBERCOP S.P.A. - P. IVA: 11459900962, con sede in via Marco Aurelio, 24 – Milano (MI), l’occupazione temporanea di suolo pubblico ad uso di seguito specificato: Tipologia Dimensioni Utilizzo Posizione Prescrizioni Autorizzazione alla via Roma: da Civ. Manomissione di 12 a incrocio via Suolo Pubblico n. Occupazione Picchi 24/2024 del Temporanea 12/08/2024 Suolo 215,00 m x 2,00 m e Pubblico n. Lavori e 12 Giorni stradali via Picchi: da (dal = Ordinanza di Polizia 18/09/2024 incrocio via Roma a Tot. 430,00 mq Scuola infanzia Municipale n° 107 al “Picchi” del 04/09/2024 29/09/2024) – e Collesalvetti Ordinanza di Polizia Municipale n°113 del 14/09/2024 Ai sensi dell’art.10 del regolamento Canone Unico Patrimoniale la concessione è soggetta alle seguenti limitazioni: Il provvedimento non può essere oggetto di cessione ad altri; Il titolare risponde in proprio di tutti i danni derivanti al Comune e ai terzi dall’utilizzo della concessione; Il titolare, oltre ad osservare tutte le disposizioni legislative e regolamentari vigenti in materia, nonché le condizioni contenute nell'atto di concessione, ha l'obbligo di: - custodire il permesso comprovante la legittimità dell’occupazione ed esibirlo a richiesta del personale addetto. In caso di smarrimento, distruzione o sottrazione il concessionario deve darne immediata comunicazione all’Amministrazione che provvederà a rilasciare un duplicato a spese dell’interessato; - sollevare il Comune da qualsiasi responsabilità per danni che dovessero derivare a terzi per effetto dell’occupazione; - versare il canone alle scadenze previste; - mantenere in condizioni di sicurezza, ordine e pulizia il suolo che occupa e restituirlo integro e pulito alla scadenza della concessione. Ai sensi dell’art, 13 comma 1 del Regolamento Canone Unico Patrimoniale sono cause di decadenza della concessione: a) il mancato rispetto delle prescrizioni indicate nell’atto di concessione, nel Regolamento Canone unico patrimoniale e nelle norme legislative vigenti in materia; b) l’uso improprio del suolo pubblico; c) l’occupazione eccedente lo spazio autorizzato dall'atto di concessione; d) il mancato pagamento del canone dovuto, previa comunicazione dell’ufficio competente; Il Responsabile del procedimento è la Dott.ssa Alessandra Zambelli – Responsabile dell'Area n. 3 “Economica-Finanziaria, Sistemi Informativi, programmazione e controllo”; La presente concessione potrà essere sospesa o revocata in qualsiasi momento per motivi di pubblico interesse; Quanto previsto nell’atto di concessione è oggetto di verifica da parte degli organi di controllo; Contro il presente provvedimento è ammesso ricorso al TAR entro 60 giorni o, in alternativa, ricorso straordinario al Presidente della Repubblica entro 120 giorni; Copia del presente atto sarà consegnata al richiedente o incaricato. Documento firmato digitalmente ai sensi del TU n°445/2000, dell’art. 20 del D.lgs. 82/2005 e norme collegate. Tale documento informatico è memorizzato digitalmente sulla banca dati dell’Ente. Il Responsabile dell'Area Alessandra Zambelli _____________________________________________________________________________________________ PUBBLICAZIONE Copia del presente atto è stato pubblicato all'Albo Pretorio on line dell'Ente, per 15 giorni consecutivi, dal 20/09/2024 al 05/10/2024. Collesalvetti, 20/09/2024 L'incaricato Alessandra Zambelli",
+  "CONCESSIONE_SUOLO-COLLE-78-2023": "Proposta N. 246 COPIA DETERMINAZIONE DEL RESPONSABILE Servizio n. 3 - Servizi Economico-Finanziari e Sistemi Informativi Registro Generale nr.919 del 02/10/2023 Oggetto: Concessione in sanatoria occupazione temporanea di suolo pubblico n°78/2023 a TIM S.P.A. - P.I. 00488410010 - per via Roma n. 47 - Collesalvetti. La sottoscritta Dott.ssa Alessandra Zambelli – Responsabile del Servizio n. 3 “Servizi Economico-Finanziari e Sistemi Informativi”, in virtù del decreto del Sindaco n. 4 del 31/03/2022 – la quale dichiara di trovarsi in assenza di conflitto interessi ai sensi dell’art. 6 bis della legge 241/1990, come introdotto dalla legge n. 190/2012; VISTO: - lo Statuto del Comune; - il vigente Regolamento sull’ordinamento degli uffici e dei servizi; - la legge n.241/1990 \"Nuove norme in materia di procedimento amministrativo e di diritto di accesso ai documenti amministrativi\" e successive modifiche ed integrazioni; - il Regolamento comunale sul procedimento amministrativo e sul diritto di accesso; RICHIAMATI: - il D.Lgs. n. 285/1992 e successive modifiche “Codice della strada”; - la Legge 160/2019 – articolo 1, commi 816-836 e 846-847 che ha istituito il Canone Unico Patrimoniale - il Regolamento Canone Unico Patrimoniale, approvato con delibera di Consiglio Comunale n° 233 del 30/12/2020 e successive modifiche; - la delibera di Giunta comunale n. 192 del 27/12/2022 con la quale sono determinate le tariffe del Canone Unico Patrimoniale per l’anno 2023; - la delibera di Giunta comunale n. 169 del 23.12.2014 con la quale sono determinati i costi di istruttoria; VISTA l’istanza prot. 17727 del 14/09/2023 presentata dal sig. Monti Alessandro nato il 22/04/1962 a Firenze (Fi) C.F. MNTLSN62D22D612G in qualità di legale rappresentante della TIM S.p.A. - P.I. 00488410010, con sede a Pisa - SS 12 via Del Brennero – loc. Figuretta km. 4, per l’occupazione temporanea di suolo pubblico di via Roma n. 2 – Collesalvetti, per lavori stradali; VISTA L’Autorizzazione per interventi su aree pubbliche da parte di soggetti privati e ditte di gestione di servizi pubblici n. 26/2023 del 05.09.2023; CONSIDERATO: - il parere FAVOREVOLE espresso dal Servizio Polizia Municipale in data 16/09/2023 in calce alla richiesta prot. 17727 del 14/09/2023 con la seguente prescrizione: Ordinanza di Polizia Municipale n° 86 del 16/09/2023 da trasmettere alla ditta insieme alla concessione; - il parere FAVOREVOLE espresso dal Servizio Lavori Pubblici in data 13/09/2023 in calce alla richiesta prot. n. 17727 del 14/09/2023 senza prescrizioni; Vista la ricevuta costi istruttoria di € 64,00, ai sensi dell’ art.9 comma 7 del Regolamento Canone Unico Patrimoniale e della Delibera di Giunta comunale n. 169/2014; Vista la ricevuta del pagamento canone unico di €27,00, ai sensi dell’art. 69 del Regolamento Canone Unico Patrimoniale e della Delibera di Giunta n° 192 del 27/12/2022, inviata con mail del 02/10/2023; Vista la dichiarazione di assolvimento di imposta di bollo della marca da €16,00 con identificativo 01130140935976 del 11/08/2023, inviata con mail del 02/10/2023; PRESO ATTO dell’esito positivo dell’istruttoria così come sopra esposto; Vista la comunicazione prot. 17949 del 18/09/2023 con la quale il soggetto interessato è stato informato circa l’esito dell’istruttoria e sulle modalità di ritiro del provvedimento finale; CONCEDE al sig. Monti Alessandro nato il 22/04/1962 a Firenze (Fi) C.F. MNTLSN62D22D612G in qualità di soggetto incaricato della TIM S.P.A. - P.I. 00488410010 l’occupazione temporanea di suolo pubblico ad uso di seguito specificato: Tipologia Dimensioni Utilizzo Posizione Prescrizioni temporanea suolo pubblico 2,0 mt. x Ordinanza di Polizia Lavori Via Roma n. 47 - 9 giorni 2,25 mt. Municipale n°86 stradali Collesalvetti (dal 25/09/2023 – al (5,00 mq) del 16/09/2023 03/10/2023) Ai sensi dell’art 10 del regolamento Canone Unico Patrimoniale la concessione è soggetta alle seguenti limitazioni: Il provvedimento non può essere oggetto di cessione ad altri; Il titolare risponde in proprio di tutti i danni derivanti al Comune e ai terzi dall’utilizzo della concessione; Il titolare, oltre ad osservare tutte le disposizioni legislative e regolamentari vigenti in materia, nonché le condizioni contenute nell'atto di concessione, ha l'obbligo di: - custodire il permesso comprovante la legittimità dell’occupazione ed esibirlo a richiesta del personale addetto. In caso di smarrimento, distruzione o sottrazione il concessionario deve darne immediata comunicazione all’Amministrazione che provvederà a rilasciare un duplicato a spese dell’interessato; - sollevare il Comune da qualsiasi responsabilità per danni che dovessero derivare a terzi per effetto dell’occupazione; - versare il canone alle scadenze previste; - mantenere in condizioni di sicurezza, ordine e pulizia il suolo che occupa e restituirlo integro e pulito alla scadenza della concessione. Ai sensi dell’art, 13 comma 1 del Regolamento Canone Unico Patrimoniale sono cause di decadenza della concessione: a) il mancato rispetto delle prescrizioni indicate nell’atto di concessione, nel Regolamento Canone unico patrimoniale e nelle norme legislative vigenti in materia; b) l’uso improprio del suolo pubblico; c) l’occupazione eccedente lo spazio autorizzato dall'atto di concessione; d) il mancato pagamento del canone dovuto, previa comunicazione dell’ufficio competente; Il Responsabile del procedimento è la Dott.ssa Alessandra Zambelli – Responsabile del Servizio n. 3 “Servizi Economico- Finanziari e Sistemi Informativi”; La presente concessione potrà essere sospesa o revocata in qualsiasi momento per motivi di pubblico interesse; Quanto previsto nell’atto di concessione è oggetto di verifica da parte degli organi di controllo; Contro il presente provvedimento è ammesso ricorso al TAR entro 60 giorni o, in alternativa, ricorso straordinario al Presidente della Repubblica entro 120 giorni; Copia del presente atto sarà consegnata al richiedente o incaricato. Documento firmato digitalmente ai sensi del TU n°445/2000, dell’art. 20 del D.lgs. 82/2005 e norme collegate. Tale documento informatico è memorizzato digitalmente sulla banca dati dell’Ente. Il Responsabile del Servizio Alessandra Zambelli _____________________________________________________________________________________________ PUBBLICAZIONE Copia del presente atto è stato pubblicato all'Albo Pretorio on line dell'Ente, per 15 giorni consecutivi, dal 15/02/2024 al 01/03/2024. Collesalvetti, 15/02/2024 L'incaricato Alessandra Zambelli",
+  "CONCESSIONE_SUOLO-COLLE-81-2023": "Proposta N. 260 COPIA DETERMINAZIONE DEL RESPONSABILE Servizio n. 3 - Servizi Economico-Finanziari e Sistemi Informativi Registro Generale nr.985 del 18/10/2023 Oggetto: Concessione in sanatoria occupazione temporanea di suolo pubblico n°81/2023 a TIM S.p.A. - P.I. 00488410010 - per via Della Colmata snc – Fraz. Guasticce - Collesalvetti. La sottoscritta Dott.ssa Alessandra Zambelli – Responsabile del Servizio n. 3 “Servizi Economico-Finanziari e Sistemi Informativi”, in virtù del decreto del Sindaco n. 4 del 31/03/2022 – la quale dichiara di trovarsi in assenza di conflitto interessi ai sensi dell’art. 6 bis della legge 241/1990, come introdotto dalla legge n. 190/2012; VISTO: - lo Statuto del Comune; - il vigente Regolamento sull’ordinamento degli uffici e dei servizi; - la legge n.241/1990 \"Nuove norme in materia di procedimento amministrativo e di diritto di accesso ai documenti amministrativi\" e successive modifiche ed integrazioni; - il Regolamento comunale sul procedimento amministrativo e sul diritto di accesso; RICHIAMATI: - il D.Lgs. n. 285/1992 e successive modifiche “Codice della strada”; - la Legge 160/2019 – articolo 1, commi 816-836 e 846-847 che ha istituito il Canone Unico Patrimoniale - il Regolamento Canone Unico Patrimoniale, approvato con delibera di Consiglio Comunale n° 233 del 30/12/2020 e successive modifiche; - la delibera di Giunta comunale n. 192 del 27/12/2022 con la quale sono determinate le tariffe del Canone Unico Patrimoniale per l’anno 2023; - la delibera di Giunta comunale n. 169 del 23.12.2014 con la quale sono determinati i costi di istruttoria; VISTA l’istanza prot. 19895 del 11/10/2023 presentata dal sig. Monti Alessandro nato il 22/04/1962 a Firenze (Fi) C.F. MNTLSN62D22D612G in qualità di legale rappresentante della TIM S.p.A. - P.I. 00488410010, con sede a Pisa - SS 12 via Del Brennero – loc. Figuretta km. 4, per l’occupazione temporanea di suolo pubblico di via Della Colmata snc – Fraz. Guasticce - Collesalvetti, per lavori stradali; VISTA L’Autorizzazione per interventi su aree pubbliche da parte di soggetti privati e ditte di gestione di servizi pubblici n. 17/2023 del 07.06.2023; CONSIDERATO: - il parere FAVOREVOLE espresso dal Servizio Polizia Municipale in data 17/10/2023 in calce alla richiesta prot. 19895 del 11/10/2023 con la seguente prescrizione: Ordinanza di Polizia Municipale n° 93 del 17/10/2023 da trasmettere alla ditta insieme alla concessione; - il parere FAVOREVOLE espresso dal Servizio Lavori Pubblici in data 17/10/2023 in calce alla richiesta prot. n. 19895 del 11/10/2023 senza prescrizioni; Vista la ricevuta costi istruttoria di € 64,00, ai sensi dell’ art.9 comma 7 del Regolamento Canone Unico Patrimoniale e della Delibera di Giunta comunale n. 169/2014; Vista la ricevuta del pagamento canone unico di €206,00, ai sensi dell’art. 69 del Regolamento Canone Unico Patrimoniale e della Delibera di Giunta n° 192 del 27/12/2022; PRESO ATTO dell’esito positivo dell’istruttoria così come sopra esposto; Vista la comunicazione prot. 20284 del 17/10/2023 con la quale il soggetto interessato è stato informato circa l’esito dell’istruttoria e sulle modalità di ritiro del provvedimento finale; CONCEDE al sig. Monti Alessandro nato il 22/04/1962 a Firenze (Fi) C.F. MNTLSN62D22D612G in qualità di soggetto incaricato della TIM S.P.A. - P.I. 00488410010 l’occupazione temporanea di suolo pubblico ad uso di seguito specificato: Tipologia Dimensioni Utilizzo Posizione Prescrizioni temporanea suolo pubblico 350 mt. x Ordinanza di Polizia Lavori Via Della Colmata snc – Fraz. 5 giorni 0,2mt. Municipale n°93 stradali Guasticce - Collesalvetti (dal 16/10/2023 – al (70,00 mq) del 17/10/2023 20/10/2023) Ai sensi dell’art 10 del regolamento Canone Unico Patrimoniale la concessione è soggetta alle seguenti limitazioni: Il provvedimento non può essere oggetto di cessione ad altri; Il titolare risponde in proprio di tutti i danni derivanti al Comune e ai terzi dall’utilizzo della concessione; Il titolare, oltre ad osservare tutte le disposizioni legislative e regolamentari vigenti in materia, nonché le condizioni contenute nell'atto di concessione, ha l'obbligo di: - custodire il permesso comprovante la legittimità dell’occupazione ed esibirlo a richiesta del personale addetto. In caso di smarrimento, distruzione o sottrazione il concessionario deve darne immediata comunicazione all’Amministrazione che provvederà a rilasciare un duplicato a spese dell’interessato; - sollevare il Comune da qualsiasi responsabilità per danni che dovessero derivare a terzi per effetto dell’occupazione; - versare il canone alle scadenze previste; - mantenere in condizioni di sicurezza, ordine e pulizia il suolo che occupa e restituirlo integro e pulito alla scadenza della concessione. Ai sensi dell’art, 13 comma 1 del Regolamento Canone Unico Patrimoniale sono cause di decadenza della concessione: a) il mancato rispetto delle prescrizioni indicate nell’atto di concessione, nel Regolamento Canone unico patrimoniale e nelle norme legislative vigenti in materia; b) l’uso improprio del suolo pubblico; c) l’occupazione eccedente lo spazio autorizzato dall'atto di concessione; d) il mancato pagamento del canone dovuto, previa comunicazione dell’ufficio competente; Il Responsabile del procedimento è la Dott.ssa Alessandra Zambelli – Responsabile del Servizio n. 3 “Servizi Economico- Finanziari e Sistemi Informativi”; La presente concessione potrà essere sospesa o revocata in qualsiasi momento per motivi di pubblico interesse; Quanto previsto nell’atto di concessione è oggetto di verifica da parte degli organi di controllo; Contro il presente provvedimento è ammesso ricorso al TAR entro 60 giorni o, in alternativa, ricorso straordinario al Presidente della Repubblica entro 120 giorni; Copia del presente atto sarà consegnata al richiedente o incaricato. Documento firmato digitalmente ai sensi del TU n°445/2000, dell’art. 20 del D.lgs. 82/2005 e norme collegate. Tale documento informatico è memorizzato digitalmente sulla banca dati dell’Ente. Il Responsabile del Servizio Alessandra Zambelli _____________________________________________________________________________________________ PUBBLICAZIONE Copia del presente atto è stato pubblicato all'Albo Pretorio on line dell'Ente, per 15 giorni consecutivi, dal 15/02/2024 al 01/03/2024. Collesalvetti, 15/02/2024 L'incaricato Alessandra Zambelli",
+  "DOC-173cafb03bbb50b8": "CONVENZIONE PER LA REALIZZAZIONE DI INFRASTRUTTURE DI TELECOMUNICAZIONI IN FIBRA OTTICA NEL COMUNE DI COLLESALVETTI (LI). La presente Convenzione viene stipulata tra: Comune di Collesalvetti ( C.F…………………. ; P.IVA …………………………….) rappresentato da …………………, in qualità di Responsabile del Settore LAVORI PUBBLICI del Comune di Collesalvetti, ed autorizzato alla stipula in nome e per conto dell’Ente che rappresenta, ai sensi COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 dell’art. …… dello Statuto Comunale (di seguito “il COMUNE”)e ESTRACOM spa (P.IVA 01875880971) con Sede Legale in via Panziera, 59100 Prato, rappresentata dal Sig. Niccolai Fabio, munito dei necessari poteri nella qualità di Rappresentante Legale munito dei necessari poteri. (di seguito “ESTRACOM” o la “Società”) di seguito anche indicati singolarmente come “la Parte” ed unitariamente come “le Parti”. PREMESSO che: - Il COMUNE considera strategico lo sviluppo capillare di infrastrutture di accesso ad alta capacità sul proprio territorio che consentano agli Operatori di Telecomunicazioni e a tutti i soggetti aventi titolo di fornire servizi a Banda Ultra Larga ai cittadini e alle imprese in modo da tenere il passo con le maggiori aree industrializzate europee; - le Parti ritengono di reciproco interesse stipulare un’apposita convenzione al fine di regolamentare l’utilizzo sinergico delle infrastrutture esistenti e l’impiego di tecniche innovative di costruzione, che riducano i tempi e i costi d’intervento, garantendo allo stesso tempo un basso impatto ambientale; nonché, di prevedere modalità di gestione semplificate degli iter autorizzativi, delle modalità di realizzazione degli interventi e dei relativi flussi comunicativi, oltre che degli aspetti manutentivi e dei ripristini del demanio stradale che si rendano necessari in esecuzione dell’intervento; 1 - ESTRACOM ha concluso un Accordo Quadro con la Società FIBRE CONNECT che prevede che ESTRACOM conceda per la durata di 20 anni a Fibre Connect i Diritti sulle Fibre Ottiche delle reti che intende realizzare nel Comune di Collesalvetti; - Il COMUNE è proprietario di una infrastruttura di pubblica illuminazione, di cavidotti e di altre pertinenze che costituiscono \"Infrastruttura\", come in seguito meglio definita; - ESTRACOM intende avvalersi della facoltà prevista dall’art.2 comma 2 del Decreto Legge 25 giugno 2008, n.112 convertito dalla legge 6 agosto 2008, n.133 conferma tanto che nel D.lgs 33/16 COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 il quale prevede che “L’operatore della comunicazione ha facoltà di utilizzare per la posa della fibra nei cavidotti, senza oneri, le proprietà civili già esistenti di proprietà a qualsiasi titolo pubblica o comunque in titolarità di concessionari pubblici. Qualora dall’esecuzione dell’opera possa sorgere un pregiudizio alle infrastrutture civili esistenti le parti, al fine di evitare che ciò possa cagionare ritardo all’esecuzione dei lavori, concordano di prestare adeguata cauzione, onde prevenire l’istaurazione di contenziosi giudiziari che possano ritardare lo sviluppo dei lavori. - il Legislatore ha progressivamente approvato ed emanato una disciplina normativa speciale volta alla promozione, realizzazione e sviluppo delle reti di comunicazione elettronica e, in particolare, delle reti in fibra ottica; - in particolare, sono stati adottati a tale fine: a) Il D. Lgs. 1 agosto 2003, n. 259 (“Codice delle comunicazioni elettroniche”) il quale disciplina i procedimenti semplificati per il rilascio dei titoli necessari alla realizzazione e gestione di reti di comunicazione elettroniche, nonché alla connessa occupazione di suolo pubblico (v. artt. 35, 88 e 93); b) il D.L:. 25 giugno 2008 n. 112 il quale introduce ulteriori disposizioni di semplificazione espressamente dedicate alla realizzazione di reti di comunicazione elettronica in fibra ottica (v. art. 2); c) il D.L. 18 ottobre 2012 n. 179 il quale prevede l’adozione di un decreto ministeriale per la definizione delle specifiche tecniche degli scavi dedicati alla realizzazione di reti di 2 comunicazione elettronica in fibra ottica (v. art. 3); d) il Decreto del Ministero dello Sviluppo Economico del 1 ottobre 2013 il quale, in attuazione del D.L. n. 179/2012, ha definito le specifiche tecniche delle operazioni di scavo e di ripristino del suolo pubblico per la realizzazione delle reti di comunicazione elettronica in fibra ottica, prevedendo l’adozione di modalità realizzative a basso impatto, nonché l’utilizzazione in via prioritaria di infrastrutture fisiche già esistenti per la posa delle predette reti; e) il D.lgs. 15 febbraio 2016 n. 33 (il c.d. “decreto fibra”) il quale ha introdotto la disciplina COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 relativa alla utilizzazione delle infrastrutture fisiche già esistenti di proprietà di amministrazioni pubbliche ovvero di soggetti che gestiscono altri servizi; f) il D.L. 16 luglio 2020 n. 76 il quale, ad integrazione del D.L: 18/2020, semplifica ulteriormente la formazione del titolo necessario alla realizzazione ed installazione di reti di comunicazione elettronica in fibra ottica (v. art. 38); che in data 3 marzo 2015 il Consiglio dei Ministri ha definito e approvato il “Piano strategico nazionale” per lo sviluppo della banda ultralarga in Italia, denominato “Strategia italiana per la banda ultralarga”; g) il D.L. 31 maggio 2021 n. 77, convertito nella l. 29 luglio 2021 n.108, il quale, a modifica ed integrazione del D. Lgs. 1° agosto 2003, n. 259, introduce ulteriori disposizioni di semplificazione per la realizzazione di reti di comunicazione elettronica in fibra ottica in tema di tempistiche dei procedimenti autorizzatori, di procedimenti semplificati per il rilascio dei titoli necessari alla realizzazione delle reti e di specifiche tecniche relative alle operazioni di scavo e di ripristino del suolo pubblico; - in tale ambito, ESTRACOM ha manifestato interesse a realizzare su una porzione di territorio comunale (meglio identificata nella planimetria allegata) una rete di telecomunicazioni a banda ultralarga in fibra ottica, assicurandone al contempo la relativa gestione e manutenzione; - a tale riguardo le Parti ritengono di reciproco interesse ed utilità stipulare un’apposita convenzione al fine di (i) regolamentare l’utilizzo sinergico delle infrastrutture esistenti e l’impiego di tecniche innovative di costruzione, che riducano i tempi e i costi d’intervento, 3 garantendo nel contempo un basso impatto ambientale; nonché, (ii) di prevedere modalità di gestione semplificate degli iter autorizzativi, delle modalità di realizzazione degli interventi e dei relativi flussi comunicativi. - le Parti convengono che per velocizzare l'esecuzione del Piano di ESTRACOM e minimizzare i disagi alla cittadinanza è di fondamentale importanza poter utilizzare principalmente le infrastrutture esistenti che risultino tecnicamente idonee e disponibili. Tutto ciò premesso, le parti convengono quanto segue: COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 ART. 1 Premesse, allegati e definizioni 1.1. Le premesse e gli allegati formano parte integrante e sostanziale della presente Convenzione. 1.2 . Nel presente documento si intende per: Società: la società ESTRACOM Spa, Cavi: i cavi in Fibra Ottica da impiegare per trasportare segnali di telecomunicazioni e alloggiati in un tubo del cavidotto; i cavi posati all’interno della quota infrastruttura sono completamente dielettrici. Cavidotto: un insieme composto da un minimo di uno ad un massimo di nove tubi di materiale dielettrico (di diametro esterno di 12 mm) all'interno di ciascuno dei quali possono essere alloggiati i cavi. Contratto: la presente convenzione. Giunto/i: la/e muffola/e di giunzione dei cavi e/o la/e muffola/e di derivazione dei cavi da alloggiare all'interno dei pozzetti dedicati. Infrastruttura: l'infrastruttura di rete costituita da tubazione e pozzetti all'interno della quale possono essere alloggiati cavidotti e cavi. Pozzetti: i pozzetti dell’infrastruttura di pubblica illuminazione di cui il COMUNE è proprietario e al cui interno potranno transitare i cavidotti. Pozzetti dedicati: i pozzetti da posare da parte di ESTRACOM lungo la tratta ad uso esclusivo per la giunzione e/o derivazione dei cavi. Le operazioni di manutenzione della rete Fibra Ottica potranno 4 avvenire, quindi, senza la necessità da parte di ESTRACOM di accedere ai Pozzetti del “Comune”. La realizzazione di tali pozzetti sarà soggetta al rilascio di tutte le autorizzazioni necessarie relative all'esecuzione di lavori nel sottosuolo comunale. Segmento: un segmento di cavidotti compreso fra due Pozzetti. Tratta: una parte della quota infrastruttura costituita da una serie di segmenti consecutivi, formanti un collegamento lineare tra due o più punti. Tubazione: il tubo esistente dove alloggiano i cavi elettrici di alimentazione degli impianti di COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 pubblica illuminazione. SINFI: (Sistema Informativo Nazionale Federato delle infrastrutture) istituito con D.lgs 33/16 sulla base della direttiva UE 2014/61/UE e successiva definizione regole tecniche da parte del MISE con DM 11/05/2016. Le specifiche sono definite da Agid. Art. 2. Finalità e oggetto 2.1. La presente Convenzione ha la finalità di regolare le modalità di reciproca interazione tra le Parti, sia per la realizzazione di una nuova infrastruttura atta a contenere una rete di comunicazione a banda ultralarga in fibra ottica a beneficio di famiglie e imprese e istituzioni del Comune di Collesalvetti, sia per l’utilizzo delle infrastrutture esistenti ovvero di quelle nuove da realizzare a cura e spese della Società, per la posa di una rete di comunicazioni elettroniche. 2.2. La presente Convenzione, nel vincolare le Parti per l’adempimento degli impegni da assumere e nella fattispecie l’impegno da parte di ESTRACOM per la realizzazione dell’infrastruttura e da parte del COMUNE l’adesione all’alloggiamento di detta infrastruttura all’interno del cavidotto della pubblica illuminazione esistente, identifica le aree di collaborazione, definisce le metodologie di intervento e di coordinamento, indica il percorso amministrativo per il rilascio dei titoli autorizzativi, condivide le modalità di monitoraggio e di eventuale revisione delle procedure per garantirne l’efficienza e l’efficacia di quanto convenuto, 5 al fine di velocizzare la completa realizzazione ed il pieno funzionamento dell’infrastruttura a banda larga, nonché per tutelare il demanio stradale e la sicurezza nella circolazione stradale e pedonale. 2.3 La presente Convenzione disciplina: - le procedure amministrative da seguire per l’ottenimento delle autorizzazioni comunali; - gli standard tecnici di progettazione ed esecuzione delle opere; COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 - i reciproci rapporti tra ESTRACOM e il COMUNE relativi:  alla verifica di prefattibilità di utilizzo delle infrastrutture quali cavidotti, pozzetti, etc.;  alla verifica in situ della reale possibilità di utilizzo delle infrastrutture quali cavidotti, pozzetti, etc.;  alle procedure attuative d'intervento e alle responsabilità su infrastrutture quali cavidotti, pozzetti, etc. che condividono al loro interno cavi, giunzioni, etc. di differenti proprietari e/o gestori. Art. 3. Diritto d’uso di infrastrutture fisiche esistenti di proprietà del Comune 3.1 Alle condizioni e ai termini della presente convenzione, e conformemente a quanto previsto dall'art.2, comma 2, del D.L. 25 giugno 2008, n.112 convertito dalla legge 6 agosto 2008, n.133, dal DM del 1 Ottobre 2013 e dagli artt. 3 e 5 del D.lgs 33/16 il COMUNE consente a ESTRACOM che accetta, l'utilizzo non esclusivo gratuito della quota di infrastruttura indicata nella relazione tecnica e negli elaborati progettuali presentati, allo specifico fine di posare, installare e gestire all'interno di essa cavi in fibra ottica e realizzare quindi lo sviluppo della rete a banda ultra larga. 3.2. L’uso delle Infrastrutture esistenti comporterà l’installazione di minitubi come previsto dalla normativa CEI di riferimento (e cioè fino ad un massimo pari al 70% della disponibilità complessiva), il cui numero verrà dettagliato nell’ambito della presentazione dell’istanza di cui al successivo art. 4. 6 3.3. L’uso delle Infrastrutture esistenti include le infrastrutture che sono gestite direttamente dal COMUNE (a titolo esemplificativo, servizio d’illuminazione pubblica). 3.4. L’uso delle Infrastrutture comunali esistenti sarà specificato nella comunicazione di cui al successivo articolo 4 ed il COMUNE si impegna a consentire tale uso, a condizione eque e non discriminatorie nel rispetto di quanto previsto dal decreto legislativo n. 33/2016. 3.5. I minitubi, i cavi in fibra e i relativi apparati che ESTRACOM installerà nelle infrastrutture COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 esistenti rimarranno in proprietà di ESTRACOM che potrà iscrivere tali beni nei propri registri dei beni patrimoniali. Resta inteso che le infrastrutture esistenti del COMUNE che saranno utilizzate da ESTRACOM rimangono di esclusiva proprietà del COMUNE, il quale ne consente l’utilizzo secondo quanto previsto al successivo art. 4. 3.6 ESTRACOM accetta la quota di infrastruttura comunale, indicata nei documenti tecnici allegati alla presente convenzione, nello stato di fatto in cui si trova, giudicato idoneo da parte di ESTRACOM, alla coubicazione delle proprie reti di telecomunicazione. 3.7 L'uso della infrastruttura è soggetto al rispetto da parte di ESTRACOM dei seguenti obblighi:  utilizzare la infrastruttura solo per le finalità descritte nel par. 2.1;  non consentire a terzi l'utilizzo sulla quota di infrastruttura senza il preventivo consenso scritto da parte del COMUNE;  non arrecare pregiudizio all’infrastruttura o alle parti dell'infrastruttura adiacenti alla stessa, né in alcun modo limitarne l'utilizzo, in particolare per quanto riguarda le attività della Società durante le lavorazioni da effettuare, oggetto della presente Convenzione;  non arrecare pregiudizio alle reti relative ad altri servizi pubblici poste in prossimità della quota di infrastruttura, né in alcun modo limitarne l'utilizzo da parte degli enti affidatari di tali servizi pubblici;  Il COMUNE avrà libero accesso all'infrastruttura da concedere in uso ad ESTRACOM attraverso i propri tecnici anche per esercitare ogni più ampia facoltà di controllo sull'uso e sul 7 rispetto della presente Convenzione. 3.8 ESTRACOM garantisce che la posa di cavi in fibra ottica completamente dielettrici all’interno di tubi di materiale dielettrico (diametro 12 mm) opportunamente alloggiati all’interno di Tubazioni e Pozzetti della Infrastruttura non creerà alcun tipo di interferenza elettrica o meccanica con i cavi elettrici presenti per alimentare la illuminazione pubblica. ESTRACOM ha preso visione dello stato fisico dei cavidotti e dichiara di accettarlo così come esso si trova, senza riserva alcuna e si impegna a mantenere le opere di propria competenza nel corretto stato COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 di efficienza. Art. 4. Durata ed Utilizzo della quota infrastruttura 4.1 La facoltà di utilizzo, manutenzione e gestione consentito con il presente accordo avrà validità dalla data della sua sottoscrizione per 20 (venti) anni, salva rescissione per giustificato motivo, rinnovabili una sola volta su richiesta di ESTRACOM e con sottoscrizione congiunta delle parti di apposito accordo a meno di rescissione a cura di uno dei due contraenti. In caso di rinnovo sarà sottoscritta un’appendice alla presente convenzione esclusivamente ai fini del rinnovo previsto, fermi i restanti patti e condizioni già stabiliti con la convenzione allegata. 4.2 Il COMUNE si riserva la facoltà di utilizzare, a sua volta, la quota di infrastruttura qualora, a suo insindacabile giudizio, lo ritenga necessario per modifiche e sviluppi della pubblica illuminazione o per altri usi compatibili con la presenza della rete a banda ultralarga di proprietà di ESTRACOM. 4.3 Le Parti riconoscono e si danno reciprocamente atto che la stipula della presente convenzione e la sua esecuzione non comportano né comporteranno: 1. il trasferimento del diritto di proprietà dell’infrastruttura comunale utilizzata; 2. l'attribuzione di alcun diritto in capo a ESTRACOM sulla infrastruttura comunale utilizzata, che di conseguenza non potrà essere ceduta da ESTRACOM stessa a terzi senza il preventivo e necessario consenso da parte del COMUNE pena, in difetto, la risoluzione automatica della presente convenzione. 8 Art. 5 Procedura di autorizzazione dei singoli Progetti per Infrastrutture Esistenti 5.1 Successivamente alla stipula della presente convenzione, ESTRACOM presenterà al COMUNE un’istanza di autorizzazione all’uso dell’Infrastruttura esistente che servirà alla realizzazione del Progetto, indicando: A) generalità del richiedente; B) indicazione del referente tecnico per i lavori con recapito telefonico (fisso e mobile), indirizzo pec e indirizzo email; C) COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 impresa che realizzerà gli interventi con relativi recapiti D) specifica tecnica/grafica allegando: a) il progetto che individua l’infrastruttura esistente e i tratti impegnati dallo stesso, la tipologia dei minitubi che verranno installati e gli eventuali interventi di adeguamento all’infrastruttura esistente che faciliteranno l’’installazione dei minitubi e l’accessibilità agli stessi anche in funzione di successive attività manutentive (es. apertura di chiusini, realizzazione di parti di raccordo, ampliamenti degli spazi, realizzazione pozzetti); b) l’ulteriore documentazione conforme ai modelli indicati all’art. 88 del Codice delle comunicazioni elettroniche. 5.2. Il COMUNE, nell’ipotesi in cui l’istanza autorizzativa da parte di ESTRACOM riguarderà esclusivamente interventi relativi al riutilizzo dell’infrastruttura esistente, entro otto giorni dal ricevimento della domanda, emanerà apposito provvedimento autorizzativo espresso in modo formale ovvero per silenzio/assenso ai sensi dell’art. 88, comma 7, del Codice delle comunicazioni. 5.3. ESTRACOM, ottenuto il provvedimento autorizzativo (formatosi espressamente o tacitamente) dovrà richiedere all'ufficio della Polizia Municipale le necessarie autorizzazioni e le ordinanze di viabilità eventualmente occorrenti per poter procedere all’uso dell’infrastruttura esistente, per l’installazione dei minitubi, ai fini dell’alloggiamento dei cavi in fibra e per la realizzazione di eventuali interventi sulla medesima infrastruttura esistente secondo quanto previsto nel progetto relativo al riutilizzo allegato alla presente convenzione. ESTRACOM 9 svolgerà tale attività in modo tale da contenere i successivi interventi di limitazione della viabilità e saranno adottati tutti gli accorgimenti e le cautele atte a garantire la sicurezza nella circolazione stradale con collocazione dei segnali previsti dall’art. 21 del Codice della Strada, secondo gli schemi segnaletici fissati dal Disciplinare Tecnico approvato dal Ministero delle Infrastrutture e dei Trasporti con Decreto del 10 luglio 2002. Durante gli interventi potrà essere necessario effettuare il taglio del manto stradale in corrispondenza dei pozzetti ricoperti dallo stesso e in corrispondenza di eventuali interruzioni delle tubature; in tal caso si procederà al COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 ripristino con bitume a freddo in via provvisoria, ivi compresa la segnaletica occorrente. In ogni caso la società si farà carico di eventuali danni ad essa imputabili e derivanti dallo svolgimento delle attività di cui alla presente convenzione. 5.4. Successivamente ESTRACOM procederà con le operazioni di ripristino del corpo stradale e della pavimentazione per la realizzazione dello strato superficiale e di finitura della strada, secondo le modalità tecniche ed operative previste dalla normativa di riferimento e secondo le indicazioni impartite dai competenti Uffici Comunali sulla base del progetto autorizzato. 5.5. In fase di posa delle infrastrutture contenenti cavi in fibra ottica, ESTRACOM dovrà concordare con il COMUNE la fattibilità tecnica degli interventi in dipendenza anche delle necessità tecniche e la compatibilità degli stessi con l'infrastruttura della pubblica illuminazione. In tale circostanza dovranno essere concordati i tempi e le modalità di posa delle infrastrutture contenenti cavi in fibra ottica per i necessari provvedimenti in materia di sicurezza, quali ad esempio, l'esclusione giornaliera degli impianti di illuminazione pubblica prima dell'esecuzione delle opere, la rimessa in esercizio degli stessi con verifica e controlli sulla funzionalità dei circuiti interessati dalle lavorazioni suddette. In nessun caso potrà essere sospeso il servizio di illuminazione pubblica durante l’orario di accensione dei corpi illuminanti ai fini di garantire una continua sicurezza stradale. Gli eventuali oneri dipendenti dai suddetti provvedimenti saranno a completo carico di ESTRACOM, tenendo sollevati il COMUNE ed il 10 gestore della pubblica illuminazione da ogni e qualsiasi onere da ciò derivante. In linea generale, relativamente alle infrastrutture di proprietà comunali, la posa della fibra sarà consentita, nei limiti di cui alla presente Convenzione, fatta salva la presenza di uno spazio, all’interno delle tubazioni esistenti, idoneo a garantire al COMUNE, eventuali futuri sviluppi della rete d’illuminazione pubblica e/o di videosorveglianza. 5.6. Nel caso in cui, durante la posa dei pozzetti di derivazione o dei minitubi all'interno dei COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 cavidotti preesistenti, si verificassero danneggiamenti alle strutture o agli impianti comunali in conseguenza delle attività di posa svolte da ESTRACOM, la stessa si impegna a farsi carico del ripristino immediato e nelle modalità concordate con il COMUNE sostenendo tutte le spese necessarie al ripristino della piena funzionalità. Art. 6. Realizzazione nuova infrastruttura 6.1 ESTRACOM si impegna a richiedere al COMUNE le autorizzazioni di scavo ai sensi dell’art. 88 del D.Lgs. 259/03, del DM 1 Ottobre 2013 e del decreto legislativo 15 febbraio 2016, n. 33 e ai sensi del d.l. 31 maggio 2021 n. 77, convertito nella l. 29 luglio 2021 n.108 inviando, in formato elettronico, firmata digitalmente e trasmessa tramite PEC, la seguente documentazione per ognuno dei tratti progettuali da realizzare: a) istanza; b) relazione tecnica redatta dal progettista; c) rilievi fotografici dell’intervento; d) planimetrie con risoluzione 1:1000 o 1:2000 indicante la dislocazione degli scavi e la posizione di eventuali pozzetti o sostegni ove sarà alloggiato il Cavo. 6.2 ESTRACOM si impegna ad utilizzare tecniche di scavo a basso impatto ambientale o, se non possibile, il No-dig (Microtunneling) e/o, in ultima istanza, la trincea tradizionale. 6.3 ESTRACOM si impegna a ricorrere a forme di immediata collaborazione e di stretto 11 coordinamento con gli enti territoriali al fine di contenere gli impatti dei cantieri sulla mobilità e vivibilità urbana, anche nel rispetto della normativa di settore sulla sicurezza, ed inoltre: a) si impegna a verificare e controllare che gli interventi siano in conformità a quanto previsto dal DM del 1 Ottobre 2013 e del D.lgs 33/16, e dalle normative di settore applicabili; b) si impegna a verificare e controllare che siano poste in essere le necessarie opere di sistemazione delle aree specificamente coinvolte dagli interventi e che i ripristini siano a regola d’arte nelle aree COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 medesime realizzati con tempi celeri concordati con l’Ente locale, nel rispetto delle specifiche tecniche di scavo e ripristino previste dal D.lgs 33/16 e dal DM del 1 Ottobre 2013, riconoscendo che i ripristini del manto stradale costituiscono parte integrante delle lavorazioni ai fini della corretta esecuzione delle opere; a tal uopo viene prevista una polizza complessiva da parte degli appaltatori che realizzeranno le lavorazioni a favore di ESTRACOM, che farà da garante per tutti i lavori da realizzare nelle modalità e nei limiti previsti dalla presente convenzione; c) si impegna, fermo restando quanto sopra previsto, ai sensi del comma 2 dell’articolo 93 del decreto legislativo 1° agosto 2003, n. 259 e del decreto legislativo 15 febbraio 2016, n. 33, a tenere indenne l'Ente proprietario o gestore delle aree interessate dai lavori, dalle spese necessarie per le opere di sistemazione e ripristino; d) si impegna a verificare e controllare che all’interno dei cantieri sia garantito il rispetto delle previsioni del decreto legislativo 9 aprile 2008, n. 81 e per quelli ricadenti all’interno delle sedi stradali le previsioni del decreto legislativo 30 aprile 1992, n. 285 e dalle normative di settore applicabili; e) si impegna ad adempiere agli obblighi di comunicazione di cui al comma 3 dell’articolo 89 del decreto legislativo 1° agosto 2003, n. 259 del 1 agosto 2003 e del decreto legislativo 15 febbraio 2016, n. 33 (D.lgs 33/16) attuativo della direttiva 2014/61/UE; f) si impegna a rispettare le procedure di cui all’articolo 95 del decreto legislativo 1° agosto 2003, 12 n.259, qualora in corso d’opera si riscontrino interferenze con impianti e condutture di energia elettrica di cui al comma 2 e 2 bis del medesimo articolo; e) rimane responsabile di eventuali danneggiamenti dell’impianto di pubblica illuminazione anche se accertati in epoca successiva all'ultimazione dei lavori nella misura in cui questi saranno verificati con perizia tecnica. Nell'ipotesi di danneggiamento agli impianti del COMUNE, ESTRACOM dovrà immediatamente darne comunicazione verbale e scritta al COMUNE. COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 In tutti i casi in cui è necessario un intervento da parte di ESTRACOM che preveda un accesso diretto a tubazioni e pozzetti, il COMUNE provvederà al distacco della fornitura elettrica e degli altri servizi interessati in modo da garantire lavorazioni in sicurezza. A tal proposito, tali lavorazioni dovranno essere effettuate in un orario in cui la pubblica illuminazione non sia in funzione per la pubblica circolazione di mezzi e persone. 6.5 Il COMUNE: a) ai sensi dell’art. 88 comma 7 del citato decreto legislativo n. 259/03 e successive modificazioni, si impegna a rilasciare i permessi di scavo entro il termine di 10 (dieci) giorni per scavi inferiori ai 200 metri e 30 (trenta) giorni per scavi oltre i 200 metri dalla presentazione della domanda. ESTRACOM, nel caso in cui siano trascorsi i termini di cui sopra senza l’ottenimento esplicito dei permessi, previa comunicazione di inizio attività, realizzerà i lavori in silenzio/assenso ed in conformità alla documentazione presentata e alle eventuali modifiche concordate con il COMUNE nel rispetto delle vigenti norme in materia; b) si impegna a utilizzare forme di immediata collaborazione e di stretto coordinamento con ESTRACOM agevolando il raccordo con i Settori Lavori Pubblici, Viabilità, Polizia Locale ed in genere con i Settori interessati dalle attività oggetto dell’intervento autorizzato, al fine di semplificare l’attività amministrativa e di snellire i conseguenti procedimenti di decisione, autorizzazione e di controllo previsti dalla vigente normativa. Resta comunque ferma la buona condotta di ESTRACOM 13 nell’esecuzione dei lavori; c) si impegna a lasciare indenne ESTRACOM dalla richiesta di oneri o canoni ai sensi del comma 1 dell’articolo 93 del D.Lgs 259 del 1 agosto 2003 e delle revisioni di cui al D.lgs 33/16, fatta salva l'applicazione della tassa temporanea per l'occupazione di spazi ed aree pubbliche TOSAP (ora CUP). Ai sensi dell’art. 93, comma 2, del D.L. 259/2003 e ss.mm.ii il COMUNE: d) si impegna ad adottare strumenti di semplificazione dell’attività amministrativa e di snellimento COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 dei procedimenti di decisione in materia di quantificazione degli oneri di occupazione di suolo, e di verifica della corretta esecuzione delle opere di ripristino, e comunque nel rispetto di quanto previsto dal comma 2 dell’articolo 93 del D.lgs 259 del 1 agosto 2003, del DM del 1 Ottobre 2013 e D.lgs 33/16; e) si impegna ad attivare tutte le necessarie procedure atte ad assicurare la spedita realizzazione delle opere previste, garantendo la piena applicazione delle disposizioni dell’art. 93 del D.Lgs. 259/2003, del DM del 1 Ottobre 2013 e del D.lgs 33/16; f) s'impegna a garantire il supporto e l’assistenza occorrenti a permettere l'accesso di ESTRACOM ai pozzetti per il regolare svolgimento in sicurezza delle attività di installazione e manutenzione dei cavidotti e cavi. 6.6 ESTRACOM terrà indenne e manlevato il COMUNE da ogni e qualsiasi danno e responsabilità verso terzi (ivi inclusi, a titolo meramente esemplificativo, enti concedenti il suolo o il sottosuolo in cui la quota infrastruttura è collocata, imprese esercenti altre infrastrutture di reti adiacenti alla quota infrastruttura) che assumano di aver subito danni e/o altri pregiudizi dallo svolgimento da parte di ESTRACOM di attività di cui alla presente convenzione, prestando a tal uopo apposita polizza a garanzia contro le predette ipotesi di danno. 14 Art. 7. Attività di gestione e manutenzione 7.1 Le Parti concordano che la manutenzione ordinaria dell’infrastruttura di illuminazione pubblica è a carico del COMUNE, mentre gli interventi di manutenzione straordinaria quali il ripristino delle “tubazioni”, “cavidotti” e “cavi” a seguito di lavorazioni di posa in opera della fibra realizzati da ESTRACOM saranno eseguiti da ESTRACOM stessa. ESTRACOM opererà anche in accordo alle disposizioni tecniche del COMUNE solo dopo che esso COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 avrà verificato l’operatività in sicurezza e cioè, mediante distacco di alimentazione elettrica o altro servizio nella parte oggetto dell’intervento, previa comunicazione scritta da presentare almeno 10 giorni prima dell’intervento e comunque in orario diurno. 7.2 Il COMUNE si impegna a informare preventivamente ad ESTRACOM agli indirizzi di cui al successivo art.10, della necessità di eseguire interventi di manutenzione di qualunque genere sulla quota infrastruttura e/o viabilità e pertinenze relative che possano interferire con i cavi posati nella quota infrastruttura. Resta peraltro sin d'ora inteso che il COMUNE non verrà mai ritenuto responsabile per eventuali danni diretti o indiretti che dovessero correre ai cavi o altri componenti di ESTRACOM in caso di guasti o eventi accidentali agli impianti dell’infrastruttura comunale. 7.3 ESTRACOM si impegna a comunicare preventivamente al COMUNE la necessità di eseguire interventi di manutenzione della rete in fibra ottica che possano interferire con gli impianti di illuminazione pubblica o altro servizio agli indirizzi di cui al successivo art. 10. 7.4 Il COMUNE resta sollevato da qualunque responsabilità per danni involontariamente cagionati alla rete di telecomunicazioni in fibra ottica e relativi disservizi, anche qualora le procedure sopra descritte siano state correttamente seguite. Art. 8. Assicurazione Responsabilità Civile 8.1 ESTRACOM dichiara di essere in possesso di idonea copertura di Responsabilità Civile verso Terzi (RCT) con polizza UNIPOL SAI nr.183626706, per un massimale di 60.000.000,00 euro, e di 15 impegnarsi a mantenerla attiva per un periodo di tempo di 2 anni, successivo alla conclusione dei lavori. 8.2 Per l’esecuzione dei lavori, ESTRACOM dichiara di utilizzare ditte appaltatrici in possesso di idonee coperture assicurative di Responsabilità Civile verso Terzi (RCT) e di Responsabilità Civile Operai (RCO) . 8.3 Prima dell’inizio dei lavori, ESTRACOM si impegna a consegnare al COMUNE le polizze COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 assicurative, comprese quelle delle ditte appaltatrici, e le attestazioni di pagamento dei premi assicurativi. Art. 9. Garanzia Fideiussoria 9.1 A garanzia della corretta esecuzione dei ripristini (strade, marciapiedi, verde pubblico), di eventuali riparazioni dei danni all’infrastruttura comunale (pubblica illuminazione) e dell’adempimento di tutti gli obblighi pecuniari e contrattuali derivanti dalla presente scrittura, ESTRACOM si impegna a presentare idonea fideiussione bancaria o assicurativa, a semplice e prima richiesta scritta. 9.2 L’importo di detta fideiussione, viene determinato in euro 15.000 e dovrà essere presentata contestualmente alla presentazione della prima istanza di richiesta della Concessione di occupazione suolo pubblico per l’esecuzione dei lavori. 9.3 La fideiussione avrà validità fino al completamento dei lavori di ripristino. 9.4 Al completamento di tutte le opere e a seguito della verifica positiva dello stato dei luoghi effettuata in contradditorio con il COMUNE, ESTRACOM richiederà lo svincolo della fideiussione. Art. 10. Riservatezza 10.1 Le informazioni relative al presente contratto sono oggetto di accesso nei limiti di legge. Ciascuna Parte si impegna a mantenere strettamente riservate le informazioni relative al presente contratto, e pertanto a non divulgarle senza il preventivo consenso scritto dell’altra Parte. 16 Art. 11. – Trattamento dati personali 11.1 Il COMUNE dichiara che, in esecuzione agli obblighi imposti dal Regolamento UE 679/2016 in materia di protezione dei dati personali, relativamente alla presente convenzione, potrà trattare i dati personali del contraente sia in formato cartaceo sia elettronico, per finalità pubblica, di natura precontrattuale e contrattuale e per i connessi eventuali obblighi di legge. Il trattamento dei dati avverrà ad opera di soggetti incaricati dello specifico trattamento tenuti ad osservare la riservatezza, e COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 ad operare con modalità correlate alle finalità e comunque in modo da garantire la sicurezza e la protezione dei dati trattati. In qualsiasi momento potranno essere esercitati i diritti di cui al Regolamento UE 679/2016. Il Titolare del trattamento è il Comune di Collesalvetti. Art. 12. Comunicazioni 12.1 Riferimenti Operativi Comune Collesalvetti Ufficio XXX, Sede: Via XXXXXX 2 XXX. tel. XXXXXXX, PEC: comune.XXX@postacert.toscana.it Riferimenti Operativi “ESTRACOM Spa” Sede Legale: via Panziera,16 –Prato Operativa: via Panziera,16 Prato – tel.: 0574/872904. PEC: estracom@cert.estraspa.it 12.2 Le parti si danno reciprocamente atto che il presente accordo è il risultato di concorde definizione e, pertanto, è sottratto all'applicazione delle previsioni di cui agli artt.1341 e 1342 del codice civile. Art. 13. Registrazione 13.1 La registrazione è prevista solamente in caso d'uso ai sensi dell’art. 4 tab II del DPR 131/1866 e s.m. e i. e. a tal fine, il relativo importo, sarà eventualmente in capo ad ESTRACOM. Art. 13. Risoluzione 13.1 La presente convenzione si intenderà automaticamente risolta: a) ai sensi dell'articolo 1456 del codice civile, nel caso in cui venga dato inizio a procedure di fallimento, liquidazione, concordato preventivo, amministrazione controllata o a qualsivoglia altra procedura che denoti il venir meno della solvibilità o dell'affidabilità complessiva di ESTRACOM. 17 Tale condizione risolutiva si intende apposta nell'interesse della parte non oggetto di tali procedure, la quale potrà rinunciarvi entro 15 (quindici) giorni dal fatto. b) per gravi e documentati motivi di interesse pubblico, concernenti situazioni di pregiudizio per la pubblica incolumità; c) per il contravvenire anche di una sola delle clausole stabilite dalla presente convenzione. 13.2 In caso di risoluzione della presente convenzione per una delle ipotesi di cui al presente articolo, COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 restano salvi i diritti maturati dalle parti sino a tale momento. Art. 14. Normativa applicabile 14.1 Per quanto non previsto dal presente contratto, le parti fanno espresso riferimento alle leggi vigenti ed applicabili in materia. Art. 15 Foro competente 15.1 Qualsiasi controversia dovesse insorgere tra le parti in ordine all'interpretazione, applicazioni o esecuzione della presente convenzione sarà deferita alla competenza territoriale esclusiva del Foro di Livorno. 15.2 Resta inteso che in pendenza di giudizio e fino all'emissione della relativa sentenza le parti assicureranno la regolare esecuzione delle attività previste in convenzione, salvo differente misura disposta motivatamente dall’autorità giudiziaria. Art. 16 Elenco Allegati 16.1. Alla presente Convenzione sono allegati i seguenti elaborati: - Relazione Tecnica descrittiva dell’intervento e delle opere che verranno realizzate. - Planimetrie del Progetto esecutivo con indicazione dettagliata delle infrastrutture esistenti e di nuova realizzazione che saranno oggetto dell’intervento. - Piano di Sicurezza in fase di progettazione ed esecuzione dell’opera. 18",
+  "DOC-3d3ad603d7506ab0": "Proposta n. 102 COPIA Settore STRATEGICO DETERMINAZIONE DEL RESPONSABILE Registro Generale n. 738 del 11/08/2026 Oggetto: Affidamento diretto ex art. 50, c. 1, lett. b) D.Lgs. 36/2023 per la fornitura di n. 2 linee dati destinate al sistema di videosorveglianza comunale - Impegno di spesa. Beneficiario: Fastweb Spa Il sottoscritto Dott. Maurizio Martellini, Dirigente del settore Amministrativo, in virtù del Decreto del Sindaco n. 6 del 08.06.2026, ai sensi dell’art. 107 del D.Lgs. n. 267/2000, in assenza di conflitto di interessi, anche potenziale, ai sensi dell’art. 6-bis della L. n. 241/1990; Richiamato il Decreto del Sindaco n. 8 del 07.08.2026 con il quale il sottoscritto Dirigente del Settore Amministrativo è stato individuato quale sostituto del Dirigente del Settore Strategico in caso di assenza, impedimento o vacanza del posto; Visti: • lo Statuto Comunale nei quali è disciplinata l’attribuzione e l’esercizio delle funzioni dirigenziali; • il vigente Regolamento sull’ordinamento degli uffici e dei servizi; • gli artt. 191, 192 e 183 del d.lgs. n. 267/2000 e gli artt. 25 e 27 del vigente Regolamento di contabilità; • il vigente Regolamento comunale sui contratti approvato con deliberazione del Consiglio Comunale n. 46 del 21.04.2009 e ss.mm.ii.; • il D. Lgs. 23.06.2011, n. 118 “Disposizioni in materia di armonizzazione dei sistemi contabili e degli schemi di bilancio delle Regioni, degli enti locali e dei loro organismi; • il D.P.R. n 62/2013, (Codice nazionale di comportamento dei dipendenti pubblici) ed il Codice di comportamento dei dipendenti pubblici del Comune di Collesalvetti, approvato con deliberazione della Giunta comunale n. 39 del 6.04.2023; • la deliberazione n. 121 del 23/12/2025 del Consiglio Comunale di approvazione del bilancio di previsione triennale di competenza 2026-2028; • la deliberazione n. 88 del 26/09/2025 del Consiglio Comunale di approvazione del DUP 2026-2028 e la Nota di Aggiornamento al DUP approvata con Deliberazione n. 119 del 23/12/2025; • la deliberazione n. 35 del 27/02/2026 della Giunta Comunale di approvazione del PEG previsionale 2026- 2028; Comune di Collesalvetti - Determinazione n. 738 del 11/08/2026 1 • la deliberazione n. 46 del 10.03.2026 della Giunta comunale di approvazione del Piano Integrato di Attività e Organizzazione (PIAO) 2026-2028; Premesso che: • con determinazione n. 179 (R.G. n. 655) del 29/07/2024 si affidava il servizio di fornitura di n. 2 linee dati per il progetto di realizzazione di un sistema di videosorveglianza integrato sul territorio comunale; • la suddetta fornitura è in prossima scadenza in data 31 agosto 2026; • al fine di garantire la continuità operativa del sistema di videosorveglianza integrato, la funzionalità delle postazioni di lavoro e la trasmissione dei dati sul territorio, si rende necessario garantire la prosecuzione del servizio senza soluzione di continuità con decorrenza dal 01/09/2026 per la durata di ulteriori 24 mesi; Considerato che: • è fondamentale mantenere l'uniformità tecnologica delle infrastrutture per consentire l'operatività dei collegamenti, la sicurezza della trasmissione e la condivisione tempestiva dei dati tra le varie postazioni di monitoraggio sul territorio comunale; Rilevato che: • l’affidamento in oggetto è di importo inferiore a € 140.000,00 e, pertanto, non sussiste l’obbligo di inserimento nel programma triennale degli acquisti di beni e servizi ai sensi dell’art. 37 del D.Lgs. 36/2023; • l'importo stimato del servizio consente di procedere mediante affidamento diretto ai sensi dell’art. 50, comma 1, lett. b) del D.Lgs. 36/2023; Atteso che: • previa verifica ed indagine conoscitiva, si è accertata la presenza di Convenzioni Consip attive (art. 26 Legge 488/99), ma la soluzione proposta dall'operatore risulta altamente migliorativa sotto il profilo economico; • per la prosecuzione del servizio, si è proceduto a trattativa diretta con l'operatore economico uscente Fastweb S.r.l. (P.IVA 12878470157) P.zza A. Olivetti 1 Milano 20128, richiedendo formale preventivo/proposta contrattuale per la fornitura avente ad oggetto n. 2 linee dati per il progetto di videosorveglianza; • l'operatore economico Fastweb S.r.l. ha trasmesso la Proposta di Acquisto (PDA) per un importo complessivo pari a € 2640,00 oltre IVA al 22% per la durata di 24 mesi; • la proposta economica formulata risulta particolarmente conveniente e vantaggiosa per l'Ente, applicando uno sconto diretto del 50% rispetto ai corrispettivi e ai parametri di costo previsti dalle convenzioni Consip attive per analoga tipologia di servizio; • la suddetta Proposta di Acquisto (PDA) è stata debitamente sottoscritta con firma digitale dal legale rappresentante dell'Ente; • il suddetto operatore economico ha reso idonea dichiarazione sostitutiva attestante l'assenza delle cause di esclusione di cui agli artt. 94 e 95 del D.Lgs. 36/2023 e il possesso dei requisiti di ordine generale, oggetto di verifica d'ufficio ai sensi dell'art. 52, comma 1, del medesimo decreto; Ritenuto di impegnare l'importo complessivo di € 3.220,80 (€2.640,00 oltre IVA 22%) impuntendolo come segue: • € 488,00+292,80 (una tantum) annualità 2026, al capitolo 339.3; • € 1.464,00 annualità 2027, al capitolo 339.3; • € 976,00 annualità 2028, al capitolo 339.3; Comune di Collesalvetti - Determinazione n. 738 del 11/08/2026 2 Accertato che: • le verifiche presso il Casellario Informatico dell’ANAC hanno dato esito negativo circa la presenza di annotazioni interdittive; • la regolarità contributiva è attestata dal DURC online (Protocollo INAIL_50762938), con scadenza validità al 13/09/2026; • è stato acquisito il CIG: BCABAE3298; Verificato il rispetto delle regole di finanza pubblica ai sensi dell’art. 183, co. 8 del D.Lgs. 267/2000; Accertato altresì che nel presente appalto sono assenti rischi interferenziali e pertanto nessuna somma riguardante la gestione dei suddetti rischi viene riconosciuta all’operatore economico, né è stato predisposto il Documento unico di valutazione dei rischi interferenziali (DUVRI) Espresso il parere favorevole di regolarità tecnica del presente atto, attestante regolarità e correttezza dell'azione amministrativa, ai sensi dell'art. 147-bis D. Lgs. n. 267/2000, che con la sottoscrizione viene attestato; Ritenuto che l’istruttoria propedeutica all'emanazione del presente atto consente di attestarne la regolarità e la correttezza amministrativa ai sensi e per gli effetti di quanto disposto dall’art. 147 bis del d.lgs.n. 267/2000 previa sottoscrizione. DETERMINA 1. di richiamare integralmente le premesse, che costituiscono parte integrante e sostanziale del presente provvedimento; 2. di impegnare, ai sensi dell'art. 183 del D.Lgs. n. 267/2000, la somma complessiva di € 3.220,80, IVA compresa, a favore di Fastweb S.r.l. (P.IVA 12878470157), con sede P.zza A. Olivetti 1 Milano 20128, per la fornitura di dati n.2 linee dati per progetto videosorveglianza, imputando la predetta spesa al capitolo 339.3 del Bilancio di previsione 2026 e del Bilancio pluriennale 2025/2027, che presenta la necessaria disponibilità, il tutto come di seguito meglio evidenziato: Beneficiario Capitolo (codice Anno di (Denominazione, Importo CIG meccanografico e capitolo) esigibilità CF/PI, codice beneficiar Classificazione: € 780,80 2026 1.03.02.05.001 Fastweb S.r.l. € 1.464,00 2027 Missione/programma: P.zza A. Olivetti 1 BCABAE3298 03.02 € 976,00 2028 Milano 20128 CAP 339.3 3. di attestare la regolarità e la correttezza del presente atto ai sensi e per gli effetti di quanto dispone l’art.147- bis del D.Lgs. 267/2000; Comune di Collesalvetti - Determinazione n. 738 del 11/08/2026 3 4. di disporre la nomina del Responsabile del Progetto (RUP) ai sensi dell’art. 15 del D.Lgs. 36/2023 in persona della dott.ssa Norida Di Maio, che dichiara di non trovarsi in una situazione di conflitto, neanche potenziale, ai sensi dell’art. 6 bis della L. n. 241 /1990; 5. di dare atto che l’esigibilità dell’obbligazione derivante dal presente atto, secondo il principio della competenza finanziaria potenziata, avverrà entro il 31 dicembre 2026; 6. di dare atto che le somme realtive alla annualità 2027 e 2028 saranno impegnate sul bilancio 2025/2027, trattandosi si servizio afferente ad una funzione fonamentale dell'ente, in particolare ai sensi dell'art.19, comma 1, lett. a) del D.L. n.95/2012 convertito con L. n.135/2012, \"prestazioni periodiche o continuative di servizi di cui all'art. 1677 del codice civile\", in applicazione di quanto previsto dall'art. 183, comma 6, lett. b) del D.Lgs. n.267/2000; 7. di dare atto che, che, ai sensi dell'art. 3, comma 8, della L. n. 136/2010 e s.m.i., l'appaltatore assume gli obblighi di tracciabilità dei flussi finanziari previsti dalla medesima legge; 8. che ai sensi e per effetti di tale norma, la ditta aggiudicataria deve comunicare, mediante la compilazione di apposita autocertificazione, entro 7 giorni dal ricevimento dell'aggiudicazione definitiva, le coordinate bancarie o postali dedicate in via non escluso IVA alle commesse delle Pubbliche Amministrazioni e che nel caso di mancato rispetto e di dichiarazione mendace: • il contratto diverrà nullo di diritto e risolto automaticamente; • verranno applicate le sanzioni elencate all'art.6 della legge medesima; 9. di comunicare al soggetto beneficiario il presente atto a seguito della sua esecutività, ai sensi dell’art. 191, comma 1, del D.Lgs. n. 267/2000; tale comunicazione conterrà tutti i dati essenziali del rapporto negoziale (amministrazione aggiudicatrice, fornitore aggiudicatario, oggetto della fornitura, dati identificativi, tecnici ed economici dell’offerta, informazioni per la consegna e la fatturazione, ecc.) e, pertanto, il relativo documento di accettazione debitamente sottoscritto equivarrà a tutti gli effetti a stipula del contratto; 10. di dare atto che la presente spesa soggiace alle regole dello Split Payment di cui all'art. 1 comma 629, lett.b), della Legge 23/12/2014 n. 190; 11. di dare atto che ai sensi dell’art. 56, comma 6, del D. Lgs. n. 118/2011 e del comma 8 dell’art. 183 del D. Lgs.n. 267/2000, i pagamenti conseguenti al presente impegno di spesa sono compatibili con il programma dei pagamenti di cui ai relativi stanziamenti di cassa del bilancio di previsione approvato e con le regole di finanza pubblica in materia di pareggio di bilancio; 12. di dare atto che le fatture che le fatture dovranno riportare obbligatoriamente il Codice Identificativo Gara CIG BCABAE3298 e il Codice Univoco per la fatturazione elettronica 4VY3DU, e verranno liquidate e pagate entro 30 giorni dalla data di ricevimento da parte di questo Ente, fatte salve eventuali contestazioni in merito alla regolare esecuzione della prestazione e previa verifica della regolarità contributiva mediante acquisizione del DURC online (DOL); 13. di adempiere agli obblighi di pubblicazione di cui all'art. 1 co. 32 L. 190/2012 e di cui all'art. 23 D.lgs. n.33/2013 (Amministrazione Trasparente); 14. di dare atto che avverso la presente determinazione è ammesso ricorso giurisdizionale innanzi al TAR Toscana nel termine di giorni 30 dalla pubblicazione all'albo pretorio dell'ente e dalla ricezione della comunicazione di aggiudicazione definitiva; 15. di disporre la registrazione del presente atto nel Registro delle Determinazioni del Settore Strategico, nonché la conseguente trasmissione al Servizio Finanziario per la registrazione nelle scritture contabili. Comune di Collesalvetti - Determinazione n. 738 del 11/08/2026 4 Il Responsabile dell'Area Maurizio Martellini Comune di Collesalvetti - Determinazione n. 738 del 11/08/2026 5 VISTO DI REGOLARITA' CONTABILE Vista la determinazione N. 738 del 11/08/2026, il Responsabile del Servizio Finanziario rilascia, ai sensi dell'art. 147-bis comma 1 del D.Lgs. n. 267/2000, il visto di regolarità contabile Favorevole attestante la copertura finanziaria e l'avvenuta registrazione nelle scritture contabili come di seguito riportato. Impegno Descrizione: Affidamento diretto ex art. 50, c. 1, lett. b) D.Lgs. 36/2023 per la fornitura di n. 2 linee dati destinate al sistema di videosorveglianza comunale - Impegno di spesa. Beneficiario: Fastweb Spa CIG: BCABAE3298 Piano Variazione Finanziario Missione Capitolo Descrizione Capitolo Esercizio Impegno SICUREZZA URBANA - Utenze 1.03.02.05.001 03.02 339.3 2026 telefoniche N. Provvisorio N. Definitivo Importo N. Sub-impegno Importo sub-impegno 499 3962 780,80 0 0,00 DESCRIZIONE CREDITORE H Denominazione: FASTWEB SPA Codice Fiscale: 12878470157 - P.Iva: 12878470157 Impegno Descrizione: Affidamento diretto ex art. 50, c. 1, lett. b) D.Lgs. 36/2023 per la fornitura di n. 2 linee dati destinate al sistema di videosorveglianza comunale - Impegno di spesa. Beneficiario: Fastweb Spa CIG: BCABAE3298 Piano Variazione Finanziario Missione Capitolo Descrizione Capitolo Esercizio Impegno SICUREZZA URBANA - Utenze 1.03.02.05.001 03.02 339.3 2027 telefoniche N. Provvisorio N. Definitivo Importo N. Sub-impegno Importo sub-impegno 499 95 1.464,00 0 0,00 DESCRIZIONE CREDITORE H Denominazione: FASTWEB SPA Codice Fiscale: 12878470157 - P.Iva: 12878470157 Impegno Descrizione: Affidamento diretto ex art. 50, c. 1, lett. b) D.Lgs. 36/2023 per la fornitura di n. 2 linee dati destinate al sistema di videosorveglianza comunale - Impegno di spesa. Beneficiario: Fastweb Spa CIG: BCABAE3298 Piano Variazione Finanziario Missione Capitolo Descrizione Capitolo Esercizio Impegno SICUREZZA URBANA - Utenze 1.03.02.05.001 03.02 339.3 2028 telefoniche N. Provvisorio N. Definitivo Importo N. Sub-impegno Importo sub-impegno 499 46 976,00 0 0,00 DESCRIZIONE CREDITORE Comune di Collesalvetti - Determinazione n. 738 del 11/08/2026 6 H Denominazione: FASTWEB SPA Codice Fiscale: 12878470157 - P.Iva: 12878470157 Collesalvetti, 11/08/2026 Il Responsabile Finanziario f.to Maurizio Martellini Comune di Collesalvetti - Determinazione n. 738 del 11/08/2026 7 _____________________________________________________________________________________________ PUBBLICAZIONE Copia del presente atto è stato pubblicato all'Albo Pretorio on line dell'Ente, per 15 giorni consecutivi, dal 12/08/2026 al 27/08/2026. Collesalvetti, 12/08/2026 L'incaricato CANNISTRARO MARCO Comune di Collesalvetti - Determinazione n. 738 del 11/08/2026 8",
+  "DOC-4b711b2fd3d58a1f": "Proposta n. 143 COPIA Settore STRATEGICO DETERMINAZIONE DEL RESPONSABILE Registro Generale n. 995 del 12/10/2026 Oggetto: Affidamento diretto ex art. 50, c. 1, lett. b) D.Lgs. 36/2023 per la fornitura di n. 2 linee dati destinate al sistema di videosorveglianza comunale - integrazione impegno di spesa. Beneficiario: Fastweb Spa La sottoscritta Norida Di Maio, in virtù del decreto del Sindaco del Comune di San Giuliano Terme n. 94 del 9/10/2024 di nomina a Segretario Titolare della convenzione di segreteria tra i Comuni di San Giuliano Terme e Collesalvetti, la quale dichiara di trovarsi in assenza di conflitto interessi ai sensi dell’art. 6 bis della legge 241/1990, come introdotto dalla legge n. 190/2012; Visto il decreto del Sindaco n. 4 del 16.04.2026 con il quale si attribuiva al Segretario Generale, in aggiunta alle ulteriori funzioni attribuite con Decreto n. 37 del 5.11.2024, le funzioni aggiuntive di coordinamento organizzativo risorse umane; pianificazione strategica e performance; servizi e consulenza legale; innovazione tecnologica e intelligenza artificiale con decorrenza 16.04.2026 e di attribuire inoltre con medesima decorrenza “ad interim” la direzione del settore amministrativo, per il periodo limitato alla nomina del dirigente amministrativo, ai sensi dell’art. 110, comma 1, del d.lgs. 18 agosto 2000, n. 267 (Tuel). Visti: • lo Statuto Comunale nei quali è disciplinata l’attribuzione e l’esercizio delle funzioni dirigenziali; • il vigente Regolamento sull’ordinamento degli uffici e dei servizi; • gli artt. 191, 192 e 183 del d.lgs. n. 267/2000 e gli artt. 25 e 27 del vigente Regolamento di contabilità; • il vigente Regolamento comunale sui contratti approvato con deliberazione del Consiglio Comunale n. 46 del 21.04.2009 e ss.mm.ii.; • il D. Lgs. 23.06.2011, n. 118 “Disposizioni in materia di armonizzazione dei sistemi contabili e degli schemi di bilancio delle Regioni, degli enti locali e dei loro organismi; • il D.P.R. n 62/2013, (Codice nazionale di comportamento dei dipendenti pubblici) ed il Codice di comportamento dei dipendenti pubblici del Comune di Collesalvetti, approvato con deliberazione della Giunta comunale n. 39 del 6.04.2023; Comune di Collesalvetti - Determinazione n. 995 del 12/10/2026 1 • la deliberazione n. 121 del 23/12/2025 del Consiglio Comunale di approvazione del bilancio di previsione triennale di competenza 2026-2028; • la deliberazione n. 88 del 26/09/2025 del Consiglio Comunale di approvazione del DUP 2026-2028 e la Nota di Aggiornamento al DUP approvata con Deliberazione n. 119 del 23/12/2025; • la deliberazione n. 35 del 27/02/2026 della Giunta Comunale di approvazione del PEG previsionale 2026- 2028; • la deliberazione n. 46 del 10.03.2026 della Giunta comunale di approvazione del Piano Integrato di Attività e Organizzazione (PIAO) 2026-2028; Richiamata la determinazione n. 179 (R.G. n. 655) del 29/07/2024 dove si affidava il servizio di fornitura di n. 2 linee dati per il progetto di realizzazione di un sistema di videosorveglianza integrato sul territorio comunale alla ditta Fastweb S.p.a. P.Iva n.12878470157 con sede in P.zza A. Olivetti 1 Milano 20128 ed assunto l'impegno di spesa n. 2026.3962 di € 3.220,80 sul Cap. 339.3 \"SICUREZZA URBANA - Utenze telefoniche\" - codice bilancio 03.02 - 1.03.02.05.001 del BP 2026/2028; Considerato che: • in fase di esecuzione degli interventi tecnici per l'attivazione del collegamento presso la sede della Polizia Locale (sita in Via Nino Bixio n. 60, Collesalvetti), l'operatore incaricato ha riscontrato rilevanti criticità di natura tecnico-strutturale per la stesura dei cavi di rete; • al fine di superare le predette problematiche e garantire la continuità operativa del progetto, la ditta fornitrice ha proposto la variazione della soluzione tecnologica tramite passaggio ad architettura FWA (Fixed Wireless Access); • la suddetta variante tecnologica comporta un maggior costo pari a complessivi € 1.903,20 (comprensivo di IVA se dovuta), come risultante dalla Proposta di Adesione (PDA) allegata al presente atto quale parte integrante e sostanziale; Ritenuto, pertanto, necessario procedere all'integrazione dell'impegno n. 2026.3962 - 2027.95 - 2028.46 per un importo complessivo di € 1.903,20 (€ 1.560,00 oltre IVA 22%), al fine di garantire la copertura finanziaria per il perfezionamento della fornitura ed il completamento dell'impianto di videosorveglianza, impuntandolo la relativa spesa sul Cap. 339.3 secondo la seguente articolazione pluriennale: • esercizio 2026: € 439,20 (€ 360,00 oltre IVA al 22%, comprensivi di € 120,00 per quota una tantum) impegno n.3962; • Esercizio 2027: € 878,40 (€ 720,00 oltre IVA al 22%) impegno n.95; • Esercizio 2028: € 585,60 (€ 480,00 oltre IVA al 22%) impegnno n.46; Accertato che: • le verifiche presso il Casellario Informatico dell’ANAC hanno dato esito negativo circa la presenza di annotazioni interdittive; • la regolarità contributiva è attestata dal DURC online (Protocollo INAIL_50762938), con scadenza validità al 13/09/2026; • è stato acquisito il CIG: BCABAE3298; Verificato il rispetto delle regole di finanza pubblica ai sensi dell’art. 183, co. 8 del D.Lgs. 267/2000; Comune di Collesalvetti - Determinazione n. 995 del 12/10/2026 2 Espresso il parere favorevole di regolarità tecnica del presente atto, attestante regolarità e correttezza dell'azione amministrativa, ai sensi dell'art. 147-bis D. Lgs. n. 267/2000, che con la sottoscrizione viene attestato; Ritenuto che l’istruttoria propedeutica all'emanazione del presente atto consente di attestarne la regolarità e la correttezza amministrativa ai sensi e per gli effetti di quanto disposto dall’art. 147 bis del d.lgs.n. 267/2000 previa sottoscrizione. DETERMINA 1. di dare atto che le premesse formano parte integrante e sostanziale del presente provvedimento; 2. di approvare la variazione tecnologica (soluzione FWA) e l'adeguamento economico relativi al servizio di fornitura in oggetto, di cui all'allegata Proposta di Adesione (PDA) presentata dalla società Fastweb S.p.a. P.Iva n.12878470157; 3. di integrare l'impegno di spesa n. 2026.3962 - 2027.95 - 2028.46, assunto con determinazione n. 102 (R.G. n. 738) del 11/08/2026, per la somma ulteriore di € 1903,20 (IVA inclusa); 4. di imputare la suddetta maggiore spesa sul Cap. 339.3 \"SICUREZZA URBANA - Utenze telefoniche\" – Codice Bilancio 03.01-1.03.02.05.001 del Bilancio di Previsione 2026, che presenta la necessaria disponibilità, secondo la seguente tabella: Impegno Beneficiario Capitolo (codice Anno di (Denominazione, meccanografico e Importo da CIG esigibilità CF/PI, codice capitolo) integrare beneficiar Classificazione: € 439,20 3962 2026 Fastweb S.p.a. 1.03.02.05.001 € 878,40 95 2027 P.zza A. Olivetti 1 Missione/programma: BCABAE3298 Milano 20128 03.02 € 585,60 46 2028 12878470157 Cap 339.3 5. di attestare la regolarità e la correttezza del presente atto ai sensi e per gli effetti di quanto dispone l’art.147-bis del D.Lgs. 267/2000; 6. di disporre la nomina del Responsabile del Progetto (RUP) ai sensi dell’art. 15 del D.Lgs. 36/2023 in persona della dott.ssa Norida Di Maio, che dichiara di non trovarsi in una situazione di conflitto, neanche potenziale, ai sensi dell’art. 6 bis della L. n. 241 /1990; 7. di dare atto che l’esigibilità dell’obbligazione derivante dal presente atto, secondo il principio della competenza finanziaria potenziata, avverrà entro il 31 dicembre 2026; 8. di dare atto che le somme realtive alla annualità 2027 e 2028 saranno impegnate sul bilancio 2025/2027, trattandosi si servizio afferente ad una funzione fonamentale dell'ente, in particolare ai sensi dell'art.19, comma 1, lett. a) del D.L. n.95/2012 convertito con L. n.135/2012, \"prestazioni periodiche o continuative di servizi di cui all'art. 1677 del codice civile\", in applicazione di quanto previsto dall'art. 183, comma 6, lett. b) del D.Lgs. n.267/2000; Comune di Collesalvetti - Determinazione n. 995 del 12/10/2026 3 9. di dare atto che, che, ai sensi dell'art. 3, comma 8, della L. n. 136/2010 e s.m.i., l'appaltatore assume gli obblighi di tracciabilità dei flussi finanziari previsti dalla medesima legge; 10. che ai sensi e per effetti di tale norma, la ditta aggiudicataria deve comunicare, mediante la compilazione di apposita autocertificazione, entro 7 giorni dal ricevimento dell'aggiudicazione definitiva, le coordinate bancarie o postali dedicate in via non escluso IVA alle commesse delle Pubbliche Amministrazioni e che nel caso di mancato rispetto e di dichiarazione mendace: • il contratto diverrà nullo di diritto e risolto automaticamente; • verranno applicate le sanzioni elencate all'art.6 della legge medesima; 11. di comunicare al soggetto beneficiario il presente atto a seguito della sua esecutività, ai sensi dell’art. 191, comma 1, del D.Lgs. n. 267/2000; tale comunicazione conterrà tutti i dati essenziali del rapporto negoziale (amministrazione aggiudicatrice, fornitore aggiudicatario, oggetto della fornitura, dati identificativi, tecnici ed economici dell’offerta, informazioni per la consegna e la fatturazione, ecc.) e, pertanto, il relativo documento di accettazione debitamente sottoscritto equivarrà a tutti gli effetti a stipula del contratto; 12. di dare atto che la presente spesa soggiace alle regole dello Split Payment di cui all'art. 1 comma 629, lett.b), della Legge 23/12/2014 n. 190; 13. di dare atto che ai sensi dell’art. 56, comma 6, del D. Lgs. n. 118/2011 e del comma 8 dell’art. 183 del D. Lgs.n. 267/2000, i pagamenti conseguenti al presente impegno di spesa sono compatibili con il programma dei pagamenti di cui ai relativi stanziamenti di cassa del bilancio di previsione approvato e con le regole di finanza pubblica in materia di pareggio di bilancio; 14. di dare atto che le fatture che le fatture dovranno riportare obbligatoriamente il Codice Identificativo Gara CIG BCABAE3298 e il Codice Univoco per la fatturazione elettronica 4VY3DU, e verranno liquidate e pagate entro 30 giorni dalla data di ricevimento da parte di questo Ente, fatte salve eventuali contestazioni in merito alla regolare esecuzione della prestazione e previa verifica della regolarità contributiva mediante acquisizione del DURC online (DOL); 15. di adempiere agli obblighi di pubblicazione di cui all'art. 1 co. 32 L. 190/2012 e di cui all'art. 23 D.lgs. n.33/2013 (Amministrazione Trasparente); 16. di dare atto che avverso la presente determinazione è ammesso ricorso giurisdizionale innanzi al TAR Toscana nel termine di giorni 30 dalla pubblicazione all'albo pretorio dell'ente e dalla ricezione della comunicazione di aggiudicazione definitiva; 17. di disporre la registrazione del presente atto nel Registro delle Determinazioni del Settore Strategico, nonché la conseguente trasmissione al Servizio Finanziario per la registrazione nelle scritture contabili. Il Responsabile dell'Area Dott.ssa Norida Di Maio Comune di Collesalvetti - Determinazione n. 995 del 12/10/2026 4 VISTO DI REGOLARITA' CONTABILE Vista la determinazione N. 995 del 12/10/2026, il Responsabile del Servizio Finanziario rilascia, ai sensi dell'art. 147-bis comma 1 del D.Lgs. n. 267/2000, il visto di regolarità contabile Favorevole attestante la copertura finanziaria e l'avvenuta registrazione nelle scritture contabili come di seguito riportato. Variazioni Impegni Tipo Anno Impegno N. Impegno N.sub Variazione Impegno (Aumento 2026 3962 0 impegno) N. provv impegno Fornitore Data Impegno CIG 0 FASTWEB SPA 08/10/2026 Indirizzo Fornitore Importo Variazione Piazza Adriano Olivetti 1 - 20139 MILANO (MI) 439,20 Importo aggiornato Impegno C.F./P.IVA Fornitore 1.220,00 Tipo Anno Impegno N. Impegno N.sub Variazione Impegno (Aumento 2027 95 0 impegno) N. provv impegno Fornitore Data Impegno CIG 0 FASTWEB SPA 08/10/2026 Indirizzo Fornitore Importo Variazione Piazza Adriano Olivetti 1 - 20139 MILANO (MI) 878,40 Importo aggiornato Impegno C.F./P.IVA Fornitore 2.342,40 Tipo Anno Impegno N. Impegno N.sub Variazione Impegno (Aumento 2028 46 0 impegno) N. provv impegno Fornitore Data Impegno CIG 0 FASTWEB SPA 08/10/2026 Indirizzo Fornitore Importo Variazione Piazza Adriano Olivetti 1 - 20139 MILANO (MI) 585,60 Importo aggiornato Impegno C.F./P.IVA Fornitore 1.561,60 Comune di Collesalvetti - Determinazione n. 995 del 12/10/2026 5 Collesalvetti, 12/10/2026 Il Responsabile Finanziario f.to Maurizio Martellini Comune di Collesalvetti - Determinazione n. 995 del 12/10/2026 6 _____________________________________________________________________________________________ PUBBLICAZIONE Copia del presente atto è stato pubblicato all'Albo Pretorio on line dell'Ente, per 15 giorni consecutivi, dal 20/10/2026 al 04/11/2026. Collesalvetti, 20/10/2026 L'incaricato CANNISTRARO MARCO 1 Beneficiario 2 Codice Fiscale 3 Norma o titolo a base dell'attribuzione 4 Modalità di individuazione del beneficiario 5 Responsabile del Procedimento 6 Importo Comune di Collesalvetti - Determinazione n. 995 del 12/10/2026 7",
+  "DOC-756e282e41cb6dfb": "Proposta n. 172 COPIA Settore STRATEGICO DETERMINAZIONE DEL RESPONSABILE Registro Generale n. 994 del 12/10/2026 Oggetto: Affidamento servizi dati linea videosorveglianza ditta WIND Tre S.p.A. – Impegno di spesa CIG: B28AEE5637 La sottoscritta Dr.ssa Norida Di Maio, in virtù del decreto del Sindaco del Comune di San Giuliano Terme n. 94 del 9/10/2024 di nomina a Segretario Titolare della convenzione di segreteria tra i Comuni di San Giuliano Terme e Collesalvetti, la quale dichiara di trovarsi in assenza di conflitto interessi ai sensi dell’art. 6 bis della legge 241/1990, come introdotto dalla legge n. 190/2012; Visto il decreto del Sindaco n. 4 del 16.04.2026 con il quale si attribuiva al Segretario Generale, in aggiunta alle ulteriori funzioni attribuite con Decreto n. 37 del 5.11.2024, le funzioni aggiuntive di coordinamento organizzativo risorse umane; pianificazione strategica e performance; servizi e consulenza legale; innovazione tecnologica e intelligenza artificiale con decorrenza 16.04.2026 Visti: • lo Statuto Comunale nei quali è disciplinata l’attribuzione e l’esercizio delle funzioni dirigenziali; • il vigente Regolamento sull’ordinamento degli uffici e dei servizi; • gli artt. 191, 192 e 183 del d.lgs. n. 267/2000 e gli artt. 25 e 27 del vigente Regolamento di contabilità; • il vigente Regolamento comunale sui contratti approvato con deliberazione del Consiglio Comunale n. 46 del 21.04.2009 e ss.mm.ii.; • il D. Lgs. 23.06.2011, n. 118 “Disposizioni in materia di armonizzazione dei sistemi contabili e degli schemi di bilancio delle Regioni, degli enti locali e dei loro organismi; • il D.P.R. n 62/2013, (Codice nazionale di comportamento dei dipendenti pubblici) ed il Codice di comportamento dei dipendenti pubblici del Comune di Collesalvetti, approvato con deliberazione della Giunta comunale n. 39 del 6.04.2023; • la deliberazione n. 121 del 23/12/2025 del Consiglio Comunale di approvazione del bilancio di previsione triennale di competenza 2026-2028; Comune di Collesalvetti - Determinazione n. 994 del 12/10/2026 1 • la deliberazione n. 88 del 26/09/2025 del Consiglio Comunale di approvazione del DUP 2026-2028 e la Nota di Aggiornamento al DUP approvata con Deliberazione n. 119 del 23/12/2025; • la deliberazione n. 35 del 27/02/2026 della Giunta Comunale di approvazione del PEG previsionale 2026- 2028; • la deliberazione n. 46 del 10.03.2026 della Giunta comunale di approvazione del Piano Integrato di Attività e Organizzazione (PIAO) 2026-2028; Richiamata la determina n.179 (R.G. n.655) del 29/07/2024 si affidava il servizio di fornitura n.2 linee dati progetto realizzazione di un sistema di videosorveglianza integrato sul territorio comunale; Dato atto che: • per il suddetto affidamento è stato attribuito il Codice Identificativo Gara B28AEE5637; • in data 23/09/2026 prot.20311 è pervenuta la fattura n.2026A000018083 del 21/09/2026, emessa dalla ditta WIND Tre S.p.A. per un importo complessivo di € 341,11; • a seguito delle verifiche contabili effettuate sull'impegno di spesa n.63.2026, è emersa una disponibilità residua insufficiente a coprire l'intero importo della citata fattura, evidenziando una differenza a debito pari a € 125,89; Considerato che: • la predetta incapienza dell'impegno di spesa non è riconducibile all'esecuzione di nuove o maggiori prestazioni rispetto a quelle contrattualmente pattuite, bensì a un mero errore materiale di imputazione contabile ; Verificato che: • la prestazione resa dalla ditta WIND Tre S.p.A. è stata regolarmente eseguita in conformità al contratto e agli standard pattuiti; • si rende pertanto necessario integrare l'impegno di spesa originario per l'importo di € 125,89 al fine di consentire la completa liquidazione del titolo di pagamento ed estinguere il debito nei confronti del fornitore; Accertata che: • la regolarità contributiva della ditta WIND Tre S.p.A. tramite DURC prot. n. 55396980 con scadenza il 01/12/2026; • la disponibilità finanziaria sul Capitolo di PEG cap.339.3 \"Sicurezza urbana - Utenze telefoniche\" 03.02 - 1.03.02.05.0001; DETERMINA 1. di richiamare integralmente le premesse, che costituiscono parte integrante e sostanziale del presente provvedimento; 2. di impegnare, la somma complessiva di € 125,89 IVA compresa, a favore della società WIND Tre S.p.A. (C.F./P.IVA 02517580920), con sede in Via Monte Rosa 91 20149 MILANO, imputando la predetta spesa al capitolo 339.3 del Bilancio di previsione 2026/2028 (annualità 2026), che presenta la necessaria disponibilità, come indicato nella seguente tabella: Comune di Collesalvetti - Determinazione n. 994 del 12/10/2026 2 Capitolo Importo Anno di CIG Beneficiario esigibilità (Denominazione,indir (codice izzo, CF/PI, codice meccanografico e beneficiario) capitolo) WIND Tre Cap.339.3 S.p.A. Via \"Sicurezza Monte Rosa 91 urbana - Utenze € 125,89 20149 telefoniche\" 2026 B28AEE5637 IVA INCLUSA MILANO 03.02 - 02517580920 1.03.02.05.0001 1003686 3. di trasmettere il presente provvedimento al Responsabile del Servizio Finanziario per l'apposizione del visto di regolarità contabile attestante la copertura finanziaria ai sensi dell’art. 183, comma 9 del D.Lgs. n. 267/2000, dando atto che la stessa diverrà esecutiva con l’apposizione della predetta attestazione; 4. di attestare la regolarità e la correttezza amministrativa del presente atto a seguito dell'istruttoria svolta, ai sensi e per gli effetti dell’art. 147-bis del D.Lgs. n. 267/2000; 5. di dare atto che, in applicazione del principio della competenza finanziaria potenziata, l’obbligazione giuridica derivante dal presente atto risulterà esigibile entro il 31 dicembre 2026; 6. di dare atto che il Responsabile del Procedimento (ai sensi della L. 241/1990) è la Dott.ssa Norida Di Maio, la quale attesta l'assenza di situazioni di conflitto di interessi, anche potenziale, in relazione al presente provvedimento; 7. di precisare che avverso il presente atto è ammesso ricorso giurisdizionale al T.A.R. Toscana entro 60 giorni dalla pubblicazione, oppure ricorso straordinario al Presidente della Repubblica entro 120 giorni; 8. di disporre la pubblicazione del presente provvedimento all'Albo Pretorio online dell'Ente e nella sezione \"Amministrazione Trasparente\" del sito istituzionale, ai sensi del D.Lgs. n. 33/2013 e s.m.i. e nel rispetto della normativa vigente in materia di pubblicità e trasparenza. Il Responsabile dell'Area Dott.ssa Norida Di Maio Comune di Collesalvetti - Determinazione n. 994 del 12/10/2026 3 VISTO DI REGOLARITA' CONTABILE Vista la determinazione N. 994 del 12/10/2026, il Responsabile del Servizio Finanziario rilascia, ai sensi dell'art. 147-bis comma 1 del D.Lgs. n. 267/2000, il visto di regolarità contabile Favorevole attestante la copertura finanziaria e l'avvenuta registrazione nelle scritture contabili come di seguito riportato. Variazioni Impegni Tipo Anno Impegno N. Impegno N.sub Variazione Impegno (Aumento 2026 63 0 impegno) N. provv impegno Fornitore Data Impegno CIG 0 WIND TRE S.P.A. 07/10/2026 Indirizzo Fornitore Importo Variazione Via Monte Rosa91 - 20149 MILANO (MI) 125,89 Importo aggiornato Impegno C.F./P.IVA Fornitore 1.490,34 Collesalvetti, 12/10/2026 Il Responsabile Finanziario f.to Maurizio Martellini Comune di Collesalvetti - Determinazione n. 994 del 12/10/2026 4 _____________________________________________________________________________________________ PUBBLICAZIONE Copia del presente atto è stato pubblicato all'Albo Pretorio on line dell'Ente, per 15 giorni consecutivi, dal 20/10/2026 al 04/11/2026. Collesalvetti, 20/10/2026 L'incaricato CANNISTRARO MARCO Comune di Collesalvetti - Determinazione n. 994 del 12/10/2026 5",
+  "DOC-78e40bfe71844453": "Progetto Rete FTTH Zona Industriale “STAGNO” e Zona Industriale “LA CHIUSA” COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 Collesalvetti (LI) Committente: Estracom S.p.A. Via U.Panziera, 16 Prato (PO) Appaltatore: ILES S.r.l. Via F. Vannetti Donnini 18 Prato (PO) Progettazione: FP Ingegneria S.r.l. Via G. Ferraris, 63 Arezzo (AR) Progetto esecutivo Emissioni e Rev. Data Elaborato revisioni 1 Prima emissione 00 Maggio 2025 2 Seconda emissione 01 Gennaio 2026 RELAZIONE 3 TECNICA Progetto rete FTTH Zona Industriale Z.I. “STAGNO” e Z.I. “LA CHIUSA” RELAZIONE TECNICA Gennaio 2026 Sommario 1.1. Premessa .............................................................................................................................................. 3 1.2. Descrizione del progetto....................................................................................................................... 3 1.2.1. Elementi di rete ............................................................................................................................ 3 1.2.2. Area dell’intervento ...................................................................................................................... 4 COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 1.2.3. Riferimenti normativi ................................................................................................................... 6 1.2.4. Criteri di progettazione e scelte progettuali................................................................................. 6 1.2.5. Infrastruttura di posa .................................................................................................................... 7 1.3. Tecniche di scavo .................................................................................................................................. 8 1.3.1. Georadar ....................................................................................................................................... 8 1.3.2. Microtrincea ................................................................................................................................. 8 1.3.3. Scavo tradizionale in Terreno Vegetale ........................................................................................ 8 1.3.4. Scavo tradizionale in Asfalto ......................................................................................................... 9 1.4. Tipologia dei pozzetti ............................................................................................................................ 9 1.4.1. Pozzetti 90x70 ............................................................................................................................. 10 1.4.2. Pozzetti 76x40 .............................................................................................................................11 1.4.3. Pozzetti 45x45............................................................................................................................. 12 Reserved document. It is forbidden to reproduce the document or make it known to third parties. 2 Progetto rete FTTH Zona Industriale Z.I. “STAGNO” e Z.I. “LA CHIUSA” RELAZIONE TECNICA Gennaio 2026 1.1. Premessa La presente relazione ha come obiettivo quello di illustrare i criteri e le soluzioni tecniche adottate per la progettazione dei lavori previsti nelle aree industriali denominate “Stagno” e “La Chiusa” del Comune di Collesalvetti (LI), finalizzati alla realizzazione di una rete in fibra ottica in tecnologia FTTH. Nel seguito e negli allegati alla presente relazione sono descritti il contesto realizzativo e tutti gli COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 interventi previsti dal progetto. 1.2. Descrizione del progetto 1.2.1. Elementi di rete Elemento di rete Descrizione Distribuzione E’ l’area in cui insistono prevalentemente aziende industriali e artigianali e che AIA (Area comprende al proprio interno anche attività commerciali delimitata da una. La Industriale e suddivisione dell’AIA in Aree Elementari e la topologia Multi albero adottata Artigianale) consente di circoscrivere l’effetto di guasti ad un numero limitato di porzioni di rete di accesso. Ai fini del presente progetto, si definisce “unità locale” (UL) la singola unità UL (Unità Locale) immobiliare o anche un raggruppamento di unità immobiliari, a carattere industriale/artigianale facente capo a unico potenziale cliente nonché altri 1 per ogni cliente punti in cui sia necessario un collegamento quali telecamere, colonnine di ricarica, access point WiFi, Stazioni Radio Base, ecc. ll PDE è il nodo di terminazione della rete, in prossimità di una o più UL. Viene PDE (Punto di installato all’interno di un pozzetto 76X40. 1 PDE per ogni edificio o 1 PDE per Distribuzione gruppi di edifici con numero di UL minore o uguale a 6 Edificio) È situato all’interno dell’AIA, in posizione baricentrica rispetto alle UL. Le MINIPOP dimensioni saranno idonee ad ospitare i sistemi di continuità elettrica, gli 1 Minipop per ogni AIA apparati di rete e gli apparati attivi della rete di accesso. Sono le aree in cui è divisa l’AIA contenenti un numero non superiore a 256 Area Elementare fibre ottiche (pari a 42 PDE mod.6) o a 276 fibre ottiche (pari a 46 PDE mod.6). All’interno delle Aree Elementari sarà posizionato un Giunto di Distribuzione o un Cabinet di Distribuzione in base al numero di fibre ottiche raccolte. E’ un giunto posizionato all’interno della propria area elementare di copertura GD (Giunto di in una posizione ottimale al raggiungimento delle UL, al fine di massimizzare il Distribuzione) riutilizzo delle infrastrutture esistenti fino al confine di proprietà privata. Da 1 per ogni Area Elementare contente fino a 276 f.o. tale elemento ottico partiranno i collegamenti di rete secondaria al fine di collegare tutti i PDE. Giunto che raccoglie le fibre necessarie al rilegamento di Centri Commerciali, GP (Giunto di Palazzine di Uffici e/o residenziali con un numero maggiore di 6 UL. 1 GP per ogni edificio o gruppo di edifici Predisposizione) Deve essere posato all’interno di un pozzetto 90x70 su suolo pubblico in con numero di UL maggiore a6 prossimità del punto di accesso all’edificio Reserved document. It is forbidden to reproduce the document or make it known to third parties. 3 Progetto rete FTTH Zona Industriale Z.I. “STAGNO” e Z.I. “LA CHIUSA” RELAZIONE TECNICA Gennaio 2026 1.2.2. Area dell’intervento I perimetri degli interventi previsti dal presente progetto coprono le aree industriali-artigianali individuate all’interno dei Comune di Collesalvetti. Le perimetrazioni delle aree interessate alla progettazione sono indicate nelle figure sotto riportate: COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 Figura 1: Inquadramento area di intervento della Z.I. “STAGNO” Reserved document. It is forbidden to reproduce the document or make it known to third parties. 4 Progetto rete FTTH Zona Industriale Z.I. “STAGNO” e Z.I. “LA CHIUSA” RELAZIONE TECNICA Gennaio 2026 COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 Figura 2: Inquadramento area di intervento della Z.I. “LA CHIUSA” Reserved document. It is forbidden to reproduce the document or make it known to third parties. 5 Progetto rete FTTH Zona Industriale Z.I. “STAGNO” e Z.I. “LA CHIUSA” RELAZIONE TECNICA Gennaio 2026 Le Unità Locali stimate per le aree interessate dal progetto sono riportate in tabella: Area Industriale Unità Locali Z.I. STAGNO 90 Z.I. LA CHIUSA 133 Tabella1: Unità Locali COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 1.2.3. Riferimenti normativi - Decreto Legislativo 33/16 e successive modifiche, recante misure volte a ridurre i costi dell'installazione di reti di comunicazione elettronica ad alta velocità; - Decreto Legislativo 259/03 e successive modifiche, Codice delle comunicazioni elettroniche; - Legge 12/20 e successive modifiche. 1.2.4. Criteri di progettazione e scelte progettuali Il progetto si basa sul risultato dei sopralluoghi effettuati in sito ed è stato ottimizzato tenendo in considerazione i seguenti aspetti: - Utilizzo prioritario di infrastruttura pubblica o di altri operatori esistenti. - Sotto tubazione di infrastrutture di pubblica illuminazione con un numero di minitubi 10/12 mai superiore a 3; - Utilizzo prevalente di tecniche di scavo a minor impatto quali microtrincea; - Scavi di adduzione in microtrincea verso i fabbricati, previsti prevalentemente su stalli di parcheggio, in modo da minimizzare i disagi per la viabilità. I criteri utilizzati nella realizzazione del collegamento massimizzano l’utilizzo delle infrastrutture esistenti (illuminazione pubblica e/o altri operatori) e minimizzano, dove possibile, la realizzazione di nuovi scavi. Reserved document. It is forbidden to reproduce the document or make it known to third parties. 6 Progetto rete FTTH Zona Industriale Z.I. “STAGNO” e Z.I. “LA CHIUSA” RELAZIONE TECNICA Gennaio 2026 1.2.5. Infrastruttura di posa Al fine di ottimizzare i costi, in fase progettuale è stata data ampia priorità all’utilizzo di infrastrutture esistenti nel territorio, in particolar modo infrastruttura di pubblica illuminazione e di terzi operatori. Laddove non è riscontrata alcuna disponibilità nelle reti esistenti per il sottoequipaggiamento con un numero adeguato di minitubi, è stato prevista la realizzazione di nuove infrastrutture utilizzando le seguenti tecniche di scavo: COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 • Microtrincea; • Scavo Tradizionale. Il progetto ha uno sviluppo totale di 5.313 m come da dettaglio di seguito riportato: Zona Industriale \"STAGNO\" Zona Industriale \"LA CHIUSA\" TOPOLOGIA LUNGHEZZA TOPOLOGIA LUNGHEZZA MICROTRINCEA 581 ml MICROTRINCEA 896 ml TRINCEA 170 ml TRINCEA 434 ml ILLUMINAZIONE PUBBLICA 630 ml ILLUMINAZIONE PUBBLICA 411 ml OPERATORI TERZI 1.036 ml OPERATORI TERZI 1.155 ml Totale Complessivo 2.417 ml Totale Complessivo 2.896 ml Tabella 2: Sviluppo infrastruttura Si prevede inoltre la posa delle seguenti tipologie di pozzetti affioranti: • 90x70 cm • 76x40 cm • 45x45 cm Reserved document. It is forbidden to reproduce the document or make it known to third parties. 7 Progetto rete FTTH Zona Industriale Z.I. “STAGNO” e Z.I. “LA CHIUSA” RELAZIONE TECNICA Gennaio 2026 1.3. Tecniche di scavo 1.3.1. Georadar Prima di dare inizio ai lavori di scavo, sarà inoltre eseguita una indagine georadar per verificare nel dettaglio la presenza di sotto-servizi o, eventualmente, la non idoneità del sottofondo al tipo di scavo e adottare gli opportuni accorgimenti preventivi. A tale proposito, è di riferimento la norma COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 UNI 10576 in materia di protezione delle tubazioni gas durante i lavori nel sottosuolo. Il Georadar, definito anche Ground Penetrating Radar (GPR), è uno tra i sistemi più utilizzati per le indagini geofisiche dei terreni e i suoi campi di applicazione sono moltissimi e vari: può essere utilizzato con successo per l'individuazione di strutture geologiche, per la localizzazione di superfici freatiche, di cavità carsiche, di reti di sottoservizi, per indagini archeologiche e per quant’altro implichi la conoscenza di differenziazioni nei materiali del sottosuolo. 1.3.2. Microtrincea Lo scavo in microtrincea, (a ridotto impatto ambientale) normalmente realizzato con apposite macchine con fresa a disco poste in sequenza o integrate in una o più macchine, permette di realizzare il ripristino contestualmente allo scavo. Tale tecnica permette di minimizzare i tempi di esecuzione e di occupazione dello spazio stradale permettendo la gestione del cantiere in tempi ridotti comportando un minor impatto sul traffico. Tale tecnica prevede la realizzazione dello scavo ad una profondità massima di 40 cm, compreso le relative opere provvisionali; la larghezza massima è invece di 5 cm. Quale materiale di riempimento si useranno apposite malte cementizie o malte bituminose monocomponenti a ritiro controllato, idrorepellenti, applicabili a freddo su qualsiasi superfice e per tutta la larghezza del taglio. La malta dovrà avere doti di plasticità tali da garantire adeguata aderenza all’asfalto ed evitare rotture/crepe dell’asfalto circostante anche in condizioni climatiche variabili. Inoltre, il materiale deve presentare caratteristiche di presa tali da permettere il rilascio della sede stradale carrabile e d idonea all’utilizzo in tempi brevissimi (entro 2-3 ore dalla posa). 1.3.3. Scavo tradizionale in Terreno Vegetale Gli scavi da realizzare in tecnica tradizionale saranno eseguiti mediante appositi mezzi meccanici, salvo casi in cui l’imposizione da parte degli Enti interessati o particolari situazioni ne impongano l’esecuzione manuale. La larghezza dello scavo su Terreno Vegetale sarà di 30 cm circa; mentre la Reserved document. It is forbidden to reproduce the document or make it known to third parties. 8 Progetto rete FTTH Zona Industriale Z.I. “STAGNO” e Z.I. “LA CHIUSA” RELAZIONE TECNICA Gennaio 2026 profondità massima sarà di 100 cm; in tutti i casi la profondità dello scavo verrà indicata in via definitiva agli Enti Proprietari e dovrà comunque mantenersi costante il più possibile. L’insieme dei tubi sarà annegato in uno spessore di sabbia che non superi l’estradosso delle tubazioni per più di 10 cm; la profondità di posa sarà comunque rispondente a quanto previsto dal Codice della Strada e relativo Regolamento di Esecuzione e di Attuazione e successive modifiche ed integrazioni. A 30 cm dalla superficie, sarà posato un nastro di segnalazione che certifichi COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 l'esistenza di cavi a fibre ottiche sopra la sezione di scavo destinata all’infrastruttura di telecomunicazione; ciò allo scopo di prevenire danni in opere di scavo successive da parte di altri utilizzatori del sottosuolo. 1.3.4. Scavo tradizionale in Asfalto Gli scavi da realizzare in tecnica tradizionale saranno eseguiti mediante appositi mezzi meccanici, salvo casi in cui l’imposizione da parte degli Enti interessati o particolari situazioni ne impongano l’esecuzione manuale. La larghezza dello scavo su Asfalto sarà di 30 cm circa; mentre la profondità massima sarà di 100 cm; in tutti i casi la profondità dello scavo verrà indicata in via definitiva agli Enti Proprietari e dovrà comunque mantenersi costante il più possibile. L’insieme dei tubi sarà annegato in uno spessore di sabbia che non superi l’estradosso delle tubazioni per più di 10 cm; la profondità di posa sarà comunque rispondente a quanto previsto dal Codice della Strada e relativo Regolamento di Esecuzione e di Attuazione e successive modifiche ed integrazioni. Il riempimento e il ripristino dello scavo saranno eseguiti secondo le norme tecniche indicate nel disciplinare dell’ente proprietario. 1.4. Tipologia dei pozzetti È prevista la posa di tre distinte tipologie di pozzetti, in funzione delle necessità del progetto (tecnologie ottiche presenti, numero di cavi, quantità di scorte ed eventuale presenza di giunti) e dal contesto realizzativo. I pozzetti saranno costituiti dall’elemento di base, dall’anello di sopralzo, la soletta porta chiusino ed il chiusino, tale da risultare affiorante. Per la loro messa in opera si procederà preliminarmente allo scavo a sezione ristretta obbligata di dimensioni e profondità adeguate, in modo tale che il chiusino risulti in linea con il piano stradale. Reserved document. It is forbidden to reproduce the document or make it known to third parties. 9 Progetto rete FTTH Zona Industriale Z.I. “STAGNO” e Z.I. “LA CHIUSA” RELAZIONE TECNICA Gennaio 2026 1.4.1. Pozzetti 90x70 I pozzetti 90x70 in cls armato vengono posati esclusivamente in corrispondenza delle seguenti situazioni: • In prossimità del Minipop • Per l’alloggiamento delle Muffole • Per l’alloggiamento di rilevanti scorte cavo COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 Figura 2: Pozzetto 90x70 Il chiusino utilizzato in opera risponderà alle indicazioni della Norma UNI EN 124, in particolare, sarà in ghisa sferoidale, di classe D 400 e carico di rottura pari a 400 kN. Reserved document. It is forbidden to reproduce the document or make it known to third parties. 10 Progetto rete FTTH Zona Industriale Z.I. “STAGNO” e Z.I. “LA CHIUSA” RELAZIONE TECNICA Gennaio 2026 1.4.2. Pozzetti 76x40 I pozzetti 76x40 in cls armato vengono posati esclusivamente in corrispondenza delle seguenti situazioni: • In corrispondenza di un Punto di Distribuzione Edificio Interrato (PDE) di tipologia interrata • COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 Per l’alloggiamento di scorte cavo • In corrispondenza di attraversamenti stradali Figura 3: Pozzetto 76x40 Il chiusino utilizzato in opera risponderà alle indicazioni della Norma UNI EN 124, in particolare, sarà in ghisa sferoidale, di classe D 400 e carico di rottura pari a 400 kN. Il chiusino utilizzato in opera risponderà alle indicazioni della Norma UNI EN 124, in particolare, sarà in cls, di classe D 400 e carico di rottura pari a 400 kN. Reserved document. It is forbidden to reproduce the document or make it known to third parties. 11 11 Progetto rete FTTH Zona Industriale Z.I. “STAGNO” e Z.I. “LA CHIUSA” RELAZIONE TECNICA Gennaio 2026 1.4.3. Pozzetti 45x45 I pozzetti di questa dimensione vengono posati esclusivamente in corrispondenza delle seguenti situazioni: • In tutti gli altri casi COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 Figura 5: Pozzetto 45x45 Il chiusino utilizzato in opera risponderà alle indicazioni della Norma UNI EN 124, in particolare, sarà in ghisa sferoidale, di classe D 400 e carico di rottura pari a 400 kN. Reserved document. It is forbidden to reproduce the document or make it known to third parties. 11 12",
+  "DOC-9039709ef14bb603": "PARTICOLARE SEZIONE TIPO SCAVO SEZIONE TIPO SCAVO SCAVO A SEZIONE OBBLIGATA TECNICA NO-DIG TRADIZIONALE TRADIZIONALE CON RIEMPIMENTO Scala 1:10 IN ASFALTO IN STERRATO IN CEMENTO Scala 1:10 Scala 1:10 Scala 1:10 PIANO STRADALE TAPPETINO PAVIMENTAZIONE 3.00 CEMENTO 2.50 BINDER 7.00 30.00 20.00 MATERIALE DI 20.00 in presenza di sottoservizi e NASTRO DI RIEMPIMENTO SEGNALAZIONE 40.00 ostacoli la profondità può variare; Profondità media di NASTRO DI COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 nelle risalite il no-dig sarà alla perforazione: 2.00 mt SEGNALAZIONE stessa quota del pozzetto 100.00 min 100.00 SABBIA O TERRENO MATERIALE DI VAGLIATO FINO A 3 BUNDLE RIEMPIMENTO MATERIALE ARIDO DA 1 a 3 FENDER 21 MINITUBI 12 mm 65.00 DI RIEMPIMENTO 21 MINITUBI 14 mm 30.00/40.00 SABBIA O TERRENO SABBIA O TERRENO VAGLIATO VAGLIATO DA 1 a 3 FENDER DA 1 a 3 FENDER 21 MINITUBI 14 mm 21 MINITUBI 14 mm SEZIONE LONGITUDINALE TECNOLOGIA \"NO DIG\" p.d.c. fino a 40.00 30.00/40.00 buca di spinta buca di spinta 1,5 x1,5 mt 1,5 x1,5 mt SEZIONE TIPO IN CANALA VTR/FeZn 175x70 mm Scala 1:2 SEZIONE TIPO SCAVO IN ASFALTO IN MINITRINCEA TRADIZIONALE PARTICOLARE TECNICA MICROTRINCEA FINO A 21 MINITUBI Scala 1:10 Scala 1:10 10/12 mm TAPPETINO TAPPETINO 3.00 3.00 RIEMPIMENTO 70 mm IN MALTA nom. 30.00 min. 35.00* min. 35.00* fino a 40.00 CONGLOMERATO CONGLOMERATO FINO A CEMENTIZIO 7 MINITUBI 10/12 mm CEMENTIZIO max. 50.00 max. 50.00 10.00 FINO A 3 FENDER 175 mm 21 MINITUBI 14 mm fino a 2.50 180 mm FINO A 3 BUNDLE 21 MINITUBI 12 mm 10.00/15.00 10.00/15.00 *La quota altimetrica del ricoprimento della struttura di contenimento dell'infrastruttura digitale è pari a: - min. 40 cm in ambito extraurbano Particolari Costruttivi Scavi - min. 35 cm in ambito urbano Data: Gennaio 2026 Scala: Varie",
+  "DOC-a5116a819cd5789a": "POZZETTO 76X40 POZZETTO 90X70 POZZETTO 45X45 COMUNE DI COLLESALVETTI - AOOCCOL - 01 - 0019693 - Ingresso - 17/09/2026 - 11:42 Particolari Costruttivi Pozzetti Data: Gennaio 2026 Scala: NN",
+  "DOC-e63c60dce14754ee": "",
+  "PM-COLLE-ORD-10-2024": "COPIA Registro Generale nr. 9 ORDINANZA Servizio n. 8 - Polizia Municipale N. 10 DEL 16/01/2024 OGGETTO: LAVORI STRADALI PER POSA FIBRA OTTICA - STAGNO, VIA BERLINGUER E VIA VERGA - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE Vista la vigente macrostruttura organizzativa approvata con atto della G.M. n.22 del 21/02/2020 e modificata con successivo atto della G.M. n.09 del 03/02/2022; Visto il Decreto del Sindaco n.4 del 31/03/2022 con il quale viene confermata al Comandante della Polizia Municipale la responsabilità del Servizio N.8 – Polizia Municipale, con titolarità di posizione organizzativa e con attribuzione contestuale di poteri, responsabilità e competenze previste dall’art.4 del Regolamento per l’istituzione delle Posizioni Organizzative; Vista l’istanza pervenuta in data 15/01/2024 con la quale Fastweb Spa chiede un provvedimento di disciplina temporanea della viabilità per eseguire lavori stradali finalizzati alla posa di fibra ottica in Stagno – Via Berlinguer e Via Verga; Vista l’Autorizzazione n.03/2024 rilasciata dal Responsabile del Servizio LL.PP. in data 12/01/2024; Rilevata la necessità di provvedere in ordine alla disciplina temporanea e straordinaria della circolazione stradale; Visto lo Statuto del Comune ; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA A partire dal 05/02/2024 e fino al termine dei lavori previsto per il 09/02/2024, nel centro abitato di Stagno: In Via Berlinguer: il restringimento della carreggiata con eventuale istituzione della circolazione a senso unico alternato regolato a vista, limitatamente al tratto di volta in volta interessato dal cantiere stradale; In Via Verga: la istituzione del divieto di sosta permanente su ambo i lati (con applicazione della rimozione forzata) ed il restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o con movieri, limitatamente al tratto di volta in volta interessato dal cantiere stradale; DISPONE Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice; Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia in orario diurno che notturno, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere e, quando necessario, alla regolazione dei flussi veicolari con personale tecnico idoneamente formato e numericamente congruo; Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92; Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione n.03/2024 rilasciata dal Responsabile del Servizio LL.PP. in data 12/01/2024, già in possesso della Ditta; DISPONE ALTRESI’ L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge. La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente della Repubblica entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Titolare di Posizione Organizzativa del Servizio N. 8 – Polizia Municipale. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. Il Responsabile del Servizio f.to Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-104-2026": "COPIA Registro Generale nr. 109 ORDINANZA POLIZIA MUNICIPALE N. 104 DEL 28/09/2026 OGGETTO: LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE. Il sottoscritto Dott. Paolo Cecconi – Comandante della “Polizia Locale”, il quale dichiara di trovarsi in assenza di conflitto interessi ai sensi dell’art. 6 bis della legge 241/1990, come introdotto dalla legge n. 190/2012; VISTI:  la nuova macrostruttura approvata con Deliberazione della Giunta Comunale n.207 del 11/11/2025 con la quale si definisce la struttura organizzativa del Comune di Collesalvetti con decorrenza dal 01/03/2026, posticipata al 16/04/2026 con successiva Deliberazione della Giunta Comunale n.33 del 24/02/2026;  il Decreto n.5 del 18/05/2026 con cui il Sindaco ha attribuito al sottoscritto l’incarico di Elevata Qualificazione – Comandante della Polizia Locale fino al 31/12/2027 senza soluzione di continuità rispetto al pregresso incarico già attribuito Decreto n.5 del 26/05/2025, con attribuzione di funzioni, poteri, competenze e responsabilità dirigenziali ai sensi dell’art.107 D.Lgs. n.267/2000; Vista l’istanza pervenuta in data 28/09/2026 con la quale la Società Fastweb Spa chiede un provvedimento di disciplina temporanea della viabilità in alcune strade del centro abitato di Stagno per eseguire lavori di scavo stradale per posa infrastruttura in fibra ottica; Vista l’Autorizzazione n.17/2026 rilasciata dal Settore Tecnico in data 16/07/2026; Rilevata la necessità di provvedere in merito alla emissione dell’Ordinanza di disciplina della viabilità; Visto lo Statuto del Comune ; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA Dal giorno 05/10/2026 al giorno 17/10/2026, nella fascia oraria compresa tra le ore 8.00 e le ore 18.00 di ogni giorno feriale, la istituzione delle seguenti disposizioni nel centro abitato di Stagno, limitate al punto di volta in volta interessato dal cantiere itinerante:  Via Otto Marzo: divieto di circolazione pedonale su marciapiede per un tratto di mt. 15;  Via Romita, da angolo Via De Gasperi al civico 21: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri;  Via Romita, da Piazza Di Vittorio al civico 70: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri;  Via De Gasperi: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri;  Via Machiavelli: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con mantenimento della già vigente circolazione a senso unico;  Via XXV Aprile: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con mantenimento della già vigente circolazione a senso unico; DISPONE  Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice;  Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere;  Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92;  Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione n.17/2026 rilasciata dal Settore Tecnico in data 16/07/2026, già in possesso della Ditta; DISPONE ALTRESI’  L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge.  La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE  Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente del Consiglio di Stato entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Comandante della Polizia Locale e Titolare di Incarico E.Q. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. f.to Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-105-2026": "COPIA Registro Generale nr. 110 ORDINANZA POLIZIA MUNICIPALE N. 105 DEL 01/10/2026 OGGETTO: LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE. Il sottoscritto Dott. Paolo Cecconi – Comandante della “Polizia Locale”, il quale dichiara di trovarsi in assenza di conflitto interessi ai sensi dell’art. 6 bis della legge 241/1990, come introdotto dalla legge n. 190/2012; VISTI:  la nuova macrostruttura approvata con Deliberazione della Giunta Comunale n.207 del 11/11/2025 con la quale si definisce la struttura organizzativa del Comune di Collesalvetti con decorrenza dal 01/03/2026, posticipata al 16/04/2026 con successiva Deliberazione della Giunta Comunale n.33 del 24/02/2026;  il Decreto n.5 del 18/05/2026 con cui il Sindaco ha attribuito al sottoscritto l’incarico di Elevata Qualificazione – Comandante della Polizia Locale fino al 31/12/2027 senza soluzione di continuità rispetto al pregresso incarico già attribuito Decreto n.5 del 26/05/2025, con attribuzione di funzioni, poteri, competenze e responsabilità dirigenziali ai sensi dell’art.107 D.Lgs. n.267/2000; Vista l’istanza pervenuta in data 28/09/2026 con la quale la Società Fastweb Spa chiede un provvedimento di disciplina temporanea della viabilità in alcune strade del centro abitato di Stagno per eseguire lavori di scavo stradale per posa infrastruttura in fibra ottica; Vista l’Autorizzazione n.20/2026 rilasciata dal Settore Tecnico in data 29/07/2026; Rilevata la necessità di provvedere in merito alla emissione dell’Ordinanza di disciplina della viabilità; Visto lo Statuto del Comune; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA Dal giorno 19/10/2026 al giorno 23/10/2026, nella fascia oraria compresa tra le ore 8.00 e le ore 18.00 di ogni giorno feriale, la istituzione delle seguenti disposizioni nel centro abitato di Stagno, limitate al punto di volta in volta interessato dal cantiere itinerante:  Via Aiaccia: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri;  Via Umbria: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri; DISPONE  Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice;  Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere;  Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92;  Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione n.20/2026 rilasciata dal Settore Tecnico in data 29/07/2026, già in possesso della Ditta; DISPONE ALTRESI’  L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge.  La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE  Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente del Consiglio di Stato entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Comandante della Polizia Locale e Titolare di Incarico E.Q. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. f.to Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-110-2026": "COPIA Registro Generale nr. 116 ORDINANZA POLIZIA MUNICIPALE N. 110 DEL 14/10/2026 OGGETTO: LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE. Il sottoscritto Dott. Paolo Cecconi – Comandante della “Polizia Locale”, il quale dichiara di trovarsi in assenza di conflitto interessi ai sensi dell’art. 6 bis della legge 241/1990, come introdotto dalla legge n. 190/2012; VISTI:  la nuova macrostruttura approvata con Deliberazione della Giunta Comunale n.207 del 11/11/2025 con la quale si definisce la struttura organizzativa del Comune di Collesalvetti con decorrenza dal 01/03/2026, posticipata al 16/04/2026 con successiva Deliberazione della Giunta Comunale n.33 del 24/02/2026;  il Decreto n.5 del 18/05/2026 con cui il Sindaco ha attribuito al sottoscritto l’incarico di Elevata Qualificazione – Comandante della Polizia Locale fino al 31/12/2027 senza soluzione di continuità rispetto al pregresso incarico già attribuito Decreto n.5 del 26/05/2025, con attribuzione di funzioni, poteri, competenze e responsabilità dirigenziali ai sensi dell’art.107 D.Lgs. n.267/2000; Vista l’istanza pervenuta in data 13/10/2026 prot.21831 con la quale la Società Fastweb Spa chiede un provvedimento di disciplina temporanea della viabilità in alcune strade del centro abitato di Stagno per eseguire lavori di scavo stradale per posa infrastruttura in fibra ottica; Vista l’Autorizzazione n.26/2026 rilasciata dal Settore Tecnico in data 21/09/2026; Rilevata la necessità di provvedere in merito alla emissione dell’Ordinanza di disciplina della viabilità; Visto lo Statuto del Comune; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA Dal giorno 26/10/2026 al giorno 20/11/2026, nella fascia oraria compresa tra le ore 8.00 e le ore 18.00 di ogni giorno feriale, la istituzione delle seguenti disposizioni nel centro abitato di Stagno, limitate al punto di volta in volta interessato dal cantiere itinerante:  Via Marx: restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri;  Via Curiel (lato sud): divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con mantenimento della già vigente circolazione a senso unico;  Via Gobetti: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con mantenimento della già vigente circolazione a senso unico;  Via Don Verità: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con mantenimento della già vigente circolazione a senso unico;  Via F.lli Cervi: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con mantenimento della già vigente circolazione a senso unico;  Via La Malfa: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri;  Via Verga: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri;  Via Berlinguer: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri; DISPONE  Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice;  Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere;  Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92;  Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione n.26/2026 rilasciata dal Settore Tecnico in data 21/09/2026, già in possesso della Ditta; DISPONE ALTRESI’  L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge.  La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE  Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente del Consiglio di Stato entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Comandante della Polizia Locale e Titolare di Incarico E.Q. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. f.to Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-111-2026": "COPIA Registro Generale nr. 117 ORDINANZA POLIZIA MUNICIPALE N. 111 DEL 16/10/2026 OGGETTO: LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE - PROROGA Il sottoscritto Dott. Paolo Cecconi – Comandante della “Polizia Locale”, il quale dichiara di trovarsi in assenza di conflitto interessi ai sensi dell’art. 6 bis della legge 241/1990, come introdotto dalla legge n. 190/2012; VISTI:  la nuova macrostruttura approvata con Deliberazione della Giunta Comunale n.207 del 11/11/2025 con la quale si definisce la struttura organizzativa del Comune di Collesalvetti con decorrenza dal 01/03/2026, posticipata al 16/04/2026 con successiva Deliberazione della Giunta Comunale n.33 del 24/02/2026;  il Decreto n.5 del 18/05/2026 con cui il Sindaco ha attribuito al sottoscritto l’incarico di Elevata Qualificazione – Comandante della Polizia Locale fino al 31/12/2027 senza soluzione di continuità rispetto al pregresso incarico già attribuito Decreto n.5 del 26/05/2025, con attribuzione di funzioni, poteri, competenze e responsabilità dirigenziali ai sensi dell’art.107 D.Lgs. n.267/2000; Vista l’istanza pervenuta in data 15/10/2026 al prot.22069 con la quale la Società Fastweb Spa chiede una proroga temporale del già emesso provvedimento di disciplina temporanea della viabilità in alcune strade del centro abitato di Stagno per eseguire lavori di scavo stradale per posa infrastruttura in fibra ottica (Ordinanza n.95/2026); Vista l’Autorizzazione n.17/2026 rilasciata dal Settore Tecnico in data 16/07/2026; Rilevata la necessità di provvedere in merito alla emissione dell’Ordinanza di disciplina della viabilità; Visto lo Statuto del Comune ; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA Dal giorno 19/10/2026 al giorno 23/10/2026, nella fascia oraria compresa tra le ore 8.00 e le ore 18.00 di ogni giorno feriale, la istituzione delle seguenti disposizioni nel centro abitato di Stagno, limitate al punto di volta in volta interessato dal cantiere itinerante:  Via Otto Marzo: divieto di circolazione pedonale su marciapiede per un tratto di mt. 15;  Via Romita, da angolo Via De Gasperi al civico 21: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri;  Via Romita, da Piazza Di Vittorio al civico 70: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri;  Via De Gasperi: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri;  Via Machiavelli: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con mantenimento della già vigente circolazione a senso unico;  Via XXV Aprile: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con mantenimento della già vigente circolazione a senso unico; DISPONE  Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice;  Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere;  Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92;  Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione n.17/2026 rilasciata dal Settore Tecnico in data 16/07/2026, già in possesso della Ditta; DISPONE ALTRESI’  L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge.  La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE  Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente del Consiglio di Stato entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Comandante della Polizia Locale e Titolare di Incarico E.Q. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. f.to Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-112-2026": "COPIA Registro Generale nr. 118 ORDINANZA POLIZIA MUNICIPALE N. 112 DEL 16/10/2026 OGGETTO: LAVORI DI RIPRISTINO SCAVO STRADALE SUCCESSIVO A POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE. Il sottoscritto Dott. Paolo Cecconi – Comandante della “Polizia Locale”, il quale dichiara di trovarsi in assenza di conflitto interessi ai sensi dell’art. 6 bis della legge 241/1990, come introdotto dalla legge n. 190/2012; VISTI:  la nuova macrostruttura approvata con Deliberazione della Giunta Comunale n.207 del 11/11/2025 con la quale si definisce la struttura organizzativa del Comune di Collesalvetti con decorrenza dal 01/03/2026, posticipata al 16/04/2026 con successiva Deliberazione della Giunta Comunale n.33 del 24/02/2026;  il Decreto n.5 del 18/05/2026 con cui il Sindaco ha attribuito al sottoscritto l’incarico di Elevata Qualificazione – Comandante della Polizia Locale fino al 31/12/2027 senza soluzione di continuità rispetto al pregresso incarico già attribuito Decreto n.5 del 26/05/2025, con attribuzione di funzioni, poteri, competenze e responsabilità dirigenziali ai sensi dell’art.107 D.Lgs. n.267/2000; Vista l’istanza pervenuta in data 16/10/2026 prot.22190 con la quale la Società Fastweb Spa chiede un provvedimento di disciplina temporanea della viabilità in alcune strade del centro abitato di Stagno per eseguire lavori di ripristino scavo stradale successivo a posa infrastruttura in fibra ottica; Vista l’Autorizzazione n.10/2026 rilasciata dal Settore Tecnico in data 14/05/2026; Rilevata la necessità di provvedere in merito alla emissione dell’Ordinanza di disciplina della viabilità; Visto lo Statuto del Comune; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA Dal giorno 19/10/2026 al giorno 24/11/2026, nella fascia oraria compresa tra le ore 8.00 e le ore 18.00 di ogni giorno feriale, la istituzione delle seguenti disposizioni nel centro abitato di Stagno, limitate al punto di volta in volta interessato dal cantiere itinerante:  Via F.lli Rosselli: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con mantenimento della già vigente circolazione a senso unico; DISPONE  Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice;  Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere;  Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92;  Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione n.26/2026 rilasciata dal Settore Tecnico in data 21/09/2026, già in possesso della Ditta; DISPONE ALTRESI’  L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge.  La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE  Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente del Consiglio di Stato entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Comandante della Polizia Locale e Titolare di Incarico E.Q. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. f.to Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-118-2026": "COPIA Registro Generale nr. 125 ORDINANZA POLIZIA MUNICIPALE N. 118 DEL 09/11/2026 OGGETTO: LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – COLLESALVETTI, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE. Il sottoscritto Dott. Paolo Cecconi – Comandante della “Polizia Locale”, il quale dichiara di trovarsi in assenza di conflitto interessi ai sensi dell’art. 6 bis della legge 241/1990, come introdotto dalla legge n. 190/2012; VISTI:  la nuova macrostruttura approvata con Deliberazione della Giunta Comunale n.207 del 11/11/2025 con la quale si definisce la struttura organizzativa del Comune di Collesalvetti con decorrenza dal 01/03/2026, posticipata al 16/04/2026 con successiva Deliberazione della Giunta Comunale n.33 del 24/02/2026;  il Decreto n.5 del 18/05/2026 con cui il Sindaco ha attribuito al sottoscritto l’incarico di Elevata Qualificazione – Comandante della Polizia Locale fino al 31/12/2027 senza soluzione di continuità rispetto al pregresso incarico già attribuito Decreto n.5 del 26/05/2025, con attribuzione di funzioni, poteri, competenze e responsabilità dirigenziali ai sensi dell’art.107 D.Lgs. n.267/2000; Vista l’istanza pervenuta in data 09/11/2026 al prot.25107 con la quale la Società Fastweb Spa chiede un provvedimento di disciplina temporanea della viabilità in alcune strade del centro abitato di Collesalvetti per eseguire lavori di scavo stradale per posa infrastruttura in fibra ottica; Vista l’Autorizzazione n.28/2026 rilasciata dal Dirigente del Settore Tecnico in data 28/10/2026; Rilevata la necessità di provvedere in merito alla emissione dell’Ordinanza di disciplina della viabilità; Visto lo Statuto del Comune; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA Dal giorno 16/11/2026 al giorno 04/12/2026, nella fascia oraria compresa tra le ore 8.00 e le ore 18.00 di ogni giorno feriale, la istituzione delle seguenti disposizioni nel centro abitato di Collesalvetti, limitate al punto di volta in volta interessato dal cantiere itinerante:  Via Roma (tratto compreso tra rotatoria Via nenni e rotatoria di collegamento con Via Europa): divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri;  Via del Valico a Pisa: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri;  Via del Vione: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri;  Via Guido Rossa: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri; DISPONE  Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice;  Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere;  Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92;  Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione n.28/2026 rilasciata dal Dirigente del Settore Tecnico in data 28/10/2026, già in possesso della Ditta; DISPONE ALTRESI’  L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge.  La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE  Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente del Consiglio di Stato entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Comandante della Polizia Locale e Titolare di Incarico E.Q. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. f.to Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-13-2022": "COPIA Registro Generale nr. 13 ORDINANZA Servizio n. 8 - Polizia Municipale N. 13 DEL 25/02/2022 OGGETTO: LAVORI DI SCAVO STRADALE PER CONTO FASTWEB – COLLESALVETTI, VIA SAN QUIRICO - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE Vista la vigente macrostruttura organizzativa approvata con atto della G.M. n.22 del 21/02/2020 e modificata con successivo atto della G.M. n.72 del 16/05/2020; Visto il Decreto del Sindaco n.6 del 27/05/2021 con il quale viene confermata al Comandante della Polizia Municipale la responsabilità del Servizio N.8 – Polizia Municipale, con titolarità di posizione organizzativa e con attribuzione contestuale di poteri, responsabilità e competenze previste dall’art.4 del Regolamento per l’istituzione delle Posizioni Organizzative; Vista l’istanza pervenuta in data 22/02/2022 con la quale la Ditta Fastweb Spa chiede un provvedimento di disciplina temporanea della viabilità per eseguire lavori di scavo stradale in Collesalvetti – Via San Quirico; Vista l’Autorizzazione n.04/2022 rilasciata dal Responsabile del Servizio LL.PP. in data 11/02/2022; Rilevata la necessità di provvedere in ordine alla disciplina temporanea e straordinaria della circolazione stradale; Visto lo Statuto del Comune ; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA A partire dal 24/03/2022 e fino al termine dei lavori previsto per il 26/03/2022, in Collesalvetti – Via San Quirico, all’altezza del plesso scolastico: La istituzione del divieto di sosta permanente su ambo i lati (con applicazione della rimozione forzata) ed il restringimento della carreggiata con mantenimento della circolazione a senso unico già vigente in loco; DISPONE Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice; Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia in orario diurno che notturno, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere, avendo particolare attenzione agli orari di ingresso-uscita della Scuola Primaria; Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92; Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione n.17/2021 rilasciata dal Responsabile del Servizio LL.PP. in data 27/08/2021, già in possesso della Ditta; DISPONE ALTRESI’ L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge. La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente della Repubblica entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Titolare di Posizione Organizzativa del Servizio N. 8 – Polizia Municipale. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. Il Responsabile del Servizio f.to Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-16-2021": "COPIA Registro Generale nr. 23 ORDINANZA Servizio n. 8 - Polizia Municipale N. 16 DEL 20/05/2021 OGGETTO: LAVORI DI SCAVO PER POSA CAVI IN FIBRA OTTICA - GUASTICCE, VIA DON STURZO - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE Vista la vigente macrostruttura organizzativa approvata con atto della G.M. n.22 del 21/02/2020 e modificata con successivo atto della G.M. n.72 del 16/05/2020; Visto il Decreto del Sindaco n.13 del 28/05/2020 con il quale viene attribuita al Comandante della Polizia Municipale la responsabilità del Servizio N.8 – Polizia Municipale, con titolarità di posizione organizzativa e con attribuzione contestuale di poteri, responsabilità e competenze previste dall’art.4 del Regolamento per l’istituzione delle Posizioni Organizzative; Vista l’istanza pervenuta in data 13/05/2021 al prot.n.8795 con la quale la Ditta Pizzocarro Stefano di Pavia (per conto di Ultranet Srl) chiede un provvedimento di disciplina temporanea della viabilità per eseguire lavori di scavo stradale finalizzati alla posa di cavi in fibra ottica in Guasticce – Via Don Sturzo; Vista l’Autorizzazione n.304/2021 rilasciata dalla Provincia di Livorno (ente proprietario della SP 555) in data 02/03/2021; Vista l’Autorizzazione n.09/2021 rilasciata dal Responsabile del Servizio LL.PP. in data 02/04/2021; Rilevata la necessità di provvedere in ordine alla disciplina temporanea e straordinaria della circolazione stradale; Visto lo Statuto del Comune ; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA A partire dal 24/05/2021 e fino al termine dei lavori previsto per il 26/05/2021, nel centro abitato di Guasticce:  La istituzione del divieto di sosta permanente su ambo i lati (con applicazione della rimozione forzata) ed il restringimento della carreggiata con istituzione della circolazione a senso unico alternato con regolazione semaforica in Via Don Sturzo, limitatamente al tratto interessato dal cantiere stradale; DISPONE  Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice;  Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia in orario diurno che notturno, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere e, quando necessario, alla regolazione dei flussi veicolari con personale tecnico idoneamente formato e numericamente congruo;  Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92;  Che vengano scrupolosamente rispettate le prescrizioni operative di cui l’Autorizzazione n.304/2021 rilasciata dalla Provincia di Livorno in data 02/03/2021 e all’Autorizzazione n.09/2021 rilasciata dal Responsabile del Servizio LL.PP. in data 16/03/2021, già in possesso della Ditta; DISPONE ALTRESI’  L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge.  La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE  Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente della Repubblica entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Titolare di Posizione Organizzativa del Servizio N. 8 – Polizia Municipale. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. Il Responsabile del Servizio f.to CECCONI PAOLO",
+  "PM-COLLE-ORD-16-2026": "COPIA Registro Generale nr. 16 ORDINANZA Area 8 POLIZIA MUNICIPALE N. 16 DEL 19/02/2026 OGGETTO: OCCUPAZIONE SUOLO PUBBLICO PER LAVORI DI SCAVO STRADALE E POSA IN OPERA CAVO DI FIBRA OTTICA – COLLESALVETTI, VIA EDDA FAGNI - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE Vista la nuova macrostruttura approvata con Deliberazione della Giunta Municipale n.207 del 11/11/2025 con la quale si definisce la struttura organizzativa del Comune di Collesalvetti con decorrenza dal 01/03/2026; Considerato che il suddetto atto dispone che “gli attuali incarichi di Elevata Qualificazione con funzioni dirigenziali, nelle more della procedura di individuazione dei Dirigenti, si intendono ancora assegnati ai rispettivi Responsabili i quali continueranno a svolgere le attribuzioni e competenze previste senza soluzione di continuità dell’attività amministrativa e dei servizi ai cittadini”; Ritenuto per quanto sopra ancora applicabili:  il funzionigramma dell’Ente approvato con Deliberazione della Giunta Comunale n.21 del 25/01/2024;  il Decreto n.5 del 26/05/2025 con cui il Sindaco ha confermato al sottoscritto l’incarico di Elevata Qualificazione dell’Area N.8 - Polizia Municipale fino al 30/11/2026 con attribuzione di funzioni e responsabilità dirigenziali ai sensi dell’art.107 D.Lgs. n.267/2000; Vista l’istanza pervenuta in atti il 11/02/2026 con la quale la Ditta Fastweb Spa richiede l’occupazione temporanea di una porzione di suolo pubblico in Collesalvetti – Via Edda Fagni per esecuzione di lavori di scavo stradale e posa in opera di cavo di fibra ottica; Vista l’autorizzazione del Responsabile LL.PP. n.1 del 12/01/2026; Rilevata la necessità di provvedere in merito alla disciplina straordinaria della circolazione stradale; Visto lo Statuto del Comune; Visto l’art.107/3 del D.Lgs.267/2000; Visto il DPR 11/07/1980 n.753; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA Dal giorno 23/02/2026 al giorno 06/03/2026, In Collesalvetti – Via Edda Fagni, tratto compreso tra Via Piero Ciampi e Via Don Bosco:  Il restringimento della carreggiata, con istituzione della circolazione a senso unico alternato regolato a vista o con movieri;  La istituzione del divieto di sosta su ambo i lati, con rimozione forzata DISPONE  Che la segnaletica idonea allo scopo e necessaria alla sicurezza ed alla informazione degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice dei lavori;  Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione veicolare e pedonale;  Che siano scrupolosamente rispettate le prescrizioni contenute nell’Autorizzazione del Responsabile LL.PP. n.1 del 12/01/2026, già in possesso della Ditta;  L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge.  La trasmissione per l’applicazione agli organi di polizia stradale aventi competenza sul territorio interessato AVVERTE  Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente della Repubblica entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Titolare di E.Q. dell’Area N. 8 – Polizia Municipale. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. f.to Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-17-2024": "ORIGINALE Registro Generale nr. 16 ORDINANZA Servizio n. 8 - Polizia Municipale N. 17 DEL 30/01/2024 OGGETTO: LAVORI DI SCAVO STRADALE PER CONTO TIM SPA – COLLESALVETTI, VIA ROMA 47 - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE Vista la vigente macrostruttura organizzativa approvata con atto della G.M. n.22 del 21/02/2020 e modificata con successivo atto della G.M. n.09 del 03/02/2022; Visto il Decreto del Sindaco n.4 del 31/03/2022 con il quale viene confermata al Comandante della Polizia Municipale la responsabilità del Servizio N.8 – Polizia Municipale, con titolarità di posizione organizzativa e con attribuzione contestuale di poteri, responsabilità e competenze previste dall’art.4 del Regolamento per l’istituzione delle Posizioni Organizzative; Vista l’istanza pervenuta in data 30/01/2024 con la quale la Soc. TIM Spa chiede un provvedimento di disciplina temporanea della viabilità per eseguire lavori di scavo stradale in Collesalvetti – Via Roma 47 (area interna ed antistante al plesso scolastico “M. Marcacci”); Vista l’Autorizzazione n.26/2023 rilasciata dal Responsabile del Servizio LL.PP. in data 05/09/2023; Rilevata la necessità di provvedere in ordine alla disciplina temporanea e straordinaria della circolazione stradale; Visto lo Statuto del Comune ; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA A partire dal 15/02/2023 e fino al termine dei lavori previsto per il 23/02/2024, nella fascia oraria 8.00-18.00, in Collesalvetti – Via Roma 47, limitatamente al tratto interessato dal cantiere stradale: La istituzione del divieto di sosta permanente su ambo i lati (con applicazione della rimozione forzata) ed il restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista da movieri; Il divieto di sosta è esteso ai posti auto adiacenti allo scavo ed ubicati lungo le aiuole antistanti il plesso scolastico; Per garantire la sicurezza degli studenti e del personale scolastico, in corrispondenza dell’orario di ingresso e di uscita della scuola si prescrive: 1. la sospensione totale dei lavori e la stretta sorveglianza del cantiere 2. la presenza obbligatoria di movieri sulla Via Roma DISPONE Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice; Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia in orario diurno che notturno, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere; Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92; Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione del Responsabile del Servizio LL.PP. n.26/2023, già in possesso della Ditta; DISPONE ALTRESI’ L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge. La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente della Repubblica entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Titolare di Posizione Organizzativa del Servizio N. 8 – Polizia Municipale. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. Il Responsabile del Servizio Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-25-2026": "COPIA Registro Generale nr. 27 ORDINANZA Area 8 POLIZIA MUNICIPALE N. 25 DEL 06/03/2026 OGGETTO: OCCUPAZIONE SUOLO PUBBLICO PER LAVORI DI SCAVO STRADALE E POSA IN OPERA CAVO DI FIBRA OTTICA – COLLESALVETTI, VIA EDDA FAGNI - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE Vista la nuova macrostruttura approvata con Deliberazione della Giunta Municipale n.207 del 11/11/2025 con la quale si definisce la struttura organizzativa del Comune di Collesalvetti con decorrenza dal 01/03/2026; Considerato che il suddetto atto dispone che “gli attuali incarichi di Elevata Qualificazione con funzioni dirigenziali, nelle more della procedura di individuazione dei Dirigenti, si intendono ancora assegnati ai rispettivi Responsabili i quali continueranno a svolgere le attribuzioni e competenze previste senza soluzione di continuità dell’attività amministrativa e dei servizi ai cittadini”; Vista la Deliberazione della Giunta Comunale n.33 del 24/02/2026 con la quale è stata posticipata al 16/04/2026 la decorrenza della nuova macrostruttura organizzativa; Ritenuto per quanto sopra ancora applicabili:  il funzionigramma dell’Ente approvato con Deliberazione della Giunta Comunale n.21 del 25/01/2024;  il Decreto n.5 del 26/05/2025 con cui il Sindaco ha confermato al sottoscritto l’incarico di Elevata Qualificazione dell’Area N.8 - Polizia Municipale fino al 30/11/2026 con attribuzione di funzioni e responsabilità dirigenziali ai sensi dell’art.107 D.Lgs. n.267/2000; Vista l’istanza pervenuta in atti il 06/03/2026 con la quale la Ditte Valtellina Spa (esecutore) e Fastweb Spa (committente) richiedono l’occupazione temporanea di una porzione di suolo pubblico in Collesalvetti – Via Edda Fagni per esecuzione di lavori di scavo stradale e posa in opera di cavo di fibra ottica; Vista l’autorizzazione del Responsabile LL.PP. n.1 del 12/01/2026; Rilevata la necessità di provvedere in merito alla disciplina straordinaria della circolazione stradale; Visto lo Statuto del Comune; Visto l’art.107/3 del D.Lgs.267/2000; Visto il DPR 11/07/1980 n.753; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA Dal giorno 16/03/2026 al giorno 31/03/2026, In Collesalvetti – Via Edda Fagni, tratto compreso tra Via Piero Ciampi e Via Don Bosco:  Il restringimento della carreggiata, con istituzione della circolazione a senso unico alternato regolato a vista o con movieri;  La istituzione del divieto di sosta su ambo i lati, con rimozione forzata DISPONE  Che la segnaletica idonea allo scopo e necessaria alla sicurezza ed alla informazione degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice dei lavori;  Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione veicolare e pedonale;  Che siano scrupolosamente rispettate le prescrizioni contenute nell’Autorizzazione del Responsabile LL.PP. n.1 del 12/01/2026, già in possesso della Ditta;  L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge.  La trasmissione per l’applicazione agli organi di polizia stradale aventi competenza sul territorio interessato AVVERTE  Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente della Repubblica entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Titolare di E.Q. dell’Area N. 8 – Polizia Municipale. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. f.to Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-27-2024": "ORIGINALE Registro Generale nr. 24 ORDINANZA Area 8 POLIZIA MUNICIPALE N. 27 DEL 23/02/2024 OGGETTO: LAVORI STRADALI PER NUOVO ALLACCIO IDRICO IN FRAZIONE NUGOLA, VIA DELLE BECCHERIE 52 - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE Vista la macrostruttura approvata con Deliberazione della Giunta Municipale n.4 del 16/01/2024 con la quale si individuano le Aree alle quali si riconducono le funzioni attribuite alle stesse ed il funzionigramma dell’Ente approvato con Deliberazione della Giunta Comunale n.21 del 25/01/2024; Visto il Decreto n.6 del 12/02/2024 con cui il Sindaco ha conferito al sottoscritto l’incarico di Elevata Qualificazione dell’Area N.8 - Polizia Municipale a decorrere dal 15/02/2024, con attribuzione di funzioni e responsabilità dirigenziali ai sensi dell’art.107 D.Lgs. n.267/2000; Vista l’istanza pervenuta in atti il 22/02/2024 con la quale ASA Spa di Livorno chiede un provvedimento di disciplina temporanea della viabilità per eseguire lavori stradali finalizzati alla realizzazione di un nuovo allaccio idrico in Nugola – Via delle Beccherie 52; Vista l’Autorizzazione n.6/2024 rilasciata dal Responsabile del Servizio LL.PP. in data 21/02/2024; Rilevata la necessità di provvedere in ordine alla disciplina temporanea e straordinaria della circolazione stradale; Visto lo Statuto del Comune ; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA A partire dal 25/03/2024 e fino al 27/03/2024, in Nugola – Via delle Beccherie 52, limitatamente al tratto interessato dal cantiere: Il restringimento della carreggiata e la istituzione della circolazione a senso unico alternato con regolazione a vista; La istituzione del divieto di fermata su ambo i lati; DISPONE Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta incaricata dei lavori; Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia in orario diurno che notturno, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere e, quando necessario, alla regolazione dei flussi veicolari con personale tecnico idoneamente formato e numericamente congruo; Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92; Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione n.6/2024 rilasciata dal Comune di Collesalvetti in data 21/02/2024, provvedimento già in possesso della Ditta; DISPONE ALTRESI’ L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge. La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente della Repubblica entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Titolare di Posizione Organizzativa del Servizio N. 8 – Polizia Municipale. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. Il Responsabile del Servizio Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-30-2026": "COPIA Registro Generale nr. 32 ORDINANZA Area 8 POLIZIA MUNICIPALE N. 30 DEL 26/03/2026 OGGETTO: LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE. Vista la nuova macrostruttura approvata con Deliberazione della Giunta Municipale n.207 del 11/11/2025 con la quale si definisce la struttura organizzativa del Comune di Collesalvetti con decorrenza dal 01/03/2026; Considerato che il suddetto atto dispone che “gli attuali incarichi di Elevata Qualificazione con funzioni dirigenziali, nelle more della procedura di individuazione dei Dirigenti, si intendono ancora assegnati ai rispettivi Responsabili i quali continueranno a svolgere le attribuzioni e competenze previste senza soluzione di continuità dell’attività amministrativa e dei servizi ai cittadini”; Vista la Deliberazione della Giunta Comunale n.33 del 24/02/2026 con la quale è stata posticipata al 16/04/2026 la decorrenza della nuova macrostruttura organizzativa; Ritenuto per quanto sopra ancora applicabili:  il funzionigramma dell’Ente approvato con Deliberazione della Giunta Comunale n.21 del 25/01/2024;  il Decreto n.5 del 26/05/2025 con cui il Sindaco ha confermato al sottoscritto l’incarico di Elevata Qualificazione dell’Area N.8 - Polizia Municipale fino al 30/11/2026 con attribuzione di funzioni e responsabilità dirigenziali ai sensi dell’art.107 D.Lgs. n.267/2000; Vista l’istanza pervenuta in data 24/03/2026 al prot.6517 con la quale la Società Fibercop Spa chiede un provvedimento di disciplina temporanea della viabilità in alcune strade del centro abitato di Stagno per eseguire lavori di scavo stradale per posa infrastruttura rete FTTH; Vista l’Autorizzazione n.06/2026 rilasciata dal Responsabile del Servizio LL.PP. in data 20/03/2026; Rilevata la necessità di provvedere in merito alla emissione dell’Ordinanza di disciplina della viabilità; Visto lo Statuto del Comune ; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA Dal giorno 13/04/2026 al giorno 30/04/2026, nella fascia oraria compresa tra le ore 8.00 e le ore 18.00 di ogni giorno feriale, la istituzione delle seguenti disposizioni nel centro abitato di Stagno:  Via di Suese, nel tratto di volta in volta interessato dai lavori: restringimento della carreggiata e istituzione della circolazione a senso unico alternati regolato a vista o da movieri;  Via Buozzi, da Corso Italia a Via F.lli Rosselli: restringimento della carreggiata e istituzione del divieto di sosta con rimozione forzata sul lato dei civici dispari;  Via Curiel, da Via Buozzi a Via di Suese: restringimento della carreggiata e istituzione del divieto di sosta con rimozione forzata sul lato dei civici pari;  Via F.lli Rorrelli, da Via Buozzi a fine strada: restringimento della carreggiata e istituzione del divieto di sosta con rimozione forzata su ambo i lati;  Corso Italia, da Via Buozzi a civico 12: restringimento della carreggiata e istituzione del divieto di sosta con rimozione forzata; DISPONE  Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice (referente tecnico locale Sig. Andrea Mannocci 3493638798);  Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere;  Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92;  Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione n.06/2026 rilasciata dal Responsabile del Servizio LL.PP. in data 20/03/2026, già in possesso della Ditta; DISPONE ALTRESI’  L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge.  La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE  Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente della Repubblica entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Titolare di Incarico E.Q. dell’Area N. 8 – Polizia Municipale. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. f.to Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-40-2026": "COPIA Registro Generale nr. 43 ORDINANZA POLIZIA MUNICIPALE N. 40 DEL 28/04/2026 OGGETTO: LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE. Vista la nuova macrostruttura approvata con Deliberazione della Giunta Municipale n.207 del 11/11/2025 con la quale si definisce la struttura organizzativa del Comune di Collesalvetti con decorrenza dal 01/03/2026; Considerato che il suddetto atto dispone che “gli attuali incarichi di Elevata Qualificazione con funzioni dirigenziali, nelle more della procedura di individuazione dei Dirigenti, si intendono ancora assegnati ai rispettivi Responsabili i quali continueranno a svolgere le attribuzioni e competenze previste senza soluzione di continuità dell’attività amministrativa e dei servizi ai cittadini”; Ritenuto per quanto sopra ancora applicabili:  il funzionigramma dell’Ente approvato con Deliberazione della Giunta Comunale n.21 del 25/01/2024;  il Decreto n.5 del 26/05/2025 con cui il Sindaco ha confermato al sottoscritto l’incarico di Elevata Qualificazione dell’Area N.8 - Polizia Municipale fino al 30/11/2026 con attribuzione di funzioni e responsabilità dirigenziali ai sensi dell’art.107 D.Lgs. n.267/2000; Vista l’istanza pervenuta in data 27/04/2026 con la quale la Società Fibercop Spa chiede un nuovo provvedimento di disciplina temporanea della viabilità in alcune strade del centro abitato di Stagno per eseguire lavori di scavo stradale per posa infrastruttura rete FTTH; Vista l’Autorizzazione n.06/2026 rilasciata dal Responsabile del Servizio LL.PP. in data 20/03/2026; Rilevata la necessità di provvedere in merito alla emissione dell’Ordinanza di disciplina della viabilità; Visto lo Statuto del Comune ; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA Dal giorno 04/05/2026 al giorno 15/05/2026, nella fascia oraria compresa tra le ore 8.00 e le ore 18.00 di ogni giorno feriale, la istituzione delle seguenti disposizioni nel centro abitato di Stagno:  Via di Suese, nel tratto di volta in volta interessato dai lavori: restringimento della carreggiata e istituzione della circolazione a senso unico alternati regolato a vista o da movieri;  Via Buozzi, da Corso Italia a Via F.lli Rosselli: restringimento della carreggiata e istituzione del divieto di sosta con rimozione forzata sul lato dei civici dispari;  Via Curiel, da Via Buozzi a Via di Suese: restringimento della carreggiata e istituzione del divieto di sosta con rimozione forzata sul lato dei civici pari;  Via F.lli Rorrelli, da Via Buozzi a fine strada: restringimento della carreggiata e istituzione del divieto di sosta con rimozione forzata su ambo i lati;  Corso Italia, da Via Buozzi a civico 12: restringimento della carreggiata e istituzione del divieto di sosta con rimozione forzata; DISPONE  Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice (referente tecnico locale Sig. Andrea Mannocci 3493638798);  Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere;  Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92;  Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione n.06/2026 rilasciata dal Responsabile del Servizio LL.PP. in data 20/03/2026, già in possesso della Ditta; DISPONE ALTRESI’  L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge.  La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE  Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente della Repubblica entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Titolare di Incarico E.Q. dell’Area N. 8 – Polizia Municipale. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. f.to Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-45-2024": "ORIGINALE Registro Generale nr. 43 ORDINANZA Area 8 POLIZIA MUNICIPALE N. 45 DEL 12/04/2024 OGGETTO: LAVORI DI SCAVO STRADALE PER CONTO TIM SPA – GUASTICCE, PIAZZA DON VALERI, VIA LOPEZ E VIA GROCCO - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE Vista la macrostruttura approvata con Deliberazione della Giunta Municipale n.4 del 16/01/2024 con la quale si individuano le Aree alle quali si riconducono le funzioni attribuite alle stesse ed il funzionigramma dell’Ente approvato con Deliberazione della Giunta Comunale n.21 del 25/01/2024; Visto il Decreto n.6 del 12/02/2024 con cui il Sindaco ha conferito al sottoscritto l’incarico di Elevata Qualificazione dell’Area N.8 - Polizia Municipale a decorrere dal 15/02/2024, con attribuzione di funzioni e responsabilità dirigenziali ai sensi dell’art.107 D.Lgs. n.267/2000; Vista l’istanza pervenuta in data 11/04/2024 con la quale la Soc. TIM Spa chiede un provvedimento di disciplina temporanea della viabilità per eseguire lavori di scavo stradale in Guasticce – Via Grocco, Piazza Don Valeri e Via Lopez (allacciamento fibra ottica plesso scolastico); Vista l’Autorizzazione n.14/2024 rilasciata dal Responsabile del Servizio LL.PP. in data 27/03/2024; Visto il Nullaosta della Provincia di Livorno n.560/2024 del 07/03/2024; Rilevata la necessità di provvedere in ordine alla disciplina temporanea e straordinaria della circolazione stradale; Visto lo Statuto del Comune; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA A partire dal 17/04/2024 e fino al termine dei lavori previsto per il 24/04/2024 (festivi esclusi), nella fascia oraria 8.00-18.00, in Guasticce – Via Grocco, Piazza Don Valeri e Via Lopez, limitatamente al tratto di volta in volta interessato dal cantiere stradale:  La istituzione del divieto di sosta permanente su ambo i lati (con applicazione della rimozione forzata) ed il restringimento della carreggiata con mantenimento della previgente circolazione a senso unico di marcia; Per garantire la sicurezza degli studenti e del personale scolastico, in corrispondenza dell’orario di ingresso e di uscita della scuola si prescrive:  Per lo scavo di Via Lopez: la sospensione totale dei lavori e la stretta sorveglianza del cantiere DISPONE  Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice;  Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia in orario diurno che notturno, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere;  Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92;  Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione del Responsabile del Servizio LL.PP. n.14/2024, già in possesso della Ditta; DISPONE ALTRESI’  L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge.  La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE  Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente della Repubblica entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Titolare di Posizione Organizzativa del Servizio N. 8 – Polizia Municipale. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. Il Responsabile del Servizio Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-49-2026": "COPIA Registro Generale nr. 53 ORDINANZA POLIZIA MUNICIPALE N. 49 DEL 18/05/2026 OGGETTO: LAVORI STRADALI PER POSA FIBRA OTTICA – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE. Vista la nuova macrostruttura approvata con Deliberazione della Giunta Municipale n.207 del 11/11/2025 con la quale si definisce la struttura organizzativa del Comune di Collesalvetti con decorrenza dal 01/03/2026; Considerato che il suddetto atto dispone che “gli attuali incarichi di Elevata Qualificazione con funzioni dirigenziali, nelle more della procedura di individuazione dei Dirigenti, si intendono ancora assegnati ai rispettivi Responsabili i quali continueranno a svolgere le attribuzioni e competenze previste senza soluzione di continuità dell’attività amministrativa e dei servizi ai cittadini”; Ritenuto per quanto sopra ancora applicabili:  il funzionigramma dell’Ente approvato con Deliberazione della Giunta Comunale n.21 del 25/01/2024;  il Decreto n.5 del 26/05/2025 con cui il Sindaco ha confermato al sottoscritto l’incarico di Elevata Qualificazione dell’Area N.8 - Polizia Municipale fino al 30/11/2026 con attribuzione di funzioni e responsabilità dirigenziali ai sensi dell’art.107 D.Lgs. n.267/2000; Vista l’istanza pervenuta in data 07/05/2026 con la quale la Società Fastweb Spa chiede un provvedimento di disciplina temporanea della viabilità in alcune strade del centro abitato di Stagno per eseguire lavori stradali per posa fibra ottica; Vista la nota prot.9563 rilasciata dal Dirigente del Settore Tecnico in data 06/05/2026; Rilevata la necessità di provvedere in merito alla emissione dell’Ordinanza di disciplina della viabilità; Visto lo Statuto del Comune ; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA Dal giorno 25/05/2026 al giorno 29/05/2026, nella fascia oraria compresa tra le ore 8.00 e le ore 18.00 di ogni giorno feriale, la istituzione delle seguenti disposizioni nel centro abitato di Stagno:  Via Verga int. Via Berlinguer: restringimento della carreggiata e istituzione della circolazione a senso unico alternati regolato a vista o da movieri;  Via Verga int. Prima via traversa omonima: restringimento della carreggiata e istituzione della circolazione a senso unico alternato regolato a vista o da movieri;  Via Verga, dalla seconda via traversa omonima a Via Berlinguer: istituzione del divieto di sosta con rimozione forzata sul lato dei civici pari; DISPONE  Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice;  Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere;  Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92;  Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione rilasciata dal Responsabile del Servizio LL.PP., già in possesso della Ditta; DISPONE ALTRESI’  L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge.  La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE  Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente del Consiglio di Sato entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Titolare di Incarico E.Q. dell’Area N. 8 – Polizia Municipale. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. f.to Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-55-2025": "COPIA Registro Generale nr. 58 ORDINANZA Area 8 POLIZIA MUNICIPALE N. 55 DEL 22/07/2025 OGGETTO: LAVORI STRADALI PER POSA CAVO IN FIBRA OTTICA – COLLESLVETTI, VIA GARIBALDI - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE Vista la macrostruttura approvata con Deliberazione della Giunta Municipale n.4 del 16/01/2024 con la quale si individuano le Aree alle quali si riconducono le funzioni attribuite alle stesse ed il funzionigramma dell’Ente approvato con Deliberazione della Giunta Comunale n.21 del 25/01/2024; Visto il Decreto n.05 del 26/05/2025 con cui il Sindaco ha confermato al sottoscritto l’incarico di Elevata Qualificazione dell’Area N.8 - Polizia Municipale fino al 30/11/2026, con attribuzione di funzioni e responsabilità dirigenziali ai sensi dell’art.107 D.Lgs. n.267/2000; Vista l’istanza pervenuta in data 18/07/2025 al prot.16810 con la quale la Società Fibercop Spa chiede un provvedimento di disciplina temporanea della viabilità sulla Via Garibaldi di Collesalvetti per eseguire lavori stradali di posa cavo in fibra ottica per conto TIM; Vista l’Autorizzazione n.09/2025 rilasciata dal Responsabile del Servizio LL.PP. in data 08/07/2025; Rilevata la necessità di provvedere in merito alla emissione dell’Ordinanza di disciplina della viabilità; Visto lo Statuto del Comune ; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA Dal giorno 23/07/2025 al giorno 31/07/2025, nella fascia oraria compresa tra le ore 8.00 e le ore 18.00, in:  Collesalvetti – Via Garibaldi, limitatamente ai tratti interessati dai lavori e precisamente in corrispondenza delle intersezioni con Via San Quirico e con Via Grandi:  La istituzione della circolazione a senso unico alternato regolato da semaforo; DISPONE  Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice, individuata in Sirti Telco Spa con sede in Calenzano – Via Baldanzese 149 (referente tecnico locale Sig. Stefano Artini 3666548275);  Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere;  Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92;  Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione n.09/2025 rilasciata dal Responsabile del Servizio LL.PP. in data 08/07/2025, già in possesso della Ditta; DISPONE ALTRESI’  L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge.  La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE  Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente della Repubblica entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Titolare di Incarico E.Q. dell’Area N. 8 – Polizia Municipale. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. Il Responsabile del Servizio f.to Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-57-2023": "COPIA Registro Generale nr. 60 ORDINANZA Servizio n. 8 - Polizia Municipale N. 57 DEL 26/06/2023 OGGETTO: LAVORI DI SCAVO STRADALE PER POSA FIBRA OTTICA – GUASTICCE, VIA DON STURZO E VIA DELLA COLMATA - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE Vista la vigente macrostruttura organizzativa approvata con atto della G.M. n.22 del 21/02/2020 e modificata con successivo atto della G.M. n.09 del 03/02/2022; Visto il Decreto del Sindaco n.4 del 31/03/2022 con il quale viene confermata al Comandante della Polizia Municipale la responsabilità del Servizio N.8 – Polizia Municipale, con titolarità di posizione organizzativa e con attribuzione contestuale di poteri, responsabilità e competenze previste dall’art.4 del Regolamento per l’istituzione delle Posizioni Organizzative; Vista l’istanza pervenuta in data 26/06/2023 con la quale la Ditta MDS Impianti Srl chiede un provvedimento di disciplina temporanea della viabilità per eseguire lavori di scavo stradale per posa di fibra ottica in Guasticce – Via Don Sturzo e Via della Colmata; Visto il nullaosta dell’Ente proprietario della strada (Provincia di Livorno) rilasciato con disposizione n.1293/2023 (limitatamente al tratto di Via Don Sturzo – SP 555); Vista l’Autorizzazione n.17/2023 rilasciata dal Responsabile del Servizio LL.PP. in data 07/06/2023; Rilevata la necessità di provvedere in ordine alla disciplina temporanea e straordinaria della circolazione stradale; Visto lo Statuto del Comune ; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA Dal 03/07/2023 al 10/07/2023, nella fascia oraria 7.00-18.00, in:  Guasticce – Via Don Storzo dal km. 4+645 al km. 4+670,  Guasticce – Via della Colmata, limitatamente al tratto di volta in volta interessato dal cantiere stradale:  La istituzione del divieto di sosta permanente su ambo i lati (con applicazione della rimozione forzata) ed il restringimento della carreggiata con circolazione a senso unico alternato regolata da semaforo in Via Don Sturzo ed a vista in Via della Colmata; DISPONE  Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice;  Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere ed;  Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92;  Che vengano scrupolosamente rispettate le prescrizioni operative di cui alla Disposizione n.1293/2023 rilasciata dalla Provicnia di Livorno ed all’Autorizzazione n.17/2023 rilasciata dal Responsabile del Servizio LL.P, atti già in possesso della Ditta; DISPONE ALTRESI’  L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge.  La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE  Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente della Repubblica entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Titolare di Posizione Organizzativa del Servizio N. 8 – Polizia Municipale. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. Il Responsabile del Servizio f.to Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-57-2026": "COPIA Registro Generale nr. 61 ORDINANZA POLIZIA MUNICIPALE N. 57 DEL 01/06/2026 OGGETTO: LAVORI STRADALI PER RIPRISTINO SCAVI FIBRA OTTICA – GUASTICCE, VIA FRANCIA - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE. Il sottoscritto Dott. Paolo Cecconi – Comandante della “Polizia Locale”, il quale dichiara di trovarsi in assenza di conflitto interessi ai sensi dell’art. 6 bis della legge 241/1990, come introdotto dalla legge n. 190/2012; VISTI:  la nuova macrostruttura approvata con Deliberazione della Giunta Comunale n.207 del 11/11/2025 con la quale si definisce la struttura organizzativa del Comune di Collesalvetti con decorrenza dal 01/03/2026, posticipata al 16/04/2026 con successiva Deliberazione della Giunta Comunale n.33 del 24/02/2026;  il Decreto n.5 del 18/05/2026 con cui il Sindaco ha attribuito al sottoscritto l’incarico di Elevata Qualificazione – Comandante della Polizia Locale fino al 31/12/2027 senza soluzione di continuità rispetto al pregresso incarico già attribuito Decreto n.5 del 26/05/2025, con attribuzione di funzioni, poteri, competenze e responsabilità dirigenziali ai sensi dell’art.107 D.Lgs. n.267/2000; Vista l’istanza pervenuta in data 29/05/2026 con la quale la Società Fastweb Spa chiede un provvedimento di disciplina temporanea della viabilità in Guasticce – Via Francia per eseguire lavori stradali di ripristino per scavi fibra ottica; Viste le autorizzazioni nn.04/2021 e 03/2024 rilasciate dal Dirigente del Settore Tecnico; Rilevata la necessità di provvedere in merito alla emissione dell’Ordinanza di disciplina della viabilità; Visto lo Statuto del Comune ; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA Dal giorno 22/06/2026 al giorno 26/06/2026, in Guasticce – Via Francia 6, limitatamente al tratto di strada interessato dai lavori:  Il restringimento della carreggiata e la istituzione della circolazione stradale a senso unico alternato regolato a vista o, se necessario, da semaforo; DISPONE  Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice;  Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere;  Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92;  Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione rilasciata dal Responsabile del Servizio LL.PP., già in possesso della Ditta; DISPONE ALTRESI’  L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge.  La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE  Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente del Consiglio di Sato entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Titolare di Incarico E.Q. dell’Area N. 8 – Polizia Municipale. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. f.to Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-59-2024": "COPIA Registro Generale nr. 56 ORDINANZA Area 8 POLIZIA MUNICIPALE N. 59 DEL 13/05/2024 OGGETTO: LAVORI STRADALI PER POSA FIBRA OTTICA - STAGNO, VIA BERLINGUER E VIA VERGA - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE Vista la macrostruttura approvata con Deliberazione della Giunta Municipale n.4 del 16/01/2024 con la quale si individuano le Aree alle quali si riconducono le funzioni attribuite alle stesse ed il funzionigramma dell’Ente approvato con Deliberazione della Giunta Comunale n.21 del 25/01/2024; Visto il Decreto n.6 del 12/02/2024 con cui il Sindaco ha conferito al sottoscritto l’incarico di Elevata Qualificazione dell’Area N.8 - Polizia Municipale a decorrere dal 15/02/2024, con attribuzione di funzioni e responsabilità dirigenziali ai sensi dell’art.107 D.Lgs. n.267/2000; Vista l’istanza pervenuta in data 15/01/2024 con la quale Fastweb Spa chiede un provvedimento di disciplina temporanea della viabilità per eseguire lavori stradali finalizzati alla posa di fibra ottica in Stagno – Via Berlinguer e Via Verga; Vista l’Autorizzazione n.03/2024 rilasciata dal Responsabile del Servizio LL.PP. in data 12/01/2024; Rilevata la necessità di provvedere in ordine alla disciplina temporanea e straordinaria della circolazione stradale; Visto lo Statuto del Comune; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA A partire dal 27/05/2024 e fino al termine dei lavori previsto per il 31/05/2024, nel centro abitato di Stagno:  In Via Berlinguer, in corrispondenza dell’intersezione con Via Verga: il restringimento della carreggiata con eventuale istituzione della circolazione a senso unico alternato regolato a vista o da movieri;  In Via Verga, in corrispondenza dell’intersezione con Via Berlinguer: il restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o con movieri;  In Via Verga, da Via Berlinguer fino alla seconda traversa in destra: la istituzione del divieto di sosta permanente su ambo i lati (con applicazione della rimozione forzata) ed il restringimento della carreggiata (con eventuale istituzione della circolazione a senso unico alternato regolato a vista), limitatamente al tratto di volta in volta interessato dal cantiere stradale; DISPONE  Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice;  Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia in orario diurno che notturno, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere e, quando necessario, alla regolazione dei flussi veicolari con personale tecnico idoneamente formato e numericamente congruo;  Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92;  Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione n.03/2024 rilasciata dal Responsabile del Servizio LL.PP. in data 12/01/2024, già in possesso della Ditta; DISPONE ALTRESI’  L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge.  La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE  Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente della Repubblica entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Titolare di Posizione Organizzativa del Servizio N. 8 – Polizia Municipale. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. Il Responsabile del Servizio f.to Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-60-2025": "COPIA Registro Generale nr. 63 ORDINANZA Area 8 POLIZIA MUNICIPALE N. 60 DEL 12/08/2025 OGGETTO: LAVORI DI SCAVO STRADALE IN PERFORAZIONE PER CONTO FASTWEB SPA – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE. Vista la macrostruttura approvata con Deliberazione della Giunta Municipale n.4 del 16/01/2024 con la quale si individuano le Aree alle quali si riconducono le funzioni attribuite alle stesse ed il funzionigramma dell’Ente approvato con Deliberazione della Giunta Comunale n.21 del 25/01/2024; Visto il Decreto n.5 del 26/05/2025 con cui il Sindaco:  ha confermato al Dott. Paolo Cecconi l’incarico di Elevata Qualificazione dell’Area N.8 - Polizia Municipale fino al 30/11/2026, con attribuzione di funzioni e responsabilità dirigenziali ai sensi dell’art.107 D.Lgs. n.267/2000;  ha confermato per lo stesso periodo l’individuazione del Vice Comandante della Polizia Municipale quale sostituto del suddetto Incaricato di Elevata Qualificazione in caso di assenza temporanea o impedimento del medesimo; Vista la Determinazione del Responsabile Area N.8 Reg.Gen. n.704 del 22/07/2025 che conferma al sottoscritto Commissario di Polizia Locale Paolo Nencini l’attribuzione delle funzioni vicarie di Responsabile di Area in caso di assenza del titolare; Vista l’istanza pervenuta in atti il 07/08/2025 con la quale la Società Fastweb Spa di Milano richiede provvedimenti straordinari e temporanei di disciplina della viabilità in alcune strade del centro abitato di Stagno per l’esecuzione di scavi in perforazione finalizzati alla fornitura di servizi di connettività a banda ultralarga per il collegamento del Distretto Sanitario di Stagno al progetto nazionale denominato “Sanità Connessa – Infratel”; Vista l’Autorizzazione n.10/2025 rilasciata dal Responsabile del Servizio LL.PP. in data 16/07/2025; Rilevata la necessità di provvedere in merito alla modifica dell’Ordinanza indicata; Visto lo Statuto del Comune ; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA A partire dal 18/08/2025 e fino al termine dei lavori previsto per il 28/08/2025, nel centro abitato di Stagno:  in Via Verga – angolo Via Berlinguer: il restringimento della carreggiata e la istituzione della circolazione a senso unico alternato con regolazione a vista;  in Via La Malfa, fronte civico 1b: il restringimento della carreggiata e la istituzione della circolazione a senso unico alternato con regolazione a vista;  in Via Guerrazzi – angolo Via Curiel: il restringimento della carreggiata e la istituzione della circolazione a senso unico alternato con regolazione semaforica;  in Via Marx, fronte civico 7: il restringimento della carreggiata e la chiusura di un tratto di marciapiede, con spostamento della circolazione pedonale sulla carreggiata;  in Via Marx, all’altezza della strada per la Chiesa di San Luca: il restringimento della carreggiata e la chiusura di un tratto di marciapiede, con spostamento della circolazione pedonale sulla carreggiata; DISPONE  Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice, con particolare riferimento alla protezione dei pedoni;  Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia in orario diurno che notturno, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere;  Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92;  Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione n.10/2025 rilasciata dal Responsabile del Servizio LL.PP. in data 16/07/2025, già in possesso della Ditta; DISPONE ALTRESI’  L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge.  La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE  Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente della Repubblica entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Commissario di P.L. Paolo Nencini, quale vicario del Titolare di Incarico di E.Q. dell’Area N. 8 – Polizia Municipale. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. Il Responsabile del Servizio f.to Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-68-2024": "COPIA Registro Generale nr. 65 ORDINANZA Area 8 POLIZIA MUNICIPALE N. 68 DEL 31/05/2024 OGGETTO: LAVORI STRADALI PER POSA FIBRA OTTICA - STAGNO, VIA BERLINGUER E VIA VERGA - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE Vista la macrostruttura approvata con Deliberazione della Giunta Municipale n.4 del 16/01/2024 con la quale si individuano le Aree alle quali si riconducono le funzioni attribuite alle stesse ed il funzionigramma dell’Ente approvato con Deliberazione della Giunta Comunale n.21 del 25/01/2024; Visto il Decreto n.6 del 12/02/2024 con cui il Sindaco ha conferito al sottoscritto l’incarico di Elevata Qualificazione dell’Area N.8 - Polizia Municipale a decorrere dal 15/02/2024, con attribuzione di funzioni e responsabilità dirigenziali ai sensi dell’art.107 D.Lgs. n.267/2000; Vista l’istanza pervenuta in data 30/05/2024 con la quale Fastweb Spa chiede un provvedimento di disciplina temporanea della viabilità per eseguire lavori stradali finalizzati alla posa di fibra ottica in Stagno – Via Berlinguer e Via Verga; Vista l’Autorizzazione n.03/2024 rilasciata dal Responsabile del Servizio LL.PP. in data 12/01/2024; Rilevata la necessità di provvedere in ordine alla disciplina temporanea e straordinaria della circolazione stradale; Visto lo Statuto del Comune; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA A partire dal 01/06/2024 e fino al termine dei lavori previsto per il 07/06/2024, nel centro abitato di Stagno: In Via Berlinguer, in corrispondenza dell’intersezione con Via Verga: il restringimento della carreggiata con eventuale istituzione della circolazione a senso unico alternato regolato a vista o da movieri; In Via Verga, in corrispondenza dell’intersezione con Via Berlinguer: il restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o con movieri; In Via Verga, da Via Berlinguer fino alla seconda traversa in destra: la istituzione del divieto di sosta permanente su ambo i lati (con applicazione della rimozione forzata) ed il restringimento della carreggiata (con eventuale istituzione della circolazione a senso unico alternato regolato a vista), limitatamente al tratto di volta in volta interessato dal cantiere stradale; DISPONE Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice; Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia in orario diurno che notturno, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere e, quando necessario, alla regolazione dei flussi veicolari con personale tecnico idoneamente formato e numericamente congruo; Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92; Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione n.03/2024 rilasciata dal Responsabile del Servizio LL.PP. in data 12/01/2024, già in possesso della Ditta; DISPONE ALTRESI’ L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge. La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente della Repubblica entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Titolare di incarico di E.Q. dell’Area N. 8 – Polizia Municipale. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. Il Responsabile del Servizio f.to Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-70-2026": "COPIA Registro Generale nr. 75 ORDINANZA POLIZIA MUNICIPALE N. 70 DEL 16/07/2026 OGGETTO: LAVORI STRADALI PER RIPRISTINO SCAVI FIBRA OTTICA – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE. Il sottoscritto Dott. Paolo Cecconi – Comandante della “Polizia Locale”, il quale dichiara di trovarsi in assenza di conflitto interessi ai sensi dell’art. 6 bis della legge 241/1990, come introdotto dalla legge n. 190/2012; VISTI:  la nuova macrostruttura approvata con Deliberazione della Giunta Comunale n.207 del 11/11/2025 con la quale si definisce la struttura organizzativa del Comune di Collesalvetti con decorrenza dal 01/03/2026, posticipata al 16/04/2026 con successiva Deliberazione della Giunta Comunale n.33 del 24/02/2026;  il Decreto n.5 del 18/05/2026 con cui il Sindaco ha attribuito al sottoscritto l’incarico di Elevata Qualificazione – Comandante della Polizia Locale fino al 31/12/2027 senza soluzione di continuità rispetto al pregresso incarico già attribuito Decreto n.5 del 26/05/2025, con attribuzione di funzioni, poteri, competenze e responsabilità dirigenziali ai sensi dell’art.107 D.Lgs. n.267/2000; Vista l’istanza pervenuta in data 29/06/2026 con la quale la Società Fastweb Spa chiede un provvedimento di disciplina temporanea della viabilità in Stagno – Vie Varie per eseguire lavori stradali di ripristino per scavi fibra ottica; Vista l’autorizzazione n.10/2025 rilasciata dal Dirigente del Settore Tecnico il 16/07/2025; Rilevata la necessità di provvedere in merito alla emissione dell’Ordinanza di disciplina della viabilità; Visto lo Statuto del Comune ; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA Dal giorno 03/08/2026 al giorno 13/08/2026, in Stagno – Via Marx, lato opposto all’accesso della Chiesa di San Luca – Via Marx, all’altezza del ponte sul Fosso Cateratto, lato nord – Via Guerrazzi, all’altezza dell’intersezione con Via Curiel, lato sud – Via La Malfa limitatamente ai tratti di strada di volta in volta interessati dai lavori:  Il restringimento della carreggiata e la istituzione della circolazione stradale a senso unico alternato regolato a vista o, se necessario, da semaforo; DISPONE  Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice;  Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere;  Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92;  Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione rilasciata dal Responsabile del Servizio LL.PP., già in possesso della Ditta; DISPONE ALTRESI’  L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge.  La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE  Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente del Consiglio di Sato entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Titolare di Incarico E.Q. dell’Area N. 8 – Polizia Municipale. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. f.to Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-86-2023": "ORIGINALE Registro Generale nr. 89 ORDINANZA Servizio n. 8 - Polizia Municipale N. 86 DEL 16/09/2023 OGGETTO: LAVORI DI SCAVO STRADALE PER CONTO TIM SPA – COLLESALVETTI, VIA ROMA 47 - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE Vista la vigente macrostruttura organizzativa approvata con atto della G.M. n.22 del 21/02/2020 e modificata con successivo atto della G.M. n.09 del 03/02/2022; Visto il Decreto del Sindaco n.4 del 31/03/2022 con il quale viene confermata al Comandante della Polizia Municipale la responsabilità del Servizio N.8 – Polizia Municipale, con titolarità di posizione organizzativa e con attribuzione contestuale di poteri, responsabilità e competenze previste dall’art.4 del Regolamento per l’istituzione delle Posizioni Organizzative; Vista l’istanza pervenuta in data 12/09/2023 con la quale la Soc. TIM Spa chiede un provvedimento di disciplina temporanea della viabilità per eseguire lavori di scavo stradale in Collesalvetti – Via Roma 47 (area interna ed antistante al plesso scolastico “M. Marcacci”); Vista l’Autorizzazione n.26/2023 rilasciata dal Responsabile del Servizio LL.PP. in data 05/09/2023; Rilevata la necessità di provvedere in ordine alla disciplina temporanea e straordinaria della circolazione stradale; Visto lo Statuto del Comune ; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA A partire dal 25/09/2023 e fino al termine dei lavori previsto per il 03/10/2023, nella fascia oraria 8.00-18.00, in Collesalvetti – Via Roma 47, limitatamente al tratto interessato dal cantiere stradale:  La istituzione del divieto di sosta permanente su ambo i lati (con applicazione della rimozione forzata) ed il restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista da movieri;  Il divieto di sosta è esteso ai posti auto adiacenti allo scavo ed ubicati lungo le aiuole antistanti il plesso scolastico; Per garantire la sicurezza degli studenti e del personale scolastico, in corrispondenza dell’orario di ingresso e di uscita della scuola si prescrive: 1. la sospensione totale dei lavori e la stretta sorveglianza del cantiere 2. la presenza obbligatoria di movieri sulla Via Roma DISPONE  Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice;  Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia in orario diurno che notturno, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere;  Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92;  Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione del Responsabile del Servizio LL.PP. n.26/2023, già in possesso della Ditta; DISPONE ALTRESI’  L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge.  La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE  Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente della Repubblica entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Titolare di Posizione Organizzativa del Servizio N. 8 – Polizia Municipale. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. Il Responsabile del Servizio Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-88-2026": "COPIA Registro Generale nr. 95 ORDINANZA POLIZIA MUNICIPALE N. 88 DEL 02/09/2026 OGGETTO: LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – COLLESALVETTI, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE. Il sottoscritto Dott. Paolo Cecconi – Comandante della “Polizia Locale”, il quale dichiara di trovarsi in assenza di conflitto interessi ai sensi dell’art. 6 bis della legge 241/1990, come introdotto dalla legge n. 190/2012; VISTI:  la nuova macrostruttura approvata con Deliberazione della Giunta Comunale n.207 del 11/11/2025 con la quale si definisce la struttura organizzativa del Comune di Collesalvetti con decorrenza dal 01/03/2026, posticipata al 16/04/2026 con successiva Deliberazione della Giunta Comunale n.33 del 24/02/2026;  il Decreto n.5 del 18/05/2026 con cui il Sindaco ha attribuito al sottoscritto l’incarico di Elevata Qualificazione – Comandante della Polizia Locale fino al 31/12/2027 senza soluzione di continuità rispetto al pregresso incarico già attribuito Decreto n.5 del 26/05/2025, con attribuzione di funzioni, poteri, competenze e responsabilità dirigenziali ai sensi dell’art.107 D.Lgs. n.267/2000; Vista l’istanza pervenuta in data 31/08/2026 al prot.18362 con la quale la Società Fastweb Spa chiede un provvedimento di disciplina temporanea della viabilità in alcune strade del centro abitato di Collesalvetti per eseguire lavori di scavo stradale per posa infrastruttura in fibra ottica; Vista l’Autorizzazione n.10/2026 rilasciata dal Dirigente del Settore Tecnico in data 14/05/2026; Rilevata la necessità di provvedere in merito alla emissione dell’Ordinanza di disciplina della viabilità; Visto lo Statuto del Comune ; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA Dal giorno 14/09/2026 al giorno 02/10/2026, nella fascia oraria compresa tra le ore 8.00 e le ore 18.00 di ogni giorno feriale, la istituzione delle seguenti disposizioni nel centro abitato di Collesalvetti, limitate al punto di volta in volta interessato dal cantiere itinerante:  Via Nenni: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con mantenimento della già vigente circolazione a senso unico;  Via Roma (altezza rotatoria di Via Nenni): divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri;  Via del Valico a Pisa: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri;  Via di Cerretello: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri; DISPONE  Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice;  Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere;  Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92;  Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione n.10/2026 rilasciata dal Dirigente del Settore Tecnico in data 14/05/2026, già in possesso della Ditta; DISPONE ALTRESI’  L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge.  La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE  Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente del Consiglio di Stato entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Comandante della Polizia Locale e Titolare di Incarico E.Q. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. f.to Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-93-2023": "ORIGINALE Registro Generale nr. 97 ORDINANZA Servizio n. 8 - Polizia Municipale N. 93 DEL 17/10/2023 OGGETTO: LAVORI DI SCAVO STRADALE PER CONTO TIM SPA – GUASTICCE, VIA DELLA COLMATA - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE Vista la vigente macrostruttura organizzativa approvata con atto della G.M. n.22 del 21/02/2020 e modificata con successivo atto della G.M. n.09 del 03/02/2022; Visto il Decreto del Sindaco n.4 del 31/03/2022 con il quale viene confermata al Comandante della Polizia Municipale la responsabilità del Servizio N.8 – Polizia Municipale, con titolarità di posizione organizzativa e con attribuzione contestuale di poteri, responsabilità e competenze previste dall’art.4 del Regolamento per l’istituzione delle Posizioni Organizzative; Vista l’istanza pervenuta in data 11/10/2023 con la quale la Soc. TIM Spa chiede un provvedimento di disciplina temporanea della viabilità per eseguire lavori di scavo stradale in Guasticce – Via della Colmata; Vista l’Autorizzazione n.17/2023 rilasciata dal Responsabile del Servizio LL.PP. in data 07/06/2023; Rilevata la necessità di provvedere in ordine alla disciplina temporanea e straordinaria della circolazione stradale; Visto lo Statuto del Comune ; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA A partire dal 18/10/2023 e fino al termine dei lavori previsto per il 27/10/2023, nella fascia oraria 8.00-18.00, in Guasticce – Via della Colmata, limitatamente al tratto di volta in volta interessato dal cantiere stradale: La istituzione del divieto di sosta permanente su ambo i lati (con applicazione della rimozione forzata) ed il restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri; DISPONE Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice; Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia in orario diurno che notturno, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere; Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92; Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione del Responsabile del Servizio LL.PP. n.17/2023, già in possesso della Ditta; DISPONE ALTRESI’ L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge. La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente della Repubblica entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Titolare di Posizione Organizzativa del Servizio N. 8 – Polizia Municipale. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. Il Responsabile del Servizio Dott. Paolo CECCONI",
+  "PM-COLLE-ORD-95-2026": "COPIA Registro Generale nr. 102 ORDINANZA POLIZIA MUNICIPALE N. 95 DEL 10/09/2026 OGGETTO: LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE. Il sottoscritto Dott. Paolo Cecconi – Comandante della “Polizia Locale”, il quale dichiara di trovarsi in assenza di conflitto interessi ai sensi dell’art. 6 bis della legge 241/1990, come introdotto dalla legge n. 190/2012; VISTI:  la nuova macrostruttura approvata con Deliberazione della Giunta Comunale n.207 del 11/11/2025 con la quale si definisce la struttura organizzativa del Comune di Collesalvetti con decorrenza dal 01/03/2026, posticipata al 16/04/2026 con successiva Deliberazione della Giunta Comunale n.33 del 24/02/2026;  il Decreto n.5 del 18/05/2026 con cui il Sindaco ha attribuito al sottoscritto l’incarico di Elevata Qualificazione – Comandante della Polizia Locale fino al 31/12/2027 senza soluzione di continuità rispetto al pregresso incarico già attribuito Decreto n.5 del 26/05/2025, con attribuzione di funzioni, poteri, competenze e responsabilità dirigenziali ai sensi dell’art.107 D.Lgs. n.267/2000; Vista l’istanza pervenuta in data 10/09/2026 con la quale la Società Fastweb Spa chiede un provvedimento di disciplina temporanea della viabilità in alcune strade del centro abitato di Stagno per eseguire lavori di scavo stradale per posa infrastruttura in fibra ottica; Vista l’Autorizzazione n.17/2026 rilasciata dal Settore Tecnico in data 16/07/2026; Rilevata la necessità di provvedere in merito alla emissione dell’Ordinanza di disciplina della viabilità; Visto lo Statuto del Comune ; Visto l’art.107/3 del D.Lgs.267/2000; Ai sensi degli artt.6 e 7 del D.Lgs. 30/04/92 n.285 (Nuovo Codice della Strada), ORDINA Dal giorno 21/09/2026 al giorno 16/10/2026, nella fascia oraria compresa tra le ore 8.00 e le ore 18.00 di ogni giorno feriale, la istituzione delle seguenti disposizioni nel centro abitato di Stagno, limitate al punto di volta in volta interessato dal cantiere itinerante:  Via Otto Marzo: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri;  Via Romita: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri (nel tratto ordinariamente a doppio senso) o con mantenimento della già vigente circolazione a senso unico;  Via De Gasperi: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato da movieri o con semaforo;  Via Machiavelli: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con mantenimento della già vigente circolazione a senso unico;  Via XXV Aprile: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con mantenimento della già vigente circolazione a senso unico;  Piazza Di Vittorio: divieto di sosta su ambo i lati con applicazione della rimozione forzata e restringimento della carreggiata con istituzione della circolazione a senso unico alternato regolato a vista o da movieri (nel tratto ordinariamente a doppio senso) o con mantenimento della già vigente circolazione a senso unico DISPONE  Che la segnaletica idonea allo scopo e necessaria alla sicurezza degli utenti della strada venga posizionata e mantenuta in perfetto stato di efficienza a cura della Ditta esecutrice;  Che la stessa Ditta adotti tutti gli accorgimenti necessari alla messa in sicurezza del cantiere e della circolazione, sia durante i lavori che nei periodi di riposo, provvedendo alla sorveglianza e manutenzione della segnaletica di cantiere;  Che i veicoli operativi impiegati e la loro presegnalazione siano conformi alle disposizioni degli artt.38 e 39/4 del DPR n.495/92;  Che vengano scrupolosamente rispettate le prescrizioni operative di cui all’Autorizzazione n.17/2026 rilasciata dal Settore Tecnico in data 16/07/2026, già in possesso della Ditta; DISPONE ALTRESI’  L’iscrizione del presente provvedimento nel registro delle ordinanze del Comune di Collesalvetti, la pubblicazione all’Albo Online e nelle altre forme previste dalla legge.  La trasmissione per l’applicazione alle Autorità Pubbliche interessate, per quanto di rispettiva competenza. AVVERTE  Che il presente provvedimento è impugnabile con ricorso giurisdizionale al TAR entro il termine di 60 giorni dalla pubblicazione all’Albo, ovvero con ricorso straordinario al Presidente del Consiglio di Stato entro 120 giorni decorrenti dal medesimo termine. Responsabile del presente procedimento è il Dott. Paolo Cecconi, Comandante della Polizia Locale e Titolare di Incarico E.Q. E’ fatto obbligo a chiunque spetti di rispettare e far rispettare la presente Ordinanza. f.to Dott. Paolo CECCONI"
+};

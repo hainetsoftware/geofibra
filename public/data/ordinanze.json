@@ -1,0 +1,2287 @@
+[
+  {
+    "id": "PM-COLLE-ORD-118-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": "Paolo Cecconi",
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "118/2026",
+    "registro_generale": "125",
+    "data_emissione": "2026-11-09",
+    "data_registrazione": null,
+    "protocollo": "25107",
+    "data_protocollo": "2026-11-09",
+    "oggetto": "LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – COLLESALVETTI, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "Fastweb",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2026-11-16",
+      "al": "2026-12-04",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Roma",
+        "Via del Valico a Pisa",
+        "Via del Vione",
+        "Via Guido Rossa"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [
+        "031048DE5942FB3FB694",
+        "044555C2D642FB404208",
+        "0AFA98819242FB416540",
+        "0DE7916F26423746716E"
+      ],
+      "candidate_feature_ids": [
+        "02172672CE42615EB699",
+        "08DB97EDC341BFC840B3",
+        "099D51459541BFC79191",
+        "0B6DD449B041BFC99520",
+        "0D01C4A3D9419D77F4F8"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "28/2026",
+        "data": "2026-10-28",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "cluster_id": "FC-COLLE-LOTTO2-2026",
+    "file_pdf": {
+      "nome_file": "17991_AltreOrdinanze_Copia_125_2026.pdf",
+      "url_path": "data/ordinanze/17991_AltreOrdinanze_Copia_125_2026.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "PM-COLLE-ORD-112-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": "Paolo Cecconi",
+    "tipologia": "RIPRISTINO",
+    "numero_atto": "112/2026",
+    "registro_generale": "118",
+    "data_emissione": "2026-10-16",
+    "data_registrazione": null,
+    "protocollo": "22190",
+    "data_protocollo": "2026-10-16",
+    "oggetto": "LAVORI DI RIPRISTINO SCAVO STRADALE SUCCESSIVO A POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "Fastweb",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2026-10-19",
+      "al": "2026-11-24",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via F.lli Rosselli"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "10/2026",
+        "data": "2026-05-14",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-10-16_COLLE_RIP_112_Fastweb_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2026-10-16_COLLE_RIP_112_Fastweb_Stagno.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-10-2026"
+  },
+  {
+    "id": "PM-COLLE-ORD-111-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": "Paolo Cecconi",
+    "tipologia": "PROROGA",
+    "numero_atto": "111/2026",
+    "registro_generale": "117",
+    "data_emissione": "2026-10-16",
+    "data_registrazione": null,
+    "protocollo": "22069",
+    "data_protocollo": "2026-10-15",
+    "oggetto": "LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE - PROROGA",
+    "richiedente": "Fastweb",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2026-10-19",
+      "al": "2026-10-23",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Otto Marzo",
+        "Via Romita",
+        "Via De Gasperi",
+        "Piazza Di Vittorio",
+        "Via Machiavelli",
+        "Via XXV Aprile"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [
+        "01393CA83D41C1030753",
+        "04D8D17C9141C10125EB",
+        "0AD5AAF68741C10071CC",
+        "0F45FBA6684261661C70"
+      ],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "ORDINANZA",
+        "numero": "95/2026",
+        "data": null,
+        "ente": "COMUNE_COLLESALVETTI",
+        "atto_id": "PM-COLLE-ORD-95-2026"
+      },
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "17/2026",
+        "data": "2026-07-16",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": "COMPLETATA",
+    "note_tecniche": "Opere civili del Cantiere 2 Stagno rilevate come completate nello Snapshot 7.",
+    "file_pdf": {
+      "nome_file": "pdf/2026-10-16_COLLE_PROR_111_Fastweb_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2026-10-16_COLLE_PROR_111_Fastweb_Stagno.pdf"
+    },
+    "atti_collegati": [
+      "PM-COLLE-ORD-95-2026"
+    ],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-17-2026"
+  },
+  {
+    "id": "PM-COLLE-ORD-110-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": "Paolo Cecconi",
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "110/2026",
+    "registro_generale": "116",
+    "data_emissione": "2026-10-14",
+    "data_registrazione": null,
+    "protocollo": "21831",
+    "data_protocollo": "2026-10-13",
+    "oggetto": "LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "Fastweb",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2026-10-26",
+      "al": "2026-11-20",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Marx",
+        "Via Curiel",
+        "Via Gobetti",
+        "Via Don Verità",
+        "Via F.lli Cervi",
+        "Via La Malfa",
+        "Via Verga",
+        "Via Berlinguer"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [
+        "012D8BFFFE4270DC0BCC",
+        "0766EAF8C74270D6924F",
+        "0B718B800C4270DCE3E0",
+        "0C7715154E42E8361D89"
+      ],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "26/2026",
+        "data": "2026-09-21",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "cluster_id": "FC-STAGNO-LOTTO4-2026",
+    "file_pdf": {
+      "nome_file": "pdf/2026-10-14_COLLE_ORD_110_Fastweb_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2026-10-14_COLLE_ORD_110_Fastweb_Stagno.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "DOC-756e282e41cb6dfb",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "STRATEGICO",
+    "funzionario": null,
+    "tipologia": "ALTRO",
+    "numero_atto": null,
+    "registro_generale": "994",
+    "data_emissione": "2026-10-12",
+    "data_registrazione": "2026-10-12",
+    "protocollo": "20311",
+    "data_protocollo": "2026-09-23",
+    "oggetto": "Affidamento servizi dati linea videosorveglianza ditta WIND Tre S.p.A. – Impegno di spesa",
+    "richiedente": "WindTre",
+    "operator_target": "WindTre",
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null
+    },
+    "localizzazione": {
+      "area": null,
+      "strade": [],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-10-12_COLLE_ATTO_994_Windtre_Nd.pdf",
+      "url_path": "data/ordinanze/pdf/2026-10-12_COLLE_ATTO_994_Windtre_Nd.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "DOC-4b711b2fd3d58a1f",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "STRATEGICO",
+    "funzionario": "Norida Di",
+    "tipologia": "ALTRO",
+    "numero_atto": null,
+    "registro_generale": "995",
+    "data_emissione": "2026-10-12",
+    "data_registrazione": "2026-10-12",
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "Affidamento diretto ex art. 50, c. 1, lett. b) D.Lgs. 36/2023 per la fornitura di n. 2 linee dati destinate al sistema di videosorveglianza comunale - integrazione impegno di spesa. Beneficiario: Fastweb Spa",
+    "richiedente": "Fastweb",
+    "operator_target": "Fastweb",
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null
+    },
+    "localizzazione": {
+      "area": null,
+      "strade": [],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-10-12_COLLE_ATTO_995_Fastweb_Nd.pdf",
+      "url_path": "data/ordinanze/pdf/2026-10-12_COLLE_ATTO_995_Fastweb_Nd.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "PM-COLLE-ORD-105-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": "Paolo Cecconi",
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "105/2026",
+    "registro_generale": "110",
+    "data_emissione": "2026-10-01",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "Fastweb",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2026-10-19",
+      "al": "2026-10-23",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Aiaccia",
+        "Via Umbria"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [
+        "07624940EF4237721F0B",
+        "0A173E317742376CD0E8",
+        "0C884334EF423778B430",
+        "0EB8D0BA5142376E2D37"
+      ],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "20/2026",
+        "data": "2026-07-29",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-10-01_COLLE_ORD_105_Fastweb_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2026-10-01_COLLE_ORD_105_Fastweb_Stagno.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-20-2026"
+  },
+  {
+    "id": "PM-COLLE-ORD-104-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": "Paolo Cecconi",
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "104/2026",
+    "registro_generale": "109",
+    "data_emissione": "2026-09-28",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "Fastweb",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2026-10-05",
+      "al": "2026-10-17",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Otto Marzo",
+        "Via Romita",
+        "Via De Gasperi",
+        "Piazza Di Vittorio",
+        "Via Machiavelli",
+        "Via XXV Aprile"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "01393CA83D41C1030753",
+        "04D8D17C9141C10125EB",
+        "0AD5AAF68741C10071CC",
+        "0F45FBA6684261661C70"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "17/2026",
+        "data": "2026-07-16",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-09-28_COLLE_ORD_104_Fastweb_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2026-09-28_COLLE_ORD_104_Fastweb_Stagno.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-17-2026"
+  },
+  {
+    "id": "ALTRO-COLLE-201-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": null,
+    "funzionario": null,
+    "tipologia": "ALTRO",
+    "numero_atto": "201/2026",
+    "registro_generale": null,
+    "data_emissione": "2026-09-22",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "Convenzione per la realizzazione di infrastrutture di telecomunicazioni in fibra ottica nel comune di Collesalvetti. Approvazione schema di convenzione",
+    "richiedente": null,
+    "operator_target": null,
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null
+    },
+    "localizzazione": {
+      "area": null,
+      "strade": [],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-09-22_COLLE_ATTO_201_Nd_Nd.pdf",
+      "url_path": "data/ordinanze/pdf/2026-09-22_COLLE_ATTO_201_Nd_Nd.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "PM-COLLE-ORD-95-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": "Paolo Cecconi",
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "95/2026",
+    "registro_generale": "102",
+    "data_emissione": "2026-09-10",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "Fastweb",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2026-09-21",
+      "al": "2026-10-16",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Otto Marzo",
+        "Via Romita",
+        "Via De Gasperi",
+        "Via Machiavelli",
+        "Via XXV Aprile",
+        "Piazza Di Vittorio"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [
+        "01393CA83D41C1030753",
+        "01D91831AC4261623108",
+        "04D8D17C9141C10125EB",
+        "073CCE441A419DEDF933",
+        "0A2895209441C56CED8C",
+        "0AD5AAF68741C10071CC",
+        "0F45FBA6684261661C70"
+      ],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "17/2026",
+        "data": "2026-07-16",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": "COMPLETATA",
+    "note_tecniche": "Opere civili del Cantiere 2 Stagno rilevate come completate nello Snapshot 7.",
+    "file_pdf": {
+      "nome_file": "ordinanza_102_2026_stagno_cantiere2.pdf",
+      "url_path": "data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-17-2026"
+  },
+  {
+    "id": "PM-COLLE-ORD-88-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": "Paolo Cecconi",
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "88/2026",
+    "registro_generale": "95",
+    "data_emissione": "2026-09-02",
+    "data_registrazione": null,
+    "protocollo": "18362",
+    "data_protocollo": "2026-08-31",
+    "oggetto": "LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – COLLESALVETTI, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "Fastweb",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2026-09-14",
+      "al": "2026-10-02",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Nenni",
+        "Via Roma",
+        "Via del Valico a Pisa",
+        "Via di Cerretello"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [
+        "01D156648742616017BB",
+        "02172672CE42615EB699",
+        "08DB97EDC341BFC840B3",
+        "099D51459541BFC79191",
+        "0B6DD449B041BFC99520",
+        "0C11108026419D776229",
+        "0D01C4A3D9419D77F4F8"
+      ],
+      "candidate_feature_ids": [
+        "031048DE5942FB3FB694",
+        "044555C2D642FB404208",
+        "0AFA98819242FB416540",
+        "0DE7916F26423746716E"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "10/2026",
+        "data": "2026-05-14",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "ordinanza_95_2026_collesalvetti_cantiere1.pdf",
+      "url_path": "data/ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-COLLESALVETTI-10-2026"
+  },
+  {
+    "id": "DOC-3d3ad603d7506ab0",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "STRATEGICO",
+    "funzionario": "Maurizio Martellini",
+    "tipologia": "ALTRO",
+    "numero_atto": null,
+    "registro_generale": "738",
+    "data_emissione": "2026-08-11",
+    "data_registrazione": "2026-08-11",
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "Affidamento diretto ex art. 50, c. 1, lett. b) D.Lgs. 36/2023 per la fornitura di n. 2 linee dati destinate al sistema di videosorveglianza comunale - Impegno di spesa. Beneficiario: Fastweb Spa",
+    "richiedente": "Fastweb",
+    "operator_target": "Fastweb",
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null
+    },
+    "localizzazione": {
+      "area": null,
+      "strade": [],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-08-11_COLLE_ATTO_738_Fastweb_Nd.pdf",
+      "url_path": "data/ordinanze/pdf/2026-08-11_COLLE_ATTO_738_Fastweb_Nd.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "PM-COLLE-ORD-70-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": "Paolo Cecconi",
+    "tipologia": "RIPRISTINO",
+    "numero_atto": "70/2026",
+    "registro_generale": "75",
+    "data_emissione": "2026-07-16",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI STRADALI PER RIPRISTINO SCAVI FIBRA OTTICA – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "Fastweb",
+    "operator_target": "Fastweb",
+    "validita": {
+      "dal": "2026-08-03",
+      "al": "2026-08-13",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Marx",
+        "Via Guerrazzi",
+        "Via Curiel",
+        "Via La Malfa"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "012D8BFFFE4270DC0BCC",
+        "0B718B800C4270DCE3E0",
+        "0C7715154E42E8361D89"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "10/2025",
+        "data": "2025-07-16",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "ordinanza_75_2026_stagno_ripristino.pdf",
+      "url_path": "data/ordinanze/ordinanza_75_2026_stagno_ripristino.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-10-2025"
+  },
+  {
+    "id": "PM-COLLE-ORD-57-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": "Paolo Cecconi",
+    "tipologia": "RIPRISTINO",
+    "numero_atto": "57/2026",
+    "registro_generale": "61",
+    "data_emissione": "2026-06-01",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI STRADALI PER RIPRISTINO SCAVI FIBRA OTTICA – GUASTICCE, VIA FRANCIA - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "Fastweb",
+    "operator_target": "Fastweb",
+    "validita": {
+      "dal": "2026-06-22",
+      "al": "2026-06-26",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "GUASTICCE",
+      "strade": [
+        "Via Francia"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-06-01_COLLE_RIP_57_Fastweb_Guasticce.pdf",
+      "url_path": "data/ordinanze/pdf/2026-06-01_COLLE_RIP_57_Fastweb_Guasticce.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "PM-COLLE-ORD-49-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "49/2026",
+    "registro_generale": "53",
+    "data_emissione": "2026-05-18",
+    "data_registrazione": null,
+    "protocollo": "9563",
+    "data_protocollo": null,
+    "oggetto": "LAVORI STRADALI PER POSA FIBRA OTTICA – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "Fastweb",
+    "operator_target": "Fastweb",
+    "validita": {
+      "dal": "2026-05-25",
+      "al": "2026-05-29",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Verga",
+        "Via traversa omonima a Via Berlinguer"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "012D8BFFFE4270DC0BCC",
+        "0B718B800C4270DCE3E0"
+      ]
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-05-18_COLLE_ORD_49_Fastweb_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2026-05-18_COLLE_ORD_49_Fastweb_Stagno.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "PM-COLLE-ORD-40-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "40/2026",
+    "registro_generale": "43",
+    "data_emissione": "2026-04-28",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "FiberCop",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2026-05-04",
+      "al": "2026-05-15",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via di Suese",
+        "Via Buozzi",
+        "Corso Italia a Via F.lli Rosselli",
+        "Via Curiel",
+        "Via Buozzi a Via di Suese",
+        "Via F.lli Rorrelli",
+        "Via Buozzi a fine strada"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "012D8BFFFE4270DC0BCC",
+        "0B718B800C4270DCE3E0",
+        "0C7715154E42E8361D89"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "06/2026",
+        "data": "2026-03-20",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-04-28_COLLE_ORD_40_Fibercop_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2026-04-28_COLLE_ORD_40_Fibercop_Stagno.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-06-2026"
+  },
+  {
+    "id": "PM-COLLE-ORD-30-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "30/2026",
+    "registro_generale": "32",
+    "data_emissione": "2026-03-26",
+    "data_registrazione": null,
+    "protocollo": "6517",
+    "data_protocollo": "2026-03-24",
+    "oggetto": "LAVORI DI SCAVO STRADALE PER POSA INFRASTRUTTURA RETE FTTH FIBERCOP – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "FiberCop",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2026-04-13",
+      "al": "2026-04-30",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via di Suese",
+        "Via Buozzi",
+        "Corso Italia a Via F.lli Rosselli",
+        "Via Curiel",
+        "Via Buozzi a Via di Suese",
+        "Via F.lli Rorrelli",
+        "Via Buozzi a fine strada"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "012D8BFFFE4270DC0BCC",
+        "0B718B800C4270DCE3E0",
+        "0C7715154E42E8361D89"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "06/2026",
+        "data": "2026-03-20",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-03-26_COLLE_ORD_30_Fibercop_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2026-03-26_COLLE_ORD_30_Fibercop_Stagno.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-06-2026"
+  },
+  {
+    "id": "PM-COLLE-ORD-25-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "25/2026",
+    "registro_generale": "27",
+    "data_emissione": "2026-03-06",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "OCCUPAZIONE SUOLO PUBBLICO PER LAVORI DI SCAVO STRADALE E POSA IN OPERA CAVO DI FIBRA OTTICA – COLLESALVETTI, VIA EDDA FAGNI - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": null,
+    "operator_target": null,
+    "validita": {
+      "dal": "2026-03-16",
+      "al": "2026-03-31",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Edda Fagni"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-03-06_COLLE_ORD_25_Nd_Collesalvetti.pdf",
+      "url_path": "data/ordinanze/pdf/2026-03-06_COLLE_ORD_25_Nd_Collesalvetti.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "PM-COLLE-ORD-16-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "16/2026",
+    "registro_generale": "16",
+    "data_emissione": "2026-02-19",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "OCCUPAZIONE SUOLO PUBBLICO PER LAVORI DI SCAVO STRADALE E POSA IN OPERA CAVO DI FIBRA OTTICA – COLLESALVETTI, VIA EDDA FAGNI - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": null,
+    "operator_target": null,
+    "validita": {
+      "dal": "2026-02-23",
+      "al": "2026-03-06",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Edda Fagni"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2026-02-19_COLLE_ORD_16_Nd_Collesalvetti.pdf",
+      "url_path": "data/ordinanze/pdf/2026-02-19_COLLE_ORD_16_Nd_Collesalvetti.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "PM-COLLE-ORD-60-2025",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "60/2025",
+    "registro_generale": "63",
+    "data_emissione": "2025-08-12",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI DI SCAVO STRADALE IN PERFORAZIONE PER CONTO FASTWEB SPA – STAGNO, VIE VARIE - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE.",
+    "richiedente": "Fastweb",
+    "operator_target": "Fastweb",
+    "validita": {
+      "dal": "2025-08-18",
+      "al": "2025-08-28",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Verga",
+        "Via Berlinguer",
+        "Via La Malfa",
+        "Via Guerrazzi",
+        "Via Curiel",
+        "Via Marx"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "012D8BFFFE4270DC0BCC",
+        "0B718B800C4270DCE3E0",
+        "0C7715154E42E8361D89"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "10/2025",
+        "data": "2025-07-16",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2025-08-12_COLLE_ORD_60_Fastweb_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2025-08-12_COLLE_ORD_60_Fastweb_Stagno.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-10-2025"
+  },
+  {
+    "id": "PM-COLLE-ORD-55-2025",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "55/2025",
+    "registro_generale": "58",
+    "data_emissione": "2025-07-22",
+    "data_registrazione": null,
+    "protocollo": "16810",
+    "data_protocollo": "2025-07-18",
+    "oggetto": "LAVORI STRADALI PER POSA CAVO IN FIBRA OTTICA – COLLESLVETTI, VIA GARIBALDI - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": "FiberCop",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2025-07-23",
+      "al": "2025-07-31",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Garibaldi"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "09/2025",
+        "data": "2025-07-08",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2025-07-22_COLLE_ORD_55_Fibercop_Nd.pdf",
+      "url_path": "data/ordinanze/pdf/2025-07-22_COLLE_ORD_55_Fibercop_Nd.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-COLLESALVETTI-09-2025"
+  },
+  {
+    "id": "CONCESSIONE_SUOLO-COLLE-75-2024",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "PATRIMONIO_TRIBUTI",
+    "funzionario": "Alessandra Zambelli",
+    "tipologia": "CONCESSIONE_SUOLO",
+    "numero_atto": "75/2024",
+    "registro_generale": "778",
+    "data_emissione": "2024-09-19",
+    "data_registrazione": "2024-09-19",
+    "protocollo": "16557",
+    "data_protocollo": "2024-09-04",
+    "oggetto": "Concessione occupazione TEMPORANEA Suolo Pubblico n. 75/2024 – FIBERCOP S.P.A. – P. IVA: 11459900962 – per via Roma: da Civ. 12 a incrocio via Picchi e per via Picchi: da incrocio via Roma a Scuola infanzia “Picchi” - Collesalvetti.",
+    "richiedente": "FiberCop",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2024-09-18",
+      "al": "2024-09-29",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Roma",
+        "Via Picchi"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "02172672CE42615EB699",
+        "031048DE5942FB3FB694",
+        "044555C2D642FB404208",
+        "099D51459541BFC79191",
+        "0AFA98819242FB416540",
+        "0B6DD449B041BFC99520",
+        "0DE7916F26423746716E"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "ORDINANZA",
+        "numero": "107/2024",
+        "data": "2024-09-04",
+        "ente": "COMUNE_COLLESALVETTI"
+      },
+      {
+        "tipo": "ORDINANZA",
+        "numero": "113/2024",
+        "data": "2024-09-14",
+        "ente": "COMUNE_COLLESALVETTI"
+      },
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "24/2024",
+        "data": "2024-08-12",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2024-09-19_COLLE_CONC_75_Fibercop_Collesalvetti.pdf",
+      "url_path": "data/ordinanze/pdf/2024-09-19_COLLE_CONC_75_Fibercop_Collesalvetti.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-COLLESALVETTI-24-2024"
+  },
+  {
+    "id": "PM-COLLE-ORD-68-2024",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "68/2024",
+    "registro_generale": "65",
+    "data_emissione": "2024-05-31",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI STRADALI PER POSA FIBRA OTTICA - STAGNO, VIA BERLINGUER E VIA VERGA - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": "Fastweb",
+    "operator_target": "Fastweb",
+    "validita": {
+      "dal": "2024-06-01",
+      "al": "2024-06-07",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Berlinguer",
+        "Via Verga"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "012D8BFFFE4270DC0BCC",
+        "0B718B800C4270DCE3E0"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "03/2024",
+        "data": "2024-01-12",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2024-05-31_COLLE_ORD_68_Fastweb_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2024-05-31_COLLE_ORD_68_Fastweb_Stagno.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-03-2024"
+  },
+  {
+    "id": "PM-COLLE-ORD-59-2024",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "59/2024",
+    "registro_generale": "56",
+    "data_emissione": "2024-05-13",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI STRADALI PER POSA FIBRA OTTICA - STAGNO, VIA BERLINGUER E VIA VERGA - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": "Fastweb",
+    "operator_target": "Fastweb",
+    "validita": {
+      "dal": "2024-05-27",
+      "al": "2024-05-31",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Berlinguer",
+        "Via Verga",
+        "Via Berlinguer fino alla seconda traversa in destra"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "012D8BFFFE4270DC0BCC",
+        "0B718B800C4270DCE3E0"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "03/2024",
+        "data": "2024-01-12",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2024-05-13_COLLE_ORD_59_Fastweb_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2024-05-13_COLLE_ORD_59_Fastweb_Stagno.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-03-2024"
+  },
+  {
+    "id": "CONCESSIONE_SUOLO-COLLE-44-2024",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "PATRIMONIO_TRIBUTI",
+    "funzionario": "Alessandra Zambelli",
+    "tipologia": "CONCESSIONE_SUOLO",
+    "numero_atto": "44/2024",
+    "registro_generale": "332",
+    "data_emissione": "2024-04-18",
+    "data_registrazione": "2024-04-18",
+    "protocollo": "7685",
+    "data_protocollo": "2024-04-12",
+    "oggetto": "Concessione occupazione temporanea di suolo pubblico n°44/2024 a TIM – TELECOM ITALIA S.p.A. - P.I. 00488410010 - per via Pietro Grocco – via Sabatini Lopez – Fraz. Guasticce - Collesalvetti.",
+    "richiedente": "TIM",
+    "operator_target": "TIM",
+    "validita": {
+      "dal": "2024-04-17",
+      "al": "2024-04-24",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "GUASTICCE",
+      "strade": [
+        "Via Pietro Grocco",
+        "Via Sabatini Lopez"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "ORDINANZA",
+        "numero": "45/2024",
+        "data": "2024-04-12",
+        "ente": "COMUNE_COLLESALVETTI",
+        "atto_id": "PM-COLLE-ORD-45-2024"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2024-04-18_COLLE_CONC_44_Tim_Guasticce.pdf",
+      "url_path": "data/ordinanze/pdf/2024-04-18_COLLE_CONC_44_Tim_Guasticce.pdf"
+    },
+    "atti_collegati": [
+      "PM-COLLE-ORD-45-2024"
+    ],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-GUASTICCE-14-2024"
+  },
+  {
+    "id": "PM-COLLE-ORD-45-2024",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "45/2024",
+    "registro_generale": "43",
+    "data_emissione": "2024-04-12",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI DI SCAVO STRADALE PER CONTO TIM SPA – GUASTICCE, PIAZZA DON VALERI, VIA LOPEZ E VIA GROCCO - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": "TIM",
+    "operator_target": "TIM",
+    "validita": {
+      "dal": "2024-04-17",
+      "al": "2024-04-24",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "GUASTICCE",
+      "strade": [
+        "Piazza Don Valeri",
+        "Via Lopez",
+        "Via Grocco"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "14/2024",
+        "data": "2024-03-27",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2024-04-12_COLLE_ORD_45_Tim_Guasticce.pdf",
+      "url_path": "data/ordinanze/pdf/2024-04-12_COLLE_ORD_45_Tim_Guasticce.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-GUASTICCE-14-2024"
+  },
+  {
+    "id": "CONCESSIONE_SUOLO-COLLE-43-2024",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "PATRIMONIO_TRIBUTI",
+    "funzionario": "Alessandra Zambelli",
+    "tipologia": "CONCESSIONE_SUOLO",
+    "numero_atto": "43/2024",
+    "registro_generale": "319",
+    "data_emissione": "2024-04-11",
+    "data_registrazione": "2024-04-11",
+    "protocollo": "4207",
+    "data_protocollo": "2024-02-28",
+    "oggetto": "Concessione in sanatoria occupazione temporanea di suolo pubblico n°43/2024 a TIM – TELECOM ITALIA S.p.A. - P.I. 00488410010 - per via Della Costituzione e via 8 Marzo – Fraz. Stagno - Collesalvetti.",
+    "richiedente": "TIM",
+    "operator_target": "TIM",
+    "validita": {
+      "dal": "2024-03-04",
+      "al": "2024-03-09",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Della Costituzione"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "ORDINANZA",
+        "numero": "28/2024",
+        "data": "2024-02-23",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2024-04-11_COLLE_CONC_43_Tim_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2024-04-11_COLLE_CONC_43_Tim_Stagno.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "PM-COLLE-ORD-27-2024",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "27/2024",
+    "registro_generale": "24",
+    "data_emissione": "2024-02-23",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI STRADALI PER NUOVO ALLACCIO IDRICO IN FRAZIONE NUGOLA, VIA DELLE BECCHERIE 52 - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": null,
+    "operator_target": null,
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "NUGOLA",
+      "strade": [
+        "Via Delle Beccherie"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "6/2024",
+        "data": "2024-02-21",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2024-02-23_COLLE_ORD_27_Nd_Nugola.pdf",
+      "url_path": "data/ordinanze/pdf/2024-02-23_COLLE_ORD_27_Nd_Nugola.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-NUGOLA-6-2024"
+  },
+  {
+    "id": "CONCESSIONE_SUOLO-COLLE-20-2024",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "PATRIMONIO_TRIBUTI",
+    "funzionario": "Alessandra Zambelli",
+    "tipologia": "CONCESSIONE_SUOLO",
+    "numero_atto": "20/2024",
+    "registro_generale": "126",
+    "data_emissione": "2024-02-09",
+    "data_registrazione": "2024-02-09",
+    "protocollo": "19895",
+    "data_protocollo": "2023-10-11",
+    "oggetto": "Concessione occupazione temporanea di suolo pubblico n°20/2024 a TIM S.p.A. - P.I. 00488410010 - per via Roma n. 47 – Collesalvetti.",
+    "richiedente": "TIM",
+    "operator_target": "TIM",
+    "validita": {
+      "dal": "2024-02-15",
+      "al": "2024-02-23",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Roma"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "02172672CE42615EB699",
+        "031048DE5942FB3FB694",
+        "044555C2D642FB404208",
+        "099D51459541BFC79191",
+        "0AFA98819242FB416540",
+        "0B6DD449B041BFC99520",
+        "0DE7916F26423746716E"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "ORDINANZA",
+        "numero": "17/2024",
+        "data": "2024-01-30",
+        "ente": "COMUNE_COLLESALVETTI",
+        "atto_id": "PM-COLLE-ORD-17-2024"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2024-02-09_COLLE_CONC_20_Tim_Collesalvetti.pdf",
+      "url_path": "data/ordinanze/pdf/2024-02-09_COLLE_CONC_20_Tim_Collesalvetti.pdf"
+    },
+    "atti_collegati": [
+      "PM-COLLE-ORD-17-2024"
+    ],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-COLLESALVETTI-26-2023"
+  },
+  {
+    "id": "CONCESSIONE_SUOLO-COLLE-14-2024",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "PATRIMONIO_TRIBUTI",
+    "funzionario": "Alessandra Zambelli",
+    "tipologia": "CONCESSIONE_SUOLO",
+    "numero_atto": "14/2024",
+    "registro_generale": "100",
+    "data_emissione": "2024-02-01",
+    "data_registrazione": "2024-02-01",
+    "protocollo": "1974",
+    "data_protocollo": "2024-01-30",
+    "oggetto": "Concessione occupazione temporanea di suolo pubblico n° 14/2024 a FASTWEB SPA P.I. 12878470157 per via Enrico Berlinguer – via Giovanni Verga - Collesalvetti.",
+    "richiedente": "Fastweb",
+    "operator_target": "Fastweb",
+    "validita": {
+      "dal": "2024-02-05",
+      "al": "2024-02-08",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Enrico Berlinguer",
+        "Via Giovanni Verga"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "ORDINANZA",
+        "numero": "10/2024",
+        "data": "2024-01-16",
+        "ente": "COMUNE_COLLESALVETTI",
+        "atto_id": "PM-COLLE-ORD-10-2024"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2024-02-01_COLLE_CONC_14_Fastweb_Collesalvetti.pdf",
+      "url_path": "data/ordinanze/pdf/2024-02-01_COLLE_CONC_14_Fastweb_Collesalvetti.pdf"
+    },
+    "atti_collegati": [
+      "PM-COLLE-ORD-10-2024"
+    ],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-03-2024"
+  },
+  {
+    "id": "PM-COLLE-ORD-17-2024",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "17/2024",
+    "registro_generale": "16",
+    "data_emissione": "2024-01-30",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI DI SCAVO STRADALE PER CONTO TIM SPA – COLLESALVETTI, VIA ROMA 47 - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": "TIM",
+    "operator_target": "TIM",
+    "validita": {
+      "dal": "2023-02-15",
+      "al": "2024-02-23",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Roma"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "02172672CE42615EB699",
+        "031048DE5942FB3FB694",
+        "044555C2D642FB404208",
+        "099D51459541BFC79191",
+        "0AFA98819242FB416540",
+        "0B6DD449B041BFC99520",
+        "0DE7916F26423746716E"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "26/2023",
+        "data": "2023-09-05",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2024-01-30_COLLE_ORD_17_Tim_Collesalvetti.pdf",
+      "url_path": "data/ordinanze/pdf/2024-01-30_COLLE_ORD_17_Tim_Collesalvetti.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-COLLESALVETTI-26-2023"
+  },
+  {
+    "id": "PM-COLLE-ORD-10-2024",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "10/2024",
+    "registro_generale": "9",
+    "data_emissione": "2024-01-16",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI STRADALI PER POSA FIBRA OTTICA - STAGNO, VIA BERLINGUER E VIA VERGA - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": "Fastweb",
+    "operator_target": "Fastweb",
+    "validita": {
+      "dal": "2024-02-05",
+      "al": "2024-02-09",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "STAGNO",
+      "strade": [
+        "Via Berlinguer",
+        "Via Verga"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "012D8BFFFE4270DC0BCC",
+        "0B718B800C4270DCE3E0"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "03/2024",
+        "data": "2024-01-12",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2024-01-16_COLLE_ORD_10_Fastweb_Stagno.pdf",
+      "url_path": "data/ordinanze/pdf/2024-01-16_COLLE_ORD_10_Fastweb_Stagno.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-STAGNO-03-2024"
+  },
+  {
+    "id": "CONCESSIONE_SUOLO-COLLE-81-2023",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "PATRIMONIO_TRIBUTI",
+    "funzionario": "Alessandra Zambelli",
+    "tipologia": "CONCESSIONE_SUOLO",
+    "numero_atto": "81/2023",
+    "registro_generale": "985",
+    "data_emissione": "2023-10-18",
+    "data_registrazione": "2023-10-18",
+    "protocollo": "19895",
+    "data_protocollo": "2023-10-11",
+    "oggetto": "Concessione in sanatoria occupazione temporanea di suolo pubblico n°81/2023 a TIM S.p.A. - P.I. 00488410010 - per via Della Colmata snc – Fraz. Guasticce - Collesalvetti.",
+    "richiedente": "TIM",
+    "operator_target": "TIM",
+    "validita": {
+      "dal": "2023-10-16",
+      "al": "2023-10-20",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "GUASTICCE",
+      "strade": [
+        "Via Della Colmata"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "ORDINANZA",
+        "numero": "93/2023",
+        "data": "2023-10-17",
+        "ente": "COMUNE_COLLESALVETTI",
+        "atto_id": "PM-COLLE-ORD-93-2023"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2023-10-18_COLLE_CONC_81_Tim_Guasticce.pdf",
+      "url_path": "data/ordinanze/pdf/2023-10-18_COLLE_CONC_81_Tim_Guasticce.pdf"
+    },
+    "atti_collegati": [
+      "PM-COLLE-ORD-93-2023"
+    ],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-GUASTICCE-17-2023"
+  },
+  {
+    "id": "PM-COLLE-ORD-93-2023",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "93/2023",
+    "registro_generale": "97",
+    "data_emissione": "2023-10-17",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI DI SCAVO STRADALE PER CONTO TIM SPA – GUASTICCE, VIA DELLA COLMATA - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": "TIM",
+    "operator_target": "TIM",
+    "validita": {
+      "dal": "2023-10-18",
+      "al": "2023-10-27",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "GUASTICCE",
+      "strade": [
+        "Via Della Colmata"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "17/2023",
+        "data": "2023-06-07",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2023-10-17_COLLE_ORD_93_Tim_Guasticce.pdf",
+      "url_path": "data/ordinanze/pdf/2023-10-17_COLLE_ORD_93_Tim_Guasticce.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-GUASTICCE-17-2023"
+  },
+  {
+    "id": "CONCESSIONE_SUOLO-COLLE-78-2023",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "PATRIMONIO_TRIBUTI",
+    "funzionario": "Alessandra Zambelli",
+    "tipologia": "CONCESSIONE_SUOLO",
+    "numero_atto": "78/2023",
+    "registro_generale": "919",
+    "data_emissione": "2023-10-02",
+    "data_registrazione": "2023-10-02",
+    "protocollo": "17727",
+    "data_protocollo": "2023-09-14",
+    "oggetto": "Concessione in sanatoria occupazione temporanea di suolo pubblico n°78/2023 a TIM S.P.A. - P.I. 00488410010 - per via Roma n. 47 - Collesalvetti.",
+    "richiedente": "TIM",
+    "operator_target": "TIM",
+    "validita": {
+      "dal": "2023-09-25",
+      "al": "2023-10-03",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Roma"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "02172672CE42615EB699",
+        "031048DE5942FB3FB694",
+        "044555C2D642FB404208",
+        "099D51459541BFC79191",
+        "0AFA98819242FB416540",
+        "0B6DD449B041BFC99520",
+        "0DE7916F26423746716E"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "ORDINANZA",
+        "numero": "86/2023",
+        "data": "2023-09-16",
+        "ente": "COMUNE_COLLESALVETTI",
+        "atto_id": "PM-COLLE-ORD-86-2023"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2023-10-02_COLLE_CONC_78_Tim_Collesalvetti.pdf",
+      "url_path": "data/ordinanze/pdf/2023-10-02_COLLE_CONC_78_Tim_Collesalvetti.pdf"
+    },
+    "atti_collegati": [
+      "PM-COLLE-ORD-86-2023"
+    ],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-COLLESALVETTI-26-2023"
+  },
+  {
+    "id": "PM-COLLE-ORD-86-2023",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "86/2023",
+    "registro_generale": "89",
+    "data_emissione": "2023-09-16",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI DI SCAVO STRADALE PER CONTO TIM SPA – COLLESALVETTI, VIA ROMA 47 - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": "TIM",
+    "operator_target": "TIM",
+    "validita": {
+      "dal": "2023-09-25",
+      "al": "2023-10-03",
+      "orario": "08:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Roma"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "02172672CE42615EB699",
+        "031048DE5942FB3FB694",
+        "044555C2D642FB404208",
+        "099D51459541BFC79191",
+        "0AFA98819242FB416540",
+        "0B6DD449B041BFC99520",
+        "0DE7916F26423746716E"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "26/2023",
+        "data": "2023-09-05",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2023-09-16_COLLE_ORD_86_Tim_Collesalvetti.pdf",
+      "url_path": "data/ordinanze/pdf/2023-09-16_COLLE_ORD_86_Tim_Collesalvetti.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-COLLESALVETTI-26-2023"
+  },
+  {
+    "id": "CONCESSIONE_SUOLO-COLLE-64-2023",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "PATRIMONIO_TRIBUTI",
+    "funzionario": "Maurizio Lischi",
+    "tipologia": "CONCESSIONE_SUOLO",
+    "numero_atto": "64/2023",
+    "registro_generale": "764",
+    "data_emissione": "2023-08-28",
+    "data_registrazione": "2023-08-28",
+    "protocollo": "13810",
+    "data_protocollo": "2023-07-14",
+    "oggetto": "Concessione occupazione temporanea di suolo pubblico n°64/2023 a TIM S.P.A. - P.I. 00488410010 - per via Nugola Nuova - via Delle Beccherie – Strada Provinciale n. 2 (della Cerreta) – fraz. Nugola - Collesalvetti.",
+    "richiedente": "TIM",
+    "operator_target": "TIM",
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null,
+      "periodi": [
+        {
+          "dal": "2023-08-28",
+          "al": "2023-08-29"
+        },
+        {
+          "dal": "2023-08-30",
+          "al": "2023-09-05"
+        }
+      ]
+    },
+    "localizzazione": {
+      "area": "NUGOLA",
+      "strade": [
+        "Via Nugola Nuova",
+        "Via Delle Beccherie",
+        "SP2"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "ORDINANZA",
+        "numero": "75/2023",
+        "data": "2023-08-09",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2023-08-28_COLLE_CONC_64_Tim_Nugola.pdf",
+      "url_path": "data/ordinanze/pdf/2023-08-28_COLLE_CONC_64_Tim_Nugola.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "PM-COLLE-ORD-57-2023",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "57/2023",
+    "registro_generale": "60",
+    "data_emissione": "2023-06-26",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI DI SCAVO STRADALE PER POSA FIBRA OTTICA – GUASTICCE, VIA DON STURZO E VIA DELLA COLMATA - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": null,
+    "operator_target": null,
+    "validita": {
+      "dal": "2023-07-03",
+      "al": "2023-07-10",
+      "orario": "07:00 - 18:00"
+    },
+    "localizzazione": {
+      "area": "GUASTICCE",
+      "strade": [
+        "Via Don Sturzo",
+        "Via Della Colmata"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "17/2023",
+        "data": "2023-06-07",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2023-06-26_COLLE_ORD_57_Nd_Guasticce.pdf",
+      "url_path": "data/ordinanze/pdf/2023-06-26_COLLE_ORD_57_Nd_Guasticce.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-GUASTICCE-17-2023"
+  },
+  {
+    "id": "ALTRO-COLLE-167-2023",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": null,
+    "funzionario": null,
+    "tipologia": "ALTRO",
+    "numero_atto": "167/2023",
+    "registro_generale": null,
+    "data_emissione": "2023-05-26",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "0,900 segnaletica stradale, cartellone dissuasore elettronico, velocità illuminazione. Decoro urbano pulizia fossi fognari. Fibra ottica. Presidio sanitario primo soccorso. RITIRATA",
+    "richiedente": null,
+    "operator_target": null,
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null
+    },
+    "localizzazione": {
+      "area": null,
+      "strade": [],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2023-05-26_COLLE_ATTO_167_Nd_Nd.pdf",
+      "url_path": "data/ordinanze/pdf/2023-05-26_COLLE_ATTO_167_Nd_Nd.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "CONCESSIONE_SUOLO-COLLE-11-2023",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "PATRIMONIO_TRIBUTI",
+    "funzionario": "Alessandra Zambelli",
+    "tipologia": "CONCESSIONE_SUOLO",
+    "numero_atto": "11/2023",
+    "registro_generale": "175",
+    "data_emissione": "2023-02-20",
+    "data_registrazione": "2023-02-20",
+    "protocollo": "1689",
+    "data_protocollo": "2023-01-24",
+    "oggetto": "Concessione occupazione temporanea di suolo pubblico n°11/2023 a TIM S.P.A. - P.I. 00488410010 - per via Roma – Collesalvetti.",
+    "richiedente": "TIM",
+    "operator_target": "TIM",
+    "validita": {
+      "dal": "2023-02-20",
+      "al": "2023-02-24",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Roma"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": [
+        "02172672CE42615EB699",
+        "031048DE5942FB3FB694",
+        "044555C2D642FB404208",
+        "099D51459541BFC79191",
+        "0AFA98819242FB416540",
+        "0B6DD449B041BFC99520",
+        "0DE7916F26423746716E"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "ORDINANZA",
+        "numero": "17/2023",
+        "data": "2023-02-17",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2023-02-20_COLLE_CONC_11_Tim_Collesalvetti.pdf",
+      "url_path": "data/ordinanze/pdf/2023-02-20_COLLE_CONC_11_Tim_Collesalvetti.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "PM-COLLE-ORD-13-2022",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "13/2022",
+    "registro_generale": "13",
+    "data_emissione": "2022-02-25",
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "LAVORI DI SCAVO STRADALE PER CONTO FASTWEB – COLLESALVETTI, VIA SAN QUIRICO - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": "Fastweb",
+    "operator_target": "Fastweb",
+    "validita": {
+      "dal": "2022-03-24",
+      "al": "2022-03-26",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via San Quirico"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "04/2022",
+        "data": "2022-02-11",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2022-02-25_COLLE_ORD_13_Fastweb_Collesalvetti.pdf",
+      "url_path": "data/ordinanze/pdf/2022-02-25_COLLE_ORD_13_Fastweb_Collesalvetti.pdf"
+    },
+    "atti_collegati": [],
+    "cluster_id": "AUT-COMUNE_COLLESALVETTI-COLLESALVETTI-04-2022"
+  },
+  {
+    "id": "PM-COLLE-ORD-16-2021",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "POLIZIA_LOCALE",
+    "funzionario": null,
+    "tipologia": "ORDINANZA_VIABILITA",
+    "numero_atto": "16/2021",
+    "registro_generale": "23",
+    "data_emissione": "2021-05-20",
+    "data_registrazione": null,
+    "protocollo": "8795",
+    "data_protocollo": "2021-05-13",
+    "oggetto": "LAVORI DI SCAVO PER POSA CAVI IN FIBRA OTTICA - GUASTICCE, VIA DON STURZO - DISCIPLINA STRAORDINARIA DELLA CIRCOLAZIONE STRADALE",
+    "richiedente": "Ultranet",
+    "operator_target": "Ultranet",
+    "validita": {
+      "dal": "2021-05-24",
+      "al": "2021-05-26",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "GUASTICCE",
+      "strade": [
+        "Via Don Sturzo"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "304/2021",
+        "data": "2021-03-02",
+        "ente": "PROVINCIA_LIVORNO"
+      },
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "09/2021",
+        "data": "2021-04-02",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "file_pdf": {
+      "nome_file": "pdf/2021-05-20_COLLE_ORD_16_Ultranet_Guasticce.pdf",
+      "url_path": "data/ordinanze/pdf/2021-05-20_COLLE_ORD_16_Ultranet_Guasticce.pdf"
+    },
+    "atti_collegati": []
+  },
+  {
+    "id": "DOC-e63c60dce14754ee",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": null,
+    "funzionario": null,
+    "tipologia": "ALTRO",
+    "numero_atto": null,
+    "registro_generale": null,
+    "data_emissione": null,
+    "data_registrazione": "2023-04-24",
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "Mozione per la riqualificazione della SP6 a Parrana San Martino",
+    "richiedente": null,
+    "operator_target": null,
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "EXTRAURBANO",
+      "strade": [
+        "SP6"
+      ],
+      "prog_chilometrica": {
+        "dal_km": 0,
+        "al_km": 0.9
+      },
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": true,
+    "stato_opera": null,
+    "atti_collegati": [
+      "ALTRO-COLLE-167-2023"
+    ],
+    "file_pdf": {
+      "nome_file": "pdf/UNDATED_COLLE_ATTO_e63c60dce147_Nd_Nd.pdf",
+      "url_path": "data/ordinanze/pdf/UNDATED_COLLE_ATTO_e63c60dce147_Nd_Nd.pdf"
+    }
+  },
+  {
+    "id": "DOC-a5116a819cd5789a",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": null,
+    "funzionario": null,
+    "tipologia": "ALTRO",
+    "numero_atto": null,
+    "registro_generale": null,
+    "data_emissione": null,
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "Progetto FTTH Estracom – Particolari costruttivi dei pozzetti",
+    "richiedente": null,
+    "operator_target": null,
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null
+    },
+    "localizzazione": {
+      "area": null,
+      "strade": [],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "atti_collegati": [
+      "ALTRO-COLLE-201-2026"
+    ],
+    "file_pdf": {
+      "nome_file": "pdf/UNDATED_COLLE_ATTO_a5116a819cd5_Nd_Nd.pdf",
+      "url_path": "data/ordinanze/pdf/UNDATED_COLLE_ATTO_a5116a819cd5_Nd_Nd.pdf"
+    }
+  },
+  {
+    "id": "DOC-9039709ef14bb603",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": null,
+    "funzionario": null,
+    "tipologia": "ALTRO",
+    "numero_atto": null,
+    "registro_generale": null,
+    "data_emissione": null,
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "Progetto FTTH Estracom – Particolari costruttivi degli scavi",
+    "richiedente": null,
+    "operator_target": null,
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null
+    },
+    "localizzazione": {
+      "area": null,
+      "strade": [],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "atti_collegati": [
+      "ALTRO-COLLE-201-2026"
+    ],
+    "file_pdf": {
+      "nome_file": "pdf/UNDATED_COLLE_ATTO_9039709ef14b_Nd_Nd.pdf",
+      "url_path": "data/ordinanze/pdf/UNDATED_COLLE_ATTO_9039709ef14b_Nd_Nd.pdf"
+    }
+  },
+  {
+    "id": "DOC-78e40bfe71844453",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": null,
+    "funzionario": null,
+    "tipologia": "ALTRO",
+    "numero_atto": null,
+    "registro_generale": null,
+    "data_emissione": null,
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "Progetto FTTH Estracom – Relazione tecnica per Stagno e La Chiusa",
+    "richiedente": null,
+    "operator_target": null,
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null
+    },
+    "localizzazione": {
+      "area": null,
+      "strade": [],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "atti_collegati": [
+      "ALTRO-COLLE-201-2026"
+    ],
+    "file_pdf": {
+      "nome_file": "pdf/UNDATED_COLLE_ATTO_78e40bfe7184_Nd_Nd.pdf",
+      "url_path": "data/ordinanze/pdf/UNDATED_COLLE_ATTO_78e40bfe7184_Nd_Nd.pdf"
+    }
+  },
+  {
+    "id": "DOC-173cafb03bbb50b8",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": null,
+    "funzionario": null,
+    "tipologia": "ALTRO",
+    "numero_atto": null,
+    "registro_generale": null,
+    "data_emissione": null,
+    "data_registrazione": null,
+    "protocollo": null,
+    "data_protocollo": null,
+    "oggetto": "Schema di convenzione per la rete FTTH Estracom",
+    "richiedente": null,
+    "operator_target": null,
+    "validita": {
+      "dal": null,
+      "al": null,
+      "orario": null
+    },
+    "localizzazione": {
+      "area": null,
+      "strade": [],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [],
+      "candidate_feature_ids": []
+    },
+    "riferimenti": [],
+    "ocr_required": false,
+    "stato_opera": null,
+    "atti_collegati": [
+      "ALTRO-COLLE-201-2026"
+    ],
+    "file_pdf": {
+      "nome_file": "pdf/UNDATED_COLLE_ATTO_173cafb03bbb_Nd_Nd.pdf",
+      "url_path": "data/ordinanze/pdf/UNDATED_COLLE_ATTO_173cafb03bbb_Nd_Nd.pdf"
+    }
+  }
+]

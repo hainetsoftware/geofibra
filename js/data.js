@@ -4714,8 +4714,9 @@ window.FTTH_NETWORK_DATA = {
           "range": 589.429853804686
         },
         "cantiere": {
+          "id_ordinanza": "PM-COLLE-ORD-105-2026",
           "codice_ordinanza": "Ordinanza P.M. n. 105/2026 + Concessione Suolo n. 77/2026",
-          "data_ordinanza": "09/10/2026",
+          "data_ordinanza": "01/10/2026",
           "inizio_lavori": "2026-10-19T08:00:00+02:00",
           "fine_lavori": "2026-10-23T18:00:00+02:00",
           "inizio_lavori_effettivo": "2026-10-19T08:00:00+02:00",
@@ -4726,7 +4727,7 @@ window.FTTH_NETWORK_DATA = {
             "Via Aiaccia",
             "Via Umbria"
           ],
-          "file_pdf": "data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+          "file_pdf": "data/ordinanze/pdf/2026-10-01_COLLE_ORD_105_Fastweb_Stagno.pdf",
           "stato_base": "programmato",
           "note_slittamento": "Finestra temporale: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Stato: Autorizzato / Avvio programmato. Nota: Innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale SP555 autorizzata a luglio 2026."
         },
@@ -4824,8 +4825,9 @@ window.FTTH_NETWORK_DATA = {
           "range": 426.9839933574985
         },
         "cantiere": {
+          "id_ordinanza": "PM-COLLE-ORD-105-2026",
           "codice_ordinanza": "Ordinanza P.M. n. 105/2026 + Concessione Suolo n. 77/2026",
-          "data_ordinanza": "09/10/2026",
+          "data_ordinanza": "01/10/2026",
           "inizio_lavori": "2026-10-19T08:00:00+02:00",
           "fine_lavori": "2026-10-23T18:00:00+02:00",
           "inizio_lavori_effettivo": "2026-10-19T08:00:00+02:00",
@@ -4836,7 +4838,7 @@ window.FTTH_NETWORK_DATA = {
             "Via Aiaccia",
             "Via Umbria"
           ],
-          "file_pdf": "data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+          "file_pdf": "data/ordinanze/pdf/2026-10-01_COLLE_ORD_105_Fastweb_Stagno.pdf",
           "stato_base": "programmato",
           "note_slittamento": "Finestra temporale: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Stato: Autorizzato / Avvio programmato. Nota: Innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale SP555 autorizzata a luglio 2026."
         },
@@ -4914,8 +4916,9 @@ window.FTTH_NETWORK_DATA = {
           "range": 988.5851525836915
         },
         "cantiere": {
+          "id_ordinanza": "PM-COLLE-ORD-105-2026",
           "codice_ordinanza": "Ordinanza P.M. n. 105/2026 + Concessione Suolo n. 77/2026",
-          "data_ordinanza": "09/10/2026",
+          "data_ordinanza": "01/10/2026",
           "inizio_lavori": "2026-10-19T08:00:00+02:00",
           "fine_lavori": "2026-10-23T18:00:00+02:00",
           "inizio_lavori_effettivo": "2026-10-19T08:00:00+02:00",
@@ -4926,7 +4929,7 @@ window.FTTH_NETWORK_DATA = {
             "Via Aiaccia",
             "Via Umbria"
           ],
-          "file_pdf": "data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+          "file_pdf": "data/ordinanze/pdf/2026-10-01_COLLE_ORD_105_Fastweb_Stagno.pdf",
           "stato_base": "programmato",
           "note_slittamento": "Finestra temporale: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Stato: Autorizzato / Avvio programmato. Nota: Innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale SP555 autorizzata a luglio 2026."
         },
@@ -4994,8 +4997,9 @@ window.FTTH_NETWORK_DATA = {
           "range": 642.4696112451784
         },
         "cantiere": {
+          "id_ordinanza": "PM-COLLE-ORD-105-2026",
           "codice_ordinanza": "Ordinanza P.M. n. 105/2026 + Concessione Suolo n. 77/2026",
-          "data_ordinanza": "09/10/2026",
+          "data_ordinanza": "01/10/2026",
           "inizio_lavori": "2026-10-19T08:00:00+02:00",
           "fine_lavori": "2026-10-23T18:00:00+02:00",
           "inizio_lavori_effettivo": "2026-10-19T08:00:00+02:00",
@@ -5006,7 +5010,7 @@ window.FTTH_NETWORK_DATA = {
             "Via Aiaccia",
             "Via Umbria"
           ],
-          "file_pdf": "data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+          "file_pdf": "data/ordinanze/pdf/2026-10-01_COLLE_ORD_105_Fastweb_Stagno.pdf",
           "stato_base": "programmato",
           "note_slittamento": "Finestra temporale: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Stato: Autorizzato / Avvio programmato. Nota: Innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale SP555 autorizzata a luglio 2026."
         },
@@ -5335,6 +5339,7 @@ window.FTTH_NETWORK_DATA = {
           "range": 586.399429043595
         },
         "cantiere": {
+          "id_ordinanza": "PM-COLLE-ORD-110-2026",
           "codice_ordinanza": "Ordinanza P.M. n. 110/2026 (Autorizzazione Tecnica n. 26/2026)",
           "data_ordinanza": "14/10/2026",
           "inizio_lavori": "2026-10-26T08:00:00+01:00",
@@ -5346,7 +5351,7 @@ window.FTTH_NETWORK_DATA = {
             "Via Gobetti",
             "Via Curiel"
           ],
-          "file_pdf": null,
+          "file_pdf": "data/ordinanze/pdf/2026-10-14_COLLE_ORD_110_Fastweb_Stagno.pdf",
           "stato_base": "eseguito",
           "note_slittamento": "Opere civili completate nell’anello nord tra Via Karl Marx, Via Gobetti e Via Curiel (Ord. 110/2026)."
         },
@@ -5450,6 +5455,7 @@ window.FTTH_NETWORK_DATA = {
           "range": 945.9286351699848
         },
         "cantiere": {
+          "id_ordinanza": "PM-COLLE-ORD-110-2026",
           "codice_ordinanza": "Ordinanza P.M. n. 110/2026 (Autorizzazione Tecnica n. 26/2026)",
           "data_ordinanza": "14/10/2026",
           "inizio_lavori": "2026-10-26T08:00:00+01:00",
@@ -5459,7 +5465,7 @@ window.FTTH_NETWORK_DATA = {
           "vie_interessate": [
             "Via Don Giovanni Verità"
           ],
-          "file_pdf": null,
+          "file_pdf": "data/ordinanze/pdf/2026-10-14_COLLE_ORD_110_Fastweb_Stagno.pdf",
           "stato_base": "planned",
           "note_slittamento": "Ramo sud di Via Don Giovanni Verità ancora da scavare (Ord. 110/2026, finestra 26/10–20/11/2026)."
         },
@@ -5541,6 +5547,7 @@ window.FTTH_NETWORK_DATA = {
           "range": 1310.40176230541
         },
         "cantiere": {
+          "id_ordinanza": "PM-COLLE-ORD-110-2026",
           "codice_ordinanza": "Ordinanza P.M. n. 110/2026 (Autorizzazione Tecnica n. 26/2026)",
           "data_ordinanza": "14/10/2026",
           "inizio_lavori": "2026-10-26T08:00:00+01:00",
@@ -5557,7 +5564,7 @@ window.FTTH_NETWORK_DATA = {
             "Via Verga",
             "Via Berlinguer"
           ],
-          "file_pdf": null,
+          "file_pdf": "data/ordinanze/pdf/2026-10-14_COLLE_ORD_110_Fastweb_Stagno.pdf",
           "stato_base": "planned",
           "note_slittamento": "Cantiere 4 Stagno (Ordinanza PM n. 110/2026, Autorizzazione Tecnica n. 26/2026). Finestra: 26/10/2026 - 20/11/2026. Vie: Via Marx, Via Curiel (lato sud), Via Gobetti, Via Don Verità, Via F.lli Cervi, Via La Malfa, Via Verga, Via Berlinguer. Stato: Pianificato."
         },
@@ -5621,6 +5628,7 @@ window.FTTH_NETWORK_DATA = {
           "range": 331.9287181911932
         },
         "cantiere": {
+          "id_ordinanza": "PM-COLLE-ORD-110-2026",
           "codice_ordinanza": "Ordinanza P.M. n. 110/2026 (Autorizzazione Tecnica n. 26/2026)",
           "data_ordinanza": "14/10/2026",
           "inizio_lavori": "2026-10-26T08:00:00+01:00",
@@ -5637,7 +5645,7 @@ window.FTTH_NETWORK_DATA = {
             "Via Verga",
             "Via Berlinguer"
           ],
-          "file_pdf": null,
+          "file_pdf": "data/ordinanze/pdf/2026-10-14_COLLE_ORD_110_Fastweb_Stagno.pdf",
           "stato_base": "planned",
           "note_slittamento": "Cantiere 4 Stagno (Ordinanza PM n. 110/2026, Autorizzazione Tecnica n. 26/2026). Finestra: 26/10/2026 - 20/11/2026. Vie: Via Marx, Via Curiel (lato sud), Via Gobetti, Via Don Verità, Via F.lli Cervi, Via La Malfa, Via Verga, Via Berlinguer. Stato: Pianificato."
         },
@@ -5781,7 +5789,7 @@ window.FTTH_NETWORK_DATA = {
           "inizio_lavori": "2026-11-16T08:00:00+01:00",
           "fine_lavori": "2026-12-04T18:00:00+01:00",
           "orario_giornaliero": "08:00 - 18:00 feriali",
-          "richiedente": "Fastweb Spa",
+          "richiedente": "Fastweb",
           "vie_interessate": [
             "Via Roma",
             "Via del Valico a Pisa",
@@ -5864,7 +5872,7 @@ window.FTTH_NETWORK_DATA = {
           "inizio_lavori": "2026-11-16T08:00:00+01:00",
           "fine_lavori": "2026-12-04T18:00:00+01:00",
           "orario_giornaliero": "08:00 - 18:00 feriali",
-          "richiedente": "Fastweb Spa",
+          "richiedente": "Fastweb",
           "vie_interessate": [
             "Via Roma",
             "Via del Valico a Pisa",
@@ -5962,7 +5970,7 @@ window.FTTH_NETWORK_DATA = {
           "inizio_lavori": "2026-11-16T08:00:00+01:00",
           "fine_lavori": "2026-12-04T18:00:00+01:00",
           "orario_giornaliero": "08:00 - 18:00 feriali",
-          "richiedente": "Fastweb Spa",
+          "richiedente": "Fastweb",
           "vie_interessate": [
             "Via Roma",
             "Via del Valico a Pisa",
@@ -6055,7 +6063,7 @@ window.FTTH_NETWORK_DATA = {
           "inizio_lavori": "2026-11-16T08:00:00+01:00",
           "fine_lavori": "2026-12-04T18:00:00+01:00",
           "orario_giornaliero": "08:00 - 18:00 feriali",
-          "richiedente": "Fastweb Spa",
+          "richiedente": "Fastweb",
           "vie_interessate": [
             "Via Roma",
             "Via del Valico a Pisa",

@@ -107,6 +107,7 @@ Apparato = punto di rete censito (armadio ARL/ARLO o centrale). Linee, poligoni 
 ## 📋 Registro Cantieri e Ordinanze di Polizia Municipale
 
 Il tracker legge `data/ordinanze.json`. I PDF originali e l’indice documentale si trovano in `data/ordinanze/`. I riferimenti distinguono il numero di Polizia Municipale (P.M.) dal Registro Generale (Reg. Gen.).
+Per ricerca, anteprima PDF e collegamenti con la mappa, apri **Archivio Atti**. Vedi la [guida di importazione](docs/ARCHIVIO_ATTI.md).
 
 1. **Cantiere 2 - Stagno (Nuova Espansione FTTH):**
    - **Atto:** Ordinanza P.M. n. 95/2026 (**Reg. Gen. 102/104/2026**)

@@ -1,5 +1,6 @@
 let map;
 let geojsonLayer;
+let archivioHighlight;
 let currentCantiereFilter = 'all';
 
 // Limiti geografici della Toscana (Sud-Ovest e Nord-Est)
@@ -42,6 +43,9 @@ function initMap() {
     map.createPane('polygonsPane').style.zIndex = 350;
     map.createPane('linesPane').style.zIndex = 450;
     map.createPane('markersPane').style.zIndex = 600;
+    const highlightPane = map.createPane('archivioHighlightPane');
+    highlightPane.style.zIndex = 550;
+    highlightPane.style.pointerEvents = 'none';
 
     L.control.zoom({ position: 'bottomright' }).addTo(map);
 
@@ -113,6 +117,7 @@ function featureMatchesFilter(feature, filter) {
 
 function loadData() {
     if (!window.FTTH_NETWORK_DATA) return;
+    archivioHighlight?.remove();
     
     if (geojsonLayer) {
         map.removeLayer(geojsonLayer);
@@ -273,7 +278,22 @@ function loadData() {
             }
             popupContent += `</div></div>`;
             
-            layer.bindPopup(popupContent, { minWidth: 280, maxWidth: 350 });
+            let inspection;
+            layer.bindPopup(() => {
+                if (inspection) return inspection;
+                const content = document.createElement('div');
+                content.innerHTML = popupContent;
+                if (feature.geometry.type === 'LineString' || props.category === 'arlo') {
+                    const links = document.createElement('div');
+                    links.className = 'archivio-popup';
+                    content.append(links);
+                    window.appendArchivioLinks?.(links, feature.id).then(() => {
+                        if (layer.isPopupOpen() && links.hasChildNodes()) layer.getPopup().update();
+                    });
+                }
+                inspection = content;
+                return inspection;
+            }, { minWidth: 280, maxWidth: 350, maxHeight: 410 });
             if (feature.geometry.type === 'LineString') {
                 layer.on('click', L.DomEvent.stopPropagation);
             }
@@ -324,4 +344,27 @@ window.setCantieriFilter = (filterName) => {
 
 window.flyToFrazione = (lat, lng) => {
     if (map) map.flyTo([lat, lng], 16, { duration: 1.8 });
+};
+
+window.showArchivioFeatures = (ids) => {
+    if (!map) return;
+    const requested = new Set(ids);
+    const features = window.FTTH_NETWORK_DATA.features.filter(feature => requested.has(feature.id));
+    if (!features.length) return;
+    if (features.some(feature => !featureMatchesFilter(feature, currentCantiereFilter))) {
+        window.setCantieriFilter('all');
+    }
+    map.closePopup();
+    archivioHighlight?.remove();
+    const style = { pane: 'archivioHighlightPane', interactive: false, color: '#9efcff', weight: 7, opacity: 0.85 };
+    archivioHighlight = L.geoJSON(features, {
+        style,
+        pointToLayer: (_feature, latlng) => L.circleMarker(latlng, { ...style, radius: 18, weight: 3, fill: false })
+    }).addTo(map);
+    const sidebar = document.getElementById('telemetry-panel');
+    map.flyToBounds(archivioHighlight.getBounds(), {
+        paddingTopLeft: [260, 80],
+        paddingBottomRight: [(sidebar?.offsetWidth ?? 0) + 40, 65],
+        maxZoom: 17
+    });
 };

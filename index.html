@@ -77,7 +77,7 @@
                 Per consultare la mappa interattiva e il tracker dei cantieri, ti invitiamo a riaprire questo sito da un computer desktop o tablet.
             </p>
 
-            <!-- L'UNICA azione consentita da smartphone -->
+            <button type="button" class="archivio-trigger" data-open-archivio>Archivio Atti</button>
             <a href="wiki.html" class="w-full bg-cyber-neon/20 hover:bg-cyber-neon/30 text-cyber-neon border border-cyber-neon/50 py-3 px-5 rounded-xl text-sm font-bold transition-all flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/10">
                 <i data-lucide="book-open" class="w-4 h-4"></i>
                 <span>Consulta la WIKI Tecnica sulla Fibra Ottica</span>
@@ -98,7 +98,7 @@
                 </div>
             </div>
             
-            <div class="flex items-center gap-3">
+            <div class="map-nav-actions flex items-center gap-3">
                 <div id="frazioni-nav" class="hidden md:flex gap-2">
                     <!-- Frazioni buttons will be injected here -->
                 </div>
@@ -111,6 +111,7 @@
                     <span class="hidden sm:inline">Cantieri & Ordinanze</span>
                     <span id="cantieri-count-badge" class="bg-amber-400/20 text-amber-300 border border-amber-400/40 text-[10px] px-1.5 py-0.5 rounded-full font-mono">--</span>
                 </button>
+                <button type="button" class="archivio-trigger" data-open-archivio>Archivio Atti</button>
                 <a href="data/rete_ftth_collesalvetti.xlsx" download class="flex items-center gap-1.5 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 border border-emerald-500/40 px-3 py-1.5 rounded text-sm font-semibold transition-all" title="Scarica Foglio Excel Completo">
                     <i data-lucide="file-spreadsheet" class="w-4 h-4"></i>
                     <span class="hidden lg:inline">Scarica Excel</span>
@@ -173,7 +174,7 @@
         </div>
 
         <!-- Telemetry HUD (Right) -->
-        <div class="absolute top-20 right-6 z-40 w-84 glass-panel border border-cyber-border rounded-xl flex flex-col max-h-[calc(100vh-120px)]">
+        <div id="telemetry-panel" class="absolute top-20 right-6 z-40 glass-panel border border-cyber-border rounded-xl flex flex-col max-h-[calc(100vh-120px)]">
             <div class="p-4 border-b border-cyber-border bg-gradient-to-r from-transparent to-cyber-neon/10">
                 <h2 class="text-lg font-['Rajdhani'] font-bold text-white flex items-center gap-2">
                     <i data-lucide="activity" class="text-cyber-neon w-5 h-5"></i> Telemetria Rete
@@ -284,6 +285,43 @@
             </div>
         </div>
     </div>
+
+    <dialog id="archivio-atti" class="archivio-dialog" aria-labelledby="archivio-title">
+        <header>
+            <h2 id="archivio-title">Archivio Atti &amp; Ordinanze</h2>
+            <form method="dialog"><button aria-label="Chiudi archivio">Chiudi</button></form>
+        </header>
+        <div class="archivio-scroll">
+            <div class="archivio-controls">
+                <label>Cerca nell’archivio
+                    <input type="search" placeholder="Via Roma, 118/2026, Fastweb…" autofocus>
+                </label>
+                <label>Ordina per
+                    <select>
+                        <option value="newer">Più recenti</option>
+                        <option value="older">Meno recenti</option>
+                        <option value="number">Numero atto</option>
+                    </select>
+                </label>
+            </div>
+            <div class="archivio-filters" aria-label="Filtri"></div>
+            <div class="archivio-actions archivio-summary">
+                <p role="status"></p>
+                <button type="button" data-clear-archivio>Azzera filtri</button>
+            </div>
+            <section class="archivio-results" aria-label="Risultati"></section>
+            <button type="button" class="archivio-more" hidden>Mostra altri atti</button>
+        </div>
+    </dialog>
+    <dialog id="archivio-pdf" class="archivio-dialog" aria-labelledby="archivio-pdf-title">
+        <header>
+            <h2 id="archivio-pdf-title">Anteprima PDF</h2>
+            <a target="_blank" rel="noopener">Apri PDF ↗</a>
+            <form method="dialog"><button aria-label="Chiudi anteprima PDF">Chiudi</button></form>
+        </header>
+        <iframe title="Anteprima del documento PDF"></iframe>
+    </dialog>
+    <script src="js/archivio_atti.js" defer></script>
 
     <!-- Script di rilevamento schermo e caricamento dinamico Leaflet/Dati -->
     <script>

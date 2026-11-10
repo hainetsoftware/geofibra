@@ -283,7 +283,8 @@ def parse_kml(kml_path):
     kml_styles = extract_kml_styles(root, ns)
     placemarks = root.findall(".//kml:Placemark", ns)
     features = []
-    cantiere_2_ordinance = None
+    with ORDINANCE_ARCHIVE.open(encoding="utf-8") as archive:
+        ordinances = {record["id"]: record for record in json.load(archive)}
     
     for idx, p in enumerate(placemarks):
         pid = p.get("id", f"pm_{idx}")
@@ -467,37 +468,34 @@ def parse_kml(kml_path):
         # Arricchimento Cantieri da Ordinanze Ufficiali Albo Pretorio
         cantiere_info = None
         if category == "cantiere_progettazione_esecutiva" and name.lower() == COLLESALVETTI_CANTIERE_2:
-            if cantiere_2_ordinance is None:
-                with ORDINANCE_ARCHIVE.open(encoding="utf-8") as archive:
-                    cantiere_2_ordinance = next(
-                        record for record in json.load(archive) if record["id"] == "PM-COLLE-ORD-118-2026"
-                    )
-            ordinance = cantiere_2_ordinance
+            ordinance = ordinances["PM-COLLE-ORD-118-2026"]
             status_code = "executive_design"
             status_label = "Progettazione esecutiva (Marcature e corrugati sul posto)"
             color = "#ffd700"
-            ordinanza_str = f"Ordinanza P.M. n. {ordinance['numero']} (Reg. Gen. 125/2026, Aut. 28/2026)"
+            ordinanza_str = f"Ordinanza P.M. n. {ordinance['numero_atto']} (Reg. Gen. 125/2026, Aut. 28/2026)"
             clean_desc = "\n".join(filter(None, (clean_desc, CANTIERE_2_SURVEY)))
             cantiere_info = {
                 "id_ordinanza": ordinance["id"],
                 "codice_ordinanza": ordinanza_str,
                 "data_ordinanza": datetime.fromisoformat(ordinance["data_emissione"]).strftime("%d/%m/%Y"),
-                "inizio_lavori": f"{ordinance['validita_dal']}T08:00:00+01:00",
-                "fine_lavori": f"{ordinance['validita_al']}T18:00:00+01:00",
+                "inizio_lavori": f"{ordinance['validita']['dal']}T08:00:00+01:00",
+                "fine_lavori": f"{ordinance['validita']['al']}T18:00:00+01:00",
                 "orario_giornaliero": "08:00 - 18:00 feriali",
                 "richiedente": ordinance["richiedente"],
-                "vie_interessate": ordinance["vie"],
-                "file_pdf": f"data/ordinanze/{ordinance['file_pdf']}",
+                "vie_interessate": ordinance["localizzazione"]["strade"],
+                "file_pdf": ordinance["file_pdf"]["url_path"],
                 "stato_base": "staged_for_digging",
                 "note_slittamento": CANTIERE_2_SURVEY,
             }
         elif "cantiere 4" in name.lower():
+            ordinance = ordinances["PM-COLLE-ORD-110-2026"]
             completed = category == "cantiere_eseguito"
             status_code = "completato" if completed else "planned"
             status_label = "Completato (Opere civili)" if completed else "Pianificato (26/10 - 20/11)"
             ordinanza_str = "110/2026"
             operatore_str = "FiberCop"
             cantiere_info = {
+                "id_ordinanza": ordinance["id"],
                 "codice_ordinanza": "Ordinanza P.M. n. 110/2026 (Autorizzazione Tecnica n. 26/2026)",
                 "data_ordinanza": "14/10/2026",
                 "inizio_lavori": "2026-10-26T08:00:00+01:00",
@@ -514,7 +512,7 @@ def parse_kml(kml_path):
                     "Via Verga",
                     "Via Berlinguer"
                 ],
-                "file_pdf": None,
+                "file_pdf": ordinance["file_pdf"]["url_path"],
                 "stato_base": "eseguito" if completed else "planned",
                 "note_slittamento": "Nuova espansione comparto ovest Stagno (26/10 - 20/11/2026). Ordinanza PM n. 110/2026, Aut. Tecnica n. 26/2026."
             }
@@ -583,13 +581,15 @@ def parse_kml(kml_path):
             }
             clean_desc = "Cantiere 2 Stagno (Ord. 104/2026 + Proroga Ord. 111 del 16/10/2026). Nuova scadenza: 23/10/2026. Vie: Via Romita sud, Via De Gasperi, Via Machiavelli, Via XXV Aprile, Piazza Di Vittorio, Via Don Verità, Via 8 Marzo. Stato: In completamento (Posa condotte completata, 6 pozzetti in fase di getto/chiusura finale attorno ad ARLO)."
         elif "cantiere 3" in name.lower():
+            ordinance = ordinances["PM-COLLE-ORD-105-2026"]
             status_code = "autorizzato"
             status_label = "Autorizzato / Avvio programmato (19/10 - 23/10)"
             ordinanza_str = "Ordinanza P.M. n. 105/2026 + Concessione Suolo n. 77/2026"
             operatore_str = "FiberCop"
             cantiere_info = {
+                "id_ordinanza": ordinance["id"],
                 "codice_ordinanza": ordinanza_str,
-                "data_ordinanza": "09/10/2026",
+                "data_ordinanza": datetime.fromisoformat(ordinance["data_emissione"]).strftime("%d/%m/%Y"),
                 "inizio_lavori": "2026-10-19T08:00:00+02:00",
                 "fine_lavori": "2026-10-23T18:00:00+02:00",
                 "inizio_lavori_effettivo": "2026-10-19T08:00:00+02:00",
@@ -600,7 +600,7 @@ def parse_kml(kml_path):
                     "Via Aiaccia",
                     "Via Umbria"
                 ],
-                "file_pdf": "data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+                "file_pdf": ordinance["file_pdf"]["url_path"],
                 "stato_base": "programmato",
                 "note_slittamento": "Finestra temporale: 19/10/2026 - 23/10/2026 (5 giorni feriali, occupazione 60 mq). Stato: Autorizzato / Avvio programmato. Nota: Innesto sud di Via Aiaccia verso la direttrice provinciale come punto di raccordo con la tratta dorsale SP555 autorizzata a luglio 2026."
             }

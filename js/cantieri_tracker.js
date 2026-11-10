@@ -99,9 +99,9 @@ const ORDINANZE_DATA_DEFAULT = [
     "oggetto": "Lavori di scavo stradale e occupazione suolo pubblico per posa rete FTTH FiberCop lungo Via Aiaccia e Via Umbria",
     "atto_tipo": "Polizia Municipale + Concessione Suolo",
     "atto_numero": "105",
-    "atto_registro_generale": "105",
+    "atto_registro_generale": "110",
     "codice_atto_completo": "Ordinanza P.M. n. 105/2026 + Concessione Suolo n. 77/2026",
-    "data_emissione": "2026-10-09",
+    "data_emissione": "2026-10-01",
     "autorizzazione_settore_tecnico": "Concessione Occupazione Suolo Pubblico n. 77/2026 (occupazione 60 mq)",
     "periodo_ordinanza": {
       "inizio": "2026-10-19T08:00:00+02:00",
@@ -120,7 +120,7 @@ const ORDINANZE_DATA_DEFAULT = [
       { "via": "Via Aiaccia", "prescrizione": "Divieto di sosta e senso unico alternato con movieri o semaforo per scavo minitrincea" },
       { "via": "Via Umbria", "prescrizione": "Restringimento temporaneo carreggiata e divieto di sosta per posa infrastruttura secondaria" }
     ],
-    "file_pdf": "data/ordinanze/ordinanza_102_2026_stagno_cantiere2.pdf",
+    "file_pdf": "data/ordinanze/pdf/2026-10-01_COLLE_ORD_105_Fastweb_Stagno.pdf",
     "coordinate_centro": [43.5875, 10.3580],
     "descrizione_ufficiale": "Provvedimento di disciplina viaria e concessione suolo pubblico (60 mq) per la posa della dorsale e della rete secondaria FTTH FiberCop lungo Via Aiaccia e Via Umbria.",
     "stato_base": "programmato"
@@ -133,7 +133,7 @@ const ORDINANZE_DATA_DEFAULT = [
     "oggetto": "Lavori di fresatura e ripristino definitivo del manto stradale sulle tratte FTTH posate a maggio-giugno 2026 in Via Fratelli Rosselli",
     "atto_tipo": "Polizia Municipale",
     "atto_numero": "112",
-    "atto_registro_generale": "112",
+    "atto_registro_generale": "118",
     "codice_atto_completo": "Ordinanza P.M. n. 112 del 16/10/2026",
     "data_emissione": "2026-10-16",
     "autorizzazione_settore_tecnico": "Autorizzazione n. 10/2026",
@@ -153,7 +153,7 @@ const ORDINANZE_DATA_DEFAULT = [
     "vie_interessate": [
       { "via": "Via Fratelli Rosselli", "prescrizione": "Senso unico alternato e divieto di sosta con rimozione forzata per fresatura e asfaltatura definitiva" }
     ],
-    "file_pdf": "data/ordinanze/ordinanza_112_2026_stagno_ripristino_rosselli.pdf",
+    "file_pdf": "data/ordinanze/pdf/2026-10-16_COLLE_RIP_112_Fastweb_Stagno.pdf",
     "coordinate_centro": [43.5898, 10.3535],
     "descrizione_ufficiale": "Provvedimento viario per esecuzione dei ripristini definitivi del manto stradale a seguito degli scavi per la fibra ottica eseguiti a maggio-giugno 2026 lungo Via F.lli Rosselli. Finestra: 19/10/2026 - 24/11/2026.",
     "stato_base": "programmato"
@@ -166,7 +166,7 @@ const ORDINANZE_DATA_DEFAULT = [
     "oggetto": "Lavori di scavo stradale e posa infrastruttura rete FTTH FiberCop – Stagno, comparto ovest/sud-ovest (Via Marx, Via Curiel, ecc.)",
     "atto_tipo": "Polizia Municipale",
     "atto_numero": "110",
-    "atto_registro_generale": "110",
+    "atto_registro_generale": "116",
     "codice_atto_completo": "Ordinanza P.M. n. 110/2026",
     "data_emissione": "2026-10-14",
     "autorizzazione_settore_tecnico": "Autorizzazione Tecnica n. 26/2026",
@@ -191,7 +191,7 @@ const ORDINANZE_DATA_DEFAULT = [
       { "via": "Via Verga", "prescrizione": "Divieto di sosta con rimozione forzata" },
       { "via": "Via Berlinguer", "prescrizione": "Divieto di sosta e senso unico alternato" }
     ],
-    "file_pdf": null,
+    "file_pdf": "data/ordinanze/pdf/2026-10-14_COLLE_ORD_110_Fastweb_Stagno.pdf",
     "coordinate_centro": [43.5885, 10.3480],
     "descrizione_ufficiale": "Provvedimento temporaneo di viabilità per scavo e posa infrastruttura fibra ottica FiberCop a Stagno nel comparto Via Marx / Curiel / Cervi. Finestra: 26/10/2026 - 20/11/2026.",
     "stato_base": "parzialmente_eseguito"

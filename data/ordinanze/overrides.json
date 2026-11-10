@@ -1,0 +1,84 @@
+{
+  "PM-COLLE-ORD-118-2026": {
+    "cluster_id": "FC-COLLE-LOTTO2-2026",
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Roma",
+        "Via del Valico a Pisa",
+        "Via del Vione",
+        "Via Guido Rossa"
+      ]
+    }
+  },
+  "PM-COLLE-ORD-110-2026": {
+    "cluster_id": "FC-STAGNO-LOTTO4-2026"
+  },
+  "PM-COLLE-ORD-95-2026": {
+    "stato_opera": "COMPLETATA",
+    "note_tecniche": "Opere civili del Cantiere 2 Stagno rilevate come completate nello Snapshot 7."
+  },
+  "PM-COLLE-ORD-111-2026": {
+    "stato_opera": "COMPLETATA",
+    "note_tecniche": "Opere civili del Cantiere 2 Stagno rilevate come completate nello Snapshot 7."
+  },
+  "CONCESSIONE_SUOLO-COLLE-75-2024": {
+    "validita": {
+      "dal": "2024-09-18",
+      "al": "2024-09-29"
+    },
+    "localizzazione": {
+      "strade": [
+        "Via Roma",
+        "Via Picchi"
+      ]
+    }
+  },
+  "CONCESSIONE_SUOLO-COLLE-11-2023": {
+    "validita": {
+      "dal": "2023-02-20",
+      "al": "2023-02-24"
+    }
+  },
+  "DOC-e63c60dce14754ee": {
+    "oggetto": "Mozione per la riqualificazione della SP6 a Parrana San Martino",
+    "data_registrazione": "2023-04-24",
+    "localizzazione": {
+      "area": "EXTRAURBANO",
+      "strade": [
+        "SP6"
+      ],
+      "prog_chilometrica": {
+        "dal_km": 0,
+        "al_km": 0.9
+      }
+    },
+    "atti_collegati": [
+      "ALTRO-COLLE-167-2023"
+    ]
+  },
+  "DOC-a5116a819cd5789a": {
+    "oggetto": "Progetto FTTH Estracom – Particolari costruttivi dei pozzetti",
+    "atti_collegati": [
+      "ALTRO-COLLE-201-2026"
+    ]
+  },
+  "DOC-9039709ef14bb603": {
+    "oggetto": "Progetto FTTH Estracom – Particolari costruttivi degli scavi",
+    "atti_collegati": [
+      "ALTRO-COLLE-201-2026"
+    ]
+  },
+  "DOC-78e40bfe71844453": {
+    "oggetto": "Progetto FTTH Estracom – Relazione tecnica per Stagno e La Chiusa",
+    "atti_collegati": [
+      "ALTRO-COLLE-201-2026"
+    ]
+  },
+  "DOC-173cafb03bbb50b8": {
+    "oggetto": "Schema di convenzione per la rete FTTH Estracom",
+    "atti_collegati": [
+      "ALTRO-COLLE-201-2026"
+    ]
+  }
+}

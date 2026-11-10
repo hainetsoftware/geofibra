@@ -1,0 +1,10 @@
+{
+  "name": "geofibra",
+  "private": true,
+  "scripts": {
+    "build": "tsc --project tsconfig.json && node --check js/map.js && python3 scripts/parse_ordinanze.py --check"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}

@@ -9,7 +9,6 @@ import os
 import sys
 import socket
 import http.server
-import socketserver
 import webbrowser
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -55,11 +54,8 @@ def run_server():
     print("=" * 68)
     print("  Premi Ctrl + C per arrestare il server.\n")
 
-    handler = CustomHTTPRequestHandler
-    socketserver.TCPServer.allow_reuse_address = True
-
     try:
-        with socketserver.TCPServer(("127.0.0.1", port), handler) as httpd:
+        with http.server.ThreadingHTTPServer(("127.0.0.1", port), CustomHTTPRequestHandler) as httpd:
             try:
                 webbrowser.open(url)
             except Exception:

@@ -160,3 +160,137 @@ body {
     0% { transform: scale(0.8); opacity: 1; }
     100% { transform: scale(2.5); opacity: 0; }
 }
+
+/* Archivio atti */
+.map-nav-actions, #frazioni-nav { min-width: 0; }
+#frazioni-nav { overflow-x: auto; scrollbar-width: thin; }
+#frazioni-nav > *, .map-nav-actions > :not(#frazioni-nav) { flex-shrink: 0; }
+#telemetry-panel { width: min(21rem, 28vw); }
+
+.archivio-dialog {
+    --archive-border: #334761;
+    color: #e4ebf5;
+    background: #111b2c;
+    border: 1px solid var(--archive-border);
+    box-shadow: 0 0 48px #0009;
+    color-scheme: dark;
+}
+
+.archivio-dialog::backdrop { background: #070b13b8; }
+
+#archivio-atti {
+    inset: 0 0 0 auto;
+    margin: 0;
+    width: min(46rem, 100%);
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+}
+
+.archivio-dialog[open] { display: flex; flex-direction: column; }
+
+#archivio-pdf {
+    margin: auto;
+    width: min(68rem, 96vw);
+    height: 92dvh;
+    max-height: 100%;
+    border-radius: .6rem;
+}
+
+.archivio-dialog > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .8rem;
+    padding: .9rem 1rem;
+    border-bottom: 1px solid var(--archive-border);
+}
+
+.archivio-dialog h2 { font-size: clamp(1rem, 4vw, 1.35rem); font-weight: 700; }
+#archivio-pdf h2 { overflow-wrap: anywhere; }
+#archivio-pdf iframe { flex: 1; width: 100%; min-height: 0; background: #243349; }
+#archivio-pdf header a { white-space: nowrap; }
+
+.archivio-scroll { overflow: auto; padding: 1rem; }
+.archivio-controls, .archivio-actions, .archivio-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem;
+    align-items: center;
+}
+
+.archivio-controls label { display: grid; gap: .25rem; font-size: .85rem; }
+.archivio-controls label:first-child { flex: 1 1 16rem; }
+
+.archivio-dialog input[type="search"], .archivio-dialog select {
+    width: 100%;
+    background: #0a1322;
+    border: 1px solid var(--archive-border);
+    border-radius: .35rem;
+    padding: .5rem;
+    color: inherit;
+}
+
+.archivio-trigger, .archivio-dialog button, .archivio-dialog a, .archivio-popup button, .archivio-popup a {
+    border: 1px solid #4e6889;
+    border-radius: .35rem;
+    background: #1c2c44;
+    color: #c5f3ff;
+    padding: .35rem .55rem;
+    font-size: .85rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.archivio-trigger { white-space: nowrap; }
+#mobile-blocker .archivio-trigger { display: block; width: 100%; margin-bottom: .75rem; }
+.archivio-dialog :is(button, a):hover, .archivio-trigger:hover { background: #2a4261; }
+.archivio-dialog :focus-visible, .archivio-trigger:focus-visible { outline: 2px solid #78dfff; outline-offset: 2px; }
+
+.archivio-filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr));
+    align-items: start;
+    gap: .55rem;
+    margin-block: .9rem;
+}
+
+.archivio-filters details {
+    background: #17243a;
+    border: 1px solid var(--archive-border);
+    border-radius: .35rem;
+    padding: .45rem .6rem;
+    font-size: .83rem;
+}
+
+.archivio-dialog summary { cursor: pointer; }
+.archivio-filters label { display: flex; align-items: center; gap: .5rem; padding-top: .4rem; }
+.archivio-summary { justify-content: space-between; color: #b8c9dc; font-size: .85rem; }
+
+.archivio-results { display: grid; gap: .75rem; margin-block: .85rem; }
+.archivio-card {
+    display: grid;
+    gap: .45rem;
+    padding: .8rem;
+    border: 1px solid var(--archive-border);
+    border-radius: .55rem;
+    background: #162239;
+    font-size: .85rem;
+    overflow-wrap: anywhere;
+}
+
+.archivio-card h3 { font-size: 1rem; font-weight: 700; }
+.archivio-meta { color: #bac9de; }
+.archivio-badge { padding: .15rem .45rem; border-radius: .35rem; background: #2a3956; }
+.archivio-badge.IN_CORSO { background: #154440; color: #b5fae3; }
+.archivio-badge.PROGRAMMATA { background: #44381c; color: #ffdf8a; }
+.archivio-card details { border-top: 1px solid var(--archive-border); padding-top: .45rem; }
+.archivio-card details .archivio-actions { margin-top: .4rem; }
+.archivio-popup:not(:empty) { display: grid; gap: .3rem; margin-top: .6rem; }
+.archivio-popup div { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem; }
+.archivio-popup small { width: 100%; color: #c8d2e1; }
+
+@media (max-width: 767px) {
+    #archivio-pdf { width: 100%; height: 100dvh; border-radius: 0; }
+    #archivio-pdf header { flex-wrap: wrap; }
+}

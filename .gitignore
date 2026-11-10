@@ -5,3 +5,8 @@ scratch/
 .DS_Store
 Thumbs.db
 PROGRESS.md
+
+# Albo Pretorio downloads and local working copies
+/ordinanze/
+/data/ordinanze/inbox/
+/node_modules/

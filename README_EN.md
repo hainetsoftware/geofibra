@@ -107,6 +107,7 @@ Equipment = a surveyed network point (ARL/ARLO cabinet or central office). Lines
 ## 📋 Municipal Works & Decrees Registry
 
 The tracker reads `data/ordinanze.json`. The original PDFs and archive index live in `data/ordinanze/`. Decree references distinguish Municipal Police numbers (P.M.) from General Register numbers (Reg. Gen.).
+Open **Archivio Atti** to search acts, preview PDFs, and find linked map features. See the [archive ingestion guide](docs/ARCHIVIO_ATTI.md).
 
 1. **Cantiere 2 - Stagno (FTTH Rollout):**
    - **Decree:** Ordinanza P.M. n. 95/2026 (**Reg. Gen. 102/104/2026**)
