@@ -51,7 +51,7 @@ declare global {
     interface Window {
         ARCHIVIO_ATTI?: OrdinanzaAtto[];
         ARCHIVIO_TESTI?: Record<string, string>;
-        appendArchivioLinks?: (element: HTMLElement, featureId: string) => Promise<void>;
-        showArchivioFeatures?: (ids: string[]) => void;
+        appendArchivioLinks?: (element: HTMLElement, featureId: string, options?: { includePdf?: boolean }) => Promise<void>;
+        showArchivioFeatures?: (ids: string[], originFeatureId?: string) => void;
     }
 }

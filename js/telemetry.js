@@ -1,160 +1,196 @@
-const FRAZIONI_COORDS = {
-    'Collesalvetti': [43.5884, 10.4770],
-    'Vicarello': [43.6085, 10.4710],
-    'Stagno': [43.5900, 10.3540],
-    'Guasticce': [43.5962, 10.4068],
-    'Nugola': [43.5775, 10.4383],
-    'Parrana San Martino': [43.5382, 10.4423],
-    'Parrana San Giusto': [43.5285, 10.4573]
+const MAP_START_CENTER = [43.591, 10.4770];
+
+const FEATURE_TYPES = {
+    arl: 'Armadio rame',
+    arlo: 'Armadio fibra',
+    centrale_comunale: 'Centrale comunale',
+    centrale_frazione: 'Centrale di frazione',
+    centrale_feeder: 'Centrale feeder',
+    copertura_ok: 'Area coperta',
+    copertura_no: 'Area non coperta',
+    infrastruttura: 'Infrastruttura',
+    materials_depot: 'Materiali sul campo',
+    infratel: 'Rete Infratel',
+    rete_sanita: 'Sanità connessa',
+    rete_scuole: 'Scuole connesse',
+    tratta_backbone: 'Dorsale',
+    tratta_stagno: 'Tratta di rete'
 };
 
-function updateTelemetry(features) {
-    // I conteggi degli apparati provengono da data/stats.json (js/stats.js), generato da
-    // scripts/compute_stats.py: nessun valore e' calcolato o scritto a mano qui.
+const lengthFormat = new Intl.NumberFormat('it-IT', { maximumFractionDigits: 3 });
+const surveyDateFormat = new Intl.DateTimeFormat('it-IT', {
+    day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Rome'
+});
+
+function dateLabel(value) {
+    const date = new Date(value);
+    return value && Number.isFinite(date.getTime()) ? surveyDateFormat.format(date) : '';
+}
+
+function featureType(props) {
+    return FEATURE_TYPES[props.category] || 'Tratta di cantiere';
+}
+
+function featureStatus(props) {
+    if (props.category.startsWith('copertura_')) return '';
+    if (props.cantiere?.stato_base === 'staged_for_digging') return 'Scavi da avviare';
+    return props.status_label;
+}
+
+function updateTelemetry() {
     const stats = window.FTTH_STATS;
-    if (!stats) {
-        console.error('FTTH_STATS non disponibile: esegui scripts/compute_stats.py');
-    }
-    const eq = stats ? stats.equipment : null;
-    const km = stats ? stats.length_km.total : 0;
-    let cantieri = 0;
-    let frazCounts = {};
-
-    features.forEach(f => {
-        let p = f.properties;
-        if (p.category && p.category.includes('cantiere')) cantieri++;
-    });
-
-    if (eq) {
-        Object.keys(eq.by_frazione_municipal).forEach(fr => {
-            frazCounts[fr] = eq.by_frazione_municipal[fr].totale;
-        });
+    if (!stats) return;
+    const equipment = stats.equipment;
+    const values = {
+        'stat-tot': equipment.total_municipal,
+        'stat-km': lengthFormat.format(stats.length_km.total),
+        'stat-arl': equipment.by_category_municipal.arl || 0,
+        'stat-arlo': equipment.by_category_municipal.arlo || 0,
+        'stat-centrali': equipment.centrali_municipal,
+        'stat-cantieri': window.FTTH_NETWORK_DATA.features.filter(f => f.properties.category.startsWith('cantiere_')).length,
+        'stat-arlo-stagno': equipment.by_frazione_municipal.Stagno?.arlo ?? 0
+    };
+    for (const [id, value] of Object.entries(values)) {
+        document.getElementById(id).textContent = value;
     }
 
-    const elTot = document.getElementById('stat-tot');
-    const elKm = document.getElementById('stat-km');
-    const elArl = document.getElementById('stat-arl');
-    const elArlo = document.getElementById('stat-arlo');
-    const elCentrali = document.getElementById('stat-centrali');
-    const elCantieri = document.getElementById('stat-cantieri');
-    const elArloStagno = document.getElementById('stat-arlo-stagno');
-
-    if (eq) {
-        if (elTot) elTot.innerText = eq.total_municipal;
-        if (elKm) elKm.innerText = km.toFixed(2);
-        if (elArl) elArl.innerText = eq.by_category_municipal.arl || 0;
-        if (elArlo) elArlo.innerText = eq.by_category_municipal.arlo || 0;
-        if (elArloStagno) elArloStagno.innerText = eq.by_frazione_municipal.Stagno?.arlo ?? 0;
-        if (elCentrali) elCentrali.innerText = eq.centrali_municipal;
+    const entries = Object.entries(equipment.by_frazione_municipal);
+    entries.sort((a, b) => b[1].totale - a[1].totale);
+    const statsList = document.getElementById('frazioni-stats');
+    for (const [name, counts] of entries) {
+        const row = document.createElement('div');
+        row.append(textElement('dt', name), textElement('dd', counts.totale));
+        if (counts.arlo) row.lastElementChild.append(` · ${counts.arlo} ARLO`);
+        statsList.append(row);
     }
-    if (elCantieri) elCantieri.innerText = cantieri;
+}
 
-    const navCont = document.getElementById('frazioni-nav');
-    const statsCont = document.getElementById('frazioni-stats');
-    if (navCont) navCont.innerHTML = '';
-    if (statsCont) statsCont.innerHTML = '';
-
-    // Ordine di visualizzazione prioritario delle frazioni
-    const sortedFrazioni = Object.keys(frazCounts).sort((a, b) => frazCounts[b] - frazCounts[a]);
-
-    sortedFrazioni.forEach(fr => {
-        if (navCont && FRAZIONI_COORDS[fr]) {
-            const btn = document.createElement('button');
-            btn.className = "px-2.5 py-1 text-xs md:text-sm bg-white/5 hover:bg-white/15 rounded-full border border-cyber-border/50 transition-colors text-slate-300 whitespace-nowrap";
-            btn.innerText = fr;
-            btn.onclick = () => window.flyToFrazione(FRAZIONI_COORDS[fr][0], FRAZIONI_COORDS[fr][1]);
-            navCont.appendChild(btn);
-        }
-
-        if (statsCont) {
-            const maxF = Math.max(...Object.values(frazCounts));
-            const pct = (frazCounts[fr] / maxF) * 100;
-            const arloCount = eq.by_frazione_municipal[fr].arlo;
-            const arloBadge = arloCount > 0 ? `<span class="text-[10px] bg-cyan-500/20 text-cyan-300 px-1.5 py-0.2 rounded border border-cyan-500/40 ml-1.5">${arloCount} ARLO</span>` : '';
-            
-            statsCont.innerHTML += `
-                <div class="mb-2">
-                    <div class="flex justify-between items-center text-xs mb-1">
-                        <span class="text-white flex items-center">${fr} ${arloBadge}</span>
-                        <span class="text-cyber-neon font-bold">${frazCounts[fr]} app.</span>
-                    </div>
-                    <div class="w-full bg-black/40 rounded-full h-1.5">
-                        <div class="bg-cyber-neon h-1.5 rounded-full" style="width: ${pct}%"></div>
-                    </div>
-                </div>
-            `;
-        }
-    });
-
-    renderList(features);
-    
-    const searchInput = document.getElementById('search-elements');
-    if (searchInput) {
-        searchInput.oninput = (e) => {
-            const term = e.target.value.toLowerCase();
-            const filtered = features.filter(f => f.properties.name.toLowerCase().includes(term) || f.properties.category.includes(term) || (f.properties.frazione && f.properties.frazione.toLowerCase().includes(term)));
-            renderList(filtered);
-        };
-    }
+function textElement(tag, text, className) {
+    const node = document.createElement(tag);
+    node.textContent = text;
+    if (className) node.className = className;
+    return node;
 }
 
 function renderList(features) {
-    const listCont = document.getElementById('elements-list');
-    if (!listCont) return;
-    listCont.innerHTML = '';
-    
-    features.forEach(f => {
-        const p = f.properties;
-        const item = document.createElement('div');
-        item.className = "flex items-center justify-between p-2 hover:bg-white/10 rounded cursor-pointer transition-colors border-b border-white/5 last:border-0";
-        
-        let subBadge = '';
-        if (p.status === 'completato') subBadge = '<span class="text-[9px] bg-emerald-500/20 text-emerald-300 px-1 rounded">COMPLETATO</span>';
-        else if (p.status === 'in_completamento') subBadge = '<span class="text-[9px] bg-amber-500/20 text-amber-300 px-1 rounded">IN CHIUSURA</span>';
-        else if (p.status === 'autorizzato') subBadge = '<span class="text-[9px] bg-amber-500/20 text-amber-400 px-1 rounded">AUTORIZZATO</span>';
-        else if (p.status === 'in_attesa_proroga') subBadge = '<span class="text-[9px] bg-orange-500/20 text-orange-300 px-1 rounded">ATTESA PROROGA</span>';
-        else if (p.status === 'infilage_in_progress') subBadge = '<span class="text-[9px] bg-blue-500/20 text-blue-300 px-1 rounded">SOFFIAGGIO</span>';
-        else if (p.status === 'executive_design') subBadge = '<span class="text-[9px] bg-blue-500/20 text-blue-300 px-1 rounded">PROG. ESECUTIVA</span>';
-        else if (p.status === 'riuso_previsto') subBadge = '<span class="text-[9px] bg-violet-500/20 text-violet-300 px-1 rounded">RIUSO PROBABILE</span>';
-        else if (p.status === 'installato') subBadge = '<span class="text-[9px] bg-cyan-500/20 text-cyan-300 px-1 rounded">ARLO POSATO</span>';
-        else if (p.category === 'arlo') subBadge = '<span class="text-[9px] bg-cyan-500/20 text-cyan-300 px-1 rounded">ARLO</span>';
+    const list = document.getElementById('elements-list');
+    document.getElementById('map-results-count').textContent =
+        features.length === 1 ? '1 risultato' : `${features.length} risultati`;
+    list.replaceChildren();
 
-        item.innerHTML = `
-            <div class="flex items-center gap-2 overflow-hidden">
-                <div class="w-2 h-2 rounded-full flex-shrink-0" style="background: ${p.color}; box-shadow: 0 0 5px ${p.color}"></div>
-                <div class="text-sm text-slate-200 truncate" title="${p.name}">${p.name}</div>
-            </div>
-            <div class="flex items-center gap-1.5 ml-2 flex-shrink-0">
-                ${subBadge}
-                <span class="text-xs text-slate-400 font-medium">${p.frazione || ''}</span>
-            </div>
-        `;
-        item.onclick = () => {
-            if (f.geometry.type === 'Point') {
-                window.flyToFrazione(f.geometry.coordinates[1], f.geometry.coordinates[0]);
-                if (geojsonLayer) {
-                    geojsonLayer.eachLayer(layer => {
-                        if (layer.feature && layer.feature.id === f.id) {
-                            layer.openPopup();
-                        }
-                    });
-                }
-            } else if (f.geometry.type === 'LineString' || f.geometry.type === 'Polygon') {
-                let pts = f.geometry.type === 'LineString' ? f.geometry.coordinates : f.geometry.coordinates[0];
-                if(pts && pts.length > 0) {
-                    window.flyToFrazione(pts[0][1], pts[0][0]);
-                    if (geojsonLayer) {
-                        geojsonLayer.eachLayer(layer => {
-                            if (layer.feature && layer.feature.id === f.id) {
-                                layer.openPopup();
-                            }
-                        });
-                    }
-                }
-            }
-        };
-        listCont.appendChild(item);
-    });
+    if (!features.length) {
+        list.append(textElement('li', 'Nessun elemento corrisponde alla ricerca e ai filtri.', 'empty-results'));
+        return;
+    }
+
+    for (const feature of features) {
+        const props = feature.properties;
+        const item = document.createElement('li');
+        const button = textElement('button', '', 'result-button');
+        button.type = 'button';
+        button.dataset.featureId = feature.id;
+
+        const title = textElement('span', '', 'result-title');
+        const swatch = textElement('span', '', 'map-swatch');
+        if (props.status === 'riuso_previsto') swatch.classList.add('swatch-dashed');
+        swatch.style.setProperty('--swatch', featureColor(props));
+        swatch.setAttribute('aria-hidden', 'true');
+        title.append(swatch, document.createTextNode(props.name));
+
+        const meta = [props.frazione, featureType(props)];
+        if (props.length_m > 0) meta.push(`${lengthFormat.format(props.length_m)} m`);
+        button.append(title, textElement('span', meta.filter(Boolean).join(' · '), 'result-meta'));
+        const status = featureStatus(props);
+        if (status) {
+            button.append(textElement('span', status, 'status-tag'));
+        }
+        button.addEventListener('click', () => selectMapFeature(feature, true));
+        item.append(button);
+        list.append(item);
+    }
 }
 
-window.updateTelemetry = updateTelemetry;
+function inspectionSection(title, lines) {
+    const section = document.createElement('section');
+    section.append(textElement('h3', title));
+    for (const line of lines.filter(Boolean)) section.append(textElement('p', line));
+    return section;
+}
+
+function detailLink(label, emoji, url) {
+    const link = textElement('a', '', 'ui-button');
+    link.href = url;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    const icon = textElement('span', emoji, 'emoji');
+    icon.setAttribute('aria-hidden', 'true');
+    link.append(icon, document.createTextNode(` ${label}`));
+    return link;
+}
+
+function showMapInspection(feature) {
+    const props = feature.properties;
+    const worksite = props.cantiere;
+    const content = document.getElementById('inspection-content');
+    const title = textElement('h2', props.name);
+    title.tabIndex = -1;
+    const meta = [props.frazione, featureType(props), props.operatore].filter(Boolean);
+    if (props.length_m > 0) meta.push(`${lengthFormat.format(props.length_m)} m`);
+    if (props.area_m2 > 0) meta.push(`${lengthFormat.format(props.area_m2)} m²`);
+    content.replaceChildren(title, textElement('p', meta.join(' · '), 'muted'));
+
+    const date = dateLabel(props.data_rilevamento);
+    const staged = worksite?.stato_base === 'staged_for_digging';
+    const observation = staged
+        ? 'Marcature stradali e bobine di microtubi Fender rilevate sul posto.'
+        : props.description;
+    const fieldStatus = featureStatus(props);
+    const field = inspectionSection('Rilievo sul campo', [date]);
+    if (fieldStatus) field.append(textElement('span', fieldStatus, 'status-tag'));
+    if (observation) field.append(textElement('p', observation));
+    content.append(field);
+
+    if (worksite || props.ordinanza) {
+        const start = dateLabel(worksite?.inizio_lavori);
+        const end = dateLabel(worksite?.fine_lavori);
+        const period = [start, end].filter(Boolean).join(' – ');
+        const streets = worksite?.vie_interessate ?? props.streets;
+        const ordinance = inspectionSection('Ordinanza', [
+            worksite?.codice_ordinanza ?? props.ordinanza,
+            [period, worksite?.orario_giornaliero].filter(Boolean).join(' · '),
+            worksite?.richiedente && `Richiedente: ${worksite.richiedente}`,
+            streets?.length ? `Vie interessate: ${streets.join(', ')}` : '',
+            !staged && worksite?.note_slittamento !== observation ? worksite?.note_slittamento : ''
+        ]);
+        if (worksite?.file_pdf) ordinance.append(detailLink('Apri PDF', '📄', worksite.file_pdf));
+        content.append(ordinance);
+    }
+
+    if (props.wholesale) {
+        const { element_id, acl, central_office, status, availability_date } = props.wholesale;
+        const rollout = props.commercial_rollout;
+        const imminent = rollout?.status === 'in_vendibilita_imminente';
+        content.append(inspectionSection('Disponibilità FiberCop Wholesale', [
+            `CRO ${element_id} · ${status}`,
+            `Centrale ${central_office} · ACL ${acl}`,
+            dateLabel(availability_date),
+            imminent && 'In arrivo la rete ultraveloce',
+            imminent && rollout.streets?.join(', '),
+            imminent && rollout.operators_reported && `${rollout.operators_reported} operatori segnalati`,
+            imminent && rollout.reported_active_address && `Attivazione segnalata al civico ${rollout.reported_active_address}`
+        ]));
+    }
+
+    if (feature.geometry.type === 'LineString' || props.category === 'arlo') {
+        const links = textElement('div', '', 'archivio-popup');
+        content.append(links);
+        window.appendArchivioLinks?.(links, feature.id, { includePdf: !worksite?.file_pdf });
+    }
+    if (feature.geometry.type === 'Point') {
+        const [lng, lat] = feature.geometry.coordinates;
+        content.append(detailLink('Street View', '📍', `https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${lat},${lng}`));
+    }
+
+    showSidebarView('map-inspection');
+    title.focus();
+}

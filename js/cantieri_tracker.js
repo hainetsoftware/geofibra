@@ -378,8 +378,6 @@ function calculateCantiereStatus(cantiere, currentDate) {
     return {
       statusCode: 'eseguito',
       statusLabel: 'OPERE CIVILI COMPLETATE',
-      badgeClass: 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/50',
-      dotClass: 'bg-emerald-400',
       timingSummary: 'Completamento verificato sul campo',
       isActiveNow: false
     };
@@ -389,8 +387,6 @@ function calculateCantiereStatus(cantiere, currentDate) {
     return {
       statusCode: 'parzialmente_eseguito',
       statusLabel: 'OPERE CIVILI PARZIALMENTE COMPLETATE',
-      badgeClass: 'bg-amber-500/20 text-amber-300 border border-amber-500/50',
-      dotClass: 'bg-amber-400',
       timingSummary: `Finestra autorizzata ${startFormatted}–${endFormatted}`,
       isActiveNow: now >= start && now <= end && rome.isWorkingDay && rome.isWorkingHours
     };
@@ -401,8 +397,6 @@ function calculateCantiereStatus(cantiere, currentDate) {
     return {
       statusCode: 'in_completamento',
       statusLabel: 'IN COMPLETAMENTO (PROROGA AL 23/10 - 6 POZZETTI ATTORNO AD ARLO)',
-      badgeClass: 'bg-amber-500/20 text-amber-300 border border-amber-500/50',
-      dotClass: 'bg-amber-400 animate-pulse',
       timingSummary: `Operativo in fase di rifinitura e collaudo pozzetti fino al ${endFormatted} (Ord. 111/2026, feriali 08:00 - 18:00)`,
       isActiveNow: true
     };
@@ -414,8 +408,6 @@ function calculateCantiereStatus(cantiere, currentDate) {
     return {
       statusCode: isPlanned ? 'planned' : 'programmato',
       statusLabel: isPlanned ? 'PIANIFICATO (ORDINANZA N. 110/2026)' : 'ATTIVAZIONE PROGRAMMATA (AUTORIZZATO)',
-      badgeClass: isPlanned ? 'bg-orange-500/20 text-orange-400 border border-orange-500/40' : 'bg-amber-500/20 text-amber-400 border border-amber-500/40',
-      dotClass: 'bg-amber-400 animate-pulse',
       timingSummary: `Avvio autorizzato da ordinanza: ${startFormatted} (feriali 08:00 - 18:00)`,
       isActiveNow: false
     };
@@ -427,8 +419,6 @@ function calculateCantiereStatus(cantiere, currentDate) {
       return {
         statusCode: 'ordinanza_scaduta',
         statusLabel: 'ORDINANZA SCADUTA',
-        badgeClass: 'bg-rose-500/20 text-rose-300 border border-rose-500/40',
-        dotClass: 'bg-rose-400',
         timingSummary: `Termine efficacia ordinanza: ${endFormatted}`,
         isActiveNow: false
       };
@@ -437,17 +427,13 @@ function calculateCantiereStatus(cantiere, currentDate) {
       return {
         statusCode: cantiere.stato_base,
         statusLabel: 'ORDINANZA SCADUTA',
-        badgeClass: 'bg-rose-500/20 text-rose-300 border border-rose-500/40',
-        dotClass: 'bg-rose-400',
         timingSummary: `Efficacia scaduta il ${endFormatted}`,
         isActiveNow: false
       };
     }
     return {
       statusCode: 'concluso',
-      statusLabel: 'LAVORI COMPLETATI (DA ORDINANZA)',
-      badgeClass: 'bg-slate-500/20 text-slate-400 border border-slate-500/40',
-      dotClass: 'bg-slate-500',
+      statusLabel: 'ORDINANZA SCADUTA',
       timingSummary: `Termine efficacia ordinanza: ${endFormatted}`,
       isActiveNow: false
     };
@@ -459,8 +445,6 @@ function calculateCantiereStatus(cantiere, currentDate) {
     return {
       statusCode: 'non_lavorativo',
       statusLabel: 'ORDINANZA IN CORSO (NON LAVORATIVO)',
-      badgeClass: 'bg-amber-500/20 text-amber-300 border border-amber-500/40',
-      dotClass: 'bg-amber-400',
       timingSummary: 'Oggi non è un giorno lavorativo (feriali 08:00 - 18:00)',
       isActiveNow: false
     };
@@ -471,8 +455,6 @@ function calculateCantiereStatus(cantiere, currentDate) {
     return {
       statusCode: 'fuori_orario',
       statusLabel: 'ORDINANZA IN CORSO (FUORI ORARIO)',
-      badgeClass: 'bg-blue-500/20 text-blue-300 border border-blue-500/40',
-      dotClass: 'bg-blue-400',
       timingSummary: 'Fuori orario lavorativo autorizzato (feriali 08:00 - 18:00)',
       isActiveNow: false
     };
@@ -481,10 +463,8 @@ function calculateCantiereStatus(cantiere, currentDate) {
   // 4. In giorno feriale e in fascia oraria lavorativa autorizzata
   return {
     statusCode: 'attivo',
-    statusLabel: 'CANTIERE ATTIVO ORA',
-    badgeClass: 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40',
-    dotClass: 'bg-emerald-400 animate-ping',
-    timingSummary: `Cantiere operativo sul campo (orario feriale 08:00 - 18:00, termine autorizzazione ${endFormatted})`,
+    statusLabel: 'IN FASCIA ORARIA AUTORIZZATA',
+    timingSummary: `Lavori autorizzati (orario feriale 08:00 - 18:00, termine autorizzazione ${endFormatted})`,
     isActiveNow: true
   };
 }
@@ -512,7 +492,9 @@ function updateCantieriNavbarBadge() {
     return new Date(endStr) >= now;
   }).length;
 
-  badgeEl.innerText = `${activeOrUpcoming} ordinanze in corso/future`;
+  badgeEl.textContent = activeOrUpcoming;
+  badgeEl.title = `${activeOrUpcoming} ordinanze in corso o future`;
+  badgeEl.hidden = false;
 }
 
 function renderCantieriModal() {
@@ -540,88 +522,39 @@ function renderCantieriModal() {
     const status = calculateCantiereStatus(cantiere, now);
 
     const card = document.createElement('div');
-    card.className = "glass-panel border border-cyber-border/50 rounded-xl p-5 hover:border-cyber-neon/50 transition-all flex flex-col justify-between";
-
-    // Format vie con prescrizioni
-    let vieHtml = '';
-    if (Array.isArray(cantiere.vie_interessate)) {
-      vieHtml = cantiere.vie_interessate.map(v => {
-        if (typeof v === 'string') {
-          return `<li class="flex items-start gap-1.5 text-xs text-slate-200"><span class="text-cyber-neon">•</span> <span>${v}</span></li>`;
-        }
-        return `<li class="flex items-start gap-1.5 text-xs text-slate-200"><span class="text-cyber-neon">•</span> <span><b class="text-white">${v.via}</b>${v.prescrizione ? ': ' + v.prescrizione : ''}</span></li>`;
-      }).join('');
-    } else if (Array.isArray(cantiere.vie)) {
-      vieHtml = cantiere.vie.map(v => `<li class="flex items-start gap-1.5 text-xs text-slate-200"><span class="text-cyber-neon">•</span> <span>${v}</span></li>`).join('');
-    }
-
-    // Blocco note di rilievo / slittamento (distinto dall'ordinanza ufficiale)
-    let slittamentoHtml = '';
-    if (cantiere.slittamento_osservato && cantiere.slittamento_osservato.nota_campo) {
-      slittamentoHtml = `
-        <div class="bg-amber-500/10 border border-amber-500/30 rounded-lg p-2.5 mb-3 text-xs">
-          <div class="flex items-center gap-1.5 font-bold text-amber-300 mb-1">
-            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-            ${cantiere.slittamento_osservato.fonte_kml || 'Rilievo sul campo'}:
-          </div>
-          <p class="text-amber-200/90 leading-relaxed">${cantiere.slittamento_osservato.nota_campo}</p>
-        </div>
-      `;
-    }
-
+    card.className = 'tracker-card';
+    const streets = cantiere.vie_interessate || cantiere.vie || [];
+    const observation = cantiere.slittamento_osservato;
     const titolo = cantiere.titolo || cantiere.nome;
     const frazione = cantiere.frazione || cantiere.localita;
-    const lunghezza = cantiere.lunghezza_stimata_km ? `${cantiere.lunghezza_stimata_km} km` : (cantiere.lunghezzaKm || 'N.D.');
+    const lunghezza = cantiere.lunghezza_stimata_km ? `${cantiere.lunghezza_stimata_km} km` : cantiere.lunghezzaKm;
     const attoCodice = cantiere.codice_atto_completo || cantiere.ordinanza || 'Atto PM';
-    const richiedente = cantiere.richiedente || 'N.D.';
+    const richiedente = cantiere.richiedente;
     const pdfPath = cantiere.file_pdf || cantiere.pdfFile;
-    const centerCoords = cantiere.coordinate_centro || cantiere.centerCoords || [43.59, 10.45];
+    const centerCoords = cantiere.coordinate_centro || cantiere.centerCoords;
     const descr = cantiere.descrizione_ufficiale || cantiere.descrizione || '';
 
     card.innerHTML = `
-      <div>
-        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-          <div class="flex items-center gap-2">
-            <span class="w-2.5 h-2.5 rounded-full ${status.dotClass}"></span>
-            <span class="text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded ${status.badgeClass}">
-              ${status.statusLabel}
-            </span>
-            <span class="text-xs text-slate-400 bg-white/5 px-2 py-0.5 rounded border border-white/10">📍 ${frazione}</span>
-          </div>
-          <div class="text-xs font-mono text-slate-400">Estensione: <b class="text-white">${lunghezza}</b></div>
-        </div>
-
-        <h4 class="text-lg font-['Rajdhani'] font-bold text-white mb-1">${titolo}</h4>
-        <div class="text-xs text-cyber-neon font-mono mb-2">${status.timingSummary}</div>
-        <p class="text-xs text-slate-300 mb-3">${descr}</p>
-
-        ${slittamentoHtml}
-
-        <div class="bg-black/30 p-3 rounded-lg border border-white/5 mb-3">
-          <div class="text-[11px] uppercase tracking-wider font-bold text-slate-400 mb-1.5">
-            Vie Interessate e Prescrizioni Traffico:
-          </div>
-          <ul class="space-y-1">
-            ${vieHtml}
-          </ul>
-        </div>
-      </div>
-
-      <div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-white/10 text-xs mt-2">
-        <div class="text-slate-400">
-          Atto Ufficiale: <b class="text-slate-200">${attoCodice}</b><br>
-          <span class="text-[11px] text-slate-500">Richiedente: ${richiedente}</span>
-        </div>
-        <div class="flex items-center gap-2">
-          <button onclick="window.flyToCantiereCoords([${centerCoords[0]}, ${centerCoords[1]}])" class="px-3 py-1.5 bg-cyber-neon/20 hover:bg-cyber-neon/30 text-cyber-neon border border-cyber-neon/50 rounded text-xs font-bold flex items-center gap-1.5 transition-colors">
-            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg> Mostra su Mappa
-          </button>
-          ${pdfPath ? `<a href="${pdfPath}" target="_blank" download class="px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded text-xs font-semibold flex items-center gap-1.5 transition-colors">
-            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> PDF Ordinanza
-          </a>` : ''}
-        </div>
+      <h3>${titolo}</h3>
+      <p class="muted">${[frazione, lunghezza].filter(Boolean).join(' · ')}</p>
+      <span class="status-tag">${status.statusLabel}</span>
+      <p>${status.timingSummary}</p>
+      <p>${descr}</p>
+      ${observation?.nota_campo ? `<div class="tracker-note">
+        <strong>${observation.fonte_kml || 'Rilievo sul campo'}</strong>
+        <p>${observation.nota_campo}</p>
+      </div>` : ''}
+      ${streets.length ? `<div><strong>Vie interessate e prescrizioni</strong><ul>
+        ${streets.map(street => typeof street === 'string' ? `<li>${street}</li>` :
+          `<li><strong>${street.via}</strong>${street.prescrizione ? ' · ' + street.prescrizione : ''}</li>`).join('')}
+      </ul></div>` : ''}
+      <p><strong>${attoCodice}</strong>${richiedente ? `<br>Richiedente · ${richiedente}` : ''}</p>
+      <div class="archivio-actions">
+        ${centerCoords ? '<button type="button" data-tracker-map><span class="emoji" aria-hidden="true">🧭</span> Mostra sulla mappa</button>' : ''}
+        ${pdfPath ? `<a href="${pdfPath}" target="_blank" rel="noopener" download><span class="emoji" aria-hidden="true">📄</span> PDF ordinanza</a>` : ''}
       </div>
     `;
+    card.querySelector('[data-tracker-map]')?.addEventListener('click', () => window.flyToCantiereCoords(centerCoords));
 
     listCont.appendChild(card);
   });
@@ -629,12 +562,10 @@ function renderCantieriModal() {
 
 window.flyToCantiereCoords = (coords) => {
   if (!window.map) return;
-  const modal = document.getElementById('modal-cantieri');
-  if (modal) {
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
-  }
-  window.map.flyTo(coords, 16, { duration: 1.8 });
+  document.getElementById('modal-cantieri').close();
+  resetMapFilters();
+  showSidebarView('map-explore');
+  window.flyToFrazione(...coords);
 };
 
 window.flyToCantiere = (cantiereId) => {

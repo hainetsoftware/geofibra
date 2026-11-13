@@ -1,7 +1,8 @@
 let map;
 let geojsonLayer;
 let archivioHighlight;
-let currentCantiereFilter = 'all';
+let mapResults = [];
+let selectedFeature;
 
 // Limiti geografici della Toscana (Sud-Ovest e Nord-Est)
 const TOSCANA_BOUNDS = L.latLngBounds(
@@ -25,29 +26,27 @@ function getIconHtml(iconName, color) {
         svg = `<svg xmlns="http://www.w3.org/2005/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>`;
     }
     
-    return `<div class="pulse-marker" style="color: ${color}; background: rgba(10, 13, 20, 0.9); border: 1.5px solid ${color}; border-radius: 50%; padding: 3px; box-shadow: 0 0 8px ${color}66;">${svg}</div>`;
+    return `<span class="network-marker" style="--marker-color: ${color}">${svg}</span>`;
 }
 
 function initMap() {
-    const center = [43.5884, 10.4770];
-    
-    map = L.map('map', {
+    map = window.map = L.map('map', {
         zoomControl: false,
         attributionControl: true,
         maxBounds: TOSCANA_BOUNDS,
         maxBoundsViscosity: 1.0,
         minZoom: 9,
         maxZoom: 19
-    }).setView(center, 15);
+    }).setView(MAP_START_CENTER, 15);
 
     map.createPane('polygonsPane').style.zIndex = 350;
     map.createPane('linesPane').style.zIndex = 450;
     map.createPane('markersPane').style.zIndex = 600;
     const highlightPane = map.createPane('archivioHighlightPane');
-    highlightPane.style.zIndex = 550;
+    highlightPane.style.zIndex = 440;
     highlightPane.style.pointerEvents = 'none';
 
-    L.control.zoom({ position: 'bottomright' }).addTo(map);
+    L.control.zoom({ position: 'topright' }).addTo(map);
 
     // Layer 1: Cyber Dark (Esri Dark Canvas)
     const darkBase = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', { 
@@ -84,19 +83,10 @@ function initMap() {
 
     topoLayer.addTo(map);
 
-    document.querySelectorAll('.layer-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            document.querySelectorAll('.layer-btn').forEach(b => b.classList.remove('active-layer'));
-            e.target.classList.add('active-layer');
-            const l = e.target.dataset.layer;
-            
-            Object.values(layers).forEach(layer => map.removeLayer(layer));
-            layers[l].addTo(map);
-        });
+    document.getElementById('map-basemap').addEventListener('change', event => {
+        Object.values(layers).forEach(layer => map.removeLayer(layer));
+        layers[event.currentTarget.value].addTo(map);
     });
-
-    loadData();
-    initLegendFilters();
 }
 
 function featureMatchesFilter(feature, filter) {
@@ -115,256 +105,90 @@ function featureMatchesFilter(feature, filter) {
     return status === filter;
 }
 
-function loadData() {
-    if (!window.FTTH_NETWORK_DATA) return;
-    archivioHighlight?.remove();
-    
-    if (geojsonLayer) {
-        map.removeLayer(geojsonLayer);
-    }
+function featureColor(props) {
+    if (props.geom_type !== 'Point') return props.color;
+    if (props.category === 'arlo') return '#2563eb';
+    if (props.category === 'arl') return '#111827';
+    if (props.category.startsWith('centrale_')) return '#6b7280';
+    return '#4b5563';
+}
 
-    geojsonLayer = L.geoJSON(window.FTTH_NETWORK_DATA, {
-        filter: function(feature) {
-            return featureMatchesFilter(feature, currentCantiereFilter);
-        },
-        pointToLayer: function (feature, latlng) {
+function loadData(features) {
+    mapResults = features;
+    archivioHighlight?.remove();
+    geojsonLayer?.remove();
+
+    geojsonLayer = L.geoJSON(features, {
+        pointToLayer(feature, latlng) {
             const props = feature.properties;
             const icon = L.divIcon({
                 className: 'custom-div-icon',
-                html: getIconHtml(props.icon, props.color),
+                html: getIconHtml(props.icon, featureColor(props)),
                 iconSize: [26, 26],
                 iconAnchor: [13, 13]
             });
-            return L.marker(latlng, { icon, pane: 'markersPane' });
+            return L.marker(latlng, { icon, pane: 'markersPane', title: props.name, alt: props.name });
         },
-        style: function (feature) {
+        style(feature) {
             const props = feature.properties;
-            if (feature.geometry.type === 'LineString') {
-                return {
-                    pane: 'linesPane',
-                    bubblingMouseEvents: false,
-                    color: props.color,
-                    weight: 4,
-                    opacity: 0.95,
-                    className: 'neon-path'
-                };
-            }
-            if (feature.geometry.type === 'Polygon') {
-                return {
-                    pane: 'polygonsPane',
-                    bubblingMouseEvents: false,
-                    color: props.color,
-                    weight: 2,
-                    opacity: 1,
-                    fillColor: props.color,
-                    fillOpacity: 0.22
-                };
-            }
+            const line = feature.geometry.type === 'LineString';
+            return {
+                pane: line ? 'linesPane' : 'polygonsPane',
+                bubblingMouseEvents: false,
+                color: props.color,
+                dashArray: props.status === 'riuso_previsto' ? '5 7' : null,
+                weight: line ? 4 : 2,
+                fillOpacity: line ? 0 : 0.16,
+                className: 'network-path'
+            };
         },
-        onEachFeature: function (feature, layer) {
-            const props = feature.properties;
-            
-            // Badge di stato stilizzato
-            let statusBadge = '';
-            if (props.status_label) {
-                let badgeBg = 'bg-blue-500/20 text-blue-300 border-blue-500/40';
-                if (props.status === 'completato') badgeBg = 'bg-emerald-500/20 text-emerald-300 border-emerald-500/50';
-                else if (props.status === 'in_completamento') badgeBg = 'bg-amber-500/20 text-amber-300 border-amber-500/50';
-                else if (props.status === 'autorizzato') badgeBg = 'bg-amber-500/20 text-amber-400 border-amber-500/50';
-                else if (props.status === 'planned') badgeBg = 'bg-orange-500/20 text-orange-400 border-orange-500/50';
-                else if (props.status === 'in_attesa_proroga') badgeBg = 'bg-orange-500/20 text-orange-300 border-orange-500/50';
-                else if (props.status === 'installato') badgeBg = 'bg-cyan-500/20 text-cyan-300 border-cyan-500/50';
-                else if (props.status === 'infrastrutturato') badgeBg = 'bg-cyan-500/20 text-cyan-300 border-cyan-500/50';
-
-                statusBadge = `
-                    <div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-bold border ${badgeBg} mb-2">
-                        <span class="w-1.5 h-1.5 rounded-full bg-current animate-pulse"></span>
-                        ${props.status_label}
-                    </div>
-                `;
-            }
-
-            let tagsHtml = `
-                <div class="flex flex-wrap items-center gap-1.5 my-2 text-[10px]">
-                    <span class="px-2 py-0.5 rounded bg-white/10 text-slate-300 border border-white/10">🏢 ${props.operatore || 'FiberCop'}</span>
-                    <span class="px-2 py-0.5 rounded bg-white/10 text-slate-300 border border-white/10">📅 Rilievo: ${props.data_rilevamento || 'N.D.'}</span>
-                    ${props.ordinanza ? `<span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20">📋 ${props.ordinanza}</span>` : ''}
-                </div>
-            `;
-
-            let popupContent = `
-                <div>
-                    <div class="flex items-center justify-between gap-2 mb-1">
-                        <span class="badge" style="background: ${props.color}33; color: ${props.color}; border: 1px solid ${props.color}">${props.category.replace('_', ' ')}</span>
-                        <span class="text-xs text-slate-400 font-mono">📍 ${props.frazione}</span>
-                    </div>
-                    <h3>${props.name}</h3>
-                    ${statusBadge}
-                    ${tagsHtml}
-            `;
-            
-            if (props.description) {
-                popupContent += `<div class="notes border-l-2 pl-2 text-xs leading-relaxed" style="border-color: ${props.color}">${props.description}</div>`;
-            }
-
-            if (props.wholesale) {
-                const { element_id, acl, central_office, status, availability_date } = props.wholesale;
-                const available = availability_date ? availability_date.split('-').reverse().join('/') : 'Da definire';
-                const rollout = props.commercial_rollout;
-                popupContent += `
-                    <div class="mt-3 border-t border-white/10 pt-2 text-xs">
-                        <div class="font-bold text-cyber-neon">FiberCop Wholesale</div>
-                        <div>CRO <b>${element_id}</b> · ${status}</div>
-                        <div>Centrale ${central_office} · ACL <b>${acl}</b></div>
-                        <div>Disponibilità wholesale <b>${available}</b></div>
-                        ${rollout?.status === 'in_vendibilita_imminente' ? `
-                            <div class="mt-1 font-semibold text-cyan-300">In arrivo la rete ultraveloce</div>
-                            <div>${rollout.streets.join(', ')}</div>
-                            ${rollout.operators_reported ? `<div>${rollout.operators_reported} operatori wholesale segnalati</div>` : ''}
-                            ${rollout.reported_active_address ? `<div>Attivazione segnalata al civico ${rollout.reported_active_address}</div>` : ''}
-                        ` : ''}
-                    </div>
-                `;
-            }
-            
-            if (props.length_m > 0) popupContent += `<div class="text-xs text-slate-300 mt-2">📏 Tratta: <b class="text-white">${props.length_m} m</b> (${props.length_km} km)</div>`;
-            if (props.area_m2 > 0) popupContent += `<div class="text-xs text-slate-300 mt-2">📐 Superficie: <b class="text-white">${props.area_km2} km²</b> (${props.area_m2} m²)</div>`;
-            
-            // Dettagli dinamici cantiere Albo Pretorio
-            if (props.cantiere) {
-                const cInfo = props.cantiere;
-                let statusInfo = null;
-                if (window.calculateCantiereStatus) {
-                    statusInfo = window.calculateCantiereStatus({
-                        inizio: cInfo.inizio_lavori,
-                        fine: cInfo.fine_lavori,
-                        stato_base: cInfo.stato_base,
-                        fasciaOraria: cInfo.orario_giornaliero
-                    });
-                }
-                popupContent += `
-                    <div class="mt-3 pt-2 border-t border-white/10 text-xs">
-                        <div class="flex items-center gap-1.5 mb-1.5">
-                            <span class="w-2 h-2 rounded-full ${statusInfo ? statusInfo.dotClass : 'bg-amber-400'}"></span>
-                            <span class="font-bold px-2 py-0.5 rounded text-[11px] ${statusInfo ? statusInfo.badgeClass : 'bg-amber-500/20 text-amber-400 border border-amber-500/40'}">
-                                ${statusInfo ? statusInfo.statusLabel : 'CANTIERE'}
-                            </span>
-                        </div>
-                        <div class="text-[11px] text-cyber-neon font-mono mb-2">${statusInfo ? statusInfo.timingSummary : ''}</div>
-                        <div class="text-slate-400 text-[11px] mb-1">📋 Ordinanza: <b class="text-white">${cInfo.codice_ordinanza}</b></div>
-                        <div class="text-slate-400 text-[11px] mb-2">🏢 Richiedente: <b class="text-slate-200">${cInfo.richiedente}</b></div>
-                        ${cInfo.vie_interessate && cInfo.vie_interessate.length ? `
-                        <div class="bg-black/40 p-2 rounded border border-white/10 mb-2">
-                            <div class="text-[10px] uppercase font-bold text-slate-400 mb-1">Vie Autorizzate:</div>
-                            <ul class="list-disc list-inside space-y-0.5 text-slate-300 text-[11px]">
-                                ${cInfo.vie_interessate.map(v => `<li>${v}</li>`).join('')}
-                            </ul>
-                        </div>` : ''}
-                        ${cInfo.file_pdf ? `
-                        <a href="${cInfo.file_pdf}" target="_blank" download class="w-full bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/50 text-amber-300 py-1.5 px-2 rounded text-xs font-bold flex items-center justify-center gap-1.5 transition-colors mb-2">
-                            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> Scarica PDF Ordinanza Ufficiale
-                        </a>` : ''}
-                    </div>
-                `;
-            }
-
-            let mapsTarget = feature.geometry.type === 'Point' ? `${feature.geometry.coordinates[1]},${feature.geometry.coordinates[0]}` : '';
-            
-            popupContent += `
-                    <div class="mt-3 flex gap-2">
-                        `;
-            if (mapsTarget) {
-                popupContent += `<a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${mapsTarget}" target="_blank" class="flex-1 bg-white/10 hover:bg-white/20 text-white py-1 px-2 rounded text-xs text-center border border-white/20 transition-colors flex items-center justify-center gap-1">Street View</a>`;
-            }
-            popupContent += `</div></div>`;
-            
-            let inspection;
-            layer.bindPopup(() => {
-                if (inspection) return inspection;
-                const content = document.createElement('div');
-                content.innerHTML = popupContent;
-                if (feature.geometry.type === 'LineString' || props.category === 'arlo') {
-                    const links = document.createElement('div');
-                    links.className = 'archivio-popup';
-                    content.append(links);
-                    window.appendArchivioLinks?.(links, feature.id).then(() => {
-                        if (layer.isPopupOpen() && links.hasChildNodes()) layer.getPopup().update();
-                    });
-                }
-                inspection = content;
-                return inspection;
-            }, { minWidth: 280, maxWidth: 350, maxHeight: 410 });
-            if (feature.geometry.type === 'LineString') {
-                layer.on('click', L.DomEvent.stopPropagation);
-            }
+        onEachFeature(feature, layer) {
+            layer.on('click', event => {
+                if (feature.geometry.type === 'LineString') L.DomEvent.stopPropagation(event);
+                selectMapFeature(feature);
+            });
         }
     }).addTo(map);
-    
-    // Filtra la lista elementi nella telemetria se applicato
-    const filteredFeatures = window.FTTH_NETWORK_DATA.features.filter(f => featureMatchesFilter(f, currentCantiereFilter));
-    if (window.updateTelemetry) window.updateTelemetry(filteredFeatures);
 }
 
-function initLegendFilters() {
-    const filterBtns = document.querySelectorAll('.cantiere-filter-btn');
-    if (!filterBtns || filterBtns.length === 0) return;
-
-    filterBtns.forEach(btn => {
-        const count = btn.querySelector('[data-filter-count]');
-        if (count && window.FTTH_NETWORK_DATA) {
-            count.textContent = window.FTTH_NETWORK_DATA.features.filter(f => featureMatchesFilter(f, btn.dataset.filter)).length;
-        }
-        btn.addEventListener('click', (e) => {
-            const target = e.currentTarget;
-            filterBtns.forEach(b => {
-                b.classList.remove('active-filter');
-                b.classList.remove('bg-cyber-neon/20', 'text-cyber-neon', 'border-cyber-neon/50');
-            });
-            target.classList.add('active-filter');
-            target.classList.add('bg-cyber-neon/20', 'text-cyber-neon', 'border-cyber-neon/50');
-            
-            currentCantiereFilter = target.dataset.filter || 'all';
-            loadData();
-        });
-    });
-}
-
-window.setCantieriFilter = (filterName) => {
-    currentCantiereFilter = filterName;
-    const filterBtns = document.querySelectorAll('.cantiere-filter-btn');
-    filterBtns.forEach(b => {
-        if (b.dataset.filter === filterName) {
-            b.classList.add('active-filter', 'bg-cyber-neon/20', 'text-cyber-neon', 'border-cyber-neon/50');
-        } else {
-            b.classList.remove('active-filter', 'bg-cyber-neon/20', 'text-cyber-neon', 'border-cyber-neon/50');
-        }
-    });
-    loadData();
-};
-
-window.flyToFrazione = (lat, lng) => {
-    if (map) map.flyTo([lat, lng], 16, { duration: 1.8 });
-};
-
-window.showArchivioFeatures = (ids) => {
-    if (!map) return;
-    const requested = new Set(ids);
-    const features = window.FTTH_NETWORK_DATA.features.filter(feature => requested.has(feature.id));
-    if (!features.length) return;
-    if (features.some(feature => !featureMatchesFilter(feature, currentCantiereFilter))) {
-        window.setCantieriFilter('all');
-    }
-    map.closePopup();
+function highlightMapFeatures(features) {
     archivioHighlight?.remove();
-    const style = { pane: 'archivioHighlightPane', interactive: false, color: '#9efcff', weight: 7, opacity: 0.85 };
+    const style = { pane: 'archivioHighlightPane', interactive: false, color: '#111827', weight: 8, opacity: 0.85, fill: false };
     archivioHighlight = L.geoJSON(features, {
         style,
-        pointToLayer: (_feature, latlng) => L.circleMarker(latlng, { ...style, radius: 18, weight: 3, fill: false })
+        pointToLayer: (_feature, latlng) => L.circleMarker(latlng, { ...style, radius: 17, weight: 3 })
     }).addTo(map);
-    const sidebar = document.getElementById('telemetry-panel');
-    map.flyToBounds(archivioHighlight.getBounds(), {
-        paddingTopLeft: [260, 80],
-        paddingBottomRight: [(sidebar?.offsetWidth ?? 0) + 40, 65],
-        maxZoom: 17
-    });
+    return archivioHighlight.getBounds();
+}
+
+function selectMapFeature(feature, center = false) {
+    selectedFeature = feature;
+    const bounds = highlightMapFeatures([feature]);
+    showMapInspection(feature);
+    if (center || !map.getBounds().contains(bounds)) {
+        map.fitBounds(bounds, { padding: [35, 35], maxZoom: 17 });
+    }
+}
+
+function clearMapSelection() {
+    selectedFeature = null;
+    archivioHighlight?.remove();
+}
+
+window.flyToFrazione = (lat, lng) => {
+    map.setView([lat, lng], 16);
+};
+
+window.showArchivioFeatures = (ids, originFeatureId) => {
+    if (!map) return;
+    const requested = new Set(ids);
+    if (selectedFeature?.id === originFeatureId && requested.has(originFeatureId)) return;
+
+    const features = window.FTTH_NETWORK_DATA.features.filter(feature => requested.has(feature.id));
+    if (!features.length) return;
+    if (features.some(feature => !mapResults.includes(feature))) resetMapFilters();
+    showSidebarView('map-explore');
+    clearMapSelection();
+    const bounds = highlightMapFeatures(features);
+    map.fitBounds(bounds, { padding: [35, 35], maxZoom: 17 });
 };

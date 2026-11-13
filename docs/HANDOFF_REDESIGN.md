@@ -1,6 +1,6 @@
 # Manuale di Handoff Tecnico per il Redesign UI/UX
 
-Questo documento costituisce la guida operativa e il contratto architetturale per il designer / ingegnere frontend che si occuperà del futuro redesign dell'interfaccia utente del portale.
+Questo documento descrive i vincoli della dashboard di Geo Fibra e i punti da verificare quando si modifica l’interfaccia.
 
 ---
 
@@ -13,11 +13,8 @@ Questo documento costituisce la guida operativa e il contratto architetturale pe
 2. **Percorsi Relativi Obbligatori:**
    - Non utilizzare mai percorsi assoluti con slash iniziale (es. non usare mai `/css/` o `/data/`).
    - Usare sempre percorsi relativi (`css/app.css`, `data/network_data.json`) perché il repository subirà un cambio di nome e l'URL di GitHub Pages cambierà path radice.
-3. **Dispositivi Ammessi: Desktop e Tablet Only per la Mappa GIS:**
-   - La mappa Leaflet, l'HUD di telemetria e il tracker dei cantieri sono rigorosamente riservati a schermi con larghezza $\ge$ **768 pixel**.
-   - Su schermi di smartphone (< 768 px), la mappa e i dati geografici **non devono essere scaricati né inizializzati**. Viene mostrato il blocco a tutto schermo (`#mobile-blocker`) la cui unica interazione consentita è il link verso la Wiki (`wiki.html`).
-4. **Wiki Mobile-Friendly:**
-   - La documentazione tecnica e divulgativa (`wiki.html`) è l'unica sezione accessibile da smartphone e deve rimanere pienamente fruibile (con font leggibili e tabelle racchiuse in `.table-wrapper` per lo scroll orizzontale).
+3. **Desktop e tablet per la mappa GIS.** Da 768 px si caricano Leaflet, dati geografici e tracker. Su smartphone la schermata iniziale offre Archivio Atti e Wiki.
+4. **Wiki su tutti i dispositivi.** Conservare la leggibilità degli articoli e lo scorrimento orizzontale delle tabelle in `.table-wrapper`.
 
 ---
 
@@ -26,23 +23,23 @@ Questo documento costituisce la guida operativa e il contratto architetturale pe
 Attualmente il progetto impiega JavaScript vanilla modulare senza router ad hash né moduli ES, per garantire compatibilità immediata:
 
 ```
-├── index.html                   # Pagina principale GIS (Desktop/Tablet) + Blocco Mobile
+├── index.html                   # Dashboard GIS e accesso mobile ad Archivio e Wiki
 ├── wiki.html                    # Lettore autonomo della Wiki Tecnica (Desktop + Mobile)
 ├── css/
-│   ├── app.css                  # Foglio stile principale (stili cyber, animazioni pulse)
+│   ├── app.css                  # Palette e componenti della dashboard
 │   └── wiki.css                 # Foglio stile dedicato alla lettura dei markdown
 ├── data/
-│   ├── network_data.json        # GeoJSON FeatureCollection rigenerato da Snapshot 3 (63 feature)
-│   ├── ordinanze.json           # Fonte unica di verità per atti e cantieri comunali
+│   ├── network_data.json        # GeoJSON FeatureCollection del rilievo corrente
+│   ├── ordinanze.json           # Dati del tracker e finestre autorizzate
 │   ├── rete_ftth_collesalvetti.xlsx # Foglio elettronico ufficiale di export
-│   └── snapshots/               # Storico versionato dei rilievi KML e CHANGELOG_DATI.md
+│   └── kml_snapshots/               # Storico versionato dei rilievi KML e CHANGELOG_DATI.md
 ├── js/
 │   ├── data.js                  # Assegna window.FTTH_NETWORK_DATA (sincrono con network_data.json)
 │   ├── stats.js                 # Assegna window.FTTH_STATS (specchio di data/stats.json, generato)
 │   ├── cantieri_tracker.js      # Calcolo orari feriali Europe/Rome e modale cantieri
-│   ├── map.js                   # Inizializzazione Leaflet, layer tiles, confini toscani, popup
-│   ├── telemetry.js             # Calcolo statistiche rete, filtri e ricerca apparati
-│   └── main.js                  # Punto d'ingresso e coordinamento eventi UI
+│   ├── map.js                   # Inizializzazione Leaflet, sfondi, geometrie e selezione
+│   ├── telemetry.js             # Statistiche, risultati e scheda di dettaglio
+│   └── main.js                  # Pannello, ricerca, filtri e coordinamento UI
 ├── vendor/
 │   └── marked.min.js            # Parser Markdown autonomo (v11.1.1)
 ├── wiki/
@@ -58,38 +55,14 @@ Attualmente il progetto impiega JavaScript vanilla modulare senza router ad hash
 
 ---
 
-## 3. Elementi DOM Critici (ID e Classi da NON Rompere)
+## 3. Controlli della dashboard
 
-Il codice JavaScript esistente effettua query dirette su specifici ID del documento. Nel ridisegnare la grafica, questi ID **devono essere preservati**:
-
-### A. Mappa e Livelli Cartografici (`js/map.js`)
-- `#map`: Contenitore della mappa Leaflet.
-- `.layer-btn`: Pulsanti di commutazione dei layer cartografici. Ciascun pulsante deve avere l'attributo `data-layer` impostato su `topo`, `satellite` o `dark`.
-- `.active-layer`: Classe applicata dal JS al pulsante del layer correntemente selezionato.
-
-### B. Telemetria e Statistiche di Rete (`js/telemetry.js`)
-- `#stat-tot`: Contatore numerico totale apparati comunali (da `window.FTTH_STATS`, non il numero di feature).
-- `#stat-km`: Lunghezza complessiva delle tratte (in chilometri).
-- `#stat-arl`: Conteggio armadi rame ARL.
-- `#stat-arlo`: Conteggio armadi ottici ARLO.
-- `#stat-centrali`: Conteggio centrali TLC.
-- `#stat-cantieri`: Conteggio tratte/cantieri rilevati.
-- `#frazioni-nav`: Contenitore dove vengono iniettati dinamicamente i bottoni per centrare la mappa sulle frazioni.
-- `#frazioni-stats`: Contenitore delle barre di distribuzione percentuale per frazione.
-- `#search-elements`: Campo di input per la ricerca testuale rapida.
-- `#elements-list`: Contenitore in cui viene renderizzata la lista filtrabile degli apparati.
-
-### C. Registro Cantieri e Ordinanze (`js/cantieri_tracker.js` & `js/main.js`)
-- `#btn-open-cantieri`: Pulsante che apre il modale delle ordinanze.
-- `#btn-close-cantieri`: Pulsante che chiude il modale delle ordinanze.
-- `#modal-cantieri`: Contenitore del modale (il JS alterna le classi `hidden` e `flex`).
-- `#cantieri-count-badge`: Badge nella barra di navigazione con il conteggio delle ordinanze in corso o future.
-- `#cantieri-live-clock`: Elemento in cui viene iniettato ogni secondo l'orario ufficiale di Roma (`Europe/Rome`).
-- `#cantieri-list-container`: Griglia/contenitore in cui vengono generate le schede delle ordinanze.
-
-### D. Blocco Mobile (`index.html`)
-- `#mobile-blocker`: Schermata di blocco visualizzata su schermi < 768px.
-- `#desktop-app-container`: Contenitore dell'intera applicazione desktop/tablet.
+- `#map` è la superficie Leaflet. `#map-basemap` seleziona lo sfondo e `#toggle-map-sidebar` espande o richiude il pannello.
+- `#search-elements`, `#frazioni-nav` e `.cantiere-filter-btn` alimentano la lista `#elements-list` e le geometrie visibili. I conteggi dei pulsanti tengono conto della ricerca e della frazione.
+- `#map-inspection` mostra l’elemento selezionato. Il rilievo, l’ordinanza e i dati wholesale hanno sezioni dedicate. Se un atto collegato rimanda alla stessa geometria, il ritorno conserva selezione, filtri e inquadratura.
+- `#telemetry-panel` contiene statistiche comunali da `window.FTTH_STATS`, conteggi per frazione, note del rilievo e download Excel.
+- `#modal-cantieri`, `#archivio-atti` e `#archivio-pdf` sono dialoghi nativi. I relativi controlli restano utilizzabili da tastiera.
+- Le zone di copertura, le tratte e i marker mantengono i rispettivi livelli Leaflet. Verificare che una tratta selezionabile abbia precedenza quando si sovrappone a una zona di copertura.
 
 ---
 
@@ -140,37 +113,17 @@ Ogni record dell'array delle ordinanze contiene:
 
 ---
 
-## 5. Logica del Calcolo di Stato del Cantiere
+## 5. Stati e palette
 
-La funzione `calculateCantiereStatus(cantiere, currentDate)` in `js/cantieri_tracker.js` garantisce che:
-1. Venga sempre utilizzato il fuso orario **Europe/Rome** (evitando bug nel passaggio tra ora solare ed estiva).
-2. Nei giorni festivi e di **domenica** il cantiere **non risulti mai come "attivo ora"**, bensì restituisca l'etichetta `ORDINANZA IN CORSO (NON LAVORATIVO)` con il messaggio esplicito:
-   > *"Oggi non è un giorno lavorativo (feriali 08:00 - 18:00)"*
-3. Dal lunedì al sabato, ma **fuori dalla fascia oraria 08:00 – 18:00**, restituisca `ORDINANZA IN CORSO (FUORI ORARIO)`.
-4. Solo ed esclusivamente nei giorni feriali tra le 08:00 e le 18:00 venga mostrato `CANTIERE ATTIVO ORA`.
+Il tracker usa `calculateCantiereStatus` e il fuso `Europe/Rome` per applicare le finestre autorizzate, con domeniche e festività escluse. L’indicazione della fascia oraria si riferisce all’atto. I riscontri di campo descrivono il progresso dell’opera.
 
----
+## 6. Componenti e cartografia
 
-## 6. Mappa degli Stili Sparsi nel Codice da Riordinare
-
-Durante il redesign estetico (passaggio a una grafica sobria e civica), chi interverrà dovrà tenere presente che alcuni stili attuali sono generati direttamente all'interno del codice JavaScript:
-
-1. **Card dei Cantieri (`js/cantieri_tracker.js`):**
-   - L'HTML generato dentro `renderCantieriModal()` contiene classi Tailwind inline come `glass-panel`, `border-cyber-border/50`, `text-cyber-neon`, ecc.
-2. **Popup della Mappa (`js/map.js`):**
-   - La funzione `onEachFeature` costruisce l'HTML del popup Leaflet includendo proprietà inline `style="background: ${props.color}33; color: ${props.color}"`.
-3. **Marker Personalizzati Leaflet (`js/map.js`):**
-   - La funzione `getIconHtml` genera icone SVG inline con colori hardcoded e stili `background: rgba(10, 13, 20, 0.85); border: 1px solid ${color}`.
-4. **Telemetria e Barre Frazioni (`js/telemetry.js`):**
-   - Le barre di percentuale usano `style="width: ${pct}%"` con colore di sfondo `bg-cyber-neon`.
-5. **Configurazione Tailwind (`index.html` e `wiki.html`):**
-   - Contiene il blocco `<script> tailwind.config = ... </script>` con la palette personalizzata `cyber`.
-
----
+La dashboard usa la palette chiara di FWA Map Italia in `css/app.css`. Le emoji affiancano le etichette dei controlli. I colori delle tratte mantengono il significato del rilievo, incluso il giallo per gli scavi da avviare. La cartografia iniziale usa OpenStreetMap. La Wiki conserva il proprio foglio di stile in questa fase.
 
 ## 7. Cosa NON va Modificato o Rotto
 
-- **Non inventare ordinanze o date:** Cantiere 3 (Via Aiaccia) e Opera sulla Backbone non hanno atti reperiti; devono rimanere etichettati come *"da collegare a un'ordinanza"*.
+- **Non inventare ordinanze o date:** Consultare l’indice corrente per distinguere gli atti collegati dalle corrispondenze per strada.
 - **Conteggi di Snapshot 7:** I dati ufficiali della rete sono 76 feature, 24,673 km, 36 apparati comunali (+1 esterno; 39 è il numero dei *punti*, non degli apparati). I conteggi sono in `data/stats.json` (generato da `scripts/compute_stats.py`). Qualsiasi modifica deve passare dalla rigenerazione deterministica tramite `scripts/kml_to_geojson.py`.
-- **Non rompere il pulsante di download Excel:** In `index.html` il pulsante di download ha selettore `a[href="data/rete_ftth_collesalvetti.xlsx"][download]` (classe Tailwind verde smeraldo nella navbar in alto a destra) e punta al percorso relativo `data/rete_ftth_collesalvetti.xlsx`.
+- **Non rompere il pulsante di download Excel:** In `index.html` il pulsante di download ha selettore `a[href="data/rete_ftth_collesalvetti.xlsx"][download]` nella vista Dati del rilievo e punta al percorso relativo `data/rete_ftth_collesalvetti.xlsx`.
 - **Non rimuovere la doppia numerazione delle ordinanze:** Polizia Municipale e Registro Generale del Comune sono due numerazioni distinte e necessarie per la trasparenza civica.

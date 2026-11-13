@@ -44,6 +44,8 @@
     let limit = pageSize;
     /** @type {string | null} */
     let selectedAct = null;
+    /** @type {string | undefined} */
+    let originFeatureId;
     /** @type {Map<string, {act: Atto, candidate: boolean}[]>} */
     const byFeature = new Map();
 
@@ -259,7 +261,7 @@
             for (const [label, ids] of mapActions) {
                 if (ids.length) actions.append(button(label, () => {
                     dialog.close();
-                    window.showArchivioFeatures?.(ids);
+                    window.showArchivioFeatures?.(ids, originFeatureId);
                 }));
             }
         }
@@ -339,7 +341,10 @@
     }
 
     for (const trigger of document.querySelectorAll("[data-open-archivio]")) {
-        trigger.addEventListener("click", () => void openArchive());
+        trigger.addEventListener("click", () => {
+            originFeatureId = undefined;
+            void openArchive();
+        });
     }
     search.addEventListener("input", () => {
         selectedAct = null;
@@ -365,16 +370,19 @@
     });
     pdfDialog.addEventListener("close", () => frame.removeAttribute("src"));
 
-    window.appendArchivioLinks = (container, id) => {
+    window.appendArchivioLinks = (container, id, { includePdf = true } = {}) => {
         return loadActs().then(() => {
             const matches = byFeature.get(id) ?? [];
             if (!matches.length) return;
             container.append(element("strong", "Archivio atti"));
             for (const { act, candidate } of matches) {
                 const row = document.createElement("div");
-                row.append(button(title(act), () => void openArchive(act.id)));
+                row.append(button(title(act), () => {
+                    originFeatureId = id;
+                    void openArchive(act.id);
+                }));
                 const url = pdfUrl(act);
-                if (url) {
+                if (url && (includePdf || candidate)) {
                     const link = /** @type {HTMLAnchorElement} */ (element("a", "PDF ↗"));
                     link.href = url;
                     link.target = "_blank";
