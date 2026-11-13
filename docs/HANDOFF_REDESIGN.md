@@ -57,7 +57,7 @@ Attualmente il progetto impiega JavaScript vanilla modulare senza router ad hash
 
 ## 3. Controlli della dashboard
 
-- `#map` è la superficie Leaflet. `#map-basemap` seleziona lo sfondo e `#toggle-map-sidebar` espande o richiude il pannello.
+- `#map` è la superficie Leaflet. `#map-basemap` offre due opzioni con pulsanti radio, OpenStreetMap e Satellite e `#toggle-map-sidebar` espande o richiude il pannello.
 - `#search-elements`, `#frazioni-nav` e `.cantiere-filter-btn` alimentano la lista `#elements-list` e le geometrie visibili. I conteggi dei pulsanti tengono conto della ricerca e della frazione.
 - `#map-inspection` mostra l’elemento selezionato. Il rilievo, l’ordinanza e i dati wholesale hanno sezioni dedicate. Se un atto collegato rimanda alla stessa geometria, il ritorno conserva selezione, filtri e inquadratura.
 - `#telemetry-panel` contiene statistiche comunali da `window.FTTH_STATS`, conteggi per frazione, note del rilievo e download Excel.
@@ -119,7 +119,7 @@ Il tracker usa `calculateCantiereStatus` e il fuso `Europe/Rome` per applicare l
 
 ## 6. Componenti e cartografia
 
-La dashboard usa la palette chiara di FWA Map Italia in `css/app.css`. Le emoji affiancano le etichette dei controlli. I colori delle tratte mantengono il significato del rilievo, incluso il giallo per gli scavi da avviare. La cartografia iniziale usa OpenStreetMap. La Wiki conserva il proprio foglio di stile in questa fase.
+La dashboard usa la palette chiara di FWA Map Italia in `css/app.css`. Le emoji affiancano le etichette dei controlli. I colori delle tratte mantengono il significato del rilievo, incluso il giallo per gli scavi da avviare. La cartografia iniziale usa OpenStreetMap con la modalità Retina di Leaflet. La Wiki condivide la palette della dashboard e definisce in `css/wiki.css` le regole per indice, articoli e tabelle.
 
 ## 7. Cosa NON va Modificato o Rotto
 

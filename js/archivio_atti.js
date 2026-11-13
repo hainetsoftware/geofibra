@@ -212,6 +212,7 @@
         const current = status(act, today);
         const article = document.createElement("article");
         article.className = "archivio-card";
+        article.dataset.status = current;
         article.append(element("h3", title(act)));
         const tags = document.createElement("div");
         tags.className = "archivio-tags";
@@ -231,23 +232,35 @@
             act.operator_target !== act.richiedente && act.operator_target,
             loc.area && areas[loc.area]].filter(Boolean);
         if (metadata.length) article.append(element("p", metadata.join(" · "), "archivio-meta"));
-        if (act.oggetto && act.oggetto !== title(act)) article.append(element("p", act.oggetto));
-        if (loc.strade.length) article.append(element("p", loc.strade.join(" · ")));
+        if (act.oggetto && act.oggetto !== title(act)) {
+            const subject = element("details", "", "archive-subject");
+            subject.append(element("summary", "Oggetto dell’atto"), element("p", act.oggetto));
+            article.append(subject);
+        }
+        if (loc.strade.length) {
+            const streets = element("p", "", "archive-streets");
+            streets.append(element("strong", "Vie interessate"), loc.strade.join(" · "));
+            article.append(streets);
+        }
         if (loc.prog_chilometrica) {
             const { dal_km, al_km } = loc.prog_chilometrica;
             article.append(element("p", `Progressiva km ${dal_km} – ${al_km}`, "archivio-meta"));
         }
         const windows = act.validita.periodi ?? [act.validita];
         for (const { dal, al } of windows.filter(({ dal, al }) => dal || al)) {
-            article.append(element("p", `Validità · ${formatDate(dal)} → ${formatDate(al)}` +
-                (act.validita.orario ? ` · ${act.validita.orario}` : ""), "archivio-meta"));
+            const validity = element("p", "", "archive-validity");
+            const dates = [formatDate(dal), formatDate(al)].join(" → ");
+            validity.append(element("strong", "Validità"), [dates, act.validita.orario].filter(Boolean).join(" · "));
+            article.append(validity);
         }
         if (act.note_tecniche) article.append(element("p", act.note_tecniche));
         const actions = document.createElement("div");
         actions.className = "archivio-actions";
         const url = pdfUrl(act);
         if (url) {
-            actions.append(button("Anteprima PDF", () => preview(act)));
+            const previewButton = button("Anteprima PDF", () => preview(act));
+            previewButton.classList.add("archive-primary");
+            actions.append(previewButton);
             const link = /** @type {HTMLAnchorElement} */ (element("a", "Apri PDF ↗"));
             link.href = url;
             link.target = "_blank";
@@ -374,7 +387,11 @@
         return loadActs().then(() => {
             const matches = byFeature.get(id) ?? [];
             if (!matches.length) return;
+            const related = element("details", "", "archive-candidates");
+            const candidates = matches.filter(match => match.candidate).length;
+            related.append(element("summary", `Corrispondenze per strada (${candidates})`));
             container.append(element("strong", "Archivio atti"));
+
             for (const { act, candidate } of matches) {
                 const row = document.createElement("div");
                 row.append(button(title(act), () => {
@@ -389,9 +406,9 @@
                     link.rel = "noopener";
                     row.append(link);
                 }
-                if (candidate) row.append(element("small", "Corrispondenza per strada"));
-                container.append(row);
+                (candidate ? related : container).append(row);
             }
+            if (candidates) container.append(related);
         }).catch(() => {});
     };
 })();

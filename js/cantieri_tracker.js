@@ -516,12 +516,17 @@ function renderCantieriModal() {
     }) + ' (Europe/Rome)';
   }
 
-  listCont.innerHTML = '';
-
-  ORDINANZE_DATA.forEach(cantiere => {
+  ORDINANZE_DATA.forEach((cantiere, index) => {
     const status = calculateCantiereStatus(cantiere, now);
+    const timing = listCont.children[index]?.querySelector('.tracker-timing');
+    if (timing) {
+      timing.dataset.status = status.statusCode;
+      timing.querySelector('strong').textContent = status.statusLabel;
+      timing.querySelector('p').textContent = status.timingSummary;
+      return;
+    }
 
-    const card = document.createElement('div');
+    const card = document.createElement('article');
     card.className = 'tracker-card';
     const streets = cantiere.vie_interessate || cantiere.vie || [];
     const observation = cantiere.slittamento_osservato;
@@ -535,20 +540,24 @@ function renderCantieriModal() {
     const descr = cantiere.descrizione_ufficiale || cantiere.descrizione || '';
 
     card.innerHTML = `
-      <h3>${titolo}</h3>
-      <p class="muted">${[frazione, lunghezza].filter(Boolean).join(' · ')}</p>
-      <span class="status-tag">${status.statusLabel}</span>
-      <p>${status.timingSummary}</p>
+      <header>
+        <p class="tracker-place">📍 ${[frazione, lunghezza].filter(Boolean).join(' · ')}</p>
+        <h3>${titolo}</h3>
+      </header>
+      <div class="tracker-timing" data-status="${status.statusCode}">
+        <strong>${status.statusLabel}</strong>
+        <p>${status.timingSummary}</p>
+      </div>
       <p>${descr}</p>
       ${observation?.nota_campo ? `<div class="tracker-note">
         <strong>${observation.fonte_kml || 'Rilievo sul campo'}</strong>
         <p>${observation.nota_campo}</p>
       </div>` : ''}
-      ${streets.length ? `<div><strong>Vie interessate e prescrizioni</strong><ul>
+      ${streets.length ? `<details class="tracker-streets"><summary>Vie interessate e prescrizioni (${streets.length})</summary><ul>
         ${streets.map(street => typeof street === 'string' ? `<li>${street}</li>` :
           `<li><strong>${street.via}</strong>${street.prescrizione ? ' · ' + street.prescrizione : ''}</li>`).join('')}
-      </ul></div>` : ''}
-      <p><strong>${attoCodice}</strong>${richiedente ? `<br>Richiedente · ${richiedente}` : ''}</p>
+      </ul></details>` : ''}
+      <p class="tracker-reference"><strong>${attoCodice}</strong>${richiedente ? `<br>Richiedente · ${richiedente}` : ''}</p>
       <div class="archivio-actions">
         ${centerCoords ? '<button type="button" data-tracker-map><span class="emoji" aria-hidden="true">🧭</span> Mostra sulla mappa</button>' : ''}
         ${pdfPath ? `<a href="${pdfPath}" target="_blank" rel="noopener" download><span class="emoji" aria-hidden="true">📄</span> PDF ordinanza</a>` : ''}

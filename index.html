@@ -102,13 +102,11 @@
                 <button type="button" id="toggle-map-sidebar" class="ui-button" aria-controls="map-sidebar" aria-expanded="true"><span class="emoji" aria-hidden="true">🔎</span> <span>Nascondi pannello</span></button>
                 <div class="map-toolbar-actions">
                     <button type="button" id="open-survey" class="ui-button" aria-controls="telemetry-panel"><span class="emoji" aria-hidden="true">📊</span> Dati del rilievo</button>
-                    <label class="basemap-label" for="map-basemap"><span class="emoji" aria-hidden="true">🗺️</span> <span class="sr-only">Sfondo della mappa</span>
-                        <select id="map-basemap">
-                            <option value="topo">OpenStreetMap</option>
-                            <option value="satellite">Satellite</option>
-                            <option value="dark">Mappa scura</option>
-                        </select>
-                    </label>
+                    <fieldset id="map-basemap" class="basemap-picker">
+                        <legend class="sr-only">Sfondo della mappa</legend>
+                        <label><input type="radio" name="basemap" value="topo" checked><span><span class="emoji" aria-hidden="true">🗺️</span> OpenStreetMap</span></label>
+                        <label><input type="radio" name="basemap" value="satellite"><span><span class="emoji" aria-hidden="true">🛰️</span> Satellite</span></label>
+                    </fieldset>
                 </div>
             </div>
             <div class="map-viewport">
@@ -116,18 +114,24 @@
                 <p id="map-loading" role="status">Caricamento della mappa…</p>
                 <details class="map-key">
                     <summary class="ui-button"><span class="emoji" aria-hidden="true">📋</span> Legenda</summary>
-                    <ul>
-                        <li><span class="map-swatch" style="--swatch: #2563eb"></span> Armadio fibra (ARLO)</li>
-                        <li><span class="map-swatch" style="--swatch: #111827"></span> Armadio rame (ARL)</li>
-                        <li><span class="map-swatch" style="--swatch: #6b7280"></span> Centrale</li>
-                        <li><span class="map-swatch" style="--swatch: #007cf5"></span> Progettazione esecutiva</li>
-                        <li><span class="map-swatch" style="--swatch: #ffd700"></span> Scavi da avviare</li>
-                        <li><span class="map-swatch" style="--swatch: #00796b"></span> Tratta completata</li>
-                        <li><span class="map-swatch" style="--swatch: #fbc02d"></span> Tratta autorizzata o pianificata</li>
-                        <li><span class="map-swatch swatch-dashed"></span> Riuso probabile</li>
-                        <li><span class="map-swatch" style="--swatch: #42a5f5"></span> Area coperta</li>
-                        <li><span class="map-swatch" style="--swatch: #ef5350"></span> Area non coperta</li>
-                    </ul>
+                    <div class="legend-groups">
+                        <section><h3>Apparati</h3><ul>
+                            <li><span class="map-swatch" style="--swatch: #2563eb"></span> Armadio fibra (ARLO)</li>
+                            <li><span class="map-swatch" style="--swatch: #111827"></span> Armadio rame (ARL)</li>
+                            <li><span class="map-swatch" style="--swatch: #6b7280"></span> Centrale</li>
+                        </ul></section>
+                        <section><h3>Tratte e cantieri</h3><ul>
+                            <li><span class="map-swatch" style="--swatch: #007cf5"></span> Progettazione esecutiva</li>
+                            <li><span class="map-swatch" style="--swatch: #ffd700"></span> Scavi da avviare</li>
+                            <li><span class="map-swatch" style="--swatch: #00796b"></span> Tratta completata</li>
+                            <li><span class="map-swatch" style="--swatch: #fbc02d"></span> Tratta autorizzata o pianificata</li>
+                            <li><span class="map-swatch swatch-dashed"></span> Riuso probabile</li>
+                        </ul></section>
+                        <section><h3>Copertura rilevata</h3><ul>
+                            <li><span class="map-swatch" style="--swatch: #42a5f5"></span> Area coperta</li>
+                            <li><span class="map-swatch" style="--swatch: #ef5350"></span> Area non coperta</li>
+                        </ul></section>
+                    </div>
                 </details>
             </div>
             <footer class="map-footer"><span id="snapshot-nav-label"></span><span>Rilievi civici · Atti pubblici</span></footer>
@@ -154,19 +158,21 @@
             <form method="dialog"><button aria-label="Chiudi archivio">Chiudi</button></form>
         </header>
         <div class="archivio-scroll">
-            <div class="archivio-controls">
-                <label>Cerca nell’archivio
-                    <input type="search" placeholder="Via Roma, 118/2026, Fastweb…" autofocus>
-                </label>
-                <label>Ordina per
-                    <select>
-                        <option value="newer">Più recenti</option>
-                        <option value="older">Meno recenti</option>
-                        <option value="number">Numero atto</option>
-                    </select>
-                </label>
+            <div class="archive-query">
+                <div class="archivio-controls">
+                    <label>Cerca nell’archivio
+                        <input type="search" placeholder="Via Roma, 118/2026, Fastweb…" autofocus>
+                    </label>
+                    <label>Ordina per
+                        <select>
+                            <option value="newer">Più recenti</option>
+                            <option value="older">Meno recenti</option>
+                            <option value="number">Numero atto</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="archivio-filters" aria-label="Filtri"></div>
             </div>
-            <div class="archivio-filters" aria-label="Filtri"></div>
             <div class="archivio-actions archivio-summary">
                 <p role="status"></p>
                 <button type="button" data-clear-archivio>Azzera filtri</button>

@@ -110,8 +110,9 @@ function renderList(features) {
     }
 }
 
-function inspectionSection(title, lines) {
-    const section = document.createElement('section');
+function inspectionSection(title, lines, tone) {
+    const section = textElement('section', '', 'inspection-block');
+    section.dataset.tone = tone;
     section.append(textElement('h3', title));
     for (const line of lines.filter(Boolean)) section.append(textElement('p', line));
     return section;
@@ -145,7 +146,7 @@ function showMapInspection(feature) {
         ? 'Marcature stradali e bobine di microtubi Fender rilevate sul posto.'
         : props.description;
     const fieldStatus = featureStatus(props);
-    const field = inspectionSection('Rilievo sul campo', [date]);
+    const field = inspectionSection('Rilievo sul campo', [date], 'blue');
     if (fieldStatus) field.append(textElement('span', fieldStatus, 'status-tag'));
     if (observation) field.append(textElement('p', observation));
     content.append(field);
@@ -161,7 +162,7 @@ function showMapInspection(feature) {
             worksite?.richiedente && `Richiedente: ${worksite.richiedente}`,
             streets?.length ? `Vie interessate: ${streets.join(', ')}` : '',
             !staged && worksite?.note_slittamento !== observation ? worksite?.note_slittamento : ''
-        ]);
+        ], 'amber');
         if (worksite?.file_pdf) ordinance.append(detailLink('Apri PDF', '📄', worksite.file_pdf));
         content.append(ordinance);
     }
@@ -178,7 +179,7 @@ function showMapInspection(feature) {
             imminent && rollout.streets?.join(', '),
             imminent && rollout.operators_reported && `${rollout.operators_reported} operatori segnalati`,
             imminent && rollout.reported_active_address && `Attivazione segnalata al civico ${rollout.reported_active_address}`
-        ]));
+        ], 'green'));
     }
 
     if (feature.geometry.type === 'LineString' || props.category === 'arlo') {

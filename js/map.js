@@ -25,7 +25,7 @@ function getIconHtml(iconName, color) {
     } else {
         svg = `<svg xmlns="http://www.w3.org/2005/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>`;
     }
-    
+
     return `<span class="network-marker" style="--marker-color: ${color}">${svg}</span>`;
 }
 
@@ -48,44 +48,30 @@ function initMap() {
 
     L.control.zoom({ position: 'topright' }).addTo(map);
 
-    // Layer 1: Cyber Dark (Esri Dark Canvas)
-    const darkBase = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', { 
-        maxZoom: 19,
-        bounds: TOSCANA_BOUNDS,
-        attribution: 'Tiles &copy; Esri'
-    });
-    const darkRef = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}', { 
-        maxZoom: 19,
-        bounds: TOSCANA_BOUNDS
-    });
-    const darkGroup = L.layerGroup([darkBase, darkRef]);
-
-    // Layer 2: Satellite HD (Esri World Imagery)
-    const satLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { 
+    const satLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
         maxZoom: 19,
         bounds: TOSCANA_BOUNDS,
         attribution: 'Tiles &copy; Esri'
     });
 
-    // Layer 3: Topografico OpenStreetMap
-    const topoLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { 
-        maxZoom: 19,
-        subdomains: ['a', 'b', 'c'],
+    const topoLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        detectRetina: true,
+        maxZoom: 20,
+        maxNativeZoom: L.Browser.retina ? 18 : 19,
         bounds: TOSCANA_BOUNDS,
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors'
     });
 
     const layers = {
-        dark: darkGroup,
         satellite: satLayer,
         topo: topoLayer
     };
 
-    topoLayer.addTo(map);
+    let activeLayer = topoLayer.addTo(map);
 
     document.getElementById('map-basemap').addEventListener('change', event => {
-        Object.values(layers).forEach(layer => map.removeLayer(layer));
-        layers[event.currentTarget.value].addTo(map);
+        activeLayer.remove();
+        activeLayer = layers[event.target.value].addTo(map);
     });
 }
 
