@@ -32,6 +32,7 @@ export interface OrdinanzaAtto {
     richiedente: string | null;
     operator_target: Operatore | null;
     validita: { dal: string | null; al: string | null; orario: string | null; periodi?: { dal: string; al: string }[] };
+    occupazione?: { superficie_mq: number; giorni: number };
     localizzazione: {
         area: Area | null;
         strade: string[];

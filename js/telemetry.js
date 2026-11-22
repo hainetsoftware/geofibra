@@ -48,7 +48,8 @@ function updateTelemetry() {
         'stat-arlo': equipment.by_category_municipal.arlo || 0,
         'stat-centrali': equipment.centrali_municipal,
         'stat-cantieri': window.FTTH_NETWORK_DATA.features.filter(f => f.properties.category.startsWith('cantiere_')).length,
-        'stat-arlo-stagno': equipment.by_frazione_municipal.Stagno?.arlo ?? 0
+        'stat-arlo-stagno': equipment.by_frazione_municipal.Stagno?.arlo ?? 0,
+        'stat-arlo-collesalvetti': equipment.by_frazione_municipal.Collesalvetti?.arlo ?? 0
     };
     for (const [id, value] of Object.entries(values)) {
         document.getElementById(id).textContent = value;
@@ -62,6 +63,12 @@ function updateTelemetry() {
         row.append(textElement('dt', name), textElement('dd', counts.totale));
         if (counts.arlo) row.lastElementChild.append(` · ${counts.arlo} ARLO`);
         statsList.append(row);
+    }
+    const availability = window.FTTH_NETWORK_DATA.metadata.commercial_availability;
+    const commercial = document.getElementById('survey-commercial-availability');
+    if (availability) {
+        commercial.replaceChildren(...Object.entries(availability.areas).map(([name, area]) =>
+            commercialSection(name, area, area.clusters, availability)));
     }
 }
 
@@ -129,6 +136,37 @@ function detailLink(label, emoji, url) {
     return link;
 }
 
+function commercialSection(name, area, clusters, availability) {
+    const section = inspectionSection(`Disponibilità commerciale · ${name}`, [
+        `Centrale ${area.acl} · ${area.xgs_pon ? 'Centrale predisposta per XGS-PON (10 Gbit/s)' : 'Solo GPON (10 Gbit/s non disponibile)'}`
+    ], 'green');
+    const monthFormat = new Intl.DateTimeFormat('it-IT', { month: 'short', timeZone: 'UTC' });
+    for (const cluster of clusters) {
+        const { status, month, speeds_gbps, undated_speeds_gbps, verified_on } = cluster.fiberfinder;
+        const monthLabel = month && `${monthFormat.format(new Date(month))}-${month.slice(2, 4)}`;
+        const speedLabel = speeds_gbps.map(speed => lengthFormat.format(speed)).join(' e ');
+        const finderText = status === 'PIANIFICATA'
+            ? `FTTH FiberCop ${speedLabel} Gbit/s · PIANIFICATA (${monthLabel})`
+            : 'Solo FTTC/rame · FTTH assente dalla pianificazione ai civici verificati';
+        section.append(textElement('h4', [cluster.label, cluster.cro_id].filter(Boolean).join(' · ')));
+        if (cluster.address) section.append(textElement('p', cluster.address));
+        section.append(textElement('p', `FiberFinder: ${finderText}`));
+        if (undated_speeds_gbps?.length) {
+            const speeds = undated_speeds_gbps.map(speed => lengthFormat.format(speed)).join(' e ');
+            section.append(textElement('p', `FiberFinder: ${speeds} Gbit/s riportati senza data`));
+        }
+        if (verified_on) section.append(textElement('p', `Verifica FiberFinder del ${dateLabel(verified_on)}`, 'muted'));
+        if (cluster.fibercop) {
+            const { message, offers, verified_on: checkedOn } = cluster.fibercop;
+            section.append(textElement('p', `FiberCop: «${message}» · ${offers} offerte retail`));
+            if (checkedOn) section.append(textElement('p', `Verifica FiberCop del ${dateLabel(checkedOn)}`, 'muted'));
+        }
+        if (cluster.note) section.append(textElement('p', cluster.note));
+    }
+    section.append(textElement('p', availability.provenance, 'muted'));
+    return section;
+}
+
 function showMapInspection(feature) {
     const props = feature.properties;
     const worksite = props.cantiere;
@@ -164,6 +202,10 @@ function showMapInspection(feature) {
             !staged && worksite?.note_slittamento !== observation ? worksite?.note_slittamento : ''
         ], 'amber');
         if (worksite?.file_pdf) ordinance.append(detailLink('Apri PDF', '📄', worksite.file_pdf));
+        if (worksite?.concessione) {
+            const { numero, file_pdf } = worksite.concessione;
+            ordinance.append(detailLink(`Concessione ${numero}`, '📄', file_pdf));
+        }
         content.append(ordinance);
     }
 
@@ -172,7 +214,7 @@ function showMapInspection(feature) {
         const rollout = props.commercial_rollout;
         const imminent = rollout?.status === 'in_vendibilita_imminente';
         content.append(inspectionSection('Disponibilità FiberCop Wholesale', [
-            `CRO ${element_id} · ${status}`,
+            `CRO ${element_id} · ${status}${props.wholesale_binding === 'tentative' ? ' · associazione da confermare' : ''}`,
             `Centrale ${central_office} · ACL ${acl}`,
             dateLabel(availability_date),
             imminent && 'In arrivo la rete ultraveloce',
@@ -180,6 +222,15 @@ function showMapInspection(feature) {
             imminent && rollout.operators_reported && `${rollout.operators_reported} operatori segnalati`,
             imminent && rollout.reported_active_address && `Attivazione segnalata al civico ${rollout.reported_active_address}`
         ], 'green'));
+    }
+
+    const availability = window.FTTH_NETWORK_DATA.metadata.commercial_availability;
+    const area = availability?.areas[props.frazione];
+    if (area) {
+        const clusters = props.category === 'copertura_ok' ? area.clusters : area.clusters.filter(
+            cluster => cluster.feature_id === feature.id || cluster.cro_id && cluster.cro_id === props.wholesale?.element_id
+        );
+        if (clusters.length) content.append(commercialSection(props.frazione, area, clusters, availability));
     }
 
     if (feature.geometry.type === 'LineString' || props.category === 'arlo') {

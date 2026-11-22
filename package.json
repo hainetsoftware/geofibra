@@ -2,7 +2,7 @@
   "name": "geofibra",
   "private": true,
   "scripts": {
-    "build": "tsc --project tsconfig.json && node --check js/map.js && python3 scripts/parse_ordinanze.py --check"
+    "build": "tsc --project tsconfig.json && node --check js/map.js && node --check js/telemetry.js && node --check js/cantieri_tracker.js && python3 scripts/parse_ordinanze.py --check"
   },
   "devDependencies": {
     "typescript": "5.9.3"
