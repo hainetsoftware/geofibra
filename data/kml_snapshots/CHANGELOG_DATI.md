@@ -4,6 +4,19 @@ Registro delle versioni dei dati cartografici della rete FTTH e cantieri nel Com
 
 ---
 
+## Snapshot 8 — Rilievo del 20 novembre 2026
+- **File sorgente** `data/kml_snapshots/FTTH Collesalvetti_snapshot8.kml`.
+- **Feature totali censite:** **77** (40 punti, 33 linee, 4 poligoni)
+- **Sviluppo lineare tracciato** **24,673 km**. Nessuna geometria esistente modificata e nessun Placemark rimosso.
+- **Apparati censiti (Snapshot 8):** **37** nel territorio comunale (24 ARL, 6 ARLO, 7 centrali) e un feeder esterno.
+- **Via Roma, Collesalvetti.** Aggiunto `0667475FB04339508B70`, secondo ARLO 384 del capoluogo. Installato il 20/11 su plinto in calcestruzzo accanto a C [01] ARL. Numerazione esterna in attesa.
+- **Cantiere 2, Collesalvetti.** `0DE7916F26423746716E` rinominato `Cantiere 2 ESEGUITO` e visualizzato in verde (`#388e3c`). Nel tratto basso di Via del Valico a Pisa il nuovo pozzetto è posato e la minitrincea è sigillata. Il calcestruzzo perimetrale è in maturazione. Le altre tre tratte restano in progettazione esecutiva fino al 04/12 nel periodo di validità dell’Ordinanza P.M. 118/2026 e della Concessione Suolo 86/2026.
+- **Cantiere 4, Stagno.** `0766EAF8C74270D6924F`, `012D8BFFFE4270DC0BCC` e `0B718B800C4270DCE3E0` verificati come eseguiti e visualizzati in verde (`#388e3c`). Tutte e quattro le tratte dell’Ordinanza 110/2026 hanno completato le opere civili.
+- **Stili e visibilità.** Google Earth ha rigenerato diversi ID di stile. Quattordici tratte già completate passano dal verde petrolio (`#00796b`) al verde (`#388e3c`) senza cambio di stato. `08927D586B41BFCD66AB` è visibile per impostazione predefinita. Nei due KML archiviati il Placemark è privo del tag di visibilità.
+- **Wholesale e verifiche ai civici.** L’estratto comunale del [CSV ufficiale del 16/11](https://market.fibercop.com/tw_servizi/bitstream-nga/) conferma `LIVOITA005X`, `LIVOITA0062` e `LIVOITA0063` attivi dal 09/11. `LIVOITA0062` è l’abbinamento provvisorio per il nuovo ARLO di Via Roma. Le verifiche commerciali comunicate con il rilievo sono registrate in `data/commercial_availability.json`.
+
+---
+
 ## Snapshot 7 — Rilievo del 5 Novembre 2026
 - **File sorgente** `data/kml_snapshots/FTTH Collesalvetti_snapshot7.kml`.
 - **Feature totali censite:** **76** (39 punti, 33 linee, 4 poligoni)

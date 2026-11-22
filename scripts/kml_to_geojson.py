@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 kml_to_geojson.py - Parser KML e generatore GeoJSON / data.js per la rete FTTH di Collesalvetti.
-Supporta Snapshot 7 (rilievi del 05/11/2026), calcolo distanze Haversine, aree poligonali,
+Supporta Snapshot 8 (rilievi del 20/11/2026), calcolo distanze Haversine, aree poligonali,
 metadati ordinanze comunali e tag di stato/tracciamento standardizzati.
 """
 
@@ -15,11 +15,18 @@ import re
 import math
 import os
 
-SNAPSHOT_DATES = {4: "2026-10-11", 5: "2026-10-17", 6: "2026-11-05", 7: "2026-11-05"}
-LATEST_KML = "data/kml_snapshots/FTTH Collesalvetti_snapshot7.kml"
-WHOLESALE_CSV = Path(__file__).resolve().parents[1] / "data/wholesale/ELENCO_CRO_CNO_SOLO_COLLSALVETTI_20261102.csv"
-ORDINANCE_ARCHIVE = Path(__file__).resolve().parents[1] / "data/ordinanze/ordinanze.json"
+SNAPSHOT_DATES = {4: "2026-10-11", 5: "2026-10-17", 6: "2026-11-05", 7: "2026-11-05", 8: "2026-11-20"}
+LATEST_KML = "data/kml_snapshots/FTTH Collesalvetti_snapshot8.kml"
+DATA_DIR = Path(__file__).resolve().parents[1] / "data"
+WHOLESALE_REPORTS = {
+    6: "ELENCO_CRO_CNO_SOLO_COLLSALVETTI_20261102.csv",
+    7: "ELENCO_CRO_CNO_SOLO_COLLSALVETTI_20261102.csv",
+    8: "ELENCO_CRO_CNO_SOLO_COLLSALVETTI_20261116.csv",
+}
+ORDINANCE_ARCHIVE = DATA_DIR / "ordinanze/ordinanze.json"
 COLLESALVETTI_CANTIERE_2 = "cantiere 2 prog. esecutiva"
+VIA_ROMA_ARLO = "0667475FB04339508B70"
+LOWER_VALICO_ROUTE = "0DE7916F26423746716E"
 CANTIERE_2_SURVEY = (
     "Survey 05/11/2026: Road spray paint markings and staged industrial Fender microduct reels "
     "already observed on-site. Tied to Municipal Ordinance PM n. 118/2026 (Aut. 28/2026), "
@@ -52,9 +59,9 @@ ROLLOUT = {
 }
 
 
-def load_wholesale():
+def load_wholesale(filename):
     records = {}
-    with WHOLESALE_CSV.open(encoding="utf-8-sig", newline="") as source:
+    with (DATA_DIR / "wholesale" / filename).open(encoding="utf-8-sig", newline="") as source:
         for row in csv.DictReader(source, delimiter=";"):
             element_id = row["ID_ELEMENTO"]
             if row["COMUNE"] != "COLLESALVETTI" or row["TIPO"] != "CRO":
@@ -275,7 +282,9 @@ def parse_kml(kml_path):
     match = re.search(r"snapshot(\d+)\.kml$", os.fspath(kml_path), re.I)
     snapshot_number = int(match[1]) if match else None
     snapshot_date = SNAPSHOT_DATES.get(snapshot_number)
-    wholesale_records = load_wholesale() if snapshot_date and snapshot_date >= "2026-11-02" else None
+    wholesale_source = WHOLESALE_REPORTS.get(snapshot_number)
+    wholesale_records = load_wholesale(wholesale_source) if wholesale_source else None
+    rollout = json.loads((DATA_DIR / "commercial_availability.json").read_text(encoding="utf-8")) if snapshot_number == 8 else None
     tree = ET.parse(kml_path)
     root = tree.getroot()
     ns = {"kml": "http://www.opengis.net/kml/2.2", "gx": "http://www.google.com/kml/ext/2.2"}
@@ -352,6 +361,12 @@ def parse_kml(kml_path):
             area_m2 = polygon_area_m2(pts)
             
         category, frazione, icon, color = categorize(name, geom_type, clean_desc)
+        lower_valico_done = pid == LOWER_VALICO_ROUTE and name == "Cantiere 2 ESEGUITO"
+        cantiere_4_survey_done = "cantiere 4" in name.lower() and "20/11: eseguito" in clean_desc.lower()
+        if lower_valico_done:
+            frazione = "Collesalvetti"
+        elif cantiere_4_survey_done:
+            category = "cantiere_eseguito"
 
         # Sincronizzazione dinamica dello stile da KML (es. colore LineStyle)
         style_el = p.find("kml:styleUrl", ns)
@@ -396,7 +411,7 @@ def parse_kml(kml_path):
                 name = "Centrale di Frazione (Parrana San Giusto)"
 
         # Nomi standardizzati e arricchiti per ARLO
-        if name == "C [] ARLO":
+        if pid == "01D156648742616017BB" and name == "C [] ARLO":
             name = "C [] ARLO (Futuro ARLO 01)"
         elif pid == "01D91831AC4261623108" and name == "S [] ARLO":
             name = "S [] ARLO (Senza etichetta - Affiancato ad ARL 04)"
@@ -424,7 +439,10 @@ def parse_kml(kml_path):
                 status_code = "installato"
                 status_label = "Installato (Opere civili completate - In attesa di soffiaggio fibra/PTE)"
                 ordinanza_str = "Ordinanza P.M. n. 88 del 02/09/2026 (Reg. Gen. 95)"
-                if not clean_desc or "Primo ARLO" not in clean_desc:
+                if pid == VIA_ROMA_ARLO:
+                    ordinanza_str = None
+                    clean_desc += ". Secondo ARLO 384 del capoluogo, montato su plinto in calcestruzzo in Via Roma, accanto a C [01] ARL. Numerazione esterna in attesa."
+                elif pid == "01D156648742616017BB" and (not clean_desc or "Primo ARLO" not in clean_desc):
                     clean_desc = "Primo armadio ottico del capoluogo (C [] ARLO, futuro ARLO 01), situato nell'aiuola/marciapiede della rotatoria tra Via Roma, Via Nenni e Via Piero Ciampi. Plinto gettato, cabinet montato, 4 pozzetti di smistamento FiberCop posati a corona della rotatoria e raccordati a cavidotti TIM preesistenti. Stato: Installato (Opere civili completate - In attesa di soffiaggio fibra/PTE)."
             elif frazione == "Stagno":
                 status_code = "infrastrutturato"
@@ -467,13 +485,19 @@ def parse_kml(kml_path):
 
         # Arricchimento Cantieri da Ordinanze Ufficiali Albo Pretorio
         cantiere_info = None
-        if category == "cantiere_progettazione_esecutiva" and name.lower() == COLLESALVETTI_CANTIERE_2:
+        if lower_valico_done or name.lower() == COLLESALVETTI_CANTIERE_2:
             ordinance = ordinances["PM-COLLE-ORD-118-2026"]
-            status_code = "executive_design"
-            status_label = "Progettazione esecutiva (Marcature e corrugati sul posto)"
-            color = "#ffd700"
+            if lower_valico_done:
+                status_code = "completato"
+                status_label = "Completato (Opere civili)"
+                color = "#388e3c"
+                clean_desc += ". Via del Valico a Pisa, tratto basso: nuovo pozzetto prefabbricato FiberCop posato, calcestruzzo perimetrale in maturazione e minitrincea dei microtubi sigillata con malta cementizia."
+            else:
+                status_code = "executive_design"
+                status_label = "Progettazione esecutiva (Marcature e corrugati sul posto)"
+                color = "#ffd700"
+                clean_desc = "\n".join(filter(None, (clean_desc, CANTIERE_2_SURVEY)))
             ordinanza_str = f"Ordinanza P.M. n. {ordinance['numero_atto']} (Reg. Gen. 125/2026, Aut. 28/2026)"
-            clean_desc = "\n".join(filter(None, (clean_desc, CANTIERE_2_SURVEY)))
             cantiere_info = {
                 "id_ordinanza": ordinance["id"],
                 "codice_ordinanza": ordinanza_str,
@@ -484,9 +508,15 @@ def parse_kml(kml_path):
                 "richiedente": ordinance["richiedente"],
                 "vie_interessate": ordinance["localizzazione"]["strade"],
                 "file_pdf": ordinance["file_pdf"]["url_path"],
-                "stato_base": "staged_for_digging",
-                "note_slittamento": CANTIERE_2_SURVEY,
+                "stato_base": "eseguito" if lower_valico_done else "staged_for_digging",
+                "note_slittamento": clean_desc if lower_valico_done else CANTIERE_2_SURVEY,
             }
+            concession = ordinances.get("CONCESSIONE_SUOLO-COLLE-86-2026")
+            if snapshot_number == 8 and concession:
+                cantiere_info["concessione"] = {
+                    "numero": concession["numero_atto"],
+                    "file_pdf": concession["file_pdf"]["url_path"],
+                }
         elif "cantiere 4" in name.lower():
             ordinance = ordinances["PM-COLLE-ORD-110-2026"]
             completed = category == "cantiere_eseguito"
@@ -516,8 +546,14 @@ def parse_kml(kml_path):
                 "stato_base": "eseguito" if completed else "planned",
                 "note_slittamento": "Nuova espansione comparto ovest Stagno (26/10 - 20/11/2026). Ordinanza PM n. 110/2026, Aut. Tecnica n. 26/2026."
             }
+            survey_description = clean_desc
             clean_desc = "Cantiere 4 Stagno (Ordinanza PM n. 110/2026, Autorizzazione Tecnica n. 26/2026). Finestra: 26/10/2026 - 20/11/2026. Vie: Via Marx, Via Curiel (lato sud), Via Gobetti, Via Don Verità, Via F.lli Cervi, Via La Malfa, Via Verga, Via Berlinguer. Stato: Pianificato."
-            if completed:
+            if cantiere_4_survey_done:
+                color = "#388e3c"
+                clean_desc = survey_description
+                if pid == "0766EAF8C74270D6924F":
+                    cantiere_info["vie_interessate"] = ["Via Don Giovanni Verità"]
+            elif completed:
                 cantiere_info["vie_interessate"] = ["Via Karl Marx", "Via Gobetti", "Via Curiel"]
                 clean_desc = "Opere civili completate nell’anello nord tra Via Karl Marx, Via Gobetti e Via Curiel (Ord. 110/2026)."
             elif pid == "0766EAF8C74270D6924F" and snapshot_number in (6, 7):
@@ -723,10 +759,16 @@ def parse_kml(kml_path):
         visibility = p.findtext("kml:visibility", namespaces=ns)
         if visibility is not None:
             feature["properties"]["kml_visibility"] = visibility.strip() == "1"
-        if wholesale_records is not None and pid in WHOLESALE_ELEMENTS:
-            element_id = WHOLESALE_ELEMENTS[pid]
+        if pid == VIA_ROMA_ARLO:
+            feature["properties"].update(cabinet_model="ARLO 384", installation_date="2026-11-20")
+        if lower_valico_done or cantiere_4_survey_done or pid == VIA_ROMA_ARLO:
+            feature["properties"]["civil_status"] = "civil_works_done"
+        element_id = "LIVOITA0062" if pid == VIA_ROMA_ARLO else WHOLESALE_ELEMENTS.get(pid)
+        if wholesale_records is not None and element_id in wholesale_records:
             feature["properties"]["wholesale"] = wholesale_records[element_id]
-            if element_id in ROLLOUT:
+            if pid == VIA_ROMA_ARLO:
+                feature["properties"]["wholesale_binding"] = "tentative"
+            elif rollout is None and element_id in ROLLOUT:
                 feature["properties"]["commercial_rollout"] = ROLLOUT[element_id]
             if category == "arlo" and wholesale_records[element_id]["status"] == "ATTIVO":
                 feature["properties"]["status_label"] = (
@@ -749,7 +791,11 @@ def parse_kml(kml_path):
         "features": features
     }
     if wholesale_records is not None:
-        geojson["metadata"]["wholesale_source"] = f"data/wholesale/{WHOLESALE_CSV.name}"
+        geojson["metadata"]["wholesale_source"] = f"data/wholesale/{wholesale_source}"
+        if rollout is not None:
+            geojson["metadata"]["wholesale_records"] = wholesale_records
+    if rollout is not None:
+        geojson["metadata"]["commercial_availability"] = rollout
     return geojson
 
 def main():
@@ -760,10 +806,12 @@ def main():
     kml_path = parser.parse_args().kml_path
     data = parse_kml(kml_path)
     
-    with open("data/network_data.json", "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    json_content = json.dumps(data, ensure_ascii=False, indent=2)
+    for output in (Path("data/network_data.json"), Path("public/data/network_data.json")):
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_text(json_content, encoding="utf-8", newline="\n")
         
-    js_content = f"// Generato automaticamente da {kml_path} con dati Ordinanze Albo Pretorio\nwindow.FTTH_NETWORK_DATA = {json.dumps(data, ensure_ascii=False, indent=2)};\n"
+    js_content = f"// Generato automaticamente da {kml_path} con dati Ordinanze Albo Pretorio\nwindow.FTTH_NETWORK_DATA = {json_content};\n"
     with open("js/data.js", "w", encoding="utf-8") as f:
         f.write(js_content)
         

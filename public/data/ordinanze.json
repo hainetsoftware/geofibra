@@ -1,5 +1,79 @@
 [
   {
+    "id": "CONCESSIONE_SUOLO-COLLE-86-2026",
+    "ente": "COMUNE_COLLESALVETTI",
+    "settore": "PATRIMONIO_TRIBUTI",
+    "funzionario": "Alessia Franchi",
+    "tipologia": "CONCESSIONE_SUOLO",
+    "numero_atto": "86/2026",
+    "registro_generale": "86",
+    "data_emissione": "2026-11-11",
+    "data_registrazione": "2026-11-11",
+    "protocollo": "25107",
+    "data_protocollo": "2026-11-09",
+    "oggetto": "Concessione occupazione TEMPORANEA suolo pubblico - Fibercop - Via Roma, Via del Vione, Via del Valico a Pisa, Via Guido Rossa - Stagno",
+    "richiedente": "FiberCop",
+    "operator_target": "FiberCop",
+    "validita": {
+      "dal": "2026-11-16",
+      "al": "2026-12-04",
+      "orario": null
+    },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "strade": [
+        "Via Roma",
+        "Via del Vione",
+        "Via del Valico a Pisa",
+        "Via Guido Rossa"
+      ],
+      "prog_chilometrica": null,
+      "matched_feature_ids": [
+        "031048DE5942FB3FB694",
+        "044555C2D642FB404208",
+        "0AFA98819242FB416540",
+        "0DE7916F26423746716E"
+      ],
+      "candidate_feature_ids": [
+        "02172672CE42615EB699",
+        "08DB97EDC341BFC840B3",
+        "099D51459541BFC79191",
+        "0B6DD449B041BFC99520",
+        "0D01C4A3D9419D77F4F8"
+      ]
+    },
+    "riferimenti": [
+      {
+        "tipo": "ORDINANZA",
+        "numero": "118/2026",
+        "data": "2026-11-09",
+        "ente": "COMUNE_COLLESALVETTI",
+        "atto_id": "PM-COLLE-ORD-118-2026"
+      },
+      {
+        "tipo": "AUTORIZZAZIONE",
+        "numero": "28/2026",
+        "data": "2026-10-28",
+        "ente": "COMUNE_COLLESALVETTI"
+      }
+    ],
+    "ocr_required": false,
+    "stato_opera": null,
+    "cluster_id": "FC-COLLE-LOTTO2-2026",
+    "occupazione": {
+      "superficie_mq": 60,
+      "giorni": 19
+    },
+    "note_tecniche": "Occupazione di 60 mq per 19 giorni. L’oggetto dell’atto riporta Stagno. Il protocollo 25107, le vie interessate e i riferimenti all’Ordinanza P.M. 118/2026 e all’Aut. 28/2026 identificano il cantiere del capoluogo.",
+    "file_pdf": {
+      "nome_file": "pdf/2026-11-11_COLLE_CONC_86_Fibercop_Collesalvetti.pdf",
+      "url_path": "data/ordinanze/pdf/2026-11-11_COLLE_CONC_86_Fibercop_Collesalvetti.pdf"
+    },
+    "atti_collegati": [
+      "PM-COLLE-ORD-118-2026"
+    ]
+  },
+  {
     "id": "PM-COLLE-ORD-118-2026",
     "ente": "COMUNE_COLLESALVETTI",
     "settore": "POLIZIA_LOCALE",
@@ -221,8 +295,9 @@
       }
     ],
     "ocr_required": false,
-    "stato_opera": null,
+    "stato_opera": "COMPLETATA",
     "cluster_id": "FC-STAGNO-LOTTO4-2026",
+    "note_tecniche": "Il sopralluogo del 20/11/2026 conferma il completamento delle opere civili su tutte le quattro tratte.",
     "file_pdf": {
       "nome_file": "pdf/2026-10-14_COLLE_ORD_110_Fastweb_Stagno.pdf",
       "url_path": "data/ordinanze/pdf/2026-10-14_COLLE_ORD_110_Fastweb_Stagno.pdf"

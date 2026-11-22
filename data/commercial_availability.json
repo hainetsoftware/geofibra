@@ -1,0 +1,59 @@
+{
+  "survey_date": "2026-11-20",
+  "provenance": "Esiti delle verifiche ai civici comunicati con il rilievo del 20/11/2026.",
+  "areas": {
+    "Stagno": {
+      "acl": "58602A",
+      "xgs_pon": false,
+      "clusters": [
+        {
+          "label": "ARLO 27",
+          "feature_id": "0A2895209441C56CED8C",
+          "cro_id": "LIVOITA0060",
+          "fiberfinder": { "status": "PIANIFICATA", "month": "2026-11", "speeds_gbps": [1, 2.5] },
+          "fibercop": { "message": "Fibra ultraveloce in arrivo", "offers": 22 }
+        },
+        {
+          "label": "ARLO 28",
+          "feature_id": "073CCE441A419DEDF933",
+          "cro_id": "LIVOITA005Y",
+          "fiberfinder": { "status": "PIANIFICATA", "month": "2026-11", "speeds_gbps": [1, 2.5] },
+          "fibercop": { "message": "Fibra ultraveloce in arrivo", "offers": 22 }
+        },
+        {
+          "label": "Via Romita · ARLO presso S [04] ARL",
+          "feature_id": "01D91831AC4261623108",
+          "cro_id": "LIVOITA005X",
+          "fiberfinder": { "status": "PIANIFICATA", "month": "2026-12", "speeds_gbps": [1, 2.5] },
+          "note": "Finestra stimata a 35–45 giorni dall’attivazione wholesale del 9 novembre."
+        }
+      ]
+    },
+    "Collesalvetti": {
+      "acl": "58601M",
+      "xgs_pon": true,
+      "clusters": [
+        {
+          "label": "ARLO 01 · Rotatoria",
+          "feature_id": "01D156648742616017BB",
+          "cro_id": "LIVOITA0061",
+          "address": "Via del Valico a Pisa 77",
+          "fiberfinder": {
+            "status": "PIANIFICATA",
+            "month": "2026-11",
+            "speeds_gbps": [1, 2.5],
+            "undated_speeds_gbps": [10],
+            "verified_on": "2026-11-22"
+          },
+          "fibercop": { "message": "In arrivo la rete ultraveloce", "offers": 24, "verified_on": "2026-11-22" }
+        },
+        {
+          "label": "Via del Valico a Pisa · tratto basso",
+          "feature_id": "0667475FB04339508B70",
+          "fiberfinder": { "status": "FTTC", "month": null, "speeds_gbps": [] },
+          "note": "Calcestruzzo del pozzetto in maturazione e giunzioni della fibra secondaria in corso. Associazione civico–CRO in attesa dell’aggiornamento settimanale del lunedì."
+        }
+      ]
+    }
+  }
+}

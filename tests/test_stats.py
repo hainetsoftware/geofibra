@@ -255,6 +255,38 @@ class TestDocuments(unittest.TestCase):
                              f"wiki Snapshot {n} apparati")
 
 
+class TestSnapshot8Survey(unittest.TestCase):
+    def test_map_layers_preserve_audited_survey_changes(self):
+        from kml_to_geojson import parse_kml
+
+        previous = {f["id"]: f for f in parse_kml(p(snapshot_kml_path(7)))["features"]}
+        current = parse_kml(p(snapshot_kml_path(8)))
+        features = {f["id"]: f for f in current["features"]}
+        added = "0667475FB04339508B70"
+        self.assertEqual(features.keys() - previous.keys(), {added})
+        self.assertEqual(previous.keys() - features.keys(), set())
+        self.assertTrue(all(features[i]["geometry"] == f["geometry"] for i, f in previous.items()))
+        cabinet = features[added]
+        lon, lat, elevation = cabinet["geometry"]["coordinates"]
+        self.assertEqual((lon, lat), (10.47488704399835, 43.59567284434979))
+        self.assertAlmostEqual(elevation, 14.214999, places=6)
+        self.assertEqual(cabinet["properties"]["wholesale_binding"], "tentative")
+        self.assertEqual(cabinet["properties"]["cabinet_model"], "ARLO 384")
+        self.assertNotIn("wholesale", features["0CE71FCC7C42E8337724"]["properties"])
+        for i in ("0DE7916F26423746716E", "0766EAF8C74270D6924F", "012D8BFFFE4270DC0BCC", "0B718B800C4270DCE3E0"):
+            props = features[i]["properties"]
+            self.assertEqual((props["status"], props["civil_status"], props["color"]),
+                             ("completato", "civil_works_done", "#388e3c"))
+        lower_valico = features["0DE7916F26423746716E"]["properties"]
+        self.assertEqual((lower_valico["frazione"], lower_valico["cantiere"]["id_ordinanza"]),
+                         ("Collesalvetti", "PM-COLLE-ORD-118-2026"))
+        staged = {i for i, f in features.items()
+                  if (f["properties"]["cantiere"] or {}).get("stato_base") == "staged_for_digging"}
+        self.assertEqual(staged, {"031048DE5942FB3FB694", "044555C2D642FB404208", "0AFA98819242FB416540"})
+        self.assertTrue(features["08927D586B41BFCD66AB"]["properties"].get("kml_visibility", True))
+        self.assertEqual(read("public/data/network_data.json"), read("data/network_data.json"))
+
+
 class TestSnapshot7ExecutiveDesign(unittest.TestCase):
     def test_collesalvetti_staging_is_scoped_to_four_routes(self):
         from kml_to_geojson import CANTIERE_2_SURVEY, parse_kml

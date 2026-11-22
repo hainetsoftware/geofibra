@@ -3,7 +3,7 @@
 
 [![Licenza: MIT](https://img.shields.io/badge/Licenza-MIT-blue.svg)](LICENSE)
 [![GIS: Leaflet 1.9.4](https://img.shields.io/badge/GIS-Leaflet%201.9.4-brightgreen.svg)](https://leafletjs.com/)
-[![Dati: Snapshot 7](https://img.shields.io/badge/Dati-Snapshot%207%20(05%2F11%2F2026)-orange.svg)](#-dati-e-statistiche-ufficiali-snapshot-7)
+[![Dati: Snapshot 8](https://img.shields.io/badge/Dati-Snapshot%208%20(20%2F11%2F2026)-orange.svg)](#-dati-e-statistiche-ufficiali-snapshot-8)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Attivo-success.svg)](#-pubblicazione-su-github-pages)
 
 ---
@@ -22,7 +22,7 @@ Il progetto nasce per garantire trasparenza sull'avanzamento dei lavori stradali
 ## 📑 Indice
 
 1. [Caratteristiche del Portale](#-caratteristiche-del-portale)
-2. [Dati e Statistiche Ufficiali (Snapshot 7)](#-dati-e-statistiche-ufficiali-snapshot-7)
+2. [Dati e Statistiche Ufficiali (Snapshot 8)](#-dati-e-statistiche-ufficiali-snapshot-8)
 3. [Registro Cantieri e Ordinanze di Polizia Municipale](#-registro-cantieri-e-ordinanze-di-polizia-municipale)
 4. [La Wiki Tecnica e Divulgativa](#-la-wiki-tecnica-e-divulgativa)
 5. [Architettura del Repository](#-architettura-del-repository)
@@ -59,26 +59,26 @@ Il progetto nasce per garantire trasparenza sull'avanzamento dei lavori stradali
 
 ---
 
-## 📊 Dati e Statistiche Ufficiali (Snapshot 7)
+## 📊 Dati e Statistiche Ufficiali (Snapshot 8)
 
-Tutti i conteggi sono calcolati deterministicamente sul rilievo geospaziale **Snapshot 7 del 05/11/2026**:
+Tutti i conteggi sono calcolati deterministicamente sul rilievo geospaziale **Snapshot 8 del 20/11/2026**:
 
 | Categoria Elemento | Quantità | Dettaglio / Note |
 |---|:---:|---|
-| **Feature Geospaziali Totali** | **76** | 39 punti, 33 linee, 4 poligoni di perimetro |
+| **Feature Geospaziali Totali** | **77** | 40 punti, 33 linee, 4 poligoni di perimetro |
 | **Estensione Tracciati Rete** | **24,673 km** | Somma metrica di tutte le tratte stradali e dorsali |
 
 <!-- AUTO-STATS:BEGIN equipment -->
-Apparato = punto di rete censito (armadio ARL/ARLO o centrale). Linee, poligoni e punti di infrastruttura non sono apparati. Dei 39 punti dello Snapshot, 37 sono apparati (36 nel territorio comunale + 1 esterno al Comune) e i restanti (2) sono esclusi dal conteggio.
+Apparato = punto di rete censito (armadio ARL/ARLO o centrale). Linee, poligoni e punti di infrastruttura non sono apparati. Dei 40 punti dello Snapshot, 38 sono apparati (37 nel territorio comunale + 1 esterno al Comune) e i restanti (2) sono esclusi dal conteggio.
 
 | Tipologia | Categoria GIS | Quantità | Note |
 |---|---|:---:|---|
 | **Armadio Ripartilinea (ARL, rame)** | `arl` | **24** | |
-| **Armadio Ripartilinea Ottico (ARLO)** | `arlo` | **5** | |
-| *Totale armadi (ARL + ARLO)* | | *29* | |
+| **Armadio Ripartilinea Ottico (ARLO)** | `arlo` | **6** | |
+| *Totale armadi (ARL + ARLO)* | | *30* | |
 | **Centrale Comunale** | `centrale_comunale` | **1** | |
 | **Centrali di Frazione** | `centrale_frazione` | **6** | |
-| **Totale apparati sul territorio comunale** | | **36** | |
+| **Totale apparati sul territorio comunale** | | **37** | |
 | Apparati esterni al Comune (non inclusi nel totale): Centrale Feeder (Livorno Nord) | `centrale_feeder` | 1 | fuori dal territorio comunale |
 | Punti non-apparato (esclusi dal conteggio): Coppie di corrugati scoperti | `infrastruttura` | 1 | punto di infrastruttura, non apparato |
 | Punti non-apparato (esclusi dal conteggio): Coppie di fibre | `materials_depot` | 1 | punto di infrastruttura, non apparato |
@@ -90,14 +90,14 @@ Apparato = punto di rete censito (armadio ARL/ARLO o centrale). Linee, poligoni 
 | Frazione | Apparati | ARLO | ARL | Centrali | Tratte (km) | Quota % km |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | **Stagno** | 11 | 4 | 6 | 1 | 10,535 km | 42,7% |
-| **Collesalvetti** | 9 | 1 | 7 | 1 | 4,143 km | 16,8% |
+| **Collesalvetti** | 10 | 2 | 7 | 1 | 4,143 km | 16,8% |
 | **Vicarello** | 9 | 0 | 8 | 1 | 0,000 km | 0,0% |
 | **Guasticce** | 4 | 0 | 3 | 1 | 0,000 km | 0,0% |
 | **Nugola** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
 | **Parrana San Martino** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
 | **Parrana San Giusto** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
 | **Altro / non attribuito** | 0 | 0 | 0 | 0 | 9,995 km | 40,5% |
-| **Totale** | 36 | 5 | 24 | 7 | 24,673 km | 100,0% |
+| **Totale** | 37 | 6 | 24 | 7 | 24,673 km | 100,0% |
 
 *Gli apparati sono contati per frazione dal solo territorio comunale; i km delle tratte comprendono anche la dorsale INFRATEL BUL e le tratte senza frazione (`Altro`).*
 <!-- AUTO-STATS:END frazioni -->
@@ -123,9 +123,9 @@ Per ricerca, anteprima PDF e collegamenti con la mappa, apri **Archivio Atti**. 
    - **Periodo ufficiale:** 14/09/2026 – 02/10/2026. *Termini scaduti.*
    - **Rilievo del 05/11/2026**. Una tratta resta in progettazione esecutiva nel Cantiere 1. Il segmento con soffiaggio osservato è riassegnato al Cantiere 2 nello Snapshot 7.
 4. **Cantiere 2 - Collesalvetti Centro:**
-   - **Atto:** Ordinanza P.M. n. 118/2026 (**Reg. Gen. 125/2026**, Aut. 28/2026).
+   - **Atto:** Ordinanza P.M. n. 118/2026 (**Reg. Gen. 125/2026**, Aut. 28/2026) e Concessione Suolo n. 86/2026 (60 m², 19 giorni).
    - **Periodo ufficiale:** 16/11/2026 – 04/12/2026 (feriali 08:00 – 18:00).
-   - **Rilievo del 05/11/2026**. Marcature stradali e bobine di microtubi Fender già presenti.
+   - **Rilievo del 20/11/2026**. Completate le opere civili sul tratto basso di Via del Valico a Pisa. Tre tratte restano in progettazione esecutiva. Installato il secondo ARLO del capoluogo in Via Roma.
 5. **Ripristino Manto Stradale - Stagno:**
    - **Atto:** Ordinanza P.M. n. 70 del 16/07/2026 (**Reg. Gen. 75**)
    - **Periodo ufficiale:** 03/08/2026 – 13/08/2026. *Lavori conclusi.*
@@ -166,7 +166,7 @@ geofibra/
 │   ├── app.css                  # Stili principali per la mappa e i pannelli
 │   └── wiki.css                 # Stili per la lettura prose e tabelle a scorrimento
 ├── data/
-│   ├── network_data.json        # GeoJSON FeatureCollection consolidato (Snapshot 7, 76 feature)
+│   ├── network_data.json        # GeoJSON FeatureCollection consolidato (Snapshot 8, 77 feature)
 │   ├── ordinanze.json           # Fonte di verita' ordinanze e prescrizioni viabilita'
 │   ├── rete_ftth_collesalvetti.xlsx # Export Microsoft Excel nativo completo
 │   ├── rete_ftth_collesalvetti_*.csv # Export CSV standard e per Excel italiano

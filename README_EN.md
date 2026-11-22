@@ -3,7 +3,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![GIS: Leaflet 1.9.4](https://img.shields.io/badge/GIS-Leaflet%201.9.4-brightgreen.svg)](https://leafletjs.com/)
-[![Data: Snapshot 7](https://img.shields.io/badge/Data-Snapshot%207%20(05%2F11%2F2026)-orange.svg)](#-official-data--metrics-snapshot-7)
+[![Data: Snapshot 8](https://img.shields.io/badge/Data-Snapshot%208%20(20%2F11%2F2026)-orange.svg)](#-official-data--metrics-snapshot-8)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Active-success.svg)](#-deployment-on-github-pages)
 
 ---
@@ -22,7 +22,7 @@ The initiative provides transparency for local citizens regarding street excavat
 ## 📑 Table of Contents
 
 1. [Key Features](#-key-features)
-2. [Official Data & Metrics (Snapshot 7)](#-official-data--metrics-snapshot-7)
+2. [Official Data & Metrics (Snapshot 8)](#-official-data--metrics-snapshot-8)
 3. [Municipal Decrees & Works Tracker](#-municipal-decrees--works-tracker)
 4. [The Technical & Educational Wiki](#-the-technical--educational-wiki)
 5. [Repository Architecture](#-repository-architecture)
@@ -59,26 +59,26 @@ The initiative provides transparency for local citizens regarding street excavat
 
 ---
 
-## 📊 Official Data & Metrics (Snapshot 7)
+## 📊 Official Data & Metrics (Snapshot 8)
 
-All metrics are deterministically computed from the official geospatial survey **Snapshot 7 (05/11/2026)**:
+All metrics are deterministically computed from the official geospatial survey **Snapshot 8 (20/11/2026)**:
 
 | Category | Quantity | Details / Notes |
 |---|:---:|---|
-| **Total Geospatial Features** | **76** | 39 point elements, 33 line traces, 4 area polygons |
+| **Total Geospatial Features** | **77** | 40 point elements, 33 line traces, 4 area polygons |
 | **Total Mapped Route Length** | **24.673 km** | Cumulative length of microtrenches and backbone lines |
 
 <!-- AUTO-STATS:BEGIN equipment -->
-Equipment = a surveyed network point (ARL/ARLO cabinet or central office). Lines, polygons and infrastructure points are not equipment. Of the 39 points in the snapshot, 37 are equipment (36 inside the municipality + 1 outside it) and the remaining points (2) are excluded.
+Equipment = a surveyed network point (ARL/ARLO cabinet or central office). Lines, polygons and infrastructure points are not equipment. Of the 40 points in the snapshot, 38 are equipment (37 inside the municipality + 1 outside it) and the remaining points (2) are excluded.
 
 | Equipment type | GIS category | Quantity | Notes |
 |---|---|:---:|---|
 | **Copper cabinet (ARL)** | `arl` | **24** | |
-| **Optical cabinet (ARLO)** | `arlo` | **5** | |
-| *Total cabinets (ARL + ARLO)* | | *29* | |
+| **Optical cabinet (ARLO)** | `arlo` | **6** | |
+| *Total cabinets (ARL + ARLO)* | | *30* | |
 | **Municipal central office** | `centrale_comunale` | **1** | |
 | **Fraction central offices** | `centrale_frazione` | **6** | |
-| **Total equipment within the municipality** | | **36** | |
+| **Total equipment within the municipality** | | **37** | |
 | Equipment outside the municipality (not included in the total): Centrale Feeder (Livorno Nord) | `centrale_feeder` | 1 | outside the municipal territory |
 | Non-equipment points (excluded from the count): Coppie di corrugati scoperti | `infrastruttura` | 1 | infrastructure point, not equipment |
 | Non-equipment points (excluded from the count): Coppie di fibre | `materials_depot` | 1 | infrastructure point, not equipment |
@@ -90,14 +90,14 @@ Equipment = a surveyed network point (ARL/ARLO cabinet or central office). Lines
 | Fraction | Equipment | ARLO | ARL | Central offices | Routes (km) | Share % km |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | **Stagno** | 11 | 4 | 6 | 1 | 10.535 km | 42.7% |
-| **Collesalvetti** | 9 | 1 | 7 | 1 | 4.143 km | 16.8% |
+| **Collesalvetti** | 10 | 2 | 7 | 1 | 4.143 km | 16.8% |
 | **Vicarello** | 9 | 0 | 8 | 1 | 0.000 km | 0.0% |
 | **Guasticce** | 4 | 0 | 3 | 1 | 0.000 km | 0.0% |
 | **Nugola** | 1 | 0 | 0 | 1 | 0.000 km | 0.0% |
 | **Parrana San Martino** | 1 | 0 | 0 | 1 | 0.000 km | 0.0% |
 | **Parrana San Giusto** | 1 | 0 | 0 | 1 | 0.000 km | 0.0% |
 | **Other / unassigned** | 0 | 0 | 0 | 0 | 9.995 km | 40.5% |
-| **Total** | 36 | 5 | 24 | 7 | 24.673 km | 100.0% |
+| **Total** | 37 | 6 | 24 | 7 | 24.673 km | 100.0% |
 
 *Equipment is counted per fraction inside the municipality only; route km also include the INFRATEL BUL backbone and routes with no fraction (`Altro`).*
 <!-- AUTO-STATS:END frazioni -->
@@ -123,9 +123,9 @@ Open **Archivio Atti** to search acts, preview PDFs, and find linked map feature
    - **Official Period:** 14/09/2026 – 02/10/2026. *Expired.*
    - **5 November 2026 survey**. One section remains in executive design under Cantiere 1. Snapshot 7 assigns the segment with observed fiber blowing to Cantiere 2.
 4. **Cantiere 2 - Collesalvetti Center:**
-   - **Decree:** Ordinanza P.M. n. 118/2026 (**Reg. Gen. 125/2026**, Aut. 28/2026).
+   - **Decree:** Ordinanza P.M. n. 118/2026 (**Reg. Gen. 125/2026**, Aut. 28/2026) and public land concession n. 86/2026 (60 m² for 19 days).
    - **Official period:** 16/11/2026 – 04/12/2026 (working days, 08:00 – 18:00).
-   - **5 November 2026 survey**. Road markings and staged Fender microduct reels were observed on site.
+   - **20 November 2026 survey**. Civil works were complete on lower Via del Valico a Pisa. Three sections remain in executive design. The second optical cabinet was installed on Via Roma.
 5. **Asphalt Restoration Works - Stagno:**
    - **Decree:** Ordinanza P.M. n. 70 dated 16/07/2026 (**Reg. Gen. 75**)
    - **Official Period:** 03/08/2026 – 13/08/2026. *Formally concluded.*

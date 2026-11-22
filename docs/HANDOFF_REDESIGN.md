@@ -124,6 +124,6 @@ La dashboard usa la palette chiara di FWA Map Italia in `css/app.css`. Le emoji 
 ## 7. Cosa NON va Modificato o Rotto
 
 - **Non inventare ordinanze o date:** Consultare l’indice corrente per distinguere gli atti collegati dalle corrispondenze per strada.
-- **Conteggi di Snapshot 7:** I dati ufficiali della rete sono 76 feature, 24,673 km, 36 apparati comunali (+1 esterno; 39 è il numero dei *punti*, non degli apparati). I conteggi sono in `data/stats.json` (generato da `scripts/compute_stats.py`). Qualsiasi modifica deve passare dalla rigenerazione deterministica tramite `scripts/kml_to_geojson.py`.
+- **Conteggi di Snapshot 8:** I dati ufficiali della rete sono 77 feature, 24,673 km, 37 apparati comunali (+1 esterno; 40 è il numero dei *punti*, non degli apparati). I conteggi sono in `data/stats.json` (generato da `scripts/compute_stats.py`). Qualsiasi modifica deve passare dalla rigenerazione deterministica tramite `scripts/kml_to_geojson.py`.
 - **Non rompere il pulsante di download Excel:** In `index.html` il pulsante di download ha selettore `a[href="data/rete_ftth_collesalvetti.xlsx"][download]` nella vista Dati del rilievo e punta al percorso relativo `data/rete_ftth_collesalvetti.xlsx`.
 - **Non rimuovere la doppia numerazione delle ordinanze:** Polizia Municipale e Registro Generale del Comune sono due numerazioni distinte e necessarie per la trasparenza civica.

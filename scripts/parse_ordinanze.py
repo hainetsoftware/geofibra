@@ -120,6 +120,8 @@ def parse(text, digest, source_entity):
         kind = "AUTORIZZAZIONE_SCAVO"
     own_number = find(rf"\b{NUMBER}(\d+/\d{{4}})", subject) if kind in {"CONCESSIONE_SUOLO", "AUTORIZZAZIONE_SCAVO"} else None
     number = own_number[1] if own_number else f"{heading[1]}/{issued[:4]}" if heading and issued else None
+    if not number and kind == "CONCESSIONE_SUOLO" and registry and issued:
+        number = f"{registry[1]}/{issued[:4]}"
     entity_code = {"COMUNE_COLLESALVETTI": "COLLE", "PROVINCIA_LIVORNO": "PROVLI"}.get(entity)
     record_id = f"DOC-{digest[:16]}"
     if entity_code and issued and number:

@@ -61,6 +61,11 @@ Copia del presente atto è pubblicata all'Albo Pretorio dal 20/10/2026 al 04/11/
                     "PM-COLLE-ORD-118-2026"}
         self.assertEqual(len(expected), 4)
         self.assertEqual(set(by_id["PM-COLLE-ORD-118-2026"]["localizzazione"]["matched_feature_ids"]), expected)
+        concession = by_id["CONCESSIONE_SUOLO-COLLE-86-2026"]
+        self.assertEqual(concession["occupazione"], {"superficie_mq": 60, "giorni": 19})
+        self.assertEqual(concession["validita"], {"dal": "2026-11-16", "al": "2026-12-04", "orario": None})
+        self.assertEqual(concession["atti_collegati"], ["PM-COLLE-ORD-118-2026"])
+        self.assertEqual(set(concession["localizzazione"]["matched_feature_ids"]), expected)
         for act in acts:
             self.assertTrue((ROOT / unquote(act["file_pdf"]["url_path"])).is_file(), act["id"])
             self.assertFalse(set(act["localizzazione"]["matched_feature_ids"]) &

@@ -12,7 +12,28 @@
     }
   },
   "PM-COLLE-ORD-110-2026": {
-    "cluster_id": "FC-STAGNO-LOTTO4-2026"
+    "cluster_id": "FC-STAGNO-LOTTO4-2026",
+    "stato_opera": "COMPLETATA",
+    "note_tecniche": "Il sopralluogo del 20/11/2026 conferma il completamento delle opere civili su tutte le quattro tratte."
+  },
+  "CONCESSIONE_SUOLO-COLLE-86-2026": {
+    "settore": "PATRIMONIO_TRIBUTI",
+    "cluster_id": "FC-COLLE-LOTTO2-2026",
+    "occupazione": { "superficie_mq": 60, "giorni": 19 },
+    "localizzazione": {
+      "area": "COLLESALVETTI",
+      "matched_feature_ids": [
+        "031048DE5942FB3FB694",
+        "044555C2D642FB404208",
+        "0AFA98819242FB416540",
+        "0DE7916F26423746716E"
+      ]
+    },
+    "riferimenti": [
+      { "tipo": "ORDINANZA", "numero": "118/2026", "data": "2026-11-09", "ente": "COMUNE_COLLESALVETTI" },
+      { "tipo": "AUTORIZZAZIONE", "numero": "28/2026", "data": "2026-10-28", "ente": "COMUNE_COLLESALVETTI" }
+    ],
+    "note_tecniche": "Occupazione di 60 mq per 19 giorni. L’oggetto dell’atto riporta Stagno. Il protocollo 25107, le vie interessate e i riferimenti all’Ordinanza P.M. 118/2026 e all’Aut. 28/2026 identificano il cantiere del capoluogo."
   },
   "PM-COLLE-ORD-95-2026": {
     "stato_opera": "COMPLETATA",

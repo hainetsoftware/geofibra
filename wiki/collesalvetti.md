@@ -1,13 +1,13 @@
 ---
 title: "La Rete FTTH nel Comune di Collesalvetti"
-summary: "Analisi tecnica e geospaziale della rete in fibra ottica nel Comune di Collesalvetti (LI): dati quantitativi certificati da Snapshot 7 (76 feature, 24,673 km), distribuzione per frazione, censimento apparati e registro delle ordinanze comunali con riscontri di campo al 5 novembre 2026."
-updated: "2026-11-10"
+summary: "Analisi tecnica e geospaziale della rete in fibra ottica nel Comune di Collesalvetti (LI): dati quantitativi certificati da Snapshot 8 (77 feature, 24,673 km), distribuzione per frazione, censimento apparati e registro delle ordinanze comunali con riscontri di campo al 20 novembre 2026."
+updated: "2026-11-20"
 sources:
-  - id: "snapshot7-kml"
-    title: "Rilievo Geospaziale Indipendente: Snapshot 7 (05/11/2026)"
-    url: "data/kml_snapshots/FTTH%20Collesalvetti_snapshot7.kml"
+  - id: "snapshot8-kml"
+    title: "Rilievo Geospaziale Indipendente: Snapshot 8 (20/11/2026)"
+    url: "data/kml_snapshots/FTTH%20Collesalvetti_snapshot8.kml"
     type: "dati"
-    note: "Rilievo GIS di campo: 76 feature, 24,673 km di tracciato, 36 apparati nel territorio comunale (+1 esterno), 4 poligoni"
+    note: "Rilievo GIS di campo: 77 feature, 24,673 km di tracciato, 37 apparati nel territorio comunale (+1 esterno), 4 poligoni"
   - id: "ordinanze-collesalvetti"
     title: "Albo Pretorio del Comune di Collesalvetti: Ordinanze di Polizia Municipale n. 75, 95, 102/104, 105, 110, 111, 112 e 118/2026"
     url: "data/ordinanze.json"
@@ -24,38 +24,38 @@ sources:
 
 Il territorio del Comune di Collesalvetti (provincia di Livorno) si estende per circa **109 chilometri quadrati** con una tipica conformazione toscana policentrica, composta dal capoluogo e da sei frazioni principali collocate tra la piana alluvionale verso Livorno e Pisa e le colline livornesi.
 
-Questa pagina offre un quadro oggettivo, verificabile e documentato dello stato della rete in fibra ottica FTTH, elaborato a partire dai dati geospaziali dello **Snapshot 7 (rilievo del 05/11/2026)** e dagli atti ufficiali pubblicati all'Albo Pretorio municipale.
+Questa pagina offre un quadro oggettivo, verificabile e documentato dello stato della rete in fibra ottica FTTH, elaborato a partire dai dati geospaziali dello **Snapshot 8 (rilievo del 20/11/2026)** e dagli atti ufficiali pubblicati all'Albo Pretorio municipale.
 
 ---
 
-## 1. Quadro Quantitativo Generale (Snapshot 7 - 05/11/2026)
+## 1. Quadro Quantitativo Generale (Snapshot 8 - 20/11/2026)
 
-Lo **Snapshot 7** aggiunge tre tratte e riassegna un segmento esistente al Cantiere 2 di Collesalvetti. Estende inoltre il poligono di copertura verso Via Europa e Via Guido Rossa.
+Lo **Snapshot 8** aggiunge il secondo ARLO del capoluogo e documenta il completamento di quattro tratte. Le geometrie delle tratte e dei poligoni sono le stesse dello Snapshot 7.
 
-| Parametro Rilevato | Snapshot 3 (04/10/2026) | Snapshot 4 (11/10/2026) | **Snapshot 7 (05/11/2026)** | Variazione rispetto a Snapshot 6 |
+| Parametro Rilevato | Snapshot 3 (04/10/2026) | Snapshot 4 (11/10/2026) | **Snapshot 8 (20/11/2026)** | Variazione rispetto a Snapshot 7 |
 |---|:---:|:---:|:---:|:---:|
-| **Totale Feature Geospaziali** | 63 | 68 | **76** | +3 |
-| **Elementi Puntuali (punti censiti)** | 34 | 37 | **39** | 0 |
-| **di cui Apparati (armadi e centrali, comune)** | 32 | 35 | **36** | 0 |
-| **Elementi Lineari (Tratte e Scavi)** | 25 | 27 | **33** | +3 |
+| **Totale Feature Geospaziali** | 63 | 68 | **77** | +1 |
+| **Elementi Puntuali (punti censiti)** | 34 | 37 | **40** | +1 |
+| **di cui Apparati (armadi e centrali, comune)** | 32 | 35 | **37** | +1 |
+| **Elementi Lineari (Tratte e Scavi)** | 25 | 27 | **33** | 0 |
 | **Elementi Areali (Poligoni)** | 4 | 4 | **4** | 0 |
-| **Chilometri Totali Tracciati** | 21,716 km | 21,778 km | **24,673 km** | +0,888 km |
+| **Chilometri Totali Tracciati** | 21,716 km | 21,778 km | **24,673 km** | 0,000 km |
 
 ---
 
 ## 2. Censimento Apparati sul Territorio
 
 <!-- AUTO-STATS:BEGIN equipment -->
-Apparato = punto di rete censito (armadio ARL/ARLO o centrale). Linee, poligoni e punti di infrastruttura non sono apparati. Dei 39 punti dello Snapshot, 37 sono apparati (36 nel territorio comunale + 1 esterno al Comune) e i restanti (2) sono esclusi dal conteggio.
+Apparato = punto di rete censito (armadio ARL/ARLO o centrale). Linee, poligoni e punti di infrastruttura non sono apparati. Dei 40 punti dello Snapshot, 38 sono apparati (37 nel territorio comunale + 1 esterno al Comune) e i restanti (2) sono esclusi dal conteggio.
 
 | Tipologia | Categoria GIS | Quantità | Note |
 |---|---|:---:|---|
 | **Armadio Ripartilinea (ARL, rame)** | `arl` | **24** | |
-| **Armadio Ripartilinea Ottico (ARLO)** | `arlo` | **5** | |
-| *Totale armadi (ARL + ARLO)* | | *29* | |
+| **Armadio Ripartilinea Ottico (ARLO)** | `arlo` | **6** | |
+| *Totale armadi (ARL + ARLO)* | | *30* | |
 | **Centrale Comunale** | `centrale_comunale` | **1** | |
 | **Centrali di Frazione** | `centrale_frazione` | **6** | |
-| **Totale apparati sul territorio comunale** | | **36** | |
+| **Totale apparati sul territorio comunale** | | **37** | |
 | Apparati esterni al Comune (non inclusi nel totale): Centrale Feeder (Livorno Nord) | `centrale_feeder` | 1 | fuori dal territorio comunale |
 | Punti non-apparato (esclusi dal conteggio): Coppie di corrugati scoperti | `infrastruttura` | 1 | punto di infrastruttura, non apparato |
 | Punti non-apparato (esclusi dal conteggio): Coppie di fibre | `materials_depot` | 1 | punto di infrastruttura, non apparato |
@@ -71,14 +71,14 @@ La suddivisione chilometrica e infrastrutturale evidenzia l'avanzamento su **Sta
 | Frazione | Apparati | ARLO | ARL | Centrali | Tratte (km) | Quota % km |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | **Stagno** | 11 | 4 | 6 | 1 | 10,535 km | 42,7% |
-| **Collesalvetti** | 9 | 1 | 7 | 1 | 4,143 km | 16,8% |
+| **Collesalvetti** | 10 | 2 | 7 | 1 | 4,143 km | 16,8% |
 | **Vicarello** | 9 | 0 | 8 | 1 | 0,000 km | 0,0% |
 | **Guasticce** | 4 | 0 | 3 | 1 | 0,000 km | 0,0% |
 | **Nugola** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
 | **Parrana San Martino** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
 | **Parrana San Giusto** | 1 | 0 | 0 | 1 | 0,000 km | 0,0% |
 | **Altro / non attribuito** | 0 | 0 | 0 | 0 | 9,995 km | 40,5% |
-| **Totale** | 36 | 5 | 24 | 7 | 24,673 km | 100,0% |
+| **Totale** | 37 | 6 | 24 | 7 | 24,673 km | 100,0% |
 
 *Gli apparati sono contati per frazione dal solo territorio comunale; i km delle tratte comprendono anche la dorsale INFRATEL BUL e le tratte senza frazione (`Altro`).*
 <!-- AUTO-STATS:END frazioni -->
@@ -135,7 +135,7 @@ Per garantire la massima trasparenza, questo osservatorio cita sempre entrambi i
 - **Periodo Autorizzato:** Dal **26/10/2026** al **20/11/2026** (fascia feriale 08:00 – 18:00)
 - **Vie Coinvolte:** Via Marx, Via Curiel (lato sud), Via Gobetti, Via Don Verità, Via F.lli Cervi, Via La Malfa, Via Verga, Via Berlinguer
 - **Lunghezza Tratta:** 2,052 km (quattro tratte censite)
-- **Stato lavori**. Anello nord completato (734 m) tra Via Karl Marx, Via Gobetti e Via Curiel. Restano pianificate tre tratte, tra cui il ramo di Via Don Giovanni Verità (446 m).
+- **Stato lavori**. Opere civili completate sulle quattro tratte, compreso il ramo di Via Don Giovanni Verità, come verificato il 20/11/2026.
 
 #### 4. Ripristino Definitivo Manto Stradale - Via Fratelli Rosselli (Stagno)
 - **Atto Ufficiale:** Ordinanza Polizia Municipale n. 112 del 16/10/2026 (**Registro Generale n. 112**)
@@ -157,11 +157,12 @@ Per garantire la massima trasparenza, questo osservatorio cita sempre entrambi i
 - **File Documentale:** [`data/ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf`](data/ordinanze/ordinanza_95_2026_collesalvetti_cantiere1.pdf)
 
 #### 6. Cantiere 2 - Collesalvetti Centro
-- **Atto ufficiale**. Ordinanza P.M. n. 118/2026 (Reg. Gen. 125/2026, Aut. Tecnica n. 28/2026).
+- **Atto ufficiale**. Ordinanza P.M. n. 118/2026 (Reg. Gen. 125/2026, Aut. Tecnica n. 28/2026) e Concessione Suolo n. 86/2026 (60 m², 19 giorni).
 - **Finestra autorizzata**. Dal 16/11/2026 al 04/12/2026, nei giorni feriali dalle 08:00 alle 18:00.
 - **Vie interessate**. Via Roma (tra le rotatorie di Via Nenni e Via Europa), Via del Valico a Pisa, Via del Vione e Via Guido Rossa.
-- **Rilievo del 05/11/2026**. Marcature stradali e bobine di microtubi Fender già presenti sul posto. Quattro tratte in progettazione esecutiva.
+- **Rilievo del 20/11/2026**. Tratto basso di Via del Valico a Pisa eseguito, con tre tratte ancora in progettazione esecutiva. Secondo ARLO del capoluogo installato accanto a C [01] ARL in Via Roma.
 - [PDF dell’ordinanza](data/ordinanze/17991_AltreOrdinanze_Copia_125_2026.pdf)
+- [PDF della concessione](data/ordinanze/pdf/2026-11-11_COLLE_CONC_86_Fibercop_Collesalvetti.pdf)
 
 #### 7. Lavori di Ripristino Manto Stradale (Conclusi) - Stagno
 - **Atto Ufficiale:** Ordinanza Polizia Municipale n. 70 del 16/07/2026 (**Registro Generale n. 75**)

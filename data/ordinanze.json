@@ -1,14 +1,14 @@
 [
   {
     "id": "PM-COLLE-ORD-118-2026",
-    "titolo": "Cantiere 2 - Collesalvetti (Progettazione esecutiva)",
+    "titolo": "Cantiere 2 - Collesalvetti (Opere civili parzialmente eseguite)",
     "frazione": "Collesalvetti",
     "richiedente": "Fastweb Spa",
     "oggetto": "Lavori di scavo stradale per posa infrastruttura FTTH FiberCop",
     "atto_tipo": "Polizia Municipale",
     "atto_numero": "118",
     "atto_registro_generale": "125",
-    "codice_atto_completo": "Ordinanza P.M. n. 118/2026 (Reg. Gen. 125/2026, Aut. 28/2026)",
+    "codice_atto_completo": "Ordinanza P.M. n. 118/2026 (Reg. Gen. 125/2026, Aut. 28/2026) + Concessione Suolo n. 86/2026",
     "data_emissione": "2026-11-09",
     "autorizzazione_settore_tecnico": "Autorizzazione n. 28/2026 del 28/10/2026",
     "periodo_ordinanza": {
@@ -18,8 +18,8 @@
       "giorni": "feriali"
     },
     "slittamento_osservato": {
-      "fonte_kml": "Snapshot 7 (rilievo del 05/11/2026)",
-      "nota_campo": "Survey 05/11/2026: Road spray paint markings and staged industrial Fender microduct reels already observed on-site. Tied to Municipal Ordinance PM n. 118/2026 (Aut. 28/2026), operative 16/11/2026 - 04/12/2026."
+      "fonte_kml": "Snapshot 8 (rilievo del 20/11/2026)",
+      "nota_campo": "Completate le opere civili nel tratto basso di Via del Valico a Pisa. Tre tratte in progettazione esecutiva, con marcature e bobine di microtubi Fender sul posto."
     },
     "lunghezza_stimata_km": 1.071,
     "vie_interessate": [
@@ -46,7 +46,7 @@
       10.474
     ],
     "descrizione_ufficiale": "Disciplina temporanea della viabilità nei tratti interessati dal cantiere itinerante.",
-    "stato_base": "staged_for_digging"
+    "stato_base": "parzialmente_eseguito"
   },
   {
     "id": "cantiere-2-stagno",
@@ -173,8 +173,8 @@
       "giorni": "feriali"
     },
     "slittamento_osservato": {
-      "fonte_kml": "Snapshot 6 (05/11/2026)",
-      "nota_campo": "Anello nord completato (Via Karl Marx, Via Gobetti e Via Curiel, 734 m). Restano pianificate tre tratte, tra cui il ramo di Via Don Giovanni Verità (446 m)."
+      "fonte_kml": "Snapshot 8 (rilievo del 20/11/2026)",
+      "nota_campo": "Le opere civili sono completate su tutte e quattro le tratte, compreso il ramo di Via Don Giovanni Verità."
     },
     "lunghezza_stimata_km": 2.052,
     "vie_interessate": [
@@ -190,7 +190,7 @@
     "file_pdf": "data/ordinanze/pdf/2026-10-14_COLLE_ORD_110_Fastweb_Stagno.pdf",
     "coordinate_centro": [43.5885, 10.3480],
     "descrizione_ufficiale": "Provvedimento temporaneo di viabilità per scavo e posa infrastruttura fibra ottica FiberCop a Stagno nel comparto Via Marx / Curiel / Cervi. Finestra: 26/10/2026 - 20/11/2026.",
-    "stato_base": "parzialmente_eseguito"
+    "stato_base": "eseguito"
   },
   {
     "id": "cantiere-1-collesalvetti",
